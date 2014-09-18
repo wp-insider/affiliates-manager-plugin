@@ -1,0 +1,1600 @@
+# Translation of WP Affiliate Manager in Finnish
+# This file is distributed under the same license as the WP Affiliate Manager package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2013-07-19 18:17:30+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: WP Affiliate Manager\n"
+
+#: boot-strap.php:29
+msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
+msgstr "WordPress Affiliate Manager edellyttää PHP 5.1 tai uudempi."
+
+#: boot-strap.php:33
+msgid "WordPress Affiliate Manager requires WordPress 3.1 or higher."
+msgstr "WordPress Affiliate Manager edellyttää WordPress 3.1 tai uudempi."
+
+#: html/affiliate_creative_detail.php:8 html/affiliate_creative_detail.php:91
+#: html/admin/creatives_detail.php:8 html/admin/creatives_detail.php:289
+msgid "Image"
+msgstr "Kuva"
+
+#: html/affiliate_creative_detail.php:9 html/admin/creatives_detail.php:9
+msgid "Text Link"
+msgstr "Tekstilinkki"
+
+#: html/affiliate_creative_detail.php:10
+msgid "unknown creative type."
+msgstr "Tuntematon luova tyyppi."
+
+#: html/affiliate_creative_detail.php:28 html/admin/creative_update_form.php:82
+#: html/admin/manage_creatives.php:38 html/admin/affiliate_detail.php:219
+#: html/admin/affiliate_detail.php:236 html/admin/creatives_detail.php:114
+#: html/admin/creatives_detail.php:137 source/Pages/AffiliatesHome.php:479
+#: source/Pages/Admin/NewAffiliatePage.php:82
+#: source/Pages/Admin/MyAffiliatesPage.php:221
+msgid "OK"
+msgstr "Okei"
+
+#: html/affiliate_creative_detail.php:41 html/affiliate_creative_detail.php:54
+#: html/admin/creatives_detail.php:174 html/admin/creatives_detail.php:215
+msgid "Preview"
+msgstr "Esikatselu"
+
+#: html/affiliate_creative_detail.php:52 html/admin/creatives_detail.php:194
+msgid "Creative:"
+msgstr "Luova:"
+
+#: html/affiliate_creative_detail.php:56
+msgid "Your Affiliate-Specific HTML snippet"
+msgstr "Nimestä HTML-pätkä"
+
+#: html/affiliate_creative_detail.php:65 html/admin/creatives_detail.php:263
+msgid "Text Link Properties"
+msgstr "Tekstilinkin ominaisuudet"
+
+#: html/affiliate_creative_detail.php:70
+#: html/admin/creative_update_form.php:232 html/admin/creatives_detail.php:268
+msgid "Link Text"
+msgstr "Linkkiteksti"
+
+#: html/affiliate_creative_detail.php:74 html/affiliate_creative_detail.php:97
+#: html/admin/creative_update_form.php:208
+#: html/admin/creative_update_form.php:243 html/admin/creatives_detail.php:272
+#: html/admin/creatives_detail.php:295
+msgid "Alt Text"
+msgstr "ALT-teksti"
+
+#: html/affiliate_creative_detail.php:86 html/admin/creatives_detail.php:284
+msgid "Image Properties"
+msgstr "Kuvan ominaisuudet"
+
+#: html/affiliate_cp_approved.php:3
+msgid "Affiliate Control Panel"
+msgstr "Affiliate Ohjauspaneelin"
+
+#: html/affiliate_cp_approved.php:5
+msgid "Welcome!"
+msgstr "Tervetuloa!"
+
+#: html/affiliate_cp_approved.php:9
+msgid "Review Terms and Get Started!"
+msgstr "Ehtoihin ja pääset alkuun!"
+
+#: html/affiliate_cp_home.php:11
+msgid "Account Summary"
+msgstr "Tilin Yhteenveto"
+
+#: html/affiliate_cp_home.php:16 html/transaction_table.php:48
+#: html/admin/affiliates_list.php:55
+#: html/admin/paypalpayments/review_affiliates.php:58
+#: html/admin/paypalpayments/select_affiliates.php:129
+msgid "Balance"
+msgstr "Tasapaino"
+
+#: html/affiliate_cp_home.php:20 html/affiliate_cp_agree_terms.php:12
+msgid "Commission Rate"
+msgstr "Provision"
+
+#: html/affiliate_cp_home.php:32
+msgid "Today"
+msgstr "Tänään"
+
+#: html/affiliate_cp_home.php:41 html/affiliate_cp_home.php:70
+msgid "Visitors"
+msgstr "Vierailijat"
+
+#: html/affiliate_cp_home.php:45 html/affiliate_cp_home.php:74
+msgid "Closed Transactions"
+msgstr "Suljetut tapahtumat"
+
+#: html/affiliate_cp_home.php:49 html/affiliate_cp_home.php:78
+msgid "Revenue"
+msgstr "Tulot"
+
+#: html/affiliate_cp_home.php:61
+msgid "This Month"
+msgstr "Tässä kuussa"
+
+#: html/affiliate_approved.php:1
+msgid "Your application was approved.  Please go to the <a href=\"%s\">affiliate control panel</a> to get started."
+msgstr "Hakemuksesi on hyväksytty. Mene <a href=\"%s\"> affiliate ohjauspaneelin</a> päästä alkuun."
+
+#: html/affiliate_cp_payment_details_confirmed.php:2
+#: source/display_functions.php:164
+msgid "Confirmed"
+msgstr "Vahvisti"
+
+#: html/affiliate_cp_payment_details_confirmed.php:3
+msgid "Your payment details have been submitted"
+msgstr "Maksutiedot on toimitettu"
+
+#: html/affiliate_cp_payment_details_confirmed.php:5
+msgid "Now would be a great time to go pick <a href=\"%s\">some creative</a> and get started."
+msgstr "Nyt olisi hyvä aika mennä poimia <a href=\"%s\"> joitakin creative</a> ja Aloita."
+
+#: html/affiliate_not_logged_in.php:1
+msgid "This is the affiliates section of this store.  If you are an existing affiliate, please <a href=\"%s\">log in</a> to access your control panel."
+msgstr "Näin tämä Storen kumppanit-osiossa. Jos olet jo affiliate, ota <a href=\"%s\"> Kirjaudu</a> käsiksi Ohjauspaneelin."
+
+#: html/affiliate_not_logged_in.php:4
+msgid "If you are not an affiliate, but wish to become one, you will need to apply.  To apply, you must be a registered user on this blog.  If you have an existing account on this blog, please <a href=\"%s\">log in</a>.  If not, please <a href=\"%s\">register</a>."
+msgstr "Jos eivät ole kumppaniksi, mutta haluavat tulla yksi, sinun täytyy hakea. Rekisteröitynyt käyttäjä tässä blogissa voi soveltaa. Jos sinulla on olemassa olevan tilin tässä blogissa, ota <a href=\"%s\"> Kirjaudu sisään</a>. Jos ei, ota <a href=\"%s\"> Rekisteröidy</a>."
+
+#: html/affiliate_cp_payment_details_form.php:69
+#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:88
+#: html/admin/affiliate_detail.php:559
+msgid "Payment Details"
+msgstr "Maksutiedot"
+
+#: html/affiliate_cp_payment_details_form.php:70
+#: html/affiliate_cp_payment_details_simple.php:14
+msgid "Please provide your payment details."
+msgstr "Antakaa maksutiedot."
+
+#: html/affiliate_cp_payment_details_form.php:71
+#: html/affiliate_cp_payment_details_simple.php:15
+msgid "The following information will be used to disperse payments when your account reaches the minimum payout amount."
+msgstr "Seuraavia tietoja käytetään hajottamaan maksuja, kun tilisi saavuttaa Minimimaksu määrä."
+
+#: html/affiliate_cp_payment_details_form.php:79
+#: html/affiliate_cp_payment_details_simple.php:23 html/contact_info.php:94
+msgid "Method"
+msgstr "Menetelmä"
+
+#: html/affiliate_cp_payment_details_form.php:96
+#: html/affiliate_cp_payment_details_simple.php:40 html/contact_info.php:103
+msgid "PayPal E-Mail Address"
+msgstr "PayPal sähköpostiosoite"
+
+#: html/affiliate_cp_payment_details_form.php:109
+#: html/affiliate_cp_payment_details_simple.php:53
+#: source/Util/AffiliateFormHelper.php:151
+msgid "Paper Check"
+msgstr "Sekki"
+
+#: html/affiliate_cp_payment_details_form.php:115
+#: html/affiliate_cp_payment_details_simple.php:59
+msgid "Check Recipient"
+msgstr "Tarkista vastaanottajan"
+
+#: html/affiliate_cp_payment_details_form.php:134
+msgid "Mail to Address On Record"
+msgstr "Mail osoite muistiin"
+
+#: html/affiliate_cp_payment_details_form.php:143
+#: html/affiliate_cp_payment_details_form.php:166
+#: html/affiliate_cp_payment_details_simple.php:76
+msgid "Recipient"
+msgstr "Vastaanottaja"
+
+#: html/affiliate_cp_payment_details_form.php:170
+msgid "Address 1"
+msgstr "Osoite 1"
+
+#: html/affiliate_cp_payment_details_form.php:174
+msgid "Address 2"
+msgstr "Osoite 2"
+
+#: html/affiliate_cp_payment_details_form.php:178
+msgid "City"
+msgstr "Kaupunki"
+
+#: html/affiliate_cp_payment_details_form.php:182
+msgid "Country"
+msgstr "Maan"
+
+#: html/affiliate_cp_payment_details_form.php:192
+msgid "State"
+msgstr "Valtion"
+
+#: html/affiliate_cp_payment_details_form.php:202
+msgid "Postal Code"
+msgstr "Postinumero"
+
+#: html/affiliate_cp_payment_details_form.php:216
+#: html/affiliate_cp_payment_details_simple.php:99
+msgid "Submit Payment Details"
+msgstr "Lähetä maksutiedot"
+
+#: html/affiliate_creative_list.php:8
+msgid "The following creatives are available for publication."
+msgstr "Seuraavat mainokset ovat saatavilla julkaisua varten."
+
+#: html/affiliate_creative_list.php:13 html/transaction_table.php:41
+#: html/admin/creative_update_form.php:150 html/admin/manage_creatives.php:167
+#: html/admin/affiliate_detail.php:606 html/admin/creatives_detail.php:247
+#: html/admin/settings/settings_registration.php:436
+#: html/admin/settings/settings_messaging.php:86
+msgid "Type"
+msgstr "Tyyppi"
+
+#: html/affiliate_creative_list.php:14 html/admin/creative_update_form.php:133
+#: html/admin/manage_creatives.php:168 html/admin/creatives_detail.php:243
+#: html/admin/settings/settings_messaging.php:85
+msgid "Name"
+msgstr "Nimi"
+
+#: html/affiliate_not_registered.php:1
+msgid "This is the affiliates section of this store. You are not currently an affiliate of this store.  If you wish to become one, please <a href=\"%s\"/>apply</a>."
+msgstr "Tämä on tytäryhtiöt osa tässä kaupassa. Et ole tällä hetkellä kumppaniksi tässä kaupassa. Jos haluat tulla yksi, <a href=\"%s\"/> hakea </a>."
+
+#: html/affiliate_cp_payment_details_simple.php:69
+msgid "Check will be mailed to the following address:"
+msgstr "Sekki postitetaan osoitteeseen:"
+
+#: html/affiliate_home.php:1
+msgid "Welcome to the affiliate control panel."
+msgstr "Tervetuloa affiliate ohjauspaneelin."
+
+#: html/affiliate_cp_agree_terms.php:3
+msgid "Affiliate Confirmation"
+msgstr "Affiliate vahvistus"
+
+#: html/affiliate_cp_agree_terms.php:5
+msgid "Contract Terms"
+msgstr "Sopimusehdot"
+
+#: html/affiliate_cp_agree_terms.php:21
+msgid "Terms & Conditions"
+msgstr "Käyttöehdot"
+
+#: html/affiliate_cp_agree_terms.php:27
+msgid "Agree to Terms"
+msgstr "Hyväksy ehtoja"
+
+#: html/affiliate_register_form.php:15 html/contact_info.php:146
+msgid "* Required fields"
+msgstr "* Pakolliset kentät"
+
+#: html/affiliate_register_form.php:58
+msgid "You must agree to the terms."
+msgstr "Sinun on hyväksyttävä ehdot."
+
+#: html/affiliate_register_form.php:62
+msgid "Submit Application"
+msgstr "Lähetä hakemus"
+
+#: html/contact_info.php:13
+msgid "Changing the affiliate's email address will not change their WordPress Affiliate Manager login, which may be based on the email address they used when they signed up."
+msgstr "Kumppanin sähköpostiosoitteen vaihtaminen ei muuta WordPress Affiliate Manager johdonmukaisuus, joka voi perustua sähköpostiosoitteella ne käytetään, kun asiakas on tilannut."
+
+#: html/contact_info.php:15
+msgid "Changing your email address will not change your WordPress Affiliate Manager login, which may be based on the email address you used when you signed up."
+msgstr "Sähköpostiosoitteen vaihtaminen ei muuta kirjautumistunnuksesi WordPress Affiliate Manager, joka voi perustua sähköpostiosoite, jota käytit rekisteröityessäsi."
+
+#: html/contact_info.php:26
+msgid "Contact Information"
+msgstr "Yhteystiedot"
+
+#: html/contact_info.php:81
+msgid "There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s\">Cancel</a>"
+msgstr "Sähköpostiosoite <code>%1$ s</code> muuttuu Odottava. <a href=\"%2$s\"> Peruuta</a>"
+
+#: html/contact_info.php:112
+msgid "Bounty Type *"
+msgstr "Bounty tyyppi *"
+
+#: html/contact_info.php:118 html/admin/affiliate_detail.php:426
+msgid "Percentage of Sales"
+msgstr "Osuus myynnistä"
+
+#: html/contact_info.php:119 html/admin/affiliate_detail.php:427
+msgid "Fixed Amount per Sale"
+msgstr "Kiinteä summa per myyntiin"
+
+#: html/contact_info.php:130
+msgid "Bounty Rate (%s per Sale) *"
+msgstr "Bounty korko (%s per myynti) *"
+
+#: html/contact_info.php:130
+msgid "Bounty Rate (% of Sale) *"
+msgstr "Bounty korko (% myynnistä) *"
+
+#: html/contact_info.php:148
+msgid "+ Custom fields"
+msgstr "+ Mukautetut kentät"
+
+#: html/contact_info.php:151
+msgid "Save Changes"
+msgstr "Tallenna muutokset"
+
+#: html/transaction_table.php:27
+#: html/admin/paypalpayments/select_affiliates.php:110
+msgid "Date Range:"
+msgstr "Ajanjakso:"
+
+#: html/transaction_table.php:28
+msgid "From"
+msgstr "Alkaen"
+
+#: html/transaction_table.php:32 html/admin/affiliate_detail.php:282
+#: html/admin/affiliate_detail.php:313
+#: html/admin/paypalpayments/select_affiliates.php:115
+msgid "Apply"
+msgstr "Sovelletaan"
+
+#: html/transaction_table.php:33
+#: html/admin/paypalpayments/select_affiliates.php:116
+msgid "Clear"
+msgstr "Selkeä"
+
+#: html/transaction_table.php:40 html/admin/manage_creatives.php:164
+#: html/admin/creatives_detail.php:234
+msgid "ID"
+msgstr "TUNNUS"
+
+#: html/transaction_table.php:42
+msgid "Date Occurred"
+msgstr "Ottamisen päivämäärästä"
+
+#: html/transaction_table.php:43 html/admin/manage_creatives.php:165
+#: html/admin/affiliates_list.php:52 html/admin/creatives_detail.php:239
+msgid "Status"
+msgstr "Tila"
+
+#: html/transaction_table.php:44
+msgid "Description"
+msgstr "Kuvaus"
+
+#: html/transaction_table.php:45
+msgid "Reference ID"
+msgstr "Viitteen tunnus"
+
+#: html/transaction_table.php:46
+msgid "Amount"
+msgstr "Summa"
+
+#: html/transaction_table.php:73
+msgid "No records found for the date range selected."
+msgstr "Tietueita ei löytynyt valittu aikaväli."
+
+#: html/admin/affiliate_new_success.php:2 html/admin/affiliate_new.php:3
+#: source/Plugin.php:79 source/Plugin.php:80
+msgid "New Affiliate"
+msgstr "Uusi Affiliate"
+
+#: html/admin/affiliate_new_success.php:3
+msgid "New Affiliate has been created"
+msgstr "Uusi Affiliate on luotu"
+
+#: html/admin/creative_update_form.php:103
+msgid "This list contains images from the media library. If you upload a new image it is added to the media library and you can reuse images on multiple creatives by selecting it from this list. If a new image file is added, it will be uploaded and will override the currently selected media library image for this creative link. However, the old image will still remain in the media library for future use."
+msgstr "Tämä luettelo sisältää kuvia Mediakirjastosta. Jos lataat uuden kuvan se lisätään Mediakirjastoon ja kuvia useiden mainosten uudelleen valitsemalla sen luettelosta. Jos uusi kuvatiedosto lisätään, se ladataan ja ohittaa valitun kirjaston tiedotusvälineen creative linkki. Vanha kuva jää kuitenkin mediakirjasto myöhempää käyttöä varten."
+
+#: html/admin/creative_update_form.php:108
+#: html/admin/creative_update_success.php:4 html/admin/creatives_detail.php:216
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: html/admin/creative_update_form.php:108
+#: html/admin/creative_update_success.php:4
+msgid "New"
+msgstr "Uusi"
+
+#: html/admin/creative_update_form.php:108
+#: html/admin/creative_update_success.php:4 html/admin/affiliate_detail.php:605
+msgid "Creative"
+msgstr "Luova"
+
+#: html/admin/creative_update_form.php:126 html/admin/affiliate_detail.php:527
+#: html/admin/creatives_detail.php:227
+msgid "General"
+msgstr "Ehdot"
+
+#: html/admin/creative_update_form.php:143 html/admin/creatives_detail.php:251
+msgid "Landing Page"
+msgstr "Aloitussivu"
+
+#: html/admin/creative_update_form.php:170
+msgid "Image Parameters"
+msgstr "Kuvan parametrit"
+
+#: html/admin/creative_update_form.php:176
+msgid "New Image File"
+msgstr "Uusi kuvatiedosto"
+
+#: html/admin/creative_update_form.php:187
+msgid "Image File from Media Library"
+msgstr "Image tiedoston Mediakirjastosta"
+
+#: html/admin/creative_update_form.php:197
+msgid "Preview:"
+msgstr "Esikatselu:"
+
+#: html/admin/creative_update_form.php:224
+msgid "Text Link Parameters"
+msgstr "Teksti linkki parametrit"
+
+#: html/admin/creative_update_form.php:256
+msgid "Save Creative"
+msgstr "Tallenna Creative"
+
+#: html/admin/affiliate_management_home.php:2
+msgid "Affiliate Management Control Panel"
+msgstr "Affiliate hallinta Ohjauspaneelissa"
+
+#: html/admin/affiliate_new.php:6
+msgid "As an Affiliate Manager, if you want to create an affiliate account rather than directing someone to the normal registration form, you can do that here. Once you fill out the required contact information, your new affiliate will receive an email with their username and password.  They will automatically be approved, but will still have to log in to agree to the terms &amp; conditions and set their preferred payment method."
+msgstr "Affiliate Manager, jos haluat luoda Kumppanuustilin sijaan ohjata jonkun normaali ilmoittautumislomake onnistuu täällä. Kun täytät pakolliset yhteystiedot, uusi affiliate saa sähköpostitse käyttäjätunnuksen ja salasanan. Ne hyväksytään automaattisesti, mutta silti pitää kirjautua sisään ja aseta haluamasi maksutapa hyväksyt käyttöehdot."
+
+#: html/admin/creative_update_success.php:9
+msgid "Creative updated."
+msgstr "Creative päivitetty."
+
+#: html/admin/creative_update_success.php:11
+msgid "New creative created.  This creative is not yet active."
+msgstr "Uusi creative luonut. Mainos ei ole vielä aktiivinen."
+
+#: html/admin/creative_update_success.php:16
+msgid "Return to Creatives"
+msgstr "Palaa mainokset"
+
+#: html/admin/manage_creatives.php:64
+msgid "Yes, delete this creative"
+msgstr "Kyllä, poista mainos"
+
+#: html/admin/manage_creatives.php:90 html/admin/affiliate_detail.php:236
+#: html/admin/affiliate_detail.php:278 html/admin/affiliate_detail.php:309
+#: html/admin/creatives_detail.php:83 html/admin/creatives_detail.php:92
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: html/admin/manage_creatives.php:109 html/admin/affiliate_detail.php:454
+#: html/admin/creatives_detail.php:170
+msgid "ERROR:"
+msgstr "VIRHE:"
+
+#: html/admin/manage_creatives.php:113
+msgid "Updating, please wait ..."
+msgstr "Päivitetään, odota..."
+
+#: html/admin/manage_creatives.php:120
+msgid "Delete Creative?"
+msgstr "Poista Creative?"
+
+#: html/admin/manage_creatives.php:121
+msgid "This creative will be deleted. Are you sure?"
+msgstr "Mainos poistetaan. Oletko varma?"
+
+#: html/admin/manage_creatives.php:126 source/Plugin.php:86
+msgid "My Creatives"
+msgstr "Minun mainokset"
+
+#: html/admin/manage_creatives.php:132 html/admin/affiliates_list.php:25
+msgid "Filter"
+msgstr "Suodatin"
+
+#: html/admin/manage_creatives.php:137 html/admin/affiliates_list.php:30
+msgid "Status:"
+msgstr "Tila:"
+
+#: html/admin/manage_creatives.php:155
+msgid "Create New"
+msgstr "Luo uusi"
+
+#: html/admin/manage_creatives.php:163 html/admin/creatives_detail.php:206
+msgid "Actions"
+msgstr "Toiminnot"
+
+#: html/admin/manage_creatives.php:166
+msgid "Created"
+msgstr "Luotu"
+
+#: html/admin/manage_creatives.php:176 html/admin/affiliates_list.php:123
+msgid "View"
+msgstr "Näkymä"
+
+#: html/admin/manage_creatives.php:177
+msgid "Delete"
+msgstr "Poista"
+
+#: html/admin/affiliates_list.php:19 source/Plugin.php:74
+msgid "My Affiliates"
+msgstr "Omat kumppanit"
+
+#: html/admin/affiliates_list.php:41
+msgid "Only over payout minimum. (Balance >= %s)"
+msgstr "Vain yli voitto vähintään. (Saldo > = %s)"
+
+#: html/admin/affiliates_list.php:49
+#: html/admin/paypalpayments/review_affiliates.php:53
+#: html/admin/paypalpayments/select_affiliates.php:124
+msgid "AID"
+msgstr "TUKI"
+
+#: html/admin/affiliates_list.php:58
+msgid "Earnings"
+msgstr "Tulos"
+
+#: html/admin/affiliates_list.php:61
+#: html/admin/paypalpayments/review_affiliates.php:54
+#: html/admin/paypalpayments/select_affiliates.php:125
+msgid "First Name"
+msgstr "Etunimi"
+
+#: html/admin/affiliates_list.php:64
+#: html/admin/paypalpayments/review_affiliates.php:55
+#: html/admin/paypalpayments/select_affiliates.php:126
+msgid "Last Name"
+msgstr "Sukunimi"
+
+#: html/admin/affiliates_list.php:67
+msgid "Email"
+msgstr "Sähköposti"
+
+#: html/admin/affiliates_list.php:70
+#: html/admin/paypalpayments/review_affiliates.php:56
+#: html/admin/paypalpayments/select_affiliates.php:127
+msgid "Company"
+msgstr "Yritys"
+
+#: html/admin/affiliates_list.php:73
+msgid "Date Joined"
+msgstr "Liittymispäivä"
+
+#: html/admin/affiliates_list.php:76
+msgid "Website"
+msgstr "Verkkosivusto"
+
+#: html/admin/affiliate_detail.php:141
+msgid "YES, Block all applications from %s"
+msgstr "Kyllä, estää kaikki sovellukset: %s"
+
+#: html/admin/affiliate_detail.php:150
+msgid "NO, They may re-apply"
+msgstr "EI, he voivat hakea uudelleen"
+
+#: html/admin/affiliate_detail.php:159
+msgid "Do you want to block all future applications from this email address, or allow them to sign up at a later date?"
+msgstr "Haluatko estää kaikki tulevaisuuden sovelluksia tästä sähköpostiosoitteesta tai salli heidän rekisteröityä myöhemmin?"
+
+#: html/admin/affiliate_detail.php:188
+msgid "Payout"
+msgstr "Voitto"
+
+#: html/admin/affiliate_detail.php:248
+msgid "Are you sure you wish to approve this affiliate?"
+msgstr "Haluatko varmasti hyväksyä tämän affiliate?"
+
+#: html/admin/affiliate_detail.php:249
+msgid "Yes, approve."
+msgstr "Kyllä, hyväksyä."
+
+#: html/admin/affiliate_detail.php:291
+msgid "Are you sure you wish to apply an adjustment of "
+msgstr "Oletko varma, että haluat kohdistaa oikaisu"
+
+#: html/admin/affiliate_detail.php:291 html/admin/affiliate_detail.php:333
+msgid " to this account? The new balance will be "
+msgstr "tälle tilille? New balance on"
+
+#: html/admin/affiliate_detail.php:292 html/admin/affiliate_detail.php:334
+msgid "Yes, apply it."
+msgstr "Kyllä, asenna se."
+
+#: html/admin/affiliate_detail.php:333
+msgid "Are you sure you wish to apply a payout of "
+msgstr "Oletko varma, että haluat kohdistaa voittosi"
+
+#: html/admin/affiliate_detail.php:368
+msgid "Are you sure you wish to decline this affiliate?"
+msgstr "Haluatko varmasti hylätä tämän affiliate?"
+
+#: html/admin/affiliate_detail.php:368
+msgid "Yes, DECLINE."
+msgstr "Kyllä, lasku."
+
+#: html/admin/affiliate_detail.php:372
+msgid "Are you sure you wish to block this affiliate?"
+msgstr "Haluatko varmasti sulkea tämän affiliate?"
+
+#: html/admin/affiliate_detail.php:372
+msgid "Yes, BLOCK."
+msgstr "Kyllä, estää."
+
+#: html/admin/affiliate_detail.php:382
+msgid "Are you sure you wish to unblock this affiliate?<br>User will become DECLINED."
+msgstr "Haluatko varmasti sallia tämän affiliate?<br>Käyttäjän tulee hylätty."
+
+#: html/admin/affiliate_detail.php:382
+msgid "Yes, UNBLOCK."
+msgstr "Kyllä, esto."
+
+#: html/admin/affiliate_detail.php:393
+msgid "Are you sure you wish to activate this affiliate?"
+msgstr "Oletko varma, että haluat aktivoida tämän affiliate?"
+
+#: html/admin/affiliate_detail.php:393 html/admin/creatives_detail.php:86
+msgid "Yes, ACTIVATE."
+msgstr "Kyllä, aktivoida."
+
+#: html/admin/affiliate_detail.php:397
+msgid "Are you sure you wish to deactivate this affiliate?"
+msgstr "Haluatko varmasti poistaa tämän affiliate?"
+
+#: html/admin/affiliate_detail.php:397 html/admin/creatives_detail.php:95
+msgid "Yes, DEACTIVATE."
+msgstr "Kyllä, Poista aktivointi."
+
+#: html/admin/affiliate_detail.php:416
+msgid "Approve Application"
+msgstr "Hakemuksen hyväksymisen"
+
+#: html/admin/affiliate_detail.php:422 html/admin/affiliate_detail.php:563
+msgid "Bounty Type"
+msgstr "Bounty tyyppi"
+
+#: html/admin/affiliate_detail.php:433 source/Pages/AffiliatesHome.php:478
+#: source/Pages/Admin/NewAffiliatePage.php:81
+#: source/Pages/Admin/MyAffiliatesPage.php:220
+msgid "Bounty Rate (% of Sale)"
+msgstr "Bounty korko (% myynnistä)"
+
+#: html/admin/affiliate_detail.php:445 html/admin/creatives_detail.php:161
+msgid "Updating, please wait ... "
+msgstr "Päivitetään, odota..."
+
+#: html/admin/affiliate_detail.php:450 html/admin/creatives_detail.php:166
+msgid "Are you sure?"
+msgstr "Oletko varma?"
+
+#: html/admin/affiliate_detail.php:451
+msgid "approve"
+msgstr "hyväksy"
+
+#: html/admin/affiliate_detail.php:453 html/admin/creatives_detail.php:169
+msgid "Error"
+msgstr "Virhe"
+
+#: html/admin/affiliate_detail.php:457
+msgid "Apply Adjustment "
+msgstr "Tarkistus"
+
+#: html/admin/affiliate_detail.php:461
+msgid "Amount "
+msgstr "Summa"
+
+#: html/admin/affiliate_detail.php:467
+msgid "Description "
+msgstr "Kuvaus"
+
+#: html/admin/affiliate_detail.php:476
+msgid "Apply Payout "
+msgstr "Soveltaa Payout"
+
+#: html/admin/affiliate_detail.php:480
+msgid "Payout Amount "
+msgstr "Voitonmaksu"
+
+#: html/admin/affiliate_detail.php:483
+msgid "Current balance"
+msgstr "Nykyinen saldo"
+
+#: html/admin/affiliate_detail.php:486
+msgid "Other amount"
+msgstr "Muu määrä"
+
+#: html/admin/affiliate_detail.php:495
+msgid "Affiliate:"
+msgstr "Affiliate:"
+
+#: html/admin/affiliate_detail.php:501 source/Pages/AffiliatesHome.php:32
+msgid "Overview"
+msgstr "Yleiskatsaus"
+
+#: html/admin/affiliate_detail.php:502
+msgid "Account Finances"
+msgstr "Huomioon talouden"
+
+#: html/admin/affiliate_detail.php:503
+msgid "Information"
+msgstr "Tiedot"
+
+#: html/admin/affiliate_detail.php:504
+msgid "Affiliate Links"
+msgstr "Affiliate linkkejä"
+
+#: html/admin/affiliate_detail.php:512
+msgid "Approve"
+msgstr "Hyväksy"
+
+#: html/admin/affiliate_detail.php:513
+msgid "Decline"
+msgstr "Lasku"
+
+#: html/admin/affiliate_detail.php:515 html/admin/creatives_detail.php:212
+msgid "Activate"
+msgstr "Aktivoi"
+
+#: html/admin/affiliate_detail.php:517
+msgid "Dectivate"
+msgstr "Poista aktivointi"
+
+#: html/admin/affiliate_detail.php:519
+msgid "Unblock"
+msgstr "Poista esto"
+
+#: html/admin/affiliate_detail.php:521
+msgid "Block"
+msgstr "Lohko"
+
+#: html/admin/affiliate_detail.php:531
+msgid "Date Applied"
+msgstr "Sovellettava päivämäärä"
+
+#: html/admin/affiliate_detail.php:532
+msgid "Affiliate Status"
+msgstr "Affiliate tila"
+
+#: html/admin/affiliate_detail.php:535
+msgid "Account Standing"
+msgstr "Osuus pysyvä"
+
+#: html/admin/affiliate_detail.php:564
+msgid "Bounty Amount"
+msgstr "Bounty summa"
+
+#: html/admin/affiliate_detail.php:566
+msgid "Payment Method"
+msgstr "Maksutapa"
+
+#: html/admin/affiliate_detail.php:568
+msgid "Paypal E-Mail"
+msgstr "PayPal E-Mail"
+
+#: html/admin/affiliate_detail.php:570
+msgid "Make Check Out To"
+msgstr "Tee tarkistaa ulos"
+
+#: html/admin/affiliate_detail.php:583
+msgid "Balance:"
+msgstr "Saldo:"
+
+#: html/admin/affiliate_detail.php:586
+msgid "Earnings:"
+msgstr "Tulos:"
+
+#: html/admin/affiliate_detail.php:587
+msgid "Payments:"
+msgstr "Maksut:"
+
+#: html/admin/affiliate_detail.php:588
+msgid "Adjustments:"
+msgstr "Oikaisut:"
+
+#: html/admin/affiliate_detail.php:592
+msgid "Apply Payout"
+msgstr "Soveltaa Payout"
+
+#: html/admin/affiliate_detail.php:593
+msgid "Apply Manual Adjustment"
+msgstr "Manuaalinen tarkistus"
+
+#: html/admin/affiliate_detail.php:607
+msgid "Link"
+msgstr "Linkki"
+
+#: html/admin/creatives_detail.php:10
+msgid "Unknown creative type."
+msgstr "Tuntematon luova tyyppi."
+
+#: html/admin/creatives_detail.php:143
+msgid "ACTIVATE"
+msgstr "AKTIVOI"
+
+#: html/admin/creatives_detail.php:148
+msgid "DEACTIVATE"
+msgstr "POISTA AKTIVOINTI"
+
+#: html/admin/creatives_detail.php:167
+msgid "Are you sure you wish to"
+msgstr "Oletko varma, että haluat"
+
+#: html/admin/creatives_detail.php:167
+msgid "this creative?"
+msgstr "creative?"
+
+#: html/admin/creatives_detail.php:210
+msgid "Deactivate"
+msgstr "Poista aktivointi"
+
+#: html/admin/settings/settings_payment.php:16
+msgid "Looking for help? Check out the bundled step-by-step guide for setting up PayPal Mass Pay:"
+msgstr "Etsitkö apua? Tutustu mukana askel askeleelta opas perustaa PayPal Mass maksu:"
+
+#: html/admin/settings/settings_payment.php:20
+msgid "<a href=\"%s\">How to Setup PayPal Mass Pay</a> (PDF)"
+msgstr "<a href=\"%s\"> How to Setup maksu PayPal massa</a> (PDF)"
+
+#: html/admin/settings/settings_payment.php:29
+msgid "Enable PayPal Mass Pay &#0153;<br /><small>NOTE: Requires a PayPal Premier or PayPal Business account</small>"
+msgstr "Ota PayPal Mass maksu &#0153; <br /> <small>Huom: vaatii PayPal Premier tai PayPal liiketoiminta-tili</small>"
+
+#: html/admin/settings/settings_payment.php:32
+msgid "PayPal API Configuration"
+msgstr "PayPal API kokoonpano"
+
+#: html/admin/settings/settings_payment.php:35
+msgid "API Username"
+msgstr "API-käyttäjätunnus"
+
+#: html/admin/settings/settings_payment.php:39
+msgid "API Password"
+msgstr "API-salasana"
+
+#: html/admin/settings/settings_payment.php:43
+msgid "Signature"
+msgstr "Allekirjoitus"
+
+#: html/admin/settings/settings_payment.php:47
+msgid "API End Point"
+msgstr "API-päätepiste"
+
+#: html/admin/settings/settings_payment.php:47
+msgid "WARNING: Set to LIVE if you don't know what this is for!"
+msgstr "Varoitus: Aseta elää, jos et tiedä, mitä tämä on!"
+
+#: html/admin/settings/settings_payment.php:50
+msgid "Live (%s)"
+msgstr "Live (%s)"
+
+#: html/admin/settings/settings_payment.php:51
+msgid "Sandbox - TESTING (%s)"
+msgstr "Sandbox - testaus (%s)"
+
+#: html/admin/settings/settings_registration.php:218
+msgid "Display name is required."
+msgstr "Näyttönimi vaaditaan."
+
+#: html/admin/settings/settings_registration.php:225
+msgid "Field name is required."
+msgstr "Kenttänimi on pakollinen."
+
+#: html/admin/settings/settings_registration.php:228
+msgid "Field name may only contains letters, numbers, underscores and hyphens, and must begin with a letter."
+msgstr "Kentän nimi voi sisältää vain kirjaimia, numeroita, alaviivoja ja yhdysmerkkejä ja alettava kirjaimella."
+
+#: html/admin/settings/settings_registration.php:235
+msgid "This field name is already in use."
+msgstr "Tämän kenttänimi on jo käytössä."
+
+#: html/admin/settings/settings_registration.php:247
+msgid "Field length must be an non-0 positive number."
+msgstr "Kentän pituuden on oltava-0 positiivinen luku."
+
+#: html/admin/settings/settings_registration.php:361
+msgid "Custom Field"
+msgstr "Mukautettu kenttä"
+
+#: html/admin/settings/settings_registration.php:368
+#: html/admin/settings/settings_registration.php:438
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#: html/admin/settings/settings_registration.php:375
+#: html/admin/settings/settings_registration.php:439
+msgid "Field Name"
+msgstr "Kenttänimi"
+
+#: html/admin/settings/settings_registration.php:382
+msgid "Field Type"
+msgstr "Kenttätyyppi"
+
+#: html/admin/settings/settings_registration.php:385
+msgid "Text"
+msgstr "Teksti"
+
+#: html/admin/settings/settings_registration.php:386
+msgid "Number"
+msgstr "Numero"
+
+#: html/admin/settings/settings_registration.php:387
+msgid "E-Mail Address"
+msgstr "Sähköpostiosoite"
+
+#: html/admin/settings/settings_registration.php:388
+msgid "Phone Number"
+msgstr "Puhelinnumero"
+
+#: html/admin/settings/settings_registration.php:389
+msgid "State Code (US)"
+msgstr "Tilakoodi (US)"
+
+#: html/admin/settings/settings_registration.php:390
+msgid "Zip Code (US)"
+msgstr "Zip-koodit (USA)"
+
+#: html/admin/settings/settings_registration.php:391
+msgid "Country Code"
+msgstr "Maakoodi"
+
+#: html/admin/settings/settings_registration.php:392
+msgid "Social Security Number (US)"
+msgstr "Sosiaaliturvatunnus (US)"
+
+#: html/admin/settings/settings_registration.php:399
+#: html/admin/settings/settings_registration.php:440
+msgid "Max Length"
+msgstr "Max pituus"
+
+#: html/admin/settings/settings_registration.php:412
+msgid "Available Payout Methods"
+msgstr "Olevista kotiutusmetodeista"
+
+#: html/admin/settings/settings_registration.php:422
+#: source/Data/Models/AffiliateModel.php:171
+msgid "PayPal"
+msgstr "PayPal"
+
+#: html/admin/settings/settings_registration.php:427
+msgid "Affiliate Register Fields"
+msgstr "Affiliate rekisteri-kentät"
+
+#: html/admin/settings/settings_registration.php:430
+msgid "Add Custom Field"
+msgstr "Lisää mukautettu kenttä"
+
+#: html/admin/settings/settings_registration.php:435
+msgid "Enabled"
+msgstr "Käytössä"
+
+#: html/admin/settings/settings_registration.php:437
+msgid "Field Format"
+msgstr "Kentän muoto"
+
+#: html/admin/settings/settings_registration.php:441
+msgid "Required"
+msgstr "Tarvitaan"
+
+#: html/admin/settings/settings_messaging.php:66
+msgid "These settings allow you to control text that is displayed to affiliates at various points in the affiliate plug-in, as well as e-mails that are sent."
+msgstr "Näiden asetusten avulla voit hallita tekstin, joka näytetään tytäryhtiöt eri kohdissa affiliate plug-in, kuten sähköpostiviestejä, jotka lähetetään."
+
+#: html/admin/settings/settings_messaging.php:71
+msgid "Use:"
+msgstr "Käyttö:"
+
+#: html/admin/settings/settings_messaging.php:75
+msgid "Content:"
+msgstr "Sisältö:"
+
+#: html/admin/settings/settings_messaging.php:87
+msgid "Use"
+msgstr "Käyttö"
+
+#: html/admin/settings/settings_messaging.php:88
+msgid "Content"
+msgstr "Sisältö"
+
+#: html/admin/settings/settings_messaging.php:118
+msgid "%s(More)"
+msgstr "%s(more)"
+
+#: html/admin/settings/settings_messaging.php:125
+msgid "* Some messages have been modified. These will <strong>NOT</strong> be saved to the database until you click 'Save Settings' button below."
+msgstr "* Jotkin viestit on muutettu. Se <strong>ei välttämättä</strong> tallenneta tietokantaan, ennen kuin valitset tallennusasetukset-painiketta alla."
+
+#: html/admin/paypalpayments/review_affiliates.php:10
+msgid "Yes, Submit to PayPal"
+msgstr "Kyllä, Lähetä PayPal"
+
+#: html/admin/paypalpayments/review_affiliates.php:17
+msgid "No, Cancel"
+msgstr "Ei, Peruuta"
+
+#: html/admin/paypalpayments/review_affiliates.php:39
+msgid "Submit to PayPal?"
+msgstr "Toimitettava PayPal?"
+
+#: html/admin/paypalpayments/review_affiliates.php:40
+msgid "Are you sure you wish to submit a mass payment to PayPal?"
+msgstr "Oletko varma, että haluat lähettää massa maksun PayPal?"
+
+#: html/admin/paypalpayments/review_affiliates.php:41
+msgid "Your PayPal account will be charged %s!"
+msgstr "PayPal-tiliä veloitetaan %s!"
+
+#: html/admin/paypalpayments/review_affiliates.php:45
+#: html/admin/paypalpayments/select_affiliates.php:102
+#: html/admin/paypalpayments/not_configured.php:2 source/Plugin.php:91
+#: source/Plugin.php:92
+msgid "PayPal Mass Pay"
+msgstr "PayPal massa maksu"
+
+#: html/admin/paypalpayments/review_affiliates.php:46
+msgid "Review Your Mass Payment"
+msgstr "Arvostelu Mass maksu"
+
+#: html/admin/paypalpayments/review_affiliates.php:57
+#: html/admin/paypalpayments/select_affiliates.php:128
+msgid "PayPal E-Mail"
+msgstr "PayPal E-Mail"
+
+#: html/admin/paypalpayments/review_affiliates.php:60
+msgid "Payment"
+msgstr "Maksu"
+
+#: html/admin/paypalpayments/review_affiliates.php:62
+msgid "New Balance"
+msgstr "New Balance"
+
+#: html/admin/paypalpayments/review_affiliates.php:93
+msgid "Sub-Total"
+msgstr "Välisumma"
+
+#: html/admin/paypalpayments/review_affiliates.php:97
+#: html/admin/paypalpayments/select_affiliates.php:175
+msgid "PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>"
+msgstr "PayPal maksu <br /> <small>2% % maksukohtainen, max %s1 maksukohtainen</small>"
+
+#: html/admin/paypalpayments/review_affiliates.php:102
+#: html/admin/paypalpayments/select_affiliates.php:180
+msgid "Estimated Total"
+msgstr "Arvioitu summa"
+
+#: html/admin/paypalpayments/review_affiliates.php:106
+msgid "Submit Mass Payment to PayPal"
+msgstr "Jättää Mass maksu PayPal"
+
+#: html/admin/paypalpayments/select_affiliates.php:103
+msgid "Select Affiliates to Pay"
+msgstr "Valitse kumppanit maksu"
+
+#: html/admin/paypalpayments/select_affiliates.php:106
+msgid "Not showing %s affiliates that do not have a PayPal account on file."
+msgstr "Ei näy %s kumppanit, joilla ei ole PayPal-tili tiedosto."
+
+#: html/admin/paypalpayments/select_affiliates.php:111
+msgid "from"
+msgstr "Alkaen"
+
+#: html/admin/paypalpayments/select_affiliates.php:113
+msgid "to"
+msgstr "jotta"
+
+#: html/admin/paypalpayments/select_affiliates.php:130
+msgid "Payment Amount"
+msgstr "Maksusumma"
+
+#: html/admin/paypalpayments/select_affiliates.php:185
+msgid "Continue with these payments"
+msgstr "Jatka näiden maksujen"
+
+#: html/admin/paypalpayments/not_configured.php:3
+msgid "Not configured"
+msgstr "Ei määritetty"
+
+#: html/admin/paypalpayments/not_configured.php:5
+msgid "You have not configured the Affiliate Manager with your PayPal account information. You can do so in the <a href=\"%s\">Payment Settings page</a>."
+msgstr "Et ole määrittänyt Affiliate Manager PayPal-tilin tiedot. Teet niin <a href=\"%s\"> maksuasetukset-sivulla</a>."
+
+#: source/Options.php:27
+msgid "Invalid PaPpal API value"
+msgstr "PayPal API-arvo ei kelpaa"
+
+#: source/MessageHelper.php:29
+msgid "Attempt to load invalid message of name '%s'"
+msgstr "Yrittää ladata virheellisen sanoman nimi '%s'"
+
+#: source/Plugin.php:67
+msgid "Affiliate Management"
+msgstr "Affiliate hallinta"
+
+#: source/Plugin.php:68 source/Plugin.php:73 source/Plugin.php:293
+#: source/Plugin.php:307
+msgid "Affiliates"
+msgstr "Kumppanit"
+
+#: source/Plugin.php:85 source/Pages/AffiliatesHome.php:35
+msgid "Creatives"
+msgstr "Mainokset"
+
+#: source/Plugin.php:97 source/Plugin.php:98
+msgid "Settings"
+msgstr "Asetukset"
+
+#: source/Plugin.php:105
+msgid "Store Affiliates"
+msgstr "Store-kumppanit"
+
+#: source/Plugin.php:106
+msgid "Register"
+msgstr "Rekisteröidy"
+
+#: source/Plugin.php:247
+msgid "Become an affiliate"
+msgstr "Yhteistyökumppaniksi"
+
+#: source/Plugin.php:248
+msgid "Are you interested in earning money by directing visitors to our site?"
+msgstr "Oletko kiinnostunut ansaita rahaa ohjaamalla kävijöitä sivuston?"
+
+#: source/Plugin.php:250
+msgid "Sign up"
+msgstr "Kiinnittää"
+
+#: source/Plugin.php:250
+msgid " to become an affiliate today!"
+msgstr "tulla kumppaniksi tänään!"
+
+#: source/Plugin.php:308
+msgid "Be An Affiliate"
+msgstr "Kumppaniksi"
+
+#: source/Plugin.php:434
+msgid "WP Affiliate Manager was unable to load your currency from your WPLANG setting: %s"
+msgstr "WP-Affiliate Manager ei voinut ladata valuutassasi WPLANG asetus: %s"
+
+#: source/Plugin.php:435
+msgid "Your currency will be displayed as %s and PayPal payments will be paid in %s"
+msgstr "Valuuttasi tilana %s ja PayPal maksut maksetaan %s"
+
+#: source/Plugin.php:443
+msgid "WP Affiliate Manager has been updated and needs to be deactivated and re-activated to perform upgrades in order work"
+msgstr "WP-Affiliate Manager on päivitetty ja sitä käytöstä ja aktivoitua suorittaa päivitykset tilauksen työssä"
+
+#: source/Plugin.php:483
+msgid "Invalid JSON handler."
+msgstr "Virheellinen JSON käsittelijä."
+
+#: source/display_functions.php:11
+msgid "Affiliate has applied, but is waiting on your decision."
+msgstr "Affiliate on soveltanut mutta odottaa päätöksestänne."
+
+#: source/display_functions.php:12
+msgid "Affiliate has been approved, but has not accepted terms."
+msgstr "Affiliate on hyväksytty, mutta se ei ole hyväksynyt ehtoja."
+
+#: source/display_functions.php:13
+msgid "Affiliate is active, and will receive credit for leads."
+msgstr "Kumppani on aktiivinen ja saavat kunnian johtaa."
+
+#: source/display_functions.php:14
+msgid "Affiliate has accepted terms and provided payment details.<br /> If the details look good, you should activate this affiliate so they can begin sending traffic."
+msgstr "Affiliate on hyväksynyt ehdot ja maksun tiedot. <br /> Jos yksityiskohdat näyttää hyvältä, sinun tulee aktivoida tämän affiliate, jotta ne voivat alkaa lähettää liikennettä."
+
+#: source/display_functions.php:15
+msgid "Affiliate has been disabled."
+msgstr "Affiliate on poistettu käytöstä."
+
+#: source/display_functions.php:16
+msgid "Affiliate was declined."
+msgstr "Affiliate on hylätty."
+
+#: source/display_functions.php:17
+msgid "Affiliate was blocked and cannot re-apply."
+msgstr "Affiliate estettiin, ja ei voi hakea."
+
+#: source/display_functions.php:23
+msgid "%s per sale"
+msgstr "%s per myyntiin"
+
+#: source/display_functions.php:154
+msgid "Applied"
+msgstr "Soveltaa"
+
+#: source/display_functions.php:156
+msgid "Declined"
+msgstr "Laski"
+
+#: source/display_functions.php:158
+msgid "Approved"
+msgstr "Hyväksytty"
+
+#: source/display_functions.php:160 source/Pages/Admin/MyCreativesPage.php:58
+msgid "Active"
+msgstr "Aktiivinen"
+
+#: source/display_functions.php:162 source/Pages/Admin/MyCreativesPage.php:59
+msgid "Inactive"
+msgstr "Passiiviset"
+
+#: source/display_functions.php:166
+msgid "Blocked"
+msgstr "Estetty"
+
+#: source/PayPal/Service.php:74
+msgid ""
+"POST failed\n"
+"errors:\n"
+"%serrordata:\n"
+"%s"
+msgstr ""
+"POST failed\n"
+" virheitä: \n"
+" %serrordata: \n"
+" %s"
+
+#: source/PayPal/Service.php:79
+msgid "Unknown response: %s"
+msgstr "Tuntematon vastaus: %s"
+
+#: source/PayPal/MassPayResultFile.php:113
+#: source/PayPal/MassPayResultFile.php:124
+msgid "Failed to parse amounts from field: %s"
+msgstr "Summat-kentästä jäsentäminen epäonnistui: %s"
+
+#: source/PayPal/MassPayRequest.php:24
+msgid "receiverType must be one of the RECEIVERTYPE_* constants"
+msgstr "receiverType on oltava jokin RECEIVERTYPE_ *-vakioista"
+
+#: source/PayPal/MassPayRequest.php:33
+msgid "'amount' must be a valid monetary value"
+msgstr "summa-vaihtoehdon on oltava kelvollinen raha-arvo"
+
+#: source/Validation/StringValidator.php:24
+msgid "must be between % and %s characters"
+msgstr "on oltava % ja %s merkkiä"
+
+#: source/Validation/StringValidator.php:29
+#: source/Validation/CountryCodeValidator.php:15
+msgid "is required"
+msgstr "tarvitaan"
+
+#: source/Validation/StringValidator.php:31
+msgid "must be at least %s characters"
+msgstr "on oltava vähintään %s merkkiä"
+
+#: source/Validation/StringValidator.php:35
+msgid "must be no more than %s characters"
+msgstr "on oltava enintään %s merkkiä"
+
+#: source/Validation/EmailValidator.php:14
+msgid "must be a valid e-mail address"
+msgstr "täytyy olla kelvollinen sähköpostiosoite"
+
+#: source/Validation/MoneyValidator.php:12
+msgid "must be a valid monetary value"
+msgstr "on oltava kelvollinen raha-arvo"
+
+#: source/Validation/PhoneNumberValidator.php:12
+msgid "must be a phone number"
+msgstr "on oltava puhelinnumero"
+
+#: source/Validation/MultiPartPhoneNumberValidator.php:12
+msgid "must be a valid phone number"
+msgstr "on oltava kelvollinen puhelinnumero"
+
+#: source/Validation/ZipCodeValidator.php:16
+msgid "must be a valid zip code"
+msgstr "on oltava kelvollinen postinumero"
+
+#: source/Validation/MultiPartSocialSecurityNumberValidator.php:13
+msgid "must be a valid social security number"
+msgstr "on oltava voimassa oleva sosiaaliturvatunnus"
+
+#: source/Validation/NumberValidator.php:14
+msgid "must be a number"
+msgstr "on oltava luku"
+
+#: source/Validation/StateCodeValidator.php:14
+#: source/Validation/SetValidator.php:18
+msgid "must be selected"
+msgstr "on valittava"
+
+#: source/Validation/CallbackValidator.php:17
+msgid "Argument 'callback' must be callable"
+msgstr "'Soittopyynnön'-argumentin on oltava vaadittaessa"
+
+#: source/Pages/PublicPage.php:91 source/Util/JsonHandler.php:14
+#: source/Util/JsonHandler.php:44 source/Util/JsonHandler.php:75
+#: source/Util/JsonHandler.php:101 source/Util/JsonHandler.php:125
+#: source/Util/JsonHandler.php:136 source/Util/JsonHandler.php:150
+#: source/Util/JsonHandler.php:196 source/Util/JsonHandler.php:224
+msgid "Access denied."
+msgstr "Käyttö estetty."
+
+#: source/Pages/AffiliatesRegister.php:44
+msgid "Error submitting your details to the database. This is a bug, and your application was not submitted."
+msgstr "Virhe lähettämällä tietosi tietokantaan. Tämä on bugi, ja hakemuksesi esitetty."
+
+#: source/Pages/AffiliatesRegister.php:52
+msgid "New affiliate registration on your site %s:"
+msgstr "Uusi affiliate rekisteröinti sivustoon %s"
+
+#: source/Pages/AffiliatesRegister.php:53
+msgid "Name: %s %s"
+msgstr "Nimi: %s %s"
+
+#: source/Pages/AffiliatesRegister.php:54
+msgid "Email: %s"
+msgstr "Sähköposti: %s"
+
+#: source/Pages/AffiliatesRegister.php:55
+msgid "Company: %s"
+msgstr "Yritys: %s"
+
+#: source/Pages/AffiliatesRegister.php:56
+msgid "Website: %s"
+msgstr "Sivusto: %s"
+
+#: source/Pages/AffiliatesRegister.php:57
+msgid "View Application: %s"
+msgstr "Näytä sovellus: %s"
+
+#: source/Pages/AffiliatesRegister.php:58
+msgid "New Affiliate Registration"
+msgstr "Uusi Affiliate rekisteröinti"
+
+#: source/Pages/AffiliatesRegister.php:61
+msgid "Affiliate application for %s"
+msgstr "Jäsen sovellus %s"
+
+#: source/Pages/AffiliatesHome.php:33
+msgid "Sales"
+msgstr "Myynti"
+
+#: source/Pages/AffiliatesHome.php:34
+msgid "Payment History"
+msgstr "Maksuhistoria"
+
+#: source/Pages/AffiliatesHome.php:36
+msgid "Edit Profile"
+msgstr "Muokkaa profiilia"
+
+#: source/Pages/AffiliatesHome.php:165
+#: source/Pages/Admin/MyCreativesPage.php:108
+#: source/Pages/Admin/MyCreativesPage.php:261
+#: source/Pages/Admin/MyCreativesPage.php:268 source/Util/JsonHandler.php:228
+msgid "Invalid creative."
+msgstr "Virheellinen creative."
+
+#: source/Pages/AffiliatesHome.php:167 source/Util/JsonHandler.php:28
+#: source/Util/JsonHandler.php:52 source/Util/JsonHandler.php:83
+#: source/Util/JsonHandler.php:109 source/Util/JsonHandler.php:133
+#: source/Util/JsonHandler.php:207
+msgid "Invalid affiliate"
+msgstr "Virheellinen affiliate"
+
+#: source/Pages/AffiliatesHome.php:169
+msgid "Inactive creative."
+msgstr "Passiiviset creative."
+
+#: source/Pages/AffiliatesHome.php:342
+msgid "%s per sale."
+msgstr "%s per myyntiin."
+
+#: source/Pages/AffiliatesHome.php:344
+msgid "%s%% of each completed sale, pre-tax"
+msgstr "%s%% valmis myynti ennen veroja"
+
+#: source/Pages/AffiliatesHome.php:477
+#: source/Pages/Admin/NewAffiliatePage.php:80
+#: source/Pages/Admin/MyAffiliatesPage.php:219
+msgid "Bounty Rate (%s per Sale)"
+msgstr "Bounty korko (%s per myynti)"
+
+#: source/Pages/Admin/MyCreativesPage.php:57
+msgid "All"
+msgstr "Kaikki"
+
+#: source/Pages/Admin/MyCreativesPage.php:157
+msgid "Image Upload Error: %s"
+msgstr "Kuva Lataa virhe: %s"
+
+#: source/Pages/Admin/MyCreativesPage.php:222
+msgid "Insert failed: Bad creative type."
+msgstr "Lisää epäonnistui: Bad luova tyyppi."
+
+#: source/Pages/Admin/MyCreativesPage.php:231
+msgid "Creative Updated."
+msgstr "Creative päivitetty."
+
+#: source/Pages/Admin/MyCreativesPage.php:238
+msgid "Creative ... created."
+msgstr "Luovaa... luotu."
+
+#: source/Pages/Admin/MyCreativesPage.php:242
+msgid "Insert failed: invalid creative update mechanism."
+msgstr "Lisää epäonnistui: Virheellinen luova päivitystoimintoa."
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:53
+msgid "This results file does not appear to match this payment."
+msgstr "Tulosta tiedosto ei näy vastaamaan tämän maksun."
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:87
+msgid "Matched a transaction in your results file, but the value was incorrect. Expected %s but found '%s'"
+msgstr "Hyväksytty tapahtuman tulokset-tiedostossa, mutta arvo oli virheellinen. %s odotetun mutta löytyi %s"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:95
+msgid "Could not correlate a transaction from your results file with the transactions on record."
+msgstr "Tapahtuman tulokset tiedostoon tietueen kauppatapahtumiin ei korreloi."
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:101
+msgid "Could not correlate all transactions"
+msgstr "Ei korreloi kaikki tapahtumat"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:145
+msgid "Invalid PayPa LogID"
+msgstr "Virheellinen PayPal LogID"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:151
+msgid "Transaction not found"
+msgstr "Tapahtumaa ei löydy"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:162
+msgid "Invalid transaction status"
+msgstr "Virheellinen tapahtuman tila"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:220
+msgid "Affiliate Payment"
+msgstr "Affiliate maksu"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:232
+msgid "Affiliate not found"
+msgstr "Kumppaniksi ei löydy"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:235
+msgid "Payment method for affiliate is not PayPal"
+msgstr "Affiliate maksutapa ei ole PayPal"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:242
+msgid "Payout via PayPal Mass Pay"
+msgstr "Maksu kautta PayPal Mass maksu"
+
+#: source/Pages/Admin/NewAffiliatePage.php:69
+msgid "Add Affiliate"
+msgstr "Lisätä Affiliate"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:127
+msgid "All Active"
+msgstr "Kaikki käytössä"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:128
+msgid "All (Including Closed)"
+msgstr "Kaikki (myös suljettu)"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:130
+msgid "Status: Active"
+msgstr "Tila: aktiivinen"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:131
+msgid "Status: Applied"
+msgstr "Tila: käytössä"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:132
+msgid "Status: Approved"
+msgstr "Tila: hyväksytty"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:133
+msgid "Status: Confirmed"
+msgstr "Tila: vahvisti"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:134
+msgid "Status: Declined"
+msgstr "Tila: hylätty"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:135
+msgid "Status: Blocked"
+msgstr "Tila: estetty"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:136
+msgid "Status: Inactive"
+msgstr "Tila: aktiivinen"
+
+#: source/Tracking/TrackingKey.php:33
+msgid "invalid refkey format. (length=%s)"
+msgstr "Virheellinen refkey muoto. (pituus=%s)"
+
+#: source/Tracking/RequestTracker.php:112
+msgid "no refkey in request."
+msgstr "refkey-pyynnössä"
+
+#: source/Tracking/RequestTracker.php:130
+msgid "invalid refkey data."
+msgstr "virheelliset refkey tiedot."
+
+#: source/Util/JsonHandler.php:17
+msgid "Invalid bounty amount."
+msgstr "Virheellinen bounty summa."
+
+#: source/Util/JsonHandler.php:20
+msgid "Invalid bounty type."
+msgstr "Virheellinen bounty tyyppi."
+
+#: source/Util/JsonHandler.php:36 source/Util/JsonHandler.php:68
+#: source/Util/JsonHandler.php:93 source/Util/JsonHandler.php:112
+#: source/Util/JsonHandler.php:169
+msgid "Invalid state transition."
+msgstr "Virheellinen tilan siirtymä."
+
+#: source/Util/JsonHandler.php:60 source/Util/UserHandler.php:58
+msgid "Affiliate Application for %s"
+msgstr "Jäsen sovellus %s"
+
+#: source/Util/JsonHandler.php:153
+msgid "Invalid status."
+msgstr "Virheellinen tila."
+
+#: source/Util/JsonHandler.php:166
+msgid "Invalid creative"
+msgstr "Virheellinen creative"
+
+#: source/Util/JsonHandler.php:199
+msgid "Invalid transaction type."
+msgstr "Virheellinen tapahtumatyyppi."
+
+#: source/Util/JsonHandler.php:202
+msgid "Invalid value for amount."
+msgstr "Virheellinen määrä."
+
+#: source/Util/EmailHandler.php:30
+msgid "Your username and password"
+msgstr "Käyttäjätunnus ja salasana"
+
+#: source/Util/EmailHandler.php:34
+msgid "[%s] Your username and password for Affiliate Manager"
+msgstr "[%s] Username ja tunnussana ajaksi Affiliate Manager"
+
+#: source/Util/EmailHandler.php:35 source/Util/UserHandler.php:20
+msgid "New affiliate registration for %s: has been approved!"
+msgstr "Uusi affiliate rekisteröinti kohteelle %s: hyväksytty!"
+
+#: source/Util/AffiliateFormHelper.php:93
+msgid "is a blocked e-mail "
+msgstr "on estetty sähköposti"
+
+#: source/Util/AffiliateFormHelper.php:95
+msgid "is in use"
+msgstr "on käytössä"
+
+#: source/Util/AffiliateFormHelper.php:154
+msgid "PayPal Transfer"
+msgstr "PayPal siirto"
+
+#: source/Util/UserHandler.php:25 source/Util/UserHandler.php:34
+msgid "User already has an account and is already an affiliate"
+msgstr "Käyttäjä on jo on tili ja se on jo kumppaniksi"
+
+#: source/Util/UserHandler.php:28 source/Util/UserHandler.php:37
+msgid "Log into the site with your existing account and get started."
+msgstr "Kirjaudu sivustoon nykyisellä tililläsi ja päästä alkuun."
+
+#: source/Data/GenericRepository.php:31 source/Data/GenericRepository.php:76
+msgid "'model' must be of type '%s'"
+msgstr "\"malli\" on oltava tyyppiä '%s'"
+
+#: source/Data/DatabaseInstaller.php:297
+msgid "CANNOT PERFORM DB UPGRADE FROM %s to %s"
+msgstr "Ei voi suorittaa DB UPGRADE %s %s"
+
+#: source/Data/Models/AffiliateModel.php:164
+msgid "Percent"
+msgstr "Prosenttia"
+
+#: source/Data/Models/AffiliateModel.php:166
+msgid "Fixed"
+msgstr "Kiinteä"
+
+#: source/Data/Models/AffiliateModel.php:173
+msgid "Check"
+msgstr "Tarkista"
+
+#: source/Data/Models/ModelMapper.php:34
+msgid "Model mapping error.  Could not map key %s."
+msgstr "Virhe kartoitus malli. Avaimen %s ei voinut yhdistää."

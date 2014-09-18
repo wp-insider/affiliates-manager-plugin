@@ -1,0 +1,1805 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Affiliate Manager\n"
+"POT-Creation-Date: 2014-08-04 13:16-0000\n"
+"PO-Revision-Date: 2014-08-04 13:28-0000\n"
+"Last-Translator: Bjarni K Thors <bkjartansson@gmail.com>\n"
+"Language-Team: 9seeds <justin@9seeds.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: boot-strap.php:33
+msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
+msgstr "Söluaðilastýring WordPress krefst PHP 5.1 eða hærra"
+
+#: boot-strap.php:37
+#, fuzzy
+msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
+msgstr "Söluaðilastýring WordPress krefst PHP 3.1 eða hærra"
+
+#: html/admin/affiliate_detail.php:141
+#, php-format
+msgid "YES, Block all applications from %s"
+msgstr "JÁ, hindra aðgang allra forrita frá %s"
+
+#: html/admin/affiliate_detail.php:150
+msgid "NO, They may re-apply"
+msgstr "NEI, Þau geta sótt um aftur"
+
+#: html/admin/affiliate_detail.php:159
+msgid ""
+"Do you want to block all future applications from this email address, or "
+"allow them to sign up at a later date?"
+msgstr ""
+"Viltu hindra aðgang allra forrita í framtíðinni frá þessu netfangi, eða "
+"leyfa þeim að skrá sig seinna?"
+
+#: html/admin/affiliate_detail.php:188
+msgid "Payout"
+msgstr "Útborgun"
+
+#: html/admin/affiliate_detail.php:219 html/admin/affiliate_detail.php:236
+#: html/admin/creative_update_form.php:82 html/admin/creatives_detail.php:114
+#: html/admin/creatives_detail.php:137 html/admin/manage_creatives.php:38
+#: html/affiliate_creative_detail.php:28
+#: source/Pages/Admin/MyAffiliatesPage.php:221
+#: source/Pages/Admin/NewAffiliatePage.php:86
+#: source/Pages/AffiliatesHome.php:480
+msgid "OK"
+msgstr "OK"
+
+#: html/admin/affiliate_detail.php:236 html/admin/affiliate_detail.php:278
+#: html/admin/affiliate_detail.php:309 html/admin/creatives_detail.php:83
+#: html/admin/creatives_detail.php:92 html/admin/manage_creatives.php:90
+msgid "Cancel"
+msgstr "Hætta við"
+
+#: html/admin/affiliate_detail.php:248
+msgid "Are you sure you wish to approve this affiliate?"
+msgstr "Ertu viss um að þú vijir samþykkja þennan söluðaila?"
+
+#: html/admin/affiliate_detail.php:249
+msgid "Yes, approve."
+msgstr "Já, samþykkja."
+
+#: html/admin/affiliate_detail.php:282 html/admin/affiliate_detail.php:313
+#: html/admin/paypalpayments/select_affiliates.php:115
+#: html/transaction_table.php:32
+msgid "Apply"
+msgstr "Sækja um"
+
+#: html/admin/affiliate_detail.php:291
+msgid "Are you sure you wish to apply an adjustment of "
+msgstr "Ertu viss um að þú viljir samþykkja aðlögun frá"
+
+#: html/admin/affiliate_detail.php:291 html/admin/affiliate_detail.php:333
+msgid " to this account? The new balance will be "
+msgstr "frá þessum aðgangi? Nýja samtalan verður"
+
+#: html/admin/affiliate_detail.php:292 html/admin/affiliate_detail.php:334
+msgid "Yes, apply it."
+msgstr "Já, sækja um það"
+
+#: html/admin/affiliate_detail.php:333
+msgid "Are you sure you wish to apply a payout of "
+msgstr "Ertu viss um að þú viljir sækja um útborgun af"
+
+#: html/admin/affiliate_detail.php:368
+msgid "Are you sure you wish to decline this affiliate?"
+msgstr "Ertu viss um að þú viljir hafna beiðni þessa söluðaila?"
+
+#: html/admin/affiliate_detail.php:368
+msgid "Yes, DECLINE."
+msgstr "Já, HAFNA"
+
+#: html/admin/affiliate_detail.php:372
+msgid "Are you sure you wish to block this affiliate?"
+msgstr "Ertu viss um að þú viljir hindra aðgang þessara söluaðila?"
+
+#: html/admin/affiliate_detail.php:372
+msgid "Yes, BLOCK."
+msgstr "Já, HINDRA"
+
+#: html/admin/affiliate_detail.php:382
+msgid ""
+"Are you sure you wish to unblock this affiliate?<br>User will become "
+"DECLINED."
+msgstr ""
+"Ertu viss um að þú viljir af-hindra aðgang þessa söluaðila?<br>Notandi mun "
+"verða HAFNAÐ"
+
+#: html/admin/affiliate_detail.php:382
+msgid "Yes, UNBLOCK."
+msgstr "Já af-HINDRA"
+
+#: html/admin/affiliate_detail.php:393
+msgid "Are you sure you wish to activate this affiliate?"
+msgstr "Ertu viss um að þú vilijir virkja þenna söluaðila?"
+
+#: html/admin/affiliate_detail.php:393 html/admin/creatives_detail.php:86
+msgid "Yes, ACTIVATE."
+msgstr "Já, VIRKJA."
+
+#: html/admin/affiliate_detail.php:397
+msgid "Are you sure you wish to deactivate this affiliate?"
+msgstr "Ertu viss um að þú viljir aftengja þennan söluaðila?"
+
+#: html/admin/affiliate_detail.php:397 html/admin/creatives_detail.php:95
+msgid "Yes, DEACTIVATE."
+msgstr "Já, AFTENGJA."
+
+#: html/admin/affiliate_detail.php:416
+msgid "Approve Application"
+msgstr "Samþykkja umsókn"
+
+#: html/admin/affiliate_detail.php:422 html/admin/affiliate_detail.php:563
+#: html/admin/settings/settings_general.php:146
+msgid "Bounty Type"
+msgstr "Tegund þóknunar"
+
+#: html/admin/affiliate_detail.php:426
+#: html/admin/settings/settings_general.php:150 html/contact_info.php:118
+msgid "Percentage of Sales"
+msgstr "Prósenta af sölu"
+
+#: html/admin/affiliate_detail.php:427
+#: html/admin/settings/settings_general.php:151 html/contact_info.php:119
+msgid "Fixed Amount per Sale"
+msgstr "Ákveðin upphæð af sölu"
+
+#: html/admin/affiliate_detail.php:433
+#: html/admin/settings/settings_general.php:158
+#: source/Pages/Admin/MyAffiliatesPage.php:220
+#: source/Pages/Admin/NewAffiliatePage.php:85
+#: source/Pages/AffiliatesHome.php:479
+#, php-format
+msgid "Bounty Rate (% of Sale)"
+msgstr "Hlutfall þóknunar (% of Sale)"
+
+#: html/admin/affiliate_detail.php:445 html/admin/creatives_detail.php:161
+msgid "Updating, please wait ... "
+msgstr "Uppfæri, vinsamlega bíðið ..."
+
+#: html/admin/affiliate_detail.php:450 html/admin/creatives_detail.php:166
+msgid "Are you sure?"
+msgstr "Ertu alveg viss?"
+
+#: html/admin/affiliate_detail.php:451
+msgid "approve"
+msgstr "samþykkja"
+
+#: html/admin/affiliate_detail.php:453 html/admin/creatives_detail.php:169
+msgid "Error"
+msgstr "Villa"
+
+#: html/admin/affiliate_detail.php:454 html/admin/creatives_detail.php:170
+#: html/admin/manage_creatives.php:109
+msgid "ERROR:"
+msgstr "VILLA:"
+
+#: html/admin/affiliate_detail.php:457
+msgid "Apply Adjustment "
+msgstr "Virkja aðlögun"
+
+#: html/admin/affiliate_detail.php:461
+msgid "Amount "
+msgstr "Upphæð"
+
+#: html/admin/affiliate_detail.php:467
+msgid "Description "
+msgstr "Lýsing"
+
+#: html/admin/affiliate_detail.php:476
+msgid "Apply Payout "
+msgstr "Virkja útborgun"
+
+#: html/admin/affiliate_detail.php:480
+msgid "Payout Amount "
+msgstr "Upphæð til útborgunar"
+
+#: html/admin/affiliate_detail.php:483
+msgid "Current balance"
+msgstr "Núverandi staða"
+
+#: html/admin/affiliate_detail.php:486
+msgid "Other amount"
+msgstr "Önnur upphæð"
+
+#: html/admin/affiliate_detail.php:495
+msgid "Affiliate:"
+msgstr "Söluaðili:"
+
+#: html/admin/affiliate_detail.php:501 source/Pages/AffiliatesHome.php:32
+msgid "Overview"
+msgstr "Yfirlit"
+
+#: html/admin/affiliate_detail.php:502
+msgid "Account Finances"
+msgstr "Staða reiknings"
+
+#: html/admin/affiliate_detail.php:503
+msgid "Information"
+msgstr "Upplýsingar"
+
+#: html/admin/affiliate_detail.php:504
+msgid "Affiliate Links"
+msgstr "Hlekkur söluaðila"
+
+#: html/admin/affiliate_detail.php:512
+msgid "Approve"
+msgstr "Samþykkja"
+
+#: html/admin/affiliate_detail.php:513
+msgid "Decline"
+msgstr "Hafna"
+
+#: html/admin/affiliate_detail.php:515 html/admin/creatives_detail.php:212
+msgid "Activate"
+msgstr "Virkja"
+
+#: html/admin/affiliate_detail.php:517
+msgid "Dectivate"
+msgstr "Aftengja"
+
+#: html/admin/affiliate_detail.php:519
+msgid "Unblock"
+msgstr "Af-Hindra"
+
+#: html/admin/affiliate_detail.php:521
+msgid "Block"
+msgstr "Hindra"
+
+#: html/admin/affiliate_detail.php:527 html/admin/creative_update_form.php:126
+#: html/admin/creatives_detail.php:227
+msgid "General"
+msgstr "Almennt"
+
+#: html/admin/affiliate_detail.php:531
+msgid "Date Applied"
+msgstr "Dagsetning aðgerðar"
+
+#: html/admin/affiliate_detail.php:532
+msgid "Affiliate Status"
+msgstr "Staða söluaðila"
+
+#: html/admin/affiliate_detail.php:535
+msgid "Account Standing"
+msgstr "Staða reiknings"
+
+#: html/admin/affiliate_detail.php:559
+#: html/affiliate_cp_payment_details_form.php:69
+#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:88
+msgid "Payment Details"
+msgstr "Greiðslu upplýsingar"
+
+#: html/admin/affiliate_detail.php:564
+msgid "Bounty Amount"
+msgstr "Upphæð þóknunar"
+
+#: html/admin/affiliate_detail.php:566
+msgid "Payment Method"
+msgstr "Tegund Útborgunar "
+
+#: html/admin/affiliate_detail.php:568
+msgid "Paypal E-Mail"
+msgstr "PayPal netfangið þitt"
+
+#: html/admin/affiliate_detail.php:570
+msgid "Make Check Out To"
+msgstr "Senda upphæð á"
+
+#: html/admin/affiliate_detail.php:583
+msgid "Balance:"
+msgstr "Staða:"
+
+#: html/admin/affiliate_detail.php:586
+msgid "Earnings:"
+msgstr "Hagnaður:"
+
+#: html/admin/affiliate_detail.php:587
+msgid "Payments:"
+msgstr "Greiðslur:"
+
+#: html/admin/affiliate_detail.php:588
+msgid "Adjustments:"
+msgstr "Leiðéttingar:"
+
+#: html/admin/affiliate_detail.php:592
+msgid "Apply Payout"
+msgstr "Sækja um greiðslu"
+
+#: html/admin/affiliate_detail.php:593
+msgid "Apply Manual Adjustment"
+msgstr "Sækja um leiðréttingu handvirkt"
+
+#: html/admin/affiliate_detail.php:605 html/admin/creative_update_form.php:108
+#: html/admin/creative_update_success.php:4
+msgid "Creative"
+msgstr "Birtingarmynd"
+
+#: html/admin/affiliate_detail.php:606 html/admin/creative_update_form.php:150
+#: html/admin/creatives_detail.php:247 html/admin/manage_creatives.php:167
+#: html/admin/settings/settings_messaging.php:86
+#: html/admin/settings/settings_registration.php:436
+#: html/affiliate_creative_list.php:13 html/transaction_table.php:41
+msgid "Type"
+msgstr "Tegund"
+
+#: html/admin/affiliate_detail.php:607
+msgid "Link"
+msgstr "Hlekkur"
+
+#: html/admin/affiliate_management_home.php:2
+msgid "Affiliate Management Control Panel"
+msgstr "Stjórnborð Söluaðila"
+
+#: html/admin/affiliate_new.php:3 html/admin/affiliate_new_success.php:2
+#: source/Plugin.php:80 source/Plugin.php:81
+msgid "New Affiliate"
+msgstr "Nýr söluaðili "
+
+#: html/admin/affiliate_new.php:6
+msgid ""
+"As an Affiliate Manager, if you want to create an affiliate account rather "
+"than directing someone to the normal registration form, you can do that "
+"here. Once you fill out the required contact information, your new affiliate "
+"will receive an email with their username and password.  They will "
+"automatically be approved, but will still have to log in to agree to the "
+"terms &amp; conditions and set their preferred payment method."
+msgstr ""
+"Sem stjórnandi söluaðila, ef þú vilt búa til söluaðila aðgang frekar en að "
+"senda viðkomandi í venjulega skráningarformið, getur þú gert það hérna. "
+"Þegar þú hefur fyllt út viðeigandi upplýsingar, mun nýji söluaðili þinn fá "
+"sendan tölvupóst með notendanafni og lykilorði. Þeir munu verða samþykktir "
+"sjálfkrafa, en en verða samt sem áður að skrá sig inn og samþykkja "
+"skilmálana &amp; og setja inn upplýsingar um greiðslu."
+
+#: html/admin/affiliate_new_success.php:3
+msgid "New Affiliate has been created"
+msgstr "Nýr söluaðili hefur verið skráður"
+
+#: html/admin/affiliates_list.php:19 source/Plugin.php:75
+msgid "My Affiliates"
+msgstr "Söluaðilar mínir"
+
+#: html/admin/affiliates_list.php:25 html/admin/manage_creatives.php:132
+msgid "Filter"
+msgstr "Sía"
+
+#: html/admin/affiliates_list.php:30 html/admin/manage_creatives.php:137
+msgid "Status:"
+msgstr "Staða:"
+
+#: html/admin/affiliates_list.php:41
+#, php-format
+msgid "Only over payout minimum. (Balance >= %s)"
+msgstr "Aðeins þegar lágmarks upphæð er náð. (Samtala >= %s)"
+
+#: html/admin/affiliates_list.php:49
+#: html/admin/paypalpayments/review_affiliates.php:53
+#: html/admin/paypalpayments/select_affiliates.php:124
+msgid "AID"
+msgstr "AÐSTOÐ"
+
+#: html/admin/affiliates_list.php:52 html/admin/creatives_detail.php:239
+#: html/admin/manage_creatives.php:165 html/transaction_table.php:43
+msgid "Status"
+msgstr "Staða"
+
+#: html/admin/affiliates_list.php:55
+#: html/admin/paypalpayments/review_affiliates.php:58
+#: html/admin/paypalpayments/select_affiliates.php:129
+#: html/affiliate_cp_home.php:16 html/transaction_table.php:48
+msgid "Balance"
+msgstr "Samtala"
+
+#: html/admin/affiliates_list.php:58
+msgid "Earnings"
+msgstr "Hagnaður"
+
+#: html/admin/affiliates_list.php:61
+#: html/admin/paypalpayments/review_affiliates.php:54
+#: html/admin/paypalpayments/select_affiliates.php:125
+msgid "First Name"
+msgstr "Skírnarnafn"
+
+#: html/admin/affiliates_list.php:64
+#: html/admin/paypalpayments/review_affiliates.php:55
+#: html/admin/paypalpayments/select_affiliates.php:126
+msgid "Last Name"
+msgstr "Föðurnafn"
+
+#: html/admin/affiliates_list.php:67 source/Plugin.php:242
+msgid "Email"
+msgstr "Tölvupóstur"
+
+#: html/admin/affiliates_list.php:70
+#: html/admin/paypalpayments/review_affiliates.php:56
+#: html/admin/paypalpayments/select_affiliates.php:127
+msgid "Company"
+msgstr "Fyrirtæki"
+
+#: html/admin/affiliates_list.php:73
+msgid "Date Joined"
+msgstr "Skráð inn dags"
+
+#: html/admin/affiliates_list.php:76
+msgid "Website"
+msgstr "Vefsíða"
+
+#: html/admin/affiliates_list.php:123 html/admin/manage_creatives.php:176
+msgid "View"
+msgstr "Skoða"
+
+#: html/admin/creative_update_form.php:103
+msgid ""
+"This list contains images from the media library. If you upload a new image "
+"it is added to the media library and you can reuse images on multiple "
+"creatives by selecting it from this list. If a new image file is added, it "
+"will be uploaded and will override the currently selected media library "
+"image for this creative link. However, the old image will still remain in "
+"the media library for future use."
+msgstr ""
+"Þessi listi inniheldur myndir úr myndasafni. Ef þú hleður upp nýrri mynd er "
+"henni bætt í myndasafnið og þú getur endurnýtt myndir í mörgum "
+"birtingarmyndum með því að velja þær úr þessum lista. Ef nýrri mynd er bætt "
+"við, er henni hlaðið inn og mun vera sett í stað þeirrar sem nú þegar er "
+"valin í myndasafninu fyrir þá sem er í hlekknum fyrir þessa birtingarmynd. "
+"Enga að síður, verður sú mynd áfram í mydasafninu og hægt að nota síðar."
+
+#: html/admin/creative_update_form.php:108
+#: html/admin/creative_update_success.php:4
+#: html/admin/creatives_detail.php:216
+msgid "Edit"
+msgstr "Breyta"
+
+#: html/admin/creative_update_form.php:108
+#: html/admin/creative_update_success.php:4
+msgid "New"
+msgstr "Nýtt"
+
+#: html/admin/creative_update_form.php:133 html/admin/creatives_detail.php:243
+#: html/admin/manage_creatives.php:168
+#: html/admin/settings/settings_messaging.php:85
+#: html/affiliate_creative_list.php:14
+msgid "Name"
+msgstr "Nafn"
+
+#: html/admin/creative_update_form.php:143 html/admin/creatives_detail.php:251
+msgid "Landing Page"
+msgstr "Lendingarsíða"
+
+#: html/admin/creative_update_form.php:170
+msgid "Image Parameters"
+msgstr "Stillingar fyrir mynd"
+
+#: html/admin/creative_update_form.php:176
+msgid "New Image File"
+msgstr "Ný myndaskrá"
+
+#: html/admin/creative_update_form.php:187
+msgid "Image File from Media Library"
+msgstr "Mynd úr myndasafni"
+
+#: html/admin/creative_update_form.php:197
+msgid "Preview:"
+msgstr "Sýnishorn:"
+
+#: html/admin/creative_update_form.php:208
+#: html/admin/creative_update_form.php:243 html/admin/creatives_detail.php:272
+#: html/admin/creatives_detail.php:295 html/affiliate_creative_detail.php:74
+#: html/affiliate_creative_detail.php:97
+msgid "Alt Text"
+msgstr "Alt texti"
+
+#: html/admin/creative_update_form.php:224
+msgid "Text Link Parameters"
+msgstr "Stillingar fyrir textahlekk"
+
+#: html/admin/creative_update_form.php:232 html/admin/creatives_detail.php:268
+#: html/affiliate_creative_detail.php:70
+msgid "Link Text"
+msgstr "Textahlekkur"
+
+#: html/admin/creative_update_form.php:256
+msgid "Save Creative"
+msgstr "Vista birtingarmynd"
+
+#: html/admin/creative_update_success.php:9
+msgid "Creative updated."
+msgstr "Birtingarmynd uppfærð."
+
+#: html/admin/creative_update_success.php:11
+msgid "New creative created.  This creative is not yet active."
+msgstr "Ný brtingarmynd tilbúin. Þessi birtingarmynd er ekki enn virk."
+
+#: html/admin/creative_update_success.php:16
+msgid "Return to Creatives"
+msgstr "Til baka í brtingarmyndir"
+
+#: html/admin/creatives_detail.php:8 html/admin/creatives_detail.php:289
+#: html/affiliate_creative_detail.php:8 html/affiliate_creative_detail.php:91
+msgid "Image"
+msgstr "Mynd"
+
+#: html/admin/creatives_detail.php:9 html/affiliate_creative_detail.php:9
+msgid "Text Link"
+msgstr "Texta hlekkur"
+
+#: html/admin/creatives_detail.php:10
+msgid "Unknown creative type."
+msgstr "Óþekkt tegund af birtingarmynd"
+
+#: html/admin/creatives_detail.php:143
+msgid "ACTIVATE"
+msgstr "VIRKJA"
+
+#: html/admin/creatives_detail.php:148
+msgid "DEACTIVATE"
+msgstr "AFTENGJA"
+
+#: html/admin/creatives_detail.php:167
+msgid "Are you sure you wish to"
+msgstr "Ertu vissum að þú viljir"
+
+#: html/admin/creatives_detail.php:167
+msgid "this creative?"
+msgstr "Þessi birtingarmynd?"
+
+#: html/admin/creatives_detail.php:174 html/admin/creatives_detail.php:215
+#: html/affiliate_creative_detail.php:41 html/affiliate_creative_detail.php:54
+msgid "Preview"
+msgstr "Sýnishorn"
+
+#: html/admin/creatives_detail.php:194 html/affiliate_creative_detail.php:52
+msgid "Creative:"
+msgstr "Birtingarmyndir:"
+
+#: html/admin/creatives_detail.php:206 html/admin/manage_creatives.php:163
+msgid "Actions"
+msgstr "Aðgerðir"
+
+#: html/admin/creatives_detail.php:210
+msgid "Deactivate"
+msgstr "Afvirkja"
+
+#: html/admin/creatives_detail.php:234 html/admin/manage_creatives.php:164
+#: html/transaction_table.php:40
+msgid "ID"
+msgstr "Auðkenni"
+
+#: html/admin/creatives_detail.php:263 html/affiliate_creative_detail.php:65
+msgid "Text Link Properties"
+msgstr "Stillingar texta hlekks"
+
+#: html/admin/creatives_detail.php:284 html/affiliate_creative_detail.php:86
+msgid "Image Properties"
+msgstr "Stillingar fyrir mynd"
+
+#: html/admin/manage_creatives.php:64
+msgid "Yes, delete this creative"
+msgstr "Já, eyða þessari birtingarmynd"
+
+#: html/admin/manage_creatives.php:113
+msgid "Updating, please wait ..."
+msgstr "Uppfæri, vinsamlega bíðið ..."
+
+#: html/admin/manage_creatives.php:120
+msgid "Delete Creative?"
+msgstr "Eyða birtingarmynd"
+
+#: html/admin/manage_creatives.php:121
+msgid "This creative will be deleted. Are you sure?"
+msgstr "Birtingarmynd þessari verður eytt. Ertu alveg viss?"
+
+#: html/admin/manage_creatives.php:126 source/Plugin.php:87
+msgid "My Creatives"
+msgstr "Birtingarmyndir mínar"
+
+#: html/admin/manage_creatives.php:155
+msgid "Create New"
+msgstr "Búa til nýja"
+
+#: html/admin/manage_creatives.php:166
+msgid "Created"
+msgstr "Tilbúið"
+
+#: html/admin/manage_creatives.php:177
+msgid "Delete"
+msgstr "Eyða"
+
+#: html/admin/paypalpayments/not_configured.php:2
+#: html/admin/paypalpayments/review_affiliates.php:45
+#: html/admin/paypalpayments/select_affiliates.php:102 source/Plugin.php:92
+#: source/Plugin.php:93
+msgid "PayPal Mass Pay"
+msgstr "PayPal fjölgreiðslur"
+
+#: html/admin/paypalpayments/not_configured.php:3
+msgid "Not configured"
+msgstr "Ekki stillt"
+
+#: html/admin/paypalpayments/not_configured.php:5
+#, php-format
+msgid ""
+"You have not configured the Affiliate Manager with your PayPal account "
+"information. You can do so in the <a href=\"%s\">Payment Settings page</a>."
+msgstr ""
+
+#: html/admin/paypalpayments/review_affiliates.php:10
+msgid "Yes, Submit to PayPal"
+msgstr "Já, samþykkja PayPal"
+
+#: html/admin/paypalpayments/review_affiliates.php:17
+msgid "No, Cancel"
+msgstr "Nei, hætta við"
+
+#: html/admin/paypalpayments/review_affiliates.php:39
+msgid "Submit to PayPal?"
+msgstr "Samþykkja PayPal?"
+
+#: html/admin/paypalpayments/review_affiliates.php:40
+msgid "Are you sure you wish to submit a mass payment to PayPal?"
+msgstr "Ertu viss um að þú viljir samþykkja fjölgreiðslu PayPal?"
+
+#: html/admin/paypalpayments/review_affiliates.php:41
+#, php-format
+msgid "Your PayPal account will be charged %s!"
+msgstr "Dregið verður %s frá PayPal reikning þínum!"
+
+#: html/admin/paypalpayments/review_affiliates.php:46
+msgid "Review Your Mass Payment"
+msgstr "Skoða fjölgreiðslurnar"
+
+#: html/admin/paypalpayments/review_affiliates.php:57
+#: html/admin/paypalpayments/select_affiliates.php:128
+msgid "PayPal E-Mail"
+msgstr "Tölvupóstfang PayPal"
+
+#: html/admin/paypalpayments/review_affiliates.php:60
+msgid "Payment"
+msgstr "Útborgun"
+
+#: html/admin/paypalpayments/review_affiliates.php:62
+msgid "New Balance"
+msgstr "Ný staða"
+
+#: html/admin/paypalpayments/review_affiliates.php:93
+msgid "Sub-Total"
+msgstr "Loka samtala"
+
+#: html/admin/paypalpayments/review_affiliates.php:97
+#: html/admin/paypalpayments/select_affiliates.php:175
+#, php-format
+msgid "PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>"
+msgstr ""
+"PayPal rukkar<br /><small>2%% af hverri greiðslu, mest %s1 á greiðslu</small>"
+
+#: html/admin/paypalpayments/review_affiliates.php:102
+#: html/admin/paypalpayments/select_affiliates.php:180
+msgid "Estimated Total"
+msgstr "Áætluð samtala"
+
+#: html/admin/paypalpayments/review_affiliates.php:106
+msgid "Submit Mass Payment to PayPal"
+msgstr "Samþykkkja fjölgreiðslur PayPal"
+
+#: html/admin/paypalpayments/select_affiliates.php:103
+msgid "Select Affiliates to Pay"
+msgstr "Velja söluaðlil til að greiða"
+
+#: html/admin/paypalpayments/select_affiliates.php:106
+#, php-format
+msgid "Not showing %s affiliates that do not have a PayPal account on file."
+msgstr "Sýnir ekki %s söluaðila sem hafa ekki  PayPal skráð."
+
+#: html/admin/paypalpayments/select_affiliates.php:110
+#: html/transaction_table.php:27
+msgid "Date Range:"
+msgstr "Tímabil:"
+
+#: html/admin/paypalpayments/select_affiliates.php:111
+msgid "from"
+msgstr "frá"
+
+#: html/admin/paypalpayments/select_affiliates.php:113
+msgid "to"
+msgstr "til"
+
+#: html/admin/paypalpayments/select_affiliates.php:116
+#: html/transaction_table.php:33
+msgid "Clear"
+msgstr "Hreinsa"
+
+#: html/admin/paypalpayments/select_affiliates.php:130
+msgid "Payment Amount"
+msgstr "Upphæð útborgunar"
+
+#: html/admin/paypalpayments/select_affiliates.php:185
+msgid "Continue with these payments"
+msgstr "Halda áfram með þessa greiðslu"
+
+#: html/admin/settings/settings_general.php:167
+#, fuzzy
+msgid "Currency Symbol"
+msgstr "Núverandi staða"
+
+#: html/admin/settings/settings_general.php:175
+#, fuzzy
+msgid "Enable Debug"
+msgstr "Virkt"
+
+#: html/admin/settings/settings_messaging.php:66
+msgid ""
+"These settings allow you to control text that is displayed to affiliates at "
+"various points in the affiliate plug-in, as well as e-mails that are sent."
+msgstr ""
+"Þessar stilingar gera þér kleift að stjórna textanum sem birtist söluaðilum "
+"á ákveðnum tímapunkti í aðgangi þeirra, sem og í tölvupsóstinum sem þeir "
+"senda."
+
+#: html/admin/settings/settings_messaging.php:71
+msgid "Use:"
+msgstr "Nota:"
+
+#: html/admin/settings/settings_messaging.php:75
+msgid "Content:"
+msgstr "Innihald:"
+
+#: html/admin/settings/settings_messaging.php:87
+msgid "Use"
+msgstr "Nota"
+
+#: html/admin/settings/settings_messaging.php:88
+msgid "Content"
+msgstr "Innihald"
+
+#: html/admin/settings/settings_messaging.php:118
+#, php-format
+msgid "%s(More)"
+msgstr "%s(Meira)"
+
+#: html/admin/settings/settings_messaging.php:125
+msgid ""
+"* Some messages have been modified. These will <strong>NOT</strong> be saved "
+"to the database until you click 'Save Settings' button below."
+msgstr ""
+"* Einstaka skilaboðum hefur verið breytt. Þetta mun <strong>EKKI</strong> "
+"verða vistað í gagnagrunnin fyrr en þú smellir á 'Vista Stillingar' hér "
+"fyrir neðan."
+
+#: html/admin/settings/settings_payment.php:16
+msgid ""
+"Looking for help? Check out the bundled step-by-step guide for setting up "
+"PayPal Mass Pay:"
+msgstr ""
+"Vantar aðstoð? Kannaðu skref fyrir skref leiðbeiningarnar til að setja up "
+"PayPal fjölgreiðslur:"
+
+#: html/admin/settings/settings_payment.php:20
+#, php-format
+msgid "<a href=\"%s\">How to Setup PayPal Mass Pay</a> (PDF)"
+msgstr "<a href=\"%s\">Hvernig skal setja upp fjölgreiðslur PayPal</a> (PDF)"
+
+#: html/admin/settings/settings_payment.php:29
+msgid ""
+"Enable PayPal Mass Pay &#0153;<br /><small>NOTE: Requires a PayPal Premier "
+"or PayPal Business account</small>"
+msgstr ""
+"Virkja PayPal fjölgreiðslukerfi &#0153;<br /><small>ATH: Requires a PayPal "
+"Premier or PayPal Business account</small>"
+
+#: html/admin/settings/settings_payment.php:32
+msgid "PayPal API Configuration"
+msgstr "PayPal API stilingar"
+
+#: html/admin/settings/settings_payment.php:35
+msgid "API Username"
+msgstr "API notendanafn"
+
+#: html/admin/settings/settings_payment.php:39
+msgid "API Password"
+msgstr "API lykilorð"
+
+#: html/admin/settings/settings_payment.php:43
+msgid "Signature"
+msgstr "Undirskrift"
+
+#: html/admin/settings/settings_payment.php:47
+msgid "API End Point"
+msgstr ""
+
+#: html/admin/settings/settings_payment.php:47
+msgid "WARNING: Set to LIVE if you don't know what this is for!"
+msgstr "AÐVÖRUN: Stilltu á LIVE ef þú veist ekki hvað þetta er fyrir"
+
+#: html/admin/settings/settings_payment.php:50
+#, php-format
+msgid "Live (%s)"
+msgstr ""
+
+#: html/admin/settings/settings_payment.php:51
+#, php-format
+msgid "Sandbox - TESTING (%s)"
+msgstr ""
+
+#: html/admin/settings/settings_registration.php:218
+msgid "Display name is required."
+msgstr "Krefst birts nafns."
+
+#: html/admin/settings/settings_registration.php:225
+msgid "Field name is required."
+msgstr "Þörf er á reiti fyrir nafn."
+
+#: html/admin/settings/settings_registration.php:228
+msgid ""
+"Field name may only contains letters, numbers, underscores and hyphens, and "
+"must begin with a letter."
+msgstr ""
+"Í reiti fyrir nafn má aðeins vera bókstafir, tölur, undirstrik og bandstrik, "
+"og verður að byrja á bókstaf."
+
+#: html/admin/settings/settings_registration.php:235
+msgid "This field name is already in use."
+msgstr "Þetta nafn er þegar í notkun."
+
+#: html/admin/settings/settings_registration.php:247
+msgid "Field length must be an non-0 positive number."
+msgstr "Lengd reitar verður að vera non-0 positive tala."
+
+#: html/admin/settings/settings_registration.php:361
+msgid "Custom Field"
+msgstr "Sérsniðin reitur"
+
+#: html/admin/settings/settings_registration.php:368
+#: html/admin/settings/settings_registration.php:438
+msgid "Display Name"
+msgstr "Birt nafn"
+
+#: html/admin/settings/settings_registration.php:375
+#: html/admin/settings/settings_registration.php:439
+msgid "Field Name"
+msgstr "Nafn Reitar"
+
+#: html/admin/settings/settings_registration.php:382
+msgid "Field Type"
+msgstr "Tegund reitar"
+
+#: html/admin/settings/settings_registration.php:385
+msgid "Text"
+msgstr "Texti"
+
+#: html/admin/settings/settings_registration.php:386
+msgid "Number"
+msgstr "Tala"
+
+#: html/admin/settings/settings_registration.php:387
+msgid "E-Mail Address"
+msgstr "Netfang"
+
+#: html/admin/settings/settings_registration.php:388
+msgid "Phone Number"
+msgstr "Símanúmer"
+
+#: html/admin/settings/settings_registration.php:389
+msgid "State Code (US)"
+msgstr ""
+
+#: html/admin/settings/settings_registration.php:390
+msgid "Zip Code (US)"
+msgstr "Póstnúmer (US)"
+
+#: html/admin/settings/settings_registration.php:391
+msgid "Country Code"
+msgstr "Landsnúmer"
+
+#: html/admin/settings/settings_registration.php:392
+msgid "Social Security Number (US)"
+msgstr ""
+
+#: html/admin/settings/settings_registration.php:399
+#: html/admin/settings/settings_registration.php:440
+msgid "Max Length"
+msgstr "Hámarks lengd"
+
+#: html/admin/settings/settings_registration.php:412
+msgid "Available Payout Methods"
+msgstr "Mögulegar útborgunarleiðir"
+
+#: html/admin/settings/settings_registration.php:422
+#: source/Data/Models/AffiliateModel.php:171
+msgid "PayPal"
+msgstr "PayPal"
+
+#: html/admin/settings/settings_registration.php:427
+msgid "Affiliate Register Fields"
+msgstr "Umsókn Söluaðila"
+
+#: html/admin/settings/settings_registration.php:430
+msgid "Add Custom Field"
+msgstr "Bæta við sérsniðnum reiti"
+
+#: html/admin/settings/settings_registration.php:435
+msgid "Enabled"
+msgstr "Virkt"
+
+#: html/admin/settings/settings_registration.php:437
+msgid "Field Format"
+msgstr "Snið reitar"
+
+#: html/admin/settings/settings_registration.php:441
+msgid "Required"
+msgstr "Krafist"
+
+#: html/affiliate_approved.php:1
+#, php-format
+msgid ""
+"Your application was approved.  Please go to the <a href=\"%s\">affiliate "
+"control panel</a> to get started."
+msgstr ""
+"Umsókn þín var samþykkt. Vinsamlega farið á <a href=\"%s\">stjórnborð "
+"söluaðila</a> til að hefjast handa."
+
+#: html/affiliate_cp_agree_terms.php:3
+msgid "Affiliate Confirmation"
+msgstr "Staðfesting söluaðila"
+
+#: html/affiliate_cp_agree_terms.php:5
+msgid "Contract Terms"
+msgstr "Skilmálar samnings"
+
+#: html/affiliate_cp_agree_terms.php:12 html/affiliate_cp_home.php:20
+msgid "Commission Rate"
+msgstr "Söluþóknun"
+
+#: html/affiliate_cp_agree_terms.php:21
+msgid "Terms & Conditions"
+msgstr "Skilmálar"
+
+#: html/affiliate_cp_agree_terms.php:27
+msgid "Agree to Terms"
+msgstr "Samþykkja skilmála"
+
+#: html/affiliate_cp_approved.php:3
+msgid "Affiliate Control Panel"
+msgstr "Stjórnborð söluaðila"
+
+#: html/affiliate_cp_approved.php:5
+msgid "Welcome!"
+msgstr "Velkomin!"
+
+#: html/affiliate_cp_approved.php:9
+msgid "Review Terms and Get Started!"
+msgstr "Fara yfir skilmála og hefjast handa"
+
+#: html/affiliate_cp_home.php:11
+msgid "Account Summary"
+msgstr "Yfirlit notenda"
+
+#: html/affiliate_cp_home.php:32
+msgid "Today"
+msgstr "Í dag"
+
+#: html/affiliate_cp_home.php:41 html/affiliate_cp_home.php:70
+msgid "Visitors"
+msgstr "Gestir"
+
+#: html/affiliate_cp_home.php:45 html/affiliate_cp_home.php:74
+msgid "Closed Transactions"
+msgstr "Lokaðar sölur"
+
+#: html/affiliate_cp_home.php:49 html/affiliate_cp_home.php:78
+msgid "Revenue"
+msgstr "Tekjur"
+
+#: html/affiliate_cp_home.php:61
+msgid "This Month"
+msgstr "Núverandi mánuður"
+
+#: html/affiliate_cp_payment_details_confirmed.php:2
+#: source/display_functions.php:170
+msgid "Confirmed"
+msgstr "Móttekið"
+
+#: html/affiliate_cp_payment_details_confirmed.php:3
+msgid "Your payment details have been submitted"
+msgstr "Greiðsluupplýsingar þínar hafa verið mótteknar"
+
+#: html/affiliate_cp_payment_details_confirmed.php:5
+#, php-format
+msgid ""
+"Now would be a great time to go pick <a href=\"%s\">some creative</a> and "
+"get started."
+msgstr ""
+"Nú væri sniðugt að velja <a href=\"%s\">einhverja sköpun</a> og hefjast handa"
+
+#: html/affiliate_cp_payment_details_form.php:70
+#: html/affiliate_cp_payment_details_simple.php:14
+msgid "Please provide your payment details."
+msgstr "Vinsamlegast gefðu upp greiðsluuppplýsingar."
+
+#: html/affiliate_cp_payment_details_form.php:71
+#: html/affiliate_cp_payment_details_simple.php:15
+msgid ""
+"The following information will be used to disperse payments when your "
+"account reaches the minimum payout amount."
+msgstr ""
+"Eftirfarandi upplýsingar verða notaðar til að koma til þin greiðslu þegar "
+"reikningurinn þinn hefur náð lágmarks upphæð."
+
+#: html/affiliate_cp_payment_details_form.php:79
+#: html/affiliate_cp_payment_details_simple.php:23 html/contact_info.php:94
+msgid "Method"
+msgstr "Aðferð"
+
+#: html/affiliate_cp_payment_details_form.php:96
+#: html/affiliate_cp_payment_details_simple.php:40 html/contact_info.php:103
+msgid "PayPal E-Mail Address"
+msgstr "Netfang hjá PayPal"
+
+#: html/affiliate_cp_payment_details_form.php:109
+#: html/affiliate_cp_payment_details_simple.php:53
+#: source/Util/AffiliateFormHelper.php:151
+msgid "Paper Check"
+msgstr "Peningar"
+
+#: html/affiliate_cp_payment_details_form.php:115
+#: html/affiliate_cp_payment_details_simple.php:59
+msgid "Check Recipient"
+msgstr "Viðtakandi peninga"
+
+#: html/affiliate_cp_payment_details_form.php:134
+msgid "Mail to Address On Record"
+msgstr "Senda á skráð hemilisfang"
+
+#: html/affiliate_cp_payment_details_form.php:143
+#: html/affiliate_cp_payment_details_form.php:166
+#: html/affiliate_cp_payment_details_simple.php:76
+msgid "Recipient"
+msgstr "Viðtakandi"
+
+#: html/affiliate_cp_payment_details_form.php:170
+msgid "Address 1"
+msgstr "Heimilsfang 1"
+
+#: html/affiliate_cp_payment_details_form.php:174
+msgid "Address 2"
+msgstr "Heimilsfang 2"
+
+#: html/affiliate_cp_payment_details_form.php:178
+msgid "City"
+msgstr "Borg"
+
+#: html/affiliate_cp_payment_details_form.php:182
+msgid "Country"
+msgstr "Land"
+
+#: html/affiliate_cp_payment_details_form.php:192
+msgid "State"
+msgstr "Fylki"
+
+#: html/affiliate_cp_payment_details_form.php:202
+msgid "Postal Code"
+msgstr "Póstnúmer"
+
+#: html/affiliate_cp_payment_details_form.php:216
+#: html/affiliate_cp_payment_details_simple.php:99
+msgid "Submit Payment Details"
+msgstr "Skrá greiðsluupplýsingar"
+
+#: html/affiliate_cp_payment_details_simple.php:69
+msgid "Check will be mailed to the following address:"
+msgstr "Peningar verða sendir á eftirfarandi heimilisfang"
+
+#: html/affiliate_creative_detail.php:10
+msgid "unknown creative type."
+msgstr "óþekkt tegund sköpunar"
+
+#: html/affiliate_creative_detail.php:56
+msgid "Your Affiliate-Specific HTML snippet"
+msgstr "Sérstakur HTML bútur - Söluaðila"
+
+#: html/affiliate_creative_list.php:8
+msgid "The following creatives are available for publication."
+msgstr "Eftirfarandi birtingarmyndir eru í boði fyrir birtingu."
+
+#: html/affiliate_home.php:1
+msgid "Welcome to the affiliate control panel."
+msgstr "Velkomin á stjórnborð söluaðila."
+
+#: html/affiliate_not_logged_in.php:1
+#, php-format
+msgid ""
+"This is the affiliates section of this store.  If you are an existing "
+"affiliate, please <a href=\"%s\">log in</a> to access your control panel."
+msgstr ""
+"Þetta er svæði söluaðila búðarinnar. Ef þú ert skráður söluaðili, "
+"vinsamlegast <a href=\"%s\">skráð þig inn</a> til að komast að stjórnborðinu."
+
+#: html/affiliate_not_logged_in.php:4
+#, php-format
+msgid ""
+"If you are not an affiliate, but wish to become one, you will need to "
+"apply.  To apply, you must be a registered user on this blog.  If you have "
+"an existing account on this blog, please <a href=\"%s\">log in</a>.  If not, "
+"please <a href=\"%s\">register</a>."
+msgstr ""
+"Ef þú ert ekki skráður söluaðili, en gætir hugsað þér að verða það, verður "
+"þú að sækja um. Til að sækja um verður þú að vera skráður notandi á þessari "
+"síðu. Ef þú ert þegar með notenda aðgang vinsamlegast <a href=\"%s\">Skráðu "
+"þig inn</a>. Ef ekki, vinsamlegast <a href=\"%s\">búðu til aðgang</a>."
+
+#: html/affiliate_not_registered.php:1
+#, php-format
+msgid ""
+"This is the affiliates section of this store. You are not currently an "
+"affiliate of this store.  If you wish to become one, please <a href=\"%s\"/"
+">apply</a>."
+msgstr ""
+"Þetta er svæði söluaðila búðarinnar. Þú ert ekki skráður söluðaili "
+"búðarinnar. Ef þú óskar eftir að taka þátt, vinsamlegast  <a href=\"%s\"/"
+">sóttu um</a>."
+
+#: html/affiliate_register_form.php:15 html/contact_info.php:146
+msgid "* Required fields"
+msgstr "Nauðsynlegir reitir"
+
+#: html/affiliate_register_form.php:56
+msgid "You must agree to the terms."
+msgstr "Þú verður að samþykkja skilmála."
+
+#: html/affiliate_register_form.php:60
+msgid "Submit Application"
+msgstr "Senda umsókn"
+
+#: html/contact_info.php:13
+msgid ""
+"Changing the affiliate's email address will not change their WordPress "
+"Affiliate Manager login, which may be based on the email address they used "
+"when they signed up."
+msgstr ""
+"Breyting á netfangi söluaðila muna ekki hafa áhfrif á innsksráningu þeirra á "
+"Söluaðilastýringuna, sem gæti verið byggð á netfanginu sem þeir notuðu þegar "
+"þeir skráðu sig inn."
+
+#: html/contact_info.php:15
+msgid ""
+"Changing your email address will not change your WordPress Affiliate Manager "
+"login, which may be based on the email address you used when you signed up."
+msgstr ""
+"Breyting á netfangi þínu mun ekki hafa áhrif á innskráningu þína á "
+"Söluaðilastýringuna, þar sem þú gætir hafa skráð netfang á þegar þú skráðir "
+"þig."
+
+#: html/contact_info.php:26
+msgid "Contact Information"
+msgstr "Tengiliða Upplýsingar"
+
+#: html/contact_info.php:81
+#, php-format
+msgid ""
+"There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s"
+"\">Cancel</a>"
+msgstr ""
+"Í biðstöðu er beiðni um breytingar á netfangi þínu í <code>%1$s</code>. <a "
+"href=\"%2$s\">Hætta við</a>"
+
+#: html/contact_info.php:112
+msgid "Bounty Type *"
+msgstr "Tegund þóknunar"
+
+#: html/contact_info.php:130
+#, php-format
+msgid "Bounty Rate (%s per Sale) *"
+msgstr "Hlutfall Þóknunar (%s fyrir hverja sölu) *"
+
+#: html/contact_info.php:130
+#, php-format
+msgid "Bounty Rate (% of Sale) *"
+msgstr "Hlutfall Þóknun (% of Sale) *"
+
+#: html/contact_info.php:148
+msgid "+ Custom fields"
+msgstr "+ Sérsniðinn reitur"
+
+#: html/contact_info.php:152
+msgid "Save Changes"
+msgstr "Vista Breytingar"
+
+#: html/transaction_table.php:28
+msgid "From"
+msgstr "Frá"
+
+#: html/transaction_table.php:42
+msgid "Date Occurred"
+msgstr "Dags breytingar"
+
+#: html/transaction_table.php:44
+msgid "Description"
+msgstr "Lýsing"
+
+#: html/transaction_table.php:45
+msgid "Reference ID"
+msgstr "Auðkenni tilvísunar"
+
+#: html/transaction_table.php:46
+msgid "Amount"
+msgstr "Upphæð"
+
+#: html/transaction_table.php:73
+msgid "No records found for the date range selected."
+msgstr "Engar upplýsingar fundust fyrir valda dagsetningu"
+
+#: source/Data/GenericRepository.php:31 source/Data/GenericRepository.php:76
+#, php-format
+msgid "'model' must be of type '%s'"
+msgstr "'model' verður að vera af tegundinni '%s'"
+
+#: source/Data/Models/AffiliateModel.php:164
+msgid "Percent"
+msgstr "Prósenta"
+
+#: source/Data/Models/AffiliateModel.php:166
+msgid "Fixed"
+msgstr "Fyrirfram ákveðið"
+
+#: source/Data/Models/AffiliateModel.php:173
+msgid "Check"
+msgstr "Peningar"
+
+#: source/Data/Models/ModelMapper.php:34
+#, php-format
+msgid "Model mapping error.  Could not map key %s."
+msgstr ""
+
+#: source/MessageHelper.php:29
+#, php-format
+msgid "Attempt to load invalid message of name '%s'"
+msgstr "Tilraun til að hlaða ómerkum skilaboðum frá nafni '%s'"
+
+#: source/Options.php:27
+msgid "Invalid PaPpal API value"
+msgstr ""
+
+#: source/Pages/Admin/MyAffiliatesPage.php:127
+msgid "All Active"
+msgstr "Allir virkir"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:128
+msgid "All (Including Closed)"
+msgstr "Allir ( Með Lokuðum)"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:130
+msgid "Status: Active"
+msgstr "Staða: Virk"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:131
+msgid "Status: Applied"
+msgstr "Saða. Sótt um"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:132
+msgid "Status: Approved"
+msgstr "Staða: Samþykkt"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:133
+msgid "Status: Confirmed"
+msgstr "Staða: staðfest"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:134
+msgid "Status: Declined"
+msgstr "Staða: Hafnað"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:135
+msgid "Status: Blocked"
+msgstr "Staða: Hindrað"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:136
+msgid "Status: Inactive"
+msgstr "Staða: Óvirk"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:219
+#: source/Pages/Admin/NewAffiliatePage.php:84
+#: source/Pages/AffiliatesHome.php:478
+#, php-format
+msgid "Bounty Rate (%s per Sale)"
+msgstr "Hlutfall söluþóknunar (%s fyrir hverja sölu)"
+
+#: source/Pages/Admin/MyCreativesPage.php:57
+msgid "All"
+msgstr "Allt"
+
+#: source/Pages/Admin/MyCreativesPage.php:58 source/display_functions.php:166
+msgid "Active"
+msgstr "Virkur"
+
+#: source/Pages/Admin/MyCreativesPage.php:59 source/display_functions.php:168
+msgid "Inactive"
+msgstr "Óvirkur"
+
+#: source/Pages/Admin/MyCreativesPage.php:108
+#: source/Pages/Admin/MyCreativesPage.php:261
+#: source/Pages/Admin/MyCreativesPage.php:268
+#: source/Pages/AffiliatesHome.php:165 source/Util/JsonHandler.php:228
+msgid "Invalid creative."
+msgstr "Ógild birtingarmynd"
+
+#: source/Pages/Admin/MyCreativesPage.php:157
+#, php-format
+msgid "Image Upload Error: %s"
+msgstr "Villa við upphleðslu myndar: %s"
+
+#: source/Pages/Admin/MyCreativesPage.php:222
+msgid "Insert failed: Bad creative type."
+msgstr "Tókst ekki að setja inn: Slæm tegund birtingarmyndar."
+
+#: source/Pages/Admin/MyCreativesPage.php:231
+msgid "Creative Updated."
+msgstr "Birtingarmynd uppfærð."
+
+#: source/Pages/Admin/MyCreativesPage.php:238
+msgid "Creative ... created."
+msgstr "Birtingarmynd ... tilbúin."
+
+#: source/Pages/Admin/MyCreativesPage.php:242
+msgid "Insert failed: invalid creative update mechanism."
+msgstr "Tókst ekki að setja inn: ógild uppfærslugerð á birtingarmynd."
+
+#: source/Pages/Admin/NewAffiliatePage.php:73
+msgid "Add Affiliate"
+msgstr "Bæta við Söluaðila"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:53
+msgid "This results file does not appear to match this payment."
+msgstr "Niðurstaða þessara skrá virðist ekki passa við þessa greiðslu."
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:87
+#, php-format
+msgid ""
+"Matched a transaction in your results file, but the value was incorrect. "
+"Expected %s but found '%s'"
+msgstr ""
+"Niðurtöður skráar passa, en gildið var rangt. Væntanlegt %s en fann '%s'"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:95
+msgid ""
+"Could not correlate a transaction from your results file with the "
+"transactions on record."
+msgstr ""
+"Gat ekki fundið samhengið í færlsunum í niðurstöðum þínum með færslunum á "
+"skrá."
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:101
+msgid "Could not correlate all transactions"
+msgstr "Gat ekki fundið samhengið í öllum færslum."
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:145
+msgid "Invalid PayPa LogID"
+msgstr "Ógild innskráning hjá PayPal"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:151
+msgid "Transaction not found"
+msgstr "Færslur fundust ekki"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:162
+msgid "Invalid transaction status"
+msgstr "Ógild staða færslna"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:220
+msgid "Affiliate Payment"
+msgstr "Útborgun söluaðila"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:232
+msgid "Affiliate not found"
+msgstr "Söluaðili fannst ekki"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:235
+msgid "Payment method for affiliate is not PayPal"
+msgstr "Greiðsluleið söluaðila er ekki PayPal"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:242
+msgid "Payout via PayPal Mass Pay"
+msgstr "Útborgun með PayPal fjölgreiðslukerfis"
+
+#: source/Pages/AffiliatesHome.php:33
+msgid "Sales"
+msgstr "Sölur"
+
+#: source/Pages/AffiliatesHome.php:34
+msgid "Payment History"
+msgstr "Greiðslusaga"
+
+#: source/Pages/AffiliatesHome.php:35 source/Plugin.php:86
+msgid "Creatives"
+msgstr "Birtingarmyndir"
+
+#: source/Pages/AffiliatesHome.php:36
+msgid "Edit Profile"
+msgstr "Breyta prófíl"
+
+#: source/Pages/AffiliatesHome.php:167 source/Util/JsonHandler.php:28
+#: source/Util/JsonHandler.php:52 source/Util/JsonHandler.php:83
+#: source/Util/JsonHandler.php:109 source/Util/JsonHandler.php:133
+#: source/Util/JsonHandler.php:207
+msgid "Invalid affiliate"
+msgstr "Ógildur söluaðili"
+
+#: source/Pages/AffiliatesHome.php:169
+msgid "Inactive creative."
+msgstr "Óvirk birtingarmynd."
+
+#: source/Pages/AffiliatesHome.php:343
+#, php-format
+msgid "%s per sale."
+msgstr "%s fyrir hverja sölu."
+
+#: source/Pages/AffiliatesHome.php:345
+#, php-format
+msgid "%s%% of each completed sale, pre-tax"
+msgstr "%s%% af hverri lokaðri sölu, fyrir skatt"
+
+#: source/Pages/AffiliatesRegister.php:55 source/Util/UserHandler.php:136
+msgid ""
+"Error submitting your details to the database. This is a bug, and your "
+"application was not submitted."
+msgstr ""
+"Villa við að setja inn upplýsingar þinar í gagnagrunn. Þetta er kerfisvilla "
+"og umsókn þín var ekki send inn."
+
+#: source/Pages/AffiliatesRegister.php:63 source/Util/UserHandler.php:139
+#, php-format
+msgid "New affiliate registration on your site %s:"
+msgstr "Ný söluaðila umsókn á vefsíðunni þinni  %s:"
+
+#: source/Pages/AffiliatesRegister.php:64 source/Util/UserHandler.php:140
+#, php-format
+msgid "Name: %s %s"
+msgstr "Nafn: %s %s"
+
+#: source/Pages/AffiliatesRegister.php:65 source/Util/UserHandler.php:141
+#, php-format
+msgid "Email: %s"
+msgstr "Netfang: %s"
+
+#: source/Pages/AffiliatesRegister.php:66 source/Util/UserHandler.php:142
+#, php-format
+msgid "Company: %s"
+msgstr "Fyritæki: %s"
+
+#: source/Pages/AffiliatesRegister.php:67 source/Util/UserHandler.php:143
+#, php-format
+msgid "Website: %s"
+msgstr "Vefsíða: %s"
+
+#: source/Pages/AffiliatesRegister.php:68 source/Util/UserHandler.php:144
+#, php-format
+msgid "View Application: %s"
+msgstr "Skoða umsókn: %s"
+
+#: source/Pages/AffiliatesRegister.php:69 source/Util/UserHandler.php:145
+msgid "New Affiliate Registration"
+msgstr "Ný söluaðila umsókn"
+
+#: source/Pages/AffiliatesRegister.php:72
+#, php-format
+msgid "Affiliate application for %s"
+msgstr "Umsókn söluaðila fyrir %s"
+
+#: source/Pages/PublicPage.php:91 source/Util/JsonHandler.php:14
+#: source/Util/JsonHandler.php:44 source/Util/JsonHandler.php:75
+#: source/Util/JsonHandler.php:101 source/Util/JsonHandler.php:125
+#: source/Util/JsonHandler.php:136 source/Util/JsonHandler.php:150
+#: source/Util/JsonHandler.php:196 source/Util/JsonHandler.php:224
+msgid "Access denied."
+msgstr "Aðgangi hafnað."
+
+#: source/PayPal/MassPayRequest.php:24
+msgid "receiverType must be one of the RECEIVERTYPE_* constants"
+msgstr ""
+
+#: source/PayPal/MassPayRequest.php:33
+msgid "'amount' must be a valid monetary value"
+msgstr "'magn' verður að vera gild verðmæti"
+
+#: source/PayPal/MassPayResultFile.php:113
+#: source/PayPal/MassPayResultFile.php:124
+#, php-format
+msgid "Failed to parse amounts from field: %s"
+msgstr "Gat ekki flokkað upphæð úr reitum: %s"
+
+#: source/PayPal/Service.php:74
+#, php-format
+msgid ""
+"POST failed\n"
+"errors:\n"
+"%serrordata:\n"
+"%s"
+msgstr ""
+
+#: source/PayPal/Service.php:79
+#, php-format
+msgid "Unknown response: %s"
+msgstr "Óþekkt svörun: %s"
+
+#: source/Plugin.php:68
+msgid "Affiliate Management"
+msgstr "Stýring söluaðila"
+
+#: source/Plugin.php:69 source/Plugin.php:74 source/Plugin.php:392
+#: source/Plugin.php:406
+msgid "Affiliates"
+msgstr "Söluaðilar"
+
+#: source/Plugin.php:98 source/Plugin.php:99
+msgid "Settings"
+msgstr "Stillingar"
+
+#: source/Plugin.php:106
+msgid "Store Affiliates"
+msgstr "Verslun söluaðila"
+
+#: source/Plugin.php:107
+msgid "Register"
+msgstr "Skrá inn"
+
+#: source/Plugin.php:239
+msgid "You are currently logged in"
+msgstr ""
+
+#: source/Plugin.php:241
+#, fuzzy
+msgid "Username"
+msgstr "API notendanafn"
+
+#: source/Plugin.php:291
+msgid "Become an affiliate"
+msgstr "Gerast söluaðili"
+
+#: source/Plugin.php:292
+msgid "Are you interested in earning money by directing visitors to our site?"
+msgstr ""
+"Hefur þú áhuga á að vinna þér inn pening með því að stýra gestum á síðuna "
+"okkar?"
+
+#: source/Plugin.php:294
+msgid "Sign up"
+msgstr "Skrá mig inn"
+
+#: source/Plugin.php:294
+msgid " to become an affiliate today!"
+msgstr "til að gerast söluaðili í dag!"
+
+#: source/Plugin.php:407
+msgid "Be An Affiliate"
+msgstr "Vertu söluaðili"
+
+#: source/Plugin.php:532
+#, php-format
+msgid ""
+"WP Affiliate Manager was unable to load your currency from your WPLANG "
+"setting: %s"
+msgstr ""
+"Söluaðilastjórinn gat ekki hlaðið inn gjaldmiðli þínum frá WPLANG "
+"stillingum: %s"
+
+#: source/Plugin.php:533
+#, php-format
+msgid ""
+"Your currency will be displayed as %s and PayPal payments will be paid in %s"
+msgstr ""
+"Gjaldmiðill þinn verður birtur sem %s og PayPAl útborgun verður greidd í %s"
+
+#: source/Plugin.php:574
+msgid "Invalid JSON handler."
+msgstr ""
+
+#: source/Tracking/RequestTracker.php:179
+msgid "no refkey in request."
+msgstr "engin refkey í beiðni."
+
+#: source/Tracking/RequestTracker.php:196
+msgid "invalid refkey data."
+msgstr "Ógild refkey data."
+
+#: source/Tracking/TrackingKey.php:35
+#, php-format
+msgid "invalid refkey format. (length=%s)"
+msgstr "ógild refkey format. (lengd=%s)"
+
+#: source/Util/AffiliateFormHelper.php:93
+msgid "is a blocked e-mail "
+msgstr "er blockerað email"
+
+#: source/Util/AffiliateFormHelper.php:95
+msgid "is in use"
+msgstr "ert í notkun"
+
+#: source/Util/AffiliateFormHelper.php:154
+msgid "PayPal Transfer"
+msgstr "PayPal greiðsla"
+
+#: source/Util/EmailHandler.php:30
+msgid "Your username and password"
+msgstr "Notendanafn þitt og lykilorð"
+
+#: source/Util/EmailHandler.php:34
+#, php-format
+msgid "[%s] Your username and password for Affiliate Manager"
+msgstr "[%s] Notendanafn þitt og lykilorð fyrir Söluaðila stýringuna "
+
+#: source/Util/EmailHandler.php:35 source/Util/UserHandler.php:20
+#: source/Util/UserHandler.php:82
+#, php-format
+msgid "New affiliate registration for %s: has been approved!"
+msgstr "Ný umsókn söluaðila fyrir %s: hefur verið samþykkt!"
+
+#: source/Util/JsonHandler.php:17
+msgid "Invalid bounty amount."
+msgstr "Ógild upphæð þóknunar."
+
+#: source/Util/JsonHandler.php:20
+msgid "Invalid bounty type."
+msgstr "Ógild tegund þóknunar"
+
+#: source/Util/JsonHandler.php:36 source/Util/JsonHandler.php:68
+#: source/Util/JsonHandler.php:93 source/Util/JsonHandler.php:112
+#: source/Util/JsonHandler.php:169
+msgid "Invalid state transition."
+msgstr "Ógild staða breytinga."
+
+#: source/Util/JsonHandler.php:60 source/Util/UserHandler.php:58
+#: source/Util/UserHandler.php:149
+#, php-format
+msgid "Affiliate Application for %s"
+msgstr "Umsókn söluaðila fyrir %s"
+
+#: source/Util/JsonHandler.php:153
+msgid "Invalid status."
+msgstr "Ógild staða."
+
+#: source/Util/JsonHandler.php:166
+msgid "Invalid creative"
+msgstr "Ógild birtingarmynd"
+
+#: source/Util/JsonHandler.php:199
+msgid "Invalid transaction type."
+msgstr "Ógild tegund færslu."
+
+#: source/Util/JsonHandler.php:202
+msgid "Invalid value for amount."
+msgstr "Ógild gildi fyrir upphæð."
+
+#: source/Util/UserHandler.php:25 source/Util/UserHandler.php:34
+#: source/Util/UserHandler.php:87 source/Util/UserHandler.php:96
+msgid "User already has an account and is already an affiliate"
+msgstr "Notandi er þegar með reikning og er þegar söluaðili"
+
+#: source/Util/UserHandler.php:28 source/Util/UserHandler.php:37
+#: source/Util/UserHandler.php:90 source/Util/UserHandler.php:99
+msgid "Log into the site with your existing account and get started."
+msgstr ""
+"Skráðu þig inn á síðuna á reikninginn sem þú ert núna með og hefstu handa."
+
+#: source/Validation/CallbackValidator.php:17
+msgid "Argument 'callback' must be callable"
+msgstr ""
+
+#: source/Validation/CountryCodeValidator.php:15
+#: source/Validation/StringValidator.php:29
+msgid "is required"
+msgstr "er krafist"
+
+#: source/Validation/EmailValidator.php:14
+msgid "must be a valid e-mail address"
+msgstr "verður að vera gilt netfang"
+
+#: source/Validation/MoneyValidator.php:12
+msgid "must be a valid monetary value"
+msgstr "verður að vera gild upphæð"
+
+#: source/Validation/MultiPartPhoneNumberValidator.php:12
+msgid "must be a valid phone number"
+msgstr "verður að vera gilt símanúmer"
+
+#: source/Validation/MultiPartSocialSecurityNumberValidator.php:13
+msgid "must be a valid social security number"
+msgstr "verður að vera gild kennitala"
+
+#: source/Validation/NumberValidator.php:14
+msgid "must be a number"
+msgstr "verður að vera tala"
+
+#: source/Validation/PhoneNumberValidator.php:12
+msgid "must be a phone number"
+msgstr "verður að vera símanúmer"
+
+#: source/Validation/SetValidator.php:18
+#: source/Validation/StateCodeValidator.php:14
+msgid "must be selected"
+msgstr "verður að vera valið"
+
+#: source/Validation/StringValidator.php:24
+msgid "must be between % and %s characters"
+msgstr "verður að vera á milli % og %s bókstafa"
+
+#: source/Validation/StringValidator.php:31
+#, php-format
+msgid "must be at least %s characters"
+msgstr "verður að vera minnsta kosti %s stafir"
+
+#: source/Validation/StringValidator.php:35
+#, php-format
+msgid "must be no more than %s characters"
+msgstr "má ekki vera meira en %s stafir"
+
+#: source/Validation/ZipCodeValidator.php:16
+msgid "must be a valid zip code"
+msgstr "verður að vera gilt póstnúmer"
+
+#: source/display_functions.php:11
+msgid "Affiliate has applied, but is waiting on your decision."
+msgstr "Söluaðili hefur sótt um og er að bíða eftir ákvörðun frá þér"
+
+#: source/display_functions.php:12
+msgid "Affiliate has been approved, but has not accepted terms."
+msgstr ""
+"Söluaðili hefur verið samþykktur en hefur ekki gengist við skilmálunum."
+
+#: source/display_functions.php:13
+msgid "Affiliate is active, and will receive credit for leads."
+msgstr "Söluaðili er virkur og mun fá greitt fyrir tilvísanir."
+
+#: source/display_functions.php:14
+msgid ""
+"Affiliate has accepted terms and provided payment details.<br /> If the "
+"details look good, you should activate this affiliate so they can begin "
+"sending traffic."
+msgstr ""
+"Söluaðili hefur samþykkt skilmálana og gefið upp greiðslu upplýsingar.<br /"
+">Ef allar upplýsingar eru í lagi, ættirðu að virkja þenna söluaðila svo hann "
+"geti farið að auka heimsóknir á síðuna."
+
+#: source/display_functions.php:15
+msgid "Affiliate has been disabled."
+msgstr "Söluaðili hefur verið gerður óvirkur."
+
+#: source/display_functions.php:16
+msgid "Affiliate was declined."
+msgstr "Söluaðila var hafnað."
+
+#: source/display_functions.php:17
+msgid "Affiliate was blocked and cannot re-apply."
+msgstr "Söluaðili var blockeraður og getur ekki sótt um aftur."
+
+#: source/display_functions.php:23
+#, php-format
+msgid "%s per sale"
+msgstr "%s/ af hverri sölu"
+
+#: source/display_functions.php:160
+msgid "Applied"
+msgstr "Sótt um"
+
+#: source/display_functions.php:162
+msgid "Declined"
+msgstr "Hafnað"
+
+#: source/display_functions.php:164
+msgid "Approved"
+msgstr "Samþykkt"
+
+#: source/display_functions.php:172
+msgid "Blocked"
+msgstr "Hindraður"
+
+#~ msgid ""
+#~ "WP Affiliate Manager has been updated and needs to be deactivated and re-"
+#~ "activated to perform upgrades in order work"
+#~ msgstr ""
+#~ "WP Söluaðila stýringin hefur verið uppfærð og það þarf að aftengja og "
+#~ "endurtengja til að uppfærslur virki"
