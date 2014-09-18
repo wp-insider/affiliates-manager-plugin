@@ -102,6 +102,10 @@ If you have a question, you can ask it on our support forum.
 
 Visit the [affiliate manager plugin](https://wpaffiliatemanager.com) site for more details.
 
+= Developers =
+* If you are a developer and you need some extra hooks or filters for this plugin then let us know.
+* Github repository - https://github.com/wp-insider/affiliates-manager-plugin
+
 == Installation ==
 
 * Go to the Add New plugins screen in your WordPress admin area
