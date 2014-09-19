@@ -134,11 +134,18 @@ class WPAM_Data_GenericRepository
 
 	public function loadMultipleBy(array $where = array(), array $orderBy = array())
 	{
+		return $this->loadMultipleByLimit($where, $orderBy);
+	}
+
+	public function loadMultipleByLimit(array $where = array(), array $orderBy = array(), $limit = NULL)
+	{
 		$query = "
 			SELECT *
 			FROM `{$this->tableName}`"
 		. $this->getWhereClause($where)
 		. $this->getOrderByClause($orderBy);
+
+		if ($limit !== NULL) $query .= " LIMIT $limit";
 
 		return $this->getModelsFromQuery($query);
 	}

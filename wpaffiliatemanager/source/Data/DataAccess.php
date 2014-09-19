@@ -15,6 +15,7 @@ require_once WPAM_BASE_DIRECTORY . "/source/Data/Models/MessageModel.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Data/GenericRepository.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Data/AffiliateRepository.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Data/CreativeRepository.php";
+require_once WPAM_BASE_DIRECTORY . "/source/Data/ImpressionRepository.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Data/WordPressRepository.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Data/EventRepository.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Data/TransactionRepository.php";
@@ -36,6 +37,7 @@ class WPAM_Data_DataAccess {
     const TABLE_TRACKING_TOKENS_PURCHASE_LOGS = 'wpam_tracking_tokens_purchase_logs';
     const TABLE_AFFILIATES_FIELDS = "wpam_affiliates_fields";
     const TABLE_PAYPAL_LOGS = "wpam_paypal_logs";
+    const TABLE_IMPRESSIONS = "wpam_impressions";
 
     private $affiliateRepository;
     private $wordpressRepository;
@@ -47,6 +49,7 @@ class WPAM_Data_DataAccess {
     private $affiliateFieldRepository;
     private $messageRepository;
     private $paypalLogRepository;
+    private $impressionRepository;
 
     public function __construct() {
         // Hopefully this can be isolated to just this point
@@ -65,6 +68,7 @@ class WPAM_Data_DataAccess {
         $this->affiliateFieldRepository = new WPAM_Data_GenericRepository($wpdb, $table_prefix . self::TABLE_AFFILIATES_FIELDS, "WPAM_Data_Models_AffiliateFieldModel", "affiliateFieldId");
         $this->messageRepository = new WPAM_Data_GenericRepository($wpdb, $table_prefix . self::TABLE_MESSAGES, "WPAM_Data_Models_MessageModel", "messageId");
         $this->paypalLogRepository = new WPAM_Data_GenericRepository($wpdb, $table_prefix . self::TABLE_PAYPAL_LOGS, "WPAM_Data_Models_PaypalLogModel", "paypalLogId");
+        $this->impressionRepository = new WPAM_Data_ImpressionRepository($wpdb, $table_prefix . self::TABLE_IMPRESSIONS, "WPAM_Data_Models_ImpressionModel", "impressionId");
     }
 
     /**
@@ -135,6 +139,13 @@ class WPAM_Data_DataAccess {
      */
     public function getPaypalLogRepository() {
         return $this->paypalLogRepository;
+    }
+
+    /**
+     * @return WPAM_Data_GenericRepository
+     */
+    public function getImpressionRepository() {
+        return $this->impressionRepository;
     }
 
 }

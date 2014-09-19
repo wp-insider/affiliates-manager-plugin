@@ -35,6 +35,9 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 						array( __( 'Creatives', 'wpam' ), $this->getLink(array('sub' => 'creatives'))),
 						array( __( 'Edit Profile', 'wpam' ), $this->getLink(array('sub' => 'profile'))),
 					);
+
+					if (get_option (WPAM_PluginConfig::$AffEnableImpressions))
+						$response->viewData['navigation'][] = array( __( 'Impressions', 'wpam' ), $this->getLink(array('sub' => 'impressions')));
 				}
 				else if ($affiliate->isDeclined())
 				{
@@ -145,6 +148,10 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 			case 'payments':  return $this->doPayments( $request, $affiliate );
 			case 'creatives': return $this->doCreatives( $request );
 			case 'profile':   return $this->doContactInfo( $request, $affiliate );
+			case 'impressions':
+				if (get_option (WPAM_PluginConfig::$AffEnableImpressions))
+					return $this->doImpressions( $request, $affiliate );
+				else return $this->doOverviewHome( $request, $affiliate );
 			default:          return $this->doOverviewHome( $request, $affiliate );
 		}
 
@@ -173,6 +180,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 
 			$linkBuilder = new WPAM_Tracking_TrackingLinkBuilder($affiliate, $creative);
 			$response->viewData['htmlPreview'] = $linkBuilder->getHtmlSnippet();
+			$response->viewData['htmlSnippet'] = $linkBuilder->getImpressionHtmlSnippet() . $response->viewData['htmlPreview'];
 
 			return $response;
 		}
@@ -223,6 +231,18 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 		$response->viewData['todayClosedTransactions'] = $todayEventSummary->purchases;
 		$response->viewData['todayRevenue'] = $todayAccountSummary->credits;
 
+		if (get_option (WPAM_PluginConfig::$AffEnableImpressions)) {
+			$response->viewData['monthImpressions'] = $db->getImpressionRepository()->getImpressionsForRange(
+				strtotime(date("Y-m-01")),
+				strtotime(date("Y-m-01", strtotime("+1 month"))),
+				$affiliate->affiliateId
+			);
+			$response->viewData['todayImpressions'] = $db->getImpressionRepository()->getImpressionsForRange(
+				strtotime('today'),
+				strtotime('tomorrow'),
+				$affiliate->affiliateId
+			);
+		}
 
 		return $response;
 
@@ -334,6 +354,34 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 		
 		//save for form validation in the footer
 		$this->response = $response;
+
+		return $response;
+	}
+
+	protected function doImpressions( $request, $affiliate ) {
+		$response = new WPAM_Pages_TemplateResponse( 'affiliate_cp_impressions' );
+
+		$db = new WPAM_Data_DataAccess();
+
+		$where = array('sourceAffiliateId' => $affiliate->affiliateId);
+
+		$response->viewData['impressions'] = $db->getImpressionRepository()->loadMultipleByLimit(
+			$where,
+			array('dateCreated' => 'desc'),
+			100
+			);
+
+		$creativeNames = array ();
+
+		foreach ( $response->viewData['impressions'] as $impression ) {
+			if (!array_key_exists ($impression->sourceCreativeId, $creativeNames))
+				$creativeNames[$impression->sourceCreativeId] = $db->getCreativesRepository()->load($impression->sourceCreativeId)->name;
+		}
+
+		$response->viewData['creativeNames'] = $creativeNames;
+
+		$where = array('sourceAffiliateId' => $affiliate->affiliateId);
+		$response->viewData['impressionCount'] = $db->getImpressionRepository()->count ( $where );
 
 		return $response;
 	}

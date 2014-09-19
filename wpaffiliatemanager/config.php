@@ -20,6 +20,7 @@ class WPAM_PluginConfig
         public static $AffBountyAmount = 'wpam_affbounty_amount';
         public static $AffCurrencySymbol = 'wpam_affcurrency_symbol';
         public static $AffCurrencyCode = 'wpam_affcurrency_code';
+        public static $AffEnableImpressions = 'wpam_enable_impressions';
         public static $AffEnableDebug = 'wpam_enable_debug';
 	public static $PayoutMethodCheckIsEnabledOption = 'wpam_payout_check_enabled';
 	public static $PayoutMethodPaypalIsEnabledOption = 'wpam_payout_paypal_enabled';

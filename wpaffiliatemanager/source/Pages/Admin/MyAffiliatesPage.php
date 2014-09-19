@@ -161,7 +161,7 @@ class WPAM_Pages_Admin_MyAffiliatesPage extends WPAM_Pages_Admin_AdminPage
 			$where,
 			array('dateCreated' => 'desc')
 			);
-		
+
 		$response->viewData['showBalance'] = true;
 		$response->viewData['paymentMethods'] = $affiliateHelper->getPaymentMethods();
 		$response->viewData['paymentMethod'] = isset( $request['ddPaymentMethod'] ) ? $request['ddPaymentMethod'] : $model->paymentMethod;
@@ -194,6 +194,32 @@ class WPAM_Pages_Admin_MyAffiliatesPage extends WPAM_Pages_Admin_AdminPage
 		}
 		$response->viewData['affiliateFields'] = $affiliateFields;
 		$response->viewData['creatives'] = $db->getCreativesRepository()->loadAllActiveNoDeletes();
+
+		if (get_option (WPAM_PluginConfig::$AffEnableImpressions)) {
+			$where = array('sourceAffiliateId' => $model->affiliateId);
+
+			$response->viewData['impressions'] = $db->getImpressionRepository()->loadMultipleByLimit(
+				$where,
+				array('dateCreated' => 'desc'),
+				100
+				);
+
+			$creativeNames = array ();
+
+			foreach ( $response->viewData['impressions'] as $impression ) {
+				if (!array_key_exists ($impression->sourceCreativeId, $creativeNames))
+					$creativeNames[$impression->sourceCreativeId] = $db->getCreativesRepository()->load($impression->sourceCreativeId)->name;
+			}
+
+			$response->viewData['creativeNames'] = $creativeNames;
+
+			$where = array('sourceAffiliateId' => $model->affiliateId);
+			$response->viewData['impressionCount'] = $db->getImpressionRepository()->count ( $where );
+
+			$summary = $db->getEventRepository()->getSummary ( $model->affiliateId );
+			$response->viewData['visitCount'] = $summary->visits;
+			$response->viewData['purchaseCount'] = $summary->purchases;
+		}
 
 		//save for form validation in the footer
 		$this->response = $response;

@@ -42,7 +42,7 @@ class WPAM_Data_EventRepository extends WPAM_Data_GenericRepository
 		$this->db->query($query);
 	}
 
-	public function getSummaryForRange($dateStart, $dateEnd, $affiliateId = NULL)
+	public function getSummaryForRange($dateStart = NULL, $dateEnd = NULL, $affiliateId = NULL)
 	{
 		$query = "
 			select
@@ -51,15 +51,25 @@ class WPAM_Data_EventRepository extends WPAM_Data_GenericRepository
 			from `{$this->tableName}` ev
 			inner join `".$this->db->prefix . WPAM_Data_DataAccess::TABLE_TRACKING_TOKENS."` tt using (`trackingTokenId`)
 			inner join `".$this->db->prefix . WPAM_Data_DataAccess::TABLE_ACTIONS."` a using (`actionId`)
-			where
-				ev.`dateCreated` >= '".date("Y-m-d", $dateStart)."'
-				and ev.`dateCreated` < '".date("Y-m-d", $dateEnd) . "'
 		";
 
+		$where = array();
+
+		if ($dateStart !== NULL && $dateEnd !== NULL)
+			$where[] = "ev.`dateCreated` >= '".date("Y-m-d", $dateStart)."'
+				AND ev.`dateCreated` < '".date("Y-m-d", $dateEnd) . "'";
+
 		if ($affiliateId !== NULL)
-			$query .= "
-				and tt.sourceAffiliateId = " . ((int)$affiliateId);
+			$where[] = "tt.sourceAffiliateId = " . ((int)$affiliateId);
+
+		if (count($where) > 0)
+			$query .= " WHERE " . implode(" AND ", $where);
 
 		return $this->db->get_row($query);
+	}
+
+	public function getSummary($affiliateId = NULL)
+	{
+		return $this->getSummaryForRange( NULL, NULL, $affiliateId );
 	}
 }

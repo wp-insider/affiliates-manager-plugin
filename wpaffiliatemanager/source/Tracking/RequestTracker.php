@@ -7,6 +7,7 @@
  */
 require_once WPAM_BASE_DIRECTORY . "/source/Data/Models/TrackingTokenModel.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Tracking/TrackingKey.php";
+require_once WPAM_BASE_DIRECTORY . "/source/Data/Models/ImpressionModel.php";
 
 //any 'wpsca' checks can go away sometime in the future (changed to wpam in 12/2012)
 class WPAM_Tracking_RequestTracker {
@@ -211,7 +212,7 @@ class WPAM_Tracking_RequestTracker {
 			$trackTokenModel->referer = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : NULL;
 
 			if ( isset( $request['wpam_affiliateSubCode'] ) ) {
-				$trackTokenModel->affiliateSubCode = $request['affiliateSubCode'];
+				$trackTokenModel->affiliateSubCode = $request['wpam_affiliateSubCode'];
 			}
 
 			$db->getTrackingTokenRepository()->insert( $trackTokenModel );
@@ -224,6 +225,41 @@ class WPAM_Tracking_RequestTracker {
 								 $this->getExpireTime(),
 								 COOKIEPATH );
 		}
+	}
+
+	public function handleImpression($request)
+	{
+		$strRefKey = NULL;
+
+		if ( isset( $request[WPAM_PluginConfig::$RefKey] ) ) {
+			$strRefKey = $request[WPAM_PluginConfig::$RefKey];
+		} else {
+			throw new Exception(  __( 'no refkey in request.', 'wpam' ) );
+		}
+
+		$refKey = new WPAM_Tracking_TrackingKey();
+		$refKey->unpack( $strRefKey );
+
+		$db = new WPAM_Data_DataAccess();
+		$affiliateRepos = $db->getAffiliateRepository();
+		$affiliateId = $affiliateRepos->getAffiliateIdFromRefKey( $refKey->getAffiliateRefKey() );
+
+		if ( $affiliateId === NULL ) {
+			throw new Exception( __( 'invalid refkey data: ', 'wpam' ) . $strRefKey );
+		}
+
+		$impressionModel = new WPAM_Data_Models_ImpressionModel();
+
+		$impressionModel->dateCreated = time();
+		$impressionModel->sourceAffiliateId = $affiliateId;
+		$impressionModel->sourceCreativeId = $refKey->getCreativeId();
+		$impressionModel->referer = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : NULL;
+
+		if ( isset( $request['wpam_affiliateSubCode'] ) ) {
+			$impressionModel->affiliateSubCode = $request['wpam_affiliateSubCode'];
+		}
+
+		$db->getImpressionRepository()->insert( $impressionModel );
 	}
 
 	protected function getExpireTime() {

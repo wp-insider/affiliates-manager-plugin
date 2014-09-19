@@ -54,9 +54,9 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 	 <p align="center"><button type="button" name="preview" id="previewButton" class="button-secondary"><?php _e( 'Preview', 'wpam' ) ?></button></p>
 
 	 <h2><?php _e( 'Your Affiliate-Specific HTML snippet', 'wpam' ) ?></h2>
-	<div style="width: 100%; height: 200px; overflow: scroll; font-family: Courier New, monospace; font-size: 10pt;"><?php echo htmlspecialchars($this->viewData['htmlPreview']); ?></div>
+	<textarea rows="5" cols="50"><?php echo htmlspecialchars($this->viewData['htmlSnippet']); ?></textarea>
 
-<br/>
+<p/>
 	<?php if ($model->type == 'text') { ?>
 
 	<table class="widefat">

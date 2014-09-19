@@ -35,6 +35,12 @@ jQuery(function($){
 		$("#email_help").dialog('open');
     });
 
+	$("#imp_help").dialog(dialog);
+
+	$("#impInfo").click(function()
+	{
+		$("#imp_help").dialog('open');
+	});
 });
 </script>
 
@@ -75,6 +81,16 @@ By default, WordPress sends these messages as:</p>
 <p>You may choose to override the name & address with something more suitable. 
 These addresses will only affect emails going to affiliates regarding their approval status.
        </p>
+</div>
+
+<div id="imp_help" style="display: none;">
+        <p>
+        Enabling impressions will cause creative views to be tracked, even if they are not clicked on.
+This is done by adding pixel tracking code to affiliate links, which records the affiliate and which
+creative was viewed. This can be useful for determining creative click through rates, but can add a
+significant burden to the server as far as additional requests and data storage (depending on the
+frequency of creative views), which in turn may slow down page loads where a creative is shown.
+	</p>
 </div>
 
 <table class="form-table">
@@ -177,6 +193,16 @@ These addresses will only affect emails going to affiliates regarding their appr
                 </th>
                 <td>
                         <input type="text" id="affCurrencyCode" name="affCurrencyCode" size="5" value="<?php echo $this->viewData['request']['affCurrencyCode']?>" />
+                </td>
+        </tr>
+
+        <tr>
+                <th width="200">
+                        <label id="lblchkImpressions" for="chkImpressions"><?php _e( 'Enable Impressions', 'wpam' ) ?></label>
+			<img id="impInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
+                </th>
+                <td>
+                        <input type="checkbox" id="chkImpressions" name="chkImpressions"<?php if($this->viewData['request']['chkImpressions']=='1') echo ' checked="checked"'; ?> value="1"/>
                 </td>
         </tr>
         

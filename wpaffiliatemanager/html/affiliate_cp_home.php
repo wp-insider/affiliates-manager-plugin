@@ -36,6 +36,12 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 					<tr>
 						<td>
 							<div class="summaryPanel">
+								<?php if (get_option (WPAM_PluginConfig::$AffEnableImpressions)) { ?>
+								<div class="summaryPanelLine">
+									<div style="width: 80px;" class="summaryPanelLineValue"><?php echo $this->viewData['todayImpressions']?></div>
+									<div class="summaryPanelLineLabel"><?php _e( 'Impressions', 'wpam' ) ?></div>
+								</div>
+								<?php } ?>
 								<div class="summaryPanelLine">
 									<div style="width: 80px;" class="summaryPanelLineValue"><?php echo $this->viewData['todayVisitors']?></div>
 									<div class="summaryPanelLineLabel"><?php _e( 'Visitors', 'wpam' ) ?></div>
@@ -65,6 +71,12 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 					<tr>
 						<td>
 							<div class="summaryPanel">
+								<?php if (get_option (WPAM_PluginConfig::$AffEnableImpressions)) { ?>
+								<div class="summaryPanelLine">
+									<div style="width: 80px;" class="summaryPanelLineValue"><?php echo $this->viewData['monthImpressions']?></div>
+									<div class="summaryPanelLineLabel"><?php _e( 'Impressions', 'wpam' ) ?></div>
+								</div>
+								<?php } ?>
 								<div class="summaryPanelLine">
 									<div style="width: 80px;" class="summaryPanelLineValue"><?php echo $this->viewData['monthVisitors']?></div>
 									<div class="summaryPanelLineLabel"><?php _e( 'Visitors', 'wpam' ) ?></div>

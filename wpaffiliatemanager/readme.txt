@@ -122,6 +122,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= TODO 1.7.7 =
+- fix the bug where creative links are not showing correctly
+
 = 1.7.6 =
 - Created a new addon to integrate paid membership pro with affilates manager plugin. See details below:
   https://wpaffiliatemanager.com/affiliates-manager-paid-memberships-pro-integration/

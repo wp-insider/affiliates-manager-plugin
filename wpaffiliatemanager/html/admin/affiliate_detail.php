@@ -502,6 +502,9 @@ $user = $this->viewData['user'];
         <li><a href="#fragment-2"><span><?php _e( 'Account Finances', 'wpam' ) ?></span></a></li>
 		<li><a href="#fragment-3"><span><?php _e( 'Information', 'wpam' ) ?></span></a></li>
         <li><a href="#fragment-4"><span><?php _e( 'Affiliate Links', 'wpam' ) ?></span></a></li>
+<?php if (get_option (WPAM_PluginConfig::$AffEnableImpressions)) { ?>
+        <li><a href="#fragment-5"><span><?php _e( 'Impressions', 'wpam' ) ?></span></a></li>
+<?php } ?>
     </ul>
     <div id="fragment-1">
 		<div class="buttonsBar">
@@ -574,6 +577,22 @@ if ($model->isPending())
 		</table>
 		<br/><br/>
 
+		<table class="widefat">
+			<thead>
+				<tr>
+					<th colspan="2"><?php _e( 'Statistics', 'wpam' ) ?></th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php if (get_option (WPAM_PluginConfig::$AffEnableImpressions)) { ?>
+				<tr><td width="200"><?php _e( 'Impressions', 'wpam' ) ?></td><td><?php echo $this->viewData['impressionCount'] ?></td></tr>
+				<?php } ?>
+				<tr><td width="200"><?php _e( 'Visits', 'wpam' ) ?></td><td><?php echo $this->viewData['visitCount'] ?></td></tr>
+				<tr><td width="200"><?php _e( 'Purchases', 'wpam' ) ?></td><td><?php echo $this->viewData['purchaseCount'] ?></td></tr>
+			</tbody>
+		</table>
+		<br/><br/>
+
 		<?php }?>
 
     </div>
@@ -610,7 +629,7 @@ if ($model->isPending())
 			<tbody>
 			<?php foreach ( $this->viewData['creatives'] as $creative ) {
 				$linkBuilder = new WPAM_Tracking_TrackingLinkBuilder($model, $creative);
-				$link = $linkBuilder->getHtmlSnippet();
+				$link = $linkBuilder->getImpressionHtmlSnippet();
 				?>
 			<tr class="creative-<?php echo $creative->status?>">
 				<td><?php echo $creative->name?></td>
@@ -623,6 +642,10 @@ if ($model->isPending())
   </div>
 </div>
 
-
+<?php if (get_option (WPAM_PluginConfig::$AffEnableImpressions)) { ?>
+    <div id="fragment-5">
+	  <?php include WPAM_BASE_DIRECTORY . '/html/impressions_table.php'; ?>
+    </div>
+<?php } ?>
 
 </div>
