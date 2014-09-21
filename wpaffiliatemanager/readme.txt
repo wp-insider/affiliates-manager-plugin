@@ -1,5 +1,5 @@
 === Affiliates Manager ===
-Contributors: wp.insider, affmngr
+Contributors: wp.insider, affmngr, ElementGreen
 Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, leads, affiliate software, woocommerce, affiliate campaign, paypal
 Requires at least: 3.5
@@ -123,7 +123,8 @@ https://wpaffiliatemanager.com/screen-shots/
 == Changelog ==
 
 = TODO 1.7.7 =
-- fix the bug where creative links are not showing correctly
+- Added a new feature to allow tracking of ad impressions. This feature was added by Element Green.
+- TODO - fix the bug where newly added default creative links are not showing correctly
 
 = 1.7.6 =
 - Created a new addon to integrate paid membership pro with affilates manager plugin. See details below:
