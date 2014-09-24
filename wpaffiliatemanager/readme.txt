@@ -1,10 +1,10 @@
 === Affiliates Manager ===
 Contributors: wp.insider, affmngr, ElementGreen
 Donate link: https://wpaffiliatemanager.com/
-Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, leads, affiliate software, woocommerce, affiliate campaign, paypal
+Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 1.7.6
+Stable tag: 1.7.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,6 +64,10 @@ You can decide how much or how little data to collect from your affiliates when 
 * Sign up affiliates to your Mailchimp list.
 * Sign up affiliates to MailPoet newsletter list.
 
+= Affiliate Ad Impression Tracking = 
+
+Track how many times a particular affiliate ad is getting viewed.
+
 = Customize Messages for Affiliates = 
 
 You can customize the email messages that gets sent to your affiliate when they register for an account. The following messages are customizable:
@@ -122,9 +126,10 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO 1.7.7 =
+= TOOD - 1.7.7 =
 - Added a new feature to allow tracking of ad impressions. This feature was added by Element Green.
-- fixed a bug where default creative link was not showing correctly
+- fixed a bug where default creative link was not showing correctly.
+- Made some small improvements to the creatives menu.
 
 = 1.7.6 =
 - Created a new addon to integrate paid membership pro with affilates manager plugin. See details below:
