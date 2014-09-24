@@ -119,7 +119,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 		<input type="hidden" name="creativeId" value="<?php echo $this->viewData['request']['creativeId']?>" />
 	<?php } ?>
 
-	<div id="mainForm" style="width: 700px">
+	<div id="mainForm" style="max-width: 1000px">
 		<table class="widefat">
 			<thead>
 			<tr>

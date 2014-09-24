@@ -275,7 +275,13 @@ class WPAM_Data_DatabaseInstaller {
         }
         else
         {
-            if(!$creativesRepo->existsBy(array('creativeId' => $default_creative_id, 'status' => 'active')))  //no active creative with this ID in the creative database (probably the user deleted it)
+            if($creativesRepo->existsBy(array('creativeId' => $default_creative_id, 'status' => 'active')))
+            {
+                $creative = $creativesRepo->load($default_creative_id);
+                $creative->slug = '';  //update slug of existing default creative to avoid any mistake.
+                $creativesRepo->update($creative);
+            }
+            else   //no active creative with this ID in the creative database (probably the user deleted it)
             {
                 $create_new_creative = true;
             }
@@ -289,7 +295,7 @@ class WPAM_Data_DatabaseInstaller {
             $model->type === 'text';
             $model->linkText = 'default affiliate link';
             $model->altText = '';
-            $model->slug = site_url('/');
+            $model->slug = '';
             $model->name = 'default creative';
             $id = $creativesRepo->insert($model);
             update_option(WPAM_PluginConfig::$DefaultCreativeId, $id); //Save the ID of the deafult creative
