@@ -49,7 +49,7 @@ class WPAM_Tracking_TrackingLinkBuilder
 	}
 
 	public function getImpressionHtmlSnippet() {
-		if (get_option (WPAM_PluginConfig::$AffEnableImpressions) && $this->creative->type == 'image') {
+		if (get_option (WPAM_PluginConfig::$AffEnableImpressions) ) {
 			$impurl = add_query_arg( array( WPAM_PluginConfig::$RefKey => $this->getTrackingKey()->pack() ), WPAM_URL . "/imp.php" );
 			$html = "<img src=\"$impurl\" width=\"0\" height=\"0\" />";
 		}

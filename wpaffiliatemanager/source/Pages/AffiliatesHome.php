@@ -180,7 +180,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 
 			$linkBuilder = new WPAM_Tracking_TrackingLinkBuilder($affiliate, $creative);
 			$response->viewData['htmlPreview'] = $linkBuilder->getHtmlSnippet();
-			$response->viewData['htmlSnippet'] = $linkBuilder->getImpressionHtmlSnippet();// . $response->viewData['htmlPreview'];
+			$response->viewData['htmlSnippet'] = $linkBuilder->getImpressionHtmlSnippet();
 
 			return $response;
 		}
