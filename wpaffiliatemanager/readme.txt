@@ -126,7 +126,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TOOD - 1.7.7 =
+= 1.7.7 =
 - Added a new feature to allow tracking of ad impressions. This feature was added by Element Green.
 - fixed a bug where default creative link was not showing correctly.
 - Made some small improvements to the creatives menu.
