@@ -14,6 +14,7 @@ class WPAM_Data_DatabaseInstaller {
     }
 
     public function doDbInstall() {
+        global $wpdb;
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 
         $affiliates_table = $this->db->prefix . WPAM_Data_DataAccess::TABLE_AFFILIATES;
@@ -27,6 +28,16 @@ class WPAM_Data_DatabaseInstaller {
         $affiliates_fields_table = $this->db->prefix . WPAM_Data_DataAccess::TABLE_AFFILIATES_FIELDS;
         $paypal_logs_table = $this->db->prefix . WPAM_Data_DataAccess::TABLE_PAYPAL_LOGS;
         $impressions_table = $this->db->prefix . WPAM_Data_DataAccess::TABLE_IMPRESSIONS;
+
+        $charset_collate = '';
+        if (!empty($wpdb->charset)){
+            $charset_collate = "DEFAULT CHARACTER SET $wpdb->charset";
+        }else{
+            $charset_collate = "DEFAULT CHARSET=utf8";
+        }
+        if (!empty($wpdb->collate)){
+            $charset_collate .= " COLLATE $wpdb->collate";
+        }
 
         $aff_tbl_sql = "CREATE TABLE " . $affiliates_table . " (
         `affiliateId` int(11) NOT NULL AUTO_INCREMENT,
@@ -53,7 +64,7 @@ class WPAM_Data_DatabaseInstaller {
         `phoneNumber` varchar(32) NOT NULL default '',
         `userData` TEXT NULL,
         PRIMARY KEY (`affiliateId`)
-        )ENGINE=MyISAM DEFAULT CHARSET=utf8;";
+        )" . $charset_collate . ";";
         dbDelta($aff_tbl_sql);
 
         $creatives_tbl_sql = "CREATE TABLE " . $creatives_table . " (
@@ -67,7 +78,7 @@ class WPAM_Data_DatabaseInstaller {
         `linkText` varchar(255) DEFAULT NULL,
         `slug` VARCHAR(255) NOT NULL default '',
         PRIMARY KEY (`creativeId`)
-        )ENGINE=MyISAM DEFAULT CHARSET=utf8;";
+        )" . $charset_collate . ";";
         dbDelta($creatives_tbl_sql);
 
         $tracking_tokens_tbl_sql = "CREATE TABLE " . $tracking_tokens_table . " (
@@ -80,7 +91,7 @@ class WPAM_Data_DatabaseInstaller {
         `affiliateSubCode` varchar(30) DEFAULT NULL,
         PRIMARY KEY (`trackingTokenId`),
         UNIQUE KEY `trackingKey` (`trackingKey`)
-        )ENGINE=MyISAM DEFAULT CHARSET=utf8;";
+        )" . $charset_collate . ";";
         dbDelta($tracking_tokens_tbl_sql);
 
         $events_tbl_sql = "CREATE TABLE " . $events_table . " (
@@ -90,7 +101,7 @@ class WPAM_Data_DatabaseInstaller {
         `trackingTokenId` int(11) NOT NULL,
         `actionId` int(11) NOT NULL,
         PRIMARY KEY (`eventId`)
-        )ENGINE=MyISAM DEFAULT CHARSET=utf8;";
+        )" . $charset_collate . ";";
         dbDelta($events_tbl_sql);
 
         $actions_tbl_sql = "CREATE TABLE " . $actions_table . " (
@@ -98,7 +109,7 @@ class WPAM_Data_DatabaseInstaller {
         `name` varchar(20) NOT NULL,
         `description` varchar(255) NOT NULL,
         PRIMARY KEY (`actionId`)
-        )ENGINE=MyISAM DEFAULT CHARSET=utf8;";
+        )" . $charset_collate . ";";
         dbDelta($actions_tbl_sql);
 
         $transactions_tbl_sql = "CREATE TABLE " . $transactions_table . " (
@@ -112,7 +123,7 @@ class WPAM_Data_DatabaseInstaller {
         `referenceId` varchar(255) DEFAULT NULL,
         `status` ENUM('pending','confirmed','failed') NOT NULL DEFAULT 'confirmed',
         PRIMARY KEY (`transactionId`)
-        )ENGINE=MyISAM DEFAULT CHARSET=utf8;";
+        )" . $charset_collate . ";";
         dbDelta($transactions_tbl_sql);
 
         $aff_fields_tbl_sql = "CREATE TABLE " . $affiliates_fields_table . " (
@@ -126,7 +137,7 @@ class WPAM_Data_DatabaseInstaller {
         `enabled` tinyint(1) NOT NULL DEFAULT '0',
         `order` int(11) NOT NULL,
         PRIMARY KEY (`affiliateFieldId`)
-        )ENGINE=MyISAM DEFAULT CHARSET=utf8;";
+        )" . $charset_collate . ";";
         dbDelta($aff_fields_tbl_sql);
 
         $messages_tbl_sql = "CREATE TABLE " . $messages_table . " (
@@ -136,7 +147,7 @@ class WPAM_Data_DatabaseInstaller {
         `content` text NOT NULL,
         `type` enum('email','web') NOT NULL DEFAULT 'web',
         PRIMARY KEY (`messageId`)
-        )ENGINE=MyISAM DEFAULT CHARSET=utf8;";
+        )" . $charset_collate . ";";
         dbDelta($messages_tbl_sql);
 
         $pp_logs_tbl_sql = "CREATE TABLE " . $paypal_logs_table . " (
@@ -154,7 +165,7 @@ class WPAM_Data_DatabaseInstaller {
         `fee` DECIMAL(7,2) NOT NULL,
         `totalAmount` DECIMAL(7,2) NOT NULL,
         PRIMARY KEY (`paypalLogId`)
-        )ENGINE=MyISAM DEFAULT CHARSET=utf8;";
+        )" . $charset_collate . ";";
         dbDelta($pp_logs_tbl_sql);
 
         $tt_purchase_logs_tbl_sql = "CREATE TABLE " . $tt_purchase_logs_table . " (
@@ -162,7 +173,7 @@ class WPAM_Data_DatabaseInstaller {
         `trackingTokenId` int(11) NOT NULL,
         `purchaseLogId` int(11) NOT NULL,
         PRIMARY KEY (`trackingTokenPurchaseLogId`)
-        )ENGINE=MyISAM DEFAULT CHARSET=utf8;";
+        )" . $charset_collate . ";";
         dbDelta($tt_purchase_logs_tbl_sql);
 
         $impressions_tbl_sql = "CREATE TABLE " . $impressions_table . " (
@@ -173,7 +184,7 @@ class WPAM_Data_DatabaseInstaller {
         `referer` text,
         `affiliateSubCode` varchar(30) DEFAULT NULL,
         PRIMARY KEY (`impressionId`)
-        )ENGINE=MyISAM DEFAULT CHARSET=utf8;";
+        )" . $charset_collate . ";";
         dbDelta($impressions_tbl_sql);
 
         update_option(self::WPAM_DB_VERSION_NAME, WPAM_DB_VERSION);

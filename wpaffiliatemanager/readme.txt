@@ -126,6 +126,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= TODO - 1.7.8 =
+- MySQL database character set and collation values are read from the system when creating the tables.
+
 = 1.7.7 =
 - Added a new feature to allow tracking of ad impressions. This feature was added by Element Green.
 - fixed a bug where default creative link was not showing correctly.
