@@ -351,7 +351,11 @@ class WPAM_Plugin
 
 	public function onWooCheckout( $order_id, $posted ) {
 		$order = new WC_Order( $order_id );
-		$purchaseAmount = $order->get_total() - $order->get_shipping();
+                $total = $order->order_total;
+                $shipping = $order->get_total_shipping();
+                $tax = $order->get_total_tax();
+                WPAM_Logger::log_debug('WooCommerce Integration - Total amount: ' . $total . '. Total shipping: ' . $shipping . 'Total tax: ' . $tax);
+		$purchaseAmount = $total - $shipping - $tax;;
 		$requestTracker = new WPAM_Tracking_RequestTracker();
 		$requestTracker->handleCheckout( $order_id, $purchaseAmount );
 	}
