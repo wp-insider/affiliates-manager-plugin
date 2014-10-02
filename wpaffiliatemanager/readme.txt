@@ -129,6 +129,7 @@ https://wpaffiliatemanager.com/screen-shots/
 = TODO - 1.7.8 =
 - MySQL database character set and collation values are read from the system when creating the tables.
 - WooCommerce Integration: shipping and tax are now excluded from the total order amount.
+- Affiliate URL can now be invoked using email address.
 
 = 1.7.7 =
 - Added a new feature to allow tracking of ad impressions. This feature was added by Element Green.
