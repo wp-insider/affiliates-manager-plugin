@@ -2,25 +2,25 @@
 
 require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 
-if( ! isset( $model ) && isset( $this->viewData['affiliate'] ) )
+if( ! isset( $model ) && isset( $this->viewData['affiliate'] ) ){
 	$model = $this->viewData['affiliate'];
+}
 
 ?>
 <div id="email_help" style="display: none;">
 <p>
 <?php
-if( is_admin() ):
+if( is_admin() ){
 	_e( "Changing the affiliate's email address will not change their WordPress Affiliate Manager login, which may be based on the email address they used when they signed up.", 'wpam' );
-else:
+}else{
 	_e( 'Changing your email address will not change your WordPress Affiliate Manager login, which may be based on the email address you used when you signed up.', 'wpam' );
-endif;
+}
 ?>
 </p>
 </div>
 
-
-	<form method="post" id="infoForm">
-		<table class="widefat">
+	<form method="post" id="infoForm" class="pure-form">
+		<table class="pure-table">
 			<thead>
 				<tr>
 					<th colspan="2"><?php echo isset( $this->viewData['infoLabel'] ) ? $this->viewData['infoLabel'] : __( 'Contact Information', 'wpam' ); ?></th>
@@ -28,7 +28,7 @@ endif;
 			</thead>
 			<tbody>
 			<?php
-				foreach ($this->viewData['affiliateFields'] as $field):
+				foreach ($this->viewData['affiliateFields'] as $field){
 					$value = '';
 					//prefer request data
 					if ( isset( $this->viewData['request']['_' . $field->databaseField] ) ) {
@@ -48,9 +48,9 @@ endif;
 						echo $field->required ? '&nbsp;*': '';
 						if( is_admin() )
 							echo $field->type == 'custom' ? '&nbsp;+': '';
-						if ( $field->fieldType == 'email' ): ?>
+						if ( $field->fieldType == 'email' ){ ?>
 							<img id="emailInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
-						<?php endif; ?>
+                                                <?php } ?>
 					</td>
 					<td>
 						<?php switch ($field->fieldType) {
@@ -77,10 +77,10 @@ endif;
 						}?>
 					</td>
 				</tr>
-				<?php if( !is_admin() && $field->fieldType == 'email' && isset( $this->viewData['newEmail'] ) ): ?>
+				<?php if( !is_admin() && $field->fieldType == 'email' && isset( $this->viewData['newEmail'] ) ){ ?>
 					<tr><td colspan="2"><?php printf( __('There is a pending change of your e-mail to <code>%1$s</code>. <a href="%2$s">Cancel</a>', 'wpam' ), $this->viewData['newEmail']['newemail'], esc_url( self_admin_url( 'profile.php?dismiss=' . $this->viewData['userId'] . '_new_email' ) ) ); ?></td></tr>
-				<?php endif; ?>
-			<?php endforeach;?>
+                                <?php } ?>
+                                <?php } ?>
 			</tbody>
 			<?php if ( ! isset( $model ) || ( ! $model->isPending() && ! $model->isBlocked() && ! $model->isDeclined() ) ): ?>
 			<thead>
@@ -144,11 +144,11 @@ endif;
 			</tbody>
 		</table>
 		<p><?php _e( '* Required fields', 'wpam' ) ?></p>
-		<?php if( is_admin() ): ?>
+		<?php if( is_admin() ){ ?>
 			<p><?php _e( '+ Custom fields', 'wpam' ) ?></p>
-		<?php endif; ?>
-		<div class="buttonsBar">			
+                <?php } ?>
+		<div class="wpam-save-profile">			
 			<input type="hidden" name="action" value="saveInfo"/>
-                        <input type="submit" id="saveInfoButton" class="button-primary" name="wpam-add-affiliate" value="<?php echo isset( $this->viewData['saveLabel'] ) ? $this->viewData['saveLabel'] : __( 'Save Changes', 'wpam' ); ?>" />
+                        <input type="submit" id="saveInfoButton" class="pure-button pure-button-active" name="wpam-add-affiliate" value="<?php echo isset( $this->viewData['saveLabel'] ) ? $this->viewData['saveLabel'] : __( 'Save Changes', 'wpam' ); ?>" />
 		</div>
 	    </form>

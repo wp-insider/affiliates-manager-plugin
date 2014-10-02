@@ -3,23 +3,12 @@ img.wpam-action-icon {
     margin: 3px;
 }
 
-table.wpam_affiliate_application th {
-
-}
-table.wpam_affiliate_application input,
-table.wpam_affiliate_application select
-{
-    margin: 0;
-}
-
-
 th.formHeader
 {
     text-align: left;
     font-weight: bold;
     font-size: 1.2em;
     padding-top: 1.0em;
-
 }
 
 table.wpam-form-table {
@@ -102,15 +91,14 @@ table.wpam_terms_table
 div.buttonsBar
 {
     margin: 20px;
-	
 }
 div.buttonsBar > a
 {
     margin: 0 15px 0 15px;
-	padding: 5px;
-	border: solid 1px #000;
-	background: #ccc;
-	color: #000;
+    padding: 5px;
+    border: solid 1px #000;
+    background: #ccc;
+    color: #000;
 }
 div.accountSummaryBox > span
 {
@@ -124,10 +112,6 @@ div.summaryPanel{
 div.summaryPanelLine{
     margin: 10px;
 }
-div.summaryPanelLineLabel
-{
-    white-space: nowrap;
-}
 div.summaryPanelLineValue
 {
     float: left;
@@ -138,69 +122,65 @@ div.summaryPanelLineValue
 /***** Affiliate Control Panel *****/
 
 .aff-wrap {
-	background: #fff;
-	border: solid 1px #000;
+    background: #fff;
+    border: solid 1px #DDD;
 }
 
 .aff-wrap .wrap {
-	padding: 0 1em 0 1em;
+    padding: 0 1em 0 1em;
 }
 
-div.affiliate-cp-subnav
-{
-	background: #000;
-    white-space: nowrap;
-	padding-left: 7px;
-	margin-bottom: 15px;
+.wpam-nav-menu{
+    margin-bottom: 15px;
 }
-
-div.affiliate-cp-subnav ul
-{
-    list-style-type: none;
-    margin: 0;
+.wpam-nav-menu li{
+    padding: 0!important;
+    margin: 0!important;
+}
+.wpam-nav-menu ul{
     padding: 0;
-
-}
-div.affiliate-cp-subnav li
-{
-    display: inline-block;
-	text-align: center;
-	padding: 0!important;
-	margin: 0!important;
-}
-
-div.affiliate-cp-subnav li:hover {
-   background: #FFF;
-}
-
-div.affiliate-cp-subnav li:hover a {
-	color: #000;
-}
-
-
-div.affiliate-cp-subnav a
-{
-    display: block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 4px;
-    color: #FFF;
-	text-shadow: none!important;
-	font-weight: bold;
-	text-decoration: underline;
+    margin: 0;
 }
 
 .aff-wrap .widefat {
-	margin: 0 auto 0;
-	color: #000;
-	margin-bottom: 20px;
+    margin: 0 auto 0;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.wpam-registration-form{
+    text-align: center;
 }
 
 .daterange-form {
-	padding: 10px;
-	color: #000;
+    padding: 10px;
+    color: #000;
 }
 
+.wpam-daterange-heading{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.wpam-daterange-selection{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.wpam-daterange-action-buttons{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.wpam-creative-type{
+    text-transform: capitalize;
+}
+.wpam-creative-code{
+    width: 95%;
+}
+
+.wpam-save-profile{
+    margin: 15px;
+    text-align: center;
+}
 
 div.wpam-tip
 {
@@ -254,17 +234,17 @@ tr.totalSeparatorRow td {
 
 tr.transaction-pending {
     background-color: #ffc;
-	color: #000;
+    color: #000;
 }
 tr.transaction-confirmed {
     background-color: #dfd;
-	color: #000;
+    color: #000;
 }
 tr.transaction-failed {
     background-color: #fee;
-	color: #000;
+    color: #000;
 }
 
 td#landing-page-slug { 
-	vertical-align: middle;
+    vertical-align: middle;
 }

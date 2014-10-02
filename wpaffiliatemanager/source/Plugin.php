@@ -231,6 +231,12 @@ class WPAM_Plugin
             if( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'AffiliatesLogin') ) {
                 wp_enqueue_style('wpamloginstyle', WPAM_URL . '/style/wpam-login-styles.css');
             }
+            if( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'AffiliatesHome') ) {
+                wp_enqueue_style('wpampurestyle', WPAM_URL . '/style/pure-styles.css');
+            }
+            if( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'AffiliatesRegister') ) {
+                wp_enqueue_style('wpampurestyle', WPAM_URL . '/style/pure-styles.css');
+            }
         }
         
         public function handle_wp_head_hook()

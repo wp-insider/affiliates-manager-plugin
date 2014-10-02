@@ -9,11 +9,11 @@ $request = @$this->viewData['request'];
 
 ?>
 
-<form action="<?php echo $this->viewData['postBackUrl']?>" method="post" id="mainForm">
+<form action="<?php echo $this->viewData['postBackUrl']?>" method="post" id="mainForm" class="pure-form">
 
-	<div style="text-align: left;">
+
 		<?php _e( '* Required fields', 'wpam' ) ?><br /><br />
-		<table class="wpam_affiliate_application">
+		<table class="pure-table">
 			<?php foreach ($this->viewData['affiliateFields'] as $field) { ?>
 				<tr>
 					<th><label for="_<?php echo $field->databaseField?>"><?php echo $field->name?><?php echo $field->required ? '&nbsp;*': '' ?></label></th>
@@ -50,20 +50,17 @@ $request = @$this->viewData['request'];
 			<?php } //end foreach ?>
 
 			<tr>
-				<td></td>
-				<td>
+				<td colspan="2">
 					<input type="checkbox" id="chkAgreeTerms" name="chkAgreeTerms" <?php echo (isset($request['chkAgreeTerms']) ? 'checked="checked"':'')?> />&nbsp;<label for="chkAgreeTerms" id="agreeTermsLabel">I have read and agree to the <a href="#" id="tncLink">Terms and Conditions</a></label>
 					<span id="termsAgreeWarning" style="color: red; display: none"><br><?php _e( 'You must agree to the terms.', 'wpam' ) ?></span>
 				</td>
 			</tr>
-			<tr>
-				<td colspan="2" align="center"><input type="submit" name="submit" value="<?php _e( 'Submit Application', 'wpam' ) ?>" /></td>
-			</tr>
 
 		</table>
-	</div>
 
-
+                <div class="wpam-registration-form">
+                    <input type="submit" name="submit" value="<?php _e( 'Submit Application', 'wpam' ) ?>" class="pure-button pure-button-active" />
+                </div>
 </form>
 
 <div id="tncDialog" style="display: none">

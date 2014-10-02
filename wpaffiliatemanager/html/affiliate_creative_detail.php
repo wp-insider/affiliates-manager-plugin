@@ -54,12 +54,12 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 	 <p align="center"><button type="button" name="preview" id="previewButton" class="button-secondary"><?php _e( 'Preview', 'wpam' ) ?></button></p>
 
 	 <h2><?php _e( 'Your Affiliate-Specific HTML snippet', 'wpam' ) ?></h2>
-	<textarea rows="5" cols="50"><?php echo htmlspecialchars($this->viewData['htmlSnippet']); ?></textarea>
+         <textarea rows="5" class="wpam-creative-code"><?php echo htmlspecialchars($this->viewData['htmlSnippet']); ?></textarea>
 
 <p/>
 	<?php if ($model->type == 'text') { ?>
 
-	<table class="widefat">
+	<table class="pure-table">
 		<thead>
 		<tr>
 			<th colspan="2"><?php _e( 'Text Link Properties', 'wpam' ) ?></th>
@@ -80,7 +80,7 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 	</table>
 
 	<?php } else if ($model->type == 'image') { ?>
-	<table class="widefat">
+	<table class="pure-table">
 		<thead>
 		<tr>
 			<th colspan="2"><?php _e( 'Image Properties', 'wpam' ) ?></th>
