@@ -202,6 +202,25 @@ class WPAM_Tracking_RequestTracker {
                                 }
                             }
                         }
+                        else if(is_numeric($strRefKey))  //wpam_refkey contains affiliate ID
+                        {
+                            $db1 = new WPAM_Data_DataAccess();
+                            $affiliateRepos1 = $db1->getAffiliateRepository();
+                            $affiliate = $affiliateRepos1->loadBy(array('affiliateId' => $strRefKey, 'status' => 'active'));
+                            if ( $affiliate === NULL ) {  //affiliate with this ID does not exist
+                                
+                            }
+                            else
+                            {
+                                $default_creative_id = get_option(WPAM_PluginConfig::$DefaultCreativeId);
+                                if(!empty($default_creative_id))
+                                {
+                                    $creative = $db1->getCreativesRepository()->load($default_creative_id);
+                                    $linkBuilder = new WPAM_Tracking_TrackingLinkBuilder($affiliate, $creative);
+                                    $strRefKey = $linkBuilder->getTrackingKey()->pack();
+                                }
+                            }
+                        }
                         
 			$refKey = new WPAM_Tracking_TrackingKey();
 			$refKey->unpack( $strRefKey );

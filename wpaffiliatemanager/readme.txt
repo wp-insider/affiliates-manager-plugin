@@ -130,7 +130,7 @@ https://wpaffiliatemanager.com/screen-shots/
 - The style and design of the affiliate area has been improved significantly.
 - MySQL database character set and collation values are read from the system when creating the tables.
 - WooCommerce Integration: shipping and tax are now excluded from the total order amount.
-- Affiliate URL/link can now be invoked using email address.
+- Affiliate URL/link can now be invoked using email address/affiliate ID.
 
 = 1.7.7 =
 - Added a new feature to allow tracking of ad impressions. This feature was added by Element Green.
