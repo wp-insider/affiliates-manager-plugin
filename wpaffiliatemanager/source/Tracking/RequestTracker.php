@@ -126,9 +126,6 @@ class WPAM_Tracking_RequestTracker {
 
 		if ( $affiliate !== NULL && $affiliate->isActive() ) {
 			
-			if ( $strRefKey )
-				$db->getEventRepository()->quickInsert( time(), $binConverter->stringToBin( $strRefKey ), 'purchase' );
-
 			$creditAmount = $this->calculateCreditAmount( $affiliate, $purchaseAmount );
 			$creditAmount = apply_filters( 'wpam_credit_amount', $creditAmount, $purchaseAmount, $purchaseLogId );
 			$currency = WPAM_MoneyHelper::getCurrencyCode();
@@ -146,14 +143,19 @@ class WPAM_Tracking_RequestTracker {
 				$credit->type = 'credit';
 				$credit->description = $description;
 				$credit->amount = $creditAmount;
-
+                                if($strRefKey){
+                                    $db->getEventRepository()->quickInsert( time(), $binConverter->stringToBin( $strRefKey ), 'purchase' );
+                                }
 				$db->getTransactionRepository()->insert( $credit );
 
 			} else {
-				$existingCredit->dateModified = time();
-				$existingCredit->description = $description;
-				$existingCredit->amount = $creditAmount;
-				$db->getTransactionRepository()->update( $existingCredit );
+                            /*
+                            $existingCredit->dateModified = time();
+                            $existingCredit->description = $description;
+                            $existingCredit->amount = $creditAmount;
+                            $db->getTransactionRepository()->update( $existingCredit );
+                            */
+                            WPAM_Logger::log_debug('Commission for this sale has already been awarded. PURCHASE LOG ID: '.$purchaseLogId.', Purchase amount: '.$purchaseAmount);
 			}
 		}
 	}

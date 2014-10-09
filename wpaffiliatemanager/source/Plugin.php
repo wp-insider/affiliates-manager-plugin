@@ -179,7 +179,11 @@ class WPAM_Plugin
 
 		//checkout handlers
 		add_action( 'wpsc_transaction_result_cart_item', array( $this, 'onWpscCheckout' ) );
-		add_action( 'woocommerce_checkout_order_processed', array( $this, 'onWooCheckout' ), 10, 2 );
+                
+                add_action('woocommerce_checkout_update_order_meta', array( $this, 'WooCheckoutUpdateOrderMeta'), 10, 2);
+                add_action('woocommerce_order_status_completed',  array( $this, 'WooCommerceProcessTransaction')); //Executes when a status changes to completed
+                add_action('woocommerce_order_status_processing',  array( $this, 'WooCommerceProcessTransaction')); //Executes when a status changes to processing
+                add_action('woocommerce_checkout_order_processed',  array( $this, 'WooCommerceProcessTransaction'));
                 
                 //Exchange integration
 		add_filter( 'it_exchange_add_transaction', array( $this, 'onExchangeCheckout' ), 10, 7 );
@@ -355,7 +359,7 @@ class WPAM_Plugin
 		}
 	}
 
-	public function onWooCheckout( $order_id, $posted ) {
+	public function onWooCheckout( $order_id ) {
 		$order = new WC_Order( $order_id );
                 $total = $order->order_total;
                 $shipping = $order->get_total_shipping();
@@ -365,6 +369,53 @@ class WPAM_Plugin
 		$requestTracker = new WPAM_Tracking_RequestTracker();
 		$requestTracker->handleCheckout( $order_id, $purchaseAmount );
 	}
+        
+        public function WooCheckoutUpdateOrderMeta($order_id, $posted)
+        {
+            $wpam_refkey = "";
+            if(isset($_COOKIE[WPAM_PluginConfig::$RefKey])){
+                $wpam_refkey = $_COOKIE[WPAM_PluginConfig::$RefKey];
+            }
+            if(!empty($wpam_refkey)){//Save the wpam_refkey in the order meta
+                update_post_meta( $order_id, '_wpam_refkey', $wpam_refkey);
+                $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
+                WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_refkey (".$wpam_refkey.") with order. Order ID: ".$order_id);
+            }
+        }
+        
+        public function WooCommerceProcessTransaction($order_id)
+        {          
+            //affiliates manager code
+            WPAM_Logger::log_debug('WooCommerce Integration - Order processed. Checking if affiliate commission needs to be awarded.');
+            $order = new WC_Order( $order_id );
+            $recurring_payment_method = get_post_meta($order_id, '_recurring_payment_method', true);
+            if (!empty($recurring_payment_method)) {
+                WPAM_Logger::log_debug("WooCommerce Integration - This is a recurring payment order. Subscription payment method: ".$recurring_payment_method);
+                WPAM_Logger::log_debug("The commission will be calculated via the recurring payemnt api call.");
+                return;
+            }
+            $total = $order->order_total;
+            $shipping = $order->get_total_shipping();
+            $tax = $order->get_total_tax();
+            WPAM_Logger::log_debug('WooCommerce Integration - Total amount: ' . $total . ', Total shipping: ' . $shipping . ', Total tax: ' . $tax);
+            $purchaseAmount = $total - $shipping - $tax;
+            $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
+            if(empty($wpam_refkey)){
+                WPAM_Logger::log_debug("WooCommerce Integration - could not get wpam_refkey from cookie. This is not an affiliate sale");
+                return;
+            }
+
+            $order_status = $order->status;
+            WPAM_Logger::log_debug("WooCommerce Integration - Order status: " . $order_status);
+            if (strtolower($order_status) != "completed" && strtolower($order_status) != "processing") {
+                WPAM_Logger::log_debug("WooCommerce Integration - Order status for this transaction is not in a 'completed' or 'processing' state. Commission will not be awarded at this stage.");
+                WPAM_Logger::log_debug("WooCommerce Integration - Commission for this transaciton will be awarded when you set the order status to completed or processing.");
+                return;
+            }
+            $requestTracker = new WPAM_Tracking_RequestTracker();
+            WPAM_Logger::log_debug('WooCommerce Integration - awarding commission for order ID: '.$order_id.'. Purchase amount: '.$purchaseAmount);
+            $requestTracker->handleCheckoutWithRefKey( $order_id, $purchaseAmount, $wpam_refkey);
+        }
 
         public function jigoshopNewOrder($order_id)
         {

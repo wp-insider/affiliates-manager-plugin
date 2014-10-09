@@ -126,6 +126,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= TODO 1.7.9 =
+- Fixed a bug in the WooCommerce integration where the plugin was awarding commission before an order is processed or completed.
+
 = 1.7.8 =
 - The style and design of the affiliate area has been improved significantly.
 - MySQL database character set and collation values are read from the system when creating the tables.
