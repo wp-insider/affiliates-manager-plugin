@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 1.7.8
+Stable tag: 1.7.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -126,8 +126,8 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO 1.7.9 =
-- Fixed a bug in the WooCommerce integration where the plugin was awarding commission before an order is processed or completed.
+= 1.7.9 =
+- Fixed a bug in the WooCommerce integration where the plugin was awarding commission for "Pending" state. Now commission is only awarded when an order is set to "processing" or "completed" state.
 
 = 1.7.8 =
 - The style and design of the affiliate area has been improved significantly.
