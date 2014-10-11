@@ -128,6 +128,8 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = 1.7.9 =
 - Fixed a bug in the WooCommerce integration where the plugin was awarding commission for "Pending" state. Now commission is only awarded when an order is set to "processing" or "completed" state.
+- Moved the 3rd party integration hooks into the plugin constructor.
+- Created a new function to define all the constants for this plugin.
 
 = 1.7.8 =
 - The style and design of the affiliate area has been improved significantly.

@@ -63,8 +63,10 @@ class WPAM_Plugin
 	private $setloc;
 
 	public function __construct() {
+            
+                $this->define_constants();
+                
 		self::$ICON_URL = WPAM_URL . '/images/icon_cash.png';
-		                
 		$this->adminPages = array(
 		 	new WPAM_Pages_Admin_MyAffiliatesPage(
 				'wpam-affiliates',
@@ -116,15 +118,55 @@ class WPAM_Plugin
                 );
 
 		//set up base actions
-		add_action( 'init', array( $this, 'onInit' ) );
-		add_action( 'edd_update_payment_status', array( $this, 'onEDDCheckout' ), 10, 3 );
+		add_action('init', array( $this, 'onInit' ) );
+                
+		/*** Start integration handler hooks ***/
+                //Getshopped/WP-eCommerce
+		add_action('wpsc_transaction_result_cart_item', array( $this, 'onWpscCheckout' ) );
+                
+                //Woocommerce
+                add_action('woocommerce_checkout_update_order_meta', array( $this, 'WooCheckoutUpdateOrderMeta'), 10, 2);
+                add_action('woocommerce_order_status_completed',  array( $this, 'WooCommerceProcessTransaction')); //Executes when a status changes to completed
+                add_action('woocommerce_order_status_processing',  array( $this, 'WooCommerceProcessTransaction')); //Executes when a status changes to processing
+                add_action('woocommerce_checkout_order_processed',  array( $this, 'WooCommerceProcessTransaction'));
+                
+                //Exchange integration
+		add_filter('it_exchange_add_transaction', array( $this, 'onExchangeCheckout' ), 10, 7 );
 
+                //simple cart integration
+                add_filter('wpspc_cart_custom_field_value', array( $this, 'wpspcAddCustomValue'));
+                add_action('wpspc_paypal_ipn_processed', array($this, 'wpspcProcessTransaction'));
+
+                //EDD integration
+		add_action('edd_update_payment_status', array( $this, 'onEDDCheckout' ), 10, 3 );
+                
+                //Jigoshop integration
+                add_action('jigoshop_new_order', array($this, 'jigoshopNewOrder'));
+                /*** End integration hooks ***/
+                
 		if ( WPAM_DEBUG ) {
 			add_filter( 'all', array( $this, 'hookDebug' ) );
 			add_action( 'all', array( $this, 'hookDebug' ) );
 		}
 	}
 
+        public function define_constants(){
+            global $wpdb;
+            //DB Table names
+            define( 'WPAM_AFFILIATES_TBL', $wpdb->prefix . 'wpam_affiliates');
+            define( 'WPAM_CREATIVES_TBL', $wpdb->prefix . 'wpam_creatives');
+            define( 'WPAM_TRACKING_TOKENS_TBL', $wpdb->prefix . 'wpam_tracking_tokens');
+            define( 'WPAM_EVENTS_TBL', $wpdb->prefix . 'wpam_events');
+            define( 'WPAM_ACTIONS_TBL', $wpdb->prefix . 'wpam_actions');
+            define( 'WPAM_TRANSACTIONS_TBL', $wpdb->prefix . 'wpam_transactions');
+            define( 'WPAM_MESSAGES_TBL', $wpdb->prefix . 'wpam_messages');
+            define( 'WPAM_TRACKING_TOKENS_PURCHASE_LOGS_TBL', $wpdb->prefix . 'wpam_tracking_tokens_purchase_logs');
+            define( 'WPAM_AFFILIATES_FIELDS_TBL', $wpdb->prefix . 'wpam_affiliates_fields');
+            define( 'WPAM_PAYPAL_LOGS_TBL', $wpdb->prefix . 'wpam_paypal_logs');
+            define( 'WPAM_IMPRESSIONS_TBL', $wpdb->prefix . 'wpam_impressions');
+            
+        }
+        
 	//remove 'old' style capabilities and replace with 'new'
 	private function initCaps() {
 		//leave commented until http://core.trac.wordpress.org/ticket/16617 is fixed and released
@@ -176,24 +218,6 @@ class WPAM_Plugin
 		add_action( 'template_redirect',array($this, 'onTemplateRedirect' ) );
 		add_action( 'admin_menu', array($this, 'onAdminMenu' ) );
 		add_action( 'current_screen', array( $this, 'onCurrentScreen' ) );
-
-		//checkout handlers
-		add_action( 'wpsc_transaction_result_cart_item', array( $this, 'onWpscCheckout' ) );
-                
-                add_action('woocommerce_checkout_update_order_meta', array( $this, 'WooCheckoutUpdateOrderMeta'), 10, 2);
-                add_action('woocommerce_order_status_completed',  array( $this, 'WooCommerceProcessTransaction')); //Executes when a status changes to completed
-                add_action('woocommerce_order_status_processing',  array( $this, 'WooCommerceProcessTransaction')); //Executes when a status changes to processing
-                add_action('woocommerce_checkout_order_processed',  array( $this, 'WooCommerceProcessTransaction'));
-                
-                //Exchange integration
-		add_filter( 'it_exchange_add_transaction', array( $this, 'onExchangeCheckout' ), 10, 7 );
-
-                //simple cart integration
-                add_filter('wpspc_cart_custom_field_value', array( $this, 'wpspcAddCustomValue'));
-                add_action('wpspc_paypal_ipn_processed', array($this, 'wpspcProcessTransaction'));
-
-                //Jigoshop integration
-                add_action ('jigoshop_new_order', array($this, 'jigoshopNewOrder'));
                 
 		add_action( 'wp_ajax_wpam-ajax_request', array( $this, 'onAjaxRequest' ) );
 
