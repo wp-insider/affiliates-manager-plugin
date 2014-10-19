@@ -126,6 +126,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= TODO 1.8.0 =
+- Made some improvements so the available payment methods are shown correctly to the affiliate
+
 = 1.7.9 =
 - Fixed a bug in the WooCommerce integration where the plugin was awarding commission for "Pending" state. Now commission is only awarded when an order is set to "processing" or "completed" state.
 - Moved the 3rd party integration hooks into the plugin constructor.

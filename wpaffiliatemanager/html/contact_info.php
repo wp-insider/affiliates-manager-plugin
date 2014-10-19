@@ -99,7 +99,21 @@ if( is_admin() ){
 					}?>
 				</select></td>
 		</tr>
-		<tr id="rowPaypalEmail"<?php if( $this->viewData['paymentMethod'] != 'paypal' ) echo ' style="display: none;"'; ?>>
+                <?php                                
+                $pp_email_field_style = ' style="display: none;"';
+                if( $this->viewData['paymentMethod'] == 'paypal' ){
+                    $pp_email_field_style = '';
+                }
+                if(count($this->viewData['paymentMethods']) == 1){//Admin supports only one available payment method
+                    if(array_key_exists('paypal', $this->viewData['paymentMethods'])){//Supports paypal only
+                        $pp_email_field_style = '';
+                    }
+                    else {//Supports a non-paypal method so don't show the paypal email field
+                        $pp_email_field_style = ' style="display: none;"';
+                    }
+                }
+                ?>
+		<tr id="rowPaypalEmail" <?php echo $pp_email_field_style; ?>>
 			<td><label for="txtPaypalEmail"><?php _e( 'PayPal E-Mail Address', 'wpam' ) ?></label> *</td>
 			<td>
 				<input id="txtPaypalEmail" type="text" name="txtPaypalEmail" size="30" value="<?php echo $this->viewData['paypalEmail']?>"/>
