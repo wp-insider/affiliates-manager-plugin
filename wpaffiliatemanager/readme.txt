@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 1.7.9
+Stable tag: 1.8.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,11 @@ Each of your affiliates can be set to their own payout amount.
 = Manual Adjustments and Payouts =
 
 There may be a time when you need to credit an affiliate for something other than a sale. For example, a bonus for reaching a sales goal. Manual adjustments are treated as a line item for easy tracking.
+
+= Pay Your Affiliates Using PayPal =
+
+Ability to easily pay your affiliates their commission using PayPal.
+
 = Unlimited Creatives and Ads for your Affiliates = 
 
 You can add as many banners or text link ads as you wish. Plus, you can easily activate or deactivate creatives as needed.
@@ -126,9 +131,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO 1.8.0 =
-- Made some improvements so the available payment methods are shown correctly to the affiliate.
-- Fixed a bug where every WordPress user was getting redirected to the affiliate home page upon successful login.
+= 1.8.0 =
+- Made some improvements so the available payment methods (PayPal or Cheque) are shown correctly to the affiliate.
+- Made an enhancement so if you are logging in using the affiliate login form, only then you will be redirected to the affiliates home page upon successful login.
 
 = 1.7.9 =
 - Fixed a bug in the WooCommerce integration where the plugin was awarding commission for "Pending" state. Now commission is only awarded when an order is set to "processing" or "completed" state.
