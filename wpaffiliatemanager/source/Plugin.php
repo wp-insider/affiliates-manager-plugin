@@ -221,7 +221,6 @@ class WPAM_Plugin
                 
 		add_action( 'wp_ajax_wpam-ajax_request', array( $this, 'onAjaxRequest' ) );
 
-		add_filter('login_redirect',  array($this, 'redirectAffiliate'), 10, 3);
 		add_filter('pre_user_email',  array($this, 'filterUserEmail'));
 				
 		//set the locale for money format & paypal
@@ -540,21 +539,6 @@ class WPAM_Plugin
                 
                 do_action('wpam_after_main_admin_menu', $menu_parent_slug);
                 
-	}
-
-	public function redirectAffiliate( $redirect_to, $requested_redirect_to, $user ) {
-		if( ! isset( $user->user_login ) ) {
-			return $redirect_to;
-		}
-
-		//also for #63
-		//they have signed up as an affiliate, but probably still need to take some actions
-		if( $user->has_cap( WPAM_PluginConfig::$AffiliateCap ) && ! $user->has_cap( WPAM_PluginConfig::$AffiliateActiveCap ) ) {
-
-			return $this->affiliateHomePage->getLink();
-		}
-		//else
-		return $redirect_to;
 	}
 
 	//for public pages
