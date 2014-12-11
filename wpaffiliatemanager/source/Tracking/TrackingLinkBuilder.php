@@ -27,7 +27,7 @@ class WPAM_Tracking_TrackingLinkBuilder
 
 	public function getUrl() {
 		return add_query_arg( array( WPAM_PluginConfig::$RefKey => $this->getTrackingKey()->pack() ),
-							  site_url( trim( $this->creative->slug ) ) );
+							  home_url( trim( $this->creative->slug ) ) );
 	}
 
 	public function getHtmlSnippet() {
