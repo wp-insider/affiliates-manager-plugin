@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 1.8.0
+Stable tag: 1.8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -132,7 +132,7 @@ https://wpaffiliatemanager.com/screen-shots/
 == Changelog ==
 
 = 1.8.1 =
-- Default affiliate links are now displayed in the affiliate dashboard
+- Default affiliate links are now displayed in the affiliate's dashboard
 
 = 1.8.0 =
 - Made some improvements so the available payment methods (PayPal or Cheque) are shown correctly to the affiliate.
