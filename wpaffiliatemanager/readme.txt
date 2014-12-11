@@ -132,7 +132,7 @@ https://wpaffiliatemanager.com/screen-shots/
 == Changelog ==
 
 = 1.8.1 =
-- Default affiliate links are now displayed in the affiliate's dashboard
+- Default affiliate links are now displayed in the affiliate's dashboard. This will be available even if you haven't configured any creative.
 
 = 1.8.0 =
 - Made some improvements so the available payment methods (PayPal or Cheque) are shown correctly to the affiliate.
