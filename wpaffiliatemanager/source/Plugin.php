@@ -313,8 +313,6 @@ class WPAM_Plugin
 			wp_register_style('wpam_style', WPAM_URL . "/style/style.css");
 			wp_enqueue_style('wpam_style');
 			
-			//wp_register_script( 'wpam_jquery_datepicker', WPAM_URL . '/jquery-ui-' . self::EXT_JQUERY_UI_VER . '/development-bundle/ui/jquery.ui.datepicker.js', array( 'jquery' ) );
-			//wp_enqueue_script( 'wpam_jquery_datepicker' );
 			wp_enqueue_script( 'jquery-ui-datepicker' );
 			
 			//used for persistent tabs
@@ -327,8 +325,11 @@ class WPAM_Plugin
 			wp_register_script( 'wpam_contact_info', WPAM_URL . '/js/contact_info.js', array( 'jquery-ui-dialog' ) );
 			wp_register_script( 'wpam_money_format', WPAM_URL . '/js/money_format.js' );
 
-			wp_register_style( 'wpam_jquery_ui_theme', WPAM_URL . '/jquery-ui-' . self::EXT_JQUERY_UI_VER . '/css/smoothness/jquery-ui-' . self::EXT_JQUERY_UI_VER . '.custom.css' );
-			wp_enqueue_style( 'wpam_jquery_ui_theme' );
+			//wp_register_style( 'wpam_jquery_ui_theme', WPAM_URL . '/jquery-ui-' . self::EXT_JQUERY_UI_VER . '/css/smoothness/jquery-ui-' . self::EXT_JQUERY_UI_VER . '.custom.css' );
+			//wp_enqueue_style( 'wpam_jquery_ui_theme' );
+                        wp_register_style( 'wpam_jquery_ui_theme', WPAM_URL . '/style/jquery-ui/smoothness/jquery-ui.css' );
+                        wp_enqueue_style( 'wpam_jquery_ui_theme' );
+                        
 		}
 		
 		add_thickbox();
@@ -557,8 +558,10 @@ class WPAM_Plugin
 		if( isset( $page->ID ) && in_array( $page->ID, self::$PUBLIC_PAGE_IDS ) ) {
 			//add jquery dialog + some style
 			$this->enqueueDialog();
-			wp_register_style( 'wpam_jquery_ui_theme', WPAM_URL . '/jquery-ui-' . self::EXT_JQUERY_UI_VER . '/css/smoothness/jquery-ui-' . self::EXT_JQUERY_UI_VER . '.custom.css' );
-			wp_enqueue_style( 'wpam_jquery_ui_theme' );
+			//wp_register_style( 'wpam_jquery_ui_theme', WPAM_URL . '/jquery-ui-' . self::EXT_JQUERY_UI_VER . '/css/smoothness/jquery-ui-' . self::EXT_JQUERY_UI_VER . '.custom.css' );
+			//wp_enqueue_style( 'wpam_jquery_ui_theme' );
+                        wp_register_style( 'wpam_jquery_ui_theme', WPAM_URL . '/style/jquery-ui/smoothness/jquery-ui.css' );
+                        wp_enqueue_style( 'wpam_jquery_ui_theme' );
 			wp_register_style('wpam_style', WPAM_URL . "/style/style.css");
 			wp_enqueue_style('wpam_style');
 
@@ -581,8 +584,6 @@ class WPAM_Plugin
 	private function enqueueDialog() {
 		//things seem to be working OK with dialog/button as of WP 3.4, so we'll just use the included version
 		
-		//wp_deregister_script( 'jquery-ui-button' );
-		//wp_register_script( 'jquery-ui-button', WPAM_URL . '/jquery-ui-' . self::EXT_JQUERY_UI_VER . '/development-bundle/ui/jquery.ui.button.js', array( 'jquery-ui-core', 'jquery-ui-widget' ), self::EXT_JQUERY_UI_VER, true );
 		wp_enqueue_script( 'jquery-ui-button' );
 		wp_enqueue_script( 'jquery-ui-dialog' );
 	}
