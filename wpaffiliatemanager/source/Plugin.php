@@ -316,8 +316,6 @@ class WPAM_Plugin
 			wp_enqueue_script( 'jquery-ui-datepicker' );
 			
 			//used for persistent tabs
-			wp_register_script( 'wpam_jquery_cookie', WPAM_URL . '/jquery-ui-' . self::EXT_JQUERY_UI_VER . '/development-bundle/external/cookie.js', array( 'jquery' ) );
-			wp_enqueue_script( 'wpam_jquery_cookie' );
 
 			wp_enqueue_script( 'jquery-ui-tabs' );
 
@@ -325,8 +323,6 @@ class WPAM_Plugin
 			wp_register_script( 'wpam_contact_info', WPAM_URL . '/js/contact_info.js', array( 'jquery-ui-dialog' ) );
 			wp_register_script( 'wpam_money_format', WPAM_URL . '/js/money_format.js' );
 
-			//wp_register_style( 'wpam_jquery_ui_theme', WPAM_URL . '/jquery-ui-' . self::EXT_JQUERY_UI_VER . '/css/smoothness/jquery-ui-' . self::EXT_JQUERY_UI_VER . '.custom.css' );
-			//wp_enqueue_style( 'wpam_jquery_ui_theme' );
                         wp_register_style( 'wpam_jquery_ui_theme', WPAM_URL . '/style/jquery-ui/smoothness/jquery-ui.css' );
                         wp_enqueue_style( 'wpam_jquery_ui_theme' );
                         
@@ -558,8 +554,6 @@ class WPAM_Plugin
 		if( isset( $page->ID ) && in_array( $page->ID, self::$PUBLIC_PAGE_IDS ) ) {
 			//add jquery dialog + some style
 			$this->enqueueDialog();
-			//wp_register_style( 'wpam_jquery_ui_theme', WPAM_URL . '/jquery-ui-' . self::EXT_JQUERY_UI_VER . '/css/smoothness/jquery-ui-' . self::EXT_JQUERY_UI_VER . '.custom.css' );
-			//wp_enqueue_style( 'wpam_jquery_ui_theme' );
                         wp_register_style( 'wpam_jquery_ui_theme', WPAM_URL . '/style/jquery-ui/smoothness/jquery-ui.css' );
                         wp_enqueue_style( 'wpam_jquery_ui_theme' );
 			wp_register_style('wpam_style', WPAM_URL . "/style/style.css");
