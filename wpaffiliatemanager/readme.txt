@@ -132,7 +132,7 @@ https://wpaffiliatemanager.com/screen-shots/
 == Changelog ==
 
 = 1.8.2 =
-- Fixed some jQuery ui display issues in the plugin.
+- Fixed some jQuery ui display issues in the admin side of the plugin for WordPress 4.1.
 
 = 1.8.1 =
 - Default affiliate links are now displayed in the affiliate's dashboard. This will be available even if you haven't configured any creative.
