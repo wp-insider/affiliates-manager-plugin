@@ -31,6 +31,7 @@ Affiliates Manager integrates with some popular e-commerce solutions. It integra
 * WP eStore
 * Sell Digital Downloads
 * Paid Membership Pro
+* S2Member
 
 = Real-Time Reporting =
 
