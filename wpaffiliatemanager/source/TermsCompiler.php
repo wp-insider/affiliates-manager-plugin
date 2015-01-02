@@ -17,7 +17,7 @@ class WPAM_TermsCompiler
 	public function build()
 	{
 		$siteName = get_option('blogname');
-		$siteUrl = get_option('siteurl');
+		$siteUrl = get_option('home');
 		$termsUrl = WPAM_URL . "/tnc.php";
 		$payoutMinimum = get_option(WPAM_PluginConfig::$MinPayoutAmountOption);
 
