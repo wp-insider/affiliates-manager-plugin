@@ -59,34 +59,6 @@ function wpam_display_clicks_menu()
     <div id="poststuff"><div id="post-body">
     <?php        
     
-    $limit = 50;
-    
-    /*
-    if (isset($_REQUEST['deleted'])) {
-        echo '<div id="message" class="updated fade"><p><strong>';
-        echo $_REQUEST['msg'];
-        echo '</strong></p></div>';
-    }
-    if (isset($_REQUEST['Delete'])) {
-        $prod_id = $_REQUEST['prod_id'];
-        if (wp_eStore_delete_product_data($prod_id)) {
-            $message = "Product successfully deleted";
-        } else {
-            $message = "An error occurded while trying to delete the entry";
-        }
-        $redirect_url = 'admin.php?page=wp-cart-for-digital-products/wp_eStore1.php&deleted=1&msg=' . urlencode($message);
-        eStore_redirect_to_url($redirect_url);
-    }
-
-    if (isset($_POST['info_update'])) {
-        $search_term = (string) $_POST["eStore_product_search"];
-        update_option('eStore_product_search', (string) $_POST["eStore_product_search"]);
-        eStore_display_searched_products($search_term);
-    } else {
-        eStore_display_products($limit);
-    }
-    */
-    
     include_once(WPAM_BASE_DIRECTORY . '/classes/aff_list_clicks_table.php');
     //Create an instance of our package class...
     $clicks_list_table = new WPAM_List_Clicks_Table();

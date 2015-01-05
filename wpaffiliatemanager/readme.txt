@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 1.8.2
+Stable tag: 1.8.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +131,11 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 1.8.3 =
+- Created a new addon to integrate S2Member with affilates manager plugin. See details below:
+  https://wpaffiliatemanager.com/affiliates-manager-s2member-integration/ 
+- Added a new menu to show affiliate click throughs.
 
 = 1.8.2 =
 - Fixed some jQuery ui display issues in the admin side of the plugin for WordPress 4.1.

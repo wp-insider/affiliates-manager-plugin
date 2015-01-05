@@ -98,7 +98,7 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
             foreach ($records_to_delete as $row) {
                 //TODO delete all the selected rows
 //                global $wpdb;
-//                $record_table_name = WP_ESTORE_PRODUCTS_TABLE_NAME; //The table name for the records			
+//                $record_table_name = WPAM_TRACKING_TOKENS_TBL; //The table name for the records			
 //                $updatedb = "DELETE FROM $record_table_name WHERE id='$row'";
 //                $results = $wpdb->query($updatedb);
             }
@@ -108,7 +108,7 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
 
     function prepare_items() {
         // Lets decide how many records per page to show     
-        $per_page = '20'; //TODO change it to 50
+        $per_page = '50';
 
         $columns = $this->get_columns();
         $hidden = array();
