@@ -534,6 +534,9 @@ class WPAM_Plugin
 
 		}
                 
+                //add submenu page
+                add_submenu_page($menu_parent_slug, __("Affiliates Manager Click Through", 'wpam'), __("Click Throughs", 'wpam'), WPAM_PluginConfig::$AdminCap, 'wpam-clickthroughs', 'wpam_display_clicks_menu');
+                //
                 do_action('wpam_after_main_admin_menu', $menu_parent_slug);
                 
 	}
