@@ -55,7 +55,33 @@ function wpam_display_clicks_menu()
 {
     ?>
     <div class="wrap">
-    <h2><?php _e('Affiliate Clickthrough Data', 'wpam');?></h2>
+    <h2><?php _e('Click Tracking', 'wpam');?></h2>
+    <?php
+    $wpam_clicktracking_tabs = array(
+        'wpam-clicktracking' => __('Unique Click Tracking', 'wpam'),
+    ); 
+
+    if(isset($_GET['page'])){
+        $current = $_GET['page'];
+        if(isset($_GET['action'])){
+            $current .= "&action=".$_GET['action'];
+        }
+    }
+    $content = '';
+    $content .= '<h2 class="nav-tab-wrapper">';
+    foreach($wpam_clicktracking_tabs as $location => $tabname)
+    {
+        if($current == $location){
+            $class = ' nav-tab-active';
+        } else{
+            $class = '';    
+        }
+        $content .= '<a class="nav-tab'.$class.'" href="?page='.$location.'">'.$tabname.'</a>';
+    }
+    $content .= '</h2>';
+    echo $content;
+    ?>
+    <p><?php _e('This tab shows unique referrals to your website from your affiliates', 'wpam');?></p>
     <div id="poststuff"><div id="post-body">
     <?php        
     
