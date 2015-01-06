@@ -22,7 +22,7 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
 
     function column_trackingTokenId($item) {
 
-        return $item['id'];
+        return $item['trackingTokenId'];
         
         //TODO - later offer the option to delete a click also.
         //Build row actions
@@ -54,7 +54,7 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
         return sprintf(
                         '<input type="checkbox" name="%1$s[]" value="%2$s" />',
                         /* $1%s */ $this->_args['singular'], //Let's reuse singular label
-                        /* $2%s */ $item['id'] //The value of the checkbox should be the record's key/id
+                        /* $2%s */ $item['trackingTokenId'] //The value of the checkbox should be the record's key/id
         );
     }
 
@@ -66,7 +66,7 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
             'sourceAffiliateId' => __('Affiliate ID', 'wpam'),
             'trackingKey' => __('Tracking Key', 'wpam'),
             'sourceCreativeId' => __('Creative ID', 'wpam'),
-            'referer' => __('Referer', 'wpam')
+            'referer' => __('Referring URL', 'wpam')
         );
         return $columns;
     }
