@@ -132,6 +132,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= TODO 1.8.5 =
+- Updated some text in the affiliate terms and conditions settings.
+
 = 1.8.4 = 
 - Fixed a bug where Tracking IDs were not showing in the click tracking menu.
 
