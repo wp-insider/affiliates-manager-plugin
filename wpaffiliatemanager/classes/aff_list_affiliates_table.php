@@ -21,28 +21,20 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
     }
 
     function column_affiliateId($item) {
-
-        return $item['affiliateId'];
-
-        //TODO - later offer the option to delete a click also.
         //Build row actions
-//        $actions = array(
-//            'edit' => sprintf('<a href="admin.php?page=wpam_edit&editid=%s">Edit</a>', $item['id']),
-//            'delete' => sprintf('<a href="?page=%s&Delete=%s&prod_id=%s" onclick="return confirm(\'Are you sure you want to delete this entry?\')">Delete</a>', $_REQUEST['page'], '1', $item['id']),
-//        );
-//
-//        //Return the id column contents
-//        return $item['id'] . $this->row_actions($actions);
+        $actions = array(
+            'edit' => sprintf('<a href="admin.php?page=wpam-affiliates&viewDetail=%s">View</a>', $item['affiliateId']),
+            'delete' => sprintf('<a href="admin.php?page=wpam-affiliates&Delete=%s&aid=%s" onclick="return confirm(\'Are you sure you want to delete this entry?\')">Delete</a>', '1', $item['affiliateId']),
+        );
+
+        //Return the id column contents
+        return $item['affiliateId'] . $this->row_actions($actions);
     }
 
-    /* Custom column output - only use if you have some columns that needs custom output */
-
-//    function column_<name_of_column>($item) {//Outputs the thubmnail image the way we want it
-//        //$column_value = $item['<name_of_column'];
-//        //DO some custom string manipulation        
-//        return $column_value;
-//    }
-
+    function column_viewDetail($item) {
+        $item['viewDetail'] = '<a class="button-secondary" href="admin.php?page=wpam-affiliates&viewDetail=' . $item['affiliateId'] . '">' . __('View', 'wpam') . '</a>';
+        return $item['viewDetail'];
+    }
 
     /* overridden function to show a custom message when no records are present */
 
@@ -54,7 +46,7 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
         return sprintf(
                         '<input type="checkbox" name="%1$s[]" value="%2$s" />',
                         /* $1%s */ $this->_args['singular'], //Let's reuse singular label
-                        /* $2%s */ $item['trackingTokenId'] //The value of the checkbox should be the record's key/id
+                        /* $2%s */ $item['affiliateId'] //The value of the checkbox should be the record's key/id
         );
     }
 
@@ -70,7 +62,8 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
             'email' => __('Email', 'wpam'),
             'companyName' => __('Company', 'wpam'),
             'dateCreated' => __('Date Joined', 'wpam'),
-            'websiteUrl' => __('Website', 'wpam')
+            'websiteUrl' => __('Website', 'wpam'),
+            'viewDetail' => __('', 'wpam'),
         );
         return $columns;
     }
@@ -132,8 +125,21 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
         global $wpdb;
         $aff_table_name = WPAM_AFFILIATES_TBL;
         $trn_table_name = WPAM_TRANSACTIONS_TBL;
-        $resultset = $wpdb->get_results(
-        "select
+        $where = "";
+        if(isset($_REQUEST['statusFilter']) && !empty($_REQUEST['statusFilter'])){
+            $status = esc_sql($_REQUEST['statusFilter']);
+            if($status == "all"){
+                $where = "";
+            }
+            else if($status == "all_active"){
+                $where = " where status != 'declined' and status != 'blocked' and status != 'inactive'";
+            }
+            else{
+                $where = " where status = '$status'";
+            }
+        }
+        $query = 
+                "select
                 $aff_table_name.*,
                 (
                         select coalesce(sum(tr.amount),0)
@@ -150,7 +156,9 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
                                 and tr.status != 'failed'
                 ) earnings
         from $aff_table_name
-        ");
+        ".$where;
+        $resultset = $wpdb->get_results($query);
+        
         /*
           $records_table_name = WPAM_TRACKING_TOKENS_TBL; //The table to query
           $resultset = $wpdb->get_results("SELECT * FROM $records_table_name ORDER BY $orderby_column $sort_order", OBJECT);
