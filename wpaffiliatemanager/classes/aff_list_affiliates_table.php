@@ -24,13 +24,18 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
         //Build row actions
         $actions = array(
             'edit' => sprintf('<a href="admin.php?page=wpam-affiliates&viewDetail=%s">View</a>', $item['affiliateId']),
-            'delete' => sprintf('<a href="admin.php?page=wpam-affiliates&Delete=%s&aid=%s" onclick="return confirm(\'Are you sure you want to delete this entry?\')">Delete</a>', '1', $item['affiliateId']),
+            'delete' => sprintf('<a href="admin.php?page=wpam-affiliates&delete_aid=%s" onclick="return confirm(\'Are you sure you want to delete this entry?\')">Delete</a>', $item['affiliateId']),
         );
 
         //Return the id column contents
         return $item['affiliateId'] . $this->row_actions($actions);
     }
 
+    function column_dateCreated($item) {
+        $item['dateCreated'] = date("m/d/Y", strtotime($item['dateCreated']));
+        return $item['dateCreated'];
+    }
+    
     function column_viewDetail($item) {
         $item['viewDetail'] = '<a class="button-secondary" href="admin.php?page=wpam-affiliates&viewDetail=' . $item['affiliateId'] . '">' . __('View', 'wpam') . '</a>';
         return $item['viewDetail'];
@@ -89,17 +94,34 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
             $nvp_key = $this->_args['singular'];
             $records_to_delete = $_GET[$nvp_key];
             if (empty($records_to_delete)) {
-                echo '<div id="message" class="updated fade"><p>Error! You need to select multiple records to perform a bulk action!</p></div>';
+                echo '<div id="message" class="updated fade"><p>' . __('Error! You need to select multiple records to perform a bulk action!', 'wpam') . '</p></div>';
                 return;
             }
             foreach ($records_to_delete as $row) {
                 //TODO delete all the selected rows
-//                global $wpdb;
-//                $record_table_name = WPAM_TRACKING_TOKENS_TBL; //The table name for the records			
-//                $updatedb = "DELETE FROM $record_table_name WHERE id='$row'";
-//                $results = $wpdb->query($updatedb);
+                global $wpdb;
+                $record_table_name = WPAM_AFFILIATES_TBL; //The table name for the records			
+                $updatedb = "DELETE FROM $record_table_name WHERE affiliateId='$row'";
+                $results = $wpdb->query($updatedb);
             }
-            echo '<div id="message" class="updated fade"><p>Selected records deleted successfully!</p></div>';
+            echo '<div id="message" class="updated fade"><p>' . __('Selected records deleted successfully!', 'wpam') . '</p></div>';
+        }
+    }
+
+    function process_individual_action() {
+
+        if (isset($_REQUEST['page']) && 'wpam-affiliates' == $_REQUEST['page']) {
+            if (isset($_REQUEST['delete_aid'])) { //delete an affiliate record
+                $aid = esc_sql($_REQUEST['delete_aid']);
+                if(!is_numeric($aid)){
+                    return;
+                }
+                global $wpdb;
+                $record_table_name = WPAM_AFFILIATES_TBL; //The table name for the records			
+                $updatedb = "DELETE FROM $record_table_name WHERE affiliateId='$aid'";
+                $result = $wpdb->query($updatedb);
+                echo '<div id="message" class="updated fade"><p>' . __('Selected record deleted successfully!', 'wpam') . '</p></div>';
+            }
         }
     }
 
@@ -113,32 +135,31 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
 
         $this->_column_headers = array($columns, $hidden, $sortable);
 
+        $this->process_individual_action();
         $this->process_bulk_action();
 
         // This checks for sorting input and sorts the data.
         $orderby_column = isset($_GET['orderby']) ? $_GET['orderby'] : '';
         $sort_order = isset($_GET['order']) ? $_GET['order'] : '';
         if (empty($orderby_column)) {
-            $orderby_column = "trackingTokenId";
+            $orderby_column = "affiliateId";
             $sort_order = "DESC";
         }
         global $wpdb;
         $aff_table_name = WPAM_AFFILIATES_TBL;
         $trn_table_name = WPAM_TRANSACTIONS_TBL;
         $where = "";
-        if(isset($_REQUEST['statusFilter']) && !empty($_REQUEST['statusFilter'])){
+        if (isset($_REQUEST['statusFilter']) && !empty($_REQUEST['statusFilter'])) {
             $status = esc_sql($_REQUEST['statusFilter']);
-            if($status == "all"){
+            if ($status == "all") {
                 $where = "";
-            }
-            else if($status == "all_active"){
-                $where = " where status != 'declined' and status != 'blocked' and status != 'inactive'";
-            }
-            else{
-                $where = " where status = '$status'";
+            } else if ($status == "all_active") {
+                $where = "where status != 'declined' and status != 'blocked' and status != 'inactive'";
+            } else {
+                $where = "where status = '$status'";
             }
         }
-        $query = 
+        $query =
                 "select
                 $aff_table_name.*,
                 (
@@ -155,10 +176,11 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
                                 tr.affiliateId = $aff_table_name.affiliateId
                                 and tr.status != 'failed'
                 ) earnings
-        from $aff_table_name
-        ".$where;
+        from $aff_table_name 
+        $where
+        ORDER BY $orderby_column $sort_order     
+        ";
         $resultset = $wpdb->get_results($query);
-        
         /*
           $records_table_name = WPAM_TRACKING_TOKENS_TBL; //The table to query
           $resultset = $wpdb->get_results("SELECT * FROM $records_table_name ORDER BY $orderby_column $sort_order", OBJECT);
