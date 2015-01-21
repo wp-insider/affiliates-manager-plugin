@@ -100,7 +100,15 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
             foreach ($records_to_delete as $row) {
                 //TODO delete all the selected rows
                 global $wpdb;
-                $record_table_name = WPAM_AFFILIATES_TBL; //The table name for the records			
+                $record_table_name = WPAM_AFFILIATES_TBL; //The table name for the records
+                $selectdb = $wpdb->get_row("SELECT * FROM $record_table_name WHERE affiliateId='$row'");
+                $aff_email = $selectdb->email;
+                $user = get_user_by('email', $aff_email);
+                if($user){
+                    if(!in_array('administrator', $user->roles)){
+                        wp_delete_user($user->ID);
+                    }
+                }
                 $updatedb = "DELETE FROM $record_table_name WHERE affiliateId='$row'";
                 $results = $wpdb->query($updatedb);
             }
@@ -117,7 +125,15 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
                     return;
                 }
                 global $wpdb;
-                $record_table_name = WPAM_AFFILIATES_TBL; //The table name for the records			
+                $record_table_name = WPAM_AFFILIATES_TBL; //The table name for the records
+                $selectdb = $wpdb->get_row("SELECT * FROM $record_table_name WHERE affiliateId='$aid'");
+                $aff_email = $selectdb->email;
+                $user = get_user_by('email', $aff_email);
+                if($user){
+                    if(!in_array('administrator', $user->roles)){
+                        wp_delete_user($user->ID);
+                    }
+                }
                 $updatedb = "DELETE FROM $record_table_name WHERE affiliateId='$aid'";
                 $result = $wpdb->query($updatedb);
                 echo '<div id="message" class="updated fade"><p>' . __('Selected record deleted successfully!', 'wpam') . '</p></div>';
