@@ -149,6 +149,55 @@ class WPAM_Util_UserHandler {
             $mailer->mailAffiliate($userEmail, sprintf(__('Affiliate Application for %s', 'wpam'), $blogname), $message);
         }
     }
+            
+    /*** Inserts data into the affiliates table to create an affiliate profile ***/
+    function create_wpam_affiliate_record($fields)
+    {
+        global $wpdb;
+        
+        //Do some validation to make sure we have some minimum required info
+        if(!isset($fields['email']) || empty($fields['email'])){
+            WPAM_Logger::log_debug("create_wpam_affiliate_record() - Error, email address is missing. Cannot create affiliate record!", 4);
+            return;
+        }
+        
+        if(!isset($fields['userId']) || empty($fields['userId'])){
+            WPAM_Logger::log_debug("create_wpam_affiliate_record() - Error, userId value is missing. Cannot create affiliate record!", 4);
+            return;
+        }        
+                
+        //Check and set the default status values
+        if(!isset($fields['status']) || empty($fields['status'])){
+            if(get_option(WPAM_PluginConfig::$AutoAffiliateApproveIsEnabledOption) == 1){
+                $fields['status'] = 'active';
+            }
+            else{
+                $fields['status'] = 'applied';
+            }
+        }
+        
+        //Check and set default dateCreated value
+        if(!isset($fields['dateCreated']) || empty($fields['dateCreated'])){
+            $fields['dateCreated'] = current_time('mysql'); //date("Y-m-d H:i:s");
+        }
+        
+        //Check and set default dateCreated value
+        if(!isset($fields['uniqueRefKey']) || empty($fields['uniqueRefKey'])){
+            $idGenerator = new WPAM_Tracking_UniqueIdGenerator();
+            $fields['uniqueRefKey'] = $idGenerator->generateId();
+        }        
+        
+        //Check and set default bountyType
+        if(!isset($fields['bountyType']) || empty($fields['bountyType'])){
+            $fields['bountyType'] = get_option(WPAM_PluginConfig::$AffBountyType);
+        }
+        
+        //Check and set default bountyAmount
+        if(!isset($fields['bountyAmount']) || empty($fields['bountyAmount'])){
+            $fields['bountyAmount'] = get_option(WPAM_PluginConfig::$AffBountyAmount);
+        }
 
+        $wpdb->insert( WPAM_AFFILIATES_TBL, $fields );
+    }
     
 }
