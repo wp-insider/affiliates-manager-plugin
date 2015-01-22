@@ -132,6 +132,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= 1.8.7 =
+- Fixed a bug where a new affiliate account could not be manually approved from the affiliates menu.
+
 = 1.8.6 =
 - Deleting an affiliate record will also delete the WordPress user account associated with it.
 

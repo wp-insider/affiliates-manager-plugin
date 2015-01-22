@@ -244,6 +244,7 @@ $user = $this->viewData['user'];
                 jQuery('#dialog-approveForm button.ok').click(function(){
                     if (validateApproveForm())
 					{
+                                            tb_remove();
 						showConfirmDialog(
 							'<?php _e( 'Are you sure you wish to approve this affiliate?', 'wpam' ) ?>',
 							'<?php _e( 'Yes, approve.', 'wpam' ) ?>',
