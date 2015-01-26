@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 1.8.6
+Stable tag: 1.8.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +131,11 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 1.8.8 =
+- Added a function to create a new affiliate account.
+- Created a new addon to automatically create affiliate accounts for your WooCommerce users. See details below:
+  https://wpaffiliatemanager.com/automatically-create-affiliate-account-woocommerce-customers/
 
 = 1.8.7 =
 - Fixed a bug where a new affiliate account could not be manually approved from the affiliates menu.
