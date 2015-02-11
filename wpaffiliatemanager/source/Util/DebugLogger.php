@@ -84,4 +84,22 @@ class WPAM_Logger
         $content .= WPAM_Logger::get_section_break($section_break);
         WPAM_Logger::append_to_file($content, $file_name);
     }
+    
+    public static function log_debug_array($array_to_write,$level=0,$section_break=false,$file_name='')
+    {
+        //Check if logger is enabled
+        if (!WPAM_Logger::is_logger_enabled()) return;
+        
+        //Log stuff
+        $content = WPAM_Logger::get_debug_timestamp();//Timestamp
+        $content .= WPAM_Logger::get_debug_status($level);//Debug status
+        $content .= ' : ';
+        ob_start(); 
+	print_r($array_to_write); 
+	$var = ob_get_contents(); 
+	ob_end_clean(); 
+        $content .= $var;
+        $content .= WPAM_Logger::get_section_break($section_break);
+        WPAM_Logger::append_to_file($content, $file_name);
+    }
 }
