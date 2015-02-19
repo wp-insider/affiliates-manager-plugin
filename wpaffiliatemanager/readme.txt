@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 1.8.9
+Stable tag: 1.9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -134,8 +134,8 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = 1.9.0 =
 - Fixed an issue where logged-in users would be able to create affiliate accounts with different email addresses.
-- Added a new filters in the registration form to print content before the submit form.
-- Added a new filter in the registration form to run additional validation code upon form submission.
+- Added a new filter in the registration form to print content before the submit button.
+- Added a new filter in the registration form to run additional validation code upon submission.
 
 = 1.8.9 =
 - Added a function to log array in the DebugLogger file.
