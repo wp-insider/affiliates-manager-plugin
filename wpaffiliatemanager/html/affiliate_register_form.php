@@ -19,8 +19,17 @@ $request = @$this->viewData['request'];
 					<th><label for="_<?php echo $field->databaseField?>"><?php echo $field->name?><?php echo $field->required ? '&nbsp;*': '' ?></label></th>
 					<td>
 						<?php switch ($field->fieldType) {
+                                                        case 'email':
+                                                            $email = $request['_'.$field->databaseField];
+                                                            $readonly = '';
+                                                            if(is_user_logged_in()){
+                                                                $current_user = wp_get_current_user();
+                                                                $email = $current_user->user_email;
+                                                                $readonly = 'readonly';
+                                                            }?>
+                                                            <input type="text" size="20" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo $email?>" <?php echo $readonly;?>/>
+							<?php break;
 							case 'string':
-							case 'email':
 							case 'number':
 							case 'zipCode':
 								?>

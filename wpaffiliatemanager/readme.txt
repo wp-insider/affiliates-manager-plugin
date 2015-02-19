@@ -132,6 +132,11 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= 1.9.0 =
+- Fixed an issue where logged-in users would be able to create affiliate accounts with different email addresses.
+- Added a new filters in the registration form to print content before the submit form.
+- Added a new filter in the registration form to run additional validation code upon form submission.
+
 = 1.8.9 =
 - Added a function to log array in the DebugLogger file.
 - Auto WooCommerce Affiliate Account Creation Addon: Address details of the affiliate will now be populated when a new WooCommerce user is created.
