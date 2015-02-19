@@ -27,10 +27,17 @@ class WPAM_Pages_AffiliatesRegister extends WPAM_Pages_PublicPage
 		);
 
 		if ( isset( $request['action'] ) && $request['action'] == 'submit' ) {
-
+                        $form_validated = false;
 			$affiliateHelper = new WPAM_Util_AffiliateFormHelper();
 			$vr = $affiliateHelper->validateForm( new WPAM_Validation_Validator(), $request, $affiliateFields );
-			if ( $vr->getIsValid() ) {
+                        if($vr->getIsValid()){
+                            $form_validated = true;
+                        }
+                        $output = apply_filters( 'wpam_validate_registration_form_submission', '', $request);
+                        if(!empty($output)){
+                            $form_validated = false;
+                        }
+			if ($form_validated) {
 				$model = $affiliateHelper->getNewAffiliate();
 				
 				$affiliateHelper->setModelFromForm( $model, $affiliateFields, $request );

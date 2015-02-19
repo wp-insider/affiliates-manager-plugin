@@ -55,9 +55,13 @@ $request = @$this->viewData['request'];
 					<span id="termsAgreeWarning" style="color: red; display: none"><br><?php _e( 'You must agree to the terms.', 'wpam' ) ?></span>
 				</td>
 			</tr>
-
 		</table>
-
+                <?php 
+                $output = apply_filters( 'wpam_before_registration_submit_button', '');
+                if(!empty($output)){
+                    echo $output;
+                }
+                ?>
                 <div class="wpam-registration-form">
                     <input type="submit" name="submit" value="<?php _e( 'Submit Application', 'wpam' ) ?>" class="pure-button pure-button-active" />
                 </div>
