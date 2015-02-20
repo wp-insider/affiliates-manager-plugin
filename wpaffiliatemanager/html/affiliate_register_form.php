@@ -21,14 +21,21 @@ $request = @$this->viewData['request'];
 						<?php switch ($field->fieldType) {
                                                         case 'email':
                                                             $email = $request['_'.$field->databaseField];
-                                                            $readonly = '';
                                                             if(is_user_logged_in()){
                                                                 $current_user = wp_get_current_user();
                                                                 $email = $current_user->user_email;
-                                                                $readonly = 'readonly';
-                                                            }?>
-                                                            <input type="text" size="20" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo $email?>" <?php echo $readonly;?>/>
-							<?php break;
+                                                                ?>
+                                                                <input type="text" size="20" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo $email?>" readonly />
+                                                                <p class="wpam_registration_input_help_text"><?php _e('This is the email address associated with your currently logged in WordPress user account.', 'wpam')?></p>
+                                                                <p class="wpam_registration_input_help_text"><?php _e('If you want to use a different email address, log out of your WordPress account then try a new registration.', 'wpam')?></p>
+                                                                <?php
+                                                            }
+                                                            else{
+                                                            ?>
+                                                            <input type="text" size="20" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo $email?>" />
+                                                            <?php
+                                                            }
+                                                             break;
 							case 'string':
 							case 'number':
 							case 'zipCode':

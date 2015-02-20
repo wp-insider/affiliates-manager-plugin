@@ -248,3 +248,8 @@ tr.transaction-failed {
 td#landing-page-slug { 
     vertical-align: middle;
 }
+
+/*** Affiliate registration page ***/
+.wpam_registration_input_help_text{
+    max-width: 350px;
+}
