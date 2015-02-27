@@ -457,12 +457,15 @@ class WPAM_Plugin
         }
         
 	public function onEDDCheckout( $payment_id, $new_status, $old_status ) {
-		if ( $old_status == 'publish' || $old_status == 'complete' )
-			return; // Make sure that payments are only completed once
-		
-		$purchaseAmount = edd_get_payment_amount( $payment_id );
-		$requestTracker = new WPAM_Tracking_RequestTracker();
-		$requestTracker->handleCheckout( $payment_id, $purchaseAmount );
+            WPAM_Logger::log_debug('Easy Digital Downlaods Integration - order status updated. Old status: '.$old_status.', New Status: '.$new_status.'. Checking if affiliate commission needs to be awarded.');
+            if ( $old_status == 'publish' || $old_status == 'complete' ){
+                WPAM_Logger::log_debug('Easy Digital Downlaods Integration - This payment was processed once, no need to award commission.');
+                return; // Make sure that payments are only completed once
+            }
+            $purchaseAmount = edd_get_payment_amount( $payment_id );
+            WPAM_Logger::log_debug('Easy Digital Downlaods Integration - awarding commission for Order ID: '.$payment_id.'. Purchase amt: '.$purchaseAmount);
+            $requestTracker = new WPAM_Tracking_RequestTracker();
+            $requestTracker->handleCheckout( $payment_id, $purchaseAmount );
 	}
 
 	public function onExchangeCheckout( $transaction_id, $method, $method_id, $status, $customer_id, $cart_object, $args ) {

@@ -132,6 +132,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= 1.9.1 =
+- Added some debug messages for Easy Digital Downloads plugin integration
+
 = 1.9.0 =
 - Fixed an issue where logged-in users would be able to create affiliate accounts with different email addresses.
 - Added a new filter in the registration form to print content before the submit button.
