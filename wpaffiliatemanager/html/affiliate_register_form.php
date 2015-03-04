@@ -16,7 +16,7 @@ $request = @$this->viewData['request'];
 		<table class="pure-table">
 			<?php foreach ($this->viewData['affiliateFields'] as $field) { ?>
 				<tr>
-					<th><label for="_<?php echo $field->databaseField?>"><?php echo $field->name?><?php echo $field->required ? '&nbsp;*': '' ?></label></th>
+					<th><label for="_<?php echo $field->databaseField?>"><?php _e( $field->name, 'wpam' ) ?><?php echo $field->required ? '&nbsp;*': '' ?></label></th>
 					<td>
 						<?php switch ($field->fieldType) {
                                                         case 'email':
@@ -67,7 +67,7 @@ $request = @$this->viewData['request'];
 
 			<tr>
 				<td colspan="2">
-					<input type="checkbox" id="chkAgreeTerms" name="chkAgreeTerms" <?php echo (isset($request['chkAgreeTerms']) ? 'checked="checked"':'')?> />&nbsp;<label for="chkAgreeTerms" id="agreeTermsLabel">I have read and agree to the <a href="#" id="tncLink">Terms and Conditions</a></label>
+					<input type="checkbox" id="chkAgreeTerms" name="chkAgreeTerms" <?php echo (isset($request['chkAgreeTerms']) ? 'checked="checked"':'')?> />&nbsp;<label for="chkAgreeTerms" id="agreeTermsLabel"><?php _e('I have read and agree to the', 'wpam' ) ?> <a href="#" id="tncLink"><?php _e('Terms and Conditions', 'wpam' ) ?></a></label>
 					<span id="termsAgreeWarning" style="color: red; display: none"><br><?php _e( 'You must agree to the terms.', 'wpam' ) ?></span>
 				</td>
 			</tr>

@@ -1,10 +1,10 @@
 === Affiliates Manager ===
 Contributors: wp.insider, affmngr, ElementGreen
 Donate link: https://wpaffiliatemanager.com/
-Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal
+Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal 
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 1.9.0
+Stable tag: 1.9.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +131,9 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 1.9.2 =
+- Fixed the registration form translation issue.
 
 = 1.9.1 =
 - Added some debug messages for Easy Digital Downloads plugin integration
