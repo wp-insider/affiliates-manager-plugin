@@ -138,7 +138,8 @@ class WPAM_Plugin
                 add_action('wpspc_paypal_ipn_processed', array($this, 'wpspcProcessTransaction'));
 
                 //EDD integration
-		add_action('edd_update_payment_status', array( $this, 'onEDDCheckout' ), 10, 3 );
+                add_filter('edd_payment_meta', array($this, 'edd_store_custom_fields'));
+                add_action('edd_complete_purchase', array($this, 'edd_on_complete_purchase'));
                 
                 //Jigoshop integration
                 add_action('jigoshop_new_order', array($this, 'jigoshopNewOrder'));
@@ -456,17 +457,33 @@ class WPAM_Plugin
             
         }
         
-	public function onEDDCheckout( $payment_id, $new_status, $old_status ) {
-            WPAM_Logger::log_debug('Easy Digital Downlaods Integration - order status updated. Old status: '.$old_status.', New Status: '.$new_status.'. Checking if affiliate commission needs to be awarded.');
-            if ( $old_status == 'publish' || $old_status == 'complete' ){
-                WPAM_Logger::log_debug('Easy Digital Downlaods Integration - This payment was processed once, no need to award commission.');
-                return; // Make sure that payments are only completed once
+        public function edd_store_custom_fields($payment_meta) {
+            WPAM_Logger::log_debug('Easy Digital Downlaods Integration - payment_meta filter triggered');
+            if(isset($_COOKIE[WPAM_PluginConfig::$RefKey])){
+                $strRefKey = $_COOKIE[WPAM_PluginConfig::$RefKey];
+                $payment_meta['wpam_refkey']   = $strRefKey;
+                WPAM_Logger::log_debug('Easy Digital Downlaods Integration - refkey: '.$strRefKey);
+            }
+            return $payment_meta;
+        }
+        
+        public function edd_on_complete_purchase($payment_id){
+            WPAM_Logger::log_debug('Easy Digital Downlaods Integration - complete purchase hook triggered for Order ID: '.$payment_id.'. Checking if affiliate commission needs to be awarded.');
+            $payment_meta = edd_get_payment_meta($payment_id);
+            $strRefKey = "";
+            if(isset($payment_meta['wpam_refkey']) && !empty($payment_meta['wpam_refkey'])){
+                $strRefKey = $payment_meta['wpam_refkey'];  
+                WPAM_Logger::log_debug('Easy Digital Downlaods Integration - This purchase was referred by an affiliate, refkey: '.$strRefKey);
+            }
+            else{
+                WPAM_Logger::log_debug('Easy Digital Downlaods Integration - refkey not found in the payment_meta. This purchase was not referred by an affiliate');
+                return;
             }
             $purchaseAmount = edd_get_payment_amount( $payment_id );
-            WPAM_Logger::log_debug('Easy Digital Downlaods Integration - awarding commission for Order ID: '.$payment_id.'. Purchase amt: '.$purchaseAmount);
+            WPAM_Logger::log_debug('Easy Digital Downlaods Integration - Awarding commission for Order ID: '.$payment_id.'. Purchase amt: '.$purchaseAmount);
             $requestTracker = new WPAM_Tracking_RequestTracker();
-            $requestTracker->handleCheckout( $payment_id, $purchaseAmount );
-	}
+            $requestTracker->handleCheckoutWithRefKey($payment_id, $purchaseAmount, $strRefKey);
+        }
 
 	public function onExchangeCheckout( $transaction_id, $method, $method_id, $status, $customer_id, $cart_object, $args ) {
 		$purchaseAmount = it_exchange_get_transaction_subtotal( $transaction_id, false );
