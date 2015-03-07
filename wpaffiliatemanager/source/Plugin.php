@@ -629,18 +629,23 @@ class WPAM_Plugin
 	}
 
 	public function showAdminMessages() {
-		if ( empty( $this->setloc ) ):
+                /* hide this error since the currency code and symbol comes from the general settings
+		if ( empty( $this->setloc ) ){
 			//don't bother showing this warning if they were trying to use 'en_US'
-			if ( $this->locale == 'en_US' ) return;
+			if ( $this->locale == 'en_US' ) {
+                            return;
+                        }
 			$code = WPAM_MoneyHelper::getCurrencyCode();
 			$currency = WPAM_MoneyHelper::getDollarSign();
 
 			echo '<div id="message" class="error">
 			<p><strong>' . sprintf( __( 'WP Affiliate Manager was unable to load your currency from your WPLANG setting: %s', 'wpam' ), $this->locale ) . '<br/>' .
 				sprintf( __( 'Your currency will be displayed as %s and PayPal payments will be paid in %s', 'wpam' ), $currency, $code ) . '</strong></p></div>';
-			if ( WPAM_DEBUG )
+			if ( WPAM_DEBUG ){
 				echo "<!-- LC_MONETARY {$this->locale}, isset: ", var_export($this->setloc, true), PHP_EOL, var_export( localeconv(), true ), ' -->';
-		endif;
+                        }
+                }
+                */
 	}
 
 	public function onAjaxRequest()
