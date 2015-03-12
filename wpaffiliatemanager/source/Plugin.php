@@ -415,16 +415,6 @@ class WPAM_Plugin
                 WPAM_Logger::log_debug("The commission will be calculated via the recurring payemnt api call.");
                 return;
             }
-            $total = $order->order_total;
-            $shipping = $order->get_total_shipping();
-            $tax = $order->get_total_tax();
-            WPAM_Logger::log_debug('WooCommerce Integration - Total amount: ' . $total . ', Total shipping: ' . $shipping . ', Total tax: ' . $tax);
-            $purchaseAmount = $total - $shipping - $tax;
-            $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
-            if(empty($wpam_refkey)){
-                WPAM_Logger::log_debug("WooCommerce Integration - could not get wpam_refkey from cookie. This is not an affiliate sale");
-                return;
-            }
 
             $order_status = $order->status;
             WPAM_Logger::log_debug("WooCommerce Integration - Order status: " . $order_status);
@@ -433,6 +423,19 @@ class WPAM_Plugin
                 WPAM_Logger::log_debug("WooCommerce Integration - Commission for this transaciton will be awarded when you set the order status to completed or processing.");
                 return;
             }
+            
+            $total = $order->order_total;
+            $shipping = $order->get_total_shipping();
+            $tax = $order->get_total_tax();
+            WPAM_Logger::log_debug('WooCommerce Integration - Total amount: ' . $total . ', Total shipping: ' . $shipping . ', Total tax: ' . $tax);
+            $purchaseAmount = $total - $shipping - $tax;
+            $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
+            $wpam_refkey = apply_filters( 'wpam_woo_override_refkey', $wpam_refkey, $order);
+            if(empty($wpam_refkey)){
+                WPAM_Logger::log_debug("WooCommerce Integration - could not get wpam_refkey from cookie. This is not an affiliate sale");
+                return;
+            }
+            
             $requestTracker = new WPAM_Tracking_RequestTracker();
             WPAM_Logger::log_debug('WooCommerce Integration - awarding commission for order ID: '.$order_id.'. Purchase amount: '.$purchaseAmount);
             $requestTracker->handleCheckoutWithRefKey( $order_id, $purchaseAmount, $wpam_refkey);
