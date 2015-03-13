@@ -133,7 +133,8 @@ https://wpaffiliatemanager.com/screen-shots/
 == Changelog ==
 
 = 1.9.5 =
-- Added a new filter to award commission via WooCommerce Coupon.
+- Added a new filter and addon to award commission via WooCommerce Coupon.
+  https://wpaffiliatemanager.com/tracking-affiliate-commission-using-woocommerce-coupons-or-discount-codes/
 
 = 1.9.4 =
 - An admin notice has been hidden since affiliates manager no longer loads currency from WPLANG settings.

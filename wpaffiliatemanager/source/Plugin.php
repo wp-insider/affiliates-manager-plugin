@@ -41,6 +41,7 @@ require_once WPAM_BASE_DIRECTORY . "/source/PayPal/Service.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Util/JsonHandler.php";
 require_once WPAM_BASE_DIRECTORY . "/source/display_functions.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Util/DebugLogger.php";
+require_once WPAM_BASE_DIRECTORY . "/utility-functions.php";
 
 
 class WPAM_Plugin
@@ -407,7 +408,12 @@ class WPAM_Plugin
         public function WooCommerceProcessTransaction($order_id)
         {          
             //affiliates manager code
-            WPAM_Logger::log_debug('WooCommerce Integration - Order processed. Checking if affiliate commission needs to be awarded.');
+            WPAM_Logger::log_debug('WooCommerce Integration - Order processed. Order ID: '.$order_id);
+            if(wpam_has_purchase_record($order_id)){
+                WPAM_Logger::log_debug('WooCommerce Integration - Affiliate commission for this transaction was awarded once. No need to process anything.');
+                return;
+            }
+            WPAM_Logger::log_debug('WooCommerce Integration - Checking if affiliate commission needs to be awarded.');
             $order = new WC_Order( $order_id );
             $recurring_payment_method = get_post_meta($order_id, '_recurring_payment_method', true);
             if (!empty($recurring_payment_method)) {
