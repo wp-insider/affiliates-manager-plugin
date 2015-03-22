@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Affiliate Manager\n"
 "POT-Creation-Date: 2013-06-25 22:50-0600\n"
-"PO-Revision-Date: 2015-03-19 13:31+0100\n"
+"PO-Revision-Date: 2015-03-19 15:11+0100\n"
 "Last-Translator: Justin Foell <justin@9seeds.com>\n"
 "Language-Team: 9seeds <justin@9seeds.com>\n"
 "Language: pl_PL\n"
@@ -55,11 +55,11 @@ msgstr "Podgląd"
 
 #: html/affiliate_creative_detail.php:52 html/admin/creatives_detail.php:194
 msgid "Creative:"
-msgstr "Kreacja:"
+msgstr "Link:"
 
 #: html/affiliate_creative_detail.php:56
 msgid "Your Affiliate-Specific HTML snippet"
-msgstr "Twój własny kod HTML"
+msgstr "Twój unikalny kod HTML"
 
 #: html/affiliate_creative_detail.php:65 html/admin/creatives_detail.php:263
 msgid "Text Link Properties"
@@ -140,7 +140,7 @@ msgstr ""
 #: html/affiliate_cp_payment_details_confirmed.php:2
 #: source/display_functions.php:164
 msgid "Confirmed"
-msgstr "Potwierdzone"
+msgstr "Potwierdzeni"
 
 #: html/affiliate_cp_payment_details_confirmed.php:3
 msgid "Your payment details have been submitted"
@@ -151,7 +151,7 @@ msgstr "Twoje dane płatności zostały potwierdzone"
 msgid ""
 "Now would be a great time to go pick <a href=\"%s\">some creative</a> and "
 "get started."
-msgstr "Teraz wybierz <a href=\"%s\">wzór kreacji</a> i rozpocznij."
+msgstr "Teraz wybierz <a href=\"%s\">wzór linka</a> i rozpocznij."
 
 #: html/affiliate_not_logged_in.php:1
 #, php-format
@@ -257,7 +257,7 @@ msgstr "Potwierdź dane płatności"
 
 #: html/affiliate_creative_list.php:8
 msgid "The following creatives are available for publication."
-msgstr "Poniższe kreacje są dostępne do wykorzystania."
+msgstr "Poniższe linki są dostępne do wykorzystania."
 
 #: html/affiliate_creative_list.php:13 html/transaction_table.php:41
 #: html/admin/creative_update_form.php:150 html/admin/manage_creatives.php:167
@@ -469,7 +469,7 @@ msgstr "Nowy"
 #: html/admin/creative_update_success.php:4
 #: html/admin/affiliate_detail.php:605
 msgid "Creative"
-msgstr "Kreacja"
+msgstr "Linki"
 
 #: html/admin/creative_update_form.php:126 html/admin/affiliate_detail.php:527
 #: html/admin/creatives_detail.php:227
@@ -502,7 +502,7 @@ msgstr "Właściwości linka tekstowego"
 
 #: html/admin/creative_update_form.php:256
 msgid "Save Creative"
-msgstr "Zapisz kreację"
+msgstr "Zapisz link"
 
 #: html/admin/affiliate_management_home.php:2
 msgid "Affiliate Management Control Panel"
@@ -526,7 +526,7 @@ msgstr ""
 
 #: html/admin/creative_update_success.php:9
 msgid "Creative updated."
-msgstr "Kreacja zaktualizowana."
+msgstr "Linki zaktualizowane."
 
 #: html/admin/creative_update_success.php:11
 msgid "New creative created.  This creative is not yet active."
@@ -534,7 +534,7 @@ msgstr "Nowa kreacja stworzona. Nie jest jednak jeszcze aktywna."
 
 #: html/admin/creative_update_success.php:16
 msgid "Return to Creatives"
-msgstr "Powróć do kreacji"
+msgstr "Powróć do linków"
 
 #: html/admin/manage_creatives.php:64
 msgid "Yes, delete this creative"
@@ -565,7 +565,7 @@ msgstr "Ta kreacja zostanie usunięta. Jesteś pewien?"
 
 #: html/admin/manage_creatives.php:126 source/Plugin.php:86
 msgid "My Creatives"
-msgstr "Moje kreacje"
+msgstr "Moje linki"
 
 #: html/admin/manage_creatives.php:132 html/admin/affiliates_list.php:25
 msgid "Filter"
@@ -1236,11 +1236,11 @@ msgstr "Zarządzanie partnerami"
 #: source/Plugin.php:68 source/Plugin.php:73 source/Plugin.php:293
 #: source/Plugin.php:307
 msgid "Affiliates"
-msgstr "Partnerzy"
+msgstr "Program Partnerski"
 
 #: source/Plugin.php:85 source/Pages/AffiliatesHome.php:35
 msgid "Creatives"
-msgstr "Kreacje"
+msgstr "Linki"
 
 #: source/Plugin.php:97 source/Plugin.php:98
 msgid "Settings"
@@ -1642,11 +1642,11 @@ msgstr "Dodaj Partnera"
 
 #: source/Pages/Admin/MyAffiliatesPage.php:127
 msgid "All Active"
-msgstr "Wszystkie aktywne"
+msgstr "Wszyscy aktywni"
 
 #: source/Pages/Admin/MyAffiliatesPage.php:128
 msgid "All (Including Closed)"
-msgstr "Wszystkie (włączając w to zakończone)"
+msgstr "Wszyscy (wliczając w to nieaktywnych)"
 
 #: source/Pages/Admin/MyAffiliatesPage.php:130
 msgid "Status: Active"
