@@ -563,9 +563,14 @@ class WPAM_Plugin
 
 		}
                 
-                //add submenu page
+                //Add submenu pages
+                include_once(WPAM_BASE_DIRECTORY . "/source/Admin-menu/wpam-clicks-menu.php");                
                 add_submenu_page($menu_parent_slug, __("Affiliates Manager Click Tracking", 'wpam'), __("Click Tracking", 'wpam'), WPAM_PluginConfig::$AdminCap, 'wpam-clicktracking', 'wpam_display_clicks_menu');
-                //
+                
+                include_once(WPAM_BASE_DIRECTORY . "/source/Admin-menu/wpam-addons-menu.php"); 
+                add_submenu_page($menu_parent_slug, __("Affiliates Manager Add-ons", 'wpam'), __("Add-ons", 'wpam'), WPAM_PluginConfig::$AdminCap, 'wpam-addons', 'wpam_display_addons_menu');
+                
+                //Hook for addons to create their menu
                 do_action('wpam_after_main_admin_menu', $menu_parent_slug);
                 
 	}
