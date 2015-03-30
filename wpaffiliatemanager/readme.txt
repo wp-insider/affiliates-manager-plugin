@@ -135,6 +135,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = 1.9.6 =
 - Added Polish language translation to the plugin. The translation file was submitted by Krzysztof Gorecki.
+- Added an addons menu to list all the extenstions and addons of this plugin.
 
 = 1.9.5 =
 - Added a new filter and addon to award commission via WooCommerce Coupon.

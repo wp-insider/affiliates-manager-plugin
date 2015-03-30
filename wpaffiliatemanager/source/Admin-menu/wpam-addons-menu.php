@@ -25,12 +25,69 @@ function wpam_display_addons_menu()
     array_push($addons_data, $addon_2);
 
     $addon_3 = array(
-        'name' => 'Google reCAPTCHA',
-        'thumbnail' => WPAM_URL . '/images/addons/google-recaptcha.png',
-        'description' => 'Allows you to add Google recaptcha to your affiliate signup page. Helps prevent spam signup.',
-        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-google-recaptcha-integration/',
+        'name' => 'Mailpoet Newsletter',
+        'thumbnail' => WPAM_URL . '/images/addons/mailpoet-integration.jpg',
+        'description' => 'You can automatically sign up your affiliates to a specific MailPoet newsletter list.',
+        'page_url' => 'https://wpaffiliatemanager.com/sign-affiliates-to-mailpoet-list/',
     );
     array_push($addons_data, $addon_3);
+
+    $addon_4 = array(
+        'name' => 'Infusionsoft Integration',
+        'thumbnail' => WPAM_URL . '/images/addons/infusionsoft-integration.png',
+        'description' => 'Automatically signup your affiliates to a specific tag in Your Infusionsoft account.',
+        'page_url' => 'https://wpaffiliatemanager.com/infusionsoft-affiliates-manager-plugin-integration/',
+    );
+    array_push($addons_data, $addon_4);
+
+    $addon_5 = array(
+        'name' => 'PMPRO Integration',
+        'thumbnail' => WPAM_URL . '/images/addons/pmpro-integration.png',
+        'description' => 'Integrates with paid membership pro plugin so you can reward affiliates for sending members.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-paid-memberships-pro-integration/',
+    );
+    array_push($addons_data, $addon_5);
+    
+    $addon_6 = array(
+        'name' => 'Sell Digital Downloads',
+        'thumbnail' => WPAM_URL . '/images/addons/sdd-plugin-integraton.png',
+        'description' => 'Integrates with sell digital downloads plugin so you can reward affiliates for sending customers.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-sell-digital-downloads-integration/',
+    );
+    array_push($addons_data, $addon_6);
+    
+    $addon_7 = array(
+        'name' => 'S2member Integration',
+        'thumbnail' => WPAM_URL . '/images/addons/s2member-integration.png',
+        'description' => 'Integrates with s2member plugin so you can reward affiliates for sending members.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-s2member-integration/',
+    );
+    array_push($addons_data, $addon_7);
+    
+    $addon_8 = array(
+        'name' => 'WooCommerce Affiliates',
+        'thumbnail' => WPAM_URL . '/images/addons/woo-affiliates.png',
+        'description' => 'Automatically create affiliate accounts for your WooCommerce customers.',
+        'page_url' => 'https://wpaffiliatemanager.com/automatically-create-affiliate-account-woocommerce-customers/',
+    );
+    array_push($addons_data, $addon_8);
+    
+    $addon_9 = array(
+        'name' => 'Woo Subscription',
+        'thumbnail' => WPAM_URL . '/images/addons/woo-subscriptions.png',
+        'description' => 'Integrate with the subscription addon so you can award affiliate commissions for recurring payments.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-woocommerce-subscription-integration/',
+    );
+    array_push($addons_data, $addon_9);
+    
+    $addon_10 = array(
+        'name' => 'WooCommerce Coupons',
+        'thumbnail' => WPAM_URL . '/images/addons/woo-coupons.png',
+        'description' => 'Track affiliate commission via coupons/discount codes configured in your WooCommerce plugin',
+        'page_url' => 'https://wpaffiliatemanager.com/tracking-affiliate-commission-using-woocommerce-coupons-or-discount-codes/',
+    );
+    array_push($addons_data, $addon_10);
+    
     
     //Display the list
     foreach ($addons_data as $addon) {
