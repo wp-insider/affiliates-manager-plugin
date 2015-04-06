@@ -105,15 +105,6 @@ frequency of creative views), which in turn may slow down page loads where a cre
 		</td>
 	</tr>
 	<tr>
-		<th width="200">
-			<label for="txtTnC">Terms and Conditions</label>
-			<img id="tncInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
-		</th>
-		<td>
-			<textarea id="txtTnC" name="txtTnc" cols="60" rows="20"><?php echo $this->viewData['request']['txtTnc']?></textarea>
-		</td>
-	</tr>
-	<tr>
     	<th width="200">
             <label for="txtCookieExpire">Cookie Duration (days)</label>
 			<img id="cookieInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />

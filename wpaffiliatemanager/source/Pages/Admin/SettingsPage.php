@@ -57,7 +57,6 @@ class WPAM_Pages_Admin_SettingsPage extends WPAM_Pages_Admin_AdminPage
                         if(isset($request['AffGeneralSettings']))  //General settings options submitted
                         {
                             update_option(WPAM_PluginConfig::$MinPayoutAmountOption, $request['txtMinimumPayout']);
-                            update_option(WPAM_PluginConfig::$TNCOptionOption, $request['txtTnc']);
                             update_option(WPAM_PluginConfig::$CookieExpireOption, $request['txtCookieExpire']);
                             update_option(WPAM_PluginConfig::$EmailNameOption, $request['txtEmailName']);
                             update_option(WPAM_PluginConfig::$EmailAddressOption, $request['txtEmailAddress']);
@@ -170,6 +169,8 @@ class WPAM_Pages_Admin_SettingsPage extends WPAM_Pages_Admin_AdminPage
                                             $affiliateFieldRepository->update($field);
                                     }
                             }
+                            update_option(WPAM_PluginConfig::$TNCOptionOption, $request['txtTnc']);
+                            update_option(WPAM_PluginConfig::$AffHomeMsg, $request['affhomemsg']);
                         }
                         
                         if(isset($request['AffPagesSettings']))    //Affiliate pages/forms options submitted
@@ -197,6 +198,7 @@ class WPAM_Pages_Admin_SettingsPage extends WPAM_Pages_Admin_AdminPage
 		if ($request !== NULL)
 		{
 			$response->viewData['request']['txtTnc'] = $request['txtTnc'];
+                        $response->viewData['request']['affhomemsg'] = $request['affhomemsg'];
 			$response->viewData['request']['txtMinimumPayout'] = $request['txtMinimumPayout'];
 			$response->viewData['request']['txtCookieExpire'] = $request['txtCookieExpire'];
 			$response->viewData['request']['txtEmailName'] = $request['txtEmailName'];
@@ -220,6 +222,7 @@ class WPAM_Pages_Admin_SettingsPage extends WPAM_Pages_Admin_AdminPage
 		else
 		{
 			$response->viewData['request']['txtTnc'] = get_option(WPAM_PluginConfig::$TNCOptionOption);
+                        $response->viewData['request']['affhomemsg'] = get_option(WPAM_PluginConfig::$AffHomeMsg);
 			$response->viewData['request']['txtMinimumPayout'] = get_option(WPAM_PluginConfig::$MinPayoutAmountOption);
 			$response->viewData['request']['txtCookieExpire'] = get_option(WPAM_PluginConfig::$CookieExpireOption);
 			$response->viewData['request']['txtEmailName'] = get_option(WPAM_PluginConfig::$EmailNameOption);

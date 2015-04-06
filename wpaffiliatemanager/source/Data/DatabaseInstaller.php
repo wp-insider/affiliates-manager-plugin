@@ -357,6 +357,16 @@ class WPAM_Data_DatabaseInstaller {
         }
         update_option(WPAM_PluginConfig::$AffLoginPageURL, $login_page); //Save the URL of the login page
         //Add code for any new page needed for this plugin.
+        
+        // save default messages for the pages
+        $login_url = get_option(WPAM_PluginConfig::$AffLoginPageURL);
+        $register_page_id = get_option(WPAM_PluginConfig::$RegPageId);
+        $register_page_url = get_permalink($register_page_id);
+        $affhomemsg = 'This is the affiliates section of this store. If you are an existing affiliate, please <a href="'.$login_url.'">log in</a> to access your control panel.';
+        $affhomemsg .= '<br />';
+        $affhomemsg .= '<br />';
+        $affhomemsg .= 'If you are not an affiliate, but wish to become one, you will need to apply. To apply, you must be a registered user on this blog. If you have an existing account on this blog, please <a href="'.$login_url.'">log in</a>. If not, please <a href="'.$register_page_url.'">register</a>.';
+        add_option( WPAM_PluginConfig::$AffHomeMsg, $affhomemsg );
     }
 
     public function performUpgrade() {

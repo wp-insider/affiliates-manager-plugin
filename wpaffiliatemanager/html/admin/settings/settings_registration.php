@@ -447,5 +447,22 @@ jQuery(function($) {
 			</table>
 		</td>
 	</tr>
+        <tr>
+		<th width="200">
+			<label for="txtTnC">Terms and Conditions</label>
+			<img id="tncInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
+		</th>
+		<td>
+			<textarea id="txtTnC" name="txtTnc" cols="60" rows="20"><?php echo $this->viewData['request']['txtTnc']?></textarea>
+		</td>
+	</tr>
+        <tr>
+		<th width="200">
+			<label for="affhomemsg">Affiliates Homepage Message</label>
+		</th>
+		<td>
+			<textarea id="affhomemsg" name="affhomemsg" cols="60" rows="20"><?php echo $this->viewData['request']['affhomemsg']?></textarea>
+		</td>
+	</tr>
 </table>
 
