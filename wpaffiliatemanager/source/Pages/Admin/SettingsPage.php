@@ -33,8 +33,11 @@ class WPAM_Pages_Admin_SettingsPage extends WPAM_Pages_Admin_AdminPage
                 if(isset($request['AffGeneralSettings']))
                 {
                     $validator->addValidator('txtMinimumPayout', new WPAM_Validation_MoneyValidator());
-                    $validator->addValidator('txtTnc', new WPAM_Validation_StringValidator(1));
                     $validator->addValidator('txtCookieExpire',new WPAM_Validation_NumberValidator());
+                }
+                if(isset($request['AffRegSettings']))
+                {
+                    $validator->addValidator('txtTnc', new WPAM_Validation_StringValidator(1));
                 }
 		//#61 allow these to be unset/null
 		if ( ! empty( $request['txtEmailName'] ) )
@@ -197,8 +200,8 @@ class WPAM_Pages_Admin_SettingsPage extends WPAM_Pages_Admin_AdminPage
 		
 		if ($request !== NULL)
 		{
-			$response->viewData['request']['txtTnc'] = $request['txtTnc'];
-                        $response->viewData['request']['affhomemsg'] = $request['affhomemsg'];
+			$response->viewData['request']['txtTnc'] = isset($request['txtTnc']) ? $request['txtTnc'] : '';
+                        $response->viewData['request']['affhomemsg'] = isset($request['affhomemsg']) ? $request['affhomemsg'] : '';
 			$response->viewData['request']['txtMinimumPayout'] = $request['txtMinimumPayout'];
 			$response->viewData['request']['txtCookieExpire'] = $request['txtCookieExpire'];
 			$response->viewData['request']['txtEmailName'] = $request['txtEmailName'];
@@ -209,14 +212,15 @@ class WPAM_Pages_Admin_SettingsPage extends WPAM_Pages_Admin_AdminPage
                         $response->viewData['request']['affCurrencySymbol'] = $request['affCurrencySymbol'];
                         $response->viewData['request']['affCurrencyCode'] = $request['affCurrencyCode'];
 			$response->viewData['request']['chkImpressions'] = isset($request['chkImpressions']) ? 1 : 0;
+                        $response->viewData['request']['enable_debug'] = isset($request['enable_debug']) ? 1 : 0;
 			$response->viewData['request']['chkPayoutMethodCheck'] = isset($request['chkPayoutMethodCheck']) ? 1 : 0;
 			$response->viewData['request']['chkPayoutMethodPaypal'] = isset($request['chkPayoutMethodPaypal']) ? 1 : 0;
 			$response->viewData['request']['chkEnablePaypalMassPay'] = isset($request['chkEnablePaypalMassPay']) ? 1 : 0;
-			$response->viewData['request']['txtPaypalAPIUser'] = $request['txtPaypalAPIUser'];
-			$response->viewData['request']['txtPaypalAPIPassword'] = $request['txtPaypalAPIPassword'];
-			$response->viewData['request']['txtPaypalAPISignature'] = $request['txtPaypalAPISignature'];
-			$response->viewData['request']['ddPaypalAPIEndPoint'] = $request['ddPaypalAPIEndPoint'];
-                        $response->viewData['request']['affLoginPage'] = $request['affLoginPage'];
+			$response->viewData['request']['txtPaypalAPIUser'] = isset($request['txtPaypalAPIUser']) ? $request['txtPaypalAPIUser'] : '';
+			$response->viewData['request']['txtPaypalAPIPassword'] = isset($request['txtPaypalAPIPassword']) ? $request['txtPaypalAPIPassword'] : '';
+			$response->viewData['request']['txtPaypalAPISignature'] = isset($request['txtPaypalAPISignature']) ? $request['txtPaypalAPISignature'] : '';
+			$response->viewData['request']['ddPaypalAPIEndPoint'] = isset($request['ddPaypalAPIEndPoint']) ? $request['ddPaypalAPIEndPoint'] : '';
+                        $response->viewData['request']['affLoginPage'] = isset($request['affLoginPage']) ? $request['affLoginPage'] : '';
 			$response->viewData['validationResult'] = $vr;
 		}
 		else
