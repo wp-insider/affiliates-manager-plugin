@@ -135,6 +135,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = TODO 2.0.1 =
 - Updated German language translation in the plugin. The translation file was submitted by Anne Ebert.
+- Updated Hebrew language translation in the plugin. The translation file was submitted by Ido Yitzhaki.
 
 = 1.9.9 =
 - Fixed the "undefined required" error in the general settings.
