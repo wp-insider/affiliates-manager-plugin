@@ -95,6 +95,14 @@ function wpam_display_addons_menu()
         'page_url' => 'https://wpaffiliatemanager.com/signup-affiliates-getresponse-list/',
     );
     array_push($addons_data, $addon_11);
+
+    $addon_12 = array(
+        'name' => 'WP eStore Integration',
+        'thumbnail' => WPAM_URL . '/images/addons/wp-estore-plugin.png',
+        'description' => 'Integrates with WP eStore plugin so you can reward affiliates for sending customer.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-wp-estore-integration/',
+    );
+    array_push($addons_data, $addon_12);
     
     //Display the list
     foreach ($addons_data as $addon) {
