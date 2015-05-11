@@ -1,10 +1,11 @@
 <?php
-class WPAM_Commission {
+class WPAM_Commission_Tracking {
     
     public static function award_commission($args){
         global $wpdb;
         $txn_id = $args['txn_id'];
         $amount = $args['amount'];
+        //TODO start - We only need this code for now to get the affiliate ID for a purchase. Later with the new tracking system it can be deleted
         $query = "
         SELECT a.*
         FROM ".WPAM_TRACKING_TOKENS_PURCHASE_LOGS_TBL." pl
@@ -12,8 +13,9 @@ class WPAM_Commission {
         INNER JOIN ".WPAM_AFFILIATES_TBL." a ON (a.affiliateId = tt.sourceAffiliateId)
         WHERE
         pl.purchaseLogId = %s
-        ";
+        ";        
         $affiliate = $wpdb->get_row($wpdb->prepare($query, $txn_id));  
+        //TODO end - later affiliate ID can be tracked directly from the cookie instead of ref_key
         if($affiliate != null && $affiliate->status == "active") {
             $creditAmount = '';
             if ($affiliate->bountyType == 'percent')

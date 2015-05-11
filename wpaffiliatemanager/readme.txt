@@ -133,7 +133,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.0.2 =
+= 2.0.2 =
 - Made some improvements to the commission awarding function
 
 = 2.0.1 =

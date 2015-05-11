@@ -13,7 +13,7 @@ require_once WPAM_BASE_DIRECTORY . "/source/Data/Models/ImpressionModel.php";
 class WPAM_Tracking_RequestTracker {
 
 	public function handleCheckout( $purchaseLogId, $purchaseAmount ) {
-		
+		//TODO start - we only need this to block of code to keep backwards compatibility. later when we will directly get affiliate ID from cookie it can be deleted
 		$db = new WPAM_Data_DataAccess();
 		$binConverter = new WPAM_Util_BinConverter();
 		$affiliate = NULL;
@@ -51,14 +51,15 @@ class WPAM_Tracking_RequestTracker {
 				}
 			}
 		}
+                //TODO end
                 $args = array();
                 $args['txn_id'] = $purchaseLogId;
                 $args['amount'] = $purchaseAmount;
-                WPAM_Commission::award_commission($args);		
+                WPAM_Commission_Tracking::award_commission($args);		
 	}
 	
 	public function handleCheckoutWithRefKey( $purchaseLogId, $purchaseAmount, $strRefKey) {
-		
+		//TODO start - we only need this to block of code to keep backwards compatibility. later when we will directly get affiliate ID from cookie it can be deleted
 		$db = new WPAM_Data_DataAccess();
 		$binConverter = new WPAM_Util_BinConverter();
 		$affiliate = NULL;
@@ -90,10 +91,11 @@ class WPAM_Tracking_RequestTracker {
 				}
 			}
 		}
+                //TODO end
                 $args = array();
                 $args['txn_id'] = $purchaseLogId;
                 $args['amount'] = $purchaseAmount;
-                WPAM_Commission::award_commission($args);
+                WPAM_Commission_Tracking::award_commission($args);
 	}
         
 	protected function calculateCreditAmount(WPAM_Data_Models_AffiliateModel $affiliate, $amount)
