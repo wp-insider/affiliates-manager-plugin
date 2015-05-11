@@ -42,6 +42,7 @@ require_once WPAM_BASE_DIRECTORY . "/source/Util/JsonHandler.php";
 require_once WPAM_BASE_DIRECTORY . "/source/display_functions.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Util/DebugLogger.php";
 require_once WPAM_BASE_DIRECTORY . "/utility-functions.php";
+require_once WPAM_BASE_DIRECTORY . "/classes/aff_commission.php";
 
 
 class WPAM_Plugin
