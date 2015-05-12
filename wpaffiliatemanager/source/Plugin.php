@@ -43,6 +43,7 @@ require_once WPAM_BASE_DIRECTORY . "/source/display_functions.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Util/DebugLogger.php";
 require_once WPAM_BASE_DIRECTORY . "/utility-functions.php";
 require_once WPAM_BASE_DIRECTORY . "/classes/aff_commission_tracking.php";
+require_once WPAM_BASE_DIRECTORY . "/classes/aff_click_tracking.php";
 
 
 class WPAM_Plugin
@@ -253,6 +254,8 @@ class WPAM_Plugin
 		} catch (Exception $e) {
 			wp_die("WPAM FAILED: " . $e->getMessage());			
 		}
+                //new affiliate tracking code
+                WPAM_Click_Tracking::record_click();
 	}
         
         public function load_shortcode_specific_scripts(){
