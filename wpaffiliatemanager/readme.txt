@@ -133,8 +133,10 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.0.3 =
+= 2.0.3 =
 - Made some improvements to the click tracking function
+- Added "Remember Me" checkbox to the affiliate login form
+- Added "Lost Password" link to the login page
 
 = 2.0.2 =
 - Made some improvements to the commission awarding function
