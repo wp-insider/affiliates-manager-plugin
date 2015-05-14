@@ -143,7 +143,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 					<label for="txtSlug"><?php _e( 'Landing Page', 'wpam' ) ?></label>
 				</td>
 				<td id="landing-page-slug">
-					<?php echo site_url( '/' ) ?><input type="text" id="txtSlug" name="txtSlug" size="30" value="<?php echo isset($this->viewData['request']['txtSlug']) ? $this->viewData['request']['txtSlug'] : ''; ?>" />
+					<?php echo home_url( '/' ) ?><input type="text" id="txtSlug" name="txtSlug" size="30" value="<?php echo isset($this->viewData['request']['txtSlug']) ? $this->viewData['request']['txtSlug'] : ''; ?>" />
 				</td>
 			</tr>			
 			<tr>

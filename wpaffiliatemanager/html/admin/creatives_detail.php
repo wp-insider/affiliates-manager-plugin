@@ -249,7 +249,7 @@ function formatType($type)
 			</tr>
 			<tr>
 				<td><?php _e( 'Landing Page', 'wpam' ) ?></td>
-				<td><?php echo site_url( $model->slug ) ?></td>
+				<td><?php echo home_url( $model->slug ) ?></td>
 			</tr>
 
 		</tbody>
