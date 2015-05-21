@@ -404,13 +404,24 @@ class WPAM_Plugin
         public function WooCheckoutUpdateOrderMeta($order_id, $posted)
         {
             $wpam_refkey = "";
-            if(isset($_COOKIE[WPAM_PluginConfig::$RefKey])){
+            if(isset($_COOKIE['wpam_id'])){
+                $wpam_refkey = $_COOKIE['wpam_id'];
+            }
+            else if(isset($_COOKIE[WPAM_PluginConfig::$RefKey])){   //remove this block when we don't expect wpam_refkey cookie anymore
                 $wpam_refkey = $_COOKIE[WPAM_PluginConfig::$RefKey];
             }
+            
             if(!empty($wpam_refkey)){//Save the wpam_refkey in the order meta
-                update_post_meta( $order_id, '_wpam_refkey', $wpam_refkey);
-                $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
-                WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_refkey (".$wpam_refkey.") with order. Order ID: ".$order_id);
+                if(is_numeric($wpam_refkey)) {  //wpam_id cookie is found and contains affiliate ID.
+                    update_post_meta( $order_id, '_wpam_id', $wpam_refkey);
+                    $wpam_refkey = get_post_meta($order_id, '_wpam_id', true);
+                    WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_id (".$wpam_refkey.") with order. Order ID: ".$order_id);
+                }
+                else{ //remove this block when we don't expect wpam_refkey cookie anymore 
+                    update_post_meta( $order_id, '_wpam_refkey', $wpam_refkey);
+                    $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
+                    WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_refkey (".$wpam_refkey.") with order. Order ID: ".$order_id);
+                }
             }
         }
         
@@ -444,10 +455,15 @@ class WPAM_Plugin
             $tax = $order->get_total_tax();
             WPAM_Logger::log_debug('WooCommerce Integration - Total amount: ' . $total . ', Total shipping: ' . $shipping . ', Total tax: ' . $tax);
             $purchaseAmount = $total - $shipping - $tax;
+            
             $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
+            $wpam_id = get_post_meta($order_id, '_wpam_id', true);
+            if(!empty($wpam_id)){
+                $wpam_refkey = $wpam_id;
+            }
             $wpam_refkey = apply_filters( 'wpam_woo_override_refkey', $wpam_refkey, $order);
             if(empty($wpam_refkey)){
-                WPAM_Logger::log_debug("WooCommerce Integration - could not get wpam_refkey from cookie. This is not an affiliate sale");
+                WPAM_Logger::log_debug("WooCommerce Integration - could not get wpam_id/wpam_refkey from cookie. This is not an affiliate sale");
                 return;
             }
             

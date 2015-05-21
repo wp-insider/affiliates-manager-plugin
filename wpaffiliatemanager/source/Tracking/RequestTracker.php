@@ -27,6 +27,9 @@ class WPAM_Tracking_RequestTracker {
 		if ( isset( $_COOKIE[WPAM_PluginConfig::$RefKey] ) ) {
                     $strRefKey = $_COOKIE[WPAM_PluginConfig::$RefKey];
 		}
+                if ( isset( $_COOKIE['wpam_id'] ) ) {
+                    $strRefKey = $_COOKIE['wpam_id'];
+		}
 		
 		if ( $strRefKey ) {
 			
@@ -55,6 +58,9 @@ class WPAM_Tracking_RequestTracker {
                 $args = array();
                 $args['txn_id'] = $purchaseLogId;
                 $args['amount'] = $purchaseAmount;
+                if(is_numeric($strRefKey)){  //$strRefKey contains affiliate ID from the new cookie system (wpam_id)
+                    $args['aff_id'] = $strRefKey;
+                }
                 WPAM_Commission_Tracking::award_commission($args);		
 	}
 	
@@ -95,6 +101,9 @@ class WPAM_Tracking_RequestTracker {
                 $args = array();
                 $args['txn_id'] = $purchaseLogId;
                 $args['amount'] = $purchaseAmount;
+                if(is_numeric($strRefKey)){  //$strRefKey contains affiliate ID from the new cookie system (wpam_id)
+                    $args['aff_id'] = $strRefKey;
+                }
                 WPAM_Commission_Tracking::award_commission($args);
 	}
         
