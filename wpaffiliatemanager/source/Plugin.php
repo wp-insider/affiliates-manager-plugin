@@ -352,7 +352,14 @@ class WPAM_Plugin
 	}
 
         public function wpspcAddCustomValue($custom_field_val){
-            if(isset($_COOKIE[WPAM_PluginConfig::$RefKey])){
+            if(isset($_COOKIE['wpam_id'])){
+                $name = 'wpam_tracking';
+                $value = $_COOKIE['wpam_id'];
+                $new_val = $name.'='.$value;
+                $custom_field_val = $custom_field_val.'&'.$new_val;
+                WPAM_Logger::log_debug('Simple WP Cart Integration - Adding custom field value. New value: '.$custom_field_val);
+            }
+            else if(isset($_COOKIE[WPAM_PluginConfig::$RefKey])){
                 $name = 'wpam_tracking';
                 $value = $_COOKIE[WPAM_PluginConfig::$RefKey];
                 $new_val = $name.'='.$value;
@@ -388,17 +395,6 @@ class WPAM_Plugin
 			$requestTracker = new WPAM_Tracking_RequestTracker();
 			$requestTracker->handleCheckout( $purchaseLogId, $purchaseAmount );
 		}
-	}
-
-	public function onWooCheckout( $order_id ) {
-		$order = new WC_Order( $order_id );
-                $total = $order->order_total;
-                $shipping = $order->get_total_shipping();
-                $tax = $order->get_total_tax();
-                WPAM_Logger::log_debug('WooCommerce Integration - Total amount: ' . $total . '. Total shipping: ' . $shipping . 'Total tax: ' . $tax);
-		$purchaseAmount = $total - $shipping - $tax;;
-		$requestTracker = new WPAM_Tracking_RequestTracker();
-		$requestTracker->handleCheckout( $order_id, $purchaseAmount );
 	}
         
         public function WooCheckoutUpdateOrderMeta($order_id, $posted)
@@ -493,7 +489,12 @@ class WPAM_Plugin
         
         public function edd_store_custom_fields($payment_meta) {
             WPAM_Logger::log_debug('Easy Digital Downlaods Integration - payment_meta filter triggered');
-            if(isset($_COOKIE[WPAM_PluginConfig::$RefKey])){
+            if(isset($_COOKIE['wpam_id'])){
+                $strRefKey = $_COOKIE['wpam_id'];
+                $payment_meta['wpam_refkey']   = $strRefKey;
+                WPAM_Logger::log_debug('Easy Digital Downlaods Integration - refkey: '.$strRefKey);
+            }
+            else if(isset($_COOKIE[WPAM_PluginConfig::$RefKey])){
                 $strRefKey = $_COOKIE[WPAM_PluginConfig::$RefKey];
                 $payment_meta['wpam_refkey']   = $strRefKey;
                 WPAM_Logger::log_debug('Easy Digital Downlaods Integration - refkey: '.$strRefKey);
