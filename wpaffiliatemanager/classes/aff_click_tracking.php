@@ -42,6 +42,15 @@ class WPAM_Click_Tracking {
                 setcookie('wpam_id', $aff_id, $cookie_life_time, "/", $cookie_domain);
             }
         }
+        //this will be the new affiliate link
+        if (isset($_REQUEST[WPAM_PluginConfig::$wpam_id]) && !empty($_REQUEST[WPAM_PluginConfig::$wpam_id])) {
+            $aff_id = trim(strip_tags($_REQUEST[WPAM_PluginConfig::$wpam_id]));
+            $cookie_life_time = wpam_get_cookie_life_time();
+            $domain_url = $_SERVER['SERVER_NAME'];
+            $cookie_domain = str_replace("www", "", $domain_url);
+            setcookie('wpam_id', $aff_id, $cookie_life_time, "/", $cookie_domain);
+        }
+        
     }
 
 }
