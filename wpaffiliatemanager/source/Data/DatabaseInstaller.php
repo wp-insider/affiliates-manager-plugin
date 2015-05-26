@@ -89,8 +89,10 @@ class WPAM_Data_DatabaseInstaller {
         `sourceCreativeId` int(11) DEFAULT NULL,
         `referer` text,
         `affiliateSubCode` varchar(30) DEFAULT NULL,
-        PRIMARY KEY (`trackingTokenId`),
-        UNIQUE KEY `trackingKey` (`trackingKey`)
+        `browser` varchar(256) default '',
+	`ipAddress` varchar(128) default '',
+        `customId` varchar(128) default '',
+        PRIMARY KEY (`trackingTokenId`)
         )" . $charset_collate . ";";
         dbDelta($tracking_tokens_tbl_sql);
 

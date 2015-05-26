@@ -52,8 +52,8 @@ class WPAM_Click_Tracking {
             $args = array();
             $args['dateCreated'] = date("Y-m-d H:i:s", time());
             $args['sourceAffiliateId'] = $aff_id;
-            $args['trackingKey'] = '';
-            $args['sourceCreativeId'] = '';
+            $args['trackingKey'] = uniqid(); //save a unique ID to avoid error
+            $args['sourceCreativeId'] = '';  // remove this column from the click tracking menu in the settings
             $args['referer'] = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
             $args['affiliateSubCode'] = '';
             WPAM_Click_Tracking::insert_click_data($args);
