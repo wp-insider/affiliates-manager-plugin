@@ -61,7 +61,7 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
     function get_columns() {
         $columns = array(
             'cb' => '<input type="checkbox" />', //Render a checkbox instead of text
-            'trackingTokenId' => __('Tracking ID', 'wpam'),
+            'trackingTokenId' => __('Row ID', 'wpam'),
             'dateCreated' => __('Date', 'wpam'),
             'sourceAffiliateId' => __('Affiliate ID', 'wpam'),
             'trackingKey' => __('Tracking Key', 'wpam'),
