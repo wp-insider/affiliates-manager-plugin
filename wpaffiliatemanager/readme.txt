@@ -135,6 +135,8 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = TODO2.0.6 =
 - Changed the default affiliate link in the plugin
+- Changed some labels in the settings ("AID" to "Affiliate ID" and "Tracking ID" to "Row ID")
+- Clicks can now be recorded using the new tracking system
 
 = 2.0.5 =
 - Made some improvements to the Easy Digital Downloads & Simple Shopping Cart tracking options
