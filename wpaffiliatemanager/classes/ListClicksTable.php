@@ -65,7 +65,6 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
             'dateCreated' => __('Date', 'wpam'),
             'sourceAffiliateId' => __('Affiliate ID', 'wpam'),
             'trackingKey' => __('Tracking Key', 'wpam'),
-            'sourceCreativeId' => __('Creative ID', 'wpam'),
             'referer' => __('Referring URL', 'wpam')
         );
         return $columns;
