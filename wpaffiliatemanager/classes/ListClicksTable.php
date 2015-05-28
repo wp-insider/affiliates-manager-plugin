@@ -1,6 +1,6 @@
 <?php
 
-include_once('aff_list_table.php');
+include_once('ListTable.php');
 
 class WPAM_List_Clicks_Table extends WPAM_List_Table {
 

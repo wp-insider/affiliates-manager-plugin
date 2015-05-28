@@ -43,8 +43,8 @@ require_once WPAM_BASE_DIRECTORY . "/source/display_functions.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Util/DebugLogger.php";
 require_once WPAM_BASE_DIRECTORY . "/utility-functions.php";
 require_once WPAM_BASE_DIRECTORY . "/classes/PluginsLoadedTasks.php";
-require_once WPAM_BASE_DIRECTORY . "/classes/aff_commission_tracking.php";
-require_once WPAM_BASE_DIRECTORY . "/classes/aff_click_tracking.php";
+require_once WPAM_BASE_DIRECTORY . "/classes/CommissionTracking.php";
+require_once WPAM_BASE_DIRECTORY . "/classes/ClickTracking.php";
 
 
 class WPAM_Plugin

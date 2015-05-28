@@ -35,7 +35,7 @@ function wpam_display_clicks_menu()
     <div id="poststuff"><div id="post-body">
     <?php        
     
-    include_once(WPAM_BASE_DIRECTORY . '/classes/aff_list_clicks_table.php');
+    include_once(WPAM_BASE_DIRECTORY . '/classes/ListClicksTable.php');
     //Create an instance of our package class...
     $clicks_list_table = new WPAM_List_Clicks_Table();
     //Fetch, prepare, sort, and filter our data...

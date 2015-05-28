@@ -37,7 +37,7 @@
     <div id="poststuff"><div id="post-body">
     <?php        
     
-    include_once(WPAM_BASE_DIRECTORY . '/classes/aff_list_affiliates_table.php');
+    include_once(WPAM_BASE_DIRECTORY . '/classes/ListAffiliatesTable.php');
     //Create an instance of our package class...
     $affiliates_list_table = new WPAM_List_Affiliates_Table();
     //Fetch, prepare, sort, and filter our data...
