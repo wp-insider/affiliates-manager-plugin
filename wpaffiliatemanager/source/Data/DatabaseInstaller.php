@@ -5,8 +5,6 @@
  */
 class WPAM_Data_DatabaseInstaller {
 
-    const WPAM_DB_VERSION_NAME = 'wpam_db_version';
-
     private $db;
 
     public function __construct(wpdb $db) {
@@ -189,7 +187,7 @@ class WPAM_Data_DatabaseInstaller {
         )" . $charset_collate . ";";
         dbDelta($impressions_tbl_sql);
 
-        update_option(self::WPAM_DB_VERSION_NAME, WPAM_DB_VERSION);
+        update_option('wpam_db_version', WPAM_DB_VERSION);
     }
 
     public function doFreshInstallDbDefaultData() {

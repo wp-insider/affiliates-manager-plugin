@@ -42,6 +42,7 @@ require_once WPAM_BASE_DIRECTORY . "/source/Util/JsonHandler.php";
 require_once WPAM_BASE_DIRECTORY . "/source/display_functions.php";
 require_once WPAM_BASE_DIRECTORY . "/source/Util/DebugLogger.php";
 require_once WPAM_BASE_DIRECTORY . "/utility-functions.php";
+require_once WPAM_BASE_DIRECTORY . "/classes/PluginsLoadedTasks.php";
 require_once WPAM_BASE_DIRECTORY . "/classes/aff_commission_tracking.php";
 require_once WPAM_BASE_DIRECTORY . "/classes/aff_click_tracking.php";
 
@@ -120,6 +121,8 @@ class WPAM_Plugin
                 self::PAGE_NAME_LOGIN => $this->affiliateLoginPage
                 );
 
+                add_action('plugins_loaded', array( $this, 'onPluginsLoaded' ) );
+                
 		//set up base actions
 		add_action('init', array( $this, 'onInit' ) );
                 
@@ -212,6 +215,10 @@ class WPAM_Plugin
 		return $is_set;
 	}
 
+        public function onPluginsLoaded(){
+            new WPAM_Plugins_Loaded_Tasks();
+        }
+        
 	public function onInit() {
             
                 add_action( 'wp_enqueue_scripts', array($this,'load_shortcode_specific_scripts'));
