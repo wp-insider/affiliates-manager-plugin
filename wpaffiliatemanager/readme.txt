@@ -133,6 +133,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= TODO2.0.7 =
+- Fixed an issue with commission not getting recorded sometimes
+
 = 2.0.6 =
 - Changed the default affiliate link in the plugin
 - Changed some labels in the settings ("AID" to "Affiliate ID" and "Tracking ID" to "Row ID")

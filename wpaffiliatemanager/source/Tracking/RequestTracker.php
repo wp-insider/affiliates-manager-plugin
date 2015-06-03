@@ -17,7 +17,7 @@ class WPAM_Tracking_RequestTracker {
 		$db = new WPAM_Data_DataAccess();
 		$binConverter = new WPAM_Util_BinConverter();
 		$affiliate = NULL;
-
+                global $wpdb;
 		// keeping this block and "($affiliate !== NULL)" seperate to
 		// help indicate any problems
 		// (purchase log recorded w/o a purchase event)
@@ -33,22 +33,22 @@ class WPAM_Tracking_RequestTracker {
 		
 		if ( $strRefKey ) {
 			
-			$trackingToken = $db->getTrackingTokenRepository()->loadBy( array(
-				'trackingKey' => $strRefKey,
-			) );
+			$query = "SELECT * FROM ".WPAM_TRACKING_TOKENS_TBL." WHERE trackingKey = %s";        
+                        $trackingToken = $wpdb->get_row($wpdb->prepare($query, $strRefKey));
 
-			if ( $trackingToken !== NULL ) {
-				$ttpl = $db->getTrackingTokenPurchaseLogRepository()->loadBy( array(
-					'trackingTokenId' => $trackingToken->trackingTokenId,
-					'purchaseLogId' => $purchaseLogId
-				));
-
-				if ( $ttpl === NULL ) {
-					$trackingTokenPurchaseLog = new WPAM_Data_Models_TrackingTokenPurchaseLogModel();
-					$trackingTokenPurchaseLog->trackingTokenId = $trackingToken->trackingTokenId;
-					$trackingTokenPurchaseLog->purchaseLogId = $purchaseLogId;
-
-					$db->getTrackingTokenPurchaseLogRepository()->insert( $trackingTokenPurchaseLog );
+			if ( $trackingToken != null ) {
+                                $trackingTokenId = $trackingToken->trackingTokenId;
+                                $query = "SELECT * FROM ".WPAM_TRACKING_TOKENS_PURCHASE_LOGS_TBL." WHERE trackingTokenId = %s AND purchaseLogId = %s";        
+                                $ttpl = $wpdb->get_row($wpdb->prepare($query, $trackingTokenId, $purchaseLogId));
+                                if($ttpl != null){
+                                    
+                                }
+				else{                                  
+                                        $table = WPAM_TRACKING_TOKENS_PURCHASE_LOGS_TBL;
+                                        $data = array();
+                                        $data['trackingTokenId'] = $trackingTokenId;
+                                        $data['purchaseLogId'] = $purchaseLogId;
+                                        $wpdb->insert( $table, $data);
 					//this will be handled further down if the affiliate is set and the purchase was successful
 					//$db->getEventRepository()->quickInsert(time(), $strRefKey, 'purchase');
 				}
@@ -69,29 +69,29 @@ class WPAM_Tracking_RequestTracker {
 		$db = new WPAM_Data_DataAccess();
 		$binConverter = new WPAM_Util_BinConverter();
 		$affiliate = NULL;
-
+                global $wpdb;
 		// keeping this block and "($affiliate !== NULL)" seperate to
 		// help indicate any problems
 		// (purchase log recorded w/o a purchase event)
 		
-		if ( !empty($strRefKey )) {
-			
-			$trackingToken = $db->getTrackingTokenRepository()->loadBy( array(
-				'trackingKey' => $strRefKey,
-			) );
+		if ( !empty($strRefKey )) {			
+                        
+                        $query = "SELECT * FROM ".WPAM_TRACKING_TOKENS_TBL." WHERE trackingKey = %s";        
+                        $trackingToken = $wpdb->get_row($wpdb->prepare($query, $strRefKey));
 
-			if ( $trackingToken !== NULL ) {
-				$ttpl = $db->getTrackingTokenPurchaseLogRepository()->loadBy( array(
-					'trackingTokenId' => $trackingToken->trackingTokenId,
-					'purchaseLogId' => $purchaseLogId
-				));
-
-				if ( $ttpl === NULL ) {
-					$trackingTokenPurchaseLog = new WPAM_Data_Models_TrackingTokenPurchaseLogModel();
-					$trackingTokenPurchaseLog->trackingTokenId = $trackingToken->trackingTokenId;
-					$trackingTokenPurchaseLog->purchaseLogId = $purchaseLogId;
-
-					$db->getTrackingTokenPurchaseLogRepository()->insert( $trackingTokenPurchaseLog );
+			if ( $trackingToken != null ) {
+                                $trackingTokenId = $trackingToken->trackingTokenId;
+                                $query = "SELECT * FROM ".WPAM_TRACKING_TOKENS_PURCHASE_LOGS_TBL." WHERE trackingTokenId = %s AND purchaseLogId = %s";        
+                                $ttpl = $wpdb->get_row($wpdb->prepare($query, $trackingTokenId, $purchaseLogId));
+                                if($ttpl != null){
+                                    
+                                }
+				else{                                  
+                                        $table = WPAM_TRACKING_TOKENS_PURCHASE_LOGS_TBL;
+                                        $data = array();
+                                        $data['trackingTokenId'] = $trackingTokenId;
+                                        $data['purchaseLogId'] = $purchaseLogId;
+                                        $wpdb->insert( $table, $data);
 					//this will be handled further down if the affiliate is set and the purchase was successful
 					//$db->getEventRepository()->quickInsert(time(), $strRefKey, 'purchase');
 				}
