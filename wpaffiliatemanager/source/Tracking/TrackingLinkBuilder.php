@@ -26,7 +26,7 @@ class WPAM_Tracking_TrackingLinkBuilder
 	}
 
 	public function getUrl() {
-		return add_query_arg( array( WPAM_PluginConfig::$RefKey => $this->getTrackingKey()->pack() ),
+		return add_query_arg( array( WPAM_PluginConfig::$wpam_id => $this->affiliate->affiliateId ),
 							  home_url( trim( $this->creative->slug ) ) );
 	}
 

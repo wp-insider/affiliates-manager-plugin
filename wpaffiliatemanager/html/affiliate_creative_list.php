@@ -39,32 +39,15 @@
     ****/
     $db = new WPAM_Data_DataAccess();
     $currentUser = wp_get_current_user();
+    $alink_id = '';
     $affiliateRepos = $db->getAffiliateRepository();
     $affiliate = $affiliateRepos->loadBy(array('userId' => $currentUser->ID, 'status' => 'active'));
     if ( $affiliate === NULL ) {  //affiliate with this WP User ID does not exist
 
     }
-    $default_creative_id = get_option(WPAM_PluginConfig::$DefaultCreativeId);
-    $creative = '';
-    $alink_id = '';
-    $alink_email = '';
-    $alink = '';
-    if(empty($default_creative_id)){
-
-    }
     else{
-        $creative = $db->getCreativesRepository()->load($default_creative_id);
-        if($creative == NULL){
-
-        }
-        else{
-            $linkBuilder = new WPAM_Tracking_TrackingLinkBuilder($affiliate, $creative);
-            $alink = add_query_arg( array( WPAM_PluginConfig::$RefKey => $linkBuilder->getTrackingKey()->pack() ), home_url('/') );
-            $alink_id = add_query_arg( array( WPAM_PluginConfig::$RefKey => $affiliate->affiliateId ), home_url('/') );
-            $alink_email = add_query_arg( array( WPAM_PluginConfig::$RefKey => $affiliate->email ), home_url('/') );
-        }
+        $alink_id = add_query_arg( array( WPAM_PluginConfig::$wpam_id => $affiliate->affiliateId ), home_url('/') );
     }
-    
     ?>
 
     <div class="wrap">
@@ -73,18 +56,6 @@
         ?>
         <h3><?php _e('Your Affiliate Link Using Affiliate ID', 'wpam') ?></h3>
         <textarea class="wpam-creative-code" rows="1"><?php echo $alink_id; ?></textarea>
-        <?php
-        }
-        if(!empty($alink_email)){        
-        ?>
-        <h3><?php _e('Your Affiliate Link Using Email', 'wpam') ?></h3>
-        <textarea class="wpam-creative-code" rows="1"><?php echo $alink_email; ?></textarea>
-        <?php
-        }
-        if(!empty($alink)){
-        ?>
-        <h3><?php _e( 'Your Affiliate Link Using Refkey', 'wpam' ) ?></h3>
-        <textarea class="wpam-creative-code" rows="1"><?php echo $alink; ?></textarea>
         <?php
         }
         ?>
