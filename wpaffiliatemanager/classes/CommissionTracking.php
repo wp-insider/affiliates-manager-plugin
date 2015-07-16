@@ -65,7 +65,14 @@ class WPAM_Commission_Tracking {
         }
     }
     
-    public static function get_transaction_count($args){ //$args() at least requires 3 elements: affiliate ID, start date and end date
+    /*
+     * Gets total transaction count for a given affiliate.
+     * $args array requires at least 3 elements 
+     * aff_id - affiliate ID
+     * start_date - start date 
+     * end_date - end date
+     */
+    public static function get_transaction_count($args){ 
         global $wpdb;
         $table = WPAM_TRANSACTIONS_TBL;
         $count = 0;
@@ -107,7 +114,14 @@ class WPAM_Commission_Tracking {
         return $count;
     }
     
-    public static function get_total_commission_amount($args){  //$args() at least requires 3 elements: affiliate ID, start date and end date
+    /*
+     * Gets total commission amount for a given affiliate.
+     * $args array requires at least 3 elements 
+     * aff_id - affiliate ID
+     * start_date - start date 
+     * end_date - end date
+     */    
+    public static function get_total_commission_amount($args){ 
         global $wpdb;
         $table = WPAM_TRANSACTIONS_TBL;
         $total_commission = $wpdb->get_var( $wpdb->prepare( 

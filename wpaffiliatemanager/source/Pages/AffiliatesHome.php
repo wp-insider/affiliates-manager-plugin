@@ -197,28 +197,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 	{
 		$db = new WPAM_Data_DataAccess();
 		$accountSummary = $db->getTransactionRepository()->getAccountSummary($affiliate->affiliateId);
-		
-		$eventSummary = $db->getEventRepository()->getSummaryForRange(
-			strtotime(date("Y-m-01")),
-			strtotime(date("Y-m-01", strtotime("+1 month"))),
-			$affiliate->affiliateId
-		);
-		$todayEventSummary = $db->getEventRepository()->getSummaryForRange(
-			strtotime('today'),
-			strtotime('tomorrow'),
-			$affiliate->affiliateId
-		);
 
-		$monthAccountSummary = $db->getTransactionRepository()->getAccountSummary(
-			$affiliate->affiliateId,
-			strtotime(date("Y-m-01")),
-			strtotime(date("Y-m-01", strtotime("+1 month")))
-		);
-		$todayAccountSummary = $db->getTransactionRepository()->getAccountSummary(
-			$affiliate->affiliateId,
-			strtotime('today'),
-			strtotime('tomorrow')
-		);
                 $args = array();
                 $args['aff_id'] = $affiliate->affiliateId;
                 //show total clicks for today
