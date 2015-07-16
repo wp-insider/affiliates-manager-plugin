@@ -219,17 +219,34 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 			strtotime('today'),
 			strtotime('tomorrow')
 		);
-
-
+                $args = array();
+                $args['aff_id'] = $affiliate->affiliateId;
+                //show total clicks for today
+                $args['start_date'] = date("Y-m-d H:i:s", strtotime('today'));
+                $args['end_date'] = date("Y-m-d H:i:s", strtotime('tomorrow'));
+                $today_clicks = WPAM_Click_Tracking::get_total_clicks($args);
+                //show total number of transactions for today
+                $today_transaction_count = WPAM_Commission_Tracking::get_transaction_count($args);
+                //show total commission for today
+                $today_total_commission = WPAM_Commission_Tracking::get_total_commission_amount($args);
+                //show total clicks for this month
+                $args['start_date'] = date("Y-m-d H:i:s", strtotime(date("Y-m-01")));
+                $args['end_date'] = date("Y-m-d H:i:s", strtotime(date("Y-m-01", strtotime("+1 month"))));
+                $monthly_clicks = WPAM_Click_Tracking::get_total_clicks($args);
+                //show total number of transactions for this month
+                $monthly_transaction_count = WPAM_Commission_Tracking::get_transaction_count($args);
+                //show total commission for this month
+                $monthly_total_commission = WPAM_Commission_Tracking::get_total_commission_amount($args);
+                
 		$response = new WPAM_Pages_TemplateResponse('affiliate_cp_home');
 		$response->viewData['accountStanding'] = $accountSummary->standing;
 		$response->viewData['commissionRateString'] = $this->getCommissionRateString($affiliate);
-		$response->viewData['monthVisitors'] = $eventSummary->visits;
-		$response->viewData['monthClosedTransactions'] = $eventSummary->purchases;
-		$response->viewData['monthRevenue'] = $monthAccountSummary->credits;
-		$response->viewData['todayVisitors'] = $todayEventSummary->visits;
-		$response->viewData['todayClosedTransactions'] = $todayEventSummary->purchases;
-		$response->viewData['todayRevenue'] = $todayAccountSummary->credits;
+		$response->viewData['monthVisitors'] = $monthly_clicks;//$eventSummary->visits;
+		$response->viewData['monthClosedTransactions'] = $monthly_transaction_count;//$eventSummary->purchases;
+		$response->viewData['monthRevenue'] = $monthly_total_commission;//$monthAccountSummary->credits;
+		$response->viewData['todayVisitors'] = $today_clicks;//$todayEventSummary->visits;
+		$response->viewData['todayClosedTransactions'] = $today_transaction_count;//$todayEventSummary->purchases;
+		$response->viewData['todayRevenue'] = $today_total_commission;//$todayAccountSummary->credits;
 
 		if (get_option (WPAM_PluginConfig::$AffEnableImpressions)) {
 			$response->viewData['monthImpressions'] = $db->getImpressionRepository()->getImpressionsForRange(

@@ -64,4 +64,64 @@ class WPAM_Commission_Tracking {
             }
         }
     }
+    
+    public static function get_transaction_count($args){ //$args() at least requires 3 elements: affiliate ID, start date and end date
+        global $wpdb;
+        $table = WPAM_TRANSACTIONS_TBL;
+        $count = 0;
+        $result = $wpdb->get_var( $wpdb->prepare( 
+	"
+		SELECT COUNT(*) 
+		FROM $table 
+		WHERE affiliateId = %d
+                AND dateCreated >= %s
+                AND dateCreated < %s
+                AND type = 'credit'
+	",
+        $args['aff_id'],        
+	$args['start_date'],
+        $args['end_date']        
+        ) );
+        if($result != null){
+            $count = $result;
+        }
+        return $count;
+    }
+    
+    public static function get_all_time_transaction_count($args){ //$args() at least requires affiliate ID
+        global $wpdb;
+        $table = WPAM_TRANSACTIONS_TBL;
+        $count = 0;
+        $result = $wpdb->get_var( $wpdb->prepare( 
+	"
+		SELECT COUNT(*) 
+		FROM $table 
+		WHERE affiliateId = %d
+                AND type = 'credit'
+	",
+        $args['aff_id']               
+        ) );
+        if($result != null){
+            $count = $result;
+        }
+        return $count;
+    }
+    
+    public static function get_total_commission_amount($args){  //$args() at least requires 3 elements: affiliate ID, start date and end date
+        global $wpdb;
+        $table = WPAM_TRANSACTIONS_TBL;
+        $total_commission = $wpdb->get_var( $wpdb->prepare( 
+	"
+		SELECT COALESCE(SUM(IF(type = 'credit', amount, 0)),0) 
+		FROM $table 
+		WHERE affiliateId = %d
+                AND dateCreated >= %s
+                AND dateCreated < %s
+	",
+        $args['aff_id'],        
+	$args['start_date'],
+        $args['end_date']        
+        ) );
+        return $total_commission;
+    }
 }

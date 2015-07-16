@@ -215,11 +215,15 @@ class WPAM_Pages_Admin_MyAffiliatesPage extends WPAM_Pages_Admin_AdminPage
 
 			$where = array('sourceAffiliateId' => $model->affiliateId);
 			$response->viewData['impressionCount'] = $db->getImpressionRepository()->count ( $where );
-
-			$summary = $db->getEventRepository()->getSummary ( $model->affiliateId );
-			$response->viewData['visitCount'] = $summary->visits;
-			$response->viewData['purchaseCount'] = $summary->purchases;
 		}
+                
+                //$summary = $db->getEventRepository()->getSummary ( $model->affiliateId );
+                $args = array();
+                $args['aff_id'] = $model->affiliateId;
+                $total_clicks = WPAM_Click_Tracking::get_all_time_total_clicks($args);
+                $total_transaction_count = WPAM_Commission_Tracking::get_all_time_transaction_count($args);
+                $response->viewData['visitCount'] = $total_clicks;//$summary->visits;
+                $response->viewData['purchaseCount'] = $total_transaction_count;//$summary->purchases;
 
 		//save for form validation in the footer
 		$this->response = $response;

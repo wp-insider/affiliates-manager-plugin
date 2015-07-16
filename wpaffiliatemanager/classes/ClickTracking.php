@@ -66,5 +66,46 @@ class WPAM_Click_Tracking {
         $table = WPAM_TRACKING_TOKENS_TBL;
         $wpdb->insert( $table, $args);
     }
+    
+    public static function get_total_clicks($args){  //$args() at least requires 3 elements: affiliate ID, start date and end date
+        global $wpdb;
+        $table = WPAM_TRACKING_TOKENS_TBL;
+        $total_clicks = 0;
+        $result = $wpdb->get_var( $wpdb->prepare( 
+	"
+		SELECT COUNT(*) 
+		FROM $table 
+		WHERE sourceAffiliateId = %d
+                AND dateCreated >= %s
+                AND dateCreated < %s
+                
+	",
+        $args['aff_id'],        
+	$args['start_date'],
+        $args['end_date']        
+        ) );
+        if($result != null){
+            $total_clicks = $result;
+        }
+        return $total_clicks;
+    }
+    
+    public static function get_all_time_total_clicks($args){  //$args() at least requires affiliate ID
+        global $wpdb;
+        $table = WPAM_TRACKING_TOKENS_TBL;
+        $total_clicks = 0;
+        $result = $wpdb->get_var( $wpdb->prepare( 
+	"
+		SELECT COUNT(*) 
+		FROM $table 
+		WHERE sourceAffiliateId = %d              
+	",
+        $args['aff_id']             
+        ) );
+        if($result != null){
+            $total_clicks = $result;
+        }
+        return $total_clicks;
+    }
 
 }
