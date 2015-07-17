@@ -94,7 +94,11 @@ class WPAM_Commission_Tracking {
         }
         return $count;
     }
-    
+    /*
+     * Gets all time total transaction count for a given affiliate.
+     * $args array requires only 1 element
+     * aff_id - affiliate ID
+     */
     public static function get_all_time_transaction_count($args){ //$args() at least requires affiliate ID
         global $wpdb;
         $table = WPAM_TRANSACTIONS_TBL;
