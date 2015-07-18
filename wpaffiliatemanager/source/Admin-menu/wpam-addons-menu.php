@@ -105,6 +105,7 @@ function wpam_display_addons_menu()
     array_push($addons_data, $addon_12);
     
     //Display the list
+    $output = '';
     foreach ($addons_data as $addon) {
         $output .= '<div class="wpam_addon_item_canvas">';
 
