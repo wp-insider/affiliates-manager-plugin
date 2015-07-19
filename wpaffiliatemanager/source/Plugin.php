@@ -101,12 +101,6 @@ class WPAM_Plugin
 						__( 'PayPal Mass Pay', 'wpam' ),
 						__( 'PayPal Mass Pay', 'wpam' ),
 						WPAM_PluginConfig::$AdminCap
-					),
-					new WPAM_Pages_Admin_SettingsPage(
-						'wpam-settings',
-						__( 'Settings', 'wpam' ),
-						__( 'Settings', 'wpam' ),
-						WPAM_PluginConfig::$AdminCap
 					)
 				)
 			)
@@ -594,9 +588,11 @@ class WPAM_Plugin
 				);
 			}
 
-		}
-                
-                //Add submenu pages
+		}          
+                //Add submenu pages  
+                $settings_obj = new WPAM_Pages_Admin_SettingsPage();
+                add_submenu_page($menu_parent_slug, __( 'Settings', 'wpam' ), __( 'Settings', 'wpam' ), WPAM_PluginConfig::$AdminCap, 'wpam-settings', array($settings_obj,'render_settings_page'));
+                                
                 include_once(WPAM_BASE_DIRECTORY . "/source/Admin-menu/wpam-clicks-menu.php");                
                 add_submenu_page($menu_parent_slug, __("Affiliates Manager Click Tracking", 'wpam'), __("Click Tracking", 'wpam'), WPAM_PluginConfig::$AdminCap, 'wpam-clicktracking', 'wpam_display_clicks_menu');
                 
