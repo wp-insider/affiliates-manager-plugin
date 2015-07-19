@@ -133,7 +133,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.0.9 =
+= 2.0.9 =
 - Fixed some warning notices in the plugin
 
 = 2.0.8 =
