@@ -86,7 +86,7 @@ abstract class WPAM_Pages_PublicPage
 
 	public abstract function processRequest($request);
 	public abstract function isAvailable($wpUser);
-	public abstract static function getPageId();
+	public static function getPageId(){return;}
 
 	public function doShortcode() {
 		if ($this->isAvailable(wp_get_current_user())) {

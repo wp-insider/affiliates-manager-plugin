@@ -2,7 +2,7 @@
 
 class WPAM_Data_AffiliateRepository extends WPAM_Data_GenericRepository
 {
-    public function insert(WPAM_Data_Models_AffiliateModel $affiliate)
+    public function insert($affiliate)
     {
 		return parent::insert($affiliate);
     }
@@ -12,7 +12,7 @@ class WPAM_Data_AffiliateRepository extends WPAM_Data_GenericRepository
 		return parent::load($id);
 	}
 
-    public function update(WPAM_Data_Models_AffiliateModel $affiliate)
+    public function update($affiliate)
     {
 		return parent::update($affiliate);
     }

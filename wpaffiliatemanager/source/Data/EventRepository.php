@@ -11,11 +11,11 @@ require_once WPAM_BASE_DIRECTORY . "/source/Data/Models/ActionModel.php";
 
 class WPAM_Data_EventRepository extends WPAM_Data_GenericRepository
 {
-	public function insert(WPAM_Data_Models_EventModel $event)
+	public function insert($event)
 	{
 		parent::insert($event);
 	}
-	public function update(WPAM_Data_Models_EventModel $event)
+	public function update($event)
 	{
 		parent::update($event);
 	}

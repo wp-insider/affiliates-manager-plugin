@@ -9,7 +9,7 @@
 require_once WPAM_BASE_DIRECTORY . "/source/Data/Models/CreativeModel.php";
 class WPAM_Data_CreativeRepository extends WPAM_Data_GenericRepository
 {
-    public function insert(WPAM_Data_Models_CreativeModel $creative)
+    public function insert($creative)
     {
 		return parent::insert($creative);
     }
@@ -23,7 +23,7 @@ class WPAM_Data_CreativeRepository extends WPAM_Data_GenericRepository
 		return parent::load($id);
 	}
 
-    public function update(WPAM_Data_Models_CreativeModel $creative)
+    public function update($creative)
     {
 		return parent::update($creative);
     }

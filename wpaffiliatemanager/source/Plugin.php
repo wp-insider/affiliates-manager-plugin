@@ -311,7 +311,7 @@ class WPAM_Plugin
                     'remember' => true,
                 );
                 $lost_password_link = '<a href="'.wp_lostpassword_url().'" title="'.__('Password Lost and Found', 'wpam').'">'.__('Lost your password?', 'wpam').'</a>';
-                $form_output = '<div class="wpam-login-form">'.
+                $form_output = '<div class="wpam-login-form">';
                 $form_output .= wp_login_form($args);
                 $form_output .= $lost_password_link;
                 $form_output .= '</div>';
