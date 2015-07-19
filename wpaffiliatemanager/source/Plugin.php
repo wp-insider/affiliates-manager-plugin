@@ -565,30 +565,31 @@ class WPAM_Plugin
 			);
 		}
 
-                //WP Admin Side Menu
-		foreach ($this->adminPages as $page)
-		{
-			add_object_page(
-				$page->getName(),
-				$page->getMenuName(),
-				$page->getRequiredCap(),
-				$page->getId(),
-				array(),
-				'dashicons-groups'
-			);
-			foreach ($page->getChildren() as $childPage)
-			{
-				add_submenu_page(
-					$page->getId(),
-					$childPage->getName(),
-					$childPage->getMenuName(),
-					$childPage->getRequiredCap(),
-					$childPage->getId(),
-					array($childPage, "process")
-				);
-			}
+                
+   
+                $page = $this->adminPages[0];
+                add_object_page(
+                        $page->getName(),
+                        $page->getMenuName(),
+                        $page->getRequiredCap(),
+                        $page->getId(),
+                        array(),
+                        'dashicons-groups'
+                );
+                
+                foreach ($page->getChildren() as $childPage)
+                {
+                        add_submenu_page(
+                                $page->getId(),
+                                $childPage->getName(),
+                                $childPage->getMenuName(),
+                                $childPage->getRequiredCap(),
+                                $childPage->getId(),
+                                array($childPage, "process")
+                        );
+                } 
 
-		}          
+
                 //Add submenu pages  
                 $settings_obj = new WPAM_Pages_Admin_SettingsPage();
                 add_submenu_page($menu_parent_slug, __( 'Settings', 'wpam' ), __( 'Settings', 'wpam' ), WPAM_PluginConfig::$AdminCap, 'wpam-settings', array($settings_obj,'render_settings_page'));
