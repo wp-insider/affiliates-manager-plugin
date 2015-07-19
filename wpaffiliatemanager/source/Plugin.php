@@ -563,10 +563,9 @@ class WPAM_Plugin
 				array($this, 'becomeAffiliate'),
 				'dashicons-groups'
 			);
-		}
-
-                
+		}                
    
+                //Add main affiliates menu object
                 $page = $this->adminPages[0];
                 add_object_page(
                         $page->getName(),
@@ -576,20 +575,22 @@ class WPAM_Plugin
                         array(),
                         'dashicons-groups'
                 );
+
+                //Add the child pages
+                $children = $page->getChildren();
                 
-                foreach ($page->getChildren() as $childPage)
-                {
-                        add_submenu_page(
-                                $page->getId(),
-                                $childPage->getName(),
-                                $childPage->getMenuName(),
-                                $childPage->getRequiredCap(),
-                                $childPage->getId(),
-                                array($childPage, "process")
-                        );
-                } 
-
-
+                $childPage1 = $children[0];
+                add_submenu_page($page->getId(),$childPage1->getName(),$childPage1->getMenuName(),$childPage1->getRequiredCap(),$childPage1->getId(),array($childPage1, "process"));
+                
+                $childPage2 = $children[1];
+                add_submenu_page($page->getId(),$childPage2->getName(),$childPage2->getMenuName(),$childPage2->getRequiredCap(),$childPage2->getId(),array($childPage2, "process"));
+                
+                $childPage3 = $children[2];
+                add_submenu_page($page->getId(),$childPage3->getName(),$childPage3->getMenuName(),$childPage3->getRequiredCap(),$childPage3->getId(),array($childPage3, "process"));
+                
+                $childPage4 = $children[3];
+                add_submenu_page($page->getId(),$childPage4->getName(),$childPage4->getMenuName(),$childPage4->getRequiredCap(),$childPage4->getId(),array($childPage4, "process"));
+                
                 //Add submenu pages  
                 $settings_obj = new WPAM_Pages_Admin_SettingsPage();
                 add_submenu_page($menu_parent_slug, __( 'Settings', 'wpam' ), __( 'Settings', 'wpam' ), WPAM_PluginConfig::$AdminCap, 'wpam-settings', array($settings_obj,'render_settings_page'));
