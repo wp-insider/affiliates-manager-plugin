@@ -565,17 +565,11 @@ class WPAM_Plugin
 			);
 		}                
    
-                //Add main affiliates menu object
+                //Add main affiliates menu object                                
+                add_object_page( __( 'Affiliate Management', 'wpam' ), __( 'Affiliates', 'wpam' ), WPAM_PluginConfig::$AdminCap, 'wpam-affiliates', array(), 'dashicons-groups' );
+                
                 $page = $this->adminPages[0];
-                add_object_page(
-                        $page->getName(),
-                        $page->getMenuName(),
-                        $page->getRequiredCap(),
-                        $page->getId(),
-                        array(),
-                        'dashicons-groups'
-                );
-
+                
                 //Add the child pages
                 $children = $page->getChildren();
                 
