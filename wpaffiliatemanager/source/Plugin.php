@@ -579,25 +579,31 @@ class WPAM_Plugin
                 //Add the child pages
                 $children = $page->getChildren();
                 
+                //Add my affiliates submenu page
                 $childPage1 = $children[0];
                 add_submenu_page($page->getId(),$childPage1->getName(),$childPage1->getMenuName(),$childPage1->getRequiredCap(),$childPage1->getId(),array($childPage1, "process"));
                 
+                //Add new affiliate submenu page
                 $childPage2 = $children[1];
                 add_submenu_page($page->getId(),$childPage2->getName(),$childPage2->getMenuName(),$childPage2->getRequiredCap(),$childPage2->getId(),array($childPage2, "process"));
                 
+                //Add my creatives submenu page
                 $childPage3 = $children[2];
                 add_submenu_page($page->getId(),$childPage3->getName(),$childPage3->getMenuName(),$childPage3->getRequiredCap(),$childPage3->getId(),array($childPage3, "process"));
                 
+                //Add paypal payments submenu page
                 $childPage4 = $children[3];
                 add_submenu_page($page->getId(),$childPage4->getName(),$childPage4->getMenuName(),$childPage4->getRequiredCap(),$childPage4->getId(),array($childPage4, "process"));
                 
-                //Add submenu pages  
+                //Add settings submenu page
                 $settings_obj = new WPAM_Pages_Admin_SettingsPage();
                 add_submenu_page($menu_parent_slug, __( 'Settings', 'wpam' ), __( 'Settings', 'wpam' ), WPAM_PluginConfig::$AdminCap, 'wpam-settings', array($settings_obj,'render_settings_page'));
                                 
+                //Add clicks submenu page
                 include_once(WPAM_BASE_DIRECTORY . "/source/Admin-menu/wpam-clicks-menu.php");                
                 add_submenu_page($menu_parent_slug, __("Affiliates Manager Click Tracking", 'wpam'), __("Click Tracking", 'wpam'), WPAM_PluginConfig::$AdminCap, 'wpam-clicktracking', 'wpam_display_clicks_menu');
                 
+                //Add addons submenu page
                 include_once(WPAM_BASE_DIRECTORY . "/source/Admin-menu/wpam-addons-menu.php"); 
                 add_submenu_page($menu_parent_slug, __("Affiliates Manager Add-ons", 'wpam'), __("Add-ons", 'wpam'), WPAM_PluginConfig::$AdminCap, 'wpam-addons', 'wpam_display_addons_menu');
                 
