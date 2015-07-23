@@ -8,8 +8,9 @@ class WPAM_Pages_Admin_SettingsPage {
         
     }
 
-    public function render_settings_page() {
+    public function render_settings_page() {   
         $request = $_REQUEST;
+        $request = stripslashes_deep($request);
 
         if (isset($request['wpam_reset_logfile'])) {
             WPAM_Logger::reset_log_file();
@@ -32,7 +33,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $validator->addValidator('txtCookieExpire', new WPAM_Validation_NumberValidator());
         }
         if (isset($request['AffRegSettings'])) {
-            $validator->addValidator('txtTnc', new WPAM_Validation_StringValidator(1));
+            //$validator->addValidator('txtTnc', new WPAM_Validation_StringValidator(1));
         }
         //#61 allow these to be unset/null
         if (!empty($request['txtEmailName']))
@@ -142,8 +143,24 @@ class WPAM_Pages_Admin_SettingsPage {
                         $affiliateFieldRepository->update($field);
                     }
                 }
-                update_option(WPAM_PluginConfig::$TNCOptionOption, $request['txtTnc']);
-                update_option(WPAM_PluginConfig::$AffHomeMsg, $request['affhomemsg']);
+                
+                $txtTnc = $request['txtTnc'];
+                if(empty($txtTnc)){  //save the default T&C message if empty
+                    $txtTnc = file_get_contents( WPAM_RESOURCES_DIR . "default_tnc.txt" );
+                }
+                update_option(WPAM_PluginConfig::$TNCOptionOption, $txtTnc);
+                
+                $affhomemsg = $request['affhomemsg'];
+                if(empty($affhomemsg)){  //save the default home message if empty
+                    $login_url = get_option(WPAM_PluginConfig::$AffLoginPageURL);
+                    $register_page_id = get_option(WPAM_PluginConfig::$RegPageId);
+                    $register_page_url = get_permalink($register_page_id);
+                    $affhomemsg = 'This is the affiliates section of this store. If you are an existing affiliate, please <a href="'.$login_url.'">log in</a> to access your control panel.';
+                    $affhomemsg .= '<br />';
+                    $affhomemsg .= '<br />';
+                    $affhomemsg .= 'If you are not an affiliate, but wish to become one, you will need to apply. To apply, you must be a registered user on this blog. If you have an existing account on this blog, please <a href="'.$login_url.'">log in</a>. If not, please <a href="'.$register_page_url.'">register</a>.';
+                }
+                update_option(WPAM_PluginConfig::$AffHomeMsg, $affhomemsg);
             }
 
             if (isset($request['AffPagesSettings'])) {    //Affiliate pages/forms options submitted
