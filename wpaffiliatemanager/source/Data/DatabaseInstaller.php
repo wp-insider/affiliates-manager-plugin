@@ -118,7 +118,7 @@ class WPAM_Data_DatabaseInstaller {
         `dateCreated` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
         `affiliateId` int(11) NOT NULL,
         `amount` decimal(7,2) NOT NULL,
-        `type` enum('credit','payout','adjustment') NOT NULL DEFAULT 'credit',
+        `type` enum('credit','payout','adjustment','refund') NOT NULL DEFAULT 'credit',
         `description` varchar(255) NOT NULL,
         `referenceId` varchar(255) DEFAULT NULL,
         `status` ENUM('pending','confirmed','failed') NOT NULL DEFAULT 'confirmed',

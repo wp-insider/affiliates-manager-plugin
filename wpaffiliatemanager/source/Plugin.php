@@ -129,6 +129,7 @@ class WPAM_Plugin
                 add_action('woocommerce_order_status_completed',  array( $this, 'WooCommerceProcessTransaction')); //Executes when a status changes to completed
                 add_action('woocommerce_order_status_processing',  array( $this, 'WooCommerceProcessTransaction')); //Executes when a status changes to processing
                 add_action('woocommerce_checkout_order_processed',  array( $this, 'WooCommerceProcessTransaction'));
+                add_action('woocommerce_order_status_refunded',  array( $this, 'WooCommerceRefundTransaction'));  //Executes when a status changes to refunded
                 
                 //Exchange integration
 		add_filter('it_exchange_add_transaction', array( $this, 'onExchangeCheckout' ), 10, 7 );
@@ -467,6 +468,14 @@ class WPAM_Plugin
             $requestTracker = new WPAM_Tracking_RequestTracker();
             WPAM_Logger::log_debug('WooCommerce Integration - awarding commission for order ID: '.$order_id.'. Purchase amount: '.$purchaseAmount);
             $requestTracker->handleCheckoutWithRefKey( $order_id, $purchaseAmount, $wpam_refkey);
+        }
+                
+        public function WooCommerceRefundTransaction($order_id)
+        {          
+            WPAM_Logger::log_debug('WooCommerce integration - order refunded. Order ID: '.$order_id);
+            //$order = new WC_Order($order_id);
+            $txn_id = $order_id;
+            WPAM_Commission_Tracking::refund_commission($txn_id);
         }
 
         public function jigoshopNewOrder($order_id)

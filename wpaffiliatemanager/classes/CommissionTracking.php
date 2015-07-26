@@ -65,6 +65,52 @@ class WPAM_Commission_Tracking {
         }
     }
     
+    public static function refund_commission($txn_id){
+        WPAM_Logger::log_debug('Commission refund handler function has been invoked for PURCHASE LOG ID: '.$txn_id);
+        global $wpdb;
+        $table = WPAM_TRANSACTIONS_TBL;
+        $query = "
+        SELECT *
+        FROM ".WPAM_TRANSACTIONS_TBL."
+        WHERE referenceId = %s
+        AND amount < 0
+        AND type = 'refund'
+        ";
+        $txn_record = $wpdb->get_row($wpdb->prepare($query, $txn_id));
+        if($txn_record != null) {  //found a refunded commission record                       
+            WPAM_Logger::log_debug('Commission for this sale has already been refunded. PURCHASE LOG ID: '.$txn_id); 
+            return;
+        } 
+        else { //find the commission record           
+            $query = "
+            SELECT *
+            FROM ".WPAM_TRANSACTIONS_TBL."
+            WHERE referenceId = %s
+            AND type = 'credit'
+            ";
+            $txn_record = $wpdb->get_row($wpdb->prepare($query, $txn_id));
+            if($txn_record != null) {  //found the original commission record 
+                $description = $txn_record->description;
+                $description = str_replace("Credit", "Refund", $txn_record->description);
+                $data = array();
+                $data['dateModified'] = date("Y-m-d H:i:s", time());
+                $data['dateCreated'] = date("Y-m-d H:i:s", time());
+                $data['referenceId'] = $txn_id;
+                $data['affiliateId'] = $txn_record->affiliateId;
+                $data['type'] = 'refund';
+                $data['description'] = $description;
+                $data['amount'] = '-'.$txn_record->amount;
+                $wpdb->insert( $table, $data);
+                WPAM_Logger::log_debug('Commission refunded ('.$txn_record->amount.') for PURCHASE LOG ID: '.$txn_id.', Affiliate ID: '.$txn_record->affiliateId); 
+                return;
+            }           
+            else{
+                WPAM_Logger::log_debug('No commission record found for PURCHASE LOG ID: '.$txn_id.'. Commission cannot be refunded!');
+                return;
+            }
+        }
+    }
+    
     /*
      * Gets total transaction count for a given affiliate.
      * $args array requires at least 3 elements 
