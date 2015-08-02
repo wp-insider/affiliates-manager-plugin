@@ -9,7 +9,15 @@ class WPAM_Util_EmailHandler {
 		//#61 override email & name
 		add_filter( 'wp_mail_from', array( $this, 'filterMailAddress' ) );
 		add_filter( 'wp_mail_from_name', array( $this, 'filterMailName' ) );
-		wp_mail( $address, $subject, $message );
+                WPAM_Logger::log_debug($subject);
+                WPAM_Logger::log_debug("Sending an email to ".$address);
+		$mail_sent = wp_mail( $address, $subject, $message );
+                if($mail_sent==true){
+                    WPAM_Logger::log_debug("Email was sent successfully by WordPress");
+                }
+                else{
+                    WPAM_Logger::log_debug("Email could not be sent by WordPress");
+                }
 		remove_filter( 'wp_mail_from', array( $this, 'filterMailAddress' ) );
 		remove_filter( 'wp_mail_from_name', array( $this, 'filterMailName' ) );		
 	}
@@ -40,7 +48,15 @@ class WPAM_Util_EmailHandler {
             $tags = array("{blogname}","{affusername}","{affpassword}","{affloginurl}");
             $vals = array($blogname, $username, $user_pass, $login_url);
             $body = str_replace($tags,$vals,$message);
-            wp_mail( $address, $subject, $body );
+            WPAM_Logger::log_debug($subject);
+            WPAM_Logger::log_debug("Sending an email to ".$address);
+            $mail_sent = wp_mail( $address, $subject, $body );
+            if($mail_sent==true){
+                WPAM_Logger::log_debug("Email was sent successfully by WordPress");
+            }
+            else{
+                WPAM_Logger::log_debug("Email could not be sent by WordPress");
+            }
             remove_filter( 'wp_mail_from', array( $this, 'filterMailAddress' ) );
             remove_filter( 'wp_mail_from_name', array( $this, 'filterMailName' ) );
         }
