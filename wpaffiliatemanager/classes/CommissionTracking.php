@@ -1,6 +1,19 @@
 <?php
 class WPAM_Commission_Tracking {
     
+    public static function handle_commission_tracking_hook($args)
+    {
+        /*
+        * The args array must have the following 3 details
+        * $args['txn_id']
+        * $args['amount']
+        * $args['aff_id']
+        */
+   
+        WPAM_Logger::log_debug('handle_commission_tracking_hook() - Txn ID : '.$args['txn_id'].', Amount: '.$args['amount'].', Affiliate ID: '.$args['aff_id']);
+        WPAM_Commission_Tracking::award_commission($args);
+    }
+            
     public static function award_commission($args){
         global $wpdb;
         $txn_id = $args['txn_id'];

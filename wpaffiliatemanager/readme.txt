@@ -135,6 +135,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = TODO2.1.2 =
 - Plugin now logs information when a registration email is sent to an affiliate
+- Added a new hook to award commission from an external plugin/extension.
 
 = 2.1.1 =
 - Plugin can now reverse commission for a refunded WooCommerce order

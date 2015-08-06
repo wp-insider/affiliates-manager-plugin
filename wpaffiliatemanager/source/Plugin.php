@@ -120,6 +120,9 @@ class WPAM_Plugin
 		//set up base actions
 		add_action('init', array( $this, 'onInit' ) );
                 
+                /*** General integration hook handler ***/
+                add_action('wpam_process_affiliate_commission', array('WPAM_Commission_Tracking','handle_commission_tracking_hook'));
+                
 		/*** Start integration handler hooks ***/
                 //Getshopped/WP-eCommerce
 		add_action('wpsc_transaction_result_cart_item', array( $this, 'onWpscCheckout' ) );
@@ -145,11 +148,7 @@ class WPAM_Plugin
                 //Jigoshop integration
                 add_action('jigoshop_new_order', array($this, 'jigoshopNewOrder'));
                 /*** End integration hooks ***/
-                
-		if ( WPAM_DEBUG ) {
-			add_filter( 'all', array( $this, 'hookDebug' ) );
-			add_action( 'all', array( $this, 'hookDebug' ) );
-		}
+
 	}
 
         public function define_constants(){
@@ -313,10 +312,6 @@ class WPAM_Plugin
                 return $form_output;
             }
         }
-
-	public function hookDebug( $name ) {
-		//file_put_contents( '/tmp/hooks.txt', "{$name}\n", FILE_APPEND );
-	}
 	
 	public function onCurrentScreen( $screen ) {
 		//#64 only show this libary on the pages that need it (ones that use jquery-ui-tabs)
