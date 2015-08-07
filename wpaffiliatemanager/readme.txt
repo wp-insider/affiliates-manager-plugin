@@ -133,7 +133,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.1.2 =
+= 2.1.2 =
 - Plugin now logs information when a registration email is sent to an affiliate
 - Added a new hook to award commission from an external plugin/extension.
 
