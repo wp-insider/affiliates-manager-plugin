@@ -31,20 +31,20 @@ function wpam_display_addons_menu()
         'page_url' => 'https://wpaffiliatemanager.com/sign-affiliates-to-mailpoet-list/',
     );
     array_push($addons_data, $addon_3);
-
+    
     $addon_4 = array(
-        'name' => 'Infusionsoft Integration',
-        'thumbnail' => WPAM_URL . '/images/addons/infusionsoft-integration.png',
-        'description' => 'Automatically signup your affiliates to a specific tag in Your Infusionsoft account.',
-        'page_url' => 'https://wpaffiliatemanager.com/infusionsoft-affiliates-manager-plugin-integration/',
+        'name' => 'Referral Bonus',
+        'thumbnail' => WPAM_URL . '/images/addons/affiliate-referral-bonus-addon.png',
+        'description' => 'Award bonus commission to an affiliate when they refer another affiliate to your site.',
+        'page_url' => 'https://wpaffiliatemanager.com/award-bonus-commission-for-referring-an-affiliate/',
     );
     array_push($addons_data, $addon_4);
 
     $addon_5 = array(
-        'name' => 'PMPRO Integration',
-        'thumbnail' => WPAM_URL . '/images/addons/pmpro-integration.png',
-        'description' => 'Integrates with paid membership pro plugin so you can reward affiliates for sending members.',
-        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-paid-memberships-pro-integration/',
+        'name' => 'Simple Membership',
+        'thumbnail' => WPAM_URL . '/images/addons/simple-membership-integration.png',
+        'description' => 'Integrates with the Simple Membership plugin so you can reward affiliates for sending members.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-and-simple-membership-integration/',
     );
     array_push($addons_data, $addon_5);
     
@@ -103,6 +103,22 @@ function wpam_display_addons_menu()
         'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-wp-estore-integration/',
     );
     array_push($addons_data, $addon_12);
+        
+    $addon_13 = array(
+        'name' => 'PMPRO Integration',
+        'thumbnail' => WPAM_URL . '/images/addons/pmpro-integration.png',
+        'description' => 'Integrates with paid membership pro plugin so you can reward affiliates for sending members.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-paid-memberships-pro-integration/',
+    );
+    array_push($addons_data, $addon_13);
+    
+    $addon_14 = array(
+        'name' => 'Infusionsoft Integration',
+        'thumbnail' => WPAM_URL . '/images/addons/infusionsoft-integration.png',
+        'description' => 'Automatically signup your affiliates to a specific tag in Your Infusionsoft account.',
+        'page_url' => 'https://wpaffiliatemanager.com/infusionsoft-affiliates-manager-plugin-integration/',
+    );
+    array_push($addons_data, $addon_14);
     
     //Display the list
     $output = '';
