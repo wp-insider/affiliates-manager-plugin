@@ -57,10 +57,10 @@ function wpam_display_addons_menu()
     array_push($addons_data, $addon_6);
     
     $addon_7 = array(
-        'name' => 'S2member Integration',
-        'thumbnail' => WPAM_URL . '/images/addons/s2member-integration.png',
-        'description' => 'Integrates with s2member plugin so you can reward affiliates for sending members.',
-        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-s2member-integration/',
+        'name' => 'WP eStore Integration',
+        'thumbnail' => WPAM_URL . '/images/addons/wp-estore-plugin.png',
+        'description' => 'Integrates with WP eStore plugin so you can reward affiliates for sending customer.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-wp-estore-integration/',
     );
     array_push($addons_data, $addon_7);
     
@@ -87,38 +87,46 @@ function wpam_display_addons_menu()
         'page_url' => 'https://wpaffiliatemanager.com/tracking-affiliate-commission-using-woocommerce-coupons-or-discount-codes/',
     );
     array_push($addons_data, $addon_10);
-    
+
     $addon_11 = array(
+        'name' => 'Woo Product Commission',
+        'thumbnail' => WPAM_URL . '/images/addons/woo-product-specific-commission.png',
+        'description' => 'Allows you to configure product specific commission for your WooCommerce products.',
+        'page_url' => 'https://wpaffiliatemanager.com/product-specific-affiliate-commission-for-woocommerce-products/',
+    );
+    array_push($addons_data, $addon_11);
+    
+    $addon_12 = array(
         'name' => 'GetResponse Integration',
         'thumbnail' => WPAM_URL . '/images/addons/getresponse-integration-addon.png',
         'description' => 'Automatically signup your affiliates to a specific list in your GetResponse account',
         'page_url' => 'https://wpaffiliatemanager.com/signup-affiliates-getresponse-list/',
     );
-    array_push($addons_data, $addon_11);
-
-    $addon_12 = array(
-        'name' => 'WP eStore Integration',
-        'thumbnail' => WPAM_URL . '/images/addons/wp-estore-plugin.png',
-        'description' => 'Integrates with WP eStore plugin so you can reward affiliates for sending customer.',
-        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-wp-estore-integration/',
-    );
     array_push($addons_data, $addon_12);
-        
+
     $addon_13 = array(
+        'name' => 'S2member Integration',
+        'thumbnail' => WPAM_URL . '/images/addons/s2member-integration.png',
+        'description' => 'Integrates with s2member plugin so you can reward affiliates for sending members.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-s2member-integration/',
+    );
+    array_push($addons_data, $addon_13);
+        
+    $addon_14 = array(
         'name' => 'PMPRO Integration',
         'thumbnail' => WPAM_URL . '/images/addons/pmpro-integration.png',
         'description' => 'Integrates with paid membership pro plugin so you can reward affiliates for sending members.',
         'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-paid-memberships-pro-integration/',
     );
-    array_push($addons_data, $addon_13);
+    array_push($addons_data, $addon_14);
     
-    $addon_14 = array(
+    $addon_15 = array(
         'name' => 'Infusionsoft Integration',
         'thumbnail' => WPAM_URL . '/images/addons/infusionsoft-integration.png',
         'description' => 'Automatically signup your affiliates to a specific tag in Your Infusionsoft account.',
         'page_url' => 'https://wpaffiliatemanager.com/infusionsoft-affiliates-manager-plugin-integration/',
     );
-    array_push($addons_data, $addon_14);
+    array_push($addons_data, $addon_15);
     
     //Display the list
     $output = '';
