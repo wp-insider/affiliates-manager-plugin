@@ -133,7 +133,8 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.1.4 =
+= 2.1.4 =
+- Updated Spanish language translation in the plugin. The translation file was submitted by Manuel Ballesta Ruiz.
 - Added a new filter and addon to award product specific commission for WooCommerce products.
   https://wpaffiliatemanager.com/product-specific-affiliate-commission-for-woocommerce-products/
 
