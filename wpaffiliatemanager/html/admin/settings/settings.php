@@ -43,11 +43,11 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
                 -->
                 <?php
                 $wpam_plugin_tabs = array(
-                    'wpam-settings' => 'General',
-                    'wpam-settings&action=affiliate-registration' => 'Affiliate Registration',
-                    'wpam-settings&action=messaging' => 'Messaging',
-                    'wpam-settings&action=payment' => 'Payment',
-                    'wpam-settings&action=affiliate-pages' => 'Pages/Forms',
+                    'wpam-settings' => __('General', 'wpam'),
+                    'wpam-settings&action=affiliate-registration' => __('Affiliate Registration', 'wpam'),
+                    'wpam-settings&action=messaging' => __('Messaging', 'wpam'),
+                    'wpam-settings&action=payment' => __('Payment', 'wpam'),
+                    'wpam-settings&action=affiliate-pages' => __('Pages/Forms', 'wpam'),
                 ); 
 
                 if(isset($_GET['page'])){
@@ -112,7 +112,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
                 }
                 ?>
 		<div style="margin: 10px;">
-			<input class="button-primary" type="submit" name="btnSubmit" id="btnSubmit" value="Save Settings" />
+			<input class="button-primary" type="submit" name="btnSubmit" id="btnSubmit" value="<?php _e('Save Settings', 'wpam');?>" />
 		</div>
 
 

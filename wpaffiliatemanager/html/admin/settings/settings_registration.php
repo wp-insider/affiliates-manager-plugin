@@ -449,7 +449,7 @@ jQuery(function($) {
 	</tr>
         <tr>
 		<th width="200">
-			<label for="txtTnC">Terms and Conditions</label>
+			<label for="txtTnC"><?php _e('Terms and Conditions', 'wpam');?></label>
 			<img id="tncInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
 		</th>
 		<td>
@@ -458,7 +458,7 @@ jQuery(function($) {
 	</tr>
         <tr>
 		<th width="200">
-			<label for="affhomemsg">Affiliates Homepage Message</label>
+			<label for="affhomemsg"><?php _e('Affiliates Homepage Message', 'wpam');?></label>
 		</th>
 		<td>
 			<textarea id="affhomemsg" name="affhomemsg" cols="60" rows="20"><?php echo $this->viewData['request']['affhomemsg']?></textarea>

@@ -14,10 +14,10 @@
 		<table style="width: 600px">
 			<tr>
 				<td style="width: 300px; text-align: center; vertical-align: middle">
-					<a href="<?php echo admin_url("admin.php?page=wpam-payments&step=select_affiliates")?>" class="button-primary">New Mass Payment</a>
+					<a href="<?php echo admin_url("admin.php?page=wpam-payments&step=select_affiliates")?>" class="button-primary"><?php _e('New Mass Payment', 'wpam');?></a>
 				</td>
 				<td style="width: 300px; text-align: center; vertical-align: middle">
-					<a href="<?php echo admin_url("admin.php?page=wpam-payments&step=view_payments")?>" class="button-primary">View Previous Mass Payments</a>
+					<a href="<?php echo admin_url("admin.php?page=wpam-payments&step=view_payments")?>" class="button-primary"><?php _e('View Previous Mass Payments', 'wpam');?></a>
 				</td>
 			</tr>
 		</table>

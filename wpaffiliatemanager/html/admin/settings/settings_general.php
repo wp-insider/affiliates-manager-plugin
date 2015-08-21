@@ -97,7 +97,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
 	<tr>
 		<th width="200">
 			<label for="txtMinimumPayout">
-				Minimum Payout Amount
+				<?php _e('Minimum Payout Amount', 'wpam'); ?>
 			</label>
 		</th>
 		<td>
@@ -106,7 +106,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
 	</tr>
 	<tr>
     	<th width="200">
-            <label for="txtCookieExpire">Cookie Duration (days)</label>
+            <label for="txtCookieExpire"><?php _e('Cookie Duration (days)', 'wpam');?></label>
 			<img id="cookieInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
         </th>
         <td>
@@ -115,29 +115,29 @@ frequency of creative views), which in turn may slow down page loads where a cre
 	</tr>
  	<tr>
     	<th width="200">
-            <label for="txtEmailName">Email name</label>
+            <label for="txtEmailName"><?php _e('Email name', 'wpam');?></label>
 			<img class="emailInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
         </th>
         <td>
         	<input type="text" size="30" name="txtEmailName" id="txtEmailName" value="<?php echo $this->viewData['request']['txtEmailName']?>" />
-			<span>(Leave blank to use WordPress default)</span>
+			<span><?php _e('(Leave blank to use WordPress default)', 'wpam');?></span>
         </td>
 	</tr>
  	<tr>
     	<th width="200">
-            <label for="txtEmailAddress">Email address</label>
+            <label for="txtEmailAddress"><?php _e('Email address', 'wpam');?></label>
 			<img class="emailInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
         </th>
         <td>
         	<input type="text" size="30" name="txtEmailAddress" id="txtEmailAddress" value="<?php echo $this->viewData['request']['txtEmailAddress']?>" />
-			<span>(Leave blank to use WordPress default)</span>
+			<span><?php _e('(Leave blank to use WordPress default)', 'wpam');?></span>
         </td>
 	</tr>
         
         <tr>
 		<th width="200">
 			<label for="autoaffapprove">
-				Automatically approve a new affiliate
+				<?php _e('Automatically approve a new affiliate', 'wpam');?>
 			</label>
 		</th>
 		<td>
@@ -201,13 +201,13 @@ frequency of creative views), which in turn may slow down page loads where a cre
         <th scope="row"><label for="enable_debug"><?php echo __('Enable Debug','wpam'); ?></label></th>
         <td>
         <input name="enable_debug" type="checkbox"<?php if($this->viewData['request']['enable_debug']=='1') echo ' checked="checked"'; ?> value="1"/>
-        <p class="description">If checked, debug output will be written to log files. This is useful for troubleshooting post payment failures.</p>
-        <p class="description">You can check the debug log file by clicking on the link below (The log file can be viewed using any text editor):</p>
+        <p class="description"><?php _e('If checked, debug output will be written to log files. This is useful for troubleshooting post payment failures.', 'wpam');?></p>
+        <p class="description"><?php _e('You can check the debug log file by clicking on the link below (The log file can be viewed using any text editor):', 'wpam');?></p>
         
         <p><a href="<?php echo WPAM_URL.'/logs/wpam-log.txt'; ?>" target="_blank">wpam-log.txt</a></p>    
         <div class="submit">
-            <input type="submit" name="wpam_reset_logfile" class="button" style="color:red" value="Reset Debug Log file"/> 
-            <p class="descripiton">Use it to reset the affiliate manager plugin's log file.</p>
+            <input type="submit" name="wpam_reset_logfile" class="button" style="color:red" value="<?php _e('Reset Debug Log file', 'wpam');?>"/> 
+            <p class="descripiton"><?php _e("Use it to reset the affiliate manager plugin's log file.", "wpam");?></p>
         </div>
         </td></tr>
         
