@@ -315,9 +315,7 @@ class WPAM_Plugin
 	
 	public function onCurrentScreen( $screen ) {
 		//#64 only show this libary on the pages that need it (ones that use jquery-ui-tabs)
-		if ( $screen->id == 'toplevel_page_wpam-affiliates' ||
-			 strpos( $screen->id, 'affiliates_page' ) === 0 ) {
-			
+		if ( strpos( $screen->id, 'wpam' ) !== false ) {
 			wp_register_style('wpam_style', WPAM_URL . "/style/style.css");
 			wp_enqueue_style('wpam_style');
 			
