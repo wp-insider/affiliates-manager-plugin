@@ -133,9 +133,10 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.1.5 =
+= 2.1.5 =
 - fixed a bug so jQuery ui loads correctly when the language is not set in English.
 - Added a new option to prevent zero amount commission from being recorded.
+- Updated the pot file in the plugin.
 
 = 2.1.4 =
 - Updated Spanish language translation in the plugin. The translation file was submitted by Manuel Ballesta Ruiz.

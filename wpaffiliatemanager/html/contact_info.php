@@ -42,7 +42,7 @@ if( is_admin() ){
 				?>
 				<tr>
 					<td><label for="_<?php echo $field->databaseField; ?>">
-						<?php echo $field->name; ?>
+						<?php _e( $field->name, 'wpam' ); ?>
 						</label>
 						<?php
 						echo $field->required ? '&nbsp;*': '';

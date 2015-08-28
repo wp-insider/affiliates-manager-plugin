@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Affiliate Manager\n"
-"POT-Creation-Date: 2015-08-11 15:44+1000\n"
-"PO-Revision-Date: 2015-08-11 15:44+1000\n"
+"POT-Creation-Date: 2015-08-28 15:49+1000\n"
+"PO-Revision-Date: 2015-08-28 15:49+1000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,6 +22,7 @@ msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
 msgstr ""
 
 #: classes/ListAffiliatesTable.php:40 html/admin/manage_creatives.php:176
+#: html/admin/paypalpayments/pending_payments.php:23
 msgid "View"
 msgstr ""
 
@@ -31,6 +32,8 @@ msgstr ""
 
 #: classes/ListAffiliatesTable.php:62 html/transaction_table.php:47
 #: html/admin/creatives_detail.php:239 html/admin/manage_creatives.php:165
+#: html/admin/paypalpayments/pending_payments.php:16
+#: html/admin/paypalpayments/view_payment_detail.php:61
 msgid "Status"
 msgstr ""
 
@@ -427,6 +430,7 @@ msgid "I have read and agree to the"
 msgstr ""
 
 #: html/affiliate_register_form.php:70
+#: html/admin/settings/settings_registration.php:452
 msgid "Terms and Conditions"
 msgstr ""
 
@@ -501,10 +505,14 @@ msgstr ""
 
 #: html/impressions_table.php:6 html/transaction_table.php:44
 #: html/admin/creatives_detail.php:234 html/admin/manage_creatives.php:164
+#: html/admin/paypalpayments/pending_payments.php:10
+#: html/admin/paypalpayments/view_payment_detail.php:57
 msgid "ID"
 msgstr ""
 
 #: html/impressions_table.php:7 html/transaction_table.php:46
+#: html/admin/paypalpayments/view_payment_detail.php:17
+#: html/admin/paypalpayments/view_payment_detail.php:58
 msgid "Date Occurred"
 msgstr ""
 
@@ -537,6 +545,7 @@ msgid "Clear"
 msgstr ""
 
 #: html/transaction_table.php:48
+#: html/admin/paypalpayments/view_payment_detail.php:62
 msgid "Description"
 msgstr ""
 
@@ -545,6 +554,9 @@ msgid "Reference ID"
 msgstr ""
 
 #: html/transaction_table.php:50
+#: html/admin/paypalpayments/pending_payments.php:13
+#: html/admin/paypalpayments/view_payment_detail.php:20
+#: html/admin/paypalpayments/view_payment_detail.php:63
 msgid "Amount"
 msgstr ""
 
@@ -789,7 +801,7 @@ msgid "Block"
 msgstr ""
 
 #: html/admin/affiliate_detail.php:531 html/admin/creatives_detail.php:227
-#: html/admin/creative_update_form.php:126
+#: html/admin/creative_update_form.php:126 html/admin/settings/settings.php:46
 msgid "General"
 msgstr ""
 
@@ -1012,9 +1024,19 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
+#: html/admin/paypalpayments/home.php:17
+msgid "New Mass Payment"
+msgstr ""
+
+#: html/admin/paypalpayments/home.php:20
+msgid "View Previous Mass Payments"
+msgstr ""
+
 #: html/admin/paypalpayments/not_configured.php:2
+#: html/admin/paypalpayments/pending_payments.php:3
 #: html/admin/paypalpayments/review_affiliates.php:45
-#: html/admin/paypalpayments/select_affiliates.php:102 source/Plugin.php:101
+#: html/admin/paypalpayments/select_affiliates.php:102
+#: html/admin/paypalpayments/view_payment_detail.php:7 source/Plugin.php:101
 #: source/Plugin.php:102
 msgid "PayPal Mass Pay"
 msgstr ""
@@ -1028,6 +1050,40 @@ msgstr ""
 msgid ""
 "You have not configured the Affiliate Manager with your PayPal account "
 "information. You can do so in the <a href=\"%s\">Payment Settings page</a>."
+msgstr ""
+
+#: html/admin/paypalpayments/pending_payments.php:4
+msgid "View Existing Payments"
+msgstr ""
+
+#: html/admin/paypalpayments/pending_payments.php:11
+msgid "Date Posted"
+msgstr ""
+
+#: html/admin/paypalpayments/pending_payments.php:12
+msgid "PayPal ID"
+msgstr ""
+
+#: html/admin/paypalpayments/pending_payments.php:14
+#: html/admin/paypalpayments/view_payment_detail.php:21
+msgid "Fee"
+msgstr ""
+
+#: html/admin/paypalpayments/pending_payments.php:15
+msgid "Total"
+msgstr ""
+
+#: html/admin/paypalpayments/pending_payments.php:36
+msgid "(No Mass Payments on Record)"
+msgstr ""
+
+#: html/admin/paypalpayments/reconcile_file_review.php:66
+#: html/admin/paypalpayments/reconcile_manual.php:81
+msgid "Reoncile Mass Payment"
+msgstr ""
+
+#: html/admin/paypalpayments/reconcile_with_file.php:54
+msgid "Reconcile with this file"
 msgstr ""
 
 #: html/admin/paypalpayments/review_affiliates.php:10
@@ -1062,10 +1118,12 @@ msgstr ""
 
 #: html/admin/paypalpayments/review_affiliates.php:57
 #: html/admin/paypalpayments/select_affiliates.php:128
+#: html/admin/paypalpayments/view_payment_detail.php:60
 msgid "PayPal E-Mail"
 msgstr ""
 
 #: html/admin/paypalpayments/review_affiliates.php:60
+#: html/admin/settings/settings.php:49
 msgid "Payment"
 msgstr ""
 
@@ -1117,6 +1175,103 @@ msgstr ""
 msgid "Continue with these payments"
 msgstr ""
 
+#: html/admin/paypalpayments/view_payment_detail.php:8
+msgid "Payment Detail"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:16
+msgid "Database ID"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:18
+msgid "PayPal Timestamp"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:19
+msgid "PayPal Correlation ID"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:22
+msgid "Total Amount"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:26
+msgid "Reconciliation"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:29
+msgid "Manually reconcile payments ... "
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:30
+msgid "Reoncile using PayPal Mass Payment results file ... "
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:37
+msgid "Errors"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:40
+msgid "Code:"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:41
+msgid "Message:"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:42
+msgid "Severity:"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:52
+msgid "Associated Transactions"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:59
+msgid "Affiliate"
+msgstr ""
+
+#: html/admin/settings/settings.php:47
+msgid "Affiliate Registration"
+msgstr ""
+
+#: html/admin/settings/settings.php:48
+msgid "Messaging"
+msgstr ""
+
+#: html/admin/settings/settings.php:50
+msgid "Pages/Forms"
+msgstr ""
+
+#: html/admin/settings/settings.php:115
+msgid "Save Settings"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:100
+msgid "Minimum Payout Amount"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:109
+msgid "Cookie Duration (days)"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:118
+msgid "Email name"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:123
+#: html/admin/settings/settings_general.php:133
+msgid "(Leave blank to use WordPress default)"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:128
+msgid "Email address"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:140
+msgid "Automatically approve a new affiliate"
+msgstr ""
+
 #: html/admin/settings/settings_general.php:174
 msgid "Currency Symbol"
 msgstr ""
@@ -1125,12 +1280,36 @@ msgstr ""
 msgid "Currency Code"
 msgstr ""
 
-#: html/admin/settings/settings_general.php:192
+#: html/admin/settings/settings_general.php:193
+msgid "Do Not Record Zero Amount Commission"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:206
 msgid "Enable Impressions"
 msgstr ""
 
-#: html/admin/settings/settings_general.php:201
+#: html/admin/settings/settings_general.php:215
 msgid "Enable Debug"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:218
+msgid ""
+"If checked, debug output will be written to log files. This is useful for "
+"troubleshooting post payment failures."
+msgstr ""
+
+#: html/admin/settings/settings_general.php:219
+msgid ""
+"You can check the debug log file by clicking on the link below (The log file "
+"can be viewed using any text editor):"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:223
+msgid "Reset Debug Log file"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:224
+msgid "Use it to reset the affiliate manager plugin's log file."
 msgstr ""
 
 #: html/admin/settings/settings_messaging.php:66
@@ -1323,6 +1502,10 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
+#: html/admin/settings/settings_registration.php:461
+msgid "Affiliates Homepage Message"
+msgstr ""
+
 #: source/display_functions.php:11
 msgid "Affiliate has applied, but is waiting on your decision."
 msgstr ""
@@ -1388,12 +1571,12 @@ msgstr ""
 msgid "Invalid PaPpal API value"
 msgstr ""
 
-#: source/Plugin.php:77 source/Plugin.php:573
+#: source/Plugin.php:77 source/Plugin.php:571
 msgid "Affiliate Management"
 msgstr ""
 
-#: source/Plugin.php:78 source/Plugin.php:83 source/Plugin.php:549
-#: source/Plugin.php:563 source/Plugin.php:573
+#: source/Plugin.php:78 source/Plugin.php:83 source/Plugin.php:547
+#: source/Plugin.php:561 source/Plugin.php:571
 msgid "Affiliates"
 msgstr ""
 
@@ -1433,47 +1616,47 @@ msgstr ""
 msgid "Lost your password?"
 msgstr ""
 
-#: source/Plugin.php:344
+#: source/Plugin.php:342
 msgid "Become an affiliate"
 msgstr ""
 
-#: source/Plugin.php:345
+#: source/Plugin.php:343
 msgid "Are you interested in earning money by directing visitors to our site?"
 msgstr ""
 
-#: source/Plugin.php:347
+#: source/Plugin.php:345
 msgid "Sign up"
 msgstr ""
 
-#: source/Plugin.php:347
+#: source/Plugin.php:345
 msgid " to become an affiliate today!"
 msgstr ""
 
-#: source/Plugin.php:564
+#: source/Plugin.php:562
 msgid "Be An Affiliate"
 msgstr ""
 
-#: source/Plugin.php:598
+#: source/Plugin.php:596
 msgid "Settings"
 msgstr ""
 
-#: source/Plugin.php:602
+#: source/Plugin.php:600
 msgid "Affiliates Manager Click Tracking"
 msgstr ""
 
-#: source/Plugin.php:602 source/Admin-menu/wpam-clicks-menu.php:8
+#: source/Plugin.php:600 source/Admin-menu/wpam-clicks-menu.php:8
 msgid "Click Tracking"
 msgstr ""
 
-#: source/Plugin.php:606 source/Admin-menu/wpam-addons-menu.php:6
+#: source/Plugin.php:604 source/Admin-menu/wpam-addons-menu.php:6
 msgid "Affiliates Manager Add-ons"
 msgstr ""
 
-#: source/Plugin.php:606
+#: source/Plugin.php:604
 msgid "Add-ons"
 msgstr ""
 
-#: source/Plugin.php:735
+#: source/Plugin.php:733
 msgid "Invalid JSON handler."
 msgstr ""
 
