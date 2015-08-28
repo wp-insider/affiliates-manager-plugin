@@ -186,6 +186,20 @@ frequency of creative views), which in turn may slow down page loads where a cre
                         <input type="text" id="affCurrencyCode" name="affCurrencyCode" size="5" value="<?php echo $this->viewData['request']['affCurrencyCode']?>" />
                 </td>
         </tr>
+        
+        <tr>
+		<th width="200">
+			<label for="doNotRecordZeroAmtCommission">
+				<?php _e('Do Not Record Zero Amount Commission', 'wpam');?>
+			</label>
+		</th>
+		<td>
+			<input type="checkbox" id="doNotRecordZeroAmtCommission" name="doNotRecordZeroAmtCommission" <?php
+			if ($this->viewData['request']['doNotRecordZeroAmtCommission'])
+				echo 'checked="checked"';
+			?>/>
+		</td>
+	</tr>
 
         <tr>
                 <th width="200">

@@ -54,6 +54,14 @@ class WPAM_Commission_Tracking {
             {
                 $creditAmount = $affiliate->bountyAmount;
             }
+            $creditAmount = round($creditAmount, 2);
+            //checking to see if "do not record zero amount commission" option is enabled
+            if(get_option(WPAM_PluginConfig::$AffdoNotRecordZeroAmtCommission) == 1){              
+                if($creditAmount <= 0){
+                    WPAM_Logger::log_debug('The commission amount for this transaction is 0 or less so this will not be recorded.');
+                    return;
+                }
+            }
             $creditAmount = apply_filters( 'wpam_credit_amount', $creditAmount, $amount, $txn_id );
             $currency = WPAM_MoneyHelper::getCurrencyCode();
             $description = "Credit for sale of $amount $currency (PURCHASE LOG ID = $txn_id)";

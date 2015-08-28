@@ -65,6 +65,11 @@ class WPAM_Pages_Admin_SettingsPage {
                 } else {
                     update_option(WPAM_PluginConfig::$AutoAffiliateApproveIsEnabledOption, 0);
                 }
+                if (isset($request['doNotRecordZeroAmtCommission'])) {
+                    update_option(WPAM_PluginConfig::$AffdoNotRecordZeroAmtCommission, 1);
+                } else {
+                    update_option(WPAM_PluginConfig::$AffdoNotRecordZeroAmtCommission, 0);
+                }
                 if (isset($request['chkImpressions'])) {
                     update_option(WPAM_PluginConfig::$AffEnableImpressions, 1);
                 } else {
@@ -195,6 +200,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['affBountyAmount'] = $request['affBountyAmount'];
             $response->viewData['request']['affCurrencySymbol'] = $request['affCurrencySymbol'];
             $response->viewData['request']['affCurrencyCode'] = $request['affCurrencyCode'];
+            $response->viewData['request']['doNotRecordZeroAmtCommission'] = isset($request['doNotRecordZeroAmtCommission']) ? 1 : 0;
             $response->viewData['request']['chkImpressions'] = isset($request['chkImpressions']) ? 1 : 0;
             $response->viewData['request']['enable_debug'] = isset($request['enable_debug']) ? 1 : 0;
             $response->viewData['request']['chkPayoutMethodCheck'] = isset($request['chkPayoutMethodCheck']) ? 1 : 0;
@@ -218,6 +224,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['affBountyAmount'] = get_option(WPAM_PluginConfig::$AffBountyAmount);
             $response->viewData['request']['affCurrencySymbol'] = get_option(WPAM_PluginConfig::$AffCurrencySymbol);
             $response->viewData['request']['affCurrencyCode'] = get_option(WPAM_PluginConfig::$AffCurrencyCode);
+            $response->viewData['request']['doNotRecordZeroAmtCommission'] = get_option(WPAM_PluginConfig::$AffdoNotRecordZeroAmtCommission);
             $response->viewData['request']['chkImpressions'] = get_option(WPAM_PluginConfig::$AffEnableImpressions);
             $response->viewData['request']['enable_debug'] = get_option(WPAM_PluginConfig::$AffEnableDebug);
             $response->viewData['request']['chkPayoutMethodCheck'] = get_option(WPAM_PluginConfig::$PayoutMethodCheckIsEnabledOption);
