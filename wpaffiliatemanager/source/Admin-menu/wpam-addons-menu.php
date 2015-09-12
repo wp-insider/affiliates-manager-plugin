@@ -128,6 +128,14 @@ function wpam_display_addons_menu()
     );
     array_push($addons_data, $addon_15);
     
+    $addon_16 = array(
+        'name' => 'Optimizemember',
+        'thumbnail' => WPAM_URL . '/images/addons/optimizemember-integration.png',
+        'description' => 'Integrates with optimizemember plugin so you can reward affiliates for sending members.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-and-optimizemember-plugin-integration/',
+    );
+    array_push($addons_data, $addon_16);
+    
     //Display the list
     $output = '';
     foreach ($addons_data as $addon) {
