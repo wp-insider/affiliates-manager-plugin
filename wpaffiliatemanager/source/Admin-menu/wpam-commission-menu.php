@@ -191,7 +191,7 @@ function wpam_display_manual_commission_tab()
     </tr>
     
     <tr valign="top">
-    <th scope="row"><label for="wpam_date_created"><?php _e('Date Created', 'wpam');?></label></th>
+    <th scope="row"><label for="wpam_date_created"><?php _e('Date', 'wpam');?></label></th>
     <td><input name="wpam_date_created" type="text" id="wpam_date_created" size="15" value="<?php echo date("Y-m-d");?>" class="regular-text">
     <p class="description"><?php _e('Enter the date in yyyy-mm-dd format. Example: ', 'wpam');?>2015-09-17</p></td>
     </tr>

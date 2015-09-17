@@ -133,7 +133,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO 2.1.6 =
+= 2.1.6 =
 - Updated the spanish language translation file.
 - Added a new menu to show all affiliate commissions.
 - Added a new option to manually award commissions to your affiliates.
