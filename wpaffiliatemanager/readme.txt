@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal 
 Requires at least: 3.5
 Tested up to: 4.3
-Stable tag: 2.1.5
+Stable tag: 2.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -135,6 +135,8 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = TODO 2.1.6 =
 - Updated the spanish language translation file.
+- Added a new menu to show all affiliate commissions.
+- Added a new option to manually award commissions to your affiliates.
 
 = 2.1.5 =
 - fixed a bug so jQuery ui loads correctly when the language is not set in English.
