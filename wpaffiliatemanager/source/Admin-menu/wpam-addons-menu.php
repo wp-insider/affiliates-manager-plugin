@@ -136,6 +136,14 @@ function wpam_display_addons_menu()
     );
     array_push($addons_data, $addon_16);
     
+    $addon_17 = array(
+        'name' => 'Woo Revenue Share',
+        'thumbnail' => WPAM_URL . '/images/addons/woo-revenue-share.png',
+        'description' => 'Allows you to share revenue with partners for your WooCommerce products.',
+        'page_url' => 'https://wpaffiliatemanager.com/share-revenue-partner-woocommerce-products/',
+    );
+    array_push($addons_data, $addon_17);
+    
     //Display the list
     $output = '';
     foreach ($addons_data as $addon) {
