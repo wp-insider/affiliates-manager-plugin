@@ -126,7 +126,7 @@ class WPAM_Tracking_RequestTracker {
 		if ( isset( $request[WPAM_PluginConfig::$RefKey] ) ) {
 			$strRefKey = $request[WPAM_PluginConfig::$RefKey];
 		} else {
-			throw new Exception(  __( 'no refkey in request.', 'wpam' ) );
+			throw new Exception(  __( 'no refkey in request.', 'affiliates-manager' ) );
 		}
 
 		if ( ! array_key_exists( WPAM_PluginConfig::$RefKey, $_COOKIE ) ) 
@@ -183,7 +183,7 @@ class WPAM_Tracking_RequestTracker {
 				var_export($affiliateId);
 				echo "\n\n";
 				echo $refKey;
-				throw new Exception( __( 'invalid refkey data.', 'wpam' ) );
+				throw new Exception( __( 'invalid refkey data.', 'affiliates-manager' ) );
 			}
 
 			//#37 make sure the affiliate is active before tracking stats
@@ -223,7 +223,7 @@ class WPAM_Tracking_RequestTracker {
 		if ( isset( $request[WPAM_PluginConfig::$RefKey] ) ) {
 			$strRefKey = $request[WPAM_PluginConfig::$RefKey];
 		} else {
-			throw new Exception(  __( 'no refkey in request.', 'wpam' ) );
+			throw new Exception(  __( 'no refkey in request.', 'affiliates-manager' ) );
 		}
 
 		$refKey = new WPAM_Tracking_TrackingKey();
@@ -234,7 +234,7 @@ class WPAM_Tracking_RequestTracker {
 		$affiliateId = $affiliateRepos->getAffiliateIdFromRefKey( $refKey->getAffiliateRefKey() );
 
 		if ( $affiliateId === NULL ) {
-			throw new Exception( __( 'invalid refkey data: ', 'wpam' ) . $strRefKey );
+			throw new Exception( __( 'invalid refkey data: ', 'affiliates-manager' ) . $strRefKey );
 		}
 
 		$impressionModel = new WPAM_Data_Models_ImpressionModel();

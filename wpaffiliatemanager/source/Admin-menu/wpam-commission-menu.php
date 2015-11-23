@@ -5,11 +5,11 @@ function wpam_display_commission_menu()
 {
     ?>
     <div class="wrap">
-    <h2><?php _e('Affiliate Commissions', 'wpam');?></h2>
+    <h2><?php _e('Affiliate Commissions', 'affiliates-manager');?></h2>
     <?php
     $wpam_commission_tabs = array(
-        'wpam-commission' => __('Overall Commissions', 'wpam'),
-        'wpam-commission&action=manual-commission' => __('Manual Commission', 'wpam'),
+        'wpam-commission' => __('Overall Commissions', 'affiliates-manager'),
+        'wpam-commission&action=manual-commission' => __('Manual Commission', 'affiliates-manager'),
     ); 
 
     if(isset($_GET['page'])){
@@ -45,7 +45,7 @@ function wpam_display_commission_menu()
 function wpam_display_overall_commission_tab()
 {
     ?>   
-    <p><?php _e('This tab shows all affiliate commission data', 'wpam');?></p>
+    <p><?php _e('This tab shows all affiliate commission data', 'affiliates-manager');?></p>
     <div id="poststuff"><div id="post-body">
     <?php        
     
@@ -101,15 +101,15 @@ function wpam_display_manual_commission_tab()
         $error_msg = '';
         $aff_id = trim($_POST["wpam_aff_id"]);
         if(empty($aff_id)){
-            $error_msg .= '<p>'.__('You need to enter an affiliate ID', 'wpam').'</p>';;
+            $error_msg .= '<p>'.__('You need to enter an affiliate ID', 'affiliates-manager').'</p>';;
         }
         $commission_amt = trim($_POST["wpam_commission_amt"]);
         if(!is_numeric($commission_amt)){
-            $error_msg .= '<p>'.__('You need to enter a numeric commission amount', 'wpam').'</p>';;
+            $error_msg .= '<p>'.__('You need to enter a numeric commission amount', 'affiliates-manager').'</p>';;
         }
         $purchase_amt = trim($_POST["wpam_purchase_amt"]);
         if(!is_numeric($purchase_amt)){
-            $error_msg .= '<p>'.__('You need to enter a numeric purchase amount', 'wpam').'</p>';;
+            $error_msg .= '<p>'.__('You need to enter a numeric purchase amount', 'affiliates-manager').'</p>';;
         }
         $txn_id = trim($_POST["wpam_txn_id"]);
         if(empty($txn_id)){
@@ -132,7 +132,7 @@ function wpam_display_manual_commission_tab()
         ";
         $txn_record = $wpdb->get_row($wpdb->prepare($query, $txn_id));
         if($txn_record != null) {  //found a record
-            $error_msg .= '<p>'.__('A commission with this transaction ID already exists', 'wpam').'</p>';
+            $error_msg .= '<p>'.__('A commission with this transaction ID already exists', 'affiliates-manager').'</p>';
         }
         
         if(empty($error_msg)){ //no error in form submission
@@ -149,7 +149,7 @@ function wpam_display_manual_commission_tab()
             $wpdb->insert( $table, $data);
 
             echo '<div id="message" class="updated fade"><p><strong>';
-            echo __('Commission added!', 'wpam');
+            echo __('Commission added!', 'affiliates-manager');
             echo '</strong></p></div>';
         }
         else{
@@ -159,7 +159,7 @@ function wpam_display_manual_commission_tab()
         }
     }
     ?>
-    <p><?php _e('This tab allows you to manually award commission to an affiliate.', 'wpam');?></p>
+    <p><?php _e('This tab allows you to manually award commission to an affiliate.', 'affiliates-manager');?></p>
     <div id="poststuff"><div id="post-body">
             
     <form method="post" action="">
@@ -167,33 +167,33 @@ function wpam_display_manual_commission_tab()
     <table class="form-table" border="0" cellspacing="0" cellpadding="6" style="max-width:650px;">
 
     <tr valign="top">
-    <th scope="row"><label for="wpam_aff_id"><?php _e('Affiliate ID', 'wpam');?></label></th>
+    <th scope="row"><label for="wpam_aff_id"><?php _e('Affiliate ID', 'affiliates-manager');?></label></th>
     <td><input name="wpam_aff_id" type="text" id="wpam_aff_id" size="15" value="" class="regular-text">
-    <p class="description"><?php _e('Enter the affiliate ID. Example: ', 'wpam');?>1</p></td>
+    <p class="description"><?php _e('Enter the affiliate ID. Example: ', 'affiliates-manager');?>1</p></td>
     </tr>
     
     <tr valign="top">
-    <th scope="row"><label for="wpam_commission_amt"><?php _e('Commission Amount', 'wpam');?></label></th>
+    <th scope="row"><label for="wpam_commission_amt"><?php _e('Commission Amount', 'affiliates-manager');?></label></th>
     <td><input name="wpam_commission_amt" type="text" id="wpam_commission_amt" size="15" value="" class="regular-text">
-    <p class="description"><?php _e('Enter the commission amount. Example: ', 'wpam');?>5.00</p></td>
+    <p class="description"><?php _e('Enter the commission amount. Example: ', 'affiliates-manager');?>5.00</p></td>
     </tr>
     
     <tr valign="top">
-    <th scope="row"><label for="wpam_purchase_amt"><?php _e('Purchase Amount', 'wpam');?></label></th>
+    <th scope="row"><label for="wpam_purchase_amt"><?php _e('Purchase Amount', 'affiliates-manager');?></label></th>
     <td><input name="wpam_purchase_amt" type="text" id="wpam_purchase_amt" size="15" value="" class="regular-text">
-    <p class="description"><?php _e('Enter the purchase amount. Example: ', 'wpam');?>15.00</p></td>
+    <p class="description"><?php _e('Enter the purchase amount. Example: ', 'affiliates-manager');?>15.00</p></td>
     </tr>
     
     <tr valign="top">
-    <th scope="row"><label for="wpam_txn_id"><?php _e('Transaction ID', 'wpam');?></label></th>
+    <th scope="row"><label for="wpam_txn_id"><?php _e('Transaction ID', 'affiliates-manager');?></label></th>
     <td><input name="wpam_txn_id" type="text" id="wpam_txn_id" size="15" value="" class="regular-text">
-    <p class="description"><?php _e('Enter the unique transaction ID (leave empty to generate a unique ID). Example: ', 'wpam');?>1423</p></td>
+    <p class="description"><?php _e('Enter the unique transaction ID (leave empty to generate a unique ID). Example: ', 'affiliates-manager');?>1423</p></td>
     </tr>
     
     <tr valign="top">
-    <th scope="row"><label for="wpam_date_created"><?php _e('Date', 'wpam');?></label></th>
+    <th scope="row"><label for="wpam_date_created"><?php _e('Date', 'affiliates-manager');?></label></th>
     <td><input name="wpam_date_created" type="text" id="wpam_date_created" size="15" value="<?php echo date("Y-m-d");?>" class="regular-text">
-    <p class="description"><?php _e('Enter the date in yyyy-mm-dd format. Example: ', 'wpam');?>2015-09-17</p></td>
+    <p class="description"><?php _e('Enter the date in yyyy-mm-dd format. Example: ', 'affiliates-manager');?>2015-09-17</p></td>
     </tr>
 
     <td width="25%" align="left">

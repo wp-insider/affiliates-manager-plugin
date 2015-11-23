@@ -11,7 +11,7 @@ class WPAM_Validation_NumberValidator implements WPAM_Validation_IValidator
 {
 	function getError()
 	{
-		return __( 'must be a number', 'wpam' );
+		return __( 'must be a number', 'affiliates-manager' );
 	}
 
 	function isValid($value)

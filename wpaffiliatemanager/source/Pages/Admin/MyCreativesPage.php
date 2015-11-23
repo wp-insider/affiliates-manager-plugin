@@ -54,9 +54,9 @@ class WPAM_Pages_Admin_MyCreativesPage extends WPAM_Pages_Admin_AdminPage
 
 			$response->viewData['request'] = $request;
 			$response->viewData['statusFilters'] = array(
-				'all' => __( 'All', 'wpam' ),
-				'active' => __( 'Active', 'wpam' ),
-				'inactive' => __( 'Inactive', 'wpam' ),
+				'all' => __( 'All', 'affiliates-manager' ),
+				'active' => __( 'Active', 'affiliates-manager' ),
+				'inactive' => __( 'Inactive', 'affiliates-manager' ),
 			);
 			return $response;
 		}
@@ -105,7 +105,7 @@ class WPAM_Pages_Admin_MyCreativesPage extends WPAM_Pages_Admin_AdminPage
 		$db = new WPAM_Data_DataAccess();
 		$creative = $db->getCreativesRepository()->load($request['creativeId']);
 		if ($creative === NULL)
-			wp_die( __( 'Invalid creative.', 'wpam' ) );
+			wp_die( __( 'Invalid creative.', 'affiliates-manager' ) );
 		
 		// load up the request, show the form
 		$request['txtName'] = $creative->name;
@@ -154,7 +154,7 @@ class WPAM_Pages_Admin_MyCreativesPage extends WPAM_Pages_Admin_AdminPage
 			if ( isset( $file['error'] ) ) {
 				$validator->addError(
 					new WPAM_Validation_ValidatorError( 'fileImageNew',
-														sprintf ( __( 'Image Upload Error: %s', 'wpam' ), $file['error'] ) ) );
+														sprintf ( __( 'Image Upload Error: %s', 'affiliates-manager' ), $file['error'] ) ) );
 			} else {
 				//successfully uploaded an image
 				$object = array(
@@ -219,7 +219,7 @@ class WPAM_Pages_Admin_MyCreativesPage extends WPAM_Pages_Admin_AdminPage
 			}
 			else
 			{
-				wp_die( __( 'Insert failed: Bad creative type.', 'wpam' ) );
+				wp_die( __( 'Insert failed: Bad creative type.', 'affiliates-manager' ) );
 			}
 			$model->slug = $request['txtSlug'];
 			$model->name = $request['txtName'];
@@ -228,18 +228,18 @@ class WPAM_Pages_Admin_MyCreativesPage extends WPAM_Pages_Admin_AdminPage
 			$response = new WPAM_Pages_TemplateResponse('admin/creatives_detail');
 			if ($request['action'] === 'edit')
 			{
-				$response->viewData['updateMessage'] = __( 'Creative Updated.', 'wpam' );
+				$response->viewData['updateMessage'] = __( 'Creative Updated.', 'affiliates-manager' );
 				$creativesRepo->update($model);
 			}
 			else if ($request['action'] === 'new')
 			{
 				$id = $creativesRepo->insert($model);
 				$model->creativeId = $id;
-				$response->viewData['updateMessage'] = __( 'Creative ... created.', 'wpam' );
+				$response->viewData['updateMessage'] = __( 'Creative ... created.', 'affiliates-manager' );
 			}
 			else
 			{
-				wp_die( __( 'Insert failed: invalid creative update mechanism.', 'wpam' ) );
+				wp_die( __( 'Insert failed: invalid creative update mechanism.', 'affiliates-manager' ) );
 			}
 			
 			$response->viewData['request'] = $request;
@@ -258,14 +258,14 @@ class WPAM_Pages_Admin_MyCreativesPage extends WPAM_Pages_Admin_AdminPage
 	protected function doDetailView($request)
 	{
 		if (!is_numeric($request['creativeId']))
-			wp_die( __('Invalid creative.', 'wpam' ) );
+			wp_die( __('Invalid creative.', 'affiliates-manager' ) );
 
 		$creativeId = (int)$request['creativeId'];
 		$db = new WPAM_Data_DataAccess();
 		$model = $db->getCreativesRepository()->load($creativeId);
 
 		if ($model === NULL)
-			wp_die( __('Invalid creative.', 'wpam' ) );
+			wp_die( __('Invalid creative.', 'affiliates-manager' ) );
 
 		$response = new WPAM_Pages_TemplateResponse('admin/creatives_detail');
 		$response->viewData['creative'] = $model;

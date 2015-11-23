@@ -8,19 +8,19 @@
 
 function wpam_get_status_desc( $status ) {
 	switch ( $status ) {
-		case 'applied': return __( 'Affiliate has applied, but is waiting on your decision.', 'wpam' );
-		case 'approved': return __( 'Affiliate has been approved, but has not accepted terms.', 'wpam' );
-		case 'active': return __( 'Affiliate is active, and will receive credit for leads.', 'wpam' );
-		case 'confirmed': return __( 'Affiliate has accepted terms and provided payment details.<br /> If the details look good, you should activate this affiliate so they can begin sending traffic.', 'wpam' );
-		case 'inactive': return __( 'Affiliate has been disabled.', 'wpam' );
-		case 'declined': return __( 'Affiliate was declined.', 'wpam' );
-		case 'blocked': return __( 'Affiliate was blocked and cannot re-apply.', 'wpam' );
+		case 'applied': return __( 'Affiliate has applied, but is waiting on your decision.', 'affiliates-manager' );
+		case 'approved': return __( 'Affiliate has been approved, but has not accepted terms.', 'affiliates-manager' );
+		case 'active': return __( 'Affiliate is active, and will receive credit for leads.', 'affiliates-manager' );
+		case 'confirmed': return __( 'Affiliate has accepted terms and provided payment details.<br /> If the details look good, you should activate this affiliate so they can begin sending traffic.', 'affiliates-manager' );
+		case 'inactive': return __( 'Affiliate has been disabled.', 'affiliates-manager' );
+		case 'declined': return __( 'Affiliate was declined.', 'affiliates-manager' );
+		case 'blocked': return __( 'Affiliate was blocked and cannot re-apply.', 'affiliates-manager' );
 	}
 }
 
 function wpam_format_bounty( $bountyType, $bountyAmount ) {
 	if ( $bountyType === 'fixed' ) {
-		return sprintf( __( '%s per sale', 'wpam' ), $bountyAmount );
+		return sprintf( __( '%s per sale', 'affiliates-manager' ), $bountyAmount );
 	} else if ( $bountyType === 'percent' ) {
 		return sprintf( '%s%% of pre-tax sales', $bountyAmount );
 	}
@@ -157,19 +157,19 @@ function wpam_format_money( $money, $add_span = true ) {
 function wpam_format_status( $status ) {
 	switch ( $status ) {
 		case 'applied':
-			return __( 'Applied', 'wpam' );	
+			return __( 'Applied', 'affiliates-manager' );	
 		case 'declined':
-			return __( 'Declined', 'wpam' );
+			return __( 'Declined', 'affiliates-manager' );
 		case 'approved':
-			return __( 'Approved', 'wpam' );
+			return __( 'Approved', 'affiliates-manager' );
 		case 'active':
-			return __( 'Active', 'wpam' );			
+			return __( 'Active', 'affiliates-manager' );			
 		case 'inactive':
-			return __( 'Inactive', 'wpam' );			
+			return __( 'Inactive', 'affiliates-manager' );			
 		case 'confirmed':
-			return __( 'Confirmed', 'wpam' );			
+			return __( 'Confirmed', 'affiliates-manager' );			
 		case 'blocked':
-			return __( 'Blocked', 'wpam' );			
+			return __( 'Blocked', 'affiliates-manager' );			
 	}
 }
 

@@ -11,7 +11,7 @@ class WPAM_Validation_EmailValidator implements WPAM_Validation_IValidator
 	public function __construct() { }
 
 	function getError() {
-		return __( 'must be a valid e-mail address', 'wpam' );
+		return __( 'must be a valid e-mail address', 'affiliates-manager' );
 	}
 
 	function isValid($value) {

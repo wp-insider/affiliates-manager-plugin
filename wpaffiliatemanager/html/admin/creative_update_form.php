@@ -79,7 +79,7 @@ DIV#previewImageDiv.loading {
 		  modal: true,
 		  draggable: false,
 		  buttons: [ {
-			  text : '<?php _e( 'OK', 'wpam' ) ?>',
+			  text : '<?php _e( 'OK', 'affiliates-manager' ) ?>',
 			  click : function() { $(this).dialog('close'); }
 			} ]
 		};
@@ -100,12 +100,12 @@ DIV#previewImageDiv.loading {
 
 <div id="image_help" style="display: none;">
         <p>
-<?php _e('This list contains images from the media library. If you upload a new image it is added to the media library and you can reuse images on multiple creatives by selecting it from this list. If a new image file is added, it will be uploaded and will override the currently selected media library image for this creative link. However, the old image will still remain in the media library for future use.', 'wpam' ) ?>
+<?php _e('This list contains images from the media library. If you upload a new image it is added to the media library and you can reuse images on multiple creatives by selecting it from this list. If a new image file is added, it will be uploaded and will override the currently selected media library image for this creative link. However, the old image will still remain in the media library for future use.', 'affiliates-manager' ) ?>
        </p>
 </div>
 
 <div class="wrap">
-	 <h2><?php echo $this->viewData['request']['action'] == 'edit' ? __( 'Edit', 'wpam' ) : __( 'New', 'wpam' ) ?> <?php _e( 'Creative', 'wpam' ) ?></h2>
+	 <h2><?php echo $this->viewData['request']['action'] == 'edit' ? __( 'Edit', 'affiliates-manager' ) : __( 'New', 'affiliates-manager' ) ?> <?php _e( 'Creative', 'affiliates-manager' ) ?></h2>
 
 <?php
 require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
@@ -123,14 +123,14 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 		<table class="widefat">
 			<thead>
 			<tr>
-				<th colspan="2"><?php _e( 'General', 'wpam' ) ?></th>
+				<th colspan="2"><?php _e( 'General', 'affiliates-manager' ) ?></th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr>
 				<td>
 					<label for="txtName">
-						<?php _e( 'Name', 'wpam' ) ?>
+						<?php _e( 'Name', 'affiliates-manager' ) ?>
 					</label>
 				</td>
 				<td>
@@ -140,14 +140,14 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 
 			<tr>
 				<td>
-					<label for="txtSlug"><?php _e( 'Landing Page', 'wpam' ) ?></label>
+					<label for="txtSlug"><?php _e( 'Landing Page', 'affiliates-manager' ) ?></label>
 				</td>
 				<td id="landing-page-slug">
 					<?php echo site_url( '/' ) ?><input type="text" id="txtSlug" name="txtSlug" size="30" value="<?php echo isset($this->viewData['request']['txtSlug']) ? $this->viewData['request']['txtSlug'] : ''; ?>" />
 				</td>
 			</tr>			
 			<tr>
-				<td width="200"><label for="ddType"><?php _e( 'Type', 'wpam' ) ?></label></td>
+				<td width="200"><label for="ddType"><?php _e( 'Type', 'affiliates-manager' ) ?></label></td>
 				<td>
 					<select id="ddType" name="ddType" style="width:150px">
 						<?php foreach ($this->viewData['creativeTypes'] as $value => $name) { ?>
@@ -167,13 +167,13 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 		<table class="widefat">
 			<theaD>
 			<tr>
-				<th colspan="2"><?php _e( 'Image Parameters', 'wpam' ) ?></th>
+				<th colspan="2"><?php _e( 'Image Parameters', 'affiliates-manager' ) ?></th>
 			</tr>
 			</theaD>
 			<tbody>
 			<tr>
 				<td width="200">
-					<label for="fileImageNew"><?php _e( 'New Image File', 'wpam' ) ?></label>
+					<label for="fileImageNew"><?php _e( 'New Image File', 'affiliates-manager' ) ?></label>
 				</td>
 				<td>
 					<input type="file" id="fileImageNew" name="fileImageNew" />
@@ -184,7 +184,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 			</tr>
 			<tr>
 				<td width="200">
-					<label for="ddFileImage"><?php _e( 'Image File from Media Library', 'wpam' ) ?></label>
+					<label for="ddFileImage"><?php _e( 'Image File from Media Library', 'affiliates-manager' ) ?></label>
 					<img id="imageInfo" style="cursor: pointer;" src="<?php echo WPAM_URL."/images/info_icon.png"?>"/>
 				</td>
 				<td>
@@ -194,7 +194,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 						<?php } ?>
 					</select>&nbsp;&nbsp;&nbsp;&nbsp;
 					<div id="imagePreview" style="display: none;">
-					<span><?php _e( 'Preview:', 'wpam' ) ?></span> <span style="color: red" id="previewError"></span>
+					<span><?php _e( 'Preview:', 'affiliates-manager' ) ?></span> <span style="color: red" id="previewError"></span>
 					<div id="previewImageDiv" style="margin: 5px; width: 400px; height: 300px; padding: 20px; border: 1px solid #ddd;">
 						<img id="previewImageElement" style="max-width: 400px; max-height: 300px;"/>
 					</div>
@@ -205,7 +205,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 			<tr>
 				<td width="200">
 					<label for="txtImageAltText">
-						<?php _e( 'Alt Text', 'wpam' ) ?>
+						<?php _e( 'Alt Text', 'affiliates-manager' ) ?>
 					</label>
 				</td>
 				<td>
@@ -221,7 +221,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 		<table class="widefat">
 			<thead>
 			<tr>
-				<th colspan="2"><?php _e( 'Text Link Parameters', 'wpam' ) ?></th>
+				<th colspan="2"><?php _e( 'Text Link Parameters', 'affiliates-manager' ) ?></th>
 			</tr>
 			</thead>
 
@@ -229,7 +229,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 			<tr>
 				<td width="200">
 					<label for="txtLinkText">
-						<?php _e( 'Link Text', 'wpam' ) ?>
+						<?php _e( 'Link Text', 'affiliates-manager' ) ?>
 					</label>
 				</td>
 				<td>
@@ -240,7 +240,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 			<tr>
 				<td width="200">
 					<label for="txtAltText">
-						<?php _e( 'Alt Text', 'wpam' ) ?>
+						<?php _e( 'Alt Text', 'affiliates-manager' ) ?>
 					</label>
 				</td>
 				<td>
@@ -253,7 +253,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 	</div>
 <br />
 	<div style="width: 700px; text-align: center">
-	<input class="button-primary" type="submit" id="btnSubmit" name="btnSubmit" value="<?php _e( 'Save Creative', 'wpam' ) ?>" />	
+	<input class="button-primary" type="submit" id="btnSubmit" name="btnSubmit" value="<?php _e( 'Save Creative', 'affiliates-manager' ) ?>" />	
 	</div>
 
 

@@ -26,7 +26,7 @@ class WPAM_MessageHelper
 		$msgRepo = self::$db->getMessageRepository();
 		$msg = $msgRepo->loadBy(array('name' => $name));
 		if ($msg === NULL)
-			throw new Exception( sprintf( __( "Attempt to load invalid message of name '%s'", 'wpam' ), $name ) );
+			throw new Exception( sprintf( __( "Attempt to load invalid message of name '%s'", 'affiliates-manager' ), $name ) );
 		return $msg->content;
 	}
 }

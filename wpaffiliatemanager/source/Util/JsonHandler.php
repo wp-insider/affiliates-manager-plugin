@@ -11,13 +11,13 @@ class WPAM_Util_JsonHandler
 	public function approveApplication($affiliateId, $bountyType, $bountyAmount)
 	{
 		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
-			throw new Exception( __('Access denied.', 'wpam' ) );
+			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
 
 		if (!is_numeric($bountyAmount))
-			throw new Exception( __( 'Invalid bounty amount.', 'wpam' ) );
+			throw new Exception( __( 'Invalid bounty amount.', 'affiliates-manager' ) );
 
 		if (!in_array($bountyType, array("fixed", "percent")))
-			throw new Exception( __('Invalid bounty type.', 'wpam' ) );
+			throw new Exception( __('Invalid bounty type.', 'affiliates-manager' ) );
 
 		$affiliateId = (int)$affiliateId;
 
@@ -25,7 +25,7 @@ class WPAM_Util_JsonHandler
 		$affiliate = $db->getAffiliateRepository()->load($affiliateId);
 
 		if ($affiliate === null)
-			throw new Exception( __('Invalid affiliate', 'wpam' ) );
+			throw new Exception( __('Invalid affiliate', 'affiliates-manager' ) );
 
 		if ( $affiliate->isPending() ) {
 			$userHandler = new WPAM_Util_UserHandler();
@@ -33,7 +33,7 @@ class WPAM_Util_JsonHandler
 
 			return new JsonResponse( JsonResponse::STATUS_OK );
 		} else {
-			throw new Exception( __( 'Invalid state transition.', 'wpam' ) );
+			throw new Exception( __( 'Invalid state transition.', 'affiliates-manager' ) );
 		}
 	}
 
@@ -41,7 +41,7 @@ class WPAM_Util_JsonHandler
 	public function declineApplication($affiliateId)
 	{
 		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
-			throw new Exception( __('Access denied.', 'wpam' ) );
+			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
 
 		$affiliateId = (int)$affiliateId;
 
@@ -49,7 +49,7 @@ class WPAM_Util_JsonHandler
 		$affiliate = $db->getAffiliateRepository()->load($affiliateId);
 
 		if ($affiliate === null)
-			throw new Exception( __( 'Invalid affiliate', 'wpam' ) );
+			throw new Exception( __( 'Invalid affiliate', 'affiliates-manager' ) );
 
 		if ($affiliate->isPending() || $affiliate->isBlocked())
 		{
@@ -57,7 +57,7 @@ class WPAM_Util_JsonHandler
 			if ($affiliate->isPending())
 			{
 				$mailer = new WPAM_Util_EmailHandler();
-				$mailer->mailAffiliate( $affiliate->email, sprintf( __( 'Affiliate Application for %s', 'wpam' ), $blogname ), WPAM_MessageHelper::GetMessage( 'affiliate_application_declined_email' ) );
+				$mailer->mailAffiliate( $affiliate->email, sprintf( __( 'Affiliate Application for %s', 'affiliates-manager' ), $blogname ), WPAM_MessageHelper::GetMessage( 'affiliate_application_declined_email' ) );
 			}
 			$affiliate->decline();
 			$db->getAffiliateRepository()->update($affiliate);
@@ -65,14 +65,14 @@ class WPAM_Util_JsonHandler
 		}
 		else
 		{
-			throw new Exception( __( 'Invalid state transition.', 'wpam' ) );
+			throw new Exception( __( 'Invalid state transition.', 'affiliates-manager' ) );
 		}
 	}
 
 	public function blockApplication($affiliateId)
 	{
 		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
-			throw new Exception( __('Access denied.', 'wpam' ) );
+			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
 
 		$affiliateId = (int)$affiliateId;
 
@@ -80,7 +80,7 @@ class WPAM_Util_JsonHandler
 		$affiliate = $db->getAffiliateRepository()->load($affiliateId);
 
 		if ($affiliate === null)
-			throw new Exception( __( 'Invalid affiliate', 'wpam' ) );
+			throw new Exception( __( 'Invalid affiliate', 'affiliates-manager' ) );
 
 		if ($affiliate->isPending() || $affiliate->isDeclined())
 		{
@@ -90,7 +90,7 @@ class WPAM_Util_JsonHandler
 		}
 		else
 		{
-			throw new Exception( __( 'Invalid state transition.', 'wpam' ) );
+			throw new Exception( __( 'Invalid state transition.', 'affiliates-manager' ) );
 		}
 
 	}
@@ -98,7 +98,7 @@ class WPAM_Util_JsonHandler
 	public function activateApplication($affiliateId)
 	{
 		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
-			throw new Exception( __('Access denied.', 'wpam' ) );
+			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
 
 		$affiliateId = (int)$affiliateId;
 
@@ -106,10 +106,10 @@ class WPAM_Util_JsonHandler
 		$affiliate = $db->getAffiliateRepository()->load($affiliateId);
 
 		if ($affiliate === NULL)
-			throw new Exception( __( 'Invalid affiliate', 'wpam' ) );
+			throw new Exception( __( 'Invalid affiliate', 'affiliates-manager' ) );
 
 		if ( !$affiliate->isConfirmed() && !$affiliate->isInactive() )
-			throw new Exception( __( 'Invalid state transition.', 'wpam' ) );
+			throw new Exception( __( 'Invalid state transition.', 'affiliates-manager' ) );
 
 		$affiliate->activate();
 		$db->getAffiliateRepository()->update($affiliate);
@@ -122,7 +122,7 @@ class WPAM_Util_JsonHandler
 	
 	public function deactivateApplication( $affiliateId ) {
 		if ( !wp_get_current_user()->has_cap( WPAM_PluginConfig::$AdminCap ) )
-			throw new Exception( __('Access denied.', 'wpam' ) );
+			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
 
 		$affiliateId = (int)$affiliateId;
 
@@ -130,10 +130,10 @@ class WPAM_Util_JsonHandler
 		$affiliate = $db->getAffiliateRepository()->load( $affiliateId );
 
 		if ( $affiliate === NULL )
-			throw new Exception( __( 'Invalid affiliate', 'wpam' ) );
+			throw new Exception( __( 'Invalid affiliate', 'affiliates-manager' ) );
 
 		if ( !$affiliate->isActive() )
-			throw new Exception( __('Access denied.', 'wpam' ) );
+			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
 
 		$affiliate->deactivate();
 		$db->getAffiliateRepository()->update( $affiliate );
@@ -147,10 +147,10 @@ class WPAM_Util_JsonHandler
 	public function setCreativeStatus($creativeId, $status)
 	{
 		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
-			throw new Exception( __('Access denied.', 'wpam' ) );
+			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
 
 		if (!in_array($status, array('inactive', 'active')))
-			throw new Exception( __( 'Invalid status.', 'wpam' ) );
+			throw new Exception( __( 'Invalid status.', 'affiliates-manager' ) );
 
 		$validTransitions = array(
 			'active' => array('inactive'),
@@ -163,10 +163,10 @@ class WPAM_Util_JsonHandler
 		$creative = $db->getCreativesRepository()->load($creativeId);
 
 		if ($creative === NULL)
-			throw new Exception(  __( 'Invalid creative', 'wpam' ) );
+			throw new Exception(  __( 'Invalid creative', 'affiliates-manager' ) );
 
 		if (!in_array($status, $validTransitions[$creative->status]))
-			throw new Exception( __( 'Invalid state transition.', 'wpam' ) );
+			throw new Exception( __( 'Invalid state transition.', 'affiliates-manager' ) );
 
 		$creative->status = $status;
 		$db->getCreativesRepository()->update($creative);
@@ -193,18 +193,18 @@ class WPAM_Util_JsonHandler
 	public function addTransaction($affiliateId, $type, $amount, $description = NULL)
 	{
 		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
-			throw new Exception( __('Access denied.', 'wpam' ) );
+			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
 
 		if (!in_array($type, array('credit', 'payout', 'adjustment')))
-			throw new Exception( __( 'Invalid transaction type.', 'wpam' ) );
+			throw new Exception( __( 'Invalid transaction type.', 'affiliates-manager' ) );
 
 		if (!is_numeric($amount))
-			throw new Exception( __( 'Invalid value for amount.', 'wpam' ) );
+			throw new Exception( __( 'Invalid value for amount.', 'affiliates-manager' ) );
 
 		$db = new WPAM_Data_DataAccess();
 
 		if (!$db->getAffiliateRepository()->exists($affiliateId))
-			throw new Exception( __( 'Invalid affiliate', 'wpam' ) );
+			throw new Exception( __( 'Invalid affiliate', 'affiliates-manager' ) );
 
 		$transaction = new WPAM_Data_Models_TransactionModel();
 		$transaction->type = $type;
@@ -221,11 +221,11 @@ class WPAM_Util_JsonHandler
 	public function deleteCreative($creativeId)
 	{
 		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
-			throw new Exception( __('Access denied.', 'wpam' ) );
+			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
 		$db = new WPAM_Data_DataAccess();
 
 		if (!$db->getCreativesRepository()->exists($creativeId))
-			throw new Exception( __( 'Invalid creative.', 'wpam' ) );
+			throw new Exception( __( 'Invalid creative.', 'affiliates-manager' ) );
 
 		$creative = $db->getCreativesRepository()->load($creativeId);
 		$creative->status = 'deleted';

@@ -12,7 +12,7 @@ class WPAM_Validation_CountryCodeValidator implements WPAM_Validation_IValidator
 {
 	public function getError()
 	{
-		return __( 'is required', 'wpam' );
+		return __( 'is required', 'affiliates-manager' );
 	}
 
 	public function isValid($value)

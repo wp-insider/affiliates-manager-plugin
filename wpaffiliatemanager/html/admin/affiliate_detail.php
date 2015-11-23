@@ -138,7 +138,7 @@ $user = $this->viewData['user'];
 		function declineConfirmClicked() {
 			jQuery('#dialog-confirm').dialog('option', 'buttons', [
 				{
-				  text : '<?php echo sprintf( __( 'YES, Block all applications from %s', 'wpam' ), $model->email ) ?>',
+				  text : '<?php echo sprintf( __( 'YES, Block all applications from %s', 'affiliates-manager' ), $model->email ) ?>',
 				  click : function() {
 					doJsonRequest({
 						handler : 'blockApplication',
@@ -147,7 +147,7 @@ $user = $this->viewData['user'];
 				  }
 				},
 				{
-				  text: '<?php _e( 'NO, They may re-apply', 'wpam' ) ?>',
+				  text: '<?php _e( 'NO, They may re-apply', 'affiliates-manager' ) ?>',
 				  click : function() {
 					doJsonRequest({
 						handler : 'declineApplication',
@@ -156,7 +156,7 @@ $user = $this->viewData['user'];
 				  }
 				} ]
 			);
-			jQuery("#confirmMessage").html('<?php _e( 'Do you want to block all future applications from this email address, or allow them to sign up at a later date?', 'wpam' ) ?>');
+			jQuery("#confirmMessage").html('<?php _e( 'Do you want to block all future applications from this email address, or allow them to sign up at a later date?', 'affiliates-manager' ) ?>');
 			jQuery("#dialog-confirm").dialog('open');
 
 
@@ -185,7 +185,7 @@ $user = $this->viewData['user'];
 		}
 
 		function applyPayoutConfirmClicked(amount) {
-			var adjustmentDescription = '<?php _e( 'Payout', 'wpam' ) ?>';
+			var adjustmentDescription = '<?php _e( 'Payout', 'affiliates-manager' ) ?>';
 			doAddTransaction('payout', amount, adjustmentDescription);
 		}
 
@@ -216,7 +216,7 @@ $user = $this->viewData['user'];
 			modal: true,
 			draggable: false,
 			buttons: [ {
-				  text : '<?php _e( 'OK', 'wpam' ) ?>',
+				  text : '<?php _e( 'OK', 'affiliates-manager' ) ?>',
 				  click : function() { jQuery(this).dialog('close'); }
 			} ]
 		});
@@ -233,7 +233,7 @@ $user = $this->viewData['user'];
 
 
                 //Add Cancel / OK buttons
-                jQuery( '#dialog-approveForm table' ).after( '<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix" style="border:none"><div class="ui-dialog-buttonset"><button type="button" name="ok" class="ok ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text"><?php _e( 'OK', 'wpam' ) ?></span></button><button type="button" name="cancel" class="cancel ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text"><?php _e( 'Cancel', 'wpam' ) ?></span></button></div></div>' );
+                jQuery( '#dialog-approveForm table' ).after( '<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix" style="border:none"><div class="ui-dialog-buttonset"><button type="button" name="ok" class="ok ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text"><?php _e( 'OK', 'affiliates-manager' ) ?></span></button><button type="button" name="cancel" class="cancel ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text"><?php _e( 'Cancel', 'affiliates-manager' ) ?></span></button></div></div>' );
 
                 //Close thickbox on cancel
                 jQuery('#dialog-approveForm button.cancel').click(function(){
@@ -246,8 +246,8 @@ $user = $this->viewData['user'];
 					{
                                             tb_remove();
 						showConfirmDialog(
-							'<?php _e( 'Are you sure you wish to approve this affiliate?', 'wpam' ) ?>',
-							'<?php _e( 'Yes, approve.', 'wpam' ) ?>',
+							'<?php _e( 'Are you sure you wish to approve this affiliate?', 'affiliates-manager' ) ?>',
+							'<?php _e( 'Yes, approve.', 'affiliates-manager' ) ?>',
 							approveConfirmClicked
 						);
 					}
@@ -276,11 +276,11 @@ $user = $this->viewData['user'];
 			autoOpen: false,
 			buttons: [
 				{
-				  text: '<?php _e( 'Cancel', 'wpam' ) ?>',
+				  text: '<?php _e( 'Cancel', 'affiliates-manager' ) ?>',
 				  click : function() { jQuery(this).dialog('close'); }
 				},
 				{
-				  text: '<?php _e( 'Apply', 'wpam' ) ?>',
+				  text: '<?php _e( 'Apply', 'affiliates-manager' ) ?>',
 				  click : function() {
 					if (validateAdjustmentForm())
 					{
@@ -289,8 +289,8 @@ $user = $this->viewData['user'];
 						var newBalance = currentBalance + amount;
 
 						showConfirmDialog(
-							'<?php _e( 'Are you sure you wish to apply an adjustment of ', 'wpam' ) ?>' + getFormattedMoneyHtml(amount) + '<?php _e( ' to this account? The new balance will be ', 'wpam' ) ?>' + getFormattedMoneyHtml(newBalance),
-							'<?php _e( 'Yes, apply it.', 'wpam' ) ?>',
+							'<?php _e( 'Are you sure you wish to apply an adjustment of ', 'affiliates-manager' ) ?>' + getFormattedMoneyHtml(amount) + '<?php _e( ' to this account? The new balance will be ', 'affiliates-manager' ) ?>' + getFormattedMoneyHtml(newBalance),
+							'<?php _e( 'Yes, apply it.', 'affiliates-manager' ) ?>',
 							applyAdjustmentConfirmClicked
 						);
 					}
@@ -307,11 +307,11 @@ $user = $this->viewData['user'];
 			autoOpen: false,
 			buttons: [
 				{
-				  text : '<?php _e( 'Cancel', 'wpam' ) ?>',
+				  text : '<?php _e( 'Cancel', 'affiliates-manager' ) ?>',
 				  click : function() { jQuery(this).dialog('close'); }
 				},
 				{
-				  text : '<?php _e( 'Apply', 'wpam' ) ?>',
+				  text : '<?php _e( 'Apply', 'affiliates-manager' ) ?>',
 				  click : function() {
 					if (validatePayoutForm())
 					{
@@ -331,8 +331,8 @@ $user = $this->viewData['user'];
 						var newBalance = currentBalance + amount;
 
 						showConfirmDialog(
-							'<?php _e( 'Are you sure you wish to apply a payout of ', 'wpam' ) ?>' + getFormattedMoneyHtml(amount*-1) + '<?php _e( ' to this account? The new balance will be ', 'wpam' ) ?>' + getFormattedMoneyHtml(newBalance),
-							'<?php _e( 'Yes, apply it.', 'wpam' ) ?>',
+							'<?php _e( 'Are you sure you wish to apply a payout of ', 'affiliates-manager' ) ?>' + getFormattedMoneyHtml(amount*-1) + '<?php _e( ' to this account? The new balance will be ', 'affiliates-manager' ) ?>' + getFormattedMoneyHtml(newBalance),
+							'<?php _e( 'Yes, apply it.', 'affiliates-manager' ) ?>',
 							function() { applyPayoutConfirmClicked(amount); }
 						);
 					}
@@ -366,11 +366,11 @@ $user = $this->viewData['user'];
 		});
 */
 		jQuery("#declinebutton").click(function() {
-			showConfirmDialog('<?php _e( 'Are you sure you wish to decline this affiliate?', 'wpam' ) ?>', '<?php _e( 'Yes, DECLINE.', 'wpam' ) ?>', declineConfirmClicked);
+			showConfirmDialog('<?php _e( 'Are you sure you wish to decline this affiliate?', 'affiliates-manager' ) ?>', '<?php _e( 'Yes, DECLINE.', 'affiliates-manager' ) ?>', declineConfirmClicked);
 		});
 
 		jQuery("#blockButton").click(function() {
-			showConfirmDialog('<?php _e( 'Are you sure you wish to block this affiliate?', 'wpam' ) ?>', '<?php _e( 'Yes, BLOCK.', 'wpam' ) ?>', function() {
+			showConfirmDialog('<?php _e( 'Are you sure you wish to block this affiliate?', 'affiliates-manager' ) ?>', '<?php _e( 'Yes, BLOCK.', 'affiliates-manager' ) ?>', function() {
 				doJsonRequest({
 					handler : 'blockApplication',
 					affiliateId : <?php echo $model->affiliateId?>
@@ -380,7 +380,7 @@ $user = $this->viewData['user'];
 		});
 
 		jQuery("#unblockButton").click(function() {
-			showConfirmDialog('<?php _e( 'Are you sure you wish to unblock this affiliate?<br>User will become DECLINED.', 'wpam' ) ?>', '<?php _e( 'Yes, UNBLOCK.', 'wpam' ) ?>', function() {
+			showConfirmDialog('<?php _e( 'Are you sure you wish to unblock this affiliate?<br>User will become DECLINED.', 'affiliates-manager' ) ?>', '<?php _e( 'Yes, UNBLOCK.', 'affiliates-manager' ) ?>', function() {
 				doJsonRequest({
 					handler : 'declineApplication',
 					affiliateId : <?php echo $model->affiliateId?>
@@ -391,11 +391,11 @@ $user = $this->viewData['user'];
 		});
 
 		jQuery("#activateButton").click(function() {
-			showConfirmDialog('<?php _e( 'Are you sure you wish to activate this affiliate?', 'wpam' ) ?>', '<?php _e( 'Yes, ACTIVATE.', 'wpam' ) ?>', activateConfirmClicked);
+			showConfirmDialog('<?php _e( 'Are you sure you wish to activate this affiliate?', 'affiliates-manager' ) ?>', '<?php _e( 'Yes, ACTIVATE.', 'affiliates-manager' ) ?>', activateConfirmClicked);
 		});
 
 		jQuery("#deactivateButton").click(function() {
-			showConfirmDialog('<?php _e( 'Are you sure you wish to deactivate this affiliate?', 'wpam' ) ?>', '<?php _e( 'Yes, DEACTIVATE.', 'wpam' ) ?>', deactivateConfirmClicked);
+			showConfirmDialog('<?php _e( 'Are you sure you wish to deactivate this affiliate?', 'affiliates-manager' ) ?>', '<?php _e( 'Yes, DEACTIVATE.', 'affiliates-manager' ) ?>', deactivateConfirmClicked);
 		});
 
 		jQuery("#_ddBountyType").change(function() {
@@ -414,24 +414,24 @@ $user = $this->viewData['user'];
 
 <div id="dialog-approveForm" style="display:none">
 	<h2>
-		<?php _e( 'Approve Application', 'wpam' ) ?>
+		<?php _e( 'Approve Application', 'affiliates-manager' ) ?>
 	</h2>
 
 	<table>
 		<tr>
 			<td>
-				<label for="_ddBountyType"><?php _e( 'Bounty Type', 'wpam' ) ?></label>
+				<label for="_ddBountyType"><?php _e( 'Bounty Type', 'affiliates-manager' ) ?></label>
 			</td>
 			<td>
 				<select id="_ddBountyType" name="ddBountyType">
-					<option value="percent"><?php _e( 'Percentage of Sales', 'wpam' ) ?></option>
-					<option value="fixed"><?php _e( 'Fixed Amount per Sale', 'wpam' ) ?></option>
+					<option value="percent"><?php _e( 'Percentage of Sales', 'affiliates-manager' ) ?></option>
+					<option value="fixed"><?php _e( 'Fixed Amount per Sale', 'affiliates-manager' ) ?></option>
 				</select>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<label id="_lblBountyAmount" for="_txtBountyAmount"><?php _e( 'Bounty Rate (% of Sale)', 'wpam' ) ?></label>
+				<label id="_lblBountyAmount" for="_txtBountyAmount"><?php _e( 'Bounty Rate (% of Sale)', 'affiliates-manager' ) ?></label>
 			</td>
 			<td>
 				<input type="text" id="_txtBountyAmount" name="txtBountyAmount" size="5"/>
@@ -443,29 +443,29 @@ $user = $this->viewData['user'];
 
 
 <div id="dialog-loading" style="display:none">
-	<div style="text-align: center"><?php _e( 'Updating, please wait ... ', 'wpam' ) ?></div><br />
+	<div style="text-align: center"><?php _e( 'Updating, please wait ... ', 'affiliates-manager' ) ?></div><br />
 	<div id="progressbar" class="ui-progressbar-value">
 
 	</div>
 </div>
-<div id="dialog-confirm" title="<?php _e( 'Are you sure?', 'wpam' ) ?>" style="display: none">
-	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><span id="confirmMessage"><?php _e( 'approve', 'wpam' ) ?></span></p>
+<div id="dialog-confirm" title="<?php _e( 'Are you sure?', 'affiliates-manager' ) ?>" style="display: none">
+	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><span id="confirmMessage"><?php _e( 'approve', 'affiliates-manager' ) ?></span></p>
 </div>
-<div id="dialog-error" title="<?php _e( 'Error', 'wpam' ) ?>" style="display: none">
-	<p><?php _e( 'ERROR:', 'wpam' ) ?> <span id="errorMsg"></span></p>
+<div id="dialog-error" title="<?php _e( 'Error', 'affiliates-manager' ) ?>" style="display: none">
+	<p><?php _e( 'ERROR:', 'affiliates-manager' ) ?> <span id="errorMsg"></span></p>
 </div>
 
-<div id="dialog-apply-adjustment" title="<?php _e( 'Apply Adjustment ', 'wpam' ) ?>" style="display: none">
+<div id="dialog-apply-adjustment" title="<?php _e( 'Apply Adjustment ', 'affiliates-manager' ) ?>" style="display: none">
 	<table>
 		<tbody>
 		<tr>
-			<td width="150"><label for="txtAdjustmentAmount"><?php _e( 'Amount ', 'wpam' ) ?></label></td>
+			<td width="150"><label for="txtAdjustmentAmount"><?php _e( 'Amount ', 'affiliates-manager' ) ?></label></td>
 			<td>
 				<input type="text" id="txtAdjustmentAmount" name="txtAdjustmentAmount" size="10"/>
 			</td>
 		</tr>
 		<tr>
-			<td><label for="txtAdjustmentDescription"><?php _e( 'Description ', 'wpam' ) ?></label></td>
+			<td><label for="txtAdjustmentDescription"><?php _e( 'Description ', 'affiliates-manager' ) ?></label></td>
 			<td>
 				<input type="text" id="txtAdjustmentDescription" name="txtDescription" size="30" />
 			</td>
@@ -474,17 +474,17 @@ $user = $this->viewData['user'];
 	</table>
 </div>
 
-<div id="dialog-apply-payout" title="<?php _e( 'Apply Payout ', 'wpam' ) ?>" style="display: none">
+<div id="dialog-apply-payout" title="<?php _e( 'Apply Payout ', 'affiliates-manager' ) ?>" style="display: none">
 	<table>
 		<tbody>
 		<tr>
-			<td width="150" style="vertical-align:top"><label for="txtAdjustmentAmount"><?php _e( 'Payout Amount ', 'wpam' ) ?></label></td>
+			<td width="150" style="vertical-align:top"><label for="txtAdjustmentAmount"><?php _e( 'Payout Amount ', 'affiliates-manager' ) ?></label></td>
 			<td>
 				<input name="payoutAmountType" type="radio" id="rbPayoutCurrentBalance" value="currentBalance" checked="checked" />
-				<label for="rbPayoutCurrentBalance"><?php _e( 'Current balance', 'wpam' ) ?> (<?php echo WPAM_MoneyHelper::getDollarSign(), $this->viewData['accountStanding']?>)</label><br />
+				<label for="rbPayoutCurrentBalance"><?php _e( 'Current balance', 'affiliates-manager' ) ?> (<?php echo WPAM_MoneyHelper::getDollarSign(), $this->viewData['accountStanding']?>)</label><br />
 
 				<input name="payoutAmountType" type="radio" id="rbPayoutOtherAmount" value="otherAmount">
-				<label for="rbPayoutOtherAmount"><?php _e( 'Other amount', 'wpam' ) ?></label><br>
+				<label for="rbPayoutOtherAmount"><?php _e( 'Other amount', 'affiliates-manager' ) ?></label><br>
 				<input type="text" id="txtPayoutAmount" name="txtPayoutAmount" size="10" style="display: none;" value="<?php echo sprintf("%01.2f", $this->viewData['accountStanding'])?>"/>
 			</td>
 		</tr>
@@ -493,18 +493,18 @@ $user = $this->viewData['user'];
 </div>
 
 <div class="wrap">
-<h2><?php _e( 'Affiliate:', 'wpam' ) ?> <?php echo $model->firstName . " " . $model->lastName?></h2>
+<h2><?php _e( 'Affiliate:', 'affiliates-manager' ) ?> <?php echo $model->firstName . " " . $model->lastName?></h2>
 
 <br /><br/>
 
 <div id="tabs">
     <ul>
-        <li><a href="#fragment-1"><span><?php _e( 'Overview', 'wpam' ) ?></span></a></li>
-        <li><a href="#fragment-2"><span><?php _e( 'Account Finances', 'wpam' ) ?></span></a></li>
-		<li><a href="#fragment-3"><span><?php _e( 'Information', 'wpam' ) ?></span></a></li>
-        <li><a href="#fragment-4"><span><?php _e( 'Affiliate Links', 'wpam' ) ?></span></a></li>
+        <li><a href="#fragment-1"><span><?php _e( 'Overview', 'affiliates-manager' ) ?></span></a></li>
+        <li><a href="#fragment-2"><span><?php _e( 'Account Finances', 'affiliates-manager' ) ?></span></a></li>
+		<li><a href="#fragment-3"><span><?php _e( 'Information', 'affiliates-manager' ) ?></span></a></li>
+        <li><a href="#fragment-4"><span><?php _e( 'Affiliate Links', 'affiliates-manager' ) ?></span></a></li>
 <?php if (get_option (WPAM_PluginConfig::$AffEnableImpressions)) { ?>
-        <li><a href="#fragment-5"><span><?php _e( 'Impressions', 'wpam' ) ?></span></a></li>
+        <li><a href="#fragment-5"><span><?php _e( 'Impressions', 'affiliates-manager' ) ?></span></a></li>
 <?php } ?>
     </ul>
     <div id="fragment-1">
@@ -513,30 +513,30 @@ $user = $this->viewData['user'];
 if ($model->isPending())
 {
 ?>
-				<a class="button-secondary thickbox" id="approvebutton" href="#TB_inline?height=300&width=500&inlineId=dialog-approveForm"><?php _e( 'Approve', 'wpam' ) ?></a>
-				<a id="declinebutton" class="button-secondary"><?php _e( 'Decline', 'wpam' ) ?></a>
+				<a class="button-secondary thickbox" id="approvebutton" href="#TB_inline?height=300&width=500&inlineId=dialog-approveForm"><?php _e( 'Approve', 'affiliates-manager' ) ?></a>
+				<a id="declinebutton" class="button-secondary"><?php _e( 'Decline', 'affiliates-manager' ) ?></a>
 <?php } else if ($model->isConfirmed() || $model->isInactive()) { ?>
-				<a class="button-secondary" id="activateButton"><?php _e( 'Activate', 'wpam' ) ?></a>
+				<a class="button-secondary" id="activateButton"><?php _e( 'Activate', 'affiliates-manager' ) ?></a>
 <?php } else if ($model->isActive()) { ?>
-				<a class="button-secondary" id="deactivateButton"><?php _e( 'Dectivate', 'wpam' ) ?></a>
+				<a class="button-secondary" id="deactivateButton"><?php _e( 'Dectivate', 'affiliates-manager' ) ?></a>
 <?php } else if ($model->isBlocked()) { ?>
-				<a class="button-secondary" id="unblockButton"><?php _e( 'Unblock', 'wpam' ) ?></a>
+				<a class="button-secondary" id="unblockButton"><?php _e( 'Unblock', 'affiliates-manager' ) ?></a>
 <?php } else if ($model->isDeclined()) { ?>
-				<a class="button-secondary" id="blockButton"><?php _e( 'Block', 'wpam' ) ?></a>
+				<a class="button-secondary" id="blockButton"><?php _e( 'Block', 'affiliates-manager' ) ?></a>
 <?php } ?>
 		</div>
 		<table class="widefat">
 			<thead>
 				<tr>
-					<th colspan="2"><?php _e( 'General', 'wpam' ) ?></th>
+					<th colspan="2"><?php _e( 'General', 'affiliates-manager' ) ?></th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr><td width="200"><?php _e( 'Date Applied', 'wpam' ) ?></td><td><?php echo date("m/d/Y H:i:s", $model->dateCreated)?></td></tr>
-				<tr><td><?php _e( 'Affiliate Status', 'wpam' ) ?></td><td><span class="status_<?php echo $model->status?>"><?php echo wpam_format_status( $model->status ) ?></span><br /><?php echo wpam_get_status_desc($model->status)?></td></tr>
+				<tr><td width="200"><?php _e( 'Date Applied', 'affiliates-manager' ) ?></td><td><?php echo date("m/d/Y H:i:s", $model->dateCreated)?></td></tr>
+				<tr><td><?php _e( 'Affiliate Status', 'affiliates-manager' ) ?></td><td><span class="status_<?php echo $model->status?>"><?php echo wpam_format_status( $model->status ) ?></span><br /><?php echo wpam_get_status_desc($model->status)?></td></tr>
 				<tr>
 					<td width="200">
-						<?php _e( 'Account Standing', 'wpam' ) ?>
+						<?php _e( 'Account Standing', 'affiliates-manager' ) ?>
 					</td>
 					<td>
 						<div style="margin: 5px; font-size: 2.0em;">
@@ -560,18 +560,18 @@ if ($model->isPending())
 		<table class="widefat">
 			<thead>
 				<tr>
-					<th colspan="2"><?php _e( 'Payment Details', 'wpam' ) ?></th>
+					<th colspan="2"><?php _e( 'Payment Details', 'affiliates-manager' ) ?></th>
 				</tr>
 			</thead>
 			<tbody>
-		<tr><td width="200"><?php _e( 'Bounty Type', 'wpam' ) ?></td><td><?php echo $model->getBountyType() ?></td></tr>
-				<tr><td><?php _e( 'Bounty Amount', 'wpam' ) ?></td><td><?php echo $model->bountyAmount?></td></tr>
+		<tr><td width="200"><?php _e( 'Bounty Type', 'affiliates-manager' ) ?></td><td><?php echo $model->getBountyType() ?></td></tr>
+				<tr><td><?php _e( 'Bounty Amount', 'affiliates-manager' ) ?></td><td><?php echo $model->bountyAmount?></td></tr>
 			<?php if ($model->isConfirmed() || $model->isActive()) { ?>
-			<tr><td><?php _e( 'Payment Method', 'wpam' ) ?></td><td><?php echo $model->getPaymentMethod() ?></td></tr>
+			<tr><td><?php _e( 'Payment Method', 'affiliates-manager' ) ?></td><td><?php echo $model->getPaymentMethod() ?></td></tr>
 				<?php if ($model->paymentMethod === 'paypal') { ?>
-					<tr><td><?php _e( 'Paypal E-Mail', 'wpam' ) ?></td><td><?php echo $model->paypalEmail?></td></tr>
+					<tr><td><?php _e( 'Paypal E-Mail', 'affiliates-manager' ) ?></td><td><?php echo $model->paypalEmail?></td></tr>
 				<?php } else if ($model->paymentMethod === 'check') { ?>
-					<tr><td><?php _e( 'Make Check Out To', 'wpam' ) ?></td><td><?php echo $model->nameOnCheck?></td></tr>
+					<tr><td><?php _e( 'Make Check Out To', 'affiliates-manager' ) ?></td><td><?php echo $model->nameOnCheck?></td></tr>
 				<?php } ?>
 			<?php } ?>
 			</tbody>
@@ -581,15 +581,15 @@ if ($model->isPending())
 		<table class="widefat">
 			<thead>
 				<tr>
-					<th colspan="2"><?php _e( 'Statistics', 'wpam' ) ?></th>
+					<th colspan="2"><?php _e( 'Statistics', 'affiliates-manager' ) ?></th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php if (get_option (WPAM_PluginConfig::$AffEnableImpressions)) { ?>
-				<tr><td width="200"><?php _e( 'Impressions', 'wpam' ) ?></td><td><?php echo $this->viewData['impressionCount'] ?></td></tr>
+				<tr><td width="200"><?php _e( 'Impressions', 'affiliates-manager' ) ?></td><td><?php echo $this->viewData['impressionCount'] ?></td></tr>
 				<?php } ?>
-				<tr><td width="200"><?php _e( 'Visits', 'wpam' ) ?></td><td><?php echo $this->viewData['visitCount'] ?></td></tr>
-				<tr><td width="200"><?php _e( 'Purchases', 'wpam' ) ?></td><td><?php echo $this->viewData['purchaseCount'] ?></td></tr>
+				<tr><td width="200"><?php _e( 'Visits', 'affiliates-manager' ) ?></td><td><?php echo $this->viewData['visitCount'] ?></td></tr>
+				<tr><td width="200"><?php _e( 'Purchases', 'affiliates-manager' ) ?></td><td><?php echo $this->viewData['purchaseCount'] ?></td></tr>
 			</tbody>
 		</table>
 		<br/><br/>
@@ -600,17 +600,17 @@ if ($model->isPending())
 	<div id="fragment-2">
 		<div class="accountSummaryBox">
 			<div style="font-size: 1.5em">
-				<?php _e( 'Balance:', 'wpam' ) ?> <?php echo wpam_format_money($this->viewData['accountStanding'])?>
+				<?php _e( 'Balance:', 'affiliates-manager' ) ?> <?php echo wpam_format_money($this->viewData['accountStanding'])?>
 			</div>
 			<div style="margin-left: 5px; margin-top: 20px; padding: 5px; border: 1px solid gray; width: 300px;">
-				<?php _e( 'Earnings:', 'wpam' ) ?> <?php echo wpam_format_money($this->viewData['accountCredits'])?><br/>
-				<?php _e( 'Payments:', 'wpam' ) ?> <?php echo wpam_format_money($this->viewData['accountDebits'])?><br/>
-				<?php _e( 'Adjustments:', 'wpam' ) ?> <?php echo wpam_format_money($this->viewData['accountAdjustments'])?><br/>
+				<?php _e( 'Earnings:', 'affiliates-manager' ) ?> <?php echo wpam_format_money($this->viewData['accountCredits'])?><br/>
+				<?php _e( 'Payments:', 'affiliates-manager' ) ?> <?php echo wpam_format_money($this->viewData['accountDebits'])?><br/>
+				<?php _e( 'Adjustments:', 'affiliates-manager' ) ?> <?php echo wpam_format_money($this->viewData['accountAdjustments'])?><br/>
 			</div>
 		</div>
 		<div class="buttonsBar">
-			<a id="applyPayoutButton" class="button-secondary"><?php _e( 'Apply Payout', 'wpam' ) ?></a>
-			<a id="applyAdjustmentButton" class="button-secondary"><?php _e( 'Apply Manual Adjustment', 'wpam' ) ?></a>
+			<a id="applyPayoutButton" class="button-secondary"><?php _e( 'Apply Payout', 'affiliates-manager' ) ?></a>
+			<a id="applyAdjustmentButton" class="button-secondary"><?php _e( 'Apply Manual Adjustment', 'affiliates-manager' ) ?></a>
 		</div>
 	  <?php include WPAM_BASE_DIRECTORY . '/html/transaction_table.php'; ?>
   </div>
@@ -622,9 +622,9 @@ if ($model->isPending())
 		<table class="widefat">
 			<thead>
 			<tr>
-				<th width="50"><?php _e( 'Creative', 'wpam' ) ?></th>
-				<th width="25"><?php _e( 'Type', 'wpam' ) ?></th>
-				<th width="200"><?php _e( 'Link', 'wpam' ) ?></th>
+				<th width="50"><?php _e( 'Creative', 'affiliates-manager' ) ?></th>
+				<th width="25"><?php _e( 'Type', 'affiliates-manager' ) ?></th>
+				<th width="200"><?php _e( 'Link', 'affiliates-manager' ) ?></th>
 			</tr>
 			</thead>
 			<tbody>

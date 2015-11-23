@@ -9,7 +9,7 @@
 class WPAM_Validation_MultiPartPhoneNumberValidator implements WPAM_Validation_IValidator {
 
     function getError() {
-        return __('must be a valid phone number', 'wpam');
+        return __('must be a valid phone number', 'affiliates-manager');
     }
 
     function isValid($value) {

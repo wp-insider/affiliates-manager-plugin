@@ -97,7 +97,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
 	<tr>
 		<th width="200">
 			<label for="txtMinimumPayout">
-				<?php _e('Minimum Payout Amount', 'wpam'); ?>
+				<?php _e('Minimum Payout Amount', 'affiliates-manager'); ?>
 			</label>
 		</th>
 		<td>
@@ -106,7 +106,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
 	</tr>
 	<tr>
     	<th width="200">
-            <label for="txtCookieExpire"><?php _e('Cookie Duration (days)', 'wpam');?></label>
+            <label for="txtCookieExpire"><?php _e('Cookie Duration (days)', 'affiliates-manager');?></label>
 			<img id="cookieInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
         </th>
         <td>
@@ -115,29 +115,29 @@ frequency of creative views), which in turn may slow down page loads where a cre
 	</tr>
  	<tr>
     	<th width="200">
-            <label for="txtEmailName"><?php _e('Email name', 'wpam');?></label>
+            <label for="txtEmailName"><?php _e('Email name', 'affiliates-manager');?></label>
 			<img class="emailInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
         </th>
         <td>
         	<input type="text" size="30" name="txtEmailName" id="txtEmailName" value="<?php echo $this->viewData['request']['txtEmailName']?>" />
-			<span><?php _e('(Leave blank to use WordPress default)', 'wpam');?></span>
+			<span><?php _e('(Leave blank to use WordPress default)', 'affiliates-manager');?></span>
         </td>
 	</tr>
  	<tr>
     	<th width="200">
-            <label for="txtEmailAddress"><?php _e('Email address', 'wpam');?></label>
+            <label for="txtEmailAddress"><?php _e('Email address', 'affiliates-manager');?></label>
 			<img class="emailInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
         </th>
         <td>
         	<input type="text" size="30" name="txtEmailAddress" id="txtEmailAddress" value="<?php echo $this->viewData['request']['txtEmailAddress']?>" />
-			<span><?php _e('(Leave blank to use WordPress default)', 'wpam');?></span>
+			<span><?php _e('(Leave blank to use WordPress default)', 'affiliates-manager');?></span>
         </td>
 	</tr>
         
         <tr>
 		<th width="200">
 			<label for="autoaffapprove">
-				<?php _e('Automatically approve a new affiliate', 'wpam');?>
+				<?php _e('Automatically approve a new affiliate', 'affiliates-manager');?>
 			</label>
 		</th>
 		<td>
@@ -150,19 +150,19 @@ frequency of creative views), which in turn may slow down page loads where a cre
         
         <tr>
         <th>
-                <label for="affBountyType"><?php _e( 'Bounty Type', 'wpam' ) ?></label>
+                <label for="affBountyType"><?php _e( 'Bounty Type', 'affiliates-manager' ) ?></label>
         </th>
         <td>
                 <select id="affBountyType" name="affBountyType">
-                        <option value="percent" <?php echo ($this->viewData['request']['affBountyType'] == 'percent' ? 'selected="selected"' : '')?>><?php _e( 'Percentage of Sales', 'wpam' ) ?></option>
-                        <option value="fixed" <?php echo ($this->viewData['request']['affBountyType'] == 'fixed' ? 'selected="selected"' : '')?>><?php _e( 'Fixed Amount per Sale', 'wpam' ) ?></option>
+                        <option value="percent" <?php echo ($this->viewData['request']['affBountyType'] == 'percent' ? 'selected="selected"' : '')?>><?php _e( 'Percentage of Sales', 'affiliates-manager' ) ?></option>
+                        <option value="fixed" <?php echo ($this->viewData['request']['affBountyType'] == 'fixed' ? 'selected="selected"' : '')?>><?php _e( 'Fixed Amount per Sale', 'affiliates-manager' ) ?></option>
                 </select>
         </td>
         </tr>
         
         <tr>
                 <th>
-                        <label id="lblaffBountyAmount" for="affBountyAmount"><?php _e( 'Bounty Rate (% of Sale)', 'wpam' ) ?></label>
+                        <label id="lblaffBountyAmount" for="affBountyAmount"><?php _e( 'Bounty Rate (% of Sale)', 'affiliates-manager' ) ?></label>
                 </th>
                 <td>
                         <input type="text" id="affBountyAmount" name="affBountyAmount" size="5" value="<?php echo $this->viewData['request']['affBountyAmount']?>" />
@@ -171,7 +171,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
         
         <tr>
                 <th>
-                        <label id="lblaffCurSymbol" for="affCurrencySymbol"><?php _e( 'Currency Symbol', 'wpam' ) ?></label>
+                        <label id="lblaffCurSymbol" for="affCurrencySymbol"><?php _e( 'Currency Symbol', 'affiliates-manager' ) ?></label>
                 </th>
                 <td>
                         <input type="text" id="affCurrencySymbol" name="affCurrencySymbol" size="5" value="<?php echo $this->viewData['request']['affCurrencySymbol']?>" />
@@ -180,7 +180,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
         
         <tr>
                 <th>
-                        <label id="lblaffCurCode" for="affCurrencyCode"><?php _e( 'Currency Code', 'wpam' ) ?></label>
+                        <label id="lblaffCurCode" for="affCurrencyCode"><?php _e( 'Currency Code', 'affiliates-manager' ) ?></label>
                 </th>
                 <td>
                         <input type="text" id="affCurrencyCode" name="affCurrencyCode" size="5" value="<?php echo $this->viewData['request']['affCurrencyCode']?>" />
@@ -190,7 +190,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
         <tr>
 		<th width="200">
 			<label for="doNotRecordZeroAmtCommission">
-				<?php _e('Do Not Record Zero Amount Commission', 'wpam');?>
+				<?php _e('Do Not Record Zero Amount Commission', 'affiliates-manager');?>
 			</label>
 		</th>
 		<td>
@@ -203,7 +203,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
 
         <tr>
                 <th width="200">
-                        <label id="lblchkImpressions" for="chkImpressions"><?php _e( 'Enable Impressions', 'wpam' ) ?></label>
+                        <label id="lblchkImpressions" for="chkImpressions"><?php _e( 'Enable Impressions', 'affiliates-manager' ) ?></label>
 			<img id="impInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
                 </th>
                 <td>
@@ -212,16 +212,16 @@ frequency of creative views), which in turn may slow down page loads where a cre
         </tr>
         
         <tr valign="top">
-        <th scope="row"><label for="enable_debug"><?php echo __('Enable Debug','wpam'); ?></label></th>
+        <th scope="row"><label for="enable_debug"><?php echo __('Enable Debug','affiliates-manager'); ?></label></th>
         <td>
         <input name="enable_debug" type="checkbox"<?php if($this->viewData['request']['enable_debug']=='1') echo ' checked="checked"'; ?> value="1"/>
-        <p class="description"><?php _e('If checked, debug output will be written to log files. This is useful for troubleshooting post payment failures.', 'wpam');?></p>
-        <p class="description"><?php _e('You can check the debug log file by clicking on the link below (The log file can be viewed using any text editor):', 'wpam');?></p>
+        <p class="description"><?php _e('If checked, debug output will be written to log files. This is useful for troubleshooting post payment failures.', 'affiliates-manager');?></p>
+        <p class="description"><?php _e('You can check the debug log file by clicking on the link below (The log file can be viewed using any text editor):', 'affiliates-manager');?></p>
         
         <p><a href="<?php echo WPAM_URL.'/logs/wpam-log.txt'; ?>" target="_blank">wpam-log.txt</a></p>    
         <div class="submit">
-            <input type="submit" name="wpam_reset_logfile" class="button" style="color:red" value="<?php _e('Reset Debug Log file', 'wpam');?>"/> 
-            <p class="descripiton"><?php _e("Use it to reset the affiliate manager plugin's log file.", "wpam");?></p>
+            <input type="submit" name="wpam_reset_logfile" class="button" style="color:red" value="<?php _e('Reset Debug Log file', 'affiliates-manager');?>"/> 
+            <p class="descripiton"><?php _e("Use it to reset the affiliate manager plugin's log file.", 'affiliates-manager');?></p>
         </div>
         </td></tr>
         

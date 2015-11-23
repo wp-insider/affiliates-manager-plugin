@@ -24,16 +24,16 @@
 </script>
 <div class="daterange-form">
     <form method="post" id="dateRange" class="pure-form">
-        <p class="wpam-daterange-heading"><?php _e('Date Range:', 'wpam') ?></p>
+        <p class="wpam-daterange-heading"><?php _e('Date Range:', 'affiliates-manager') ?></p>
         <div class="wpam-daterange-selection">
-        <label for="from"><?php _e('From', 'wpam') ?></label>
+        <label for="from"><?php _e('From', 'affiliates-manager') ?></label>
         <input type="text" id="from" name="from" value="<?php echo $this->viewData['from']; ?>"/>
         <label for="to">to</label>
         <input type="text" id="to" name="to" value="<?php echo $this->viewData['to']; ?>"/>
         </div>
         <div class="wpam-daterange-action-buttons">
-        <input type="submit" name="apply" value="<?php _e('Apply', 'wpam') ?>" class="pure-button pure-button-primary" />
-        <input type="button" name="clear" value="<?php _e('Clear', 'wpam') ?>" id="reset" class="pure-button" />
+        <input type="submit" name="apply" value="<?php _e('Apply', 'affiliates-manager') ?>" class="pure-button pure-button-primary" />
+        <input type="button" name="clear" value="<?php _e('Clear', 'affiliates-manager') ?>" id="reset" class="pure-button" />
         </div>
     </form>
 </div>
@@ -41,15 +41,15 @@
 <table class="pure-table">
     <thead>
         <tr>
-            <th><?php _e('ID', 'wpam') ?></th>
-            <th><?php _e('Type', 'wpam') ?></th>
-            <th><?php _e('Date Occurred', 'wpam') ?></th>
-            <th><?php _e('Status', 'wpam') ?></th>
-            <th><?php _e('Description', 'wpam') ?></th>
-            <th><?php _e('Reference ID', 'wpam') ?></th>
-            <th><?php _e('Amount', 'wpam') ?></th>
+            <th><?php _e('ID', 'affiliates-manager') ?></th>
+            <th><?php _e('Type', 'affiliates-manager') ?></th>
+            <th><?php _e('Date Occurred', 'affiliates-manager') ?></th>
+            <th><?php _e('Status', 'affiliates-manager') ?></th>
+            <th><?php _e('Description', 'affiliates-manager') ?></th>
+            <th><?php _e('Reference ID', 'affiliates-manager') ?></th>
+            <th><?php _e('Amount', 'affiliates-manager') ?></th>
             <?php if (!empty($this->viewData['showBalance'])): ?>
-                <th><?php _e('Balance', 'wpam') ?></th>
+                <th><?php _e('Balance', 'affiliates-manager') ?></th>
             <?php endif; ?>
         </tr>
     </thead>
@@ -74,5 +74,5 @@
 <?php
 if (!count($this->viewData['transactions'])):
     ?>
-    <div class="daterange-form"><p><?php _e('No records found for the date range selected.', 'wpam') ?></p></div>
+    <div class="daterange-form"><p><?php _e('No records found for the date range selected.', 'affiliates-manager') ?></p></div>
 <?php endif; ?>

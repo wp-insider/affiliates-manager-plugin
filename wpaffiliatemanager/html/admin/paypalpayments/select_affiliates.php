@@ -99,21 +99,21 @@ jQuery(function($) {
 
 
 <div class="wrap">
-	<h2><?php _e( 'PayPal Mass Pay', 'wpam' ) ?></h2>
-	<h3><?php _e( 'Select Affiliates to Pay', 'wpam' ) ?></h3>
+	<h2><?php _e( 'PayPal Mass Pay', 'affiliates-manager' ) ?></h2>
+	<h3><?php _e( 'Select Affiliates to Pay', 'affiliates-manager' ) ?></h3>
 
 
-	<p><?php echo sprintf( __( 'Not showing %s affiliates that do not have a PayPal account on file.', 'wpam' ), $this->viewData['notShownCount'] ) ?></p>
+	<p><?php echo sprintf( __( 'Not showing %s affiliates that do not have a PayPal account on file.', 'affiliates-manager' ), $this->viewData['notShownCount'] ) ?></p>
 	<div style="width: 800px;">
 	<form method="post" id="dateRange">
 		<div>
-<p><strong><?php _e( 'Date Range:', 'wpam' ) ?></strong> 
-<label for="from"><?php _e( 'from', 'wpam' ) ?></label>
+<p><strong><?php _e( 'Date Range:', 'affiliates-manager' ) ?></strong> 
+<label for="from"><?php _e( 'from', 'affiliates-manager' ) ?></label>
 <input type="text" id="from" name="from" value="<?php echo $this->viewData['from']; ?>"/>
-<label for="to"><?php _e( 'to', 'wpam' ) ?></label>
+<label for="to"><?php _e( 'to', 'affiliates-manager' ) ?></label>
 <input type="text" id="to" name="to" value="<?php echo $this->viewData['to']; ?>"/>
-			 <input type="submit" name="apply" value="<?php _e( 'Apply', 'wpam' ) ?>" />
-			 <input type="button" name="clear" value="<?php _e( 'Clear', 'wpam' ) ?>" id="reset" />
+			 <input type="submit" name="apply" value="<?php _e( 'Apply', 'affiliates-manager' ) ?>" />
+			 <input type="button" name="clear" value="<?php _e( 'Clear', 'affiliates-manager' ) ?>" id="reset" />
 			 </p>
 		</div>
 	</form>
@@ -121,13 +121,13 @@ jQuery(function($) {
 		<table class="widefat" style="width: 800px">
 			<thead><tr>
 				<th width="10" style="padding: 0"><input type="checkbox" id="checkall" checked="checked" /></th>
-				<th width="25"><?php _e( 'AID', 'wpam' ) ?></th>
-				<th width="100"><?php _e( 'First Name', 'wpam' ) ?></th>
-				<th width="100"><?php _e( 'Last Name', 'wpam' ) ?></th>
-				<th width="100"><?php _e( 'Company', 'wpam' ) ?></th>
-				<th width="auto"><?php _e( 'PayPal E-Mail', 'wpam' ) ?></th>
-				<th width="50"><?php _e( 'Balance', 'wpam' ) ?></th>
-				<th width="100"><?php _e( 'Payment Amount', 'wpam' ) ?></th>
+				<th width="25"><?php _e( 'AID', 'affiliates-manager' ) ?></th>
+				<th width="100"><?php _e( 'First Name', 'affiliates-manager' ) ?></th>
+				<th width="100"><?php _e( 'Last Name', 'affiliates-manager' ) ?></th>
+				<th width="100"><?php _e( 'Company', 'affiliates-manager' ) ?></th>
+				<th width="auto"><?php _e( 'PayPal E-Mail', 'affiliates-manager' ) ?></th>
+				<th width="50"><?php _e( 'Balance', 'affiliates-manager' ) ?></th>
+				<th width="100"><?php _e( 'Payment Amount', 'affiliates-manager' ) ?></th>
 			</tr></thead>
 			<tbody>
 			<?php foreach ($this->viewData['affiliates'] as $affiliate) {?>
@@ -172,17 +172,17 @@ jQuery(function($) {
 					<td style="width: 150px;" class="moneyCell" id="subTotalCell"><?php echo wpam_format_money(0, false); ?></td>
 				</tr>
 				<tr>
-					<td><?php echo sprintf( __( 'PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>', 'wpam' ), $currency ) ?></td>
+					<td><?php echo sprintf( __( 'PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>', 'affiliates-manager' ), $currency ) ?></td>
 					<td class="moneyCell" id="paypalFeeCell"><?php echo wpam_format_money(0, false); ?></td>
 				</tr>
 				<tr class="totalSeparatorRow"><td colspan="2"></td> </tr>
 				<tr class="totalRow">
-					<th><?php _e( 'Estimated Total', 'wpam' ) ?></th>
+					<th><?php _e( 'Estimated Total', 'affiliates-manager' ) ?></th>
 					<th class="moneyCell" id="totalCell"><?php echo wpam_format_money(0, false); ?></th>
 				</tr>
 			</table>
 			<div style="float: right; margin: 10px;">
-				<input type="submit" class="button-primary" id="btnSubmit" name="btnSubmit" value="<?php _e( 'Continue with these payments', 'wpam' ) ?>" />
+				<input type="submit" class="button-primary" id="btnSubmit" name="btnSubmit" value="<?php _e( 'Continue with these payments', 'affiliates-manager' ) ?>" />
 			</div>
 		</div>
 		</form>

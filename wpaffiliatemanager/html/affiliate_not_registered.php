@@ -1,1 +1,1 @@
-<?php printf( __( 'This is the affiliates section of this store. You are not currently an affiliate of this store.  If you wish to become one, please <a href="%s"/>apply</a>.', 'wpam' ), $this->viewData['registerUrl'] ) ?>
+<?php printf( __( 'This is the affiliates section of this store. You are not currently an affiliate of this store.  If you wish to become one, please <a href="%s"/>apply</a>.', 'affiliates-manager' ), $this->viewData['registerUrl'] ) ?>

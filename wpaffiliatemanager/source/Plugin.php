@@ -74,41 +74,41 @@ class WPAM_Plugin
 		$this->adminPages = array(
 		 	new WPAM_Pages_Admin_MyAffiliatesPage(
 				'wpam-affiliates',
-				__( 'Affiliate Management', 'wpam' ),
-				__( 'Affiliates', 'wpam' ),
+				__( 'Affiliate Management', 'affiliates-manager' ),
+				__( 'Affiliates', 'affiliates-manager' ),
 				WPAM_PluginConfig::$AdminCap,
 				array(
 					new WPAM_Pages_Admin_MyAffiliatesPage(
 						"wpam-affiliates",
-						__( 'Affiliates', 'wpam' ),
-						__( 'My Affiliates', 'wpam' ),
+						__( 'Affiliates', 'affiliates-manager' ),
+						__( 'My Affiliates', 'affiliates-manager' ),
 						WPAM_PluginConfig::$AdminCap
 					),
 					new WPAM_Pages_Admin_NewAffiliatePage(
 						"wpam-newaffiliate",
-						__( 'New Affiliate', 'wpam' ),
-						__( 'New Affiliate', 'wpam' ),
+						__( 'New Affiliate', 'affiliates-manager' ),
+						__( 'New Affiliate', 'affiliates-manager' ),
 						WPAM_PluginConfig::$AdminCap
 					),
 					new WPAM_Pages_Admin_MyCreativesPage(
 						"wpam-creatives",
-						__( 'Creatives', 'wpam' ),
-						__( 'My Creatives', 'wpam' ),
+						__( 'Creatives', 'affiliates-manager' ),
+						__( 'My Creatives', 'affiliates-manager' ),
 						WPAM_PluginConfig::$AdminCap
 					),
 					new WPAM_Pages_Admin_PaypalPaymentsPage(
 						"wpam-payments",
-						__( 'PayPal Mass Pay', 'wpam' ),
-						__( 'PayPal Mass Pay', 'wpam' ),
+						__( 'PayPal Mass Pay', 'affiliates-manager' ),
+						__( 'PayPal Mass Pay', 'affiliates-manager' ),
 						WPAM_PluginConfig::$AdminCap
 					)
 				)
 			)
 		);
 
-		$this->affiliateHomePage = new WPAM_Pages_AffiliatesHome(self::PAGE_NAME_HOME, __( 'Store Affiliates', 'wpam' ) );
-		$this->affiliateRegisterPage = new WPAM_Pages_AffiliatesRegister(self::PAGE_NAME_REGISTER, __( 'Register', 'wpam' ), $this->affiliateHomePage);
-                $this->affiliateLoginPage = new WPAM_Pages_AffiliatesLogin(self::PAGE_NAME_LOGIN, __( 'Affiliate Login', 'wpam' ), $this->affiliateHomePage);
+		$this->affiliateHomePage = new WPAM_Pages_AffiliatesHome(self::PAGE_NAME_HOME, __( 'Store Affiliates', 'affiliates-manager' ) );
+		$this->affiliateRegisterPage = new WPAM_Pages_AffiliatesRegister(self::PAGE_NAME_REGISTER, __( 'Register', 'affiliates-manager' ), $this->affiliateHomePage);
+                $this->affiliateLoginPage = new WPAM_Pages_AffiliatesLogin(self::PAGE_NAME_LOGIN, __( 'Affiliate Login', 'affiliates-manager' ), $this->affiliateHomePage);
 		$this->publicPages = array( 
                 self::PAGE_NAME_HOME => $this->affiliateHomePage,
 		self::PAGE_NAME_REGISTER => $this->affiliateRegisterPage,
@@ -290,11 +290,11 @@ class WPAM_Plugin
                 get_currentuserinfo();
                 $logout_url = wp_logout_url($home_page_url);
                 $output = '<div class="wpam-logged-in">';
-                $output .= '<p>'.__('You are currently logged in','wpam').'</p>';
+                $output .= '<p>'.__('You are currently logged in','affiliates-manager').'</p>';
                 $output .= '<div class="wpam-logged-in-gravatar"><img src="http://www.gravatar.com/avatar/' . md5( trim( strtolower( $current_user->user_email ) ) ) . '?s=64" /></div>';
-                $output .= '<div class="wpam-logged-in-username">'.__('Username','wpam').': ' . $current_user->user_login . "</div>";
-                $output .= '<div class="wpam-logged-in-email">'.__('Email','wpam').': ' . $current_user->user_email . "</div>";
-                $output .= '<div class="wpam-logged-in-logout-link"><a href="'.$logout_url.'">'.__('Log out','wpam').'</a></div>';
+                $output .= '<div class="wpam-logged-in-username">'.__('Username','affiliates-manager').': ' . $current_user->user_login . "</div>";
+                $output .= '<div class="wpam-logged-in-email">'.__('Email','affiliates-manager').': ' . $current_user->user_email . "</div>";
+                $output .= '<div class="wpam-logged-in-logout-link"><a href="'.$logout_url.'">'.__('Log out','affiliates-manager').'</a></div>';
                 $output .= '</div>'; 
                 return $output;
             }
@@ -304,7 +304,7 @@ class WPAM_Plugin
                     'redirect' => $home_page_url,
                     'remember' => true,
                 );
-                $lost_password_link = '<a href="'.wp_lostpassword_url().'" title="'.__('Password Lost and Found', 'wpam').'">'.__('Lost your password?', 'wpam').'</a>';
+                $lost_password_link = '<a href="'.wp_lostpassword_url().'" title="'.__('Password Lost and Found', 'affiliates-manager').'">'.__('Lost your password?', 'affiliates-manager').'</a>';
                 $form_output = '<div class="wpam-login-form">';
                 $form_output .= wp_login_form($args);
                 $form_output .= $lost_password_link;
@@ -339,10 +339,10 @@ class WPAM_Plugin
 	
     public function becomeAffiliate() {
 		echo '<div id="aff_div" class="wrap">';
-		echo '<div id="icon-users" class="icon32"></div><h2>'. __( 'Become an affiliate', 'wpam' ) . '</h2>';
-		echo '<p>' . __( 'Are you interested in earning money by directing visitors to our site?', 'wpam' ) . '</p>';
+		echo '<div id="icon-users" class="icon32"></div><h2>'. __( 'Become an affiliate', 'affiliates-manager' ) . '</h2>';
+		echo '<p>' . __( 'Are you interested in earning money by directing visitors to our site?', 'affiliates-manager' ) . '</p>';
 		//@TODO check the rules on spaces for l10n
-		echo '<p><a href="'. $this->affiliateRegisterPage->getLink() .'">' . __( 'Sign up', 'wpam' ) . '</a>' . __( ' to become an affiliate today!', 'wpam' );
+		echo '<p><a href="'. $this->affiliateRegisterPage->getLink() .'">' . __( 'Sign up', 'affiliates-manager' ) . '</a>' . __( ' to become an affiliate today!', 'affiliates-manager' );
 		echo '</p></div></div>';
 	}
 
@@ -544,7 +544,7 @@ class WPAM_Plugin
                         
 			//I won't necessarily guarantee this will work in the future
 			$new_menu = array(
-				__( 'Affiliates', 'wpam' ),
+				__( 'Affiliates', 'affiliates-manager' ),
 				'read',
 				$this->affiliateHomePage->getLink(),
 				null,
@@ -558,8 +558,8 @@ class WPAM_Plugin
 		//show to non-affiliates
 		if ( ! current_user_can( WPAM_PluginConfig::$AffiliateCap ) && ! current_user_can( WPAM_PluginConfig::$AdminCap ) ) {
 			add_menu_page(
-				__( 'Affiliates', 'wpam' ),
-				__( 'Be An Affiliate', 'wpam' ),
+				__( 'Affiliates', 'affiliates-manager' ),
+				__( 'Be An Affiliate', 'affiliates-manager' ),
 				'read',
 				'newaffiliate',
 				array($this, 'becomeAffiliate'),
@@ -568,7 +568,7 @@ class WPAM_Plugin
 		}                
    
                 //Add main affiliates menu object                                
-                add_object_page( __( 'Affiliate Management', 'wpam' ), __( 'Affiliates', 'wpam' ), WPAM_PluginConfig::$AdminCap, 'wpam-affiliates', array(), 'dashicons-groups' );
+                add_object_page( __( 'Affiliate Management', 'affiliates-manager' ), __( 'Affiliates', 'affiliates-manager' ), WPAM_PluginConfig::$AdminCap, 'wpam-affiliates', array(), 'dashicons-groups' );
                 
                 $page = $this->adminPages[0];
                 
@@ -593,19 +593,19 @@ class WPAM_Plugin
                 
                 //Add settings submenu page
                 $settings_obj = new WPAM_Pages_Admin_SettingsPage();
-                add_submenu_page($menu_parent_slug, __( 'Settings', 'wpam' ), __( 'Settings', 'wpam' ), WPAM_PluginConfig::$AdminCap, 'wpam-settings', array($settings_obj,'render_settings_page'));
+                add_submenu_page($menu_parent_slug, __( 'Settings', 'affiliates-manager' ), __( 'Settings', 'affiliates-manager' ), WPAM_PluginConfig::$AdminCap, 'wpam-settings', array($settings_obj,'render_settings_page'));
                                 
                 //Add clicks submenu page
                 include_once(WPAM_BASE_DIRECTORY . "/source/Admin-menu/wpam-clicks-menu.php");                
-                add_submenu_page($menu_parent_slug, __("Affiliates Manager Click Tracking", 'wpam'), __("Click Tracking", 'wpam'), WPAM_PluginConfig::$AdminCap, 'wpam-clicktracking', 'wpam_display_clicks_menu');
+                add_submenu_page($menu_parent_slug, __("Affiliates Manager Click Tracking", 'affiliates-manager'), __("Click Tracking", 'affiliates-manager'), WPAM_PluginConfig::$AdminCap, 'wpam-clicktracking', 'wpam_display_clicks_menu');
                 
                 //Add commission submenu page
                 include_once(WPAM_BASE_DIRECTORY . "/source/Admin-menu/wpam-commission-menu.php");                
-                add_submenu_page($menu_parent_slug, __("Affiliates Manager Commission Data", 'wpam'), __("Commissions", 'wpam'), WPAM_PluginConfig::$AdminCap, 'wpam-commission', 'wpam_display_commission_menu');
+                add_submenu_page($menu_parent_slug, __("Affiliates Manager Commission Data", 'affiliates-manager'), __("Commissions", 'affiliates-manager'), WPAM_PluginConfig::$AdminCap, 'wpam-commission', 'wpam_display_commission_menu');
                 
                 //Add addons submenu page
                 include_once(WPAM_BASE_DIRECTORY . "/source/Admin-menu/wpam-addons-menu.php"); 
-                add_submenu_page($menu_parent_slug, __("Affiliates Manager Add-ons", 'wpam'), __("Add-ons", 'wpam'), WPAM_PluginConfig::$AdminCap, 'wpam-addons', 'wpam_display_addons_menu');
+                add_submenu_page($menu_parent_slug, __("Affiliates Manager Add-ons", 'affiliates-manager'), __("Add-ons", 'affiliates-manager'), WPAM_PluginConfig::$AdminCap, 'wpam-addons', 'wpam_display_addons_menu');
                 
                 //Hook for addons to create their menu
                 do_action('wpam_after_main_admin_menu', $menu_parent_slug);
@@ -690,8 +690,8 @@ class WPAM_Plugin
 			$currency = WPAM_MoneyHelper::getDollarSign();
 
 			echo '<div id="message" class="error">
-			<p><strong>' . sprintf( __( 'WP Affiliate Manager was unable to load your currency from your WPLANG setting: %s', 'wpam' ), $this->locale ) . '<br/>' .
-				sprintf( __( 'Your currency will be displayed as %s and PayPal payments will be paid in %s', 'wpam' ), $currency, $code ) . '</strong></p></div>';
+			<p><strong>' . sprintf( __( 'WP Affiliate Manager was unable to load your currency from your WPLANG setting: %s', 'affiliates-manager' ), $this->locale ) . '<br/>' .
+				sprintf( __( 'Your currency will be displayed as %s and PayPal payments will be paid in %s', 'affiliates-manager' ), $currency, $code ) . '</strong></p></div>';
 			if ( WPAM_DEBUG ){
 				echo "<!-- LC_MONETARY {$this->locale}, isset: ", var_export($this->setloc, true), PHP_EOL, var_export( localeconv(), true ), ' -->';
                         }
@@ -734,7 +734,7 @@ class WPAM_Plugin
 				case 'deleteCreative':
 					$response = $jsonHandler->deleteCreative($_REQUEST['creativeId']);
 					break;
-				default: throw new Exception( __( 'Invalid JSON handler.', 'wpam' ) ); 
+				default: throw new Exception( __( 'Invalid JSON handler.', 'affiliates-manager' ) ); 
 			}
 		}
 		catch (Exception $e)

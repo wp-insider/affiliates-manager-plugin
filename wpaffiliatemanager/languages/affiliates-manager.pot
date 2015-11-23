@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Affiliate Manager\n"
-"POT-Creation-Date: 2015-08-28 15:49+1000\n"
-"PO-Revision-Date: 2015-08-28 15:49+1000\n"
+"Project-Id-Version: Affiliates Manager\n"
+"POT-Creation-Date: 2015-11-23 15:34+1000\n"
+"PO-Revision-Date: 2015-11-23 15:34+1000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -13,11 +13,11 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: boot-strap.php:37
+#: boot-strap.php:39
 msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
 msgstr ""
 
-#: boot-strap.php:41
+#: boot-strap.php:43
 msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
 msgstr ""
 
@@ -27,6 +27,8 @@ msgid "View"
 msgstr ""
 
 #: classes/ListAffiliatesTable.php:61 classes/ListClicksTable.php:66
+#: classes/ListCommissionTable.php:62
+#: source/Admin-menu/wpam-commission-menu.php:170
 msgid "Affiliate ID"
 msgstr ""
 
@@ -78,23 +80,24 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
-#: classes/ListAffiliatesTable.php:97
+#: classes/ListAffiliatesTable.php:97 classes/ListCommissionTable.php:90
 msgid "Error! You need to select multiple records to perform a bulk action!"
 msgstr ""
 
-#: classes/ListAffiliatesTable.php:115
+#: classes/ListAffiliatesTable.php:115 classes/ListCommissionTable.php:100
 msgid "Selected records deleted successfully!"
 msgstr ""
 
-#: classes/ListAffiliatesTable.php:139
+#: classes/ListAffiliatesTable.php:139 classes/ListCommissionTable.php:116
 msgid "Selected record deleted successfully!"
 msgstr ""
 
-#: classes/ListClicksTable.php:64
+#: classes/ListClicksTable.php:64 classes/ListCommissionTable.php:60
 msgid "Row ID"
 msgstr ""
 
-#: classes/ListClicksTable.php:65
+#: classes/ListClicksTable.php:65 classes/ListCommissionTable.php:61
+#: source/Admin-menu/wpam-commission-menu.php:194
 msgid "Date"
 msgstr ""
 
@@ -104,6 +107,18 @@ msgstr ""
 
 #: classes/ListClicksTable.php:68
 msgid "Referring URL"
+msgstr ""
+
+#: classes/ListCommissionTable.php:63 html/transaction_table.php:50
+#: html/admin/paypalpayments/pending_payments.php:13
+#: html/admin/paypalpayments/view_payment_detail.php:20
+#: html/admin/paypalpayments/view_payment_detail.php:63
+msgid "Amount"
+msgstr ""
+
+#: classes/ListCommissionTable.php:64
+#: source/Admin-menu/wpam-commission-menu.php:188
+msgid "Transaction ID"
 msgstr ""
 
 #: classes/ListTable.php:77
@@ -551,13 +566,6 @@ msgstr ""
 
 #: html/transaction_table.php:49
 msgid "Reference ID"
-msgstr ""
-
-#: html/transaction_table.php:50
-#: html/admin/paypalpayments/pending_payments.php:13
-#: html/admin/paypalpayments/view_payment_detail.php:20
-#: html/admin/paypalpayments/view_payment_detail.php:63
-msgid "Amount"
 msgstr ""
 
 #: html/admin/affiliates_list.php:5 source/Plugin.php:84
@@ -1648,15 +1656,23 @@ msgstr ""
 msgid "Click Tracking"
 msgstr ""
 
-#: source/Plugin.php:604 source/Admin-menu/wpam-addons-menu.php:6
-msgid "Affiliates Manager Add-ons"
+#: source/Plugin.php:604
+msgid "Affiliates Manager Commission Data"
 msgstr ""
 
 #: source/Plugin.php:604
+msgid "Commissions"
+msgstr ""
+
+#: source/Plugin.php:608 source/Admin-menu/wpam-addons-menu.php:6
+msgid "Affiliates Manager Add-ons"
+msgstr ""
+
+#: source/Plugin.php:608
 msgid "Add-ons"
 msgstr ""
 
-#: source/Plugin.php:733
+#: source/Plugin.php:737
 msgid "Invalid JSON handler."
 msgstr ""
 
@@ -1666,6 +1682,76 @@ msgstr ""
 
 #: source/Admin-menu/wpam-clicks-menu.php:34
 msgid "This tab shows unique referrals to your website from your affiliates"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:8
+msgid "Affiliate Commissions"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:11
+msgid "Overall Commissions"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:12
+msgid "Manual Commission"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:48
+msgid "This tab shows all affiliate commission data"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:104
+msgid "You need to enter an affiliate ID"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:108
+msgid "You need to enter a numeric commission amount"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:112
+msgid "You need to enter a numeric purchase amount"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:135
+msgid "A commission with this transaction ID already exists"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:152
+msgid "Commission added!"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:162
+msgid "This tab allows you to manually award commission to an affiliate."
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:172
+msgid "Enter the affiliate ID. Example: "
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:176
+msgid "Commission Amount"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:178
+msgid "Enter the commission amount. Example: "
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:182
+msgid "Purchase Amount"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:184
+msgid "Enter the purchase amount. Example: "
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:190
+msgid ""
+"Enter the unique transaction ID (leave empty to generate a unique ID). "
+"Example: "
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:196
+msgid "Enter the date in yyyy-mm-dd format. Example: "
 msgstr ""
 
 #: source/Data/GenericRepository.php:31 source/Data/GenericRepository.php:76

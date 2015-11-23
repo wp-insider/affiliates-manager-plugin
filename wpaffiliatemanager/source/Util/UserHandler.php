@@ -17,24 +17,24 @@ class WPAM_Util_UserHandler {
         $userEmail = apply_filters('user_registration_email', $affiliate->email);
 
         $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
-        $message = sprintf(__('New affiliate registration for %s: has been approved!', 'wpam'), $blogname) . "\r\n\r\n";
+        $message = sprintf(__('New affiliate registration for %s: has been approved!', 'affiliates-manager'), $blogname) . "\r\n\r\n";
 
         if (username_exists($userLogin)) {
             $user = new WP_User(get_userdatabylogin($userLogin)->ID);
             if ($user->has_cap(WPAM_PluginConfig::$AffiliateCap)) {
-                throw new Exception(__('User already has an account and is already an affiliate', 'wpam'));
+                throw new Exception(__('User already has an account and is already an affiliate', 'affiliates-manager'));
             } else {
                 $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
-                $message .= __('Log into the site with your existing account and get started.', 'wpam') . "\r\n";
+                $message .= __('Log into the site with your existing account and get started.', 'affiliates-manager') . "\r\n";
                 $userId = $user->ID;
             }
         } elseif (email_exists($userEmail)) {
             $user = new WP_User(get_user_by('email', $userEmail)->ID);
             if ($db->getAffiliateRepository()->existsBy(array('userId' => $user->ID))) {
-                throw new Exception(__('User already has an account and is already an affiliate', 'wpam'));
+                throw new Exception(__('User already has an account and is already an affiliate', 'affiliates-manager'));
             } else {
                 $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
-                $message .= __('Log into the site with your existing account and get started.', 'wpam') . "\r\n";
+                $message .= __('Log into the site with your existing account and get started.', 'affiliates-manager') . "\r\n";
                 $userId = $user->ID;
             }
         } else {
@@ -56,7 +56,7 @@ class WPAM_Util_UserHandler {
 
         //Send user email indicating they're approved
         if ($sendEmail)
-            $mailer->mailAffiliate($userEmail, sprintf(__('Affiliate Application for %s', 'wpam'), $blogname), $message);
+            $mailer->mailAffiliate($userEmail, sprintf(__('Affiliate Application for %s', 'affiliates-manager'), $blogname), $message);
 
         $affiliate->approve();
         $affiliate->userId = $userId;
@@ -80,24 +80,24 @@ class WPAM_Util_UserHandler {
         $userEmail = apply_filters('user_registration_email', $affiliate->email);
 
         $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
-        $message = sprintf(__('New affiliate registration for %s: has been approved!', 'wpam'), $blogname) . "\r\n\r\n";
+        $message = sprintf(__('New affiliate registration for %s: has been approved!', 'affiliates-manager'), $blogname) . "\r\n\r\n";
 
         if (username_exists($userLogin)) {
             $user = new WP_User(get_userdatabylogin($userLogin)->ID);
             if ($user->has_cap(WPAM_PluginConfig::$AffiliateCap)) {
-                throw new Exception(__('User already has an account and is already an affiliate', 'wpam'));
+                throw new Exception(__('User already has an account and is already an affiliate', 'affiliates-manager'));
             } else {
                 $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
-                $message .= __('Log into the site with your existing account and get started.', 'wpam') . "\r\n";
+                $message .= __('Log into the site with your existing account and get started.', 'affiliates-manager') . "\r\n";
                 $userId = $user->ID;
             }
         } elseif (email_exists($userEmail)) {
             $user = new WP_User(get_user_by('email', $userEmail)->ID);
             if ($db->getAffiliateRepository()->existsBy(array('userId' => $user->ID))) {
-                throw new Exception(__('User already has an account and is already an affiliate', 'wpam'));
+                throw new Exception(__('User already has an account and is already an affiliate', 'affiliates-manager'));
             } else {
                 $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
-                $message .= __('Log into the site with your existing account and get started.', 'wpam') . "\r\n";
+                $message .= __('Log into the site with your existing account and get started.', 'affiliates-manager') . "\r\n";
                 $userId = $user->ID;
             }
         } else {
@@ -133,20 +133,20 @@ class WPAM_Util_UserHandler {
             if (WPAM_DEBUG) {
                 echo '<pre>', var_export($model, true), '</pre>';
             }
-            wp_die(__('Error submitting your details to the database. This is a bug, and your application was not submitted.', 'wpam'));
+            wp_die(__('Error submitting your details to the database. This is a bug, and your application was not submitted.', 'affiliates-manager'));
         }
         //Notify admin that affiliate has registered
-        $admin_message = sprintf(__('New affiliate registration on your site %s:', 'wpam'), $blogname) . "\r\n\r\n";
-        $admin_message .= sprintf(__('Name: %s %s', 'wpam'), $affiliate->firstName, $affiliate->lastName) . "\r\n";
-        $admin_message .= sprintf(__('Email: %s', 'wpam'), $affiliate->email) . "\r\n";
-        $admin_message .= sprintf(__('Company: %s', 'wpam'), $affiliate->companyName) . "\r\n";
-        $admin_message .= sprintf(__('Website: %s', 'wpam'), $affiliate->websiteUrl) . "\r\n\r\n";
-        $admin_message .= sprintf(__('View Application: %s', 'wpam'), admin_url('admin.php?page=wpam-affiliates&viewDetail=' . $id)) . "\r\n";
-        $mailer->mailAffiliate(get_option('admin_email'), __('New Affiliate Registration', 'wpam'), $admin_message);
+        $admin_message = sprintf(__('New affiliate registration on your site %s:', 'affiliates-manager'), $blogname) . "\r\n\r\n";
+        $admin_message .= sprintf(__('Name: %s %s', 'affiliates-manager'), $affiliate->firstName, $affiliate->lastName) . "\r\n";
+        $admin_message .= sprintf(__('Email: %s', 'affiliates-manager'), $affiliate->email) . "\r\n";
+        $admin_message .= sprintf(__('Company: %s', 'affiliates-manager'), $affiliate->companyName) . "\r\n";
+        $admin_message .= sprintf(__('Website: %s', 'affiliates-manager'), $affiliate->websiteUrl) . "\r\n\r\n";
+        $admin_message .= sprintf(__('View Application: %s', 'affiliates-manager'), admin_url('admin.php?page=wpam-affiliates&viewDetail=' . $id)) . "\r\n";
+        $mailer->mailAffiliate(get_option('admin_email'), __('New Affiliate Registration', 'affiliates-manager'), $admin_message);
 
         //Send user email indicating they're approved
         if ($sendEmail) {
-            $mailer->mailAffiliate($userEmail, sprintf(__('Affiliate Application for %s', 'wpam'), $blogname), $message);
+            $mailer->mailAffiliate($userEmail, sprintf(__('Affiliate Application for %s', 'affiliates-manager'), $blogname), $message);
         }
     }
             

@@ -37,7 +37,7 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
     }
     
     function column_viewDetail($item) {
-        $item['viewDetail'] = '<a class="button-secondary" href="admin.php?page=wpam-affiliates&viewDetail=' . $item['affiliateId'] . '">' . __('View', 'wpam') . '</a>';
+        $item['viewDetail'] = '<a class="button-secondary" href="admin.php?page=wpam-affiliates&viewDetail=' . $item['affiliateId'] . '">' . __('View', 'affiliates-manager') . '</a>';
         return $item['viewDetail'];
     }
 
@@ -58,17 +58,17 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
     function get_columns() {
         $columns = array(
             'cb' => '<input type="checkbox" />', //Render a checkbox instead of text
-            'affiliateId' => __('Affiliate ID', 'wpam'),
-            'status' => __('Status', 'wpam'),
-            'balance' => __('Balance', 'wpam'),
-            'earnings' => __('Earnings', 'wpam'),
-            'firstName' => __('First Name', 'wpam'),
-            'lastName' => __('Last Name', 'wpam'),
-            'email' => __('Email', 'wpam'),
-            'companyName' => __('Company', 'wpam'),
-            'dateCreated' => __('Date Joined', 'wpam'),
-            'websiteUrl' => __('Website', 'wpam'),
-            'viewDetail' => __('', 'wpam'),
+            'affiliateId' => __('Affiliate ID', 'affiliates-manager'),
+            'status' => __('Status', 'affiliates-manager'),
+            'balance' => __('Balance', 'affiliates-manager'),
+            'earnings' => __('Earnings', 'affiliates-manager'),
+            'firstName' => __('First Name', 'affiliates-manager'),
+            'lastName' => __('Last Name', 'affiliates-manager'),
+            'email' => __('Email', 'affiliates-manager'),
+            'companyName' => __('Company', 'affiliates-manager'),
+            'dateCreated' => __('Date Joined', 'affiliates-manager'),
+            'websiteUrl' => __('Website', 'affiliates-manager'),
+            'viewDetail' => __('', 'affiliates-manager'),
         );
         return $columns;
     }
@@ -94,7 +94,7 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
             $nvp_key = $this->_args['singular'];
             $records_to_delete = $_GET[$nvp_key];
             if (empty($records_to_delete)) {
-                echo '<div id="message" class="updated fade"><p>' . __('Error! You need to select multiple records to perform a bulk action!', 'wpam') . '</p></div>';
+                echo '<div id="message" class="updated fade"><p>' . __('Error! You need to select multiple records to perform a bulk action!', 'affiliates-manager') . '</p></div>';
                 return;
             }
             foreach ($records_to_delete as $row) {
@@ -112,7 +112,7 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
                 $updatedb = "DELETE FROM $record_table_name WHERE affiliateId='$row'";
                 $results = $wpdb->query($updatedb);
             }
-            echo '<div id="message" class="updated fade"><p>' . __('Selected records deleted successfully!', 'wpam') . '</p></div>';
+            echo '<div id="message" class="updated fade"><p>' . __('Selected records deleted successfully!', 'affiliates-manager') . '</p></div>';
         }
     }
 
@@ -136,7 +136,7 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
                 }
                 $updatedb = "DELETE FROM $record_table_name WHERE affiliateId='$aid'";
                 $result = $wpdb->query($updatedb);
-                echo '<div id="message" class="updated fade"><p>' . __('Selected record deleted successfully!', 'wpam') . '</p></div>';
+                echo '<div id="message" class="updated fade"><p>' . __('Selected record deleted successfully!', 'affiliates-manager') . '</p></div>';
             }
         }
     }

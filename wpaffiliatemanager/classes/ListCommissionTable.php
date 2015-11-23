@@ -57,11 +57,11 @@ class WPAM_List_Commission_Table extends WPAM_List_Table {
     function get_columns() {
         $columns = array(
             'cb' => '<input type="checkbox" />', //Render a checkbox instead of text
-            'transactionId' => __('Row ID', 'wpam'),
-            'dateCreated' => __('Date', 'wpam'),
-            'affiliateId' => __('Affiliate ID', 'wpam'),
-            'amount' => __('Amount', 'wpam'),
-            'referenceId' => __('Transaction ID', 'wpam')
+            'transactionId' => __('Row ID', 'affiliates-manager'),
+            'dateCreated' => __('Date', 'affiliates-manager'),
+            'affiliateId' => __('Affiliate ID', 'affiliates-manager'),
+            'amount' => __('Amount', 'affiliates-manager'),
+            'referenceId' => __('Transaction ID', 'affiliates-manager')
         );
         return $columns;
     }
@@ -87,7 +87,7 @@ class WPAM_List_Commission_Table extends WPAM_List_Table {
             $nvp_key = $this->_args['singular'];
             $records_to_delete = $_GET[$nvp_key];
             if (empty($records_to_delete)) {
-                echo '<div id="message" class="updated fade"><p>' . __('Error! You need to select multiple records to perform a bulk action!', 'wpam') . '</p></div>';
+                echo '<div id="message" class="updated fade"><p>' . __('Error! You need to select multiple records to perform a bulk action!', 'affiliates-manager') . '</p></div>';
                 return;
             }
             //TODO delete all the selected rows
@@ -97,7 +97,7 @@ class WPAM_List_Commission_Table extends WPAM_List_Table {
                 $updatedb = "DELETE FROM $record_table_name WHERE transactionId='$row'";
                 $results = $wpdb->query($updatedb);
             }
-            echo '<div id="message" class="updated fade"><p>' . __('Selected records deleted successfully!', 'wpam') . '</p></div>';
+            echo '<div id="message" class="updated fade"><p>' . __('Selected records deleted successfully!', 'affiliates-manager') . '</p></div>';
         }
     }
     
@@ -113,7 +113,7 @@ class WPAM_List_Commission_Table extends WPAM_List_Table {
                 $record_table_name = WPAM_TRANSACTIONS_TBL; //The table name for the records              
                 $updatedb = "DELETE FROM $record_table_name WHERE transactionId='$row_id'";
                 $result = $wpdb->query($updatedb);
-                echo '<div id="message" class="updated fade"><p>' . __('Selected record deleted successfully!', 'wpam') . '</p></div>';
+                echo '<div id="message" class="updated fade"><p>' . __('Selected record deleted successfully!', 'affiliates-manager') . '</p></div>';
             }
         }
     }

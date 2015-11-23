@@ -14,7 +14,7 @@ class WPAM_Validation_CallbackValidator implements WPAM_Validation_IValidator
 	public function __construct($errorMsg, $callback)
 	{
 		if (!is_callable($callback))
-			throw new Exception( __( "Argument 'callback' must be callable", 'wpam' ) );
+			throw new Exception( __( "Argument 'callback' must be callable", 'affiliates-manager' ) );
 
 		$this->errorMsg = $errorMsg;
 		$this->callback = $callback;

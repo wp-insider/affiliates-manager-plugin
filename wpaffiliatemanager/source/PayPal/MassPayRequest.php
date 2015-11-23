@@ -21,7 +21,7 @@ class WPAM_PayPal_MassPayRequest
 		if ( ! in_array( $receiverType, array(
 			self::RECEIVERTYPE_USER_ID,
 			self::RECEIVERTYPE_EMAIL_ADDRESS )))
-			throw new InvalidArgumentException( __( 'receiverType must be one of the RECEIVERTYPE_* constants', 'wpam' ) );
+			throw new InvalidArgumentException( __( 'receiverType must be one of the RECEIVERTYPE_* constants', 'affiliates-manager' ) );
 
 		$this->receiverType = $receiverType;
 		$this->emailSubject = $emailSubject;
@@ -30,7 +30,7 @@ class WPAM_PayPal_MassPayRequest
 	public function addRecipient($recipient, $amount, $transactionId)
 	{
 		if (!preg_match('/^\$?[0-9]+(,[0-9]{3})*(\.[0-9]{2})?$/', $amount))
-			throw new InvalidArgumentException( __( "'amount' must be a valid monetary value", 'wpam' ) );
+			throw new InvalidArgumentException( __( "'amount' must be a valid monetary value", 'affiliates-manager' ) );
 
 		$this->recipients[] = array(
 			'recipient' => $recipient,

@@ -70,7 +70,7 @@ class WPAM_Pages_Admin_NewAffiliatePage extends WPAM_Pages_Admin_AdminPage {
 			$response->viewData['validationResult'] = $validationResult;
 		}
 		$response->viewData['affiliateFields'] = $affiliateFields;
-		$response->viewData['saveLabel'] = __( 'Add Affiliate', 'wpam' );
+		$response->viewData['saveLabel'] = __( 'Add Affiliate', 'affiliates-manager' );
 
 		//save for form validation in the footer
 		$this->response = $response;
@@ -81,9 +81,9 @@ class WPAM_Pages_Admin_NewAffiliatePage extends WPAM_Pages_Admin_AdminPage {
 	public function onFooter() {		
 		wp_enqueue_script( 'wpam_contact_info' );
 		wp_localize_script( 'wpam_contact_info', 'currencyL10n', array(
-								'fixedLabel' => sprintf( __( 'Bounty Rate (%s per Sale)', 'wpam' ), WPAM_MoneyHelper::getDollarSign() ),
-								'percentLabel' => __( 'Bounty Rate (% of Sale)', 'wpam' ),
-								'okLabel' => __( 'OK', 'wpam' ),
+								'fixedLabel' => sprintf( __( 'Bounty Rate (%s per Sale)', 'affiliates-manager' ), WPAM_MoneyHelper::getDollarSign() ),
+								'percentLabel' => __( 'Bounty Rate (% of Sale)', 'affiliates-manager' ),
+								'okLabel' => __( 'OK', 'affiliates-manager' ),
 		) );
 		
 		$response = new WPAM_Pages_TemplateResponse('widget_form_errors', $this->response->viewData);

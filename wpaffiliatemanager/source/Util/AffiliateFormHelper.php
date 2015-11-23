@@ -90,9 +90,9 @@ class WPAM_Util_AffiliateFormHelper {
 			$fieldName = '_'.$affiliateField->databaseField;
 
 			if ($affiliateField->databaseField == 'email') {
-				$validator->addValidator($fieldName, new WPAM_Validation_CallbackValidator( __( 'is a blocked e-mail ', 'wpam' ), array( $this, "isEmailBlocked" ) ) );
+				$validator->addValidator($fieldName, new WPAM_Validation_CallbackValidator( __( 'is a blocked e-mail ', 'affiliates-manager' ), array( $this, "isEmailBlocked" ) ) );
 				if ( ! $existingUser )
-					$validator->addValidator($fieldName, new WPAM_Validation_CallbackValidator( __( 'is in use', 'wpam' ), array( $this, "isEmailInUse" ) ) );
+					$validator->addValidator($fieldName, new WPAM_Validation_CallbackValidator( __( 'is in use', 'affiliates-manager' ), array( $this, "isEmailInUse" ) ) );
 			}
 
 			if ( $affiliateField->required || ! empty( $fieldValue ) ) {
@@ -148,10 +148,10 @@ class WPAM_Util_AffiliateFormHelper {
 		$payments = array();
 		
 		if (get_option(WPAM_PluginConfig::$PayoutMethodCheckIsEnabledOption) == 1)
-			$payments['check'] = __( 'Paper Check', 'wpam' );
+			$payments['check'] = __( 'Paper Check', 'affiliates-manager' );
 
 		if (get_option(WPAM_PluginConfig::$PayoutMethodPaypalIsEnabledOption) == 1)
-			$payments['paypal'] = __( 'PayPal Transfer', 'wpam' );
+			$payments['paypal'] = __( 'PayPal Transfer', 'affiliates-manager' );
 
 		return $payments;
 	}

@@ -92,6 +92,6 @@ abstract class WPAM_Pages_PublicPage
 		if ($this->isAvailable(wp_get_current_user())) {
 			return $this->process($_REQUEST);
 		}
-		return __( 'Access denied.', 'wpam' );
+		return __( 'Access denied.', 'affiliates-manager' );
 	}
 }

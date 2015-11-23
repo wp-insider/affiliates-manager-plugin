@@ -11,9 +11,9 @@ if( ! isset( $model ) && isset( $this->viewData['affiliate'] ) ){
 <p>
 <?php
 if( is_admin() ){
-	_e( "Changing the affiliate's email address will not change their WordPress Affiliate Manager login, which may be based on the email address they used when they signed up.", 'wpam' );
+	_e( "Changing the affiliate's email address will not change their WordPress Affiliate Manager login, which may be based on the email address they used when they signed up.", 'affiliates-manager' );
 }else{
-	_e( 'Changing your email address will not change your WordPress Affiliate Manager login, which may be based on the email address you used when you signed up.', 'wpam' );
+	_e( 'Changing your email address will not change your WordPress Affiliate Manager login, which may be based on the email address you used when you signed up.', 'affiliates-manager' );
 }
 ?>
 </p>
@@ -23,7 +23,7 @@ if( is_admin() ){
 		<table class="pure-table">
 			<thead>
 				<tr>
-					<th colspan="2"><?php echo isset( $this->viewData['infoLabel'] ) ? $this->viewData['infoLabel'] : __( 'Contact Information', 'wpam' ); ?></th>
+					<th colspan="2"><?php echo isset( $this->viewData['infoLabel'] ) ? $this->viewData['infoLabel'] : __( 'Contact Information', 'affiliates-manager' ); ?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -42,7 +42,7 @@ if( is_admin() ){
 				?>
 				<tr>
 					<td><label for="_<?php echo $field->databaseField; ?>">
-						<?php _e( $field->name, 'wpam' ); ?>
+						<?php _e( $field->name, 'affiliates-manager' ); ?>
 						</label>
 						<?php
 						echo $field->required ? '&nbsp;*': '';
@@ -78,20 +78,20 @@ if( is_admin() ){
 					</td>
 				</tr>
 				<?php if( !is_admin() && $field->fieldType == 'email' && isset( $this->viewData['newEmail'] ) ){ ?>
-					<tr><td colspan="2"><?php printf( __('There is a pending change of your e-mail to <code>%1$s</code>. <a href="%2$s">Cancel</a>', 'wpam' ), $this->viewData['newEmail']['newemail'], esc_url( self_admin_url( 'profile.php?dismiss=' . $this->viewData['userId'] . '_new_email' ) ) ); ?></td></tr>
+					<tr><td colspan="2"><?php printf( __('There is a pending change of your e-mail to <code>%1$s</code>. <a href="%2$s">Cancel</a>', 'affiliates-manager' ), $this->viewData['newEmail']['newemail'], esc_url( self_admin_url( 'profile.php?dismiss=' . $this->viewData['userId'] . '_new_email' ) ) ); ?></td></tr>
                                 <?php } ?>
                                 <?php } ?>
 			</tbody>
 			<?php if ( ! isset( $model ) || ( ! $model->isPending() && ! $model->isBlocked() && ! $model->isDeclined() ) ): ?>
 			<thead>
 				<tr>
-					<th colspan="2"><?php _e( 'Payment Details', 'wpam' ) ?></th>
+					<th colspan="2"><?php _e( 'Payment Details', 'affiliates-manager' ) ?></th>
 				</tr>
 			</thead>
 			<tbody>
 		<?php if ( isset( $this->viewData['paymentMethods'] ) ): ?>
 		<tr>
-				<td><label for="ddPaymentMethod"><?php _e( 'Method', 'wpam' ) ?></label> *</td>
+				<td><label for="ddPaymentMethod"><?php _e( 'Method', 'affiliates-manager' ) ?></label> *</td>
 				<td><select id="ddPaymentMethod" name="ddPaymentMethod">
 					<?php foreach ($this->viewData['paymentMethods'] as $key => $val) {
 						$selected_html = $this->viewData['paymentMethod'] == $key ? ' selected="selected"' : '';			
@@ -114,7 +114,7 @@ if( is_admin() ){
                 }
                 ?>
 		<tr id="rowPaypalEmail" <?php echo $pp_email_field_style; ?>>
-			<td><label for="txtPaypalEmail"><?php _e( 'PayPal E-Mail Address', 'wpam' ) ?></label> *</td>
+			<td><label for="txtPaypalEmail"><?php _e( 'PayPal E-Mail Address', 'affiliates-manager' ) ?></label> *</td>
 			<td>
 				<input id="txtPaypalEmail" type="text" name="txtPaypalEmail" size="30" value="<?php echo $this->viewData['paypalEmail']?>"/>
 			</td>
@@ -123,14 +123,14 @@ if( is_admin() ){
 		<?php if ( is_admin() ): ?>					  
 		<tr>
 			<td>
-				<label for="ddBountyType"><?php _e( 'Bounty Type *', 'wpam' ) ?></label>
+				<label for="ddBountyType"><?php _e( 'Bounty Type *', 'affiliates-manager' ) ?></label>
 			</td>
 			<td>
 				<select id="ddBountyType" name="ddBountyType">
 		<?php
 
-					$select = array( 'percent' => __( 'Percentage of Sales', 'wpam' ),
-									 'fixed' => __( 'Fixed Amount per Sale', 'wpam' ) );
+					$select = array( 'percent' => __( 'Percentage of Sales', 'affiliates-manager' ),
+									 'fixed' => __( 'Fixed Amount per Sale', 'affiliates-manager' ) );
 
 		$selected = isset( $this->viewData['bountyType'] ) ? $this->viewData['bountyType'] : NULL;
 		foreach ( $select as $value => $name ) {
@@ -141,7 +141,7 @@ if( is_admin() ){
 		$currency = WPAM_MoneyHelper::getDollarSign();
 
 		$label = isset( $this->viewData['bountyType'] ) && $this->viewData['bountyType'] == 'fixed' ?
-			sprintf( __( 'Bounty Rate (%s per Sale) *', 'wpam' ), $currency) : __( 'Bounty Rate (% of Sale) *', 'wpam' );
+			sprintf( __( 'Bounty Rate (%s per Sale) *', 'affiliates-manager' ), $currency) : __( 'Bounty Rate (% of Sale) *', 'affiliates-manager' );
 
 		$bountyAmount = isset( $this->viewData['bountyAmount'] ) ? $this->viewData['bountyAmount'] : '';
 
@@ -157,12 +157,12 @@ if( is_admin() ){
 		<?php endif; //not pending, blocked or declined ?>
 			</tbody>
 		</table>
-		<p><?php _e( '* Required fields', 'wpam' ) ?></p>
+		<p><?php _e( '* Required fields', 'affiliates-manager' ) ?></p>
 		<?php if( is_admin() ){ ?>
-			<p><?php _e( '+ Custom fields', 'wpam' ) ?></p>
+			<p><?php _e( '+ Custom fields', 'affiliates-manager' ) ?></p>
                 <?php } ?>
 		<div class="wpam-save-profile">			
 			<input type="hidden" name="action" value="saveInfo"/>
-                        <input type="submit" id="saveInfoButton" class="pure-button pure-button-active" name="wpam-add-affiliate" value="<?php echo isset( $this->viewData['saveLabel'] ) ? $this->viewData['saveLabel'] : __( 'Save Changes', 'wpam' ); ?>" />
+                        <input type="submit" id="saveInfoButton" class="pure-button pure-button-active" name="wpam-add-affiliate" value="<?php echo isset( $this->viewData['saveLabel'] ) ? $this->viewData['saveLabel'] : __( 'Save Changes', 'affiliates-manager' ); ?>" />
 		</div>
 	    </form>

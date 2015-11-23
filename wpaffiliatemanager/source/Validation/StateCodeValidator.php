@@ -11,7 +11,7 @@ require_once WPAM_BASE_DIRECTORY . "/source/Validation/StateCodes.php";
 class WPAM_Validation_StateCodeValidator implements WPAM_Validation_IValidator
 {
 	public function getError() {
-		return __( 'must be selected', 'wpam' );
+		return __( 'must be selected', 'affiliates-manager' );
 	}
 
 	function isValid($value) {

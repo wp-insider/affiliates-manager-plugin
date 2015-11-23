@@ -54,18 +54,18 @@
         <?php
         if(!empty($alink_id)){
         ?>
-        <h3><?php _e('Your Affiliate Link Using Affiliate ID', 'wpam') ?></h3>
+        <h3><?php _e('Your Affiliate Link Using Affiliate ID', 'affiliates-manager') ?></h3>
         <textarea class="wpam-creative-code" rows="1"><?php echo $alink_id; ?></textarea>
         <?php
         }
         ?>
-        <h3><?php _e('The following creatives are available for publication.', 'wpam') ?></h3>
+        <h3><?php _e('The following creatives are available for publication.', 'affiliates-manager') ?></h3>
 
         <table class="pure-table">
             <thead>
                 <tr>
-                    <th><?php _e('Type', 'wpam') ?></th>
-                    <th><?php _e('Name', 'wpam') ?></th>
+                    <th><?php _e('Type', 'affiliates-manager') ?></th>
+                    <th><?php _e('Name', 'affiliates-manager') ?></th>
                 </tr>
             </thead>
             <tbody>

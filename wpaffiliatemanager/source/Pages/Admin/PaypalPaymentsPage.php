@@ -50,7 +50,7 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 				
 				if (bccomp($data['pplog']->amount, $resultFile->getPaymentAmount(), 2) != 0)
 				{
-					throw new Exception( __( 'This results file does not appear to match this payment.', 'wpam' ) );
+					throw new Exception( __( 'This results file does not appear to match this payment.', 'affiliates-manager' ) );
 				}
 
 				$unmatchedTransactions = $data['transactions'];
@@ -84,7 +84,7 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 							{
 								throw new Exception(
 									sprintf( 
-										__( "Matched a transaction in your results file, but the value was incorrect. Expected %s but found '%s'", 'wpam' ),
+										__( "Matched a transaction in your results file, but the value was incorrect. Expected %s but found '%s'", 'affiliates-manager' ),
 										$transaction['Amount'],
 										$transactionAmount ) );
 							}
@@ -92,13 +92,13 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 					}
 
 					if ($matchedTransaction === NULL)
-						throw new Exception( __( 'Could not correlate a transaction from your results file with the transactions on record.', 'wpam' ) );
+						throw new Exception( __( 'Could not correlate a transaction from your results file with the transactions on record.', 'affiliates-manager' ) );
 				}
 
 				// any unmatched transactions?
 				if (count($unmatchedTransactions) > 0)
 				{
-					throw new Exception( __( 'Could not correlate all transactions', 'wpam' ) );
+					throw new Exception( __( 'Could not correlate all transactions', 'affiliates-manager' ) );
 				}
 
 				return new WPAM_Pages_TemplateResponse('admin/paypalpayments/reconcile_file_review', $data);
@@ -142,13 +142,13 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 		{
 			$pplog = $db->getPaypalLogRepository()->load((int)$request['id']);
 			if ($pplog === NULL)
-				throw new Exception( __( 'Invalid PayPa LogID', 'wpam' ) );
+				throw new Exception( __( 'Invalid PayPa LogID', 'affiliates-manager' ) );
 
 			foreach ($request['transactionStatus'] as $transactionId => $status)
 			{
 				$tr = $db->getTransactionRepository()->load((int)$transactionId);
 				if ($tr === NULL)
-					throw new Exception( __( 'Transaction not found', 'wpam' ) );
+					throw new Exception( __( 'Transaction not found', 'affiliates-manager' ) );
 				if ($status === 'success')
 				{
 					$tr->status = 'confirmed';
@@ -159,7 +159,7 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 				}
 				else
 				{
-					throw new Exception( __( 'Invalid transaction status', 'wpam' ) );
+					throw new Exception( __( 'Invalid transaction status', 'affiliates-manager' ) );
 				}
 				$db->getTransactionRepository()->update($tr);
 			}
@@ -217,7 +217,7 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 			$options->getPaypalAPIPassword(),
 			$options->getPaypalAPISignature()
 		);
-		$massPayRequest = new WPAM_PayPal_MassPayRequest( WPAM_PayPal_MassPayRequest::RECEIVERTYPE_EMAIL_ADDRESS, __( 'Affiliate Payment', 'wpam' ) );
+		$massPayRequest = new WPAM_PayPal_MassPayRequest( WPAM_PayPal_MassPayRequest::RECEIVERTYPE_EMAIL_ADDRESS, __( 'Affiliate Payment', 'affiliates-manager' ) );
 
 		$transactions = array();
 
@@ -229,17 +229,17 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 		{
 			$affiliateModel = $aff_db->load($affiliateArray['id']);
 			if ($affiliateModel === NULL)
-				throw new Exception( __( 'Affiliate not found', 'wpam' ) );
+				throw new Exception( __( 'Affiliate not found', 'affiliates-manager' ) );
 
 			if ($affiliateModel->paymentMethod !== 'paypal')
-				throw new Exception( __( 'Payment method for affiliate is not PayPal', 'wpam' ) );
+				throw new Exception( __( 'Payment method for affiliate is not PayPal', 'affiliates-manager' ) );
 
 			$paymentTransaction = new WPAM_Data_Models_TransactionModel();
 			$paymentTransaction->affiliateId = $affiliateModel->affiliateId;
 			$paymentTransaction->amount = bcmul($affiliateArray['amount'],-1,2);
 			$paymentTransaction->dateCreated = time();
 			$paymentTransaction->dateModified = time();
-			$paymentTransaction->description = __( 'Payout via PayPal Mass Pay', 'wpam' );
+			$paymentTransaction->description = __( 'Payout via PayPal Mass Pay', 'affiliates-manager' );
 			$paymentTransaction->status = WPAM_Data_Models_TransactionModel::STATUS_PENDING;
 			$paymentTransaction->type = WPAM_Data_Models_TransactionModel::TYPE_PAYOUT;
 

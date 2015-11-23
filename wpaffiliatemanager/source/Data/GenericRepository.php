@@ -28,7 +28,7 @@ class WPAM_Data_GenericRepository
 	public function update($model)
 	{
 		if ( get_class( $model ) != $this->modelType )
-			throw new InvalidArgumentException( sprintf( __("'model' must be of type '%s'", 'wpam' ), $this->modelType ) );
+			throw new InvalidArgumentException( sprintf( __("'model' must be of type '%s'", 'affiliates-manager' ), $this->modelType ) );
 
 		/// WPDB has a built-in function for doing updates, but it doesn't appear to handle NULL columns very well.
 		///
@@ -73,7 +73,7 @@ class WPAM_Data_GenericRepository
 	public function insert($model)
 	{
 		if (get_class($model) != $this->modelType)
-			throw new InvalidArgumentException( sprintf( __("'model' must be of type '%s'", 'wpam' ), $this->modelType ) );
+			throw new InvalidArgumentException( sprintf( __("'model' must be of type '%s'", 'affiliates-manager' ), $this->modelType ) );
 
 		$modelData = (array)$model->toRow();
 

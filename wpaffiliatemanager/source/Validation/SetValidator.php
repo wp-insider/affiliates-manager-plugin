@@ -15,7 +15,7 @@ class WPAM_Validation_SetValidator implements WPAM_Validation_IValidator
 	}
 	function getError()
 	{
-		return __( 'must be selected', 'wpam' );
+		return __( 'must be selected', 'affiliates-manager' );
 	}
 
 	function isValid($value)

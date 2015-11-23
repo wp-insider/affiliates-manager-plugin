@@ -61,11 +61,11 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
     function get_columns() {
         $columns = array(
             'cb' => '<input type="checkbox" />', //Render a checkbox instead of text
-            'trackingTokenId' => __('Row ID', 'wpam'),
-            'dateCreated' => __('Date', 'wpam'),
-            'sourceAffiliateId' => __('Affiliate ID', 'wpam'),
-            'trackingKey' => __('Tracking Key', 'wpam'),
-            'referer' => __('Referring URL', 'wpam')
+            'trackingTokenId' => __('Row ID', 'affiliates-manager'),
+            'dateCreated' => __('Date', 'affiliates-manager'),
+            'sourceAffiliateId' => __('Affiliate ID', 'affiliates-manager'),
+            'trackingKey' => __('Tracking Key', 'affiliates-manager'),
+            'referer' => __('Referring URL', 'affiliates-manager')
         );
         return $columns;
     }

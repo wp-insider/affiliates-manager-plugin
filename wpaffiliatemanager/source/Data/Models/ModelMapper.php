@@ -31,7 +31,7 @@ class WPAM_Data_Models_ModelMapper
 				}
 				else
 				{
-					wp_die( sprintf( __('Model mapping error.  Could not map key %s.', 'wpam' ), $key) );
+					wp_die( sprintf( __('Model mapping error.  Could not map key %s.', 'affiliates-manager' ), $key) );
 				}
 			}
 		}

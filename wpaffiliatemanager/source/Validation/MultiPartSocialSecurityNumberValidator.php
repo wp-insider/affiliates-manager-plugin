@@ -10,7 +10,7 @@ class WPAM_Validation_MultiPartSocialSecurityNumberValidator implements WPAM_Val
 {
 	function getError()
 	{
-		return __( 'must be a valid social security number', 'wpam' );
+		return __( 'must be a valid social security number', 'affiliates-manager' );
 	}
 
 	function isValid($value)

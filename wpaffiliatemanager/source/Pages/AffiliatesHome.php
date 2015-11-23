@@ -29,15 +29,15 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 				{
 					$response = $this->doAffiliateControlPanel($affiliate, $request);
 					$response->viewData['navigation'] = array(
-						array( __( 'Overview', 'wpam' ), $this->getLink(array('sub' => 'overview'))),
-						array( __( 'Sales', 'wpam' ), $this->getLink(array('sub' => 'sales'))),
-						array( __( 'Payment History', 'wpam' ), $this->getLink(array('sub' => 'payments'))),
-						array( __( 'Creatives', 'wpam' ), $this->getLink(array('sub' => 'creatives'))),
-						array( __( 'Edit Profile', 'wpam' ), $this->getLink(array('sub' => 'profile'))),
+						array( __( 'Overview', 'affiliates-manager' ), $this->getLink(array('sub' => 'overview'))),
+						array( __( 'Sales', 'affiliates-manager' ), $this->getLink(array('sub' => 'sales'))),
+						array( __( 'Payment History', 'affiliates-manager' ), $this->getLink(array('sub' => 'payments'))),
+						array( __( 'Creatives', 'affiliates-manager' ), $this->getLink(array('sub' => 'creatives'))),
+						array( __( 'Edit Profile', 'affiliates-manager' ), $this->getLink(array('sub' => 'profile'))),
 					);
 
 					if (get_option (WPAM_PluginConfig::$AffEnableImpressions))
-						$response->viewData['navigation'][] = array( __( 'Impressions', 'wpam' ), $this->getLink(array('sub' => 'impressions')));
+						$response->viewData['navigation'][] = array( __( 'Impressions', 'affiliates-manager' ), $this->getLink(array('sub' => 'impressions')));
 				}
 				else if ($affiliate->isDeclined())
 				{
@@ -169,11 +169,11 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 			$creative = $db->getCreativesRepository()->load((int)$request['creativeId']);
 
 			if ($creative === NULL)
-				wp_die( __( 'Invalid creative.', 'wpam' ) );
+				wp_die( __( 'Invalid creative.', 'affiliates-manager' ) );
 			if ($affiliate === NULL)
-				wp_die( __( 'Invalid affiliate', 'wpam' ) );
+				wp_die( __( 'Invalid affiliate', 'affiliates-manager' ) );
 			if (!$creative->isActive())
-				wp_die( __( 'Inactive creative.', 'wpam' ) );
+				wp_die( __( 'Inactive creative.', 'affiliates-manager' ) );
 
 			$response->viewData['affiliate'] = $affiliate;
 			$response->viewData['creative'] = $creative;
@@ -384,9 +384,9 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 
 	protected function getCommissionRateString( WPAM_Data_Models_AffiliateModel $affiliate ) {
 		if ($affiliate->bountyType === 'fixed') {
-			return sprintf( __('%s per sale.', 'wpam' ), wpam_format_money( $affiliate->bountyAmount, false ) );
+			return sprintf( __('%s per sale.', 'affiliates-manager' ), wpam_format_money( $affiliate->bountyAmount, false ) );
 		} else {
-			return sprintf( __( '%s%% of each completed sale, pre-tax', 'wpam' ), $affiliate->bountyAmount );
+			return sprintf( __( '%s%% of each completed sale, pre-tax', 'affiliates-manager' ), $affiliate->bountyAmount );
 		}
 	}
 
@@ -519,9 +519,9 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 	
 	public function onFooter() {
 		wp_localize_script( 'wpam_contact_info', 'currencyL10n', array(
-								'fixedLabel' => sprintf( __( 'Bounty Rate (%s per Sale)', 'wpam' ), WPAM_MoneyHelper::getDollarSign() ),
-								'percentLabel' => __( 'Bounty Rate (% of Sale)', 'wpam' ),
-								'okLabel' => __( 'OK', 'wpam' ),
+								'fixedLabel' => sprintf( __( 'Bounty Rate (%s per Sale)', 'affiliates-manager' ), WPAM_MoneyHelper::getDollarSign() ),
+								'percentLabel' => __( 'Bounty Rate (% of Sale)', 'affiliates-manager' ),
+								'okLabel' => __( 'OK', 'affiliates-manager' ),
 		) );
 		wp_print_scripts( 'wpam_contact_info' );
 		wp_print_scripts( 'wpam_payment_method' );

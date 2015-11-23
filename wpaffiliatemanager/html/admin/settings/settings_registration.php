@@ -215,24 +215,24 @@ jQuery(function($) {
 		var fieldType = jQuery("#ddFieldTypes").val();
 
 		if (jQuery.trim(displayName).length == 0) {
-			markLabelBad('txtDisplayName', "<?php _e( 'Display name is required.', 'wpam' ) ?>");
+			markLabelBad('txtDisplayName', "<?php _e( 'Display name is required.', 'affiliates-manager' ) ?>");
 			isValid = false;
 		} else {
 			markLabelOk('txtDisplayName');
 		}
 
 		if (jQuery.trim(fieldName).length == 0) {
-			markLabelBad('txtFieldName', "<?php _e( 'Field name is required.', 'wpam' ) ?>");
+			markLabelBad('txtFieldName', "<?php _e( 'Field name is required.', 'affiliates-manager' ) ?>");
 			isValid = false;
 		}else if (!fieldName.match(/^[a-zA-Z][a-zA-Z0-9_-]*$/)) {
-			markLabelBad('txtFieldName', "<?php _e( 'Field name may only contains letters, numbers, underscores and hyphens, and must begin with a letter.', 'wpam' ) ?>");
+			markLabelBad('txtFieldName', "<?php _e( 'Field name may only contains letters, numbers, underscores and hyphens, and must begin with a letter.', 'affiliates-manager' ) ?>");
 			isValid = false;
 		}
 		else {
 			var currentFieldName = rowEditDialogMode == 'EDIT' ? rowEditDialogEditTarget.find('input[name$="[fieldName]"]').val() : null;
 			if (currentFieldName != fieldName && jQuery('input[name$="[fieldName]"][value="'+fieldName+'"]').length != 0)
 			{
-				markLabelBad('txtFieldName', '<?php _e( 'This field name is already in use.', 'wpam' ) ?>');
+				markLabelBad('txtFieldName', '<?php _e( 'This field name is already in use.', 'affiliates-manager' ) ?>');
 				isValid = false;
 			}
 			else
@@ -244,7 +244,7 @@ jQuery(function($) {
 		if (fieldType == 'string')
 		{
 			if (isNaN(fieldLength) || jQuery.trim(fieldLength).length == 0 || fieldLength <= 0) {
-				markLabelBad('txtFieldLength',"<?php _e( 'Field length must be an non-0 positive number.', 'wpam' ) ?>");
+				markLabelBad('txtFieldLength',"<?php _e( 'Field length must be an non-0 positive number.', 'affiliates-manager' ) ?>");
 				isValid = false;
 			} else {
 				markLabelOk('txtFieldLength');
@@ -358,45 +358,45 @@ jQuery(function($) {
 	}
 </style>
 
-<div id="dialogCustomFieldEditor" style="display: none" title="<?php _e( 'Custom Field', 'wpam' ) ?>">
+<div id="dialogCustomFieldEditor" style="display: none" title="<?php _e( 'Custom Field', 'affiliates-manager' ) ?>">
 	<div id="dialogCustomFieldEditorErrors">
 
 	</div>
 	<table class="wpam-form-table">
 		<tbody>
 		<tr>
-	  		<th><label for="txtDisplayName"><?php _e( 'Display Name', 'wpam' ) ?></label></th>
+	  		<th><label for="txtDisplayName"><?php _e( 'Display Name', 'affiliates-manager' ) ?></label></th>
 			<td>
 				<input id="txtDisplayName" type="text" name="txtDisplayName" size="20" />
 			</td>
 			<td></td>
 		</tr>
 		<tr>
-			<th><label for="txtFieldName"><?php _e( 'Field Name', 'wpam' ) ?></label></th>
+			<th><label for="txtFieldName"><?php _e( 'Field Name', 'affiliates-manager' ) ?></label></th>
 			<td>
 				<input id="txtFieldName" type="text" name="txtFieldName" size="20" />
 			</td>
 			<td></td>
 		</tr>
 		<tr>
-				<th><label for="ddFieldTypes"><?php _e( 'Field Type', 'wpam' ) ?></label></th>
+				<th><label for="ddFieldTypes"><?php _e( 'Field Type', 'affiliates-manager' ) ?></label></th>
 			<td>
 				<select id="ddFieldTypes">
-					<option value="string"><?php _e( 'Text', 'wpam' ) ?></option>
-					<option value="number"><?php _e( 'Number', 'wpam' ) ?></option>
-					<option value="email"><?php _e( 'E-Mail Address', 'wpam' ) ?></option>
-					<option value="phoneNumber"><?php _e( 'Phone Number', 'wpam' ) ?></option>
-					<option value="stateCode"><?php _e( 'State Code (US)', 'wpam' ) ?></option>
-					<option value="zipCode"><?php _e( 'Zip Code (US)', 'wpam' ) ?></option>
-					<option value="countryCode"><?php _e( 'Country Code', 'wpam' ) ?></option>
-					<option value="ssn"><?php _e( 'Social Security Number (US)', 'wpam' ) ?></option>
+					<option value="string"><?php _e( 'Text', 'affiliates-manager' ) ?></option>
+					<option value="number"><?php _e( 'Number', 'affiliates-manager' ) ?></option>
+					<option value="email"><?php _e( 'E-Mail Address', 'affiliates-manager' ) ?></option>
+					<option value="phoneNumber"><?php _e( 'Phone Number', 'affiliates-manager' ) ?></option>
+					<option value="stateCode"><?php _e( 'State Code (US)', 'affiliates-manager' ) ?></option>
+					<option value="zipCode"><?php _e( 'Zip Code (US)', 'affiliates-manager' ) ?></option>
+					<option value="countryCode"><?php _e( 'Country Code', 'affiliates-manager' ) ?></option>
+					<option value="ssn"><?php _e( 'Social Security Number (US)', 'affiliates-manager' ) ?></option>
 				</select>
 			</td>
 			<td></td>
 		</tr>
 		<tr id="row_txtFieldLength">
 			<!-- only for strings -->
-			<th><label for="txtFieldLength"><?php _e( 'Max Length', 'wpam' ) ?></label></th>
+			<th><label for="txtFieldLength"><?php _e( 'Max Length', 'affiliates-manager' ) ?></label></th>
 			<td>
 				<input type="text" id="txtFieldLength" name="txtFieldLength" size="5" />
 			</td>
@@ -409,7 +409,7 @@ jQuery(function($) {
 <table class="form-table">
 	<tr>
 		<th width="200">
-			<?php _e( 'Available Payout Methods', 'wpam' ) ?>
+			<?php _e( 'Available Payout Methods', 'affiliates-manager' ) ?>
 		</th>
 		<td>
 			<input type="checkbox" id="chkPayoutMethodCheck" name="chkPayoutMethodCheck" <?php
@@ -419,26 +419,26 @@ jQuery(function($) {
 			<br><input type="checkbox" id="chkPayoutMethodPaypal" name="chkPayoutMethodPaypal" <?php
 			if ($this->viewData['request']['chkPayoutMethodPaypal'])
 				echo 'checked="checked"';
-			?>/>&nbsp;&nbsp;<label for="chkPayoutMethodPaypal"><?php _e( 'PayPal', 'wpam' ) ?></label>
+			?>/>&nbsp;&nbsp;<label for="chkPayoutMethodPaypal"><?php _e( 'PayPal', 'affiliates-manager' ) ?></label>
 		</td>
 	</tr>
 	<tr>
 		<th width="200">
-			<?php _e( 'Affiliate Register Fields', 'wpam' ) ?>
+			<?php _e( 'Affiliate Register Fields', 'affiliates-manager' ) ?>
 		</th>
 		<td>
-			<button id="btnAddCustomField" class="button-secondary" type="button" name="add"><?php _e( 'Add Custom Field', 'wpam' ) ?></button>
+			<button id="btnAddCustomField" class="button-secondary" type="button" name="add"><?php _e( 'Add Custom Field', 'affiliates-manager' ) ?></button>
 			<table class="widefat" style="width: 950px" id="fields_table">
 				<thead>
 				<tr>
 					<th style="width: 50px">&lt; - &gt;</th>
-					<th style="width: 50px;"><?php _e( 'Enabled', 'wpam' ) ?></th>
-					<th style="width: 150px;"><?php _e( 'Type', 'wpam' ) ?></th>
-					<th style="width: 150px"><?php _e( 'Field Format', 'wpam' ) ?></th>
-					<th style="width: 150px"><?php _e( 'Display Name', 'wpam' ) ?></th>
-					<th style="width: 150px"><?php _e( 'Field Name', 'wpam' ) ?></th>
-					<th style="width: 150px;"><?php _e( 'Max Length', 'wpam' ) ?></th>
-					<th style="width: 50px;"><?php _e( 'Required', 'wpam' ) ?></th>
+					<th style="width: 50px;"><?php _e( 'Enabled', 'affiliates-manager' ) ?></th>
+					<th style="width: 150px;"><?php _e( 'Type', 'affiliates-manager' ) ?></th>
+					<th style="width: 150px"><?php _e( 'Field Format', 'affiliates-manager' ) ?></th>
+					<th style="width: 150px"><?php _e( 'Display Name', 'affiliates-manager' ) ?></th>
+					<th style="width: 150px"><?php _e( 'Field Name', 'affiliates-manager' ) ?></th>
+					<th style="width: 150px;"><?php _e( 'Max Length', 'affiliates-manager' ) ?></th>
+					<th style="width: 50px;"><?php _e( 'Required', 'affiliates-manager' ) ?></th>
 					<th style="width: 50px"></th>
 				</tr>
 				</thead>
@@ -449,7 +449,7 @@ jQuery(function($) {
 	</tr>
         <tr>
 		<th width="200">
-			<label for="txtTnC"><?php _e('Terms and Conditions', 'wpam');?></label>
+			<label for="txtTnC"><?php _e('Terms and Conditions', 'affiliates-manager');?></label>
 			<img id="tncInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
 		</th>
 		<td>
@@ -458,7 +458,7 @@ jQuery(function($) {
 	</tr>
         <tr>
 		<th width="200">
-			<label for="affhomemsg"><?php _e('Affiliates Homepage Message', 'wpam');?></label>
+			<label for="affhomemsg"><?php _e('Affiliates Homepage Message', 'affiliates-manager');?></label>
 		</th>
 		<td>
 			<textarea id="affhomemsg" name="affhomemsg" cols="60" rows="20"><?php echo $this->viewData['request']['affhomemsg']?></textarea>

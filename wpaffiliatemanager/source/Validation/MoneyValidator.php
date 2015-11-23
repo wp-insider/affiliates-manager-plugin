@@ -9,7 +9,7 @@
 class WPAM_Validation_MoneyValidator implements WPAM_Validation_IValidator
 {
 	function getError() {
-		return __( 'must be a valid monetary value', 'wpam' );
+		return __( 'must be a valid monetary value', 'affiliates-manager' );
 	}
 
 	function isValid($value) {

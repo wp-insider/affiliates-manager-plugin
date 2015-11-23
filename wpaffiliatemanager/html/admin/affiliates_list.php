@@ -2,18 +2,18 @@
 //display My Affiliates menu
 ?>
     <div class="wrap">
-    <h2><?php _e('My Affiliates', 'wpam');?></h2>
+    <h2><?php _e('My Affiliates', 'affiliates-manager');?></h2>
     <?php
     $status_array = array(
-        'all_active' => __( 'All Active', 'wpam' ), 
-        'all' => __( 'All (Including Closed)', 'wpam' ), 
-        'active' => __( 'Active', 'wpam' ), 
-        'applied' => __( 'Applied', 'wpam' ), 
-        'approved' => __( 'Approved', 'wpam' ), 
-        'confirmed' => __( 'Confirmed', 'wpam' ), 
-        'declined' => __( 'Declined', 'wpam' ), 
-        'blocked' => __( 'Blocked', 'wpam' ), 
-        'inactive' => __( 'Inactive', 'wpam' )
+        'all_active' => __( 'All Active', 'affiliates-manager' ), 
+        'all' => __( 'All (Including Closed)', 'affiliates-manager' ), 
+        'active' => __( 'Active', 'affiliates-manager' ), 
+        'applied' => __( 'Applied', 'affiliates-manager' ), 
+        'approved' => __( 'Approved', 'affiliates-manager' ), 
+        'confirmed' => __( 'Confirmed', 'affiliates-manager' ), 
+        'declined' => __( 'Declined', 'affiliates-manager' ), 
+        'blocked' => __( 'Blocked', 'affiliates-manager' ), 
+        'inactive' => __( 'Inactive', 'affiliates-manager' )
     );
     $current_class = "";
     if(isset($_REQUEST['statusFilter'])) {

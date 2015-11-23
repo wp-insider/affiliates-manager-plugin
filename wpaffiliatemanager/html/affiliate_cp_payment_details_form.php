@@ -66,9 +66,9 @@
 
 <div class="wrap">
 
-	 <h2><?php _e( 'Payment Details', 'wpam' ) ?></h2>
-	<h3><?php _e( 'Please provide your payment details.', 'wpam' ) ?></h3>
-	<p><?php _e( 'The following information will be used to disperse payments when your account reaches the minimum payout amount.', 'wpam' ) ?></p>
+	 <h2><?php _e( 'Payment Details', 'affiliates-manager' ) ?></h2>
+	<h3><?php _e( 'Please provide your payment details.', 'affiliates-manager' ) ?></h3>
+	<p><?php _e( 'The following information will be used to disperse payments when your account reaches the minimum payout amount.', 'affiliates-manager' ) ?></p>
 
 <?php
 require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors.php";
@@ -76,7 +76,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors.php";
 	<form method="post" action="<?php echo $this->viewData['nextStepUrl']?>">
 		<table width="500">
 			<tr>
-				<td width="200"><label for="ddPaymentMethod"><?php _e( 'Method', 'wpam' ) ?></label> *</td>
+				<td width="200"><label for="ddPaymentMethod"><?php _e( 'Method', 'affiliates-manager' ) ?></label> *</td>
 				<td><select id="ddPaymentMethod" name="ddPaymentMethod" style="width: 150px;">
 					<?php foreach ($this->viewData['paymentMethods'] as $key => $val) {
 						echo '<option value="'.$key.'"';
@@ -93,7 +93,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors.php";
 			<img src="<?php echo WPAM_URL . "/images/icon_paypal.png"?>" />
 			<table width="500">
 				<tr>
-					<td width="200"><label for="txtPaypalEmail"><?php _e( 'PayPal E-Mail Address', 'wpam' ) ?></label> *</td>
+					<td width="200"><label for="txtPaypalEmail"><?php _e( 'PayPal E-Mail Address', 'affiliates-manager' ) ?></label> *</td>
 					<td>
 						<input id="txtPaypalEmail" type="text" name="txtPaypalEmail" size="30" value="<?php echo $this->viewData['request']['txtPaypalEmail']?>"/>
 					</td>
@@ -106,13 +106,13 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors.php";
 				<img src="<?php echo WPAM_URL . "/images/bank-check.png"?>" />
 			</div>
 			<div style="width: 400px; height: 35px; padding-left: 10px; text-align: left; vertical-align: bottom;">
-				<strong><?php _e( 'Paper Check', 'wpam' ) ?></strong>
+				<strong><?php _e( 'Paper Check', 'affiliates-manager' ) ?></strong>
 			</div>
 
 			<table width="500">
 				<tr>
 					<td width="200">
-						<label for="txtCheckTo"><?php _e( 'Check Recipient', 'wpam' ) ?></label> *
+						<label for="txtCheckTo"><?php _e( 'Check Recipient', 'affiliates-manager' ) ?></label> *
 					</td>
 					<td>
 						<input id="txtCheckTo" type="text" size="30" name="txtCheckTo" value="<?php echo $this->viewData['request']['txtCheckTo']?>" />
@@ -131,7 +131,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors.php";
 						}
 						?>
 						/>
-						<label for="cbMailTo"><?php _e( 'Mail to Address On Record', 'wpam' ) ?></label>
+						<label for="cbMailTo"><?php _e( 'Mail to Address On Record', 'affiliates-manager' ) ?></label>
 					</td>
 				</tr>
 			</table>
@@ -140,7 +140,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors.php";
 			<div id="existingAddressDiv">
 				<table class="widefat">
 					<tbody>
-							<tr><td width="100"><?php _e( 'Recipient', 'wpam' ) ?></td>
+							<tr><td width="100"><?php _e( 'Recipient', 'affiliates-manager' ) ?></td>
 						<td>
 							<?php echo $model->firstName?> <?php echo $model->lastName?><br/>
 							<?php echo $model->addressLine1?><br />
@@ -163,23 +163,23 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors.php";
 			<div id="differentAddressDiv" style="display: none">
 			<table class="widefat">
 				<tr>
-					<td width="100"><label for="txtRecipient"><?php _e( 'Recipient', 'wpam' ) ?></label> *</td>
+					<td width="100"><label for="txtRecipient"><?php _e( 'Recipient', 'affiliates-manager' ) ?></label> *</td>
 					<td><input id="txtRecipient" type="text" name="txtRecipient" value="<?php echo $this->viewData['request']['txtRecipient']?>" /></td>
 				</tr>
 				<tr>
-					<td><label for="address1"><?php _e( 'Address 1', 'wpam' ) ?></label> *</td>
+					<td><label for="address1"><?php _e( 'Address 1', 'affiliates-manager' ) ?></label> *</td>
 					<td><input id="address1" type="text" name="address1" value="<?php echo $this->viewData['request']['address1']?>" size="30" /></td>
 				</tr>
 				<tr>
-					<td><label for="address2"><?php _e( 'Address 2', 'wpam' ) ?></label></td>
+					<td><label for="address2"><?php _e( 'Address 2', 'affiliates-manager' ) ?></label></td>
 					<td><input id="address2" type="text" name="address2" value="<?php echo $this->viewData['request']['address2']?>" size="30" /></td>
 				</tr>
 				<tr>
-					<td><label for="addressCity"><?php _e( 'City', 'wpam' ) ?></label> *</td>
+					<td><label for="addressCity"><?php _e( 'City', 'affiliates-manager' ) ?></label> *</td>
 					<td><input id="addressCity" type="text" name="addressCity" value="<?php echo $this->viewData['request']['addressCity']?>" size="30" /></td>
 				</tr>
 				<tr>
-					<td><label for="country"><?php _e( 'Country', 'wpam' ) ?></label> *</td>
+					<td><label for="country"><?php _e( 'Country', 'affiliates-manager' ) ?></label> *</td>
 					<td>
 						<select id="country" name="country">
 						<?php
@@ -189,7 +189,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors.php";
 					</td>
 				</tr>
 				<tr id="wpam_us_states">
-					<td><label for="addressState"><?php _e( 'State', 'wpam' ) ?></label> *</td>
+					<td><label for="addressState"><?php _e( 'State', 'affiliates-manager' ) ?></label> *</td>
 					<td>
 						<select id="addressState" name="addressState">
 						<?php
@@ -199,7 +199,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors.php";
 					</td>
 				</tr>
 				<tr>
-					<td><label for="addressPostalCode"><?php _e( 'Postal Code', 'wpam' ) ?></label> *</td>
+					<td><label for="addressPostalCode"><?php _e( 'Postal Code', 'affiliates-manager' ) ?></label> *</td>
 					<td>
 						<input id="addressPostalCode" type="text" name="addressPostalCode" value="<?php echo $this->viewData['request']['addressPostalCode']?>" size="5"/>
 					</td>
@@ -213,7 +213,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors.php";
 
 		<br />
 		<div id="buttons" style="width:500px; text-align: center;">
-			<input type="submit" class="button-primary" name="submitButton" value="<?php _e( 'Submit Payment Details', 'wpam' ) ?>"/>
+			<input type="submit" class="button-primary" name="submitButton" value="<?php _e( 'Submit Payment Details', 'affiliates-manager' ) ?>"/>
 		</div>
 	</form>
 </div>

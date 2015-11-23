@@ -71,11 +71,11 @@ class WPAM_PayPal_Service
 		$response = wp_remote_post( $this->apiEndPoint, $args );
 
 		if ( is_wp_error( $response ) ) {
-			throw new WPAM_PayPal_ServiceException( sprintf( __( "POST failed\nerrors:\n%serrordata:\n%s", 'wpam' ), print_r($response->errors, true), print_r($response->error_data, true) ) );
+			throw new WPAM_PayPal_ServiceException( sprintf( __( "POST failed\nerrors:\n%serrordata:\n%s", 'affiliates-manager' ), print_r($response->errors, true), print_r($response->error_data, true) ) );
 		} elseif ( isset( $response['response']['code'] ) && $response['response']['code'] == 200 ) {
 			return $response['body'];
 		}
 
-		throw new WPAM_PayPal_ServiceException( sprintf( __( 'Unknown response: %s', 'wpam' ), print_r( $response, true ) ) );
+		throw new WPAM_PayPal_ServiceException( sprintf( __( 'Unknown response: %s', 'affiliates-manager' ), print_r( $response, true ) ) );
 	}
 }

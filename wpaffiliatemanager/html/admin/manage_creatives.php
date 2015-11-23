@@ -35,7 +35,7 @@
 			modal: true,
 			draggable: false,
 			buttons: [ {
-				  text : '<?php _e( 'OK', 'wpam' ) ?>',
+				  text : '<?php _e( 'OK', 'affiliates-manager' ) ?>',
 				  click : function() { jQuery(this).dialog('close'); }
 			} ]
 		});
@@ -61,7 +61,7 @@
 			modal: true,
 			buttons: [
 				{
-				  text : '<?php _e( 'Yes, delete this creative', 'wpam' ) ?>',
+				  text : '<?php _e( 'Yes, delete this creative', 'affiliates-manager' ) ?>',
 				  click : function() {
 					jQuery(this).dialog('close');
 					jQuery("#dialog-loading").dialog('open');
@@ -87,7 +87,7 @@
 					}
 				},
 				{
-				  text : '<?php _e( 'Cancel', 'wpam' ) ?>',
+				  text : '<?php _e( 'Cancel', 'affiliates-manager' ) ?>',
 				  click : function() {
 					jQuery(this).dialog('close');
 				  }
@@ -106,35 +106,35 @@
 	});
 </script>
 <div id="dialog-error" title="Error" style="display: none">
-	 <p><?php _e( 'ERROR:', 'wpam' ) ?> <span id="errorMsg"></span></p>
+	 <p><?php _e( 'ERROR:', 'affiliates-manager' ) ?> <span id="errorMsg"></span></p>
 </div>
 
 <div id="dialog-loading" style="display:none">
-	<div style="text-align: center"><?php _e( 'Updating, please wait ...', 'wpam' ) ?></div><br />
+	<div style="text-align: center"><?php _e( 'Updating, please wait ...', 'affiliates-manager' ) ?></div><br />
 	<div id="progressbar" class="ui-progressbar-value">
 
 	</div>
 </div>
 
 
-<div id="dialog-confirm-delete" title="<?php _e( 'Delete Creative?', 'wpam' ) ?>">
-	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><?php _e( 'This creative will be deleted. Are you sure?', 'wpam' ) ?></p>
+<div id="dialog-confirm-delete" title="<?php _e( 'Delete Creative?', 'affiliates-manager' ) ?>">
+	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><?php _e( 'This creative will be deleted. Are you sure?', 'affiliates-manager' ) ?></p>
 </div>
 
 
 <div class="wrap">
-<h2><?php _e( 'My Creatives', 'wpam' ) ?></h2>
+<h2><?php _e( 'My Creatives', 'affiliates-manager' ) ?></h2>
 <h3></h3>
 
 <table class="widefat">
 	<thead>
 	<tr>
-		<th><?php _e( 'Filter', 'wpam' ) ?></th>
+		<th><?php _e( 'Filter', 'affiliates-manager' ) ?></th>
 	</tr>
 	</thead>
 	<tr>
 		<td>
-			<label for="ddFilterStatus"><?php _e( 'Status:', 'wpam' ) ?></label>
+			<label for="ddFilterStatus"><?php _e( 'Status:', 'affiliates-manager' ) ?></label>
 			<select id="ddFilterStatus">
 
 				<?php foreach ($this->viewData['statusFilters'] as $key => $val) { ?>
@@ -152,7 +152,7 @@
 
 
 	<div id="buttonsDiv" style="margin-bottom: 10px; margin-top: 10px;">
-		<a href="<?php echo admin_url( 'admin.php?page=wpam-creatives&action=new' ) ?>" class="button-primary"><?php _e( 'Create New', 'wpam' ) ?></a>
+		<a href="<?php echo admin_url( 'admin.php?page=wpam-creatives&action=new' ) ?>" class="button-primary"><?php _e( 'Create New', 'affiliates-manager' ) ?></a>
 	</div>
 
 	<br/>
@@ -160,12 +160,12 @@
 	<table class="widefat">
 		<thead>
 			<tr>
-				<th width="150"><?php _e( 'Actions', 'wpam' ) ?></th>
-				<th width="50"><?php _e( 'ID', 'wpam' ) ?></th>
-				<th width="75"><?php _e( 'Status', 'wpam' ) ?></th>
-				<th width="100"><?php _e( 'Created', 'wpam' ) ?></th>
-				<th width="75"><?php _e( 'Type', 'wpam' ) ?></th>
-				<th><?php _e( 'Name', 'wpam' ) ?></th>
+				<th width="150"><?php _e( 'Actions', 'affiliates-manager' ) ?></th>
+				<th width="50"><?php _e( 'ID', 'affiliates-manager' ) ?></th>
+				<th width="75"><?php _e( 'Status', 'affiliates-manager' ) ?></th>
+				<th width="100"><?php _e( 'Created', 'affiliates-manager' ) ?></th>
+				<th width="75"><?php _e( 'Type', 'affiliates-manager' ) ?></th>
+				<th><?php _e( 'Name', 'affiliates-manager' ) ?></th>
 
 			</tr>
 		</thead>
@@ -173,8 +173,8 @@
 		<?php foreach ($this->viewData['creatives'] as $creative) {?>
 			<tr>
 				<td style="white-space: nowrap;">
-					<a class="button-secondary" href="<?php echo admin_url( "admin.php?page=wpam-creatives&action=viewDetail&creativeId={$creative->creativeId}" ) ?>"><?php _e( 'View', 'wpam' ) ?></a>
-					&nbsp; <a id="delete-button-<?php echo $creative->creativeId?>" class="button-secondary delete-button"><?php _e( 'Delete', 'wpam' ) ?></a>
+					<a class="button-secondary" href="<?php echo admin_url( "admin.php?page=wpam-creatives&action=viewDetail&creativeId={$creative->creativeId}" ) ?>"><?php _e( 'View', 'affiliates-manager' ) ?></a>
+					&nbsp; <a id="delete-button-<?php echo $creative->creativeId?>" class="button-secondary delete-button"><?php _e( 'Delete', 'affiliates-manager' ) ?></a>
 				</td>
 				<td><?php echo $creative->creativeId?></td>
 				<td><?php echo $creative->status?></td>

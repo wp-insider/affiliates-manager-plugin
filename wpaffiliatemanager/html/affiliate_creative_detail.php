@@ -5,9 +5,9 @@ function formatType($type)
 {
 	switch ($type)
 	{
-		case 'image': return __( 'Image', 'wpam' );
-		case 'text': return __( 'Text Link', 'wpam' );
-		default: wp_die( __( 'unknown creative type.', 'wpam' ) );
+		case 'image': return __( 'Image', 'affiliates-manager' );
+		case 'text': return __( 'Text Link', 'affiliates-manager' );
+		default: wp_die( __( 'unknown creative type.', 'affiliates-manager' ) );
 	}
 }
 ?>
@@ -25,7 +25,7 @@ function formatType($type)
 			draggable: true,
 			autoOpen: false,
 			buttons: [ {
-				text : '<?php _e( 'OK', 'wpam' ) ?>',
+				text : '<?php _e( 'OK', 'affiliates-manager' ) ?>',
 			  	click : function() { jQuery(this).dialog('close'); }
 			} ]
 		});
@@ -38,7 +38,7 @@ function formatType($type)
 </script>
 
 
-<div id="dialog-preview" title="<?php _e( 'Preview', 'wpam' ) ?>" style="display: none">
+<div id="dialog-preview" title="<?php _e( 'Preview', 'affiliates-manager' ) ?>" style="display: none">
 	<?php echo $this->viewData['htmlPreview']?>
 </div>
 
@@ -49,11 +49,11 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 
 <div class="wrap">
 
-	 <h2><?php _e( 'Creative:', 'wpam' ) ?> <?php echo $model->name?></h2>
+	 <h2><?php _e( 'Creative:', 'affiliates-manager' ) ?> <?php echo $model->name?></h2>
 
-	 <p align="center"><button type="button" name="preview" id="previewButton" class="button-secondary"><?php _e( 'Preview', 'wpam' ) ?></button></p>
+	 <p align="center"><button type="button" name="preview" id="previewButton" class="button-secondary"><?php _e( 'Preview', 'affiliates-manager' ) ?></button></p>
 
-	 <h2><?php _e( 'Your Affiliate-Specific HTML snippet', 'wpam' ) ?></h2>
+	 <h2><?php _e( 'Your Affiliate-Specific HTML snippet', 'affiliates-manager' ) ?></h2>
          <textarea rows="5" class="wpam-creative-code"><?php echo htmlspecialchars($this->viewData['htmlSnippet']); ?></textarea>
 
 <p/>
@@ -62,16 +62,16 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 	<table class="pure-table">
 		<thead>
 		<tr>
-			<th colspan="2"><?php _e( 'Text Link Properties', 'wpam' ) ?></th>
+			<th colspan="2"><?php _e( 'Text Link Properties', 'affiliates-manager' ) ?></th>
 		</tr>
 		</thead>
 		<tbody>
 		<tr>
-			<td width="150"><?php _e( 'Link Text', 'wpam' ) ?></td>
+			<td width="150"><?php _e( 'Link Text', 'affiliates-manager' ) ?></td>
 			<td><?php echo $model->linkText?></td>
 		</tr>
 		<tr>
-			<td><?php _e( 'Alt Text', 'wpam' ) ?></td>
+			<td><?php _e( 'Alt Text', 'affiliates-manager' ) ?></td>
 			<td>
 				<?php echo $model->altText?>
 			</td>
@@ -83,18 +83,18 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 	<table class="pure-table">
 		<thead>
 		<tr>
-			<th colspan="2"><?php _e( 'Image Properties', 'wpam' ) ?></th>
+			<th colspan="2"><?php _e( 'Image Properties', 'affiliates-manager' ) ?></th>
 		</tr>
 		</thead>
 		<tbody>
 		<tr>
-			<td width="150"><?php _e( 'Image', 'wpam' ) ?></td>
+			<td width="150"><?php _e( 'Image', 'affiliates-manager' ) ?></td>
 			<td><img src="<?php
 				$url = wp_get_attachment_image_src($model->imagePostId);
 				echo $url[0];?>" style="max-width: 200px; max-height: 200px;"/></td>
 		</tr>
 		<tr>
-			<td><?php _e( 'Alt Text', 'wpam' ) ?></td>
+			<td><?php _e( 'Alt Text', 'affiliates-manager' ) ?></td>
 			<td><?php echo $model->altText?></td>
 		</tr>
 		</tbody>

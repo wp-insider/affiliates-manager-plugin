@@ -3,7 +3,7 @@
 function wpam_display_addons_menu()
 {
     echo '<div class="wrap">';
-    echo '<h2>' .__('Affiliates Manager Add-ons', 'wpam') . '</h2>';
+    echo '<h2>' .__('Affiliates Manager Add-ons', 'affiliates-manager') . '</h2>';
     echo '<link type="text/css" rel="stylesheet" href="' . WPAM_URL . '/style/wpam-addons-listing.css" />' . "\n";
     
     $addons_data = array();

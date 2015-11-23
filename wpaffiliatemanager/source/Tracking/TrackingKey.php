@@ -32,7 +32,7 @@ class WPAM_Tracking_TrackingKey
 		$data = $binConverter->stringToBin($data);
 		
 		if (strlen($data) != 28)
-			throw new Exception( sprintf( __( 'invalid refkey format. (length=%s)', 'wpam' ), strlen($data) ) );
+			throw new Exception( sprintf( __( 'invalid refkey format. (length=%s)', 'affiliates-manager' ), strlen($data) ) );
 
 		//try both unpacking methods - test cases refKey zBVGC-a7cCyBJfVLhI1TkrdFO12 and FxjiRElrO8RryBSjNwSdh94rxB5
 		$unpacked = unpack("A20aid/Lcid/Lr", $data);

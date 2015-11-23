@@ -63,16 +63,16 @@ jQuery(function($) {
 
 
 <p>
-	<?php _e( 'These settings allow you to control text that is displayed to affiliates at various points in the affiliate plug-in, as well as e-mails that are sent.', 'wpam' ) ?>
+	<?php _e( 'These settings allow you to control text that is displayed to affiliates at various points in the affiliate plug-in, as well as e-mails that are sent.', 'affiliates-manager' ) ?>
 </p>
 
 <div id="messageEditorDialog" style="display: none">
 	<div id="messageEditorStatus" style="font-weight: bold"></div>
-	<div style="margin-top: 6px"><?php _e( 'Use:', 'wpam' ) ?></div>
+	<div style="margin-top: 6px"><?php _e( 'Use:', 'affiliates-manager' ) ?></div>
 	<div id="messageEditorUse" style="border: 1px solid #e0e0e0; height: 50px; overflow:hidden;">
 
 	</div>
-	<div style="margin-top: 6px"><?php _e( 'Content:', 'wpam' ) ?></div>
+	<div style="margin-top: 6px"><?php _e( 'Content:', 'affiliates-manager' ) ?></div>
 	<textarea id="messageEditorTextArea" name="messageEditorTextArea" style="width: 100%; height: 225px"></textarea>
 
 </div>
@@ -82,10 +82,10 @@ jQuery(function($) {
 		<thead>
 		<tr>
 			<th width="50"></th>
-			<th width="250"><?php _e( 'Name', 'wpam' ) ?></th>
-			<th width="85"><?php _e( 'Type', 'wpam' ) ?></th>
-			<th width="300"><?php _e( 'Use', 'wpam' ) ?></th>
-			<th><?php _e( 'Content', 'wpam' ) ?></th>
+			<th width="250"><?php _e( 'Name', 'affiliates-manager' ) ?></th>
+			<th width="85"><?php _e( 'Type', 'affiliates-manager' ) ?></th>
+			<th width="300"><?php _e( 'Use', 'affiliates-manager' ) ?></th>
+			<th><?php _e( 'Content', 'affiliates-manager' ) ?></th>
 		</tr>
 		</thead>
 		<?php foreach ($this->viewData['messages'] as $message) { ?>
@@ -115,12 +115,12 @@ jQuery(function($) {
 				if (strlen($encodedContent) < 520)
 					echo $encodedContent;
 				else
-					echo sprintf( __( '%s(More)', 'wpam' ), substr($encodedContent, 0, 500) );
+					echo sprintf( __( '%s(More)', 'affiliates-manager' ), substr($encodedContent, 0, 500) );
 			?></em></td>
 		</tr>
 		<?php } ?>
 	</table>
 </div>
 <div id="messageEditorModifiedWarning" style="display: none; padding: 20px;">
-	<span style="color: red"><?php _e( "* Some messages have been modified. These will <strong>NOT</strong> be saved to the database until you click 'Save Settings' button below.", 'wpam' ) ?></span>
+	<span style="color: red"><?php _e( "* Some messages have been modified. These will <strong>NOT</strong> be saved to the database until you click 'Save Settings' button below.", 'affiliates-manager' ) ?></span>
 </div>

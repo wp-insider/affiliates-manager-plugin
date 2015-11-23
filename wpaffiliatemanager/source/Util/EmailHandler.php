@@ -67,8 +67,8 @@ class WPAM_Util_EmailHandler {
 			return $args;
 		
 		$blogname = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
-		$args['subject'] = sprintf( __( '[%s] Your username and password for Affiliate Manager', 'wpam' ), $blogname );
-		$args['message'] = sprintf( __( 'New affiliate registration for %s: has been approved!', 'wpam' ), $blogname ) . "\r\n\r\n" . $args['message'];
+		$args['subject'] = sprintf( __( '[%s] Your username and password for Affiliate Manager', 'affiliates-manager' ), $blogname );
+		$args['message'] = sprintf( __( 'New affiliate registration for %s: has been approved!', 'affiliates-manager' ), $blogname ) . "\r\n\r\n" . $args['message'];
 		return $args;
 	}
 

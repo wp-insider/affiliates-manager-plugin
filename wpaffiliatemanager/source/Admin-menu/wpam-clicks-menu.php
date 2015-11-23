@@ -5,10 +5,10 @@ function wpam_display_clicks_menu()
 {
     ?>
     <div class="wrap">
-    <h2><?php _e('Click Tracking', 'wpam');?></h2>
+    <h2><?php _e('Click Tracking', 'affiliates-manager');?></h2>
     <?php
     $wpam_clicktracking_tabs = array(
-        'wpam-clicktracking' => __('Unique Click Tracking', 'wpam'),
+        'wpam-clicktracking' => __('Unique Click Tracking', 'affiliates-manager'),
     ); 
 
     if(isset($_GET['page'])){
@@ -31,7 +31,7 @@ function wpam_display_clicks_menu()
     $content .= '</h2>';
     echo $content;
     ?>
-    <p><?php _e('This tab shows unique referrals to your website from your affiliates', 'wpam');?></p>
+    <p><?php _e('This tab shows unique referrals to your website from your affiliates', 'affiliates-manager');?></p>
     <div id="poststuff"><div id="post-body">
     <?php        
     

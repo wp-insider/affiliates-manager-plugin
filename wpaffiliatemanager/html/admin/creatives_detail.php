@@ -5,9 +5,9 @@ function formatType($type)
 {
 	switch ($type)
 	{
-		case 'image': return __( 'Image', 'wpam' );
-		case 'text': return __( 'Text Link', 'wpam' );
-		default: wp_die( __('Unknown creative type.', 'wpam' ) );
+		case 'image': return __( 'Image', 'affiliates-manager' );
+		case 'text': return __( 'Text Link', 'affiliates-manager' );
+		default: wp_die( __('Unknown creative type.', 'affiliates-manager' ) );
 	}
 }
 ?>
@@ -80,19 +80,19 @@ function formatType($type)
 		}
 
 		var activateButtons = [ {
-				text : '<?php _e( 'Cancel', 'wpam' ) ?>',
+				text : '<?php _e( 'Cancel', 'affiliates-manager' ) ?>',
 				click : cancelClicked
 			}, {
-				text : '<?php _e( 'Yes, ACTIVATE.', 'wpam' ) ?>',
+				text : '<?php _e( 'Yes, ACTIVATE.', 'affiliates-manager' ) ?>',
 				click : activateConfirmClicked
 			}
 		];
 
 		var declineButtons = [ {
-			  text : '<?php _e( 'Cancel', 'wpam' ) ?>',
+			  text : '<?php _e( 'Cancel', 'affiliates-manager' ) ?>',
 			  click : cancelClicked
 			}, {
-			  text : '<?php _e( 'Yes, DEACTIVATE.', 'wpam' ) ?>',
+			  text : '<?php _e( 'Yes, DEACTIVATE.', 'affiliates-manager' ) ?>',
 			  click : deactivateConfirmClicked
 			}
 		];
@@ -111,7 +111,7 @@ function formatType($type)
 			modal: true,
 			draggable: false,
 			buttons: [ {
-				  text : '<?php _e( 'OK', 'wpam' ) ?>',
+				  text : '<?php _e( 'OK', 'affiliates-manager' ) ?>',
 				  click : function() { jQuery(this).dialog('close'); }
 			} ]
 		});
@@ -134,18 +134,18 @@ function formatType($type)
 			draggable: true,
 			autoOpen: false,
 			buttons: [ {
-				  text : '<?php _e( 'OK', 'wpam' ) ?>',
+				  text : '<?php _e( 'OK', 'affiliates-manager' ) ?>',
 				  click : function() { jQuery(this).dialog('close'); }
 			} ]
 		});
 
 		jQuery("#actButton").click(function() {
-			jQuery("#actionSpan").html('<?php _e( 'ACTIVATE', 'wpam' ) ?>');
+			jQuery("#actionSpan").html('<?php _e( 'ACTIVATE', 'affiliates-manager' ) ?>');
 			jQuery("#dialog-confirm").dialog('option', 'buttons', activateButtons);
 			jQuery("#dialog-confirm").dialog('open');
 		});
 		jQuery("#deactButton").click(function() {
-			jQuery("#actionSpan").html('<?php _e( 'DEACTIVATE', 'wpam' ) ?>');
+			jQuery("#actionSpan").html('<?php _e( 'DEACTIVATE', 'affiliates-manager' ) ?>');
 			jQuery("#dialog-confirm").dialog('option', 'buttons', declineButtons);
 			jQuery("#dialog-confirm").dialog('open');
 		});
@@ -158,20 +158,20 @@ function formatType($type)
 </script>
 
 <div id="dialog-loading" style="display:none">
-	<div style="text-align: center"><?php _e( 'Updating, please wait ... ', 'wpam' ) ?></div><br />
+	<div style="text-align: center"><?php _e( 'Updating, please wait ... ', 'affiliates-manager' ) ?></div><br />
 	<div id="progressbar" class="ui-progressbar-value">
 
 	</div>
 </div>
-<div id="dialog-confirm" title="<?php _e( 'Are you sure?', 'wpam' ) ?>" style="display: none">
-	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><?php _e( 'Are you sure you wish to', 'wpam' ) ?> <span id="actionSpan"></span> <?php _e( 'this creative?', 'wpam' ) ?></p>
+<div id="dialog-confirm" title="<?php _e( 'Are you sure?', 'affiliates-manager' ) ?>" style="display: none">
+	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><?php _e( 'Are you sure you wish to', 'affiliates-manager' ) ?> <span id="actionSpan"></span> <?php _e( 'this creative?', 'affiliates-manager' ) ?></p>
 </div>
-<div id="dialog-error" title="<?php _e( 'Error', 'wpam' ) ?>" style="display: none">
-	<p><?php _e( 'ERROR:', 'wpam' ) ?> <span id="errorMsg"></span></p>
+<div id="dialog-error" title="<?php _e( 'Error', 'affiliates-manager' ) ?>" style="display: none">
+	<p><?php _e( 'ERROR:', 'affiliates-manager' ) ?> <span id="errorMsg"></span></p>
 </div>
 
 
-<div id="dialog-preview" title="<?php _e( 'Preview', 'wpam' ) ?>" style="display: none">
+<div id="dialog-preview" title="<?php _e( 'Preview', 'affiliates-manager' ) ?>" style="display: none">
 <?php if ($model->type === 'image') { ?>
 <a href="" title="<?php echo $model->altText?>"><img src="<?php
 				$url = wp_get_attachment_image_src($model->imagePostId);
@@ -191,7 +191,7 @@ function formatType($type)
 
 <div class="wrap">
 
-	<h2><?php _e( 'Creative:', 'wpam' ) ?> <?php echo $model->name?></h2>
+	<h2><?php _e( 'Creative:', 'affiliates-manager' ) ?> <?php echo $model->name?></h2>
 	<?php if (isset($this->viewData['updateMessage'])) {?>
 		<div class="updated">
 			<p><?php echo $this->viewData['updateMessage']?></p>
@@ -203,17 +203,17 @@ function formatType($type)
 		<thead>
 		<tr>
 			<th width="150">
-				<?php _e( 'Actions', 'wpam' ) ?>
+				<?php _e( 'Actions', 'affiliates-manager' ) ?>
 			</th>
 			<th>
 				<?php if ($model->status === 'active') { ?>
-					<a id="deactButton" class="button-secondary"><?php _e( 'Deactivate', 'wpam' ) ?></a>
+					<a id="deactButton" class="button-secondary"><?php _e( 'Deactivate', 'affiliates-manager' ) ?></a>
 				<?php } else if ($model->status === 'inactive') {?>
-					<a id="actButton" class="button-secondary"><?php _e( 'Activate', 'wpam' ) ?></a>
+					<a id="actButton" class="button-secondary"><?php _e( 'Activate', 'affiliates-manager' ) ?></a>
 				<?php } ?>
 
-	  &nbsp;&nbsp;&nbsp;<a id="previewButton" class="button-secondary"><?php _e( 'Preview', 'wpam' ) ?></a>
-	  &nbsp;&nbsp;&nbsp;<a id="editButton" class="button-secondary" href="<?php echo admin_url( "admin.php?page=wpam-creatives&action=edit&creativeId={$model->creativeId}" ) ?>"><?php _e( 'Edit', 'wpam' ) ?></a>
+	  &nbsp;&nbsp;&nbsp;<a id="previewButton" class="button-secondary"><?php _e( 'Preview', 'affiliates-manager' ) ?></a>
+	  &nbsp;&nbsp;&nbsp;<a id="editButton" class="button-secondary" href="<?php echo admin_url( "admin.php?page=wpam-creatives&action=edit&creativeId={$model->creativeId}" ) ?>"><?php _e( 'Edit', 'affiliates-manager' ) ?></a>
 			</th>
 		</tr>
 		</thead>
@@ -224,31 +224,31 @@ function formatType($type)
 		<thead>
 		<tr>
 			<th colspan="2">
-				<?php _e( 'General', 'wpam' ) ?>
+				<?php _e( 'General', 'affiliates-manager' ) ?>
 			</th>
 		</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td width="150">
-					<?php _e( 'ID', 'wpam' ) ?>
+					<?php _e( 'ID', 'affiliates-manager' ) ?>
 				</td>
 				<td><?php echo $model->creativeId?></td>
 			</tr>
 			<tr>
-				<td><?php _e( 'Status', 'wpam' ) ?></td>
+				<td><?php _e( 'Status', 'affiliates-manager' ) ?></td>
 				<td><?php echo $model->status?></td>
 			</tr>			
 			<tr>
-				<td><?php _e( 'Name', 'wpam' ) ?></td>
+				<td><?php _e( 'Name', 'affiliates-manager' ) ?></td>
 				<td><?php echo $model->name?></td>
 			</tr>
 			<tr>
-				<td><?php _e( 'Type', 'wpam' ) ?></td>
+				<td><?php _e( 'Type', 'affiliates-manager' ) ?></td>
 				<td><?php echo formatType($model->type)?></td>
 			</tr>
 			<tr>
-				<td><?php _e( 'Landing Page', 'wpam' ) ?></td>
+				<td><?php _e( 'Landing Page', 'affiliates-manager' ) ?></td>
 				<td><?php echo site_url( $model->slug ) ?></td>
 			</tr>
 
@@ -260,16 +260,16 @@ function formatType($type)
 	<table class="widefat">
 		<thead>
 		<tr>
-			<th colspan="2"><?php _e( 'Text Link Properties', 'wpam' ) ?></th>
+			<th colspan="2"><?php _e( 'Text Link Properties', 'affiliates-manager' ) ?></th>
 		</tr>
 		</thead>
 		<tbody>
 		<tr>
-			<td width="150"><?php _e( 'Link Text', 'wpam' ) ?></td>
+			<td width="150"><?php _e( 'Link Text', 'affiliates-manager' ) ?></td>
 			<td><?php echo $model->linkText?></td>
 		</tr>
 		<tr>
-			<td><?php _e( 'Alt Text', 'wpam' ) ?></td>
+			<td><?php _e( 'Alt Text', 'affiliates-manager' ) ?></td>
 			<td>
 				<?php echo $model->altText?>
 			</td>
@@ -281,18 +281,18 @@ function formatType($type)
 	<table class="widefat">
 		<thead>
 		<tr>
-			<th colspan="2"><?php _e( 'Image Properties', 'wpam' ) ?></th>
+			<th colspan="2"><?php _e( 'Image Properties', 'affiliates-manager' ) ?></th>
 		</tr>
 		</thead>
 		<tbody>
 		<tr>
-			<td width="150"><?php _e( 'Image', 'wpam' ) ?></td>
+			<td width="150"><?php _e( 'Image', 'affiliates-manager' ) ?></td>
 			<td><img src="<?php
 				$url = wp_get_attachment_image_src($model->imagePostId);
 				echo $url[0];?>" style="max-width: 200px; max-height: 200px;"/></td>
 		</tr>
 		<tr>
-			<td><?php _e( 'Alt Text', 'wpam' ) ?></td>
+			<td><?php _e( 'Alt Text', 'affiliates-manager' ) ?></td>
 			<td><?php echo $model->altText?></td>
 		</tr>
 		</tbody>

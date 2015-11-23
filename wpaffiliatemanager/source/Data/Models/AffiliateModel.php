@@ -161,15 +161,15 @@ class WPAM_Data_Models_AffiliateModel implements WPAM_Data_Models_IDataModel
 	
 	public function getBountyType() {
 		if ( $this->bountyType == 'percent' )
-			return __( 'Percent', 'wpam' );
+			return __( 'Percent', 'affiliates-manager' );
 		//else
-		return __( 'Fixed', 'wpam' );
+		return __( 'Fixed', 'affiliates-manager' );
 	}
 
 	public function getPaymentMethod() {
 		if ( $this->paymentMethod == 'paypal' )
-			return __( 'PayPal', 'wpam' );
+			return __( 'PayPal', 'affiliates-manager' );
 		//else
-		return __( 'Check', 'wpam' );
+		return __( 'Check', 'affiliates-manager' );
 	}
 }

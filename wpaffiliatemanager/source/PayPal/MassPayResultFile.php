@@ -110,7 +110,7 @@ class WPAM_PayPal_MassPayResultFile
 		}
 		else
 		{
-			throw new Exception( sprintf( __('Failed to parse amounts from field: %s', 'wpam' ), $value ) );
+			throw new Exception( sprintf( __('Failed to parse amounts from field: %s', 'affiliates-manager' ), $value ) );
 		}
 	}
 	private function parseAmount($value, &$amount)
@@ -121,7 +121,7 @@ class WPAM_PayPal_MassPayResultFile
 		}
 		else
 		{
-			throw new Exception( sprintf( __('Failed to parse amounts from field: %s', 'wpam' ), $value ) );
+			throw new Exception( sprintf( __('Failed to parse amounts from field: %s', 'affiliates-manager' ), $value ) );
 		}
 	}
 }

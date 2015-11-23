@@ -1,12 +1,12 @@
-		<p><?php printf(__( 'Displaying %1$d of %2$d impressions', 'wpam' ), count($this->viewData['impressions']), $this->viewData['impressionCount']); ?></p>
+		<p><?php printf(__( 'Displaying %1$d of %2$d impressions', 'affiliates-manager' ), count($this->viewData['impressions']), $this->viewData['impressionCount']); ?></p>
 
 		<table class="widefat">
 			<thead>
 			<tr>
-				 <th width="25"><?php _e( 'ID', 'wpam' ) ?></th>
-				 <th width="200"><?php _e( 'Date Occurred', 'wpam' ) ?></th>
-				 <th width="100"><?php _e( 'Creative', 'wpam' ) ?></th>
-				 <th><?php _e( 'Referrer', 'wpam' ) ?></th>
+				 <th width="25"><?php _e( 'ID', 'affiliates-manager' ) ?></th>
+				 <th width="200"><?php _e( 'Date Occurred', 'affiliates-manager' ) ?></th>
+				 <th width="100"><?php _e( 'Creative', 'affiliates-manager' ) ?></th>
+				 <th><?php _e( 'Referrer', 'affiliates-manager' ) ?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -28,5 +28,5 @@
 		<?php
 		 if ( ! count( $this->viewData['impressions'] ) ):
 		?>
-			 <div class="daterange-form"><p><?php _e( 'No records found for the date range selected.', 'wpam' ) ?></p></div>
+			 <div class="daterange-form"><p><?php _e( 'No records found for the date range selected.', 'affiliates-manager' ) ?></p></div>
 		<?php endif; ?>

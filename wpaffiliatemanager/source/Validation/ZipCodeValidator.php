@@ -13,7 +13,7 @@ class WPAM_Validation_ZipCodeValidator implements WPAM_Validation_IValidator
 
 	function getError()
 	{
-		return __( 'must be a valid zip code', 'wpam' );
+		return __( 'must be a valid zip code', 'affiliates-manager' );
 	}
 
 	function isValid($value)

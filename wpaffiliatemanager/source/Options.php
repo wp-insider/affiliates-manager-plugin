@@ -24,7 +24,7 @@ class WPAM_Options
 		{
 			case 'dev': return WPAM_PayPal_Service::PAYPAL_API_ENDPOINT_SANDBOX;
 			case 'live': return WPAM_PayPal_Service::PAYPAL_API_ENDPOINT_LIVE;
-			default: throw new Exception( __( 'Invalid PaPpal API value', 'wpam' ) );
+			default: throw new Exception( __( 'Invalid PaPpal API value', 'affiliates-manager' ) );
 		}
 	}
 

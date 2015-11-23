@@ -12,11 +12,11 @@ $request = @$this->viewData['request'];
 <form action="<?php echo $this->viewData['postBackUrl']?>" method="post" id="mainForm" class="pure-form">
 
 
-		<?php _e( '* Required fields', 'wpam' ) ?><br /><br />
+		<?php _e( '* Required fields', 'affiliates-manager' ) ?><br /><br />
 		<table class="pure-table">
 			<?php foreach ($this->viewData['affiliateFields'] as $field) { ?>
 				<tr>
-					<th><label for="_<?php echo $field->databaseField?>"><?php _e( $field->name, 'wpam' ) ?><?php echo $field->required ? '&nbsp;*': '' ?></label></th>
+					<th><label for="_<?php echo $field->databaseField?>"><?php _e( $field->name, 'affiliates-manager' ) ?><?php echo $field->required ? '&nbsp;*': '' ?></label></th>
 					<td>
 						<?php switch ($field->fieldType) {
                                                         case 'email':
@@ -26,8 +26,8 @@ $request = @$this->viewData['request'];
                                                                 $email = $current_user->user_email;
                                                                 ?>
                                                                 <input type="text" size="20" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo $email?>" readonly />
-                                                                <p class="wpam_registration_input_help_text"><?php _e('This is the email address associated with your currently logged in WordPress user account.', 'wpam')?></p>
-                                                                <p class="wpam_registration_input_help_text"><?php _e('If you want to use a different email address, log out of your WordPress account then try a new registration.', 'wpam')?></p>
+                                                                <p class="wpam_registration_input_help_text"><?php _e('This is the email address associated with your currently logged in WordPress user account.', 'affiliates-manager')?></p>
+                                                                <p class="wpam_registration_input_help_text"><?php _e('If you want to use a different email address, log out of your WordPress account then try a new registration.', 'affiliates-manager')?></p>
                                                                 <?php
                                                             }
                                                             else{
@@ -67,8 +67,8 @@ $request = @$this->viewData['request'];
 
 			<tr>
 				<td colspan="2">
-					<input type="checkbox" id="chkAgreeTerms" name="chkAgreeTerms" <?php echo (isset($request['chkAgreeTerms']) ? 'checked="checked"':'')?> />&nbsp;<label for="chkAgreeTerms" id="agreeTermsLabel"><?php _e('I have read and agree to the', 'wpam' ) ?> <a href="#" id="tncLink"><?php _e('Terms and Conditions', 'wpam' ) ?></a></label>
-					<span id="termsAgreeWarning" style="color: red; display: none"><br><?php _e( 'You must agree to the terms.', 'wpam' ) ?></span>
+					<input type="checkbox" id="chkAgreeTerms" name="chkAgreeTerms" <?php echo (isset($request['chkAgreeTerms']) ? 'checked="checked"':'')?> />&nbsp;<label for="chkAgreeTerms" id="agreeTermsLabel"><?php _e('I have read and agree to the', 'affiliates-manager' ) ?> <a href="#" id="tncLink"><?php _e('Terms and Conditions', 'affiliates-manager' ) ?></a></label>
+					<span id="termsAgreeWarning" style="color: red; display: none"><br><?php _e( 'You must agree to the terms.', 'affiliates-manager' ) ?></span>
 				</td>
 			</tr>
 		</table>
@@ -79,7 +79,7 @@ $request = @$this->viewData['request'];
                 }
                 ?>
                 <div class="wpam-registration-form">
-                    <input type="submit" name="submit" value="<?php _e( 'Submit Application', 'wpam' ) ?>" class="pure-button pure-button-active" />
+                    <input type="submit" name="submit" value="<?php _e( 'Submit Application', 'affiliates-manager' ) ?>" class="pure-button pure-button-active" />
                 </div>
 </form>
 
