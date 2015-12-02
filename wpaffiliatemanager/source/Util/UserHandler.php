@@ -52,6 +52,7 @@ class WPAM_Util_UserHandler {
 
             $user = new WP_User($userId);
             $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
+            $user->set_role( 'affiliate' );
         }
 
         //Send user email indicating they're approved
@@ -115,6 +116,7 @@ class WPAM_Util_UserHandler {
 
             $user = new WP_User($userId);
             $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
+            $user->set_role( 'affiliate' );
         }
         $affiliate->activate();
         $affiliate->userId = $userId;
