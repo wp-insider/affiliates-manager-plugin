@@ -92,7 +92,7 @@ jQuery(function($) {
 		<tr>
 			<td>
 				<img class="wpam-js-edit-message wpam-action-icon wpam-edit-icon" src="<?php echo $ICON_EDIT?>" />
-				<input type="hidden" name="messages[<?php echo $message->name?>][content]" value="<?php echo htmlentities($message->content)?>" />
+				<input type="hidden" name="messages[<?php echo $message->name?>][content]" value="<?php echo htmlentities($message->content, ENT_COMPAT, 'UTF-8')?>" />
 				<input type="hidden" name="messages[<?php echo $message->name?>][name]" value="<?php echo $message->name?>" />
 				<input type="hidden" name="messages[<?php echo $message->name?>][modified]" value="0" />
 				<input type="hidden" name="messages[<?php echo $message->name?>][use]" value="<?php echo $message->use?>" />
@@ -111,7 +111,7 @@ jQuery(function($) {
 			<td><?php echo $message->use?></td>
 
 			<td><em><?php
-				$encodedContent = htmlentities($message->content);
+				$encodedContent = htmlentities($message->content, ENT_COMPAT, 'UTF-8');
 				if (strlen($encodedContent) < 520)
 					echo $encodedContent;
 				else
