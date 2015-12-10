@@ -133,8 +133,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.1.8 =
+= 2.1.8 =
 - UTF-8 is now set as the default encoding in the htmlentities function.
+- Affiliates Manager is now compatible with WordPress 4.4.
 
 = 2.1.7 =
 - Updated the translatable strings to make the plugin compatible with language packs.
