@@ -194,6 +194,10 @@ class WPAM_Plugin
 		$dbInstaller->doDbInstall();
                 $dbInstaller->doInstallPages( $this->publicPages );
                 $dbInstaller->doFreshInstallDbDefaultData();		
+  
+		// create affiliate role in WP with subscriber capabilities
+		$sub = get_role( 'subscriber' );
+		add_role( 'affiliate', 'Affiliate', $sub->capabilities );
 	}
 
 	private function setMonetaryLocale( $locale ) {
