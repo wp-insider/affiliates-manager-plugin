@@ -133,7 +133,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.1.9 =
+= 2.1.9 =
 - Add a new role "affiliate" during activation.
 - Affiliates Manager is now compatible with WordPress Multisite.
 
