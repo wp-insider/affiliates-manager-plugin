@@ -178,17 +178,30 @@ class WPAM_Plugin
 	}
 	
 	public function onActivation() {
-		global $wpdb;
-
-		$this->initCaps();
+            global $wpdb;
+            if (function_exists('is_multisite') && is_multisite()) {
+                // check if it is a network activation - if so, run the activation function for each blog id
+                if (isset($_GET['networkwide']) && ($_GET['networkwide'] == 1)) {
+                    $old_blog = $wpdb->blogid;
+                    // Get all blog ids
+                    $blogids = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
+                    foreach ($blogids as $blog_id) {
+                        switch_to_blog($blog_id);
+                        $this->run_installer();
+                    }
+                    switch_to_blog($old_blog);
+                    return;
+                }	
+            } 
+            $this->run_installer();
+	}
+        
+        public function run_installer(){
+                global $wpdb;
+                $this->initCaps();
 
 		$options = new WPAM_Options();
 		$options->initOptions();
-
-		if (!file_exists(WPAM_CREATIVE_IMAGES_DIR))
-		{
-			wp_mkdir_p(WPAM_CREATIVE_IMAGES_DIR);
-		}
 
 		$dbInstaller = new WPAM_Data_DatabaseInstaller($wpdb);
 		$dbInstaller->doDbInstall();
@@ -198,7 +211,7 @@ class WPAM_Plugin
 		// create affiliate role in WP with subscriber capabilities
 		$sub = get_role( 'subscriber' );
 		add_role( 'affiliate', 'Affiliate', $sub->capabilities );
-	}
+        }
 
 	private function setMonetaryLocale( $locale ) {
 		$is_set = setlocale( LC_MONETARY, 
