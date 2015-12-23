@@ -168,20 +168,13 @@ class WPAM_Plugin
             
         }
         
-	//remove 'old' style capabilities and replace with 'new'
-	private function initCaps() {
-		//leave commented until http://core.trac.wordpress.org/ticket/16617 is fixed and released
-		//$roleMgr = new WP_Roles();
-		//$roleMgr->add_cap('administrator', WPAM_PluginConfig::$AdminCap, true);
-		$role = get_role( 'administrator' );
-		$role->add_cap( WPAM_PluginConfig::$AdminCap );				
-	}
-	
 	public function onActivation() {
             global $wpdb;
             if (function_exists('is_multisite') && is_multisite()) {
-                // check if it is a network activation - if so, run the activation function for each blog id
+                //This is a WordPress multi-site install.
+                //Now, we need to check if it is a network activation - if so, run the activation function for each blog id.
                 if (isset($_GET['networkwide']) && ($_GET['networkwide'] == 1)) {
+                    //Wordpress network activted (applies to all sites in this install)
                     $old_blog = $wpdb->blogid;
                     // Get all blog ids
                     $blogids = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
@@ -193,6 +186,8 @@ class WPAM_Plugin
                     return;
                 }	
             } 
+            
+            //WordPress individual-site activation (can be single-site or multi-site install). Not a newwork active.
             $this->run_installer();
 	}
         
@@ -206,13 +201,22 @@ class WPAM_Plugin
 		$dbInstaller = new WPAM_Data_DatabaseInstaller($wpdb);
 		$dbInstaller->doDbInstall();
                 $dbInstaller->doInstallPages( $this->publicPages );
-                $dbInstaller->doFreshInstallDbDefaultData();		
-  
-		// create affiliate role in WP with subscriber capabilities
-		$sub = get_role( 'subscriber' );
-		add_role( 'affiliate', 'Affiliate', $sub->capabilities );
+                $dbInstaller->doFreshInstallDbDefaultData();
         }
 
+	//remove 'old' style capabilities and replace with 'new'
+	private function initCaps() {
+		//leave commented until http://core.trac.wordpress.org/ticket/16617 is fixed and released
+		//$roleMgr = new WP_Roles();
+		//$roleMgr->add_cap('administrator', WPAM_PluginConfig::$AdminCap, true);
+		$role = get_role( 'administrator' );
+		$role->add_cap( WPAM_PluginConfig::$AdminCap );		
+                
+		// create affiliate role in WP with subscriber capabilities
+		$sub = get_role( 'subscriber' );
+		add_role( 'affiliate', 'Affiliate', $sub->capabilities );                
+	}
+        
 	private function setMonetaryLocale( $locale ) {
 		$is_set = setlocale( LC_MONETARY, 
 			$locale, 
