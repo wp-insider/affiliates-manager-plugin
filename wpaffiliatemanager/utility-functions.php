@@ -51,11 +51,9 @@ function wpam_generate_refkey_from_affiliate_id($aff_id){
 
 function wpam_get_cookie_life_time() {
     $cookie_expiry = get_option( WPAM_PluginConfig::$CookieExpireOption );
-    $cookie_life_time = "";
-    if (!empty($cookie_expiry)) {
+    $cookie_life_time = 0; //if set to 0 or omitted, the cookie will expire at the end of the session (when the browser closes).
+    if (is_numeric($cookie_expiry) && $cookie_expiry > 0) {
         $cookie_life_time = time() + $cookie_expiry * 86400;
-    } else {
-        $cookie_life_time = time() + 30 * 86400;
     }
     return $cookie_life_time;
 }
