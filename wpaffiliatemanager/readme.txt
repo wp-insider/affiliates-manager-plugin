@@ -134,7 +134,7 @@ https://wpaffiliatemanager.com/screen-shots/
 == Changelog ==
 
 = 2.2.0 =
-- Cookie duration can now be set to 0 in the settings. When set to 0, the cookie will expire at the end of the session (when the browser closes).
+- Added en_US language translation file.
 
 = 2.1.9 =
 - Add a new role "affiliate" during activation.

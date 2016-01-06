@@ -1,3 +1,6 @@
+<?php
+    $cookie_duration_documentation = "https://wpaffiliatemanager.com/cookie-duration-use/";
+?>
 <script type="text/javascript">
 jQuery(function($){
 
@@ -111,6 +114,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
         </th>
         <td>
         	<input type="text" size="30" name="txtCookieExpire" id="txtCookieExpire" value="<?php echo $this->viewData['request']['txtCookieExpire']?>" />
+                <span><?php printf(__('<a target="_blank" href="%s">Read more on cookie duration here</a>', 'affiliates-manager'), esc_url($cookie_duration_documentation));?></span>
         </td>
 	</tr>
  	<tr>
