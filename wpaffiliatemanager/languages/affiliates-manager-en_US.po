@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Affiliate Manager\n"
+"Project-Id-Version: Affiliates Manager\n"
 "POT-Creation-Date: 2015-11-23 15:34+1000\n"
-"PO-Revision-Date: 2016-01-06 14:32+1000\n"
-"Last-Translator: Justin Foell <justin@9seeds.com>\n"
-"Language-Team: 9seeds <justin@9seeds.com>\n"
-"Language: en_GB\n"
+"PO-Revision-Date: 2016-01-06 14:28+1000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: ..\n"
+"X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: boot-strap.php:39
@@ -166,7 +166,7 @@ msgstr ""
 
 #: html/affiliate_cp_agree_terms.php:5
 msgid "Contract Terms"
-msgstr "Terms"
+msgstr ""
 
 #: html/affiliate_cp_agree_terms.php:12 html/affiliate_cp_home.php:20
 msgid "Commission Rate"
@@ -237,8 +237,6 @@ msgid ""
 "Now would be a great time to go pick <a href=\"%s\">some creative</a> and "
 "get started."
 msgstr ""
-"Now would be a great time to go pick <a href=\"%s\">affiliate links</a> and "
-"get started."
 
 #: html/affiliate_cp_payment_details_form.php:69
 #: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:88
@@ -272,12 +270,12 @@ msgstr ""
 #: html/affiliate_cp_payment_details_simple.php:53
 #: source/Util/AffiliateFormHelper.php:151
 msgid "Paper Check"
-msgstr "Paper Cheque"
+msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:115
 #: html/affiliate_cp_payment_details_simple.php:59
 msgid "Check Recipient"
-msgstr "Cheque Recipient"
+msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:134
 msgid "Mail to Address On Record"
@@ -320,7 +318,7 @@ msgstr ""
 
 #: html/affiliate_cp_payment_details_simple.php:69
 msgid "Check will be mailed to the following address:"
-msgstr "Cheque will be mailed to the following address:"
+msgstr ""
 
 #: html/affiliate_creative_detail.php:8 html/affiliate_creative_detail.php:91
 #: html/admin/creatives_detail.php:8 html/admin/creatives_detail.php:289
@@ -333,7 +331,7 @@ msgstr ""
 
 #: html/affiliate_creative_detail.php:10
 msgid "unknown creative type."
-msgstr "unknown affiliate link."
+msgstr ""
 
 #: html/affiliate_creative_detail.php:28 html/admin/affiliate_detail.php:219
 #: html/admin/affiliate_detail.php:236 html/admin/creatives_detail.php:114
@@ -351,7 +349,7 @@ msgstr ""
 
 #: html/affiliate_creative_detail.php:52 html/admin/creatives_detail.php:194
 msgid "Creative:"
-msgstr "Affiliate Link:"
+msgstr ""
 
 #: html/affiliate_creative_detail.php:56
 msgid "Your Affiliate-Specific HTML snippet"
@@ -383,7 +381,7 @@ msgstr ""
 
 #: html/affiliate_creative_list.php:62
 msgid "The following creatives are available for publication."
-msgstr "The following affiliate links. are available"
+msgstr ""
 
 #: html/affiliate_creative_list.php:67 html/transaction_table.php:45
 #: html/admin/affiliate_detail.php:626 html/admin/creatives_detail.php:247
@@ -401,7 +399,7 @@ msgstr ""
 
 #: html/affiliate_home.php:1
 msgid "Welcome to the affiliate control panel."
-msgstr "Welcome to the affiliate dashboard."
+msgstr ""
 
 #: html/affiliate_not_logged_in.php:4
 #, php-format
@@ -409,9 +407,6 @@ msgid ""
 "This is the affiliates section of this store.  If you are an existing "
 "affiliate, please <a href=\"%s\">log in</a> to access your control panel."
 msgstr ""
-"This is the affiliates section of this store.  If you are an existing "
-"affiliate, please <a href=\"%s\">log in</a> to access your affiliate "
-"dashboard."
 
 #: html/affiliate_not_logged_in.php:7
 #, php-format
@@ -421,10 +416,6 @@ msgid ""
 "an existing account on this blog, please <a href=\"%s\">log in</a>.  If not, "
 "please <a href=\"%s\">register</a>."
 msgstr ""
-"If you are not an affiliate, but wish to become one, you will need to "
-"apply.  To apply, you must be a registered.  If you have an existing "
-"account, please <a href=\"%s\">log in</a>.  If not, please <a href=\"%s"
-"\">register</a>."
 
 #: html/affiliate_not_registered.php:1
 #, php-format
@@ -473,17 +464,12 @@ msgid ""
 "Affiliate Manager login, which may be based on the email address they used "
 "when they signed up."
 msgstr ""
-"Changing the affiliate's email address will not change their Affiliate "
-"Manager login, which may be based on the email address they used when they "
-"signed up."
 
 #: html/contact_info.php:16
 msgid ""
 "Changing your email address will not change your WordPress Affiliate Manager "
 "login, which may be based on the email address you used when you signed up."
 msgstr ""
-"Changing your email address will not change your Affiliate Manager login, "
-"which may be based on the email address you used when you signed up."
 
 #: html/contact_info.php:26
 msgid "Contact Information"
@@ -550,7 +536,7 @@ msgstr ""
 #: html/admin/creative_update_form.php:108
 #: html/admin/creative_update_success.php:4
 msgid "Creative"
-msgstr "Affiliate Links"
+msgstr ""
 
 #: html/impressions_table.php:9
 msgid "Referrer"
@@ -937,7 +923,7 @@ msgstr ""
 
 #: html/admin/creatives_detail.php:167
 msgid "this creative?"
-msgstr "this affiliate link?"
+msgstr ""
 
 #: html/admin/creatives_detail.php:206 html/admin/manage_creatives.php:163
 msgid "Actions"
@@ -997,19 +983,19 @@ msgstr ""
 
 #: html/admin/creative_update_success.php:9
 msgid "Creative updated."
-msgstr "Affiliate link updated."
+msgstr ""
 
 #: html/admin/creative_update_success.php:11
 msgid "New creative created.  This creative is not yet active."
-msgstr "New affiliate link created.  This affiliate link is not yet active."
+msgstr ""
 
 #: html/admin/creative_update_success.php:16
 msgid "Return to Creatives"
-msgstr "Return to Affiliate Links"
+msgstr ""
 
 #: html/admin/manage_creatives.php:64
 msgid "Yes, delete this creative"
-msgstr "Yes, delete this affiliate links"
+msgstr ""
 
 #: html/admin/manage_creatives.php:113
 msgid "Updating, please wait ..."
@@ -1017,15 +1003,15 @@ msgstr ""
 
 #: html/admin/manage_creatives.php:120
 msgid "Delete Creative?"
-msgstr "Delete Affiliate Link?"
+msgstr ""
 
 #: html/admin/manage_creatives.php:121
 msgid "This creative will be deleted. Are you sure?"
-msgstr "This affiliate link will be deleted. Are you sure?"
+msgstr ""
 
 #: html/admin/manage_creatives.php:126 source/Plugin.php:96
 msgid "My Creatives"
-msgstr "Affiliate Links"
+msgstr ""
 
 #: html/admin/manage_creatives.php:132
 msgid "Filter"
@@ -1199,9 +1185,8 @@ msgid "Continue with these payments"
 msgstr ""
 
 #: html/admin/paypalpayments/view_payment_detail.php:8
-#, fuzzy
 msgid "Payment Detail"
-msgstr "Payments"
+msgstr ""
 
 #: html/admin/paypalpayments/view_payment_detail.php:16
 msgid "Database ID"
@@ -1606,7 +1591,7 @@ msgstr ""
 
 #: source/Plugin.php:95 source/Pages/AffiliatesHome.php:35
 msgid "Creatives"
-msgstr "Affiliate Links"
+msgstr ""
 
 #: source/Plugin.php:109
 msgid "Store Affiliates"
@@ -1798,7 +1783,7 @@ msgstr ""
 
 #: source/Pages/AffiliatesHome.php:34
 msgid "Payment History"
-msgstr "Payments"
+msgstr ""
 
 #: source/Pages/AffiliatesHome.php:36
 msgid "Edit Profile"
@@ -1809,7 +1794,7 @@ msgstr ""
 #: source/Pages/Admin/MyCreativesPage.php:261
 #: source/Pages/Admin/MyCreativesPage.php:268 source/Util/JsonHandler.php:228
 msgid "Invalid creative."
-msgstr "Invalid affiliate link."
+msgstr ""
 
 #: source/Pages/AffiliatesHome.php:174 source/Util/JsonHandler.php:28
 #: source/Util/JsonHandler.php:52 source/Util/JsonHandler.php:83
@@ -1820,7 +1805,7 @@ msgstr ""
 
 #: source/Pages/AffiliatesHome.php:176
 msgid "Inactive creative."
-msgstr "Inactive affiliate link."
+msgstr ""
 
 #: source/Pages/AffiliatesHome.php:387
 #, php-format
@@ -1907,15 +1892,15 @@ msgstr ""
 
 #: source/Pages/Admin/MyCreativesPage.php:231
 msgid "Creative Updated."
-msgstr "Affiliate Link Updated."
+msgstr ""
 
 #: source/Pages/Admin/MyCreativesPage.php:238
 msgid "Creative ... created."
-msgstr "Affiliate Link created."
+msgstr ""
 
 #: source/Pages/Admin/MyCreativesPage.php:242
 msgid "Insert failed: invalid creative update mechanism."
-msgstr "Insert failed: invalid affiliate link update mechanism."
+msgstr ""
 
 #: source/Pages/Admin/NewAffiliatePage.php:73
 msgid "Add Affiliate"
@@ -2069,7 +2054,7 @@ msgstr ""
 
 #: source/Util/JsonHandler.php:166
 msgid "Invalid creative"
-msgstr "Invalid affiliate link"
+msgstr ""
 
 #: source/Util/JsonHandler.php:199
 msgid "Invalid transaction type."
