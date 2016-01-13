@@ -1,15 +1,6 @@
 <?php
 $model = $this->viewData['creative'];
 
-function formatType($type)
-{
-	switch ($type)
-	{
-		case 'image': return __( 'Image', 'affiliates-manager' );
-		case 'text': return __( 'Text Link', 'affiliates-manager' );
-		default: wp_die( __( 'unknown creative type.', 'affiliates-manager' ) );
-	}
-}
 ?>
 
 

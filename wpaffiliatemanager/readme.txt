@@ -133,8 +133,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.2.1 =
+= 2.2.1 =
 - Gravatar image on the login page no longer shows security warning when rendered on a https site.
+- Fixed an issue where redeclaration of function formatType() was causing a fatal error on some servers.
 
 = 2.2.0 =
 - Added en_US language translation file.
