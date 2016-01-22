@@ -52,13 +52,12 @@ class WPAM_PayPal_Service
 			)
 		);
 
-		$uploads_dir = wp_upload_dir();
-		if ( WPAM_DEBUG )
-			file_put_contents( $uploads_dir['basedir'] . '/paypal.txt', print_r( $fields, true ) );
+                WPAM_Logger::log_debug('PayPal MassPay post data:');
+                WPAM_Logger::log_debug_array($fields);
 		$postData = http_build_query($fields, NULL, '&');
 		$response = $this->executePayPalRequest($postData);
-		if ( WPAM_DEBUG )
-			file_put_contents( $uploads_dir['basedir'] . '/paypal.txt', print_r( $response, true ), FILE_APPEND );
+                WPAM_Logger::log_debug('PayPal MassPay response:');
+                WPAM_Logger::log_debug_array($response);
 		return new WPAM_PayPal_Response($response);
 	}
 

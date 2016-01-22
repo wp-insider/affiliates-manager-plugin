@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal 
 Requires at least: 3.5
 Tested up to: 4.4
-Stable tag: 2.2.1
+Stable tag: 2.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -132,6 +132,10 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= TODO2.2.2 =
+- Affiliates Manager no longer sets any locale information in the system on which PHP is running.
+- Added some debug data in the function that submits PayPal Mass payments.
 
 = 2.2.1 =
 - Gravatar image on the login page no longer shows security warning when rendered on a https site.

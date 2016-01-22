@@ -250,12 +250,13 @@ class WPAM_Plugin
 		add_filter('pre_user_email',  array($this, 'filterUserEmail'));
 				
 		//set the locale for money format & paypal
+                /*
 		$this->locale = WPAM_LOCALE_OVERRIDE ? WPAM_LOCALE_OVERRIDE : get_locale();
 		$this->setloc = $this->setMonetaryLocale( $this->locale );
 		//loading provided locale didn't work, choose default
 		if ( ! $this->setloc && setlocale( LC_MONETARY, 0 ) == 'C')
 		    setlocale( LC_MONETARY, '' ); 
-
+                */    
 		add_action('admin_notices', array( $this, 'showAdminMessages' ) );
 		
                 if (!is_admin()){
