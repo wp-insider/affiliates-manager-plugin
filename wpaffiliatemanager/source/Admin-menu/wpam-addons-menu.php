@@ -143,6 +143,24 @@ function wpam_display_addons_menu()
         'page_url' => 'https://wpaffiliatemanager.com/share-revenue-partner-woocommerce-products/',
     );
     array_push($addons_data, $addon_17);
+
+    $addon_18 = array(
+        'name' => 'Gravity Forms PayPal',
+        'thumbnail' => WPAM_URL . '/images/addons/gravity-forms-paypal-addon.png',
+        'description' => 'Integrates with Gravity Forms PayPal Addon so you can reward affiliates for sending customers.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-gravity-forms-paypal-integration/',
+    );
+    array_push($addons_data, $addon_18);
+    
+    
+//TODO - need to complete the addon    
+//    $addon_18 = array(
+//        'name' => 'WishList Member Addon',
+//        'thumbnail' => WPAM_URL . '/images/addons/wishlist-member-integration.png',
+//        'description' => 'Integrates with Wishlist member plugin so you can reward affiliates for sending members.',
+//        'page_url' => 'https://wpaffiliatemanager.com/<need-to-complete-the-addon-page>/',
+//    );
+//    array_push($addons_data, $addon_18);
     
     //Display the list
     $output = '';
