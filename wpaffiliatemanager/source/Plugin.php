@@ -114,7 +114,9 @@ class WPAM_Plugin
 		self::PAGE_NAME_REGISTER => $this->affiliateRegisterPage,
                 self::PAGE_NAME_LOGIN => $this->affiliateLoginPage
                 );
-
+                //shortcodes
+                add_shortcode('wpam_custom_input', array( $this, 'add_custom_input' ) );
+                //
                 add_action('plugins_loaded', array( $this, 'onPluginsLoaded' ) );
                 
 		//set up base actions
@@ -333,6 +335,17 @@ class WPAM_Plugin
                 $form_output .= '</div>';
                 return $form_output;
             }
+        }
+        
+        public function add_custom_input(){
+            $wpam_id_var = '';
+            if(isset($_COOKIE['wpam_id']) && !empty($_COOKIE['wpam_id'])){
+                $wpam_id = $_COOKIE['wpam_id'];
+                $wpam_id_var = 'wpam_id='.$wpam_id;
+            }
+            $custom_var = apply_filters( 'wpam_custom_input', $wpam_id_var);
+            $custom_input = '<input type="hidden" name="custom" value="'.$custom_var.'" />';
+            return $custom_input;
         }
 	
 	public function onCurrentScreen( $screen ) {
