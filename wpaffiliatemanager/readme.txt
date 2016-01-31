@@ -133,7 +133,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.2.2 =
+= 2.2.2 =
 - Affiliates Manager no longer sets any locale information in the system on which PHP is running.
 - Added some debug data in the function that submits PayPal Mass payments.
 
