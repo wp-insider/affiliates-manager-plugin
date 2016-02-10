@@ -133,6 +133,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= 2.2.3 =
+- Default Landing Page URL can now be customized in the advanced settings.
+
 = 2.2.2 =
 - Affiliates Manager no longer sets any locale information in the system on which PHP is running.
 - Added some debug data in the function that submits PayPal Mass payments.

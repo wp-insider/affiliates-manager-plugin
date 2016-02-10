@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2016-01-06 17:27+1000\n"
-"PO-Revision-Date: 2016-01-06 17:28+1000\n"
+"POT-Creation-Date: 2016-02-10 14:03+1000\n"
+"PO-Revision-Date: 2016-02-10 14:04+1000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -64,7 +64,7 @@ msgstr ""
 msgid "Last Name"
 msgstr ""
 
-#: ../classes/ListAffiliatesTable.php:67 ../source/Plugin.php:317
+#: ../classes/ListAffiliatesTable.php:67 ../source/Plugin.php:320
 msgid "Email"
 msgstr ""
 
@@ -327,22 +327,7 @@ msgstr ""
 msgid "Check will be mailed to the following address:"
 msgstr ""
 
-#: ../html/affiliate_creative_detail.php:8
-#: ../html/affiliate_creative_detail.php:91
-#: ../html/admin/creatives_detail.php:8 ../html/admin/creatives_detail.php:289
-msgid "Image"
-msgstr ""
-
-#: ../html/affiliate_creative_detail.php:9
-#: ../html/admin/creatives_detail.php:9
-msgid "Text Link"
-msgstr ""
-
-#: ../html/affiliate_creative_detail.php:10
-msgid "unknown creative type."
-msgstr ""
-
-#: ../html/affiliate_creative_detail.php:28
+#: ../html/affiliate_creative_detail.php:19
 #: ../html/admin/affiliate_detail.php:219
 #: ../html/admin/affiliate_detail.php:236
 #: ../html/admin/creatives_detail.php:114
@@ -355,35 +340,35 @@ msgstr ""
 msgid "OK"
 msgstr ""
 
-#: ../html/affiliate_creative_detail.php:41
-#: ../html/affiliate_creative_detail.php:54
+#: ../html/affiliate_creative_detail.php:32
+#: ../html/affiliate_creative_detail.php:45
 #: ../html/admin/creatives_detail.php:174
 #: ../html/admin/creatives_detail.php:215
 msgid "Preview"
 msgstr ""
 
-#: ../html/affiliate_creative_detail.php:52
+#: ../html/affiliate_creative_detail.php:43
 #: ../html/admin/creatives_detail.php:194
 msgid "Creative:"
 msgstr ""
 
-#: ../html/affiliate_creative_detail.php:56
+#: ../html/affiliate_creative_detail.php:47
 msgid "Your Affiliate-Specific HTML snippet"
 msgstr ""
 
-#: ../html/affiliate_creative_detail.php:65
+#: ../html/affiliate_creative_detail.php:56
 #: ../html/admin/creatives_detail.php:263
 msgid "Text Link Properties"
 msgstr ""
 
-#: ../html/affiliate_creative_detail.php:70
+#: ../html/affiliate_creative_detail.php:61
 #: ../html/admin/creatives_detail.php:268
 #: ../html/admin/creative_update_form.php:232
 msgid "Link Text"
 msgstr ""
 
-#: ../html/affiliate_creative_detail.php:74
-#: ../html/affiliate_creative_detail.php:97
+#: ../html/affiliate_creative_detail.php:65
+#: ../html/affiliate_creative_detail.php:88
 #: ../html/admin/creatives_detail.php:272
 #: ../html/admin/creatives_detail.php:295
 #: ../html/admin/creative_update_form.php:208
@@ -391,20 +376,25 @@ msgstr ""
 msgid "Alt Text"
 msgstr ""
 
-#: ../html/affiliate_creative_detail.php:86
+#: ../html/affiliate_creative_detail.php:77
 #: ../html/admin/creatives_detail.php:284
 msgid "Image Properties"
 msgstr ""
 
-#: ../html/affiliate_creative_list.php:57
-msgid "Your Affiliate Link Using Affiliate ID"
+#: ../html/affiliate_creative_detail.php:82
+#: ../html/admin/creatives_detail.php:8 ../html/admin/creatives_detail.php:289
+msgid "Image"
 msgstr ""
 
 #: ../html/affiliate_creative_list.php:62
+msgid "Your Affiliate Link Using Affiliate ID"
+msgstr ""
+
+#: ../html/affiliate_creative_list.php:67
 msgid "The following creatives are available for publication."
 msgstr ""
 
-#: ../html/affiliate_creative_list.php:67 ../html/transaction_table.php:45
+#: ../html/affiliate_creative_list.php:72 ../html/transaction_table.php:45
 #: ../html/admin/affiliate_detail.php:626
 #: ../html/admin/creatives_detail.php:247
 #: ../html/admin/creative_update_form.php:150
@@ -414,7 +404,7 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: ../html/affiliate_creative_list.php:68
+#: ../html/affiliate_creative_list.php:73
 #: ../html/admin/creatives_detail.php:243
 #: ../html/admin/creative_update_form.php:133
 #: ../html/admin/manage_creatives.php:168
@@ -946,6 +936,10 @@ msgstr ""
 msgid "New Affiliate has been created"
 msgstr ""
 
+#: ../html/admin/creatives_detail.php:9
+msgid "Text Link"
+msgstr ""
+
 #: ../html/admin/creatives_detail.php:10
 msgid "Unknown creative type."
 msgstr ""
@@ -1296,8 +1290,31 @@ msgstr ""
 msgid "Pages/Forms"
 msgstr ""
 
-#: ../html/admin/settings/settings.php:115
+#: ../html/admin/settings/settings.php:51
+msgid "Advanced Settings"
+msgstr ""
+
+#: ../html/admin/settings/settings.php:122
 msgid "Save Settings"
+msgstr ""
+
+#: ../html/admin/settings/settings_advanced.php:8
+msgid "Default Landing Page"
+msgstr ""
+
+#: ../html/admin/settings/settings_advanced.php:13
+#, php-format
+msgid ""
+"Your default landing page URL is <code>%s</code>. If you want to change to a "
+"different URL you can specify it here."
+msgstr ""
+
+#: ../html/admin/settings/settings_aff_pages.php:5
+msgid "Login Page"
+msgstr ""
+
+#: ../html/admin/settings/settings_aff_pages.php:10
+msgid "This is the URL of Affiliate Login page"
 msgstr ""
 
 #: ../html/admin/settings/settings_general.php:103
@@ -1629,12 +1646,12 @@ msgstr ""
 msgid "Invalid PaPpal API value"
 msgstr ""
 
-#: ../source/Plugin.php:77 ../source/Plugin.php:592
+#: ../source/Plugin.php:77 ../source/Plugin.php:606
 msgid "Affiliate Management"
 msgstr ""
 
-#: ../source/Plugin.php:78 ../source/Plugin.php:83 ../source/Plugin.php:568
-#: ../source/Plugin.php:582 ../source/Plugin.php:592
+#: ../source/Plugin.php:78 ../source/Plugin.php:83 ../source/Plugin.php:582
+#: ../source/Plugin.php:596 ../source/Plugin.php:606
 msgid "Affiliates"
 msgstr ""
 
@@ -1654,75 +1671,75 @@ msgstr ""
 msgid "Affiliate Login"
 msgstr ""
 
-#: ../source/Plugin.php:314
+#: ../source/Plugin.php:317
 msgid "You are currently logged in"
 msgstr ""
 
-#: ../source/Plugin.php:316
+#: ../source/Plugin.php:319
 msgid "Username"
 msgstr ""
 
-#: ../source/Plugin.php:318
+#: ../source/Plugin.php:321
 msgid "Log out"
 msgstr ""
 
-#: ../source/Plugin.php:328
+#: ../source/Plugin.php:331
 msgid "Password Lost and Found"
 msgstr ""
 
-#: ../source/Plugin.php:328
+#: ../source/Plugin.php:331
 msgid "Lost your password?"
 msgstr ""
 
-#: ../source/Plugin.php:363
+#: ../source/Plugin.php:377
 msgid "Become an affiliate"
 msgstr ""
 
-#: ../source/Plugin.php:364
+#: ../source/Plugin.php:378
 msgid "Are you interested in earning money by directing visitors to our site?"
 msgstr ""
 
-#: ../source/Plugin.php:366
+#: ../source/Plugin.php:380
 msgid "Sign up"
 msgstr ""
 
-#: ../source/Plugin.php:366
+#: ../source/Plugin.php:380
 msgid " to become an affiliate today!"
 msgstr ""
 
-#: ../source/Plugin.php:583
+#: ../source/Plugin.php:597
 msgid "Be An Affiliate"
 msgstr ""
 
-#: ../source/Plugin.php:617
+#: ../source/Plugin.php:631
 msgid "Settings"
 msgstr ""
 
-#: ../source/Plugin.php:621
+#: ../source/Plugin.php:635
 msgid "Affiliates Manager Click Tracking"
 msgstr ""
 
-#: ../source/Plugin.php:621 ../source/Admin-menu/wpam-clicks-menu.php:8
+#: ../source/Plugin.php:635 ../source/Admin-menu/wpam-clicks-menu.php:8
 msgid "Click Tracking"
 msgstr ""
 
-#: ../source/Plugin.php:625
+#: ../source/Plugin.php:639
 msgid "Affiliates Manager Commission Data"
 msgstr ""
 
-#: ../source/Plugin.php:625
+#: ../source/Plugin.php:639
 msgid "Commissions"
 msgstr ""
 
-#: ../source/Plugin.php:629 ../source/Admin-menu/wpam-addons-menu.php:6
+#: ../source/Plugin.php:643 ../source/Admin-menu/wpam-addons-menu.php:6
 msgid "Affiliates Manager Add-ons"
 msgstr ""
 
-#: ../source/Plugin.php:629
+#: ../source/Plugin.php:643
 msgid "Add-ons"
 msgstr ""
 
-#: ../source/Plugin.php:758
+#: ../source/Plugin.php:772
 msgid "Invalid JSON handler."
 msgstr ""
 
@@ -2028,7 +2045,7 @@ msgstr ""
 msgid "Failed to parse amounts from field: %s"
 msgstr ""
 
-#: ../source/PayPal/Service.php:74
+#: ../source/PayPal/Service.php:73
 #, php-format
 msgid ""
 "POST failed\n"
@@ -2037,7 +2054,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../source/PayPal/Service.php:79
+#: ../source/PayPal/Service.php:78
 #, php-format
 msgid "Unknown response: %s"
 msgstr ""

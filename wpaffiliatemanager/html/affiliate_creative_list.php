@@ -46,7 +46,12 @@
 
     }
     else{
-        $alink_id = add_query_arg( array( WPAM_PluginConfig::$wpam_id => $affiliate->affiliateId ), home_url('/') );
+        $home_url = home_url('/');
+        $aff_landing_page = get_option(WPAM_PluginConfig::$AffLandingPageURL);
+        if(isset($aff_landing_page) && !empty($aff_landing_page)){
+            $home_url = $aff_landing_page;
+        }
+        $alink_id = add_query_arg( array( WPAM_PluginConfig::$wpam_id => $affiliate->affiliateId ), $home_url );
     }
     ?>
 

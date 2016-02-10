@@ -171,6 +171,10 @@ class WPAM_Pages_Admin_SettingsPage {
             if (isset($request['AffPagesSettings'])) {    //Affiliate pages/forms options submitted
                 update_option(WPAM_PluginConfig::$AffLoginPageURL, $request['affLoginPage']);
             }
+            
+            if (isset($request['AffAdvancedSettings'])) {    //Advanced Settings options submitted
+                update_option(WPAM_PluginConfig::$AffLandingPageURL, $request['affLandingPage']);
+            }
 
             return $this->getSettingsForm(NULL, "Settings updated.");
         }
@@ -211,6 +215,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['txtPaypalAPISignature'] = isset($request['txtPaypalAPISignature']) ? $request['txtPaypalAPISignature'] : '';
             $response->viewData['request']['ddPaypalAPIEndPoint'] = isset($request['ddPaypalAPIEndPoint']) ? $request['ddPaypalAPIEndPoint'] : '';
             $response->viewData['request']['affLoginPage'] = isset($request['affLoginPage']) ? $request['affLoginPage'] : '';
+            $response->viewData['request']['affLandingPage'] = isset($request['affLandingPage']) ? $request['affLandingPage'] : '';
             $response->viewData['validationResult'] = $vr;
         } else {
             $response->viewData['request']['txtTnc'] = get_option(WPAM_PluginConfig::$TNCOptionOption);
@@ -235,6 +240,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['txtPaypalAPISignature'] = get_option(WPAM_PluginConfig::$PaypalAPISignatureOption);
             $response->viewData['request']['ddPaypalAPIEndPoint'] = get_option(WPAM_PluginConfig::$PaypalAPIEndPointOption);
             $response->viewData['request']['affLoginPage'] = get_option(WPAM_PluginConfig::$AffLoginPageURL);
+            $response->viewData['request']['affLandingPage'] = get_option(WPAM_PluginConfig::$AffLandingPageURL);
         }
 
         if ($message !== NULL)

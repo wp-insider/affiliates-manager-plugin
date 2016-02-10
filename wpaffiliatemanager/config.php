@@ -29,6 +29,7 @@ class WPAM_PluginConfig
 	public static $RegPageId = 'wpam_register_page_id';
         public static $AffLoginPageURL = 'wpam_aff_login_page';
         public static $AffHomeMsg = 'wpam_aff_home_msg';
+        public static $AffLandingPageURL = 'wpam_landing_page';
 	// paypal
 	public static $PaypalMassPayEnabledOption = 'wpam_paypal_mass_pay_enabled';
 	public static $PaypalAPIUserOption = 'wpam_paypal_api_user';
