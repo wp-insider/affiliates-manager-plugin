@@ -37,18 +37,14 @@ class WPAM_Click_Tracking {
             //TODO end
             if(!empty($aff_id)){
                 $cookie_life_time = wpam_get_cookie_life_time();
-                $domain_url = $_SERVER['SERVER_NAME'];
-                $cookie_domain = str_replace("www", "", $domain_url);
-                setcookie('wpam_id', $aff_id, $cookie_life_time, "/", $cookie_domain);
+                setcookie('wpam_id', $aff_id, $cookie_life_time, "/", COOKIE_DOMAIN);
             }
         }
         //this will be the new affiliate link. A click will be tracked when wpam_id is present in the URL
         if (isset($_REQUEST[WPAM_PluginConfig::$wpam_id]) && !empty($_REQUEST[WPAM_PluginConfig::$wpam_id])) {
             $aff_id = trim(strip_tags($_REQUEST[WPAM_PluginConfig::$wpam_id]));
             $cookie_life_time = wpam_get_cookie_life_time();
-            $domain_url = $_SERVER['SERVER_NAME'];
-            $cookie_domain = str_replace("www", "", $domain_url);
-            setcookie('wpam_id', $aff_id, $cookie_life_time, "/", $cookie_domain);
+            setcookie('wpam_id', $aff_id, $cookie_life_time, "/", COOKIE_DOMAIN);
             $args = array();
             $args['dateCreated'] = date("Y-m-d H:i:s", time());
             $args['sourceAffiliateId'] = $aff_id;
