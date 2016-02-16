@@ -164,17 +164,27 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
         global $wpdb;
         $aff_table_name = WPAM_AFFILIATES_TBL;
         $trn_table_name = WPAM_TRANSACTIONS_TBL;
+        
+        //pagination requirement
+        $current_page = $this->get_pagenum();
+        
         $where = "";
         if (isset($_REQUEST['statusFilter']) && !empty($_REQUEST['statusFilter'])) {
             $status = esc_sql($_REQUEST['statusFilter']);
             if ($status == "all") {
                 $where = "";
             } else if ($status == "all_active") {
-                $where = "where status != 'declined' and status != 'blocked' and status != 'inactive'";
+                $where = " where status != 'declined' and status != 'blocked' and status != 'inactive'";
             } else {
-                $where = "where status = '$status'";
+                $where = " where status = '$status'";
             }
         }
+        
+        //count the total number of items
+        $query = "select count(*) from $aff_table_name".$where;
+        
+        $total_items = $wpdb->get_var($query);
+        
         $query =
                 "select
                 $aff_table_name.*,
@@ -196,22 +206,15 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
         $where
         ORDER BY $orderby_column $sort_order     
         ";
-        $resultset = $wpdb->get_results($query);
+        
+        $offset = ($current_page - 1) * $per_page;
+        $query.=' LIMIT ' . (int) $offset . ',' . (int) $per_page;
+
+        $data = $wpdb->get_results($query, ARRAY_A);
         /*
           $records_table_name = WPAM_TRACKING_TOKENS_TBL; //The table to query
           $resultset = $wpdb->get_results("SELECT * FROM $records_table_name ORDER BY $orderby_column $sort_order", OBJECT);
          */
-        $data = array();
-        $data = json_decode(json_encode($resultset), true);
-
-        //pagination requirement
-        $current_page = $this->get_pagenum();
-
-        //pagination requirement
-        $total_items = count($data);
-
-        //pagination requirement
-        $data = array_slice($data, (($current_page - 1) * $per_page), $per_page);
 
         // Now we add our *sorted* data to the items property, where it can be used by the rest of the class.
         $this->items = $data;

@@ -135,6 +135,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = 2.2.4 =
 - Fixed an issue that was preventing affiliates manager from saving cookies on some servers.
+- Optimized the code to render click tracking, commissions and affiliates data with minimal server resources.
 
 = 2.2.3 =
 - Default Landing Page URL can now be customized in the advanced settings.

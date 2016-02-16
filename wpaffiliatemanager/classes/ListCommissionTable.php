@@ -139,18 +139,20 @@ class WPAM_List_Commission_Table extends WPAM_List_Table {
         }
         global $wpdb;
         $records_table_name = WPAM_TRANSACTIONS_TBL; //The table to query
-        $resultset = $wpdb->get_results("SELECT * FROM $records_table_name WHERE type = 'credit' ORDER BY $orderby_column $sort_order", OBJECT);
-        $data = array();
-        $data = json_decode(json_encode($resultset), true);
-
+        
         //pagination requirement
         $current_page = $this->get_pagenum();
+        
+        //count the total number of items
+        $query = "SELECT COUNT(*) FROM $records_table_name WHERE type = 'credit'";
+        $total_items = $wpdb->get_var($query);
+        
+        $query = "SELECT * FROM $records_table_name WHERE type = 'credit' ORDER BY $orderby_column $sort_order";
 
-        //pagination requirement
-        $total_items = count($data);
+        $offset = ($current_page - 1) * $per_page;
+        $query.=' LIMIT ' . (int) $offset . ',' . (int) $per_page;
 
-        //pagination requirement
-        $data = array_slice($data, (($current_page - 1) * $per_page), $per_page);
+        $data = $wpdb->get_results($query, ARRAY_A);       
 
         // Now we add our *sorted* data to the items property, where it can be used by the rest of the class.
         $this->items = $data;
