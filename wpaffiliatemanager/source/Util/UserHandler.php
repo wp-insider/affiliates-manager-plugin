@@ -186,7 +186,8 @@ class WPAM_Util_UserHandler {
         //Check and set default dateCreated value
         if(!isset($fields['uniqueRefKey']) || empty($fields['uniqueRefKey'])){
             $idGenerator = new WPAM_Tracking_UniqueIdGenerator();
-            $fields['uniqueRefKey'] = $idGenerator->generateId();
+            $binConverter = new WPAM_Util_BinConverter();
+            $fields['uniqueRefKey'] = $binConverter->binToString($idGenerator->generateId());
         }        
         
         //Check and set default bountyType
@@ -198,7 +199,8 @@ class WPAM_Util_UserHandler {
         if(!isset($fields['bountyAmount']) || empty($fields['bountyAmount'])){
             $fields['bountyAmount'] = get_option(WPAM_PluginConfig::$AffBountyAmount);
         }
-
+        
+        $fields['userData'] = serialize(array()); //assign an empty array so $wpdb->insert does not fail
         $wpdb->insert( WPAM_AFFILIATES_TBL, $fields );
     }
     
