@@ -3,7 +3,7 @@ Contributors: wp.insider, affmngr, ElementGreen
 Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal 
 Requires at least: 3.5
-Tested up to: 4.4
+Tested up to: 4.5
 Stable tag: 2.2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -133,8 +133,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.2.7 =
+= 2.2.7 =
 - Fixed a bug in the French translation file that was causing errors in the manual affiliate approval screen.
+- Affiliates Manager is now compatible with WordPress 4.5.
 
 = 2.2.6 =
 - Fixed an issue that was preventing affiliates manager from submitting mass payment due to invalid security header.
