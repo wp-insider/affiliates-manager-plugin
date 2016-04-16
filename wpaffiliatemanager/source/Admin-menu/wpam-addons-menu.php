@@ -151,14 +151,22 @@ function wpam_display_addons_menu()
         'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-gravity-forms-paypal-integration/',
     );
     array_push($addons_data, $addon_18);
-     
+    
     $addon_19 = array(
+        'name' => 'Gravity Forms Stripe',
+        'thumbnail' => WPAM_URL . '/images/addons/gravity-forms-stripe-addon.png',
+        'description' => 'Integrates with Gravity Forms Stripe Addon so you can reward affiliates for sending customers.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-gravity-forms-stripe-integration/',
+    );
+    array_push($addons_data, $addon_19);
+     
+    $addon_20 = array(
         'name' => 'WishList Member Addon',
         'thumbnail' => WPAM_URL . '/images/addons/wishlist-member-integration.png',
         'description' => 'Integrates with Wishlist member plugin so you can reward affiliates for sending members.',
         'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-and-wishlist-member-plugin-integration/',
     );
-    array_push($addons_data, $addon_19);
+    array_push($addons_data, $addon_20);
     
     //Display the list
     $output = '';
