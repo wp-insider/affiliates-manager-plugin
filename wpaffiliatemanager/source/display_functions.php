@@ -22,7 +22,7 @@ function wpam_format_bounty( $bountyType, $bountyAmount ) {
 	if ( $bountyType === 'fixed' ) {
 		return sprintf( __( '%s per sale', 'affiliates-manager' ), $bountyAmount );
 	} else if ( $bountyType === 'percent' ) {
-		return sprintf( '%s%% of pre-tax sales', $bountyAmount );
+                return sprintf( __( '%s%% of pre-tax sales', 'affiliates-manager' ), $bountyAmount );
 	}
 }
 
