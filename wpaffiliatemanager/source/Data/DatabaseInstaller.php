@@ -58,7 +58,7 @@ class WPAM_Data_DatabaseInstaller {
         `paypalEmail` varchar(255) DEFAULT NULL,
         `paymentMethod` enum('paypal','check') DEFAULT NULL,
         `bountyType` enum('fixed','percent') DEFAULT NULL,
-        `bountyAmount` decimal(7,2) DEFAULT NULL,
+        `bountyAmount` decimal(18,2) DEFAULT NULL,
         `phoneNumber` varchar(32) NOT NULL default '',
         `userData` TEXT NULL,
         PRIMARY KEY (`affiliateId`)
@@ -117,7 +117,7 @@ class WPAM_Data_DatabaseInstaller {
         `dateModified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         `dateCreated` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
         `affiliateId` int(11) NOT NULL,
-        `amount` decimal(7,2) NOT NULL,
+        `amount` decimal(18,2) NOT NULL,
         `type` enum('credit','payout','adjustment','refund') NOT NULL DEFAULT 'credit',
         `description` varchar(255) NOT NULL,
         `referenceId` varchar(255) DEFAULT NULL,
@@ -161,9 +161,9 @@ class WPAM_Data_DatabaseInstaller {
         `errors` TEXT NOT NULL,
         `rawResponse` TEXT NOT NULL,
         `status` ENUM('pending','reconciled','failed') NOT NULL DEFAULT 'pending',
-        `amount` DECIMAL(7,2) NOT NULL,
-        `fee` DECIMAL(7,2) NOT NULL,
-        `totalAmount` DECIMAL(7,2) NOT NULL,
+        `amount` DECIMAL(18,2) NOT NULL,
+        `fee` DECIMAL(18,2) NOT NULL,
+        `totalAmount` DECIMAL(18,2) NOT NULL,
         PRIMARY KEY (`paypalLogId`)
         )" . $charset_collate . ";";
         dbDelta($pp_logs_tbl_sql);
