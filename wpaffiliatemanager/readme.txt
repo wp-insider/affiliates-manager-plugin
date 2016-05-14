@@ -135,6 +135,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = TODO2.2.9 =
 - Impression tracking will now be disabled by default.
+- Changed the deprecated 'add_object_page' call to 'add_menu_page' for creating a top-level menu page.
 
 = 2.2.8 =
 - Added translation option for the commission rate summary.

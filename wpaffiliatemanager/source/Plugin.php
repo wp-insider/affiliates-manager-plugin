@@ -603,7 +603,7 @@ class WPAM_Plugin
 		}                
    
                 //Add main affiliates menu object                                
-                add_object_page( __( 'Affiliate Management', 'affiliates-manager' ), __( 'Affiliates', 'affiliates-manager' ), WPAM_PluginConfig::$AdminCap, 'wpam-affiliates', array(), 'dashicons-groups' );
+                add_menu_page( __( 'Affiliate Management', 'affiliates-manager' ), __( 'Affiliates', 'affiliates-manager' ), WPAM_PluginConfig::$AdminCap, 'wpam-affiliates', array(), 'dashicons-groups', '25.3' );
                 
                 $page = $this->adminPages[0];
                 
