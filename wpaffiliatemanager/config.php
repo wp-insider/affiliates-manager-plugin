@@ -25,6 +25,7 @@ class WPAM_PluginConfig
         public static $AffEnableDebug = 'wpam_enable_debug';
 	public static $PayoutMethodCheckIsEnabledOption = 'wpam_payout_check_enabled';
 	public static $PayoutMethodPaypalIsEnabledOption = 'wpam_payout_paypal_enabled';
+        public static $PayoutMethodManualIsEnabledOption = 'wpam_payout_manual_enabled';
 	public static $HomePageId = 'wpam_home_page_id';
 	public static $RegPageId = 'wpam_register_page_id';
         public static $AffLoginPageURL = 'wpam_aff_login_page';

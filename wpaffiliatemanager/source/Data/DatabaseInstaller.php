@@ -56,7 +56,7 @@ class WPAM_Data_DatabaseInstaller {
         `uniqueRefKey` char(128) NOT NULL DEFAULT '<none>',
         `nameOnCheck` varchar(255) DEFAULT NULL,
         `paypalEmail` varchar(255) DEFAULT NULL,
-        `paymentMethod` enum('paypal','check') DEFAULT NULL,
+        `paymentMethod` enum('paypal','check','manual') DEFAULT NULL,
         `bountyType` enum('fixed','percent') DEFAULT NULL,
         `bountyAmount` decimal(18,2) DEFAULT NULL,
         `phoneNumber` varchar(32) NOT NULL default '',

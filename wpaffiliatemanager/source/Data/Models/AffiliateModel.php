@@ -144,6 +144,11 @@ class WPAM_Data_Models_AffiliateModel implements WPAM_Data_Models_IDataModel
 		$this->paymentMethod = 'check';
 		$this->nameOnCheck = $recipient;
 	}
+        
+        public function setManualPaymentMethod()
+        {
+                $this->paymentMethod = 'manual';
+        }
 	
 	public function formatPhoneNumber()
 	{
@@ -167,9 +172,11 @@ class WPAM_Data_Models_AffiliateModel implements WPAM_Data_Models_IDataModel
 	}
 
 	public function getPaymentMethod() {
-		if ( $this->paymentMethod == 'paypal' )
-			return __( 'PayPal', 'affiliates-manager' );
-		//else
-		return __( 'Check', 'affiliates-manager' );
-	}
+                if ( $this->paymentMethod == 'paypal' )
+                    return __( 'PayPal', 'affiliates-manager' );
+                elseif ( $this->paymentMethod == 'manual' )
+                    return __( 'Manual', 'affiliates-manager' );
+                //else
+                    return __( 'Check', 'affiliates-manager' );
+        }
 }

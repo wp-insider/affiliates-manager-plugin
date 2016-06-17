@@ -311,7 +311,7 @@ class WPAM_Plugin
                         
             if(is_user_logged_in()) {
                 global $current_user;
-                get_currentuserinfo();
+                wp_get_current_user();
                 $logout_url = wp_logout_url($home_page_url);
                 $output = '<div class="wpam-logged-in">';
                 $output .= '<p>'.__('You are currently logged in','affiliates-manager').'</p>';

@@ -105,6 +105,11 @@ class WPAM_Pages_Admin_SettingsPage {
             }
 
             if (isset($request['AffRegSettings'])) {    //Registration settings options submitted
+                if (isset($request['chkPayoutMethodManual'])) {
+                    update_option(WPAM_PluginConfig::$PayoutMethodManualIsEnabledOption, 1);
+                } else {
+                    update_option(WPAM_PluginConfig::$PayoutMethodManualIsEnabledOption, 0);
+                }
                 if (isset($request['chkPayoutMethodPaypal'])) {
                     update_option(WPAM_PluginConfig::$PayoutMethodPaypalIsEnabledOption, 1);
                 } else {
@@ -209,6 +214,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['enable_debug'] = isset($request['enable_debug']) ? 1 : 0;
             $response->viewData['request']['chkPayoutMethodCheck'] = isset($request['chkPayoutMethodCheck']) ? 1 : 0;
             $response->viewData['request']['chkPayoutMethodPaypal'] = isset($request['chkPayoutMethodPaypal']) ? 1 : 0;
+            $response->viewData['request']['chkPayoutMethodManual'] = isset($request['chkPayoutMethodManual']) ? 1 : 0;
             $response->viewData['request']['chkEnablePaypalMassPay'] = isset($request['chkEnablePaypalMassPay']) ? 1 : 0;
             $response->viewData['request']['txtPaypalAPIUser'] = isset($request['txtPaypalAPIUser']) ? $request['txtPaypalAPIUser'] : '';
             $response->viewData['request']['txtPaypalAPIPassword'] = isset($request['txtPaypalAPIPassword']) ? $request['txtPaypalAPIPassword'] : '';
@@ -234,6 +240,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['enable_debug'] = get_option(WPAM_PluginConfig::$AffEnableDebug);
             $response->viewData['request']['chkPayoutMethodCheck'] = get_option(WPAM_PluginConfig::$PayoutMethodCheckIsEnabledOption);
             $response->viewData['request']['chkPayoutMethodPaypal'] = get_option(WPAM_PluginConfig::$PayoutMethodPaypalIsEnabledOption);
+            $response->viewData['request']['chkPayoutMethodManual'] = get_option(WPAM_PluginConfig::$PayoutMethodManualIsEnabledOption);
             $response->viewData['request']['chkEnablePaypalMassPay'] = get_option(WPAM_PluginConfig::$PaypalMassPayEnabledOption);
             $response->viewData['request']['txtPaypalAPIUser'] = get_option(WPAM_PluginConfig::$PaypalAPIUserOption);
             $response->viewData['request']['txtPaypalAPIPassword'] = get_option(WPAM_PluginConfig::$PaypalAPIPasswordOption);

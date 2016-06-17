@@ -153,6 +153,9 @@ class WPAM_Util_AffiliateFormHelper {
 		if (get_option(WPAM_PluginConfig::$PayoutMethodPaypalIsEnabledOption) == 1)
 			$payments['paypal'] = __( 'PayPal Transfer', 'affiliates-manager' );
 
+                if (get_option(WPAM_PluginConfig::$PayoutMethodManualIsEnabledOption) == 1)
+			$payments['manual'] = __( 'Manual Transfer', 'affiliates-manager' );
+
 		return $payments;
 	}
 

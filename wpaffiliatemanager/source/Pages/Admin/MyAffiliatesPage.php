@@ -37,7 +37,7 @@ class WPAM_Pages_Admin_MyAffiliatesPage extends WPAM_Pages_Admin_AdminPage {
                         $validator->addValidator('txtBountyAmount', new WPAM_Validation_NumberValidator());
                     }
 
-                    $validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('check', 'paypal')));
+                    $validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('check', 'paypal', 'manual')));
 
                     if ($request['ddPaymentMethod'] === 'paypal') {
                         $validator->addValidator('txtPaypalEmail', new WPAM_Validation_EmailValidator());

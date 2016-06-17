@@ -415,11 +415,15 @@ jQuery(function($) {
 			<input type="checkbox" id="chkPayoutMethodCheck" name="chkPayoutMethodCheck" <?php
 			if ($this->viewData['request']['chkPayoutMethodCheck'])
 				echo 'checked="checked"';
-			?>/>&nbsp;&nbsp;<label for="chkPayoutMethodCheck">Check</label>
+			?>/>&nbsp;&nbsp;<label for="chkPayoutMethodCheck"><?php _e( 'Check', 'affiliates-manager') ?></label>
 			<br><input type="checkbox" id="chkPayoutMethodPaypal" name="chkPayoutMethodPaypal" <?php
 			if ($this->viewData['request']['chkPayoutMethodPaypal'])
 				echo 'checked="checked"';
 			?>/>&nbsp;&nbsp;<label for="chkPayoutMethodPaypal"><?php _e( 'PayPal', 'affiliates-manager' ) ?></label>
+                        <br><input type="checkbox" id="chkPayoutMethodManual" name="chkPayoutMethodManual" <?php
+			if ($this->viewData['request']['chkPayoutMethodManual'])
+				echo 'checked="checked"';
+			?>/>&nbsp;&nbsp;<label for="chkPayoutMethodManual"><?php _e( 'Manual', 'affiliates-manager' ) ?></label>
 		</td>
 	</tr>
 	<tr>

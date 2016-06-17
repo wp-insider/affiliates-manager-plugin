@@ -307,7 +307,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 		if (isset($request['action']) && $request['action'] == 'saveInfo')
 		{
 			$validator = new WPAM_Validation_Validator();
-			$validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('check','paypal')));
+			$validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('check','paypal','manual')));
 				
 			if ($request['ddPaymentMethod'] === 'paypal') {
 				$validator->addValidator('txtPaypalEmail', new WPAM_Validation_EmailValidator());
@@ -460,7 +460,11 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 		{
 			$affiliate->setCheckPaymentMethod($request['txtCheckTo']);
 		}
-
+                else if ($request['ddPaymentMethod'] === 'manual')
+		{
+			$affiliate->setManualPaymentMethod();
+		}
+                
 		$db = new WPAM_Data_DataAccess();
 		$db->getAffiliateRepository()->update($affiliate);
 	}
@@ -492,7 +496,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 	{
 		$validator = new WPAM_Validation_Validator();
 
-		$validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('paypal','check')));
+		$validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('paypal','check','manual')));
 
 		if ($request['ddPaymentMethod'] === 'check')
 		{
