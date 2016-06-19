@@ -15,9 +15,9 @@ jQuery(function($) {
 		<div class="wpam-tip" style="margin: 10px">
 			<?php _e( 'Looking for help? Check out the bundled step-by-step guide for setting up PayPal Mass Pay:', 'affiliates-manager' ) ?>
 			<div style="margin-left: 30px;  margin-top: 10px;height: 20px;">
-				<div style="float: left; width: 20px;"><img src="<?php echo WPAM_URL . "/images/icon-acrobat.png"?>" style="display: ;"/></div>
+				<div style="float: left; width: 20px;"><img src="<?php echo WPAM_URL . "/images/icon-acrobat.png"?>" /></div>
 				<div style="float: left; margin-left: 5px;">
-				<?php echo sprintf( __( '<a href="%s">How to Setup PayPal Mass Pay</a> (PDF)', 'affiliates-manager' ), WPAM_URL . "/doc/How to Setup PayPal Mass Pay.pdf" ) ?>
+				<?php echo sprintf( __( '<a href="%s" target="_blank">How to Setup PayPal Mass Pay</a> (PDF)', 'affiliates-manager' ), "http://wpaffiliatemanager.com/wp-content/uploads/doc/how-to-setup-paypal-mass-pay.pdf" ) ?>
 				</div>
 			</div>
 
