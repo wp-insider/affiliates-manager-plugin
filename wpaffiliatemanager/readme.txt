@@ -133,8 +133,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.3.1 =
+= 2.3.1 =
 - Updated the link to the PayPal Mass Pay documentation.
+- Payment settings link for PayPal Mass Pay configurations now goes to the payment tab.
 
 = 2.3.0 =
 - Added "Manual Transfer" as an available payment method.
