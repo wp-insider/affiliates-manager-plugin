@@ -13,9 +13,9 @@ function wpam_display_commission_menu()
     ); 
 
     if(isset($_GET['page'])){
-        $current = $_GET['page'];
+        $current = sanitize_text_field($_GET['page']);
         if(isset($_GET['action'])){
-            $current .= "&action=".$_GET['action'];
+            $current .= "&action=".sanitize_text_field($_GET['action']);
         }
     }
     $content = '';
@@ -69,7 +69,7 @@ function wpam_display_overall_commission_tab()
         <!-- Forms are NOT created automatically, so you need to wrap the table in one to use features like bulk actions -->
         <form id="wpam-commission-data-filter" method="get">
             <!-- For plugins, we also need to ensure that the form posts back to our current page -->
-            <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
+            <input type="hidden" name="page" value="<?php echo esc_attr($_REQUEST['page']); ?>" />
             <!-- Now we can render the completed list table -->
             <?php $commission_list_table->display() ?>
         </form>

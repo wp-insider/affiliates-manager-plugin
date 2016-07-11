@@ -22,19 +22,8 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
 
     function column_trackingTokenId($item) {
 
-        return $item['trackingTokenId'];
-        
-        //TODO - later offer the option to delete a click also.
-        //Build row actions
-//        $actions = array(
-//            'edit' => sprintf('<a href="admin.php?page=wpam_edit&editid=%s">Edit</a>', $item['id']),
-//            'delete' => sprintf('<a href="?page=%s&Delete=%s&prod_id=%s" onclick="return confirm(\'Are you sure you want to delete this entry?\')">Delete</a>', $_REQUEST['page'], '1', $item['id']),
-//        );
-//
-//        //Return the id column contents
-//        return $item['id'] . $this->row_actions($actions);
+        return $item['trackingTokenId'];       
     }
-
 
     /* Custom column output - only use if you have some columns that needs custom output */
 //    function column_<name_of_column>($item) {//Outputs the thubmnail image the way we want it

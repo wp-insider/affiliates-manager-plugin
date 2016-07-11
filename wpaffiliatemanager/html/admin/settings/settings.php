@@ -52,9 +52,9 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
                 ); 
 
                 if(isset($_GET['page'])){
-                    $current = $_GET['page'];
+                    $current = sanitize_text_field($_GET['page']);
                     if(isset($_GET['action'])){
-                        $current .= "&action=".$_GET['action'];
+                        $current .= "&action=".sanitize_text_field($_GET['action']);
                     }
                 }
                 $content = '';
