@@ -90,7 +90,6 @@ class WPAM_List_Commission_Table extends WPAM_List_Table {
                 echo '<div id="message" class="updated fade"><p>' . __('Error! You need to select multiple records to perform a bulk action!', 'affiliates-manager') . '</p></div>';
                 return;
             }
-            //TODO delete all the selected rows
             global $wpdb;
             $record_table_name = WPAM_TRANSACTIONS_TBL; //The table name for the records 
             foreach ($records_to_delete as $row) {           

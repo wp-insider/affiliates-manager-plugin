@@ -83,12 +83,11 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
                 echo '<div id="message" class="updated fade"><p>Error! You need to select multiple records to perform a bulk action!</p></div>';
                 return;
             }
-            foreach ($records_to_delete as $row) {
-                //TODO delete all the selected rows
-//                global $wpdb;
-//                $record_table_name = WPAM_TRACKING_TOKENS_TBL; //The table name for the records			
-//                $updatedb = "DELETE FROM $record_table_name WHERE id='$row'";
-//                $results = $wpdb->query($updatedb);
+            global $wpdb;
+            $record_table_name = WPAM_TRACKING_TOKENS_TBL; //The table name for the records	
+            foreach ($records_to_delete as $row) {		
+                $updatedb = "DELETE FROM $record_table_name WHERE trackingTokenId='$row'";
+                $results = $wpdb->query($updatedb);
             }
             echo '<div id="message" class="updated fade"><p>Selected records deleted successfully!</p></div>';
         }
