@@ -20,7 +20,7 @@ class WPAM_Util_UserHandler {
         $message = sprintf(__('New affiliate registration for %s: has been approved!', 'affiliates-manager'), $blogname) . "\r\n\r\n";
 
         if (username_exists($userLogin)) {
-            $user = new WP_User(get_userdatabylogin($userLogin)->ID);
+            $user = new WP_User(get_user_by('login', $userLogin)->ID);
             if ($user->has_cap(WPAM_PluginConfig::$AffiliateCap)) {
                 throw new Exception(__('User already has an account and is already an affiliate', 'affiliates-manager'));
             } else {
@@ -84,7 +84,7 @@ class WPAM_Util_UserHandler {
         $message = sprintf(__('New affiliate registration for %s: has been approved!', 'affiliates-manager'), $blogname) . "\r\n\r\n";
 
         if (username_exists($userLogin)) {
-            $user = new WP_User(get_userdatabylogin($userLogin)->ID);
+            $user = new WP_User(get_user_by('login', $userLogin)->ID);
             if ($user->has_cap(WPAM_PluginConfig::$AffiliateCap)) {
                 throw new Exception(__('User already has an account and is already an affiliate', 'affiliates-manager'));
             } else {

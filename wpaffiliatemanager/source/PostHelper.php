@@ -26,7 +26,7 @@ class WPAM_PostHelper
 
 	public function getPost($postId)
 	{
-		return wp_get_single_post($postId);
+		return get_post($postId);
 	}
 
 	public function createPage($name, $title, $content, $parentId = NULL)
