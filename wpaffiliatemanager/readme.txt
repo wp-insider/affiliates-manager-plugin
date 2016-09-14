@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal  
 Requires at least: 3.5
 Tested up to: 4.6
-Stable tag: 2.3.4
+Stable tag: 2.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -132,6 +132,11 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 2.3.5 =
+- Fixed a bug where the customised Landing Page URL did not appear in the affiliate creative code.
+- Creative URLs in the menu are now properly escaped.
+- Added support for Czech language translation. The translation file was submitted by Valli Katzl.
 
 = 2.3.4 =
 - Replaced deprecated function call wp_get_single_post() with get_post().

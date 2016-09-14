@@ -247,9 +247,17 @@ function formatType($type)
 				<td><?php _e( 'Type', 'affiliates-manager' ) ?></td>
 				<td><?php echo formatType($model->type)?></td>
 			</tr>
+                        <?php
+                        $home_url = home_url($model->slug);
+                        $aff_landing_page = get_option(WPAM_PluginConfig::$AffLandingPageURL);
+                        if(isset($aff_landing_page) && !empty($aff_landing_page)){
+                            $aff_landing_page = trailingslashit($aff_landing_page);
+                            $home_url = $aff_landing_page.trim($model->slug);
+                        }
+                        ?>
 			<tr>
 				<td><?php _e( 'Landing Page', 'affiliates-manager' ) ?></td>
-				<td><?php echo site_url( $model->slug ) ?></td>
+				<td><?php echo esc_url($home_url) ?></td>
 			</tr>
 
 		</tbody>

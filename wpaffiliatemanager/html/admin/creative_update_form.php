@@ -109,6 +109,11 @@ DIV#previewImageDiv.loading {
 
 <?php
 require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
+$home_url = home_url('/');
+$aff_landing_page = get_option(WPAM_PluginConfig::$AffLandingPageURL);
+if(isset($aff_landing_page) && !empty($aff_landing_page)){
+    $home_url = trailingslashit($aff_landing_page);
+}
 ?>
 	
 <form method="post" action="admin.php?page=wpam-creatives" enctype="multipart/form-data">
@@ -143,7 +148,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 					<label for="txtSlug"><?php _e( 'Landing Page', 'affiliates-manager' ) ?></label>
 				</td>
 				<td id="landing-page-slug">
-					<?php echo site_url( '/' ) ?><input type="text" id="txtSlug" name="txtSlug" size="30" value="<?php echo isset($this->viewData['request']['txtSlug']) ? $this->viewData['request']['txtSlug'] : ''; ?>" />
+					<?php echo esc_url($home_url) ?><input type="text" id="txtSlug" name="txtSlug" size="30" value="<?php echo isset($this->viewData['request']['txtSlug']) ? $this->viewData['request']['txtSlug'] : ''; ?>" />
 				</td>
 			</tr>			
 			<tr>

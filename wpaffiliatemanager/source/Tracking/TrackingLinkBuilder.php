@@ -26,6 +26,12 @@ class WPAM_Tracking_TrackingLinkBuilder
 	}
 
 	public function getUrl() {
+                $aff_landing_page = get_option(WPAM_PluginConfig::$AffLandingPageURL);
+                if(isset($aff_landing_page) && !empty($aff_landing_page)){
+                    $aff_landing_page = trailingslashit($aff_landing_page);
+                    $aff_landing_page = $aff_landing_page.trim($this->creative->slug);
+                    return add_query_arg( array( WPAM_PluginConfig::$wpam_id => $this->affiliate->affiliateId ), $aff_landing_page);
+                }
 		return add_query_arg( array( WPAM_PluginConfig::$wpam_id => $this->affiliate->affiliateId ),
 							  home_url( trim( $this->creative->slug ) ) );
 	}
