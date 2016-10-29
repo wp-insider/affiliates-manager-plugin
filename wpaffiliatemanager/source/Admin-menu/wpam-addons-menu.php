@@ -168,6 +168,14 @@ function wpam_display_addons_menu()
     );
     array_push($addons_data, $addon_20);
     
+    $addon_21 = array(
+        'name' => 'AWeber Integration',
+        'thumbnail' => WPAM_URL . '/images/addons/aweber-integration.png',
+        'description' => 'Automatically signup your affiliates to a specific list in your AWeber account',
+        'page_url' => 'https://wpaffiliatemanager.com/signup-affiliates-aweber-list/',
+    );
+    array_push($addons_data, $addon_21);
+    
     //Display the list
     $output = '';
     foreach ($addons_data as $addon) {
