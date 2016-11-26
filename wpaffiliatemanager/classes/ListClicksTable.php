@@ -54,7 +54,8 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
             'dateCreated' => __('Date', 'affiliates-manager'),
             'sourceAffiliateId' => __('Affiliate ID', 'affiliates-manager'),
             'trackingKey' => __('Tracking Key', 'affiliates-manager'),
-            'referer' => __('Referring URL', 'affiliates-manager')
+            'referer' => __('Referring URL', 'affiliates-manager'),
+            'ipAddress' => __('IP Address', 'affiliates-manager')
         );
         return $columns;
     }

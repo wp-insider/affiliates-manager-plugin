@@ -133,7 +133,8 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.3.6 =
+= 2.3.6 =
+- Click Tracking menu now shows the IP Address of the user.
 - Created a new addon to integrate AWeber with affiliates manager plugin. See details below:
   https://wpaffiliatemanager.com/signup-affiliates-aweber-list/
 

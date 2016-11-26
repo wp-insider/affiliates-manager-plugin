@@ -52,6 +52,7 @@ class WPAM_Click_Tracking {
             $args['sourceCreativeId'] = '';  // remove this column from the click tracking menu in the settings
             $args['referer'] = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
             $args['affiliateSubCode'] = '';
+            $args['ipAddress'] = WPAM_Click_Tracking::get_user_ip();
             WPAM_Click_Tracking::insert_click_data($args);
         }
         
@@ -113,6 +114,24 @@ class WPAM_Click_Tracking {
             $total_clicks = $result;
         }
         return $total_clicks;
+    }
+    /*
+     * Get the IP Address of the user.
+     */
+    public static function get_user_ip() {
+        $user_ip = '';
+        if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && !empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $user_ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else {
+            $user_ip = $_SERVER['REMOTE_ADDR'];
+        }
+
+        if (strstr($user_ip, ',')) {
+            $ip_values = explode(',', $user_ip);
+            $user_ip = $ip_values['0'];
+        }
+
+        return $user_ip;
     }
 
 }
