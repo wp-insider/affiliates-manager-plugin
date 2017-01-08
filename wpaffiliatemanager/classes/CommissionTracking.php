@@ -19,6 +19,10 @@ class WPAM_Commission_Tracking {
         $txn_id = $args['txn_id'];
         $amount = $args['amount'];
         $aff_id = $args['aff_id'];
+        $buyer_email = '';
+        if(isset($args['email']) && !empty($args['email'])){
+            $buyer_email = $args['email'];
+        }
         $affiliate = '';
         if(isset($aff_id) && is_numeric($aff_id)){  //aff_id contains affiliate ID from the new cookie system (wpam_id)
             $query = "SELECT * FROM ".WPAM_AFFILIATES_TBL." WHERE affiliateId = %d";        
@@ -84,6 +88,7 @@ class WPAM_Commission_Tracking {
                 $data['type'] = 'credit';
                 $data['description'] = $description;
                 $data['amount'] = $creditAmount;
+                $data['email'] = $buyer_email;
                 $wpdb->insert( $table, $data);
                 /*
                 if($strRefKey){

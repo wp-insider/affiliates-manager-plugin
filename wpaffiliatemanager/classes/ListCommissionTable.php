@@ -61,7 +61,8 @@ class WPAM_List_Commission_Table extends WPAM_List_Table {
             'dateCreated' => __('Date', 'affiliates-manager'),
             'affiliateId' => __('Affiliate ID', 'affiliates-manager'),
             'amount' => __('Amount', 'affiliates-manager'),
-            'referenceId' => __('Transaction ID', 'affiliates-manager')
+            'referenceId' => __('Transaction ID', 'affiliates-manager'),
+            'email' => __('Buyer Email', 'affiliates-manager')
         );
         return $columns;
     }

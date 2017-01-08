@@ -122,6 +122,7 @@ class WPAM_Data_DatabaseInstaller {
         `description` varchar(255) NOT NULL,
         `referenceId` varchar(255) DEFAULT NULL,
         `status` ENUM('pending','confirmed','failed') NOT NULL DEFAULT 'confirmed',
+        `email` varchar(255) NOT NULL,
         PRIMARY KEY (`transactionId`)
         )" . $charset_collate . ";";
         dbDelta($transactions_tbl_sql);

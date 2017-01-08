@@ -481,6 +481,7 @@ class WPAM_Plugin
             $tax = $order->get_total_tax();
             WPAM_Logger::log_debug('WooCommerce Integration - Total amount: ' . $total . ', Total shipping: ' . $shipping . ', Total tax: ' . $tax);
             $purchaseAmount = $total - $shipping - $tax;
+            $buyer_email = $order->billing_email;
             
             $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
             $wpam_id = get_post_meta($order_id, '_wpam_id', true);
@@ -494,8 +495,8 @@ class WPAM_Plugin
             }
             
             $requestTracker = new WPAM_Tracking_RequestTracker();
-            WPAM_Logger::log_debug('WooCommerce Integration - awarding commission for order ID: '.$order_id.', Purchase amount: '.$purchaseAmount.', Affiliate ID: '.$wpam_refkey);
-            $requestTracker->handleCheckoutWithRefKey( $order_id, $purchaseAmount, $wpam_refkey);
+            WPAM_Logger::log_debug('WooCommerce Integration - awarding commission for order ID: '.$order_id.', Purchase amount: '.$purchaseAmount.', Affiliate ID: '.$wpam_refkey.', Buyer Email: '.$buyer_email);
+            $requestTracker->handleCheckoutWithRefKey( $order_id, $purchaseAmount, $wpam_refkey, $buyer_email);
         }
                 
         public function WooCommerceRefundTransaction($order_id)
@@ -553,9 +554,10 @@ class WPAM_Plugin
                 return;
             }
             $purchaseAmount = edd_get_payment_amount( $payment_id );
-            WPAM_Logger::log_debug('Easy Digital Downlaods Integration - Awarding commission for Order ID: '.$payment_id.'. Purchase amt: '.$purchaseAmount);
+            $buyer_email = $payment_meta['email'];
+            WPAM_Logger::log_debug('Easy Digital Downlaods Integration - Awarding commission for Order ID: '.$payment_id.'. Purchase amt: '.$purchaseAmount.', Buyer Email: '.$buyer_email);
             $requestTracker = new WPAM_Tracking_RequestTracker();
-            $requestTracker->handleCheckoutWithRefKey($payment_id, $purchaseAmount, $strRefKey);
+            $requestTracker->handleCheckoutWithRefKey($payment_id, $purchaseAmount, $strRefKey, $buyer_email);
         }
 
 	public function onExchangeCheckout( $transaction_id, $method, $method_id, $status, $customer_id, $cart_object, $args ) {
