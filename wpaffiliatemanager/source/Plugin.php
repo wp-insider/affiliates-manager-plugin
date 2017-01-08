@@ -494,7 +494,7 @@ class WPAM_Plugin
             }
             
             $requestTracker = new WPAM_Tracking_RequestTracker();
-            WPAM_Logger::log_debug('WooCommerce Integration - awarding commission for order ID: '.$order_id.'. Purchase amount: '.$purchaseAmount);
+            WPAM_Logger::log_debug('WooCommerce Integration - awarding commission for order ID: '.$order_id.', Purchase amount: '.$purchaseAmount.', Affiliate ID: '.$wpam_refkey);
             $requestTracker->handleCheckoutWithRefKey( $order_id, $purchaseAmount, $wpam_refkey);
         }
                 
