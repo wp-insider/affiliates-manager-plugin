@@ -133,7 +133,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.3.7 =
+= 2.3.7 =
 - Added a new column to the commissions table to save the email address of the buyer.
 
 = 2.3.6 =

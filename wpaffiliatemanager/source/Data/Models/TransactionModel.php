@@ -18,6 +18,7 @@ class WPAM_Data_Models_TransactionModel implements WPAM_Data_Models_IDataModel
 		$description,
 		$type,
 		$status,
+                $email,
 		$balance; //not an actual column
 
 	const STATUS_CONFIRMED = 'confirmed';

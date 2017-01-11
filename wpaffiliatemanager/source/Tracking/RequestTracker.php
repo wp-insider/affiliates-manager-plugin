@@ -12,7 +12,7 @@ require_once WPAM_BASE_DIRECTORY . "/source/Data/Models/ImpressionModel.php";
 //any 'wpsca' checks can go away sometime in the future (changed to wpam in 12/2012)
 class WPAM_Tracking_RequestTracker {
 
-	public function handleCheckout( $purchaseLogId, $purchaseAmount ) {
+	public function handleCheckout( $purchaseLogId, $purchaseAmount, $email = '' ) {
 		//TODO start - we only need this to block of code to keep backwards compatibility. later when we will directly get affiliate ID from cookie it can be deleted
 		$db = new WPAM_Data_DataAccess();
 		$binConverter = new WPAM_Util_BinConverter();
@@ -61,6 +61,7 @@ class WPAM_Tracking_RequestTracker {
                 if(is_numeric($strRefKey)){  //$strRefKey contains affiliate ID from the new cookie system (wpam_id)
                     $args['aff_id'] = $strRefKey;
                 }
+                $args['email'] = $email;
                 WPAM_Commission_Tracking::award_commission($args);		
 	}
 	

@@ -1,11 +1,11 @@
 <?php
 
 function wpam_has_purchase_record($purchaseLogId){
-    $db = new WPAM_Data_DataAccess();
-    $affiliate = NULL;
+    global $wpdb;
     $has_record = true;
-    $affiliate = $db->getAffiliateRepository()->loadByPurchaseLogId( $purchaseLogId );
-    if($affiliate == NULL) {
+    $query = "SELECT * FROM ".WPAM_TRANSACTIONS_TBL." WHERE referenceId = %s";        
+    $txn_record = $wpdb->get_row($wpdb->prepare($query, $purchaseLogId));
+    if($txn_record == NULL) {
         $has_record = false;
     }
     return $has_record;

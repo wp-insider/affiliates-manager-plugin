@@ -76,7 +76,7 @@ class WPAM_Pages_Admin_MyAffiliatesPage extends WPAM_Pages_Admin_AdminPage {
 
         $affiliateHelper = new WPAM_Util_AffiliateFormHelper();
         $affiliateHelper->addTransactionDateRange($where, $request, $response);
-
+        
         $response->viewData['transactions'] = $db->getTransactionRepository()->loadMultipleBy(
                 $where, array('dateCreated' => 'desc')
         );
