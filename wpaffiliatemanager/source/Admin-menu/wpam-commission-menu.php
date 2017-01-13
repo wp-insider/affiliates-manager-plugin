@@ -115,6 +115,7 @@ function wpam_display_manual_commission_tab()
         if(empty($txn_id)){
             $txn_id = uniqid();
         }
+        $buyer_email = sanitize_text_field($_POST["wpam_buyer_email"]);
         $date_created = trim($_POST["wpam_date_created"]);
         if(empty($date_created)){            
             $date_created = date("Y-m-d");
@@ -146,6 +147,7 @@ function wpam_display_manual_commission_tab()
             $data['type'] = 'credit';        
             $data['description'] = $description;
             $data['amount'] = $commission_amt;
+            $data['email'] = $buyer_email;
             $wpdb->insert( $table, $data);
 
             echo '<div id="message" class="updated fade"><p><strong>';
@@ -188,6 +190,12 @@ function wpam_display_manual_commission_tab()
     <th scope="row"><label for="wpam_txn_id"><?php _e('Transaction ID', 'affiliates-manager');?></label></th>
     <td><input name="wpam_txn_id" type="text" id="wpam_txn_id" size="15" value="" class="regular-text">
     <p class="description"><?php _e('Enter the unique transaction ID (leave empty to generate a unique ID). Example: ', 'affiliates-manager');?>1423</p></td>
+    </tr>
+    
+    <tr valign="top">
+    <th scope="row"><label for="wpam_buyer_email"><?php _e('Buyer Email', 'affiliates-manager');?></label></th>
+    <td><input name="wpam_buyer_email" type="text" id="wpam_buyer_email" size="15" value="" class="regular-text">
+    <p class="description"><?php _e('Enter the email address of the buyer (optional).', 'affiliates-manager');?></p></td>
     </tr>
     
     <tr valign="top">

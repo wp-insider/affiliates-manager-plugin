@@ -134,7 +134,7 @@ https://wpaffiliatemanager.com/screen-shots/
 == Changelog ==
 
 = 2.3.7 =
-- Added a new column to the commissions table to save the email address of the buyer.
+- Added a new column to the commissions table to save the email address of the buyer. All future transactions will capture the email address of the buyer.
 
 = 2.3.6 =
 - Click Tracking menu now shows the IP Address of the user.
