@@ -174,6 +174,16 @@ class WPAM_Pages_Admin_SettingsPage {
             }
 
             if (isset($request['AffPagesSettings'])) {    //Affiliate pages/forms options submitted
+                update_option(WPAM_PluginConfig::$AffHomePageURL, $request['affHomePage']);
+                if(isset($request['affHomePage']) && !empty($request['affHomePage'])){
+                    $home_page_id = url_to_postid($request['affHomePage']);
+                    update_option(WPAM_PluginConfig::$HomePageId, $home_page_id);
+                }
+                update_option(WPAM_PluginConfig::$AffRegPageURL, $request['affRegPage']);
+                if(isset($request['affRegPage']) && !empty($request['affRegPage'])){
+                    $reg_page_id = url_to_postid($request['affRegPage']);
+                    update_option(WPAM_PluginConfig::$RegPageId, $reg_page_id);
+                }
                 update_option(WPAM_PluginConfig::$AffLoginPageURL, $request['affLoginPage']);
             }
             
@@ -220,6 +230,8 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['txtPaypalAPIPassword'] = isset($request['txtPaypalAPIPassword']) ? $request['txtPaypalAPIPassword'] : '';
             $response->viewData['request']['txtPaypalAPISignature'] = isset($request['txtPaypalAPISignature']) ? $request['txtPaypalAPISignature'] : '';
             $response->viewData['request']['ddPaypalAPIEndPoint'] = isset($request['ddPaypalAPIEndPoint']) ? $request['ddPaypalAPIEndPoint'] : '';
+            $response->viewData['request']['affHomePage'] = isset($request['affHomePage']) ? $request['affHomePage'] : '';
+            $response->viewData['request']['affRegPage'] = isset($request['affRegPage']) ? $request['affRegPage'] : '';
             $response->viewData['request']['affLoginPage'] = isset($request['affLoginPage']) ? $request['affLoginPage'] : '';
             $response->viewData['request']['affLandingPage'] = isset($request['affLandingPage']) ? $request['affLandingPage'] : '';
             $response->viewData['validationResult'] = $vr;
@@ -246,6 +258,8 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['txtPaypalAPIPassword'] = get_option(WPAM_PluginConfig::$PaypalAPIPasswordOption);
             $response->viewData['request']['txtPaypalAPISignature'] = get_option(WPAM_PluginConfig::$PaypalAPISignatureOption);
             $response->viewData['request']['ddPaypalAPIEndPoint'] = get_option(WPAM_PluginConfig::$PaypalAPIEndPointOption);
+            $response->viewData['request']['affHomePage'] = get_option(WPAM_PluginConfig::$AffHomePageURL);
+            $response->viewData['request']['affRegPage'] = get_option(WPAM_PluginConfig::$AffRegPageURL);
             $response->viewData['request']['affLoginPage'] = get_option(WPAM_PluginConfig::$AffLoginPageURL);
             $response->viewData['request']['affLandingPage'] = get_option(WPAM_PluginConfig::$AffLandingPageURL);
         }

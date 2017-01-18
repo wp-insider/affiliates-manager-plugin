@@ -28,6 +28,8 @@ class WPAM_PluginConfig
         public static $PayoutMethodManualIsEnabledOption = 'wpam_payout_manual_enabled';
 	public static $HomePageId = 'wpam_home_page_id';
 	public static $RegPageId = 'wpam_register_page_id';
+        public static $AffHomePageURL = 'wpam_aff_home_page';
+        public static $AffRegPageURL = 'wpam_aff_reg_page';
         public static $AffLoginPageURL = 'wpam_aff_login_page';
         public static $AffHomeMsg = 'wpam_aff_home_msg';
         public static $AffLandingPageURL = 'wpam_landing_page';

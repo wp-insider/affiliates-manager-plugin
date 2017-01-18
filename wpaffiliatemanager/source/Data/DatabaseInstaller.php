@@ -315,44 +315,28 @@ class WPAM_Data_DatabaseInstaller {
     }
 
     public function doInstallPages(array $new_pages) {
-        $args = array(
-            'post_type' => 'page'
-        );
-        $pages = get_posts($args);
-
-        $home_page_id = NULL;
-        $reg_page_id = NULL;
-        $login_page = NULL;
         
-        foreach ($pages as $page) {
-            //Lets check if the required pages are already in place
-            if (strpos($page->post_content, WPAM_PluginConfig::$ShortCodeHome) !== false) {
-                $home_page_id = $page->ID;
-            }
-
-            if (strpos($page->post_content, WPAM_PluginConfig::$ShortCodeRegister) !== false) {
-                $reg_page_id = $page->ID;
-            }
-            
-            if (strpos($page->post_content, WPAM_PluginConfig::$ShortCodeLogin) !== false) {
-                $login_page = get_permalink($page->ID);
-            }
-        }
-
-        if (!$home_page_id) {
-            //Could not find a page with the affiliate area shortcode. Lets create this page
+        $home_page_id = get_option( WPAM_PluginConfig::$HomePageId );
+        if (!isset($home_page_id) || empty($home_page_id)) {
+            //Could not find a ID for the affiliate homepage. Lets create this page
             $home_page_id = $new_pages[WPAM_Plugin::PAGE_NAME_HOME]->install();
         }
         update_option(WPAM_PluginConfig::$HomePageId, $home_page_id); //Save the ID of our affiliate area home page
+        $home_page = get_permalink($home_page_id);
+        update_option(WPAM_PluginConfig::$AffHomePageURL, $home_page); //Save the URL of the affiliate home page
 
-        if (!$reg_page_id) {
-            //Could not find a page with the affiliate registration shortcode. Lets create this page
+        $reg_page_id = get_option( WPAM_PluginConfig::$RegPageId );
+        if (!isset($reg_page_id) || empty($reg_page_id)) {
+            //Could not find the ID of the affiliate registration page. Lets create this page
             $reg_page_id = $new_pages[WPAM_Plugin::PAGE_NAME_REGISTER]->install();
         }
         update_option(WPAM_PluginConfig::$RegPageId, $reg_page_id); //Save the ID of the registration page.
+        $reg_page = get_permalink($reg_page_id);
+        update_option(WPAM_PluginConfig::$AffRegPageURL, $reg_page); //Save the URL of the affiliate registration page       
         
-        if (!$login_page) {
-            //Could not find a page with the affiliate login shortcode. Lets create this page
+        $login_page = get_option( WPAM_PluginConfig::$AffLoginPageURL );
+        if (!isset($login_page) || empty($login_page)) {
+            //Could not find the URL of the affiliate login page. Lets create this page
             $login_page_id = $new_pages[WPAM_Plugin::PAGE_NAME_LOGIN]->install();
             $login_page = get_permalink($login_page_id);          
         }
