@@ -142,7 +142,7 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 		{
 			$pplog = $db->getPaypalLogRepository()->load((int)$request['id']);
 			if ($pplog === NULL)
-				throw new Exception( __( 'Invalid PayPa LogID', 'affiliates-manager' ) );
+				throw new Exception( __( 'Invalid PayPal LogID', 'affiliates-manager' ) );
 
 			foreach ($request['transactionStatus'] as $transactionId => $status)
 			{

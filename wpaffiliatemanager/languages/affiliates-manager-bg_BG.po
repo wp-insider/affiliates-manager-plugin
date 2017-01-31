@@ -2,1223 +2,1993 @@
 # This file is distributed under the same license as the WP Affiliate Manager package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2013-07-27 06:18:16+0000\n"
+"Project-Id-Version: WP Affiliate Manager\n"
+"POT-Creation-Date: 2017-01-31 15:17+1100\n"
+"PO-Revision-Date: 2017-01-31 15:18+1100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: bg_BG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/0.1\n"
-"Project-Id-Version: WP Affiliate Manager\n"
+"X-Generator: Poedit 1.8.11\n"
 
-#: boot-strap.php:29
+#: ../boot-strap.php:38
 msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
 msgstr "WordPress партньорски мениджър изисква PHP 5.1 или по-висока."
 
-#: boot-strap.php:33
-msgid "WordPress Affiliate Manager requires WordPress 3.1 or higher."
-msgstr "WordPress партньорски мениджър изисква WordPress 3.1 или висок."
-
-#: html/affiliate_creative_detail.php:8 html/affiliate_creative_detail.php:91
-#: html/admin/creatives_detail.php:8 html/admin/creatives_detail.php:289
-msgid "Image"
-msgstr "Изображение"
-
-#: html/affiliate_creative_detail.php:9 html/admin/creatives_detail.php:9
-msgid "Text Link"
-msgstr "Текстова връзка"
-
-#: html/affiliate_creative_detail.php:10
-msgid "unknown creative type."
-msgstr "неизвестен творчески тип."
-
-#: html/affiliate_creative_detail.php:28 html/admin/creative_update_form.php:82
-#: html/admin/manage_creatives.php:38 html/admin/affiliate_detail.php:219
-#: html/admin/affiliate_detail.php:236 html/admin/creatives_detail.php:114
-#: html/admin/creatives_detail.php:137 source/Pages/AffiliatesHome.php:479
-#: source/Pages/Admin/NewAffiliatePage.php:82
-#: source/Pages/Admin/MyAffiliatesPage.php:221
-msgid "OK"
-msgstr "OK"
-
-#: html/affiliate_creative_detail.php:41 html/affiliate_creative_detail.php:54
-#: html/admin/creatives_detail.php:174 html/admin/creatives_detail.php:215
-msgid "Preview"
-msgstr "Визуализация"
-
-#: html/affiliate_creative_detail.php:52 html/admin/creatives_detail.php:194
-msgid "Creative:"
-msgstr "Творчески:"
-
-#: html/affiliate_creative_detail.php:56
-msgid "Your Affiliate-Specific HTML snippet"
-msgstr "Вашият филиал-специфичното HTML фрагмент"
-
-#: html/affiliate_creative_detail.php:65 html/admin/creatives_detail.php:263
-msgid "Text Link Properties"
-msgstr "Текстът връзка свойства"
-
-#: html/affiliate_creative_detail.php:70
-#: html/admin/creative_update_form.php:232 html/admin/creatives_detail.php:268
-msgid "Link Text"
-msgstr "Текст за връзка"
-
-#: html/affiliate_creative_detail.php:74 html/affiliate_creative_detail.php:97
-#: html/admin/creative_update_form.php:208
-#: html/admin/creative_update_form.php:243 html/admin/creatives_detail.php:272
-#: html/admin/creatives_detail.php:295
-msgid "Alt Text"
-msgstr "ALT текст"
-
-#: html/affiliate_creative_detail.php:86 html/admin/creatives_detail.php:284
-msgid "Image Properties"
-msgstr "Свойства на изображението"
-
-#: html/affiliate_cp_approved.php:3
-msgid "Affiliate Control Panel"
-msgstr "Филиал на контролния панел"
-
-#: html/affiliate_cp_approved.php:5
-msgid "Welcome!"
-msgstr "Добре дошли!"
-
-#: html/affiliate_cp_approved.php:9
-msgid "Review Terms and Get Started!"
-msgstr "Прегледайте условията и да започнете!"
-
-#: html/affiliate_cp_home.php:11
-msgid "Account Summary"
-msgstr "Обобщение за акаунт"
-
-#: html/affiliate_cp_home.php:16 html/transaction_table.php:48
-#: html/admin/affiliates_list.php:55
-#: html/admin/paypalpayments/review_affiliates.php:58
-#: html/admin/paypalpayments/select_affiliates.php:129
-msgid "Balance"
-msgstr "Баланс"
-
-#: html/affiliate_cp_home.php:20 html/affiliate_cp_agree_terms.php:12
-msgid "Commission Rate"
-msgstr "Комисията курс"
-
-#: html/affiliate_cp_home.php:32
-msgid "Today"
-msgstr "Днес"
-
-#: html/affiliate_cp_home.php:41 html/affiliate_cp_home.php:70
-msgid "Visitors"
-msgstr "Посетители"
-
-#: html/affiliate_cp_home.php:45 html/affiliate_cp_home.php:74
-msgid "Closed Transactions"
-msgstr "Приключени сделки"
-
-#: html/affiliate_cp_home.php:49 html/affiliate_cp_home.php:78
-msgid "Revenue"
-msgstr "Приходи"
-
-#: html/affiliate_cp_home.php:61
-msgid "This Month"
-msgstr "Този месец"
-
-#: html/affiliate_approved.php:1
-msgid "Your application was approved.  Please go to the <a href=\"%s\">affiliate control panel</a> to get started."
-msgstr "Молбата ви е одобрена. Моля отидете на <a href=\"%s\"> филиал на контролния панел</a> за да започнете."
-
-#: html/affiliate_cp_payment_details_confirmed.php:2
-#: source/display_functions.php:164
-msgid "Confirmed"
-msgstr "Потвърди"
-
-#: html/affiliate_cp_payment_details_confirmed.php:3
-msgid "Your payment details have been submitted"
-msgstr "Данните за плащане са били подадени"
-
-#: html/affiliate_cp_payment_details_confirmed.php:5
-msgid "Now would be a great time to go pick <a href=\"%s\">some creative</a> and get started."
-msgstr "Сега би било много време да отида да вземем <a href=\"%s\"> някои творчески</a> и да започнете."
-
-#: html/affiliate_not_logged_in.php:1
-msgid "This is the affiliates section of this store.  If you are an existing affiliate, please <a href=\"%s\">log in</a> to access your control panel."
-msgstr "Това е раздела филиали на този магазин. Ако сте съществуващ филиал, моля <a href=\"%s\"> Влезте в</a> за достъп до контролния панел."
-
-#: html/affiliate_not_logged_in.php:4
-msgid "If you are not an affiliate, but wish to become one, you will need to apply.  To apply, you must be a registered user on this blog.  If you have an existing account on this blog, please <a href=\"%s\">log in</a>.  If not, please <a href=\"%s\">register</a>."
-msgstr "Ако не сте филиал, но желаят да станат един, ще трябва да се прилагат. За да кандидатствате, трябва да сте регистриран потребител на този блог. Ако имате съществуващ акаунт на този блог, моля <a href=\"%s\"> Влезте в</a>. Ако не, моля <a href=\"%s\"> Регистрирайте се</a>."
-
-#: html/affiliate_cp_payment_details_form.php:69
-#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:88
-#: html/admin/affiliate_detail.php:559
-msgid "Payment Details"
-msgstr "Данни за плащане"
-
-#: html/affiliate_cp_payment_details_form.php:70
-#: html/affiliate_cp_payment_details_simple.php:14
-msgid "Please provide your payment details."
-msgstr "Предоставете данните за плащане."
-
-#: html/affiliate_cp_payment_details_form.php:71
-#: html/affiliate_cp_payment_details_simple.php:15
-msgid "The following information will be used to disperse payments when your account reaches the minimum payout amount."
-msgstr "Следната информация ще се използва да се разпръсне плащания, когато сметката ви достигне минималната сума за изплащане."
-
-#: html/affiliate_cp_payment_details_form.php:79
-#: html/affiliate_cp_payment_details_simple.php:23 html/contact_info.php:94
-msgid "Method"
-msgstr "Метод"
-
-#: html/affiliate_cp_payment_details_form.php:96
-#: html/affiliate_cp_payment_details_simple.php:40 html/contact_info.php:103
-msgid "PayPal E-Mail Address"
-msgstr "PayPal е-мейл адрес"
-
-#: html/affiliate_cp_payment_details_form.php:109
-#: html/affiliate_cp_payment_details_simple.php:53
-#: source/Util/AffiliateFormHelper.php:151
-msgid "Paper Check"
-msgstr "Хартиен чек"
-
-#: html/affiliate_cp_payment_details_form.php:115
-#: html/affiliate_cp_payment_details_simple.php:59
-msgid "Check Recipient"
-msgstr "Проверете получател"
-
-#: html/affiliate_cp_payment_details_form.php:134
-msgid "Mail to Address On Record"
-msgstr "Mail адрес на запис"
-
-#: html/affiliate_cp_payment_details_form.php:143
-#: html/affiliate_cp_payment_details_form.php:166
-#: html/affiliate_cp_payment_details_simple.php:76
-msgid "Recipient"
-msgstr "Получател"
-
-#: html/affiliate_cp_payment_details_form.php:170
-msgid "Address 1"
-msgstr "Адрес 1"
-
-#: html/affiliate_cp_payment_details_form.php:174
-msgid "Address 2"
-msgstr "Адрес 2"
-
-#: html/affiliate_cp_payment_details_form.php:178
-msgid "City"
-msgstr "Град"
-
-#: html/affiliate_cp_payment_details_form.php:182
-msgid "Country"
-msgstr "Страна"
-
-#: html/affiliate_cp_payment_details_form.php:192
-msgid "State"
-msgstr "Държава"
-
-#: html/affiliate_cp_payment_details_form.php:202
-msgid "Postal Code"
-msgstr "Пощенски код"
-
-#: html/affiliate_cp_payment_details_form.php:216
-#: html/affiliate_cp_payment_details_simple.php:99
-msgid "Submit Payment Details"
-msgstr "Подаване на данни за плащане"
-
-#: html/affiliate_creative_list.php:8
-msgid "The following creatives are available for publication."
-msgstr "Следните рекламни послания са на разположение за публикуване."
-
-#: html/affiliate_creative_list.php:13 html/transaction_table.php:41
-#: html/admin/creative_update_form.php:150 html/admin/manage_creatives.php:167
-#: html/admin/affiliate_detail.php:606 html/admin/creatives_detail.php:247
-#: html/admin/settings/settings_registration.php:436
-#: html/admin/settings/settings_messaging.php:86
-msgid "Type"
-msgstr "Тип"
-
-#: html/affiliate_creative_list.php:14 html/admin/creative_update_form.php:133
-#: html/admin/manage_creatives.php:168 html/admin/creatives_detail.php:243
-#: html/admin/settings/settings_messaging.php:85
-msgid "Name"
-msgstr "Име"
-
-#: html/affiliate_not_registered.php:1
-msgid "This is the affiliates section of this store. You are not currently an affiliate of this store.  If you wish to become one, please <a href=\"%s\"/>apply</a>."
-msgstr "Това е раздела филиали на този магазин. В момента не сте филиал на този магазин. Ако желаете да станете един, моля <a href=\"%s\"/>се прилагат</a>."
-
-#: html/affiliate_cp_payment_details_simple.php:69
-msgid "Check will be mailed to the following address:"
-msgstr "Проверка ще бъде изпратено на следния адрес:"
-
-#: html/affiliate_home.php:1
-msgid "Welcome to the affiliate control panel."
-msgstr "Добре дошли в контролния панел на филиал."
-
-#: html/affiliate_cp_agree_terms.php:3
-msgid "Affiliate Confirmation"
-msgstr "Партньорски потвърждение"
-
-#: html/affiliate_cp_agree_terms.php:5
-msgid "Contract Terms"
-msgstr "Договорни условия"
-
-#: html/affiliate_cp_agree_terms.php:21
-msgid "Terms & Conditions"
-msgstr "Правила & условия"
-
-#: html/affiliate_cp_agree_terms.php:27
-msgid "Agree to Terms"
-msgstr "Се съгласявате с условия"
-
-#: html/affiliate_register_form.php:15 html/contact_info.php:146
-msgid "* Required fields"
-msgstr "* Задължителни полета"
-
-#: html/affiliate_register_form.php:58
-msgid "You must agree to the terms."
-msgstr "Трябва да приемете условията."
-
-#: html/affiliate_register_form.php:62
-msgid "Submit Application"
-msgstr "Подаване на заявление"
-
-#: html/contact_info.php:13
-msgid "Changing the affiliate's email address will not change their WordPress Affiliate Manager login, which may be based on the email address they used when they signed up."
-msgstr "Смяна на партньора имейл адрес няма да се промени си WordPress партньорски мениджър вход, който може да се основава на имейл адрес, те използват, когато те се регистрирали."
-
-#: html/contact_info.php:15
-msgid "Changing your email address will not change your WordPress Affiliate Manager login, which may be based on the email address you used when you signed up."
-msgstr "Промяна на вашия имейл адрес няма да се промени вашия WordPress партньорски мениджър вход, който може да се основава на вашия имейл адрес сте използвали, когато сте се регистрирали."
-
-#: html/contact_info.php:26
-msgid "Contact Information"
-msgstr "Информация за контакт"
-
-#: html/contact_info.php:81
-msgid "There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s\">Cancel</a>"
-msgstr "Има чакаща промяна на вашата електронна поща до <code>%1$ s</code>. <a href=\"%2$s\"> Отмени</a>"
-
-#: html/contact_info.php:112
-msgid "Bounty Type *"
-msgstr "Глави тип *"
-
-#: html/contact_info.php:118 html/admin/affiliate_detail.php:426
-msgid "Percentage of Sales"
-msgstr "Процент от продажбите"
-
-#: html/contact_info.php:119 html/admin/affiliate_detail.php:427
-msgid "Fixed Amount per Sale"
-msgstr "Фиксирана сума на продажба"
-
-#: html/contact_info.php:130
-msgid "Bounty Rate (%s per Sale) *"
-msgstr "Дарът курс (%s за продажба) *"
-
-#: html/contact_info.php:130
-msgid "Bounty Rate (% of Sale) *"
-msgstr "Дарът ставка (% от продажба) *"
-
-#: html/contact_info.php:148
-msgid "+ Custom fields"
-msgstr "+ Потребителски полета"
-
-#: html/contact_info.php:151
-msgid "Save Changes"
-msgstr "Запиши промените"
-
-#: html/transaction_table.php:27
-#: html/admin/paypalpayments/select_affiliates.php:110
-msgid "Date Range:"
-msgstr "Диапазон от дати:"
-
-#: html/transaction_table.php:28
-msgid "From"
-msgstr "От"
-
-#: html/transaction_table.php:32 html/admin/affiliate_detail.php:282
-#: html/admin/affiliate_detail.php:313
-#: html/admin/paypalpayments/select_affiliates.php:115
-msgid "Apply"
-msgstr "Прилага"
-
-#: html/transaction_table.php:33
-#: html/admin/paypalpayments/select_affiliates.php:116
-msgid "Clear"
-msgstr "Ясно"
-
-#: html/transaction_table.php:40 html/admin/manage_creatives.php:164
-#: html/admin/creatives_detail.php:234
-msgid "ID"
-msgstr "ИД"
-
-#: html/transaction_table.php:42
-msgid "Date Occurred"
-msgstr "Датата е"
-
-#: html/transaction_table.php:43 html/admin/manage_creatives.php:165
-#: html/admin/affiliates_list.php:52 html/admin/creatives_detail.php:239
-msgid "Status"
-msgstr "Статус"
-
-#: html/transaction_table.php:44
-msgid "Description"
-msgstr "Описание"
-
-#: html/transaction_table.php:45
-msgid "Reference ID"
-msgstr "Референтен номер"
-
-#: html/transaction_table.php:46
-msgid "Amount"
-msgstr "Сума"
-
-#: html/transaction_table.php:73
-msgid "No records found for the date range selected."
-msgstr "Не са намерени за диапазон от дати избрани записи."
-
-#: html/admin/affiliate_new_success.php:2 html/admin/affiliate_new.php:3
-#: source/Plugin.php:79 source/Plugin.php:80
-msgid "New Affiliate"
-msgstr "Нов филиал"
-
-#: html/admin/affiliate_new_success.php:3
-msgid "New Affiliate has been created"
-msgstr "Нов филиал е бил създаден"
-
-#: html/admin/creative_update_form.php:103
-msgid "This list contains images from the media library. If you upload a new image it is added to the media library and you can reuse images on multiple creatives by selecting it from this list. If a new image file is added, it will be uploaded and will override the currently selected media library image for this creative link. However, the old image will still remain in the media library for future use."
-msgstr "Този списък съдържа снимки от медийната библиотека. Ако качвате нов имидж се добавя към медийната библиотека и можете да използвате повторно изображения на множество реклами като го изберете от този списък. Ако е добавен нов графичен файл, той ще бъде качен и ще замени текущо избраната Медия библиотека образ за тази творческа връзка. Обаче стар образ все още ще остане в медийната библиотека за бъдеща употреба."
-
-#: html/admin/creative_update_form.php:108
-#: html/admin/creative_update_success.php:4 html/admin/creatives_detail.php:216
-msgid "Edit"
-msgstr "Редактиране"
-
-#: html/admin/creative_update_form.php:108
-#: html/admin/creative_update_success.php:4
-msgid "New"
-msgstr " New"
-
-#: html/admin/creative_update_form.php:108
-#: html/admin/creative_update_success.php:4 html/admin/affiliate_detail.php:605
-msgid "Creative"
-msgstr "Творчески"
-
-#: html/admin/creative_update_form.php:126 html/admin/affiliate_detail.php:527
-#: html/admin/creatives_detail.php:227
-msgid "General"
-msgstr "Общи"
-
-#: html/admin/creative_update_form.php:143 html/admin/creatives_detail.php:251
-msgid "Landing Page"
-msgstr "Целевата страница"
-
-#: html/admin/creative_update_form.php:170
-msgid "Image Parameters"
-msgstr "Изображението параметри"
-
-#: html/admin/creative_update_form.php:176
-msgid "New Image File"
-msgstr "Нов файл с изображение"
-
-#: html/admin/creative_update_form.php:187
-msgid "Image File from Media Library"
-msgstr "Image файла от медийната библиотека"
-
-#: html/admin/creative_update_form.php:197
-msgid "Preview:"
-msgstr "Визуализация:"
-
-#: html/admin/creative_update_form.php:224
-msgid "Text Link Parameters"
-msgstr "Текст линк параметри"
-
-#: html/admin/creative_update_form.php:256
-msgid "Save Creative"
-msgstr "Запиши Creative"
-
-#: html/admin/affiliate_management_home.php:2
-msgid "Affiliate Management Control Panel"
-msgstr "Партньорски управление контролния панел"
-
-#: html/admin/affiliate_new.php:6
-msgid "As an Affiliate Manager, if you want to create an affiliate account rather than directing someone to the normal registration form, you can do that here. Once you fill out the required contact information, your new affiliate will receive an email with their username and password.  They will automatically be approved, but will still have to log in to agree to the terms &amp; conditions and set their preferred payment method."
-msgstr "Като филиал мениджър ако искате да създадете филиал сметка, а не режисура някой до нормалната регистрационния формуляр, можете да направите това тук. След като попълните необходимата информация за контакт, вашия нов филиал ще получите имейл с потребителското име и парола. Те автоматично ще бъдат одобрени, но все още ще трябва да влезете в системата да се споразумеят за условията и да зададете метода си на плащане."
-
-#: html/admin/creative_update_success.php:9
-msgid "Creative updated."
-msgstr "Creative актуализиран."
-
-#: html/admin/creative_update_success.php:11
-msgid "New creative created.  This creative is not yet active."
-msgstr "Нов творчески създадена. Този creative все още не е активен."
-
-#: html/admin/creative_update_success.php:16
-msgid "Return to Creatives"
-msgstr "Връщане към рекламните послания"
-
-#: html/admin/manage_creatives.php:64
-msgid "Yes, delete this creative"
-msgstr "Да, Изтрий този creative"
-
-#: html/admin/manage_creatives.php:90 html/admin/affiliate_detail.php:236
-#: html/admin/affiliate_detail.php:278 html/admin/affiliate_detail.php:309
-#: html/admin/creatives_detail.php:83 html/admin/creatives_detail.php:92
-msgid "Cancel"
-msgstr "Отказ"
-
-#: html/admin/manage_creatives.php:109 html/admin/affiliate_detail.php:454
-#: html/admin/creatives_detail.php:170
-msgid "ERROR:"
-msgstr "ГРЕШКА:"
-
-#: html/admin/manage_creatives.php:113
-msgid "Updating, please wait ..."
-msgstr "Актуализиране, моля, изчакайте..."
-
-#: html/admin/manage_creatives.php:120
-msgid "Delete Creative?"
-msgstr "Изтриване на Creative?"
-
-#: html/admin/manage_creatives.php:121
-msgid "This creative will be deleted. Are you sure?"
-msgstr "Този творчески ще бъдат изтрити. Сигурни ли сте?"
-
-#: html/admin/manage_creatives.php:126 source/Plugin.php:86
-msgid "My Creatives"
-msgstr "Моите послания"
-
-#: html/admin/manage_creatives.php:132 html/admin/affiliates_list.php:25
-msgid "Filter"
-msgstr "Филтър"
-
-#: html/admin/manage_creatives.php:137 html/admin/affiliates_list.php:30
-msgid "Status:"
-msgstr "Статус:"
-
-#: html/admin/manage_creatives.php:155
-msgid "Create New"
-msgstr "Създаване на нов"
-
-#: html/admin/manage_creatives.php:163 html/admin/creatives_detail.php:206
-msgid "Actions"
-msgstr "Действия"
-
-#: html/admin/manage_creatives.php:166
-msgid "Created"
-msgstr "Създаден"
-
-#: html/admin/manage_creatives.php:176 html/admin/affiliates_list.php:123
+#: ../boot-strap.php:42
+msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
+msgstr ""
+
+#: ../classes/ListAffiliatesTable.php:40 ../html/admin/manage_creatives.php:176
+#: ../html/admin/paypalpayments/pending_payments.php:23
 msgid "View"
 msgstr "Изглед"
 
-#: html/admin/manage_creatives.php:177
-msgid "Delete"
-msgstr "Изтриване"
+#: ../classes/ListAffiliatesTable.php:61 ../classes/ListClicksTable.php:55
+#: ../classes/ListCommissionTable.php:62
+#: ../source/Admin-menu/wpam-commission-menu.php:172
+msgid "Affiliate ID"
+msgstr ""
 
-#: html/admin/affiliates_list.php:19 source/Plugin.php:74
-msgid "My Affiliates"
-msgstr "Ми филиали"
+#: ../classes/ListAffiliatesTable.php:62 ../html/admin/creatives_detail.php:239
+#: ../html/admin/manage_creatives.php:165
+#: ../html/admin/paypalpayments/pending_payments.php:16
+#: ../html/admin/paypalpayments/view_payment_detail.php:61
+#: ../html/transaction_table.php:47
+msgid "Status"
+msgstr "Статус"
 
-#: html/admin/affiliates_list.php:41
-msgid "Only over payout minimum. (Balance >= %s)"
-msgstr "Само над минималната за изплащане. (Баланс >= %s)"
+#: ../classes/ListAffiliatesTable.php:63
+#: ../html/admin/paypalpayments/review_affiliates.php:58
+#: ../html/admin/paypalpayments/select_affiliates.php:129
+#: ../html/affiliate_cp_home.php:16 ../html/transaction_table.php:52
+msgid "Balance"
+msgstr "Баланс"
 
-#: html/admin/affiliates_list.php:49
-#: html/admin/paypalpayments/review_affiliates.php:53
-#: html/admin/paypalpayments/select_affiliates.php:124
-msgid "AID"
-msgstr "ПОМОЩ"
-
-#: html/admin/affiliates_list.php:58
+#: ../classes/ListAffiliatesTable.php:64
 msgid "Earnings"
 msgstr "Приходи"
 
-#: html/admin/affiliates_list.php:61
-#: html/admin/paypalpayments/review_affiliates.php:54
-#: html/admin/paypalpayments/select_affiliates.php:125
+#: ../classes/ListAffiliatesTable.php:65
+#: ../html/admin/paypalpayments/review_affiliates.php:54
+#: ../html/admin/paypalpayments/select_affiliates.php:125
 msgid "First Name"
 msgstr "Собствено име"
 
-#: html/admin/affiliates_list.php:64
-#: html/admin/paypalpayments/review_affiliates.php:55
-#: html/admin/paypalpayments/select_affiliates.php:126
+#: ../classes/ListAffiliatesTable.php:66
+#: ../html/admin/paypalpayments/review_affiliates.php:55
+#: ../html/admin/paypalpayments/select_affiliates.php:126
 msgid "Last Name"
 msgstr "Фамилно име"
 
-#: html/admin/affiliates_list.php:67
+#: ../classes/ListAffiliatesTable.php:67 ../source/Plugin.php:320
 msgid "Email"
 msgstr "Имейл"
 
-#: html/admin/affiliates_list.php:70
-#: html/admin/paypalpayments/review_affiliates.php:56
-#: html/admin/paypalpayments/select_affiliates.php:127
+#: ../classes/ListAffiliatesTable.php:68
+#: ../html/admin/paypalpayments/review_affiliates.php:56
+#: ../html/admin/paypalpayments/select_affiliates.php:127
 msgid "Company"
 msgstr "Компанията"
 
-#: html/admin/affiliates_list.php:73
+#: ../classes/ListAffiliatesTable.php:69
 msgid "Date Joined"
 msgstr "Присъедини дата"
 
-#: html/admin/affiliates_list.php:76
+#: ../classes/ListAffiliatesTable.php:70
 msgid "Website"
 msgstr "Уебсайт"
 
-#: html/admin/affiliate_detail.php:141
+#: ../classes/ListAffiliatesTable.php:97 ../classes/ListCommissionTable.php:91
+msgid "Error! You need to select multiple records to perform a bulk action!"
+msgstr ""
+
+#: ../classes/ListAffiliatesTable.php:115
+#: ../classes/ListCommissionTable.php:100
+msgid "Selected records deleted successfully!"
+msgstr ""
+
+#: ../classes/ListAffiliatesTable.php:139
+#: ../classes/ListCommissionTable.php:116
+msgid "Selected record deleted successfully!"
+msgstr ""
+
+#: ../classes/ListClicksTable.php:53 ../classes/ListCommissionTable.php:60
+msgid "Row ID"
+msgstr ""
+
+#: ../classes/ListClicksTable.php:54 ../classes/ListCommissionTable.php:61
+#: ../source/Admin-menu/wpam-commission-menu.php:202
+msgid "Date"
+msgstr ""
+
+#: ../classes/ListClicksTable.php:56
+msgid "Tracking Key"
+msgstr ""
+
+#: ../classes/ListClicksTable.php:57
+msgid "Referring URL"
+msgstr ""
+
+#: ../classes/ListClicksTable.php:58
+msgid "IP Address"
+msgstr ""
+
+#: ../classes/ListCommissionTable.php:63
+#: ../html/admin/paypalpayments/pending_payments.php:13
+#: ../html/admin/paypalpayments/view_payment_detail.php:20
+#: ../html/admin/paypalpayments/view_payment_detail.php:63
+#: ../html/transaction_table.php:50
+msgid "Amount"
+msgstr "Сума"
+
+#: ../classes/ListCommissionTable.php:64
+#: ../source/Admin-menu/wpam-commission-menu.php:190
+msgid "Transaction ID"
+msgstr ""
+
+#: ../classes/ListCommissionTable.php:65
+#: ../source/Admin-menu/wpam-commission-menu.php:196
+msgid "Buyer Email"
+msgstr ""
+
+#: ../classes/ListTable.php:77
+msgid "No items found."
+msgstr ""
+
+#: ../classes/ListTable.php:141
+msgid "Bulk Actions"
+msgstr ""
+
+#: ../classes/ListTable.php:151 ../html/admin/affiliate_detail.php:283
+#: ../html/admin/affiliate_detail.php:314
+#: ../html/admin/paypalpayments/select_affiliates.php:115
+#: ../html/transaction_table.php:35
+msgid "Apply"
+msgstr "Прилага"
+
+#: ../classes/ListTable.php:201
+msgid "Show all dates"
+msgstr ""
+
+#: ../classes/ListTable.php:220
+msgid "List View"
+msgstr ""
+
+#: ../classes/ListTable.php:221
+msgid "Excerpt View"
+msgstr ""
+
+#: ../classes/ListTable.php:237
+#, php-format
+msgid "%s pending"
+msgstr ""
+
+#: ../html/admin/affiliate_detail.php:141
+#, php-format
 msgid "YES, Block all applications from %s"
 msgstr "ДА, блокира всички приложения от %s"
 
-#: html/admin/affiliate_detail.php:150
+#: ../html/admin/affiliate_detail.php:150
 msgid "NO, They may re-apply"
 msgstr "НЕ, те могат да кандидатстват отново"
 
-#: html/admin/affiliate_detail.php:159
-msgid "Do you want to block all future applications from this email address, or allow them to sign up at a later date?"
-msgstr "Искате ли да блокирате всички бъдещи приложения от този имейл адрес, или да им позволи да се регистрирате по-късно?"
+#: ../html/admin/affiliate_detail.php:159
+msgid ""
+"Do you want to block all future applications from this email address, or "
+"allow them to sign up at a later date?"
+msgstr ""
+"Искате ли да блокирате всички бъдещи приложения от този имейл адрес, или да "
+"им позволи да се регистрирате по-късно?"
 
-#: html/admin/affiliate_detail.php:188
+#: ../html/admin/affiliate_detail.php:188
 msgid "Payout"
 msgstr "Изплащане"
 
-#: html/admin/affiliate_detail.php:248
+#: ../html/admin/affiliate_detail.php:219
+#: ../html/admin/affiliate_detail.php:236
+#: ../html/admin/creative_update_form.php:82
+#: ../html/admin/creatives_detail.php:114
+#: ../html/admin/creatives_detail.php:137 ../html/admin/manage_creatives.php:38
+#: ../html/affiliate_creative_detail.php:19
+#: ../source/Pages/Admin/MyAffiliatesPage.php:163
+#: ../source/Pages/Admin/NewAffiliatePage.php:86
+#: ../source/Pages/AffiliatesHome.php:528
+msgid "OK"
+msgstr "OK"
+
+#: ../html/admin/affiliate_detail.php:236
+#: ../html/admin/affiliate_detail.php:279
+#: ../html/admin/affiliate_detail.php:310 ../html/admin/creatives_detail.php:83
+#: ../html/admin/creatives_detail.php:92 ../html/admin/manage_creatives.php:90
+msgid "Cancel"
+msgstr "Отказ"
+
+#: ../html/admin/affiliate_detail.php:249
 msgid "Are you sure you wish to approve this affiliate?"
 msgstr "Сигурни ли сте, искате да одобри този филиал?"
 
-#: html/admin/affiliate_detail.php:249
+#: ../html/admin/affiliate_detail.php:250
 msgid "Yes, approve."
 msgstr "Да, одобри."
 
-#: html/admin/affiliate_detail.php:291
+#: ../html/admin/affiliate_detail.php:292
 msgid "Are you sure you wish to apply an adjustment of "
 msgstr "Наистина желаете да кандидатствате за корекция на"
 
-#: html/admin/affiliate_detail.php:291 html/admin/affiliate_detail.php:333
+#: ../html/admin/affiliate_detail.php:292
+#: ../html/admin/affiliate_detail.php:334
 msgid " to this account? The new balance will be "
 msgstr "този акаунт? Нов баланс ще бъде"
 
-#: html/admin/affiliate_detail.php:292 html/admin/affiliate_detail.php:334
+#: ../html/admin/affiliate_detail.php:293
+#: ../html/admin/affiliate_detail.php:335
 msgid "Yes, apply it."
 msgstr "Да, го прилагат."
 
-#: html/admin/affiliate_detail.php:333
+#: ../html/admin/affiliate_detail.php:334
 msgid "Are you sure you wish to apply a payout of "
 msgstr "Сигурни ли сте, който искате да приложите за изплащане на"
 
-#: html/admin/affiliate_detail.php:368
+#: ../html/admin/affiliate_detail.php:369
 msgid "Are you sure you wish to decline this affiliate?"
 msgstr "Сигурни ли сте, искате да откажете този филиал?"
 
-#: html/admin/affiliate_detail.php:368
+#: ../html/admin/affiliate_detail.php:369
 msgid "Yes, DECLINE."
 msgstr "Да, СПАД."
 
-#: html/admin/affiliate_detail.php:372
+#: ../html/admin/affiliate_detail.php:373
 msgid "Are you sure you wish to block this affiliate?"
 msgstr "Наистина ли искате да блокирате този филиал?"
 
-#: html/admin/affiliate_detail.php:372
+#: ../html/admin/affiliate_detail.php:373
 msgid "Yes, BLOCK."
 msgstr "Да, блок."
 
-#: html/admin/affiliate_detail.php:382
-msgid "Are you sure you wish to unblock this affiliate?<br>User will become DECLINED."
-msgstr "Сигурни ли сте, искате да деблокирате този филиал?<br>Потребителят ще стане отказа."
+#: ../html/admin/affiliate_detail.php:383
+msgid ""
+"Are you sure you wish to unblock this affiliate?<br>User will become "
+"DECLINED."
+msgstr ""
+"Сигурни ли сте, искате да деблокирате този филиал?<br>Потребителят ще стане "
+"отказа."
 
-#: html/admin/affiliate_detail.php:382
+#: ../html/admin/affiliate_detail.php:383
 msgid "Yes, UNBLOCK."
 msgstr "Да, ДЕБЛОКИРАНЕ."
 
-#: html/admin/affiliate_detail.php:393
+#: ../html/admin/affiliate_detail.php:394
 msgid "Are you sure you wish to activate this affiliate?"
 msgstr "Сигурни ли сте, искате да активирате този филиал?"
 
-#: html/admin/affiliate_detail.php:393 html/admin/creatives_detail.php:86
+#: ../html/admin/affiliate_detail.php:394 ../html/admin/creatives_detail.php:86
 msgid "Yes, ACTIVATE."
 msgstr "Да, активирате."
 
-#: html/admin/affiliate_detail.php:397
+#: ../html/admin/affiliate_detail.php:398
 msgid "Are you sure you wish to deactivate this affiliate?"
 msgstr "Наистина желаете да дезактивирате този филиал?"
 
-#: html/admin/affiliate_detail.php:397 html/admin/creatives_detail.php:95
+#: ../html/admin/affiliate_detail.php:398 ../html/admin/creatives_detail.php:95
 msgid "Yes, DEACTIVATE."
 msgstr "Да, ДЕЗАКТИВИРАНЕ."
 
-#: html/admin/affiliate_detail.php:416
+#: ../html/admin/affiliate_detail.php:417
 msgid "Approve Application"
 msgstr "Одобри молбата"
 
-#: html/admin/affiliate_detail.php:422 html/admin/affiliate_detail.php:563
+#: ../html/admin/affiliate_detail.php:423
+#: ../html/admin/affiliate_detail.php:567
+#: ../html/admin/settings/settings_general.php:157
 msgid "Bounty Type"
 msgstr "Глави тип"
 
-#: html/admin/affiliate_detail.php:433 source/Pages/AffiliatesHome.php:478
-#: source/Pages/Admin/NewAffiliatePage.php:81
-#: source/Pages/Admin/MyAffiliatesPage.php:220
+#: ../html/admin/affiliate_detail.php:427
+#: ../html/admin/settings/settings_general.php:161 ../html/contact_info.php:132
+msgid "Percentage of Sales"
+msgstr "Процент от продажбите"
+
+#: ../html/admin/affiliate_detail.php:428
+#: ../html/admin/settings/settings_general.php:162 ../html/contact_info.php:133
+msgid "Fixed Amount per Sale"
+msgstr "Фиксирана сума на продажба"
+
+#: ../html/admin/affiliate_detail.php:434
+#: ../html/admin/settings/settings_general.php:169
+#: ../source/Pages/Admin/MyAffiliatesPage.php:162
+#: ../source/Pages/Admin/NewAffiliatePage.php:85
+#: ../source/Pages/AffiliatesHome.php:527
+#, fuzzy, php-format
 msgid "Bounty Rate (% of Sale)"
 msgstr "Дарът ставка (% от продажба)"
 
-#: html/admin/affiliate_detail.php:445 html/admin/creatives_detail.php:161
+#: ../html/admin/affiliate_detail.php:446
+#: ../html/admin/creatives_detail.php:161
 msgid "Updating, please wait ... "
 msgstr "Актуализиране, моля, изчакайте..."
 
-#: html/admin/affiliate_detail.php:450 html/admin/creatives_detail.php:166
+#: ../html/admin/affiliate_detail.php:451
+#: ../html/admin/creatives_detail.php:166
 msgid "Are you sure?"
 msgstr "Сигурни ли сте?"
 
-#: html/admin/affiliate_detail.php:451
+#: ../html/admin/affiliate_detail.php:452
 msgid "approve"
 msgstr "одобрява"
 
-#: html/admin/affiliate_detail.php:453 html/admin/creatives_detail.php:169
+#: ../html/admin/affiliate_detail.php:454
+#: ../html/admin/creatives_detail.php:169
 msgid "Error"
 msgstr "Грешка"
 
-#: html/admin/affiliate_detail.php:457
+#: ../html/admin/affiliate_detail.php:455
+#: ../html/admin/creatives_detail.php:170
+#: ../html/admin/manage_creatives.php:109
+msgid "ERROR:"
+msgstr "ГРЕШКА:"
+
+#: ../html/admin/affiliate_detail.php:458
 msgid "Apply Adjustment "
 msgstr "Прилага корекция"
 
-#: html/admin/affiliate_detail.php:461
+#: ../html/admin/affiliate_detail.php:462
 msgid "Amount "
 msgstr "Сума"
 
-#: html/admin/affiliate_detail.php:467
+#: ../html/admin/affiliate_detail.php:468
 msgid "Description "
 msgstr "Описание"
 
-#: html/admin/affiliate_detail.php:476
+#: ../html/admin/affiliate_detail.php:477
 msgid "Apply Payout "
 msgstr "Прилага за изплащане"
 
-#: html/admin/affiliate_detail.php:480
+#: ../html/admin/affiliate_detail.php:481
 msgid "Payout Amount "
 msgstr "Сума за изплащане"
 
-#: html/admin/affiliate_detail.php:483
+#: ../html/admin/affiliate_detail.php:484
 msgid "Current balance"
 msgstr "Текущо салдо"
 
-#: html/admin/affiliate_detail.php:486
+#: ../html/admin/affiliate_detail.php:487
 msgid "Other amount"
 msgstr "Други сума"
 
-#: html/admin/affiliate_detail.php:495
+#: ../html/admin/affiliate_detail.php:496
 msgid "Affiliate:"
 msgstr "Филиал:"
 
-#: html/admin/affiliate_detail.php:501 source/Pages/AffiliatesHome.php:32
+#: ../html/admin/affiliate_detail.php:502 ../source/Pages/AffiliatesHome.php:32
 msgid "Overview"
 msgstr "Общ преглед"
 
-#: html/admin/affiliate_detail.php:502
+#: ../html/admin/affiliate_detail.php:503
 msgid "Account Finances"
 msgstr "Сметка финанси"
 
-#: html/admin/affiliate_detail.php:503
+#: ../html/admin/affiliate_detail.php:504
 msgid "Information"
 msgstr "Информация"
 
-#: html/admin/affiliate_detail.php:504
+#: ../html/admin/affiliate_detail.php:505
 msgid "Affiliate Links"
 msgstr "Партньорски връзки"
 
-#: html/admin/affiliate_detail.php:512
+#: ../html/admin/affiliate_detail.php:507
+#: ../html/admin/affiliate_detail.php:589 ../html/affiliate_cp_home.php:39
+#: ../html/affiliate_cp_home.php:73 ../source/Pages/AffiliatesHome.php:40
+msgid "Impressions"
+msgstr ""
+
+#: ../html/admin/affiliate_detail.php:516
 msgid "Approve"
 msgstr "Одобрява"
 
-#: html/admin/affiliate_detail.php:513
+#: ../html/admin/affiliate_detail.php:517
 msgid "Decline"
 msgstr "Спад"
 
-#: html/admin/affiliate_detail.php:515 html/admin/creatives_detail.php:212
+#: ../html/admin/affiliate_detail.php:519
+#: ../html/admin/creatives_detail.php:212
 msgid "Activate"
 msgstr "Активиране"
 
-#: html/admin/affiliate_detail.php:517
+#: ../html/admin/affiliate_detail.php:521
 msgid "Dectivate"
 msgstr "Дезактивиране"
 
-#: html/admin/affiliate_detail.php:519
+#: ../html/admin/affiliate_detail.php:523
 msgid "Unblock"
 msgstr "Деблокирай"
 
-#: html/admin/affiliate_detail.php:521
+#: ../html/admin/affiliate_detail.php:525
 msgid "Block"
 msgstr "Блок"
 
-#: html/admin/affiliate_detail.php:531
+#: ../html/admin/affiliate_detail.php:531
+#: ../html/admin/creative_update_form.php:131
+#: ../html/admin/creatives_detail.php:227
+#: ../html/admin/settings/settings.php:46
+msgid "General"
+msgstr "Общи"
+
+#: ../html/admin/affiliate_detail.php:535
 msgid "Date Applied"
 msgstr "Дата на прилагане"
 
-#: html/admin/affiliate_detail.php:532
+#: ../html/admin/affiliate_detail.php:536
 msgid "Affiliate Status"
 msgstr "Партньорска статут"
 
-#: html/admin/affiliate_detail.php:535
+#: ../html/admin/affiliate_detail.php:539
 msgid "Account Standing"
 msgstr "Сметка постоянни"
 
-#: html/admin/affiliate_detail.php:564
+#: ../html/admin/affiliate_detail.php:563
+#: ../html/affiliate_cp_payment_details_form.php:69
+#: ../html/affiliate_cp_payment_details_simple.php:13
+#: ../html/contact_info.php:88
+msgid "Payment Details"
+msgstr "Данни за плащане"
+
+#: ../html/admin/affiliate_detail.php:568
 msgid "Bounty Amount"
 msgstr "Дарът сума"
 
-#: html/admin/affiliate_detail.php:566
+#: ../html/admin/affiliate_detail.php:570
 msgid "Payment Method"
 msgstr "Начин на плащане"
 
-#: html/admin/affiliate_detail.php:568
+#: ../html/admin/affiliate_detail.php:572
 msgid "Paypal E-Mail"
 msgstr "PayPal е-мейл"
 
-#: html/admin/affiliate_detail.php:570
+#: ../html/admin/affiliate_detail.php:574
 msgid "Make Check Out To"
 msgstr "Направи проверка, за да"
 
-#: html/admin/affiliate_detail.php:583
+#: ../html/admin/affiliate_detail.php:584
+msgid "Statistics"
+msgstr ""
+
+#: ../html/admin/affiliate_detail.php:591
+msgid "Visits"
+msgstr ""
+
+#: ../html/admin/affiliate_detail.php:592
+msgid "Purchases"
+msgstr ""
+
+#: ../html/admin/affiliate_detail.php:603
 msgid "Balance:"
 msgstr "Баланс:"
 
-#: html/admin/affiliate_detail.php:586
+#: ../html/admin/affiliate_detail.php:606
 msgid "Earnings:"
 msgstr "Доходи:"
 
-#: html/admin/affiliate_detail.php:587
+#: ../html/admin/affiliate_detail.php:607
 msgid "Payments:"
 msgstr "Плащания:"
 
-#: html/admin/affiliate_detail.php:588
+#: ../html/admin/affiliate_detail.php:608
 msgid "Adjustments:"
 msgstr "Корекции:"
 
-#: html/admin/affiliate_detail.php:592
+#: ../html/admin/affiliate_detail.php:612
 msgid "Apply Payout"
 msgstr "Прилага за изплащане"
 
-#: html/admin/affiliate_detail.php:593
+#: ../html/admin/affiliate_detail.php:613
 msgid "Apply Manual Adjustment"
 msgstr "Прилага ръчно регулиране"
 
-#: html/admin/affiliate_detail.php:607
+#: ../html/admin/affiliate_detail.php:625
+#: ../html/admin/creative_update_form.php:108
+#: ../html/admin/creative_update_success.php:4 ../html/impressions_table.php:8
+msgid "Creative"
+msgstr "Творчески"
+
+#: ../html/admin/affiliate_detail.php:626
+#: ../html/admin/creative_update_form.php:155
+#: ../html/admin/creatives_detail.php:247
+#: ../html/admin/manage_creatives.php:167
+#: ../html/admin/settings/settings_messaging.php:86
+#: ../html/admin/settings/settings_registration.php:440
+#: ../html/affiliate_creative_list.php:72 ../html/transaction_table.php:45
+msgid "Type"
+msgstr "Тип"
+
+#: ../html/admin/affiliate_detail.php:627
 msgid "Link"
 msgstr "Връзка"
 
-#: html/admin/creatives_detail.php:10
-msgid "Unknown creative type."
-msgstr "Неизвестен творчески тип."
-
-#: html/admin/creatives_detail.php:143
-msgid "ACTIVATE"
-msgstr "АКТИВИРАНЕ"
-
-#: html/admin/creatives_detail.php:148
-msgid "DEACTIVATE"
-msgstr "ДЕЗАКТИВИРАНЕ"
-
-#: html/admin/creatives_detail.php:167
-msgid "Are you sure you wish to"
-msgstr "Наистина ли искате да"
-
-#: html/admin/creatives_detail.php:167
-msgid "this creative?"
-msgstr "тази реклама?"
-
-#: html/admin/creatives_detail.php:210
-msgid "Deactivate"
-msgstr "Дезактивиране"
-
-#: html/admin/settings/settings_payment.php:16
-msgid "Looking for help? Check out the bundled step-by-step guide for setting up PayPal Mass Pay:"
-msgstr "Търсят за помощ? Вижте пакетен стъпка по стъпка ръководство за създаване на PayPal масата плати:"
-
-#: html/admin/settings/settings_payment.php:20
-msgid "<a href=\"%s\">How to Setup PayPal Mass Pay</a> (PDF)"
-msgstr "<a href=\"%s\"> как да настройка на PayPal маса заплати</a> (PDF)"
-
-#: html/admin/settings/settings_payment.php:29
-msgid "Enable PayPal Mass Pay &#0153;<br /><small>NOTE: Requires a PayPal Premier or PayPal Business account</small>"
-msgstr "Разреши PayPal маса плащат &#0153; <br /> <small>Забележка: изисква PayPal Premier или PayPal Business акаунт</small>"
-
-#: html/admin/settings/settings_payment.php:32
-msgid "PayPal API Configuration"
-msgstr "PayPal API конфигурация"
-
-#: html/admin/settings/settings_payment.php:35
-msgid "API Username"
-msgstr "API име"
-
-#: html/admin/settings/settings_payment.php:39
-msgid "API Password"
-msgstr "API парола"
-
-#: html/admin/settings/settings_payment.php:43
-msgid "Signature"
-msgstr "Подпис"
-
-#: html/admin/settings/settings_payment.php:47
-msgid "API End Point"
-msgstr "API крайна точка"
-
-#: html/admin/settings/settings_payment.php:47
-msgid "WARNING: Set to LIVE if you don't know what this is for!"
-msgstr "Предупреждение: Задаване на живо, ако не знаете какво е това за!"
-
-#: html/admin/settings/settings_payment.php:50
-msgid "Live (%s)"
-msgstr "Живо (%s)"
-
-#: html/admin/settings/settings_payment.php:51
-msgid "Sandbox - TESTING (%s)"
-msgstr "Пясък - тестване (%s)"
-
-#: html/admin/settings/settings_registration.php:218
-msgid "Display name is required."
-msgstr "Показваното име е задължително."
-
-#: html/admin/settings/settings_registration.php:225
-msgid "Field name is required."
-msgstr "Името на поле е задължително."
-
-#: html/admin/settings/settings_registration.php:228
-msgid "Field name may only contains letters, numbers, underscores and hyphens, and must begin with a letter."
-msgstr "Полето име може да съдържа само букви, цифри, долни черти и тирета и трябва да започват с буква."
-
-#: html/admin/settings/settings_registration.php:235
-msgid "This field name is already in use."
-msgstr "Това поле име вече се използва."
-
-#: html/admin/settings/settings_registration.php:247
-msgid "Field length must be an non-0 positive number."
-msgstr "Дължина на поле трябва да бъде положително число-0."
-
-#: html/admin/settings/settings_registration.php:361
-msgid "Custom Field"
-msgstr "Поле по избор"
-
-#: html/admin/settings/settings_registration.php:368
-#: html/admin/settings/settings_registration.php:438
-msgid "Display Name"
-msgstr "Показвано име"
-
-#: html/admin/settings/settings_registration.php:375
-#: html/admin/settings/settings_registration.php:439
-msgid "Field Name"
-msgstr "Име на поле"
-
-#: html/admin/settings/settings_registration.php:382
-msgid "Field Type"
-msgstr "Тип на поле"
-
-#: html/admin/settings/settings_registration.php:385
-msgid "Text"
-msgstr "Текст"
-
-#: html/admin/settings/settings_registration.php:386
-msgid "Number"
-msgstr "Номер"
-
-#: html/admin/settings/settings_registration.php:387
-msgid "E-Mail Address"
-msgstr "Имейл адрес"
-
-#: html/admin/settings/settings_registration.php:388
-msgid "Phone Number"
-msgstr "Телефонен номер"
-
-#: html/admin/settings/settings_registration.php:389
-msgid "State Code (US)"
-msgstr "Код на държава (САЩ)"
-
-#: html/admin/settings/settings_registration.php:390
-msgid "Zip Code (US)"
-msgstr "Пощенски код (САЩ)"
-
-#: html/admin/settings/settings_registration.php:391
-msgid "Country Code"
-msgstr "Код на страната"
-
-#: html/admin/settings/settings_registration.php:392
-msgid "Social Security Number (US)"
-msgstr "Социално-осигурителен номер (САЩ)"
-
-#: html/admin/settings/settings_registration.php:399
-#: html/admin/settings/settings_registration.php:440
-msgid "Max Length"
-msgstr "Макс дължина"
-
-#: html/admin/settings/settings_registration.php:412
-msgid "Available Payout Methods"
-msgstr "Налични изплащане методи"
-
-#: html/admin/settings/settings_registration.php:422
-#: source/Data/Models/AffiliateModel.php:171
-msgid "PayPal"
-msgstr "PayPal"
-
-#: html/admin/settings/settings_registration.php:427
-msgid "Affiliate Register Fields"
-msgstr "Партньорски регистър полета"
-
-#: html/admin/settings/settings_registration.php:430
-msgid "Add Custom Field"
-msgstr "Добавяне на поле по избор"
-
-#: html/admin/settings/settings_registration.php:435
-msgid "Enabled"
-msgstr "Поддръжка"
-
-#: html/admin/settings/settings_registration.php:437
-msgid "Field Format"
-msgstr "Полето формат"
-
-#: html/admin/settings/settings_registration.php:441
-msgid "Required"
-msgstr "Изисква"
-
-#: html/admin/settings/settings_messaging.php:66
-msgid "These settings allow you to control text that is displayed to affiliates at various points in the affiliate plug-in, as well as e-mails that are sent."
-msgstr "Тези настройки ви позволяват да контрол текст, който се показва на филиали в различни точки в филиал на plug-in, както и имейли, които са изпратени."
-
-#: html/admin/settings/settings_messaging.php:71
-msgid "Use:"
-msgstr "Употреба:"
-
-#: html/admin/settings/settings_messaging.php:75
-msgid "Content:"
-msgstr "Съдържание:"
-
-#: html/admin/settings/settings_messaging.php:87
-msgid "Use"
-msgstr "Употребa"
-
-#: html/admin/settings/settings_messaging.php:88
-msgid "Content"
-msgstr "Съдържание"
-
-#: html/admin/settings/settings_messaging.php:118
-msgid "%s(More)"
-msgstr "%s(more)"
-
-#: html/admin/settings/settings_messaging.php:125
-msgid "* Some messages have been modified. These will <strong>NOT</strong> be saved to the database until you click 'Save Settings' button below."
-msgstr "* Някои съобщения са били променени. Те няма <strong>да</strong> бъдат записани в базата данни, докато щракнете върху \"Запиши настройките\" бутона по-долу."
-
-#: html/admin/paypalpayments/review_affiliates.php:10
-msgid "Yes, Submit to PayPal"
-msgstr "Да, представи на PayPal"
-
-#: html/admin/paypalpayments/review_affiliates.php:17
-msgid "No, Cancel"
-msgstr "Не, отказ"
-
-#: html/admin/paypalpayments/review_affiliates.php:39
-msgid "Submit to PayPal?"
-msgstr "Представи на PayPal?"
-
-#: html/admin/paypalpayments/review_affiliates.php:40
-msgid "Are you sure you wish to submit a mass payment to PayPal?"
-msgstr "Сигурни ли сте, искате да изпратете масово плащане PayPal?"
-
-#: html/admin/paypalpayments/review_affiliates.php:41
-msgid "Your PayPal account will be charged %s!"
-msgstr "PayPal сметката се начислява %s!"
-
-#: html/admin/paypalpayments/review_affiliates.php:45
-#: html/admin/paypalpayments/select_affiliates.php:102
-#: html/admin/paypalpayments/not_configured.php:2 source/Plugin.php:91
-#: source/Plugin.php:92
-msgid "PayPal Mass Pay"
-msgstr "Маса PayPal плащане"
-
-#: html/admin/paypalpayments/review_affiliates.php:46
-msgid "Review Your Mass Payment"
-msgstr "Прегледайте си масово плащане"
-
-#: html/admin/paypalpayments/review_affiliates.php:57
-#: html/admin/paypalpayments/select_affiliates.php:128
-msgid "PayPal E-Mail"
-msgstr "PayPal е-мейл"
-
-#: html/admin/paypalpayments/review_affiliates.php:60
-msgid "Payment"
-msgstr "Плащане"
-
-#: html/admin/paypalpayments/review_affiliates.php:62
-msgid "New Balance"
-msgstr "Нов баланс"
-
-#: html/admin/paypalpayments/review_affiliates.php:93
-msgid "Sub-Total"
-msgstr "Междинна обща сума"
-
-#: html/admin/paypalpayments/review_affiliates.php:97
-#: html/admin/paypalpayments/select_affiliates.php:175
-msgid "PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>"
-msgstr "PayPal такса <br /> <small>2%% на плащане, Макс %s1 на плащане</small>"
-
-#: html/admin/paypalpayments/review_affiliates.php:102
-#: html/admin/paypalpayments/select_affiliates.php:180
-msgid "Estimated Total"
-msgstr "Изчислено всичко"
-
-#: html/admin/paypalpayments/review_affiliates.php:106
-msgid "Submit Mass Payment to PayPal"
-msgstr "Изпратете масово плащане PayPal"
-
-#: html/admin/paypalpayments/select_affiliates.php:103
-msgid "Select Affiliates to Pay"
-msgstr "Изберете филиали за плащане"
-
-#: html/admin/paypalpayments/select_affiliates.php:106
-msgid "Not showing %s affiliates that do not have a PayPal account on file."
-msgstr "Не показва %s филиали, които не разполагат с PayPal сметка на файл."
-
-#: html/admin/paypalpayments/select_affiliates.php:111
-msgid "from"
-msgstr "от"
-
-#: html/admin/paypalpayments/select_affiliates.php:113
-msgid "to"
-msgstr "да"
-
-#: html/admin/paypalpayments/select_affiliates.php:130
-msgid "Payment Amount"
-msgstr "Сума за плащане"
-
-#: html/admin/paypalpayments/select_affiliates.php:185
-msgid "Continue with these payments"
-msgstr "Продължи с тези плащания"
-
-#: html/admin/paypalpayments/not_configured.php:3
-msgid "Not configured"
-msgstr "Не е конфигуриран"
-
-#: html/admin/paypalpayments/not_configured.php:5
-msgid "You have not configured the Affiliate Manager with your PayPal account information. You can do so in the <a href=\"%s\">Payment Settings page</a>."
-msgstr "Не сте конфигурирали партньорски мениджър с информацията за вашия PayPal акаунт. Можете да го направите в <a href=\"%s\"> страницата Настройки за плащания</a>."
-
-#: source/Options.php:27
-msgid "Invalid PaPpal API value"
-msgstr "Невалидна стойност на PayPal API"
-
-#: source/MessageHelper.php:29
-msgid "Attempt to load invalid message of name '%s'"
-msgstr "Опит да се зареди невалидно съобщение на име '%s'"
-
-#: source/Plugin.php:67
-msgid "Affiliate Management"
-msgstr "Партньорски управление"
-
-#: source/Plugin.php:68 source/Plugin.php:73 source/Plugin.php:293
-#: source/Plugin.php:307
-msgid "Affiliates"
-msgstr "Филиали"
-
-#: source/Plugin.php:85 source/Pages/AffiliatesHome.php:35
-msgid "Creatives"
-msgstr "Рекламни послания"
-
-#: source/Plugin.php:97 source/Plugin.php:98
-msgid "Settings"
-msgstr "Настройки"
-
-#: source/Plugin.php:105
-msgid "Store Affiliates"
-msgstr "Магазин филиали"
-
-#: source/Plugin.php:106
-msgid "Register"
-msgstr "Регистрирайте се"
-
-#: source/Plugin.php:247
-msgid "Become an affiliate"
-msgstr "Станете партньор"
-
-#: source/Plugin.php:248
-msgid "Are you interested in earning money by directing visitors to our site?"
-msgstr "Интересувате ли се от печелите пари чрез насочване на посетителите на нашия сайт?"
-
-#: source/Plugin.php:250
-msgid "Sign up"
-msgstr "Регистрирайте се"
-
-#: source/Plugin.php:250
-msgid " to become an affiliate today!"
-msgstr "за да стане филиал днес!"
-
-#: source/Plugin.php:308
-msgid "Be An Affiliate"
-msgstr "Бъде филиал"
-
-#: source/Plugin.php:434
-msgid "WP Affiliate Manager was unable to load your currency from your WPLANG setting: %s"
-msgstr "WP партньорски мениджър не успя да зареди си валута от настройката на WPLANG: %s"
-
-#: source/Plugin.php:435
-msgid "Your currency will be displayed as %s and PayPal payments will be paid in %s"
-msgstr "Вашата валута ще бъде показан като %s и PayPal плащания ще бъдат платени в %s"
-
-#: source/Plugin.php:443
-msgid "WP Affiliate Manager has been updated and needs to be deactivated and re-activated to perform upgrades in order work"
-msgstr "WP партньорски мениджър е актуализиран и трябва да бъде деактивирана и активирана отново за извършване на подобрения в работа"
-
-#: source/Plugin.php:483
-msgid "Invalid JSON handler."
-msgstr "Невалиден манипулатор на JSON."
-
-#: source/display_functions.php:11
-msgid "Affiliate has applied, but is waiting on your decision."
-msgstr "Филиал е приложен, но е в очакване на вашето решение."
-
-#: source/display_functions.php:12
-msgid "Affiliate has been approved, but has not accepted terms."
-msgstr "Филиал е бил одобрен, но не прие условията."
-
-#: source/display_functions.php:13
-msgid "Affiliate is active, and will receive credit for leads."
-msgstr "Филиал е активен и ще получите кредит за потенциални клиенти."
-
-#: source/display_functions.php:14
-msgid "Affiliate has accepted terms and provided payment details.<br /> If the details look good, you should activate this affiliate so they can begin sending traffic."
-msgstr "Филиал е приел условията и предоставена плащане подробности. <br /> Ако детайлите изглеждат добре, трябва да активирате този филиал, така че те могат да започне изпращане на трафик."
-
-#: source/display_functions.php:15
-msgid "Affiliate has been disabled."
-msgstr "Филиал е дезактивирана."
-
-#: source/display_functions.php:16
-msgid "Affiliate was declined."
-msgstr "Филиал е отклонено."
-
-#: source/display_functions.php:17
-msgid "Affiliate was blocked and cannot re-apply."
-msgstr "Филиал е блокиран и не може да кандидатстват отново."
-
-#: source/display_functions.php:23
-msgid "%s per sale"
-msgstr "%s за продажба"
-
-#: source/display_functions.php:154
-msgid "Applied"
-msgstr "Прилага"
-
-#: source/display_functions.php:156
-msgid "Declined"
-msgstr "Намаля"
-
-#: source/display_functions.php:158
-msgid "Approved"
-msgstr "Одобрени"
-
-#: source/display_functions.php:160 source/Pages/Admin/MyCreativesPage.php:58
+#: ../html/admin/affiliate_management_home.php:2
+msgid "Affiliate Management Control Panel"
+msgstr "Партньорски управление контролния панел"
+
+#: ../html/admin/affiliate_new.php:3 ../html/admin/affiliate_new_success.php:2
+#: ../source/Plugin.php:89 ../source/Plugin.php:90
+msgid "New Affiliate"
+msgstr "Нов филиал"
+
+#: ../html/admin/affiliate_new.php:6
+msgid ""
+"As an Affiliate Manager, if you want to create an affiliate account rather "
+"than directing someone to the normal registration form, you can do that "
+"here. Once you fill out the required contact information, your new affiliate "
+"will receive an email with their username and password.  They will "
+"automatically be approved, but will still have to log in to agree to the "
+"terms &amp; conditions and set their preferred payment method."
+msgstr ""
+"Като филиал мениджър ако искате да създадете филиал сметка, а не режисура "
+"някой до нормалната регистрационния формуляр, можете да направите това тук. "
+"След като попълните необходимата информация за контакт, вашия нов филиал ще "
+"получите имейл с потребителското име и парола. Те автоматично ще бъдат "
+"одобрени, но все още ще трябва да влезете в системата да се споразумеят за "
+"условията и да зададете метода си на плащане."
+
+#: ../html/admin/affiliate_new_success.php:3
+msgid "New Affiliate has been created"
+msgstr "Нов филиал е бил създаден"
+
+#: ../html/admin/affiliates_list.php:5 ../source/Plugin.php:84
+msgid "My Affiliates"
+msgstr "Ми филиали"
+
+#: ../html/admin/affiliates_list.php:8
+msgid "All Active"
+msgstr "Всички активни"
+
+#: ../html/admin/affiliates_list.php:9
+msgid "All (Including Closed)"
+msgstr "Всички (включително затворен)"
+
+#: ../html/admin/affiliates_list.php:10
+#: ../source/Pages/Admin/MyCreativesPage.php:58
+#: ../source/display_functions.php:166
 msgid "Active"
 msgstr "Активни"
 
-#: source/display_functions.php:162 source/Pages/Admin/MyCreativesPage.php:59
-msgid "Inactive"
-msgstr "Неактивни"
+#: ../html/admin/affiliates_list.php:11 ../source/display_functions.php:160
+msgid "Applied"
+msgstr "Прилага"
 
-#: source/display_functions.php:166
+#: ../html/admin/affiliates_list.php:12 ../source/display_functions.php:164
+msgid "Approved"
+msgstr "Одобрени"
+
+#: ../html/admin/affiliates_list.php:13
+#: ../html/affiliate_cp_payment_details_confirmed.php:2
+#: ../source/display_functions.php:170
+msgid "Confirmed"
+msgstr "Потвърди"
+
+#: ../html/admin/affiliates_list.php:14 ../source/display_functions.php:162
+msgid "Declined"
+msgstr "Намаля"
+
+#: ../html/admin/affiliates_list.php:15 ../source/display_functions.php:172
 msgid "Blocked"
 msgstr "Блокирани"
 
-#: source/PayPal/Service.php:74
+#: ../html/admin/affiliates_list.php:16
+#: ../source/Pages/Admin/MyCreativesPage.php:59
+#: ../source/display_functions.php:168
+msgid "Inactive"
+msgstr "Неактивни"
+
+#: ../html/admin/creative_update_form.php:103
+msgid ""
+"This list contains images from the media library. If you upload a new image "
+"it is added to the media library and you can reuse images on multiple "
+"creatives by selecting it from this list. If a new image file is added, it "
+"will be uploaded and will override the currently selected media library "
+"image for this creative link. However, the old image will still remain in "
+"the media library for future use."
+msgstr ""
+"Този списък съдържа снимки от медийната библиотека. Ако качвате нов имидж се "
+"добавя към медийната библиотека и можете да използвате повторно изображения "
+"на множество реклами като го изберете от този списък. Ако е добавен нов "
+"графичен файл, той ще бъде качен и ще замени текущо избраната Медия "
+"библиотека образ за тази творческа връзка. Обаче стар образ все още ще "
+"остане в медийната библиотека за бъдеща употреба."
+
+#: ../html/admin/creative_update_form.php:108
+#: ../html/admin/creative_update_success.php:4
+#: ../html/admin/creatives_detail.php:216
+msgid "Edit"
+msgstr "Редактиране"
+
+#: ../html/admin/creative_update_form.php:108
+#: ../html/admin/creative_update_success.php:4
+msgid "New"
+msgstr " New"
+
+#: ../html/admin/creative_update_form.php:138
+#: ../html/admin/creatives_detail.php:243
+#: ../html/admin/manage_creatives.php:168
+#: ../html/admin/settings/settings_messaging.php:85
+#: ../html/affiliate_creative_list.php:73
+msgid "Name"
+msgstr "Име"
+
+#: ../html/admin/creative_update_form.php:148
+#: ../html/admin/creatives_detail.php:259
+msgid "Landing Page"
+msgstr "Целевата страница"
+
+#: ../html/admin/creative_update_form.php:175
+msgid "Image Parameters"
+msgstr "Изображението параметри"
+
+#: ../html/admin/creative_update_form.php:181
+msgid "New Image File"
+msgstr "Нов файл с изображение"
+
+#: ../html/admin/creative_update_form.php:192
+msgid "Image File from Media Library"
+msgstr "Image файла от медийната библиотека"
+
+#: ../html/admin/creative_update_form.php:202
+msgid "Preview:"
+msgstr "Визуализация:"
+
+#: ../html/admin/creative_update_form.php:213
+#: ../html/admin/creative_update_form.php:248
+#: ../html/admin/creatives_detail.php:280
+#: ../html/admin/creatives_detail.php:303
+#: ../html/affiliate_creative_detail.php:65
+#: ../html/affiliate_creative_detail.php:88
+msgid "Alt Text"
+msgstr "ALT текст"
+
+#: ../html/admin/creative_update_form.php:229
+msgid "Text Link Parameters"
+msgstr "Текст линк параметри"
+
+#: ../html/admin/creative_update_form.php:237
+#: ../html/admin/creatives_detail.php:276
+#: ../html/affiliate_creative_detail.php:61
+msgid "Link Text"
+msgstr "Текст за връзка"
+
+#: ../html/admin/creative_update_form.php:261
+msgid "Save Creative"
+msgstr "Запиши Creative"
+
+#: ../html/admin/creative_update_success.php:9
+msgid "Creative updated."
+msgstr "Creative актуализиран."
+
+#: ../html/admin/creative_update_success.php:11
+msgid "New creative created.  This creative is not yet active."
+msgstr "Нов творчески създадена. Този creative все още не е активен."
+
+#: ../html/admin/creative_update_success.php:16
+msgid "Return to Creatives"
+msgstr "Връщане към рекламните послания"
+
+#: ../html/admin/creatives_detail.php:8 ../html/admin/creatives_detail.php:297
+#: ../html/affiliate_creative_detail.php:82
+msgid "Image"
+msgstr "Изображение"
+
+#: ../html/admin/creatives_detail.php:9
+msgid "Text Link"
+msgstr "Текстова връзка"
+
+#: ../html/admin/creatives_detail.php:10
+msgid "Unknown creative type."
+msgstr "Неизвестен творчески тип."
+
+#: ../html/admin/creatives_detail.php:143
+msgid "ACTIVATE"
+msgstr "АКТИВИРАНЕ"
+
+#: ../html/admin/creatives_detail.php:148
+msgid "DEACTIVATE"
+msgstr "ДЕЗАКТИВИРАНЕ"
+
+#: ../html/admin/creatives_detail.php:167
+msgid "Are you sure you wish to"
+msgstr "Наистина ли искате да"
+
+#: ../html/admin/creatives_detail.php:167
+msgid "this creative?"
+msgstr "тази реклама?"
+
+#: ../html/admin/creatives_detail.php:174
+#: ../html/admin/creatives_detail.php:215
+#: ../html/affiliate_creative_detail.php:32
+#: ../html/affiliate_creative_detail.php:45
+msgid "Preview"
+msgstr "Визуализация"
+
+#: ../html/admin/creatives_detail.php:194
+#: ../html/affiliate_creative_detail.php:43
+msgid "Creative:"
+msgstr "Творчески:"
+
+#: ../html/admin/creatives_detail.php:206
+#: ../html/admin/manage_creatives.php:163
+msgid "Actions"
+msgstr "Действия"
+
+#: ../html/admin/creatives_detail.php:210
+msgid "Deactivate"
+msgstr "Дезактивиране"
+
+#: ../html/admin/creatives_detail.php:234
+#: ../html/admin/manage_creatives.php:164
+#: ../html/admin/paypalpayments/pending_payments.php:10
+#: ../html/admin/paypalpayments/view_payment_detail.php:57
+#: ../html/impressions_table.php:6 ../html/transaction_table.php:44
+msgid "ID"
+msgstr "ИД"
+
+#: ../html/admin/creatives_detail.php:271
+#: ../html/affiliate_creative_detail.php:56
+msgid "Text Link Properties"
+msgstr "Текстът връзка свойства"
+
+#: ../html/admin/creatives_detail.php:292
+#: ../html/affiliate_creative_detail.php:77
+msgid "Image Properties"
+msgstr "Свойства на изображението"
+
+#: ../html/admin/manage_creatives.php:64
+msgid "Yes, delete this creative"
+msgstr "Да, Изтрий този creative"
+
+#: ../html/admin/manage_creatives.php:113
+msgid "Updating, please wait ..."
+msgstr "Актуализиране, моля, изчакайте..."
+
+#: ../html/admin/manage_creatives.php:120
+msgid "Delete Creative?"
+msgstr "Изтриване на Creative?"
+
+#: ../html/admin/manage_creatives.php:121
+msgid "This creative will be deleted. Are you sure?"
+msgstr "Този творчески ще бъдат изтрити. Сигурни ли сте?"
+
+#: ../html/admin/manage_creatives.php:126 ../source/Plugin.php:96
+msgid "My Creatives"
+msgstr "Моите послания"
+
+#: ../html/admin/manage_creatives.php:132
+msgid "Filter"
+msgstr "Филтър"
+
+#: ../html/admin/manage_creatives.php:137
+msgid "Status:"
+msgstr "Статус:"
+
+#: ../html/admin/manage_creatives.php:155
+msgid "Create New"
+msgstr "Създаване на нов"
+
+#: ../html/admin/manage_creatives.php:166
+msgid "Created"
+msgstr "Създаден"
+
+#: ../html/admin/manage_creatives.php:177
+msgid "Delete"
+msgstr "Изтриване"
+
+#: ../html/admin/paypalpayments/home.php:17
+msgid "New Mass Payment"
+msgstr ""
+
+#: ../html/admin/paypalpayments/home.php:20
+msgid "View Previous Mass Payments"
+msgstr ""
+
+#: ../html/admin/paypalpayments/not_configured.php:2
+#: ../html/admin/paypalpayments/pending_payments.php:3
+#: ../html/admin/paypalpayments/review_affiliates.php:45
+#: ../html/admin/paypalpayments/select_affiliates.php:102
+#: ../html/admin/paypalpayments/view_payment_detail.php:7
+#: ../source/Plugin.php:101 ../source/Plugin.php:102
+msgid "PayPal Mass Pay"
+msgstr "Маса PayPal плащане"
+
+#: ../html/admin/paypalpayments/not_configured.php:3
+msgid "Not configured"
+msgstr "Не е конфигуриран"
+
+#: ../html/admin/paypalpayments/not_configured.php:5
+#, php-format
+msgid ""
+"You have not configured the Affiliate Manager with your PayPal account "
+"information. You can do so in the <a href=\"%s\">Payment Settings page</a>."
+msgstr ""
+"Не сте конфигурирали партньорски мениджър с информацията за вашия PayPal "
+"акаунт. Можете да го направите в <a href=\"%s\"> страницата Настройки за "
+"плащания</a>."
+
+#: ../html/admin/paypalpayments/pending_payments.php:4
+msgid "View Existing Payments"
+msgstr ""
+
+#: ../html/admin/paypalpayments/pending_payments.php:11
+msgid "Date Posted"
+msgstr ""
+
+#: ../html/admin/paypalpayments/pending_payments.php:12
+msgid "PayPal ID"
+msgstr ""
+
+#: ../html/admin/paypalpayments/pending_payments.php:14
+#: ../html/admin/paypalpayments/view_payment_detail.php:21
+msgid "Fee"
+msgstr ""
+
+#: ../html/admin/paypalpayments/pending_payments.php:15
+msgid "Total"
+msgstr ""
+
+#: ../html/admin/paypalpayments/pending_payments.php:36
+msgid "(No Mass Payments on Record)"
+msgstr ""
+
+#: ../html/admin/paypalpayments/reconcile_file_review.php:66
+#: ../html/admin/paypalpayments/reconcile_manual.php:81
+msgid "Reconcile Mass Payment"
+msgstr ""
+
+#: ../html/admin/paypalpayments/reconcile_with_file.php:54
+msgid "Reconcile with this file"
+msgstr ""
+
+#: ../html/admin/paypalpayments/review_affiliates.php:10
+msgid "Yes, Submit to PayPal"
+msgstr "Да, представи на PayPal"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:17
+msgid "No, Cancel"
+msgstr "Не, отказ"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:39
+msgid "Submit to PayPal?"
+msgstr "Представи на PayPal?"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:40
+msgid "Are you sure you wish to submit a mass payment to PayPal?"
+msgstr "Сигурни ли сте, искате да изпратете масово плащане PayPal?"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:41
+#, php-format
+msgid "Your PayPal account will be charged %s!"
+msgstr "PayPal сметката се начислява %s!"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:46
+msgid "Review Your Mass Payment"
+msgstr "Прегледайте си масово плащане"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:53
+#: ../html/admin/paypalpayments/select_affiliates.php:124
+msgid "AID"
+msgstr "ПОМОЩ"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:57
+#: ../html/admin/paypalpayments/select_affiliates.php:128
+#: ../html/admin/paypalpayments/view_payment_detail.php:60
+msgid "PayPal E-Mail"
+msgstr "PayPal е-мейл"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:60
+#: ../html/admin/settings/settings.php:49
+msgid "Payment"
+msgstr "Плащане"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:62
+msgid "New Balance"
+msgstr "Нов баланс"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:93
+msgid "Sub-Total"
+msgstr "Междинна обща сума"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:97
+#: ../html/admin/paypalpayments/select_affiliates.php:175
+#, php-format
+msgid "PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>"
+msgstr "PayPal такса <br /> <small>2%% на плащане, Макс %s1 на плащане</small>"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:102
+#: ../html/admin/paypalpayments/select_affiliates.php:180
+msgid "Estimated Total"
+msgstr "Изчислено всичко"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:106
+msgid "Submit Mass Payment to PayPal"
+msgstr "Изпратете масово плащане PayPal"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:103
+msgid "Select Affiliates to Pay"
+msgstr "Изберете филиали за плащане"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:106
+#, php-format
+msgid "Not showing %s affiliates that do not have a PayPal account on file."
+msgstr "Не показва %s филиали, които не разполагат с PayPal сметка на файл."
+
+#: ../html/admin/paypalpayments/select_affiliates.php:110
+#: ../html/transaction_table.php:27
+msgid "Date Range:"
+msgstr "Диапазон от дати:"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:111
+msgid "from"
+msgstr "от"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:113
+msgid "to"
+msgstr "да"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:116
+#: ../html/transaction_table.php:36
+msgid "Clear"
+msgstr "Ясно"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:130
+msgid "Payment Amount"
+msgstr "Сума за плащане"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:185
+msgid "Continue with these payments"
+msgstr "Продължи с тези плащания"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:8
+msgid "Payment Detail"
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:16
+msgid "Database ID"
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:17
+#: ../html/admin/paypalpayments/view_payment_detail.php:58
+#: ../html/impressions_table.php:7 ../html/transaction_table.php:46
+msgid "Date Occurred"
+msgstr "Датата е"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:18
+msgid "PayPal Timestamp"
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:19
+msgid "PayPal Correlation ID"
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:22
+msgid "Total Amount"
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:26
+msgid "Reconciliation"
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:29
+msgid "Manually reconcile payments ... "
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:30
+msgid "Reconcile using PayPal Mass Payment results file ... "
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:37
+msgid "Errors"
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:40
+msgid "Code:"
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:41
+msgid "Message:"
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:42
+msgid "Severity:"
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:52
+msgid "Associated Transactions"
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:59
+msgid "Affiliate"
+msgstr ""
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:62
+#: ../html/transaction_table.php:48
+msgid "Description"
+msgstr "Описание"
+
+#: ../html/admin/settings/settings.php:47
+msgid "Affiliate Registration"
+msgstr ""
+
+#: ../html/admin/settings/settings.php:48
+msgid "Messaging"
+msgstr ""
+
+#: ../html/admin/settings/settings.php:50
+msgid "Pages/Forms"
+msgstr ""
+
+#: ../html/admin/settings/settings.php:51
+msgid "Advanced Settings"
+msgstr ""
+
+#: ../html/admin/settings/settings.php:122
+msgid "Save Settings"
+msgstr ""
+
+#: ../html/admin/settings/settings_advanced.php:8
+msgid "Default Landing Page"
+msgstr ""
+
+#: ../html/admin/settings/settings_advanced.php:13
+#, php-format
+msgid ""
+"Your default landing page URL is <code>%s</code>. If you want to change to a "
+"different URL you can specify it here."
+msgstr ""
+
+#: ../html/admin/settings/settings_aff_pages.php:5
+msgid "Home Page"
+msgstr ""
+
+#: ../html/admin/settings/settings_aff_pages.php:10
+msgid "This is the URL of your Affiliate Home page"
+msgstr ""
+
+#: ../html/admin/settings/settings_aff_pages.php:16
+msgid "Registration Page"
+msgstr ""
+
+#: ../html/admin/settings/settings_aff_pages.php:21
+msgid "This is the URL of your Affiliate Registration page"
+msgstr ""
+
+#: ../html/admin/settings/settings_aff_pages.php:27
+msgid "Login Page"
+msgstr ""
+
+#: ../html/admin/settings/settings_aff_pages.php:32
+msgid "This is the URL of your Affiliate Login page"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:103
+msgid "Minimum Payout Amount"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:112
+msgid "Cookie Duration (days)"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:117
+#, php-format
+msgid "<a target=\"_blank\" href=\"%s\">Read more on cookie duration here</a>"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:122
+msgid "Email name"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:127
+#: ../html/admin/settings/settings_general.php:137
+msgid "(Leave blank to use WordPress default)"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:132
+msgid "Email address"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:144
+msgid "Automatically approve a new affiliate"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:178
+msgid "Currency Symbol"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:187
+msgid "Currency Code"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:197
+msgid "Do Not Record Zero Amount Commission"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:210
+msgid "Enable Impressions"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:219
+msgid "Enable Debug"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:222
+msgid ""
+"If checked, debug output will be written to log files. This is useful for "
+"troubleshooting post payment failures."
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:223
+msgid ""
+"You can check the debug log file by clicking on the link below (The log file "
+"can be viewed using any text editor):"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:227
+msgid "Reset Debug Log file"
+msgstr ""
+
+#: ../html/admin/settings/settings_general.php:228
+msgid "Use it to reset the affiliate manager plugin's log file."
+msgstr ""
+
+#: ../html/admin/settings/settings_messaging.php:66
+msgid ""
+"These settings allow you to control text that is displayed to affiliates at "
+"various points in the affiliate plug-in, as well as e-mails that are sent."
+msgstr ""
+"Тези настройки ви позволяват да контрол текст, който се показва на филиали в "
+"различни точки в филиал на plug-in, както и имейли, които са изпратени."
+
+#: ../html/admin/settings/settings_messaging.php:71
+msgid "Use:"
+msgstr "Употреба:"
+
+#: ../html/admin/settings/settings_messaging.php:75
+msgid "Content:"
+msgstr "Съдържание:"
+
+#: ../html/admin/settings/settings_messaging.php:87
+msgid "Use"
+msgstr "Употребa"
+
+#: ../html/admin/settings/settings_messaging.php:88
+msgid "Content"
+msgstr "Съдържание"
+
+#: ../html/admin/settings/settings_messaging.php:118
+#, php-format
+msgid "%s(More)"
+msgstr "%s(more)"
+
+#: ../html/admin/settings/settings_messaging.php:125
+msgid ""
+"* Some messages have been modified. These will <strong>NOT</strong> be saved "
+"to the database until you click 'Save Settings' button below."
+msgstr ""
+"* Някои съобщения са били променени. Те няма <strong>да</strong> бъдат "
+"записани в базата данни, докато щракнете върху \"Запиши настройките\" бутона "
+"по-долу."
+
+#: ../html/admin/settings/settings_payment.php:16
+msgid ""
+"Looking for help? Check out the bundled step-by-step guide for setting up "
+"PayPal Mass Pay:"
+msgstr ""
+"Търсят за помощ? Вижте пакетен стъпка по стъпка ръководство за създаване на "
+"PayPal масата плати:"
+
+#: ../html/admin/settings/settings_payment.php:20
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">How to Setup PayPal Mass Pay</a> (PDF)"
+msgstr ""
+
+#: ../html/admin/settings/settings_payment.php:29
+msgid ""
+"Enable PayPal Mass Pay &#0153;<br /><small>NOTE: Requires a PayPal Premier "
+"or PayPal Business account</small>"
+msgstr ""
+"Разреши PayPal маса плащат &#0153; <br /> <small>Забележка: изисква PayPal "
+"Premier или PayPal Business акаунт</small>"
+
+#: ../html/admin/settings/settings_payment.php:32
+msgid "PayPal API Configuration"
+msgstr "PayPal API конфигурация"
+
+#: ../html/admin/settings/settings_payment.php:35
+msgid "API Username"
+msgstr "API име"
+
+#: ../html/admin/settings/settings_payment.php:39
+msgid "API Password"
+msgstr "API парола"
+
+#: ../html/admin/settings/settings_payment.php:43
+msgid "Signature"
+msgstr "Подпис"
+
+#: ../html/admin/settings/settings_payment.php:47
+msgid "API End Point"
+msgstr "API крайна точка"
+
+#: ../html/admin/settings/settings_payment.php:47
+msgid "WARNING: Set to LIVE if you don't know what this is for!"
+msgstr "Предупреждение: Задаване на живо, ако не знаете какво е това за!"
+
+#: ../html/admin/settings/settings_payment.php:50
+#, php-format
+msgid "Live (%s)"
+msgstr "Живо (%s)"
+
+#: ../html/admin/settings/settings_payment.php:51
+#, php-format
+msgid "Sandbox - TESTING (%s)"
+msgstr "Пясък - тестване (%s)"
+
+#: ../html/admin/settings/settings_registration.php:218
+msgid "Display name is required."
+msgstr "Показваното име е задължително."
+
+#: ../html/admin/settings/settings_registration.php:225
+msgid "Field name is required."
+msgstr "Името на поле е задължително."
+
+#: ../html/admin/settings/settings_registration.php:228
+msgid ""
+"Field name may only contains letters, numbers, underscores and hyphens, and "
+"must begin with a letter."
+msgstr ""
+"Полето име може да съдържа само букви, цифри, долни черти и тирета и трябва "
+"да започват с буква."
+
+#: ../html/admin/settings/settings_registration.php:235
+msgid "This field name is already in use."
+msgstr "Това поле име вече се използва."
+
+#: ../html/admin/settings/settings_registration.php:247
+msgid "Field length must be an non-0 positive number."
+msgstr "Дължина на поле трябва да бъде положително число-0."
+
+#: ../html/admin/settings/settings_registration.php:361
+msgid "Custom Field"
+msgstr "Поле по избор"
+
+#: ../html/admin/settings/settings_registration.php:368
+#: ../html/admin/settings/settings_registration.php:442
+msgid "Display Name"
+msgstr "Показвано име"
+
+#: ../html/admin/settings/settings_registration.php:375
+#: ../html/admin/settings/settings_registration.php:443
+msgid "Field Name"
+msgstr "Име на поле"
+
+#: ../html/admin/settings/settings_registration.php:382
+msgid "Field Type"
+msgstr "Тип на поле"
+
+#: ../html/admin/settings/settings_registration.php:385
+msgid "Text"
+msgstr "Текст"
+
+#: ../html/admin/settings/settings_registration.php:386
+msgid "Number"
+msgstr "Номер"
+
+#: ../html/admin/settings/settings_registration.php:387
+msgid "E-Mail Address"
+msgstr "Имейл адрес"
+
+#: ../html/admin/settings/settings_registration.php:388
+msgid "Phone Number"
+msgstr "Телефонен номер"
+
+#: ../html/admin/settings/settings_registration.php:389
+msgid "State Code (US)"
+msgstr "Код на държава (САЩ)"
+
+#: ../html/admin/settings/settings_registration.php:390
+msgid "Zip Code (US)"
+msgstr "Пощенски код (САЩ)"
+
+#: ../html/admin/settings/settings_registration.php:391
+msgid "Country Code"
+msgstr "Код на страната"
+
+#: ../html/admin/settings/settings_registration.php:392
+msgid "Social Security Number (US)"
+msgstr "Социално-осигурителен номер (САЩ)"
+
+#: ../html/admin/settings/settings_registration.php:399
+#: ../html/admin/settings/settings_registration.php:444
+msgid "Max Length"
+msgstr "Макс дължина"
+
+#: ../html/admin/settings/settings_registration.php:412
+msgid "Available Payout Methods"
+msgstr "Налични изплащане методи"
+
+#: ../html/admin/settings/settings_registration.php:418
+#: ../source/Data/Models/AffiliateModel.php:180
+msgid "Check"
+msgstr "Проверете"
+
+#: ../html/admin/settings/settings_registration.php:422
+#: ../source/Data/Models/AffiliateModel.php:176
+msgid "PayPal"
+msgstr "PayPal"
+
+#: ../html/admin/settings/settings_registration.php:426
+#: ../source/Data/Models/AffiliateModel.php:178
+msgid "Manual"
+msgstr ""
+
+#: ../html/admin/settings/settings_registration.php:431
+msgid "Affiliate Register Fields"
+msgstr "Партньорски регистър полета"
+
+#: ../html/admin/settings/settings_registration.php:434
+msgid "Add Custom Field"
+msgstr "Добавяне на поле по избор"
+
+#: ../html/admin/settings/settings_registration.php:439
+msgid "Enabled"
+msgstr "Поддръжка"
+
+#: ../html/admin/settings/settings_registration.php:441
+msgid "Field Format"
+msgstr "Полето формат"
+
+#: ../html/admin/settings/settings_registration.php:445
+msgid "Required"
+msgstr "Изисква"
+
+#: ../html/admin/settings/settings_registration.php:456
+#: ../html/affiliate_register_form.php:70
+msgid "Terms and Conditions"
+msgstr ""
+
+#: ../html/admin/settings/settings_registration.php:465
+msgid "Affiliates Homepage Message"
+msgstr ""
+
+#: ../html/affiliate_approved.php:1
+#, php-format
+msgid ""
+"Your application was approved.  Please go to the <a href=\"%s\">affiliate "
+"control panel</a> to get started."
+msgstr ""
+"Молбата ви е одобрена. Моля отидете на <a href=\"%s\"> филиал на контролния "
+"панел</a> за да започнете."
+
+#: ../html/affiliate_cp_agree_terms.php:3
+msgid "Affiliate Confirmation"
+msgstr "Партньорски потвърждение"
+
+#: ../html/affiliate_cp_agree_terms.php:5
+msgid "Contract Terms"
+msgstr "Договорни условия"
+
+#: ../html/affiliate_cp_agree_terms.php:12 ../html/affiliate_cp_home.php:20
+msgid "Commission Rate"
+msgstr "Комисията курс"
+
+#: ../html/affiliate_cp_agree_terms.php:21
+msgid "Terms & Conditions"
+msgstr "Правила & условия"
+
+#: ../html/affiliate_cp_agree_terms.php:27
+msgid "Agree to Terms"
+msgstr "Се съгласявате с условия"
+
+#: ../html/affiliate_cp_approved.php:3
+msgid "Affiliate Control Panel"
+msgstr "Филиал на контролния панел"
+
+#: ../html/affiliate_cp_approved.php:5
+msgid "Welcome!"
+msgstr "Добре дошли!"
+
+#: ../html/affiliate_cp_approved.php:9
+msgid "Review Terms and Get Started!"
+msgstr "Прегледайте условията и да започнете!"
+
+#: ../html/affiliate_cp_home.php:11
+msgid "Account Summary"
+msgstr "Обобщение за акаунт"
+
+#: ../html/affiliate_cp_home.php:29
+msgid "Today"
+msgstr "Днес"
+
+#: ../html/affiliate_cp_home.php:44 ../html/affiliate_cp_home.php:78
+msgid "Visitors"
+msgstr "Посетители"
+
+#: ../html/affiliate_cp_home.php:48 ../html/affiliate_cp_home.php:82
+msgid "Closed Transactions"
+msgstr "Приключени сделки"
+
+#: ../html/affiliate_cp_home.php:52 ../html/affiliate_cp_home.php:86
+msgid "Revenue"
+msgstr "Приходи"
+
+#: ../html/affiliate_cp_home.php:63
+msgid "This Month"
+msgstr "Този месец"
+
+#: ../html/affiliate_cp_payment_details_confirmed.php:3
+msgid "Your payment details have been submitted"
+msgstr "Данните за плащане са били подадени"
+
+#: ../html/affiliate_cp_payment_details_confirmed.php:5
+#, php-format
+msgid ""
+"Now would be a great time to go pick <a href=\"%s\">some creative</a> and "
+"get started."
+msgstr ""
+"Сега би било много време да отида да вземем <a href=\"%s\"> някои творчески</"
+"a> и да започнете."
+
+#: ../html/affiliate_cp_payment_details_form.php:70
+#: ../html/affiliate_cp_payment_details_simple.php:14
+msgid "Please provide your payment details."
+msgstr "Предоставете данните за плащане."
+
+#: ../html/affiliate_cp_payment_details_form.php:71
+#: ../html/affiliate_cp_payment_details_simple.php:15
+msgid ""
+"The following information will be used to disperse payments when your "
+"account reaches the minimum payout amount."
+msgstr ""
+"Следната информация ще се използва да се разпръсне плащания, когато сметката "
+"ви достигне минималната сума за изплащане."
+
+#: ../html/affiliate_cp_payment_details_form.php:79
+#: ../html/affiliate_cp_payment_details_simple.php:23
+#: ../html/contact_info.php:94
+msgid "Method"
+msgstr "Метод"
+
+#: ../html/affiliate_cp_payment_details_form.php:96
+#: ../html/affiliate_cp_payment_details_simple.php:40
+#: ../html/contact_info.php:117
+msgid "PayPal E-Mail Address"
+msgstr "PayPal е-мейл адрес"
+
+#: ../html/affiliate_cp_payment_details_form.php:109
+#: ../html/affiliate_cp_payment_details_simple.php:53
+#: ../source/Util/AffiliateFormHelper.php:151
+msgid "Paper Check"
+msgstr "Хартиен чек"
+
+#: ../html/affiliate_cp_payment_details_form.php:115
+#: ../html/affiliate_cp_payment_details_simple.php:59
+msgid "Check Recipient"
+msgstr "Проверете получател"
+
+#: ../html/affiliate_cp_payment_details_form.php:134
+msgid "Mail to Address On Record"
+msgstr "Mail адрес на запис"
+
+#: ../html/affiliate_cp_payment_details_form.php:143
+#: ../html/affiliate_cp_payment_details_form.php:166
+#: ../html/affiliate_cp_payment_details_simple.php:76
+msgid "Recipient"
+msgstr "Получател"
+
+#: ../html/affiliate_cp_payment_details_form.php:170
+msgid "Address 1"
+msgstr "Адрес 1"
+
+#: ../html/affiliate_cp_payment_details_form.php:174
+msgid "Address 2"
+msgstr "Адрес 2"
+
+#: ../html/affiliate_cp_payment_details_form.php:178
+msgid "City"
+msgstr "Град"
+
+#: ../html/affiliate_cp_payment_details_form.php:182
+msgid "Country"
+msgstr "Страна"
+
+#: ../html/affiliate_cp_payment_details_form.php:192
+msgid "State"
+msgstr "Държава"
+
+#: ../html/affiliate_cp_payment_details_form.php:202
+msgid "Postal Code"
+msgstr "Пощенски код"
+
+#: ../html/affiliate_cp_payment_details_form.php:216
+#: ../html/affiliate_cp_payment_details_simple.php:99
+msgid "Submit Payment Details"
+msgstr "Подаване на данни за плащане"
+
+#: ../html/affiliate_cp_payment_details_simple.php:69
+msgid "Check will be mailed to the following address:"
+msgstr "Проверка ще бъде изпратено на следния адрес:"
+
+#: ../html/affiliate_creative_detail.php:47
+msgid "Your Affiliate-Specific HTML snippet"
+msgstr "Вашият филиал-специфичното HTML фрагмент"
+
+#: ../html/affiliate_creative_list.php:62
+msgid "Your Affiliate Link Using Affiliate ID"
+msgstr ""
+
+#: ../html/affiliate_creative_list.php:67
+msgid "The following creatives are available for publication."
+msgstr "Следните рекламни послания са на разположение за публикуване."
+
+#: ../html/affiliate_home.php:1
+msgid "Welcome to the affiliate control panel."
+msgstr "Добре дошли в контролния панел на филиал."
+
+#: ../html/affiliate_not_logged_in.php:4
+#, php-format
+msgid ""
+"This is the affiliates section of this store.  If you are an existing "
+"affiliate, please <a href=\"%s\">log in</a> to access your control panel."
+msgstr ""
+"Това е раздела филиали на този магазин. Ако сте съществуващ филиал, моля <a "
+"href=\"%s\"> Влезте в</a> за достъп до контролния панел."
+
+#: ../html/affiliate_not_logged_in.php:7
+#, php-format
+msgid ""
+"If you are not an affiliate, but wish to become one, you will need to "
+"apply.  To apply, you must be a registered user on this blog.  If you have "
+"an existing account on this blog, please <a href=\"%s\">log in</a>.  If not, "
+"please <a href=\"%s\">register</a>."
+msgstr ""
+"Ако не сте филиал, но желаят да станат един, ще трябва да се прилагат. За да "
+"кандидатствате, трябва да сте регистриран потребител на този блог. Ако имате "
+"съществуващ акаунт на този блог, моля <a href=\"%s\"> Влезте в</a>. Ако не, "
+"моля <a href=\"%s\"> Регистрирайте се</a>."
+
+#: ../html/affiliate_not_registered.php:1
+#, php-format
+msgid ""
+"This is the affiliates section of this store. You are not currently an "
+"affiliate of this store.  If you wish to become one, please <a href=\"%s\"/"
+">apply</a>."
+msgstr ""
+"Това е раздела филиали на този магазин. В момента не сте филиал на този "
+"магазин. Ако желаете да станете един, моля <a href=\"%s\"/>се прилагат</a>."
+
+#: ../html/affiliate_register_form.php:15 ../html/contact_info.php:160
+msgid "* Required fields"
+msgstr "* Задължителни полета"
+
+#: ../html/affiliate_register_form.php:29
+msgid ""
+"This is the email address associated with your currently logged in WordPress "
+"user account."
+msgstr ""
+
+#: ../html/affiliate_register_form.php:30
+msgid ""
+"If you want to use a different email address, log out of your WordPress "
+"account then try a new registration."
+msgstr ""
+
+#: ../html/affiliate_register_form.php:70
+msgid "I have read and agree to the"
+msgstr ""
+
+#: ../html/affiliate_register_form.php:71
+msgid "You must agree to the terms."
+msgstr "Трябва да приемете условията."
+
+#: ../html/affiliate_register_form.php:82
+msgid "Submit Application"
+msgstr "Подаване на заявление"
+
+#: ../html/contact_info.php:14
+msgid ""
+"Changing the affiliate's email address will not change their WordPress "
+"Affiliate Manager login, which may be based on the email address they used "
+"when they signed up."
+msgstr ""
+"Смяна на партньора имейл адрес няма да се промени си WordPress партньорски "
+"мениджър вход, който може да се основава на имейл адрес, те използват, "
+"когато те се регистрирали."
+
+#: ../html/contact_info.php:16
+msgid ""
+"Changing your email address will not change your WordPress Affiliate Manager "
+"login, which may be based on the email address you used when you signed up."
+msgstr ""
+"Промяна на вашия имейл адрес няма да се промени вашия WordPress партньорски "
+"мениджър вход, който може да се основава на вашия имейл адрес сте "
+"използвали, когато сте се регистрирали."
+
+#: ../html/contact_info.php:26
+msgid "Contact Information"
+msgstr "Информация за контакт"
+
+#: ../html/contact_info.php:81
+#, php-format
+msgid ""
+"There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s"
+"\">Cancel</a>"
+msgstr ""
+"Има чакаща промяна на вашата електронна поща до <code>%1$ s</code>. <a href="
+"\"%2$s\"> Отмени</a>"
+
+#: ../html/contact_info.php:126
+msgid "Bounty Type *"
+msgstr "Глави тип *"
+
+#: ../html/contact_info.php:144
+#, php-format
+msgid "Bounty Rate (%s per Sale) *"
+msgstr "Дарът курс (%s за продажба) *"
+
+#: ../html/contact_info.php:144
+#, fuzzy, php-format
+msgid "Bounty Rate (% of Sale) *"
+msgstr "Дарът ставка (% от продажба) *"
+
+#: ../html/contact_info.php:162
+msgid "+ Custom fields"
+msgstr "+ Потребителски полета"
+
+#: ../html/contact_info.php:166
+msgid "Save Changes"
+msgstr "Запиши промените"
+
+#: ../html/impressions_table.php:1
+#, php-format
+msgid "Displaying %1$d of %2$d impressions"
+msgstr ""
+
+#: ../html/impressions_table.php:9
+msgid "Referrer"
+msgstr ""
+
+#: ../html/impressions_table.php:31 ../html/transaction_table.php:77
+msgid "No records found for the date range selected."
+msgstr "Не са намерени за диапазон от дати избрани записи."
+
+#: ../html/transaction_table.php:29
+msgid "From"
+msgstr "От"
+
+#: ../html/transaction_table.php:49
+msgid "Reference ID"
+msgstr "Референтен номер"
+
+#: ../source/Admin-menu/wpam-addons-menu.php:6 ../source/Plugin.php:647
+msgid "Affiliates Manager Add-ons"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-clicks-menu.php:8 ../source/Plugin.php:639
+msgid "Click Tracking"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-clicks-menu.php:11
+msgid "Unique Click Tracking"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-clicks-menu.php:34
+msgid "This tab shows unique referrals to your website from your affiliates"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:8
+msgid "Affiliate Commissions"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:11
+msgid "Overall Commissions"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:12
+msgid "Manual Commission"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:48
+msgid "This tab shows all affiliate commission data"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:104
+msgid "You need to enter an affiliate ID"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:108
+msgid "You need to enter a numeric commission amount"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:112
+msgid "You need to enter a numeric purchase amount"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:136
+msgid "A commission with this transaction ID already exists"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:154
+msgid "Commission added!"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:164
+msgid "This tab allows you to manually award commission to an affiliate."
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:174
+msgid "Enter the affiliate ID. Example: "
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:178
+msgid "Commission Amount"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:180
+msgid "Enter the commission amount. Example: "
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:184
+msgid "Purchase Amount"
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:186
+msgid "Enter the purchase amount. Example: "
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:192
+msgid ""
+"Enter the unique transaction ID (leave empty to generate a unique ID). "
+"Example: "
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:198
+msgid "Enter the email address of the buyer (optional)."
+msgstr ""
+
+#: ../source/Admin-menu/wpam-commission-menu.php:204
+msgid "Enter the date in yyyy-mm-dd format. Example: "
+msgstr ""
+
+#: ../source/Data/GenericRepository.php:31
+#: ../source/Data/GenericRepository.php:76
+#, php-format
+msgid "'model' must be of type '%s'"
+msgstr "\"модел\" трябва да бъде от тип '%s'"
+
+#: ../source/Data/Models/AffiliateModel.php:169
+msgid "Percent"
+msgstr "Процента"
+
+#: ../source/Data/Models/AffiliateModel.php:171
+msgid "Fixed"
+msgstr "Фиксирана"
+
+#: ../source/Data/Models/ModelMapper.php:34
+#, php-format
+msgid "Model mapping error.  Could not map key %s."
+msgstr "Грешка в съпоставяне на модел. Не може да се съпостави ключа %s."
+
+#: ../source/MessageHelper.php:29
+#, php-format
+msgid "Attempt to load invalid message of name '%s'"
+msgstr "Опит да се зареди невалидно съобщение на име '%s'"
+
+#: ../source/Options.php:27
+msgid "Invalid PayPal API value"
+msgstr ""
+
+#: ../source/Pages/Admin/MyAffiliatesPage.php:161
+#: ../source/Pages/Admin/NewAffiliatePage.php:84
+#: ../source/Pages/AffiliatesHome.php:526
+#, php-format
+msgid "Bounty Rate (%s per Sale)"
+msgstr "Дарът курс (%s за продажба)"
+
+#: ../source/Pages/Admin/MyCreativesPage.php:57
+msgid "All"
+msgstr "Всички"
+
+#: ../source/Pages/Admin/MyCreativesPage.php:108
+#: ../source/Pages/Admin/MyCreativesPage.php:261
+#: ../source/Pages/Admin/MyCreativesPage.php:268
+#: ../source/Pages/AffiliatesHome.php:172 ../source/Util/JsonHandler.php:228
+msgid "Invalid creative."
+msgstr "Невалиден creative."
+
+#: ../source/Pages/Admin/MyCreativesPage.php:157
+#, php-format
+msgid "Image Upload Error: %s"
+msgstr "Изображението качване грешка: %s"
+
+#: ../source/Pages/Admin/MyCreativesPage.php:222
+msgid "Insert failed: Bad creative type."
+msgstr "Неуспешно Вмъкване: лошо творчески тип."
+
+#: ../source/Pages/Admin/MyCreativesPage.php:231
+msgid "Creative Updated."
+msgstr "Creative актуализиран."
+
+#: ../source/Pages/Admin/MyCreativesPage.php:238
+msgid "Creative ... created."
+msgstr "Творческа... създаден."
+
+#: ../source/Pages/Admin/MyCreativesPage.php:242
+msgid "Insert failed: invalid creative update mechanism."
+msgstr "Неуспешно Вмъкване: механизъм за невалидна творчески актуализация."
+
+#: ../source/Pages/Admin/NewAffiliatePage.php:73
+msgid "Add Affiliate"
+msgstr "Добави филиал"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:53
+msgid "This results file does not appear to match this payment."
+msgstr "Резултатите от този файл не изглежда да съответства това плащане."
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:87
+#, php-format
+msgid ""
+"Matched a transaction in your results file, but the value was incorrect. "
+"Expected %s but found '%s'"
+msgstr ""
+"Съвпадащи транзакция във вашия файл с резултатите, но стойността е "
+"неправилен. Очакваните %s но основавам '%s'"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:95
+msgid ""
+"Could not correlate a transaction from your results file with the "
+"transactions on record."
+msgstr ""
+"Не може да се съпоставят транзакция от вашия резултати файл с транзакции за "
+"запис."
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:101
+msgid "Could not correlate all transactions"
+msgstr "Не можа да съпоставят всички транзакции"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:145
+msgid "Invalid PayPal LogID"
+msgstr ""
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:151
+msgid "Transaction not found"
+msgstr "Сделката не е намерен"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:162
+msgid "Invalid transaction status"
+msgstr "Невалидна транзакция статус"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:220
+msgid "Affiliate Payment"
+msgstr "Филиал на плащане"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:232
+msgid "Affiliate not found"
+msgstr "Филиал не е намерен"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:235
+msgid "Payment method for affiliate is not PayPal"
+msgstr "Метод на плащане за филиал не е PayPal"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:242
+msgid "Payout via PayPal Mass Pay"
+msgstr "Изплащане чрез PayPal маса заплати"
+
+#: ../source/Pages/AffiliatesHome.php:33
+msgid "Sales"
+msgstr "Продажби"
+
+#: ../source/Pages/AffiliatesHome.php:34
+msgid "Payment History"
+msgstr "История на плащане"
+
+#: ../source/Pages/AffiliatesHome.php:35 ../source/Plugin.php:95
+msgid "Creatives"
+msgstr "Рекламни послания"
+
+#: ../source/Pages/AffiliatesHome.php:36
+msgid "Edit Profile"
+msgstr "Редактиране на профил"
+
+#: ../source/Pages/AffiliatesHome.php:174 ../source/Util/JsonHandler.php:28
+#: ../source/Util/JsonHandler.php:52 ../source/Util/JsonHandler.php:83
+#: ../source/Util/JsonHandler.php:109 ../source/Util/JsonHandler.php:133
+#: ../source/Util/JsonHandler.php:207
+msgid "Invalid affiliate"
+msgstr "Невалиден партньорски"
+
+#: ../source/Pages/AffiliatesHome.php:176
+msgid "Inactive creative."
+msgstr "Неактивни creative."
+
+#: ../source/Pages/AffiliatesHome.php:387
+#, php-format
+msgid "%s per sale."
+msgstr "%s за продажба."
+
+#: ../source/Pages/AffiliatesHome.php:389
+#, php-format
+msgid "%s%% of each completed sale, pre-tax"
+msgstr "%s%% от всяка продажба, завършени, преди облагане с данъци"
+
+#: ../source/Pages/AffiliatesRegister.php:62 ../source/Util/UserHandler.php:138
+msgid ""
+"Error submitting your details to the database. This is a bug, and your "
+"application was not submitted."
+msgstr ""
+"Грешка при представяне на вашите данни в базата данни. Това е бъг, и вашето "
+"заявление не е подадено."
+
+#: ../source/Pages/AffiliatesRegister.php:70 ../source/Util/UserHandler.php:141
+#, php-format
+msgid "New affiliate registration on your site %s:"
+msgstr "Регистрация на нов филиал на вашия сайт %s:"
+
+#: ../source/Pages/AffiliatesRegister.php:71 ../source/Util/UserHandler.php:142
+#, php-format
+msgid "Name: %s %s"
+msgstr "Име: %s %s"
+
+#: ../source/Pages/AffiliatesRegister.php:72 ../source/Util/UserHandler.php:143
+#, php-format
+msgid "Email: %s"
+msgstr "Имейл: %s"
+
+#: ../source/Pages/AffiliatesRegister.php:73 ../source/Util/UserHandler.php:144
+#, php-format
+msgid "Company: %s"
+msgstr "Компания: %s"
+
+#: ../source/Pages/AffiliatesRegister.php:74 ../source/Util/UserHandler.php:145
+#, php-format
+msgid "Website: %s"
+msgstr "Сайт: %s"
+
+#: ../source/Pages/AffiliatesRegister.php:75 ../source/Util/UserHandler.php:146
+#, php-format
+msgid "View Application: %s"
+msgstr "Преглед приложение: %s"
+
+#: ../source/Pages/AffiliatesRegister.php:76 ../source/Util/UserHandler.php:147
+msgid "New Affiliate Registration"
+msgstr "Нова партньорска регистрация"
+
+#: ../source/Pages/AffiliatesRegister.php:79
+#, php-format
+msgid "Affiliate application for %s"
+msgstr "Партньорски заявление за %s"
+
+#: ../source/Pages/PublicPage.php:95 ../source/Util/JsonHandler.php:14
+#: ../source/Util/JsonHandler.php:44 ../source/Util/JsonHandler.php:75
+#: ../source/Util/JsonHandler.php:101 ../source/Util/JsonHandler.php:125
+#: ../source/Util/JsonHandler.php:136 ../source/Util/JsonHandler.php:150
+#: ../source/Util/JsonHandler.php:196 ../source/Util/JsonHandler.php:224
+msgid "Access denied."
+msgstr "Достъпът е отказан."
+
+#: ../source/PayPal/MassPayRequest.php:24
+msgid "receiverType must be one of the RECEIVERTYPE_* constants"
+msgstr "receiverType трябва да бъде един от RECEIVERTYPE_ * константите"
+
+#: ../source/PayPal/MassPayRequest.php:33
+msgid "'amount' must be a valid monetary value"
+msgstr "\"сума\" трябва да бъде валиден парична стойност"
+
+#: ../source/PayPal/MassPayResultFile.php:113
+#: ../source/PayPal/MassPayResultFile.php:124
+#, php-format
+msgid "Failed to parse amounts from field: %s"
+msgstr "Неуспешно анализиране на сумите от полето: %s"
+
+#: ../source/PayPal/Service.php:77
+#, php-format
 msgid ""
 "POST failed\n"
 "errors:\n"
@@ -1230,371 +2000,372 @@ msgstr ""
 " %serrordata: \n"
 " %s"
 
-#: source/PayPal/Service.php:79
+#: ../source/PayPal/Service.php:82
+#, php-format
 msgid "Unknown response: %s"
 msgstr "Непознат отговор: %s"
 
-#: source/PayPal/MassPayResultFile.php:113
-#: source/PayPal/MassPayResultFile.php:124
-msgid "Failed to parse amounts from field: %s"
-msgstr "Неуспешно анализиране на сумите от полето: %s"
+#: ../source/Plugin.php:77 ../source/Plugin.php:610
+msgid "Affiliate Management"
+msgstr "Партньорски управление"
 
-#: source/PayPal/MassPayRequest.php:24
-msgid "receiverType must be one of the RECEIVERTYPE_* constants"
-msgstr "receiverType трябва да бъде един от RECEIVERTYPE_ * константите"
+#: ../source/Plugin.php:78 ../source/Plugin.php:83 ../source/Plugin.php:586
+#: ../source/Plugin.php:600 ../source/Plugin.php:610
+msgid "Affiliates"
+msgstr "Филиали"
 
-#: source/PayPal/MassPayRequest.php:33
-msgid "'amount' must be a valid monetary value"
-msgstr "\"сума\" трябва да бъде валиден парична стойност"
+#: ../source/Plugin.php:109
+msgid "Store Affiliates"
+msgstr "Магазин филиали"
 
-#: source/Validation/StringValidator.php:24
-msgid "must be between % and %s characters"
-msgstr "трябва да е между %s и % символи"
+#: ../source/Plugin.php:110
+msgid "Register"
+msgstr "Регистрирайте се"
 
-#: source/Validation/StringValidator.php:29
-#: source/Validation/CountryCodeValidator.php:15
-msgid "is required"
-msgstr "се изисква"
+#: ../source/Plugin.php:111
+msgid "Affiliate Login"
+msgstr ""
 
-#: source/Validation/StringValidator.php:31
-msgid "must be at least %s characters"
-msgstr "трябва да бъде поне %s знаци"
+#: ../source/Plugin.php:317
+msgid "You are currently logged in"
+msgstr ""
 
-#: source/Validation/StringValidator.php:35
-msgid "must be no more than %s characters"
-msgstr "трябва да бъде не повече от %s знаци"
+#: ../source/Plugin.php:319
+msgid "Username"
+msgstr ""
 
-#: source/Validation/EmailValidator.php:14
-msgid "must be a valid e-mail address"
-msgstr "трябва да бъде валиден имейл адрес"
+#: ../source/Plugin.php:321
+msgid "Log out"
+msgstr ""
 
-#: source/Validation/MoneyValidator.php:12
-msgid "must be a valid monetary value"
-msgstr "трябва да бъде валиден парична стойност"
+#: ../source/Plugin.php:331
+msgid "Password Lost and Found"
+msgstr ""
 
-#: source/Validation/PhoneNumberValidator.php:12
-msgid "must be a phone number"
-msgstr "трябва да бъде телефонен номер"
+#: ../source/Plugin.php:331
+msgid "Lost your password?"
+msgstr ""
 
-#: source/Validation/MultiPartPhoneNumberValidator.php:12
-msgid "must be a valid phone number"
-msgstr "трябва да бъде валиден телефонен номер"
+#: ../source/Plugin.php:377
+msgid "Become an affiliate"
+msgstr "Станете партньор"
 
-#: source/Validation/ZipCodeValidator.php:16
-msgid "must be a valid zip code"
-msgstr "трябва да е валиден пощенски код"
+#: ../source/Plugin.php:378
+msgid "Are you interested in earning money by directing visitors to our site?"
+msgstr ""
+"Интересувате ли се от печелите пари чрез насочване на посетителите на нашия "
+"сайт?"
 
-#: source/Validation/MultiPartSocialSecurityNumberValidator.php:13
-msgid "must be a valid social security number"
-msgstr "трябва да бъде валиден осигурителен номер"
+#: ../source/Plugin.php:380
+msgid "Sign up"
+msgstr "Регистрирайте се"
 
-#: source/Validation/NumberValidator.php:14
-msgid "must be a number"
-msgstr "Tрябва да е число"
+#: ../source/Plugin.php:380
+msgid " to become an affiliate today!"
+msgstr "за да стане филиал днес!"
 
-#: source/Validation/StateCodeValidator.php:14
-#: source/Validation/SetValidator.php:18
-msgid "must be selected"
-msgstr "трябва да бъде избран"
+#: ../source/Plugin.php:601
+msgid "Be An Affiliate"
+msgstr "Бъде филиал"
 
-#: source/Validation/CallbackValidator.php:17
-msgid "Argument 'callback' must be callable"
-msgstr "Аргумент \"повикване\" трябва да бъдат изискуеми"
+#: ../source/Plugin.php:635
+msgid "Settings"
+msgstr "Настройки"
 
-#: source/Pages/PublicPage.php:91 source/Util/JsonHandler.php:14
-#: source/Util/JsonHandler.php:44 source/Util/JsonHandler.php:75
-#: source/Util/JsonHandler.php:101 source/Util/JsonHandler.php:125
-#: source/Util/JsonHandler.php:136 source/Util/JsonHandler.php:150
-#: source/Util/JsonHandler.php:196 source/Util/JsonHandler.php:224
-msgid "Access denied."
-msgstr "Достъпът е отказан."
+#: ../source/Plugin.php:639
+msgid "Affiliates Manager Click Tracking"
+msgstr ""
 
-#: source/Pages/AffiliatesRegister.php:44
-msgid "Error submitting your details to the database. This is a bug, and your application was not submitted."
-msgstr "Грешка при представяне на вашите данни в базата данни. Това е бъг, и вашето заявление не е подадено."
+#: ../source/Plugin.php:643
+msgid "Affiliates Manager Commission Data"
+msgstr ""
 
-#: source/Pages/AffiliatesRegister.php:52
-msgid "New affiliate registration on your site %s:"
-msgstr "Регистрация на нов филиал на вашия сайт %s:"
+#: ../source/Plugin.php:643
+msgid "Commissions"
+msgstr ""
 
-#: source/Pages/AffiliatesRegister.php:53
-msgid "Name: %s %s"
-msgstr "Име: %s %s"
+#: ../source/Plugin.php:647
+msgid "Add-ons"
+msgstr ""
 
-#: source/Pages/AffiliatesRegister.php:54
-msgid "Email: %s"
-msgstr "Имейл: %s"
+#: ../source/Plugin.php:776
+msgid "Invalid JSON handler."
+msgstr "Невалиден манипулатор на JSON."
 
-#: source/Pages/AffiliatesRegister.php:55
-msgid "Company: %s"
-msgstr "Компания: %s"
-
-#: source/Pages/AffiliatesRegister.php:56
-msgid "Website: %s"
-msgstr "Сайт: %s"
-
-#: source/Pages/AffiliatesRegister.php:57
-msgid "View Application: %s"
-msgstr "Преглед приложение: %s"
-
-#: source/Pages/AffiliatesRegister.php:58
-msgid "New Affiliate Registration"
-msgstr "Нова партньорска регистрация"
-
-#: source/Pages/AffiliatesRegister.php:61
-msgid "Affiliate application for %s"
-msgstr "Партньорски заявление за %s"
-
-#: source/Pages/AffiliatesHome.php:33
-msgid "Sales"
-msgstr "Продажби"
-
-#: source/Pages/AffiliatesHome.php:34
-msgid "Payment History"
-msgstr "История на плащане"
-
-#: source/Pages/AffiliatesHome.php:36
-msgid "Edit Profile"
-msgstr "Редактиране на профил"
-
-#: source/Pages/AffiliatesHome.php:165
-#: source/Pages/Admin/MyCreativesPage.php:108
-#: source/Pages/Admin/MyCreativesPage.php:261
-#: source/Pages/Admin/MyCreativesPage.php:268 source/Util/JsonHandler.php:228
-msgid "Invalid creative."
-msgstr "Невалиден creative."
-
-#: source/Pages/AffiliatesHome.php:167 source/Util/JsonHandler.php:28
-#: source/Util/JsonHandler.php:52 source/Util/JsonHandler.php:83
-#: source/Util/JsonHandler.php:109 source/Util/JsonHandler.php:133
-#: source/Util/JsonHandler.php:207
-msgid "Invalid affiliate"
-msgstr "Невалиден партньорски"
-
-#: source/Pages/AffiliatesHome.php:169
-msgid "Inactive creative."
-msgstr "Неактивни creative."
-
-#: source/Pages/AffiliatesHome.php:342
-msgid "%s per sale."
-msgstr "%s за продажба."
-
-#: source/Pages/AffiliatesHome.php:344
-msgid "%s%% of each completed sale, pre-tax"
-msgstr "%s%% от всяка продажба, завършени, преди облагане с данъци"
-
-#: source/Pages/AffiliatesHome.php:477
-#: source/Pages/Admin/NewAffiliatePage.php:80
-#: source/Pages/Admin/MyAffiliatesPage.php:219
-msgid "Bounty Rate (%s per Sale)"
-msgstr "Дарът курс (%s за продажба)"
-
-#: source/Pages/Admin/MyCreativesPage.php:57
-msgid "All"
-msgstr "Всички"
-
-#: source/Pages/Admin/MyCreativesPage.php:157
-msgid "Image Upload Error: %s"
-msgstr "Изображението качване грешка: %s"
-
-#: source/Pages/Admin/MyCreativesPage.php:222
-msgid "Insert failed: Bad creative type."
-msgstr "Неуспешно Вмъкване: лошо творчески тип."
-
-#: source/Pages/Admin/MyCreativesPage.php:231
-msgid "Creative Updated."
-msgstr "Creative актуализиран."
-
-#: source/Pages/Admin/MyCreativesPage.php:238
-msgid "Creative ... created."
-msgstr "Творческа... създаден."
-
-#: source/Pages/Admin/MyCreativesPage.php:242
-msgid "Insert failed: invalid creative update mechanism."
-msgstr "Неуспешно Вмъкване: механизъм за невалидна творчески актуализация."
-
-#: source/Pages/Admin/PaypalPaymentsPage.php:53
-msgid "This results file does not appear to match this payment."
-msgstr "Резултатите от този файл не изглежда да съответства това плащане."
-
-#: source/Pages/Admin/PaypalPaymentsPage.php:87
-msgid "Matched a transaction in your results file, but the value was incorrect. Expected %s but found '%s'"
-msgstr "Съвпадащи транзакция във вашия файл с резултатите, но стойността е неправилен. Очакваните %s но основавам '%s'"
-
-#: source/Pages/Admin/PaypalPaymentsPage.php:95
-msgid "Could not correlate a transaction from your results file with the transactions on record."
-msgstr "Не може да се съпоставят транзакция от вашия резултати файл с транзакции за запис."
-
-#: source/Pages/Admin/PaypalPaymentsPage.php:101
-msgid "Could not correlate all transactions"
-msgstr "Не можа да съпоставят всички транзакции"
-
-#: source/Pages/Admin/PaypalPaymentsPage.php:145
-msgid "Invalid PayPa LogID"
-msgstr "Невалиден PayPal LogID"
-
-#: source/Pages/Admin/PaypalPaymentsPage.php:151
-msgid "Transaction not found"
-msgstr "Сделката не е намерен"
-
-#: source/Pages/Admin/PaypalPaymentsPage.php:162
-msgid "Invalid transaction status"
-msgstr "Невалидна транзакция статус"
-
-#: source/Pages/Admin/PaypalPaymentsPage.php:220
-msgid "Affiliate Payment"
-msgstr "Филиал на плащане"
-
-#: source/Pages/Admin/PaypalPaymentsPage.php:232
-msgid "Affiliate not found"
-msgstr "Филиал не е намерен"
-
-#: source/Pages/Admin/PaypalPaymentsPage.php:235
-msgid "Payment method for affiliate is not PayPal"
-msgstr "Метод на плащане за филиал не е PayPal"
-
-#: source/Pages/Admin/PaypalPaymentsPage.php:242
-msgid "Payout via PayPal Mass Pay"
-msgstr "Изплащане чрез PayPal маса заплати"
-
-#: source/Pages/Admin/NewAffiliatePage.php:69
-msgid "Add Affiliate"
-msgstr "Добави филиал"
-
-#: source/Pages/Admin/MyAffiliatesPage.php:127
-msgid "All Active"
-msgstr "Всички активни"
-
-#: source/Pages/Admin/MyAffiliatesPage.php:128
-msgid "All (Including Closed)"
-msgstr "Всички (включително затворен)"
-
-#: source/Pages/Admin/MyAffiliatesPage.php:130
-msgid "Status: Active"
-msgstr "Статус: активен"
-
-#: source/Pages/Admin/MyAffiliatesPage.php:131
-msgid "Status: Applied"
-msgstr "Статус: прилагане"
-
-#: source/Pages/Admin/MyAffiliatesPage.php:132
-msgid "Status: Approved"
-msgstr "Статус: одобрените"
-
-#: source/Pages/Admin/MyAffiliatesPage.php:133
-msgid "Status: Confirmed"
-msgstr "Статус: потвърди"
-
-#: source/Pages/Admin/MyAffiliatesPage.php:134
-msgid "Status: Declined"
-msgstr "Статус: намаля"
-
-#: source/Pages/Admin/MyAffiliatesPage.php:135
-msgid "Status: Blocked"
-msgstr "Статус: блокирани"
-
-#: source/Pages/Admin/MyAffiliatesPage.php:136
-msgid "Status: Inactive"
-msgstr "Статус: неактивен"
-
-#: source/Tracking/TrackingKey.php:33
-msgid "invalid refkey format. (length=%s)"
-msgstr "Невалиден refkey формат. (дължина=%s)"
-
-#: source/Tracking/RequestTracker.php:112
+#: ../source/Tracking/RequestTracker.php:131
+#: ../source/Tracking/RequestTracker.php:228
 msgid "no refkey in request."
 msgstr "няма refkey в искането."
 
-#: source/Tracking/RequestTracker.php:130
+#: ../source/Tracking/RequestTracker.php:188
 msgid "invalid refkey data."
 msgstr "Невалиден refkey данни."
 
-#: source/Util/JsonHandler.php:17
-msgid "Invalid bounty amount."
-msgstr "Невалиден глави сума."
+#: ../source/Tracking/RequestTracker.php:239
+msgid "invalid refkey data: "
+msgstr ""
 
-#: source/Util/JsonHandler.php:20
-msgid "Invalid bounty type."
-msgstr "Невалиден глави тип."
+#: ../source/Tracking/TrackingKey.php:35
+#, php-format
+msgid "invalid refkey format. (length=%s)"
+msgstr "Невалиден refkey формат. (дължина=%s)"
 
-#: source/Util/JsonHandler.php:36 source/Util/JsonHandler.php:68
-#: source/Util/JsonHandler.php:93 source/Util/JsonHandler.php:112
-#: source/Util/JsonHandler.php:169
-msgid "Invalid state transition."
-msgstr "Невалидно състояние на преход."
-
-#: source/Util/JsonHandler.php:60 source/Util/UserHandler.php:58
-msgid "Affiliate Application for %s"
-msgstr "Партньорски заявление за %s"
-
-#: source/Util/JsonHandler.php:153
-msgid "Invalid status."
-msgstr "Невалидно състояние."
-
-#: source/Util/JsonHandler.php:166
-msgid "Invalid creative"
-msgstr "Невалиден creative"
-
-#: source/Util/JsonHandler.php:199
-msgid "Invalid transaction type."
-msgstr "Невалидна транзакция тип."
-
-#: source/Util/JsonHandler.php:202
-msgid "Invalid value for amount."
-msgstr "Невалидна стойност за стойност."
-
-#: source/Util/EmailHandler.php:30
-msgid "Your username and password"
-msgstr "Вашето потребителско име и парола"
-
-#: source/Util/EmailHandler.php:34
-msgid "[%s] Your username and password for Affiliate Manager"
-msgstr "[%s] Вашето потребителско име и парола за партньорски мениджър"
-
-#: source/Util/EmailHandler.php:35 source/Util/UserHandler.php:20
-msgid "New affiliate registration for %s: has been approved!"
-msgstr "Регистрация на нов филиал за %s: е одобрен!"
-
-#: source/Util/AffiliateFormHelper.php:93
+#: ../source/Util/AffiliateFormHelper.php:93
 msgid "is a blocked e-mail "
 msgstr "е блокирана електронна поща"
 
-#: source/Util/AffiliateFormHelper.php:95
+#: ../source/Util/AffiliateFormHelper.php:95
 msgid "is in use"
 msgstr "се използва"
 
-#: source/Util/AffiliateFormHelper.php:154
+#: ../source/Util/AffiliateFormHelper.php:154
 msgid "PayPal Transfer"
 msgstr "PayPal трансфер"
 
-#: source/Util/UserHandler.php:25 source/Util/UserHandler.php:34
+#: ../source/Util/AffiliateFormHelper.php:157
+msgid "Manual Transfer"
+msgstr ""
+
+#: ../source/Util/EmailHandler.php:66
+msgid "Your username and password"
+msgstr "Вашето потребителско име и парола"
+
+#: ../source/Util/EmailHandler.php:70
+#, php-format
+msgid "[%s] Your username and password for Affiliate Manager"
+msgstr "[%s] Вашето потребителско име и парола за партньорски мениджър"
+
+#: ../source/Util/EmailHandler.php:71 ../source/Util/UserHandler.php:20
+#: ../source/Util/UserHandler.php:84
+#, php-format
+msgid "New affiliate registration for %s: has been approved!"
+msgstr "Регистрация на нов филиал за %s: е одобрен!"
+
+#: ../source/Util/JsonHandler.php:17
+msgid "Invalid bounty amount."
+msgstr "Невалиден глави сума."
+
+#: ../source/Util/JsonHandler.php:20
+msgid "Invalid bounty type."
+msgstr "Невалиден глави тип."
+
+#: ../source/Util/JsonHandler.php:36 ../source/Util/JsonHandler.php:68
+#: ../source/Util/JsonHandler.php:93 ../source/Util/JsonHandler.php:112
+#: ../source/Util/JsonHandler.php:169
+msgid "Invalid state transition."
+msgstr "Невалидно състояние на преход."
+
+#: ../source/Util/JsonHandler.php:60 ../source/Util/UserHandler.php:60
+#: ../source/Util/UserHandler.php:151
+#, php-format
+msgid "Affiliate Application for %s"
+msgstr "Партньорски заявление за %s"
+
+#: ../source/Util/JsonHandler.php:153
+msgid "Invalid status."
+msgstr "Невалидно състояние."
+
+#: ../source/Util/JsonHandler.php:166
+msgid "Invalid creative"
+msgstr "Невалиден creative"
+
+#: ../source/Util/JsonHandler.php:199
+msgid "Invalid transaction type."
+msgstr "Невалидна транзакция тип."
+
+#: ../source/Util/JsonHandler.php:202
+msgid "Invalid value for amount."
+msgstr "Невалидна стойност за стойност."
+
+#: ../source/Util/UserHandler.php:25 ../source/Util/UserHandler.php:34
+#: ../source/Util/UserHandler.php:89 ../source/Util/UserHandler.php:98
 msgid "User already has an account and is already an affiliate"
 msgstr "Потребителят вече има сметка и е вече филиал"
 
-#: source/Util/UserHandler.php:28 source/Util/UserHandler.php:37
+#: ../source/Util/UserHandler.php:28 ../source/Util/UserHandler.php:37
+#: ../source/Util/UserHandler.php:92 ../source/Util/UserHandler.php:101
 msgid "Log into the site with your existing account and get started."
 msgstr "Влезте в сайта с вашата съществуваща сметка и да започнете."
 
-#: source/Data/GenericRepository.php:31 source/Data/GenericRepository.php:76
-msgid "'model' must be of type '%s'"
-msgstr "\"модел\" трябва да бъде от тип '%s'"
+#: ../source/Validation/CallbackValidator.php:17
+msgid "Argument 'callback' must be callable"
+msgstr "Аргумент \"повикване\" трябва да бъдат изискуеми"
 
-#: source/Data/DatabaseInstaller.php:297
-msgid "CANNOT PERFORM DB UPGRADE FROM %s to %s"
-msgstr "Не може да ИЗВЪРШИ DB ЪПГРЕЙД от %s на %s"
+#: ../source/Validation/CountryCodeValidator.php:15
+#: ../source/Validation/StringValidator.php:29
+msgid "is required"
+msgstr "се изисква"
 
-#: source/Data/Models/AffiliateModel.php:164
-msgid "Percent"
-msgstr "Процента"
+#: ../source/Validation/EmailValidator.php:14
+msgid "must be a valid e-mail address"
+msgstr "трябва да бъде валиден имейл адрес"
 
-#: source/Data/Models/AffiliateModel.php:166
-msgid "Fixed"
-msgstr "Фиксирана"
+#: ../source/Validation/MoneyValidator.php:12
+msgid "must be a valid monetary value"
+msgstr "трябва да бъде валиден парична стойност"
 
-#: source/Data/Models/AffiliateModel.php:173
-msgid "Check"
-msgstr "Проверете"
+#: ../source/Validation/MultiPartPhoneNumberValidator.php:12
+msgid "must be a valid phone number"
+msgstr "трябва да бъде валиден телефонен номер"
 
-#: source/Data/Models/ModelMapper.php:34
-msgid "Model mapping error.  Could not map key %s."
-msgstr "Грешка в съпоставяне на модел. Не може да се съпостави ключа %s."
+#: ../source/Validation/MultiPartSocialSecurityNumberValidator.php:13
+msgid "must be a valid social security number"
+msgstr "трябва да бъде валиден осигурителен номер"
+
+#: ../source/Validation/NumberValidator.php:14
+msgid "must be a number"
+msgstr "Tрябва да е число"
+
+#: ../source/Validation/PhoneNumberValidator.php:12
+msgid "must be a phone number"
+msgstr "трябва да бъде телефонен номер"
+
+#: ../source/Validation/SetValidator.php:18
+#: ../source/Validation/StateCodeValidator.php:14
+msgid "must be selected"
+msgstr "трябва да бъде избран"
+
+#: ../source/Validation/StringValidator.php:24
+msgid "must be between % and %s characters"
+msgstr "трябва да е между %s и % символи"
+
+#: ../source/Validation/StringValidator.php:31
+#, php-format
+msgid "must be at least %s characters"
+msgstr "трябва да бъде поне %s знаци"
+
+#: ../source/Validation/StringValidator.php:35
+#, php-format
+msgid "must be no more than %s characters"
+msgstr "трябва да бъде не повече от %s знаци"
+
+#: ../source/Validation/ZipCodeValidator.php:16
+msgid "must be a valid zip code"
+msgstr "трябва да е валиден пощенски код"
+
+#: ../source/display_functions.php:11
+msgid "Affiliate has applied, but is waiting on your decision."
+msgstr "Филиал е приложен, но е в очакване на вашето решение."
+
+#: ../source/display_functions.php:12
+msgid "Affiliate has been approved, but has not accepted terms."
+msgstr "Филиал е бил одобрен, но не прие условията."
+
+#: ../source/display_functions.php:13
+msgid "Affiliate is active, and will receive credit for leads."
+msgstr "Филиал е активен и ще получите кредит за потенциални клиенти."
+
+#: ../source/display_functions.php:14
+msgid ""
+"Affiliate has accepted terms and provided payment details.<br /> If the "
+"details look good, you should activate this affiliate so they can begin "
+"sending traffic."
+msgstr ""
+"Филиал е приел условията и предоставена плащане подробности. <br /> Ако "
+"детайлите изглеждат добре, трябва да активирате този филиал, така че те "
+"могат да започне изпращане на трафик."
+
+#: ../source/display_functions.php:15
+msgid "Affiliate has been disabled."
+msgstr "Филиал е дезактивирана."
+
+#: ../source/display_functions.php:16
+msgid "Affiliate was declined."
+msgstr "Филиал е отклонено."
+
+#: ../source/display_functions.php:17
+msgid "Affiliate was blocked and cannot re-apply."
+msgstr "Филиал е блокиран и не може да кандидатстват отново."
+
+#: ../source/display_functions.php:23
+#, php-format
+msgid "%s per sale"
+msgstr "%s за продажба"
+
+#: ../source/display_functions.php:25
+#, php-format
+msgid "%s%% of pre-tax sales"
+msgstr ""
+
+#: ../source/dynamic-translatable-strings.php:4
+msgid "Address Line 1"
+msgstr ""
+
+#: ../source/dynamic-translatable-strings.php:5
+msgid "Address Line 2"
+msgstr ""
+
+#: ../source/dynamic-translatable-strings.php:6
+msgid "Zip Code"
+msgstr ""
+
+#: ../source/dynamic-translatable-strings.php:7
+msgid "Company Name"
+msgstr ""
+
+#: ../source/dynamic-translatable-strings.php:8
+msgid "Website URL"
+msgstr ""
+
+#~ msgid "WordPress Affiliate Manager requires WordPress 3.1 or higher."
+#~ msgstr "WordPress партньорски мениджър изисква WordPress 3.1 или висок."
+
+#~ msgid "unknown creative type."
+#~ msgstr "неизвестен творчески тип."
+
+#~ msgid "Only over payout minimum. (Balance >= %s)"
+#~ msgstr "Само над минималната за изплащане. (Баланс >= %s)"
+
+#~ msgid "<a href=\"%s\">How to Setup PayPal Mass Pay</a> (PDF)"
+#~ msgstr "<a href=\"%s\"> как да настройка на PayPal маса заплати</a> (PDF)"
+
+#~ msgid "Invalid PaPpal API value"
+#~ msgstr "Невалидна стойност на PayPal API"
+
+#~ msgid ""
+#~ "WP Affiliate Manager was unable to load your currency from your WPLANG "
+#~ "setting: %s"
+#~ msgstr ""
+#~ "WP партньорски мениджър не успя да зареди си валута от настройката на "
+#~ "WPLANG: %s"
+
+#~ msgid ""
+#~ "Your currency will be displayed as %s and PayPal payments will be paid in "
+#~ "%s"
+#~ msgstr ""
+#~ "Вашата валута ще бъде показан като %s и PayPal плащания ще бъдат платени "
+#~ "в %s"
+
+#~ msgid ""
+#~ "WP Affiliate Manager has been updated and needs to be deactivated and re-"
+#~ "activated to perform upgrades in order work"
+#~ msgstr ""
+#~ "WP партньорски мениджър е актуализиран и трябва да бъде деактивирана и "
+#~ "активирана отново за извършване на подобрения в работа"
+
+#~ msgid "Invalid PayPa LogID"
+#~ msgstr "Невалиден PayPal LogID"
+
+#~ msgid "Status: Active"
+#~ msgstr "Статус: активен"
+
+#~ msgid "Status: Applied"
+#~ msgstr "Статус: прилагане"
+
+#~ msgid "Status: Approved"
+#~ msgstr "Статус: одобрените"
+
+#~ msgid "Status: Confirmed"
+#~ msgstr "Статус: потвърди"
+
+#~ msgid "Status: Declined"
+#~ msgstr "Статус: намаля"
+
+#~ msgid "Status: Blocked"
+#~ msgstr "Статус: блокирани"
+
+#~ msgid "Status: Inactive"
+#~ msgstr "Статус: неактивен"
+
+#~ msgid "CANNOT PERFORM DB UPGRADE FROM %s to %s"
+#~ msgstr "Не може да ИЗВЪРШИ DB ЪПГРЕЙД от %s на %s"

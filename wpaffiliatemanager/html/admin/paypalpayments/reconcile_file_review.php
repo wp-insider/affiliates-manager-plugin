@@ -63,7 +63,7 @@ $affiliates = $this->viewData['affiliates'];
 		<?php } ?>
 		<tr>
 			<td colspan="100" style="text-align: right; padding: 20px;">
-				<input type="submit" value="<?php _e('Reoncile Mass Payment', 'affiliates-manager');?>" class="button-primary" id="btnSubmit" />
+				<input type="submit" value="<?php _e('Reconcile Mass Payment', 'affiliates-manager');?>" class="button-primary" id="btnSubmit" />
 			</td>
 		</tr>
 		</tbody>

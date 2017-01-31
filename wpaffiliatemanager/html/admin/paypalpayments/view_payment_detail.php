@@ -27,7 +27,7 @@ $affiliates = $this->viewData['affiliates'];
 				<td>
 					<div style="margin-left: 25px; margin-top: 25px;">
 						<a class="button-secondary" href="<?php echo admin_url('admin.php?page=wpam-payments&step=reconcile_manual&id='.$massPayment->paypalLogId)?>"><?php _e('Manually reconcile payments ... ', 'affiliates-manager');?></a><br/><br/>
-						<a class="button-secondary" href="<?php echo admin_url('admin.php?page=wpam-payments&step=reconcile_with_file&id='.$massPayment->paypalLogId)?>"><?php _e('Reoncile using PayPal Mass Payment results file ... ', 'affiliates-manager');?></a><br/><br/>
+						<a class="button-secondary" href="<?php echo admin_url('admin.php?page=wpam-payments&step=reconcile_with_file&id='.$massPayment->paypalLogId)?>"><?php _e('Reconcile using PayPal Mass Payment results file ... ', 'affiliates-manager');?></a><br/><br/>
 					</div>
 
 				</td>
