@@ -306,8 +306,7 @@ class WPAM_Plugin
         public function doLoginShortcode()
         {
             $home_page_id = get_option( WPAM_PluginConfig::$HomePageId );
-            $home_page_obj = get_post($home_page_id);
-            $home_page_url = $home_page_obj -> guid;
+            $home_page_url = get_permalink($home_page_id);
                         
             if(is_user_logged_in()) {
                 global $current_user;
