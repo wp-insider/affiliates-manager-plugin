@@ -133,5 +133,25 @@ class WPAM_Click_Tracking {
 
         return $user_ip;
     }
+    
+    public static function get_referrer_id_from_ip_address($ip_address) {
+        if(!isset($ip_address) || empty($ip_address)){
+            return "";
+        }
+        global $wpdb;
+        $table = WPAM_TRACKING_TOKENS_TBL;
+        $aff_id = '';
+        $result = $wpdb->get_row( $wpdb->prepare( 
+	"
+		SELECT * FROM $table 
+		WHERE ipAddress = %s              
+	",
+        $ip_address       
+        ) );
+        if(null !== $result){
+            $aff_id = $result->sourceAffiliateId;
+        }
+        return $aff_id;
+    }
 
 }
