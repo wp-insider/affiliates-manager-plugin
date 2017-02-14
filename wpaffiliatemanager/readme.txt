@@ -133,8 +133,10 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.4.1 =
+= 2.4.1 =
 - Added a function to retrieve the referrer ID via IP address.
+- Created a new addon to integrate MemberMouse with affiliates manager plugin. See details below:
+  https://wpaffiliatemanager.com/affiliates-manager-membermouse-plugin-integration/
 
 = 2.4.0 =
 - Fixed a bug where the login page could redirect to a 404 page when the affiliate homepage URL is customized

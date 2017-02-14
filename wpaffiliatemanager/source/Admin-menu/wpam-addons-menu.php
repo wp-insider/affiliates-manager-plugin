@@ -176,6 +176,14 @@ function wpam_display_addons_menu()
     );
     array_push($addons_data, $addon_21);
     
+    $addon_22 = array(
+        'name' => 'MemberMouse Integration',
+        'thumbnail' => WPAM_URL . '/images/addons/membermouse-integration.png',
+        'description' => 'Integrates with MemberMouse plugin so you can reward affiliates for sending members.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-membermouse-plugin-integration/',
+    );
+    array_push($addons_data, $addon_22);
+    
     //Display the list
     $output = '';
     foreach ($addons_data as $addon) {
