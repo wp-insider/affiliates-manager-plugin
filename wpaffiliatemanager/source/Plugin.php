@@ -326,6 +326,7 @@ class WPAM_Plugin
                     'echo' => false,
                     'redirect' => $home_page_url,
                     'remember' => true,
+                    'label_username' => __('Email Address')
                 );
                 $lost_password_link = '<a href="'.wp_lostpassword_url().'" title="'.__('Password Lost and Found', 'affiliates-manager').'">'.__('Lost your password?', 'affiliates-manager').'</a>';
                 $form_output = '<div class="wpam-login-form">';
