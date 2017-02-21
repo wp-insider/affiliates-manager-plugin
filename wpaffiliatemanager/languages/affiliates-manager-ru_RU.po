@@ -1,0 +1,2316 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Affiliates Manager\n"
+"POT-Creation-Date: 2017-02-14 10:58+0300\n"
+"PO-Revision-Date: 2017-02-19 19:16+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru_RU\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../boot-strap.php:38
+msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
+msgstr "WordPress Affiliate Manager требует PHP 5.1 и выше."
+
+#: ../boot-strap.php:42
+msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
+msgstr "WordPress Affiliate Manager требует WordPress 3.5 или выше."
+
+#: ../classes/ListAffiliatesTable.php:40 ../html/admin/manage_creatives.php:176
+#: ../html/admin/paypalpayments/pending_payments.php:23
+msgid "View"
+msgstr "Посмотреть"
+
+#: ../classes/ListAffiliatesTable.php:61 ../classes/ListClicksTable.php:55
+#: ../classes/ListCommissionTable.php:62
+#: ../source/Admin-menu/wpam-commission-menu.php:172
+msgid "Affiliate ID"
+msgstr "ID партнера"
+
+#: ../classes/ListAffiliatesTable.php:62 ../html/admin/creatives_detail.php:239
+#: ../html/admin/manage_creatives.php:165
+#: ../html/admin/paypalpayments/pending_payments.php:16
+#: ../html/admin/paypalpayments/view_payment_detail.php:61
+#: ../html/transaction_table.php:47
+msgid "Status"
+msgstr "Статус"
+
+#: ../classes/ListAffiliatesTable.php:63
+#: ../html/admin/paypalpayments/review_affiliates.php:58
+#: ../html/admin/paypalpayments/select_affiliates.php:129
+#: ../html/affiliate_cp_home.php:16 ../html/transaction_table.php:52
+msgid "Balance"
+msgstr "Баланс"
+
+#: ../classes/ListAffiliatesTable.php:64
+msgid "Earnings"
+msgstr "Прибыль"
+
+#: ../classes/ListAffiliatesTable.php:65
+#: ../html/admin/paypalpayments/review_affiliates.php:54
+#: ../html/admin/paypalpayments/select_affiliates.php:125
+msgid "First Name"
+msgstr "Имя"
+
+#: ../classes/ListAffiliatesTable.php:66
+#: ../html/admin/paypalpayments/review_affiliates.php:55
+#: ../html/admin/paypalpayments/select_affiliates.php:126
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: ../classes/ListAffiliatesTable.php:67 ../source/Plugin.php:320
+msgid "Email"
+msgstr "Email"
+
+#: ../classes/ListAffiliatesTable.php:68
+#: ../html/admin/paypalpayments/review_affiliates.php:56
+#: ../html/admin/paypalpayments/select_affiliates.php:127
+msgid "Company"
+msgstr "Компания"
+
+#: ../classes/ListAffiliatesTable.php:69
+msgid "Date Joined"
+msgstr "Присоединился"
+
+#: ../classes/ListAffiliatesTable.php:70
+msgid "Website"
+msgstr "Сайт"
+
+#: ../classes/ListAffiliatesTable.php:97 ../classes/ListCommissionTable.php:91
+msgid "Error! You need to select multiple records to perform a bulk action!"
+msgstr "Ошибка! Вы должны выбрать несколько записей для группового действия!"
+
+#: ../classes/ListAffiliatesTable.php:115
+#: ../classes/ListCommissionTable.php:100
+msgid "Selected records deleted successfully!"
+msgstr "Выбранные записи удалены!"
+
+#: ../classes/ListAffiliatesTable.php:139
+#: ../classes/ListCommissionTable.php:116
+msgid "Selected record deleted successfully!"
+msgstr "Выбранная запись удалена!"
+
+#: ../classes/ListClicksTable.php:53 ../classes/ListCommissionTable.php:60
+msgid "Row ID"
+msgstr "ID строки"
+
+#: ../classes/ListClicksTable.php:54 ../classes/ListCommissionTable.php:61
+#: ../source/Admin-menu/wpam-commission-menu.php:202
+msgid "Date"
+msgstr "Дата"
+
+#: ../classes/ListClicksTable.php:56
+msgid "Tracking Key"
+msgstr "Код отслеживания"
+
+#: ../classes/ListClicksTable.php:57
+msgid "Referring URL"
+msgstr "Ссылка"
+
+#: ../classes/ListClicksTable.php:58
+msgid "IP Address"
+msgstr "IP-адрес"
+
+#: ../classes/ListCommissionTable.php:63
+#: ../html/admin/paypalpayments/pending_payments.php:13
+#: ../html/admin/paypalpayments/view_payment_detail.php:20
+#: ../html/admin/paypalpayments/view_payment_detail.php:63
+#: ../html/transaction_table.php:50
+msgid "Amount"
+msgstr "Сумма"
+
+#: ../classes/ListCommissionTable.php:64
+#: ../source/Admin-menu/wpam-commission-menu.php:190
+msgid "Transaction ID"
+msgstr "ID транзакции"
+
+#: ../classes/ListCommissionTable.php:65
+#: ../source/Admin-menu/wpam-commission-menu.php:196
+msgid "Buyer Email"
+msgstr "Email покупателя"
+
+#: ../classes/ListTable.php:77
+msgid "No items found."
+msgstr "Ничего не найдено."
+
+#: ../classes/ListTable.php:141
+msgid "Bulk Actions"
+msgstr "Групповые действия"
+
+#: ../classes/ListTable.php:151 ../html/admin/affiliate_detail.php:283
+#: ../html/admin/affiliate_detail.php:314
+#: ../html/admin/paypalpayments/select_affiliates.php:115
+#: ../html/transaction_table.php:35
+msgid "Apply"
+msgstr "Применить"
+
+#: ../classes/ListTable.php:201
+msgid "Show all dates"
+msgstr "Показать все даты"
+
+#: ../classes/ListTable.php:220
+msgid "List View"
+msgstr "В виде списка"
+
+#: ../classes/ListTable.php:221
+msgid "Excerpt View"
+msgstr "В виде отрывков"
+
+#: ../classes/ListTable.php:237
+#, php-format
+msgid "%s pending"
+msgstr "%s в ожидании"
+
+#: ../html/admin/affiliate_detail.php:141
+#, php-format
+msgid "YES, Block all applications from %s"
+msgstr "ДА, заблокировать все заявки с %s"
+
+#: ../html/admin/affiliate_detail.php:150
+msgid "NO, They may re-apply"
+msgstr "НЕТ, они могут примениться повторно"
+
+#: ../html/admin/affiliate_detail.php:159
+msgid ""
+"Do you want to block all future applications from this email address, or "
+"allow them to sign up at a later date?"
+msgstr ""
+"Вы хотите заблокировать все последующие заявки с этого email, или позволить "
+"им зарегистрироваться позже?"
+
+#: ../html/admin/affiliate_detail.php:188
+msgid "Payout"
+msgstr "Вывод средств"
+
+#: ../html/admin/affiliate_detail.php:219
+#: ../html/admin/affiliate_detail.php:236
+#: ../html/admin/creative_update_form.php:82
+#: ../html/admin/creatives_detail.php:114
+#: ../html/admin/creatives_detail.php:137 ../html/admin/manage_creatives.php:38
+#: ../html/affiliate_creative_detail.php:19
+#: ../source/Pages/Admin/MyAffiliatesPage.php:163
+#: ../source/Pages/Admin/NewAffiliatePage.php:86
+#: ../source/Pages/AffiliatesHome.php:528
+msgid "OK"
+msgstr "ОК"
+
+#: ../html/admin/affiliate_detail.php:236
+#: ../html/admin/affiliate_detail.php:279
+#: ../html/admin/affiliate_detail.php:310 ../html/admin/creatives_detail.php:83
+#: ../html/admin/creatives_detail.php:92 ../html/admin/manage_creatives.php:90
+msgid "Cancel"
+msgstr "Отмена"
+
+#: ../html/admin/affiliate_detail.php:249
+msgid "Are you sure you wish to approve this affiliate?"
+msgstr "Вы уверены, что хотите подтвердить этого партнёра?"
+
+#: ../html/admin/affiliate_detail.php:250
+msgid "Yes, approve."
+msgstr "Да, подтвердить."
+
+#: ../html/admin/affiliate_detail.php:292
+msgid "Are you sure you wish to apply an adjustment of "
+msgstr "Вы уверены, что хотите подтвердить перевод средств "
+
+#: ../html/admin/affiliate_detail.php:292
+#: ../html/admin/affiliate_detail.php:334
+msgid " to this account? The new balance will be "
+msgstr " на этот аккаунт? Новый баланс будет составлять "
+
+#: ../html/admin/affiliate_detail.php:293
+#: ../html/admin/affiliate_detail.php:335
+msgid "Yes, apply it."
+msgstr "Да, применить."
+
+#: ../html/admin/affiliate_detail.php:334
+msgid "Are you sure you wish to apply a payout of "
+msgstr "Вы уверены, что хотите вывести средства "
+
+#: ../html/admin/affiliate_detail.php:369
+msgid "Are you sure you wish to decline this affiliate?"
+msgstr "Вы уверены, что хотите отклонить этого партнёра?"
+
+#: ../html/admin/affiliate_detail.php:369
+msgid "Yes, DECLINE."
+msgstr "Да, ОТКЛОНИТЬ."
+
+#: ../html/admin/affiliate_detail.php:373
+msgid "Are you sure you wish to block this affiliate?"
+msgstr "Вы уверены, что хотите заблокировать этого партнёра?"
+
+#: ../html/admin/affiliate_detail.php:373
+msgid "Yes, BLOCK."
+msgstr "Да, ЗАБЛОКИРОВАТЬ."
+
+#: ../html/admin/affiliate_detail.php:383
+msgid ""
+"Are you sure you wish to unblock this affiliate?<br>User will become "
+"DECLINED."
+msgstr "Вы уверены, что хотите разблокировать этого партнёра?"
+
+#: ../html/admin/affiliate_detail.php:383
+msgid "Yes, UNBLOCK."
+msgstr "Да, РАЗБЛОКИРОВАТЬ."
+
+#: ../html/admin/affiliate_detail.php:394
+msgid "Are you sure you wish to activate this affiliate?"
+msgstr "Вы уверены, что хотите активировать этого партнёра?"
+
+#: ../html/admin/affiliate_detail.php:394 ../html/admin/creatives_detail.php:86
+msgid "Yes, ACTIVATE."
+msgstr "Да, АКТИВИРОВАТЬ."
+
+#: ../html/admin/affiliate_detail.php:398
+msgid "Are you sure you wish to deactivate this affiliate?"
+msgstr "Вы уверены, что хотите деактивировать этого партнёра?"
+
+#: ../html/admin/affiliate_detail.php:398 ../html/admin/creatives_detail.php:95
+msgid "Yes, DEACTIVATE."
+msgstr "Да, ДЕАКТИВИРОВАТЬ."
+
+#: ../html/admin/affiliate_detail.php:417
+msgid "Approve Application"
+msgstr "Одобрить заявку"
+
+#: ../html/admin/affiliate_detail.php:423
+#: ../html/admin/affiliate_detail.php:567
+#: ../html/admin/settings/settings_general.php:157
+msgid "Bounty Type"
+msgstr "Тип вознаграждения"
+
+#: ../html/admin/affiliate_detail.php:427
+#: ../html/admin/settings/settings_general.php:161 ../html/contact_info.php:132
+msgid "Percentage of Sales"
+msgstr "Процент от продаж"
+
+#: ../html/admin/affiliate_detail.php:428
+#: ../html/admin/settings/settings_general.php:162 ../html/contact_info.php:133
+msgid "Fixed Amount per Sale"
+msgstr "Фиксированная сумма за продажу"
+
+#: ../html/admin/affiliate_detail.php:434
+#: ../html/admin/settings/settings_general.php:169
+#: ../source/Pages/Admin/MyAffiliatesPage.php:162
+#: ../source/Pages/Admin/NewAffiliatePage.php:85
+#: ../source/Pages/AffiliatesHome.php:527
+#, php-format
+msgid "Bounty Rate (% of Sale)"
+msgstr "Вознаграждение (% от суммы покупки)"
+
+#: ../html/admin/affiliate_detail.php:446
+#: ../html/admin/creatives_detail.php:161
+msgid "Updating, please wait ... "
+msgstr "Идёт обновление, подождите, пожалуйста ..."
+
+#: ../html/admin/affiliate_detail.php:451
+#: ../html/admin/creatives_detail.php:166
+msgid "Are you sure?"
+msgstr "Вы уверены?"
+
+#: ../html/admin/affiliate_detail.php:452
+msgid "approve"
+msgstr "подтвердить"
+
+#: ../html/admin/affiliate_detail.php:454
+#: ../html/admin/creatives_detail.php:169
+msgid "Error"
+msgstr "Ошибка"
+
+#: ../html/admin/affiliate_detail.php:455
+#: ../html/admin/creatives_detail.php:170
+#: ../html/admin/manage_creatives.php:109
+msgid "ERROR:"
+msgstr "ОШИБКА:"
+
+#: ../html/admin/affiliate_detail.php:458
+msgid "Apply Adjustment "
+msgstr "Подтвердить перевод средств"
+
+#: ../html/admin/affiliate_detail.php:462
+msgid "Amount "
+msgstr "Сумма"
+
+#: ../html/admin/affiliate_detail.php:468
+msgid "Description "
+msgstr "Описание"
+
+#: ../html/admin/affiliate_detail.php:477
+msgid "Apply Payout "
+msgstr "Вывести средства"
+
+#: ../html/admin/affiliate_detail.php:481
+msgid "Payout Amount "
+msgstr "Сумма вывода средств"
+
+#: ../html/admin/affiliate_detail.php:484
+msgid "Current balance"
+msgstr "Текущий баланс"
+
+#: ../html/admin/affiliate_detail.php:487
+msgid "Other amount"
+msgstr "Прочая сумма"
+
+#: ../html/admin/affiliate_detail.php:496
+msgid "Affiliate:"
+msgstr "Партнёр:"
+
+#: ../html/admin/affiliate_detail.php:502 ../source/Pages/AffiliatesHome.php:32
+msgid "Overview"
+msgstr "Обзор"
+
+#: ../html/admin/affiliate_detail.php:503
+msgid "Account Finances"
+msgstr "Финансы на аккаунте"
+
+#: ../html/admin/affiliate_detail.php:504
+msgid "Information"
+msgstr "Информация"
+
+#: ../html/admin/affiliate_detail.php:505
+msgid "Affiliate Links"
+msgstr "Партнёрские ссылки"
+
+#: ../html/admin/affiliate_detail.php:507
+#: ../html/admin/affiliate_detail.php:589 ../html/affiliate_cp_home.php:39
+#: ../html/affiliate_cp_home.php:73 ../source/Pages/AffiliatesHome.php:40
+msgid "Impressions"
+msgstr "Отпечатки"
+
+#: ../html/admin/affiliate_detail.php:516
+msgid "Approve"
+msgstr "Одобрить"
+
+#: ../html/admin/affiliate_detail.php:517
+msgid "Decline"
+msgstr "Отклонить"
+
+#: ../html/admin/affiliate_detail.php:519
+#: ../html/admin/creatives_detail.php:212
+msgid "Activate"
+msgstr "Активировать"
+
+#: ../html/admin/affiliate_detail.php:521
+msgid "Dectivate"
+msgstr "Деактивировать"
+
+#: ../html/admin/affiliate_detail.php:523
+msgid "Unblock"
+msgstr "Разблокировать"
+
+#: ../html/admin/affiliate_detail.php:525
+msgid "Block"
+msgstr "Заблокировать"
+
+#: ../html/admin/affiliate_detail.php:531
+#: ../html/admin/creative_update_form.php:131
+#: ../html/admin/creatives_detail.php:227
+#: ../html/admin/settings/settings.php:46
+msgid "General"
+msgstr "Общие"
+
+#: ../html/admin/affiliate_detail.php:535
+msgid "Date Applied"
+msgstr "Когда подтверждено"
+
+#: ../html/admin/affiliate_detail.php:536
+msgid "Affiliate Status"
+msgstr "Статус партнёра"
+
+#: ../html/admin/affiliate_detail.php:539
+msgid "Account Standing"
+msgstr "Постоянный аккаунт"
+
+#: ../html/admin/affiliate_detail.php:563
+#: ../html/affiliate_cp_payment_details_form.php:69
+#: ../html/affiliate_cp_payment_details_simple.php:13
+#: ../html/contact_info.php:88
+msgid "Payment Details"
+msgstr "Детали платежа"
+
+#: ../html/admin/affiliate_detail.php:568
+msgid "Bounty Amount"
+msgstr "Сумма вознаграждения"
+
+#: ../html/admin/affiliate_detail.php:570
+msgid "Payment Method"
+msgstr "Метод оплаты"
+
+#: ../html/admin/affiliate_detail.php:572
+msgid "Paypal E-Mail"
+msgstr "Paypal Email"
+
+#: ../html/admin/affiliate_detail.php:574
+msgid "Make Check Out To"
+msgstr "Сделать вывод на"
+
+#: ../html/admin/affiliate_detail.php:584
+msgid "Statistics"
+msgstr "Статистика"
+
+#: ../html/admin/affiliate_detail.php:591
+msgid "Visits"
+msgstr "Визиты"
+
+#: ../html/admin/affiliate_detail.php:592
+msgid "Purchases"
+msgstr "Покупки"
+
+#: ../html/admin/affiliate_detail.php:603
+msgid "Balance:"
+msgstr "Баланс:"
+
+#: ../html/admin/affiliate_detail.php:606
+msgid "Earnings:"
+msgstr "Прибыль:"
+
+#: ../html/admin/affiliate_detail.php:607
+msgid "Payments:"
+msgstr "Платежи:"
+
+#: ../html/admin/affiliate_detail.php:608
+msgid "Adjustments:"
+msgstr "Выводы средств:"
+
+#: ../html/admin/affiliate_detail.php:612
+msgid "Apply Payout"
+msgstr "Вывести средства"
+
+#: ../html/admin/affiliate_detail.php:613
+msgid "Apply Manual Adjustment"
+msgstr "Вручную перевести средства"
+
+#: ../html/admin/affiliate_detail.php:625
+#: ../html/admin/creative_update_form.php:108
+#: ../html/admin/creative_update_success.php:4 ../html/impressions_table.php:8
+msgid "Creative"
+msgstr "Рекламный материал"
+
+#: ../html/admin/affiliate_detail.php:626
+#: ../html/admin/creative_update_form.php:155
+#: ../html/admin/creatives_detail.php:247
+#: ../html/admin/manage_creatives.php:167
+#: ../html/admin/settings/settings_messaging.php:86
+#: ../html/admin/settings/settings_registration.php:440
+#: ../html/affiliate_creative_list.php:72 ../html/transaction_table.php:45
+msgid "Type"
+msgstr "Тип"
+
+#: ../html/admin/affiliate_detail.php:627
+msgid "Link"
+msgstr "Ссылка"
+
+#: ../html/admin/affiliate_management_home.php:2
+msgid "Affiliate Management Control Panel"
+msgstr "Панель управления партнёрами"
+
+#: ../html/admin/affiliate_new.php:3 ../html/admin/affiliate_new_success.php:2
+#: ../source/Plugin.php:89 ../source/Plugin.php:90
+msgid "New Affiliate"
+msgstr "Новый партнёр"
+
+#: ../html/admin/affiliate_new.php:6
+msgid ""
+"As an Affiliate Manager, if you want to create an affiliate account rather "
+"than directing someone to the normal registration form, you can do that "
+"here. Once you fill out the required contact information, your new affiliate "
+"will receive an email with their username and password.  They will "
+"automatically be approved, but will still have to log in to agree to the "
+"terms &amp; conditions and set their preferred payment method."
+msgstr ""
+"Здесь вы можете сами создать аккаунт партнёра вместо того, чтобы направлять "
+"нового участника на обычную форму регистрации. После того, как вы заполните "
+"контактные данные, ваш новый партнёр получит письмо на email с логином и "
+"паролем. Аккаунт будет автоматически подтверждён, но должен будет "
+"авторизироваться, чтобы ознакомиться с правилами партнёрской программы и "
+"выбрать метод оплаты."
+
+#: ../html/admin/affiliate_new_success.php:3
+msgid "New Affiliate has been created"
+msgstr "Новый партнёр создан"
+
+#: ../html/admin/affiliates_list.php:5 ../source/Plugin.php:84
+msgid "My Affiliates"
+msgstr "Мои партнёры"
+
+#: ../html/admin/affiliates_list.php:8
+msgid "All Active"
+msgstr "Все активные"
+
+#: ../html/admin/affiliates_list.php:9
+msgid "All (Including Closed)"
+msgstr "Все (включая неактивных)"
+
+#: ../html/admin/affiliates_list.php:10
+#: ../source/Pages/Admin/MyCreativesPage.php:58
+#: ../source/display_functions.php:166
+msgid "Active"
+msgstr "Активные"
+
+#: ../html/admin/affiliates_list.php:11 ../source/display_functions.php:160
+msgid "Applied"
+msgstr "Прикладные"
+
+#: ../html/admin/affiliates_list.php:12 ../source/display_functions.php:164
+msgid "Approved"
+msgstr "Подтверждённые"
+
+#: ../html/admin/affiliates_list.php:13
+#: ../html/affiliate_cp_payment_details_confirmed.php:2
+#: ../source/display_functions.php:170
+msgid "Confirmed"
+msgstr "Согласованные"
+
+#: ../html/admin/affiliates_list.php:14 ../source/display_functions.php:162
+msgid "Declined"
+msgstr "Отклонённые"
+
+#: ../html/admin/affiliates_list.php:15 ../source/display_functions.php:172
+msgid "Blocked"
+msgstr "Заблокированные"
+
+#: ../html/admin/affiliates_list.php:16
+#: ../source/Pages/Admin/MyCreativesPage.php:59
+#: ../source/display_functions.php:168
+msgid "Inactive"
+msgstr "Неактивные"
+
+#: ../html/admin/creative_update_form.php:103
+msgid ""
+"This list contains images from the media library. If you upload a new image "
+"it is added to the media library and you can reuse images on multiple "
+"creatives by selecting it from this list. If a new image file is added, it "
+"will be uploaded and will override the currently selected media library "
+"image for this creative link. However, the old image will still remain in "
+"the media library for future use."
+msgstr ""
+"Список содержит изображения из медиафайлов. Если вы загрузите новое "
+"изображение, оно добавится в медиафайлы, тогда вы сможете выбрать их из "
+"списка и использовать в нескольких рекламных материалах. Если вы добавите "
+"новое изображение, оно загрузится на сервер и заменит текущее выбранное "
+"изображение в рекламном материале. Однако предыдущее изображение будет "
+"доступно для использования в медиафайлах."
+
+#: ../html/admin/creative_update_form.php:108
+#: ../html/admin/creative_update_success.php:4
+#: ../html/admin/creatives_detail.php:216
+msgid "Edit"
+msgstr "Редактировать"
+
+#: ../html/admin/creative_update_form.php:108
+#: ../html/admin/creative_update_success.php:4
+msgid "New"
+msgstr "Новый"
+
+#: ../html/admin/creative_update_form.php:138
+#: ../html/admin/creatives_detail.php:243
+#: ../html/admin/manage_creatives.php:168
+#: ../html/admin/settings/settings_messaging.php:85
+#: ../html/affiliate_creative_list.php:73
+msgid "Name"
+msgstr "Имя"
+
+#: ../html/admin/creative_update_form.php:148
+#: ../html/admin/creatives_detail.php:259
+msgid "Landing Page"
+msgstr "Посадочная страница"
+
+#: ../html/admin/creative_update_form.php:175
+msgid "Image Parameters"
+msgstr "Параметры изображения"
+
+#: ../html/admin/creative_update_form.php:181
+msgid "New Image File"
+msgstr "Новое изображение"
+
+#: ../html/admin/creative_update_form.php:192
+msgid "Image File from Media Library"
+msgstr "Изображение из медиафайлов"
+
+#: ../html/admin/creative_update_form.php:202
+msgid "Preview:"
+msgstr "Предпросмотр:"
+
+#: ../html/admin/creative_update_form.php:213
+#: ../html/admin/creative_update_form.php:248
+#: ../html/admin/creatives_detail.php:280
+#: ../html/admin/creatives_detail.php:303
+#: ../html/affiliate_creative_detail.php:65
+#: ../html/affiliate_creative_detail.php:88
+msgid "Alt Text"
+msgstr "Alt Text"
+
+#: ../html/admin/creative_update_form.php:229
+msgid "Text Link Parameters"
+msgstr "Параметры ссылки"
+
+#: ../html/admin/creative_update_form.php:237
+#: ../html/admin/creatives_detail.php:276
+#: ../html/affiliate_creative_detail.php:61
+msgid "Link Text"
+msgstr "Текстовая ссылка"
+
+#: ../html/admin/creative_update_form.php:261
+msgid "Save Creative"
+msgstr "Сохранить рекламный материал"
+
+#: ../html/admin/creative_update_success.php:9
+msgid "Creative updated."
+msgstr "Рекламный материал обновлён"
+
+#: ../html/admin/creative_update_success.php:11
+msgid "New creative created.  This creative is not yet active."
+msgstr "Новый рекламный материал создан., но ещё не активен"
+
+#: ../html/admin/creative_update_success.php:16
+msgid "Return to Creatives"
+msgstr "Вернуться к рекламный материалам"
+
+#: ../html/admin/creatives_detail.php:8 ../html/admin/creatives_detail.php:297
+#: ../html/affiliate_creative_detail.php:82
+msgid "Image"
+msgstr "Изображение"
+
+#: ../html/admin/creatives_detail.php:9
+msgid "Text Link"
+msgstr "Текстовая ссылка"
+
+#: ../html/admin/creatives_detail.php:10
+msgid "Unknown creative type."
+msgstr "Неизвестный тип рекламных матереалов."
+
+#: ../html/admin/creatives_detail.php:143
+msgid "ACTIVATE"
+msgstr "АКТИВИРОВАТЬ"
+
+#: ../html/admin/creatives_detail.php:148
+msgid "DEACTIVATE"
+msgstr "ДЕАКТИВИРОВАТЬ"
+
+#: ../html/admin/creatives_detail.php:167
+msgid "Are you sure you wish to"
+msgstr "Вы уверены, что хотите"
+
+#: ../html/admin/creatives_detail.php:167
+msgid "this creative?"
+msgstr "этот рекламный матереал?"
+
+#: ../html/admin/creatives_detail.php:174
+#: ../html/admin/creatives_detail.php:215
+#: ../html/affiliate_creative_detail.php:32
+#: ../html/affiliate_creative_detail.php:45
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#: ../html/admin/creatives_detail.php:194
+#: ../html/affiliate_creative_detail.php:43
+msgid "Creative:"
+msgstr "Рекламные матереалы:"
+
+#: ../html/admin/creatives_detail.php:206
+#: ../html/admin/manage_creatives.php:163
+msgid "Actions"
+msgstr "Действия"
+
+#: ../html/admin/creatives_detail.php:210
+msgid "Deactivate"
+msgstr "Деактивировать."
+
+#: ../html/admin/creatives_detail.php:234
+#: ../html/admin/manage_creatives.php:164
+#: ../html/admin/paypalpayments/pending_payments.php:10
+#: ../html/admin/paypalpayments/view_payment_detail.php:57
+#: ../html/impressions_table.php:6 ../html/transaction_table.php:44
+msgid "ID"
+msgstr "ID"
+
+#: ../html/admin/creatives_detail.php:271
+#: ../html/affiliate_creative_detail.php:56
+msgid "Text Link Properties"
+msgstr "Свойства текстовой ссылки"
+
+#: ../html/admin/creatives_detail.php:292
+#: ../html/affiliate_creative_detail.php:77
+msgid "Image Properties"
+msgstr "Свойства изображения"
+
+#: ../html/admin/manage_creatives.php:64
+msgid "Yes, delete this creative"
+msgstr "Да, удалить этот рекламный материал."
+
+#: ../html/admin/manage_creatives.php:113
+msgid "Updating, please wait ..."
+msgstr "Идёт обновление, пожалуйста, подождите ..."
+
+#: ../html/admin/manage_creatives.php:120
+msgid "Delete Creative?"
+msgstr "Удалить  рекманый материал?"
+
+#: ../html/admin/manage_creatives.php:121
+msgid "This creative will be deleted. Are you sure?"
+msgstr "Этот рекламный материал будет обновлён. Ты уверен?"
+
+#: ../html/admin/manage_creatives.php:126 ../source/Plugin.php:96
+msgid "My Creatives"
+msgstr "Мои  рекламные материалы"
+
+#: ../html/admin/manage_creatives.php:132
+msgid "Filter"
+msgstr "Фильтр"
+
+#: ../html/admin/manage_creatives.php:137
+msgid "Status:"
+msgstr "Статус:"
+
+#: ../html/admin/manage_creatives.php:155
+msgid "Create New"
+msgstr "Создать новый"
+
+#: ../html/admin/manage_creatives.php:166
+msgid "Created"
+msgstr "Созданы"
+
+#: ../html/admin/manage_creatives.php:177
+msgid "Delete"
+msgstr "Удалить"
+
+#: ../html/admin/paypalpayments/home.php:17
+msgid "New Mass Payment"
+msgstr "Новый групповой платёж"
+
+#: ../html/admin/paypalpayments/home.php:20
+msgid "View Previous Mass Payments"
+msgstr "Посмотреть групповой платёж"
+
+#: ../html/admin/paypalpayments/not_configured.php:2
+#: ../html/admin/paypalpayments/pending_payments.php:3
+#: ../html/admin/paypalpayments/review_affiliates.php:45
+#: ../html/admin/paypalpayments/select_affiliates.php:102
+#: ../html/admin/paypalpayments/view_payment_detail.php:7
+#: ../source/Plugin.php:101 ../source/Plugin.php:102
+msgid "PayPal Mass Pay"
+msgstr "Групповая оплата Paypal"
+
+#: ../html/admin/paypalpayments/not_configured.php:3
+msgid "Not configured"
+msgstr "Не настроено"
+
+#: ../html/admin/paypalpayments/not_configured.php:5
+#, php-format
+msgid ""
+"You have not configured the Affiliate Manager with your PayPal account "
+"information. You can do so in the <a href=\"%s\">Payment Settings page</a>."
+msgstr ""
+"Вы Не настроили аккаунт PayPal для Affiliate Manager. Вы можете сделать это "
+"в <a href=\"%s\">настройках платежей</a>."
+
+#: ../html/admin/paypalpayments/pending_payments.php:4
+msgid "View Existing Payments"
+msgstr "Показать существующие платежи"
+
+#: ../html/admin/paypalpayments/pending_payments.php:11
+msgid "Date Posted"
+msgstr "Дата публикации"
+
+#: ../html/admin/paypalpayments/pending_payments.php:12
+msgid "PayPal ID"
+msgstr "PayPal ID"
+
+#: ../html/admin/paypalpayments/pending_payments.php:14
+#: ../html/admin/paypalpayments/view_payment_detail.php:21
+msgid "Fee"
+msgstr "Комиссия"
+
+#: ../html/admin/paypalpayments/pending_payments.php:15
+msgid "Total"
+msgstr "Итого"
+
+#: ../html/admin/paypalpayments/pending_payments.php:36
+msgid "(No Mass Payments on Record)"
+msgstr "(в записи нет групповых платежей)"
+
+#: ../html/admin/paypalpayments/reconcile_file_review.php:66
+#: ../html/admin/paypalpayments/reconcile_manual.php:81
+msgid "Reconcile Mass Payment"
+msgstr "Согласовать групповой платёж"
+
+#: ../html/admin/paypalpayments/reconcile_with_file.php:54
+msgid "Reconcile with this file"
+msgstr "Согласовать с этим файлом"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:10
+msgid "Yes, Submit to PayPal"
+msgstr "Да, отправить в PayPal"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:17
+msgid "No, Cancel"
+msgstr "Нет, Отменить"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:39
+msgid "Submit to PayPal?"
+msgstr "Отправить в PayPal?"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:40
+msgid "Are you sure you wish to submit a mass payment to PayPal?"
+msgstr "Вы уверены, что хотите отправить групповой платёж в PayPal?"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:41
+#, php-format
+msgid "Your PayPal account will be charged %s!"
+msgstr "Ваш PayPal аккаунт изменится %s!"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:46
+msgid "Review Your Mass Payment"
+msgstr "Обзор групповых платежей"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:53
+#: ../html/admin/paypalpayments/select_affiliates.php:124
+msgid "AID"
+msgstr "AID"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:57
+#: ../html/admin/paypalpayments/select_affiliates.php:128
+#: ../html/admin/paypalpayments/view_payment_detail.php:60
+msgid "PayPal E-Mail"
+msgstr "PayPal E-Mail"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:60
+#: ../html/admin/settings/settings.php:49
+msgid "Payment"
+msgstr "Платёж"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:62
+msgid "New Balance"
+msgstr "Новый баланс"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:93
+msgid "Sub-Total"
+msgstr "Подытог"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:97
+#: ../html/admin/paypalpayments/select_affiliates.php:175
+#, php-format
+msgid "PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>"
+msgstr ""
+"Комиссия PayPal<br /><small>2%% за платёж, максимум %s1 за платёж</small>"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:102
+#: ../html/admin/paypalpayments/select_affiliates.php:180
+msgid "Estimated Total"
+msgstr "Полная стоимость"
+
+#: ../html/admin/paypalpayments/review_affiliates.php:106
+msgid "Submit Mass Payment to PayPal"
+msgstr "Отправить групповой платёж в PayPal"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:103
+msgid "Select Affiliates to Pay"
+msgstr "Выберите партнёров для платежа"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:106
+#, php-format
+msgid "Not showing %s affiliates that do not have a PayPal account on file."
+msgstr ""
+"%s партнёры не показываются, потому что в файле нет их PayPal  аккаунтов."
+
+#: ../html/admin/paypalpayments/select_affiliates.php:110
+#: ../html/transaction_table.php:27
+msgid "Date Range:"
+msgstr "Временной интервал:"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:111
+msgid "from"
+msgstr "от"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:113
+msgid "to"
+msgstr "куда"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:116
+#: ../html/transaction_table.php:36
+msgid "Clear"
+msgstr "Сбросить"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:130
+msgid "Payment Amount"
+msgstr "Сумма платежа"
+
+#: ../html/admin/paypalpayments/select_affiliates.php:185
+msgid "Continue with these payments"
+msgstr "Продолжить с этими платежами"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:8
+msgid "Payment Detail"
+msgstr "Детали платежа"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:16
+msgid "Database ID"
+msgstr "ID базы данных"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:17
+#: ../html/admin/paypalpayments/view_payment_detail.php:58
+#: ../html/impressions_table.php:7 ../html/transaction_table.php:46
+msgid "Date Occurred"
+msgstr "Дата исполнения"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:18
+msgid "PayPal Timestamp"
+msgstr "Временная метка PayPal"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:19
+msgid "PayPal Correlation ID"
+msgstr "PayPal Correlation ID"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:22
+msgid "Total Amount"
+msgstr "Полная стоимость"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:26
+msgid "Reconciliation"
+msgstr "Сверка"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:29
+msgid "Manually reconcile payments ... "
+msgstr "Сверить платежи вручную ... "
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:30
+msgid "Reconcile using PayPal Mass Payment results file ... "
+msgstr "Сверить платежи, используя файл групповых платежей PayPal  ... "
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:37
+msgid "Errors"
+msgstr "Ошибки"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:40
+msgid "Code:"
+msgstr "Код:"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:41
+msgid "Message:"
+msgstr "Сообщение:"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:42
+msgid "Severity:"
+msgstr "Строгость:"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:52
+msgid "Associated Transactions"
+msgstr "Подобные транзакции"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:59
+msgid "Affiliate"
+msgstr "Партнёр"
+
+#: ../html/admin/paypalpayments/view_payment_detail.php:62
+#: ../html/transaction_table.php:48
+msgid "Description"
+msgstr "Описание"
+
+#: ../html/admin/settings/settings.php:47
+msgid "Affiliate Registration"
+msgstr "Регистрация партнёра"
+
+#: ../html/admin/settings/settings.php:48
+msgid "Messaging"
+msgstr "Сообщения"
+
+#: ../html/admin/settings/settings.php:50
+msgid "Pages/Forms"
+msgstr "Страницы/Формы"
+
+#: ../html/admin/settings/settings.php:51
+msgid "Advanced Settings"
+msgstr "Дополнительные настройки"
+
+#: ../html/admin/settings/settings.php:122
+msgid "Save Settings"
+msgstr "Сохранить настройки"
+
+#: ../html/admin/settings/settings_advanced.php:8
+msgid "Default Landing Page"
+msgstr "Посадочная страница (лэндинг)"
+
+#: ../html/admin/settings/settings_advanced.php:13
+#, php-format
+msgid ""
+"Your default landing page URL is <code>%s</code>. If you want to change to a "
+"different URL you can specify it here."
+msgstr "По умолчанию - <code>%s</code>. Здесь вы можете его сменить."
+
+#: ../html/admin/settings/settings_aff_pages.php:5
+msgid "Home Page"
+msgstr "Личный кабинет"
+
+#: ../html/admin/settings/settings_aff_pages.php:10
+msgid "This is the URL of your Affiliate Home page"
+msgstr "Ссылка на личный кабинет партнёра"
+
+#: ../html/admin/settings/settings_aff_pages.php:16
+msgid "Registration Page"
+msgstr "Страница регистрации"
+
+#: ../html/admin/settings/settings_aff_pages.php:21
+msgid "This is the URL of your Affiliate Registration page"
+msgstr "Ссылка на страницу регистрации партнёра"
+
+#: ../html/admin/settings/settings_aff_pages.php:27
+msgid "Login Page"
+msgstr "Страница авторизации"
+
+#: ../html/admin/settings/settings_aff_pages.php:32
+msgid "This is the URL of your Affiliate Login page"
+msgstr "Ссылка на страницу авторизации партнёра"
+
+#: ../html/admin/settings/settings_general.php:103
+msgid "Minimum Payout Amount"
+msgstr "Минимальная сумма вывода"
+
+#: ../html/admin/settings/settings_general.php:112
+msgid "Cookie Duration (days)"
+msgstr "Срок действия cookie (в днях)"
+
+#: ../html/admin/settings/settings_general.php:117
+#, php-format
+msgid "<a target=\"_blank\" href=\"%s\">Read more on cookie duration here</a>"
+msgstr ""
+"<a target=\"_blank\" href=\"%s\">Узнать больше про срок действия cookie</a>"
+
+#: ../html/admin/settings/settings_general.php:122
+msgid "Email name"
+msgstr "Имя при отправке email"
+
+#: ../html/admin/settings/settings_general.php:127
+#: ../html/admin/settings/settings_general.php:137
+msgid "(Leave blank to use WordPress default)"
+msgstr "(Отавьте пустым, чтобы использовать настройки WordPress)"
+
+#: ../html/admin/settings/settings_general.php:132
+msgid "Email address"
+msgstr "Email адрес"
+
+#: ../html/admin/settings/settings_general.php:144
+msgid "Automatically approve a new affiliate"
+msgstr "Автоматически подтверждать новых партнёров"
+
+#: ../html/admin/settings/settings_general.php:178
+msgid "Currency Symbol"
+msgstr "Символ валюты"
+
+#: ../html/admin/settings/settings_general.php:187
+msgid "Currency Code"
+msgstr "Код валюты"
+
+#: ../html/admin/settings/settings_general.php:197
+msgid "Do Not Record Zero Amount Commission"
+msgstr "Не записывать в историю нулевую комиссию"
+
+#: ../html/admin/settings/settings_general.php:210
+msgid "Enable Impressions"
+msgstr "Включить отпечатки"
+
+#: ../html/admin/settings/settings_general.php:219
+msgid "Enable Debug"
+msgstr "Включить отладку"
+
+#: ../html/admin/settings/settings_general.php:222
+msgid ""
+"If checked, debug output will be written to log files. This is useful for "
+"troubleshooting post payment failures."
+msgstr ""
+"Если отмечено, то вывод отладки будет записываться в log-файлы. Это полезно "
+"для отслеживания ошибок платежей."
+
+#: ../html/admin/settings/settings_general.php:223
+msgid ""
+"You can check the debug log file by clicking on the link below (The log file "
+"can be viewed using any text editor):"
+msgstr ""
+"Нажмите на ссылку ниже, чтобы просмотреть log-файлы отладки (это можно "
+"сделать в любом текстовом редакторе)"
+
+#: ../html/admin/settings/settings_general.php:227
+msgid "Reset Debug Log file"
+msgstr "Сбросить log-файл отладки"
+
+#: ../html/admin/settings/settings_general.php:228
+msgid "Use it to reset the affiliate manager plugin's log file."
+msgstr "Используйте для сброса log-файла плагина"
+
+#: ../html/admin/settings/settings_messaging.php:66
+msgid ""
+"These settings allow you to control text that is displayed to affiliates at "
+"various points in the affiliate plug-in, as well as e-mails that are sent."
+msgstr ""
+"Здесь вы можете редактировать текст, который показывается вашим партнёрам в "
+"различных ситуациях, в том числе отправляется по email."
+
+#: ../html/admin/settings/settings_messaging.php:71
+msgid "Use:"
+msgstr "Условия отображения:"
+
+#: ../html/admin/settings/settings_messaging.php:75
+msgid "Content:"
+msgstr "Содержание:"
+
+#: ../html/admin/settings/settings_messaging.php:87
+msgid "Use"
+msgstr "Условия отображения"
+
+#: ../html/admin/settings/settings_messaging.php:88
+msgid "Content"
+msgstr "Содержание"
+
+#: ../html/admin/settings/settings_messaging.php:118
+#, php-format
+msgid "%s(More)"
+msgstr "%s(Подробнее)"
+
+#: ../html/admin/settings/settings_messaging.php:125
+msgid ""
+"* Some messages have been modified. These will <strong>NOT</strong> be saved "
+"to the database until you click 'Save Settings' button below."
+msgstr ""
+"* Некоторые сообщения изменены. Они будут сохранены <strong>ТОЛЬКО</strong> "
+"после нажатия кнопки \"Сохранить настройки\" ниже."
+
+#: ../html/admin/settings/settings_payment.php:16
+msgid ""
+"Looking for help? Check out the bundled step-by-step guide for setting up "
+"PayPal Mass Pay:"
+msgstr ""
+"Нужна помощь? Используйте прикреплённую пошаговую инструкцию для настройки "
+"групповых платежей PayPal:"
+
+#: ../html/admin/settings/settings_payment.php:20
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">How to Setup PayPal Mass Pay</a> (PDF)"
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">Как настроить групповые платежи PayPal</a> "
+"(PDF)"
+
+#: ../html/admin/settings/settings_payment.php:29
+msgid ""
+"Enable PayPal Mass Pay &#0153;<br /><small>NOTE: Requires a PayPal Premier "
+"or PayPal Business account</small>"
+msgstr ""
+"Включить групповые платежи PayPal &#0153;<br /><small>ВНИМАНИЕ: Требуется "
+"PayPal Premier или PayPal Business аккаунт</small>"
+
+#: ../html/admin/settings/settings_payment.php:32
+msgid "PayPal API Configuration"
+msgstr "Конфигурация PayPal API"
+
+#: ../html/admin/settings/settings_payment.php:35
+msgid "API Username"
+msgstr "API логин"
+
+#: ../html/admin/settings/settings_payment.php:39
+msgid "API Password"
+msgstr "API пароль"
+
+#: ../html/admin/settings/settings_payment.php:43
+msgid "Signature"
+msgstr "Подпись"
+
+#: ../html/admin/settings/settings_payment.php:47
+msgid "API End Point"
+msgstr "Конечная точка API"
+
+#: ../html/admin/settings/settings_payment.php:47
+msgid "WARNING: Set to LIVE if you don't know what this is for!"
+msgstr "ВНИМАНИЕ: Установите LIVE, если вы не знаете, для чего это!"
+
+#: ../html/admin/settings/settings_payment.php:50
+#, php-format
+msgid "Live (%s)"
+msgstr "Live (%s)"
+
+#: ../html/admin/settings/settings_payment.php:51
+#, php-format
+msgid "Sandbox - TESTING (%s)"
+msgstr "Режим песочницы - ТЕСТИРОВАНИЕ (%s)"
+
+#: ../html/admin/settings/settings_registration.php:218
+msgid "Display name is required."
+msgstr "Заголовок нужно обязательно ввести."
+
+#: ../html/admin/settings/settings_registration.php:225
+msgid "Field name is required."
+msgstr "Имя поля нужно обязательно ввести."
+
+#: ../html/admin/settings/settings_registration.php:228
+msgid ""
+"Field name may only contains letters, numbers, underscores and hyphens, and "
+"must begin with a letter."
+msgstr ""
+"Имя поля должно начинаться с букв и может содержать буквы, цифры, знаки "
+"нижнего подчёркивания и дефисы."
+
+#: ../html/admin/settings/settings_registration.php:235
+msgid "This field name is already in use."
+msgstr "Такое имя поля уже используется."
+
+#: ../html/admin/settings/settings_registration.php:247
+msgid "Field length must be an non-0 positive number."
+msgstr "Длина поля должна быть больше 0."
+
+#: ../html/admin/settings/settings_registration.php:361
+msgid "Custom Field"
+msgstr "Пользовательское поле"
+
+#: ../html/admin/settings/settings_registration.php:368
+#: ../html/admin/settings/settings_registration.php:442
+msgid "Display Name"
+msgstr "Заголовок"
+
+#: ../html/admin/settings/settings_registration.php:375
+#: ../html/admin/settings/settings_registration.php:443
+msgid "Field Name"
+msgstr "Имя поля"
+
+#: ../html/admin/settings/settings_registration.php:382
+msgid "Field Type"
+msgstr "Тип поля"
+
+#: ../html/admin/settings/settings_registration.php:385
+msgid "Text"
+msgstr "Текст"
+
+#: ../html/admin/settings/settings_registration.php:386
+msgid "Number"
+msgstr "Число"
+
+#: ../html/admin/settings/settings_registration.php:387
+msgid "E-Mail Address"
+msgstr "E-Mail"
+
+#: ../html/admin/settings/settings_registration.php:388
+msgid "Phone Number"
+msgstr "Телефон"
+
+#: ../html/admin/settings/settings_registration.php:389
+msgid "State Code (US)"
+msgstr "Код штата (США)"
+
+#: ../html/admin/settings/settings_registration.php:390
+msgid "Zip Code (US)"
+msgstr "Zip Code (США)"
+
+#: ../html/admin/settings/settings_registration.php:391
+msgid "Country Code"
+msgstr "Код страны"
+
+#: ../html/admin/settings/settings_registration.php:392
+msgid "Social Security Number (US)"
+msgstr "Номер соц страхования (США)"
+
+#: ../html/admin/settings/settings_registration.php:399
+#: ../html/admin/settings/settings_registration.php:444
+msgid "Max Length"
+msgstr "Максимальная длина"
+
+#: ../html/admin/settings/settings_registration.php:412
+msgid "Available Payout Methods"
+msgstr "Доступные методы вывода средств"
+
+#: ../html/admin/settings/settings_registration.php:418
+#: ../source/Data/Models/AffiliateModel.php:180
+msgid "Check"
+msgstr "Проверить"
+
+#: ../html/admin/settings/settings_registration.php:422
+#: ../source/Data/Models/AffiliateModel.php:176
+msgid "PayPal"
+msgstr "PayPal"
+
+#: ../html/admin/settings/settings_registration.php:426
+#: ../source/Data/Models/AffiliateModel.php:178
+msgid "Manual"
+msgstr "Ручной"
+
+#: ../html/admin/settings/settings_registration.php:431
+msgid "Affiliate Register Fields"
+msgstr "Поля для регистрации партнёра"
+
+#: ../html/admin/settings/settings_registration.php:434
+msgid "Add Custom Field"
+msgstr "Добавить пользовательское поле"
+
+#: ../html/admin/settings/settings_registration.php:439
+msgid "Enabled"
+msgstr "Включен"
+
+#: ../html/admin/settings/settings_registration.php:441
+msgid "Field Format"
+msgstr "Формат поля"
+
+#: ../html/admin/settings/settings_registration.php:445
+msgid "Required"
+msgstr "Обязательно"
+
+#: ../html/admin/settings/settings_registration.php:456
+#: ../html/affiliate_register_form.php:70
+msgid "Terms and Conditions"
+msgstr "правила партнёрской программы"
+
+#: ../html/admin/settings/settings_registration.php:465
+msgid "Affiliates Homepage Message"
+msgstr "Сообщение на домашней странице партнёров"
+
+#: ../html/affiliate_approved.php:1
+#, php-format
+msgid ""
+"Your application was approved.  Please go to the <a href=\"%s\">affiliate "
+"control panel</a> to get started."
+msgstr ""
+"Ваша заявка подтверждена.  Перейдите <a href=\"%s\">на панель управления "
+"партнёра</a>, чтобы начать."
+
+#: ../html/affiliate_cp_agree_terms.php:3
+msgid "Affiliate Confirmation"
+msgstr "Подтверждение партнёра"
+
+#: ../html/affiliate_cp_agree_terms.php:5
+msgid "Contract Terms"
+msgstr "Условия контракта"
+
+#: ../html/affiliate_cp_agree_terms.php:12 ../html/affiliate_cp_home.php:20
+msgid "Commission Rate"
+msgstr "Комиссия"
+
+#: ../html/affiliate_cp_agree_terms.php:21
+msgid "Terms & Conditions"
+msgstr "Правила партнёрской программы"
+
+#: ../html/affiliate_cp_agree_terms.php:27
+msgid "Agree to Terms"
+msgstr "Согласиться с правилами"
+
+#: ../html/affiliate_cp_approved.php:3
+msgid "Affiliate Control Panel"
+msgstr "Панель управления партнёра"
+
+#: ../html/affiliate_cp_approved.php:5
+msgid "Welcome!"
+msgstr "Добро пожаловать!"
+
+#: ../html/affiliate_cp_approved.php:9
+msgid "Review Terms and Get Started!"
+msgstr "Просмотрите правила и можно начинать!"
+
+#: ../html/affiliate_cp_home.php:11
+msgid "Account Summary"
+msgstr "Сводка"
+
+#: ../html/affiliate_cp_home.php:29
+msgid "Today"
+msgstr "Сегодня"
+
+#: ../html/affiliate_cp_home.php:44 ../html/affiliate_cp_home.php:78
+msgid "Visitors"
+msgstr "Посетители"
+
+#: ../html/affiliate_cp_home.php:48 ../html/affiliate_cp_home.php:82
+msgid "Closed Transactions"
+msgstr "Закрытые транзакции"
+
+#: ../html/affiliate_cp_home.php:52 ../html/affiliate_cp_home.php:86
+msgid "Revenue"
+msgstr "Вознаграждение"
+
+#: ../html/affiliate_cp_home.php:63
+msgid "This Month"
+msgstr "Этот месяц"
+
+#: ../html/affiliate_cp_payment_details_confirmed.php:3
+msgid "Your payment details have been submitted"
+msgstr "Детали платежа отправлены"
+
+#: ../html/affiliate_cp_payment_details_confirmed.php:5
+#, php-format
+msgid ""
+"Now would be a great time to go pick <a href=\"%s\">some creative</a> and "
+"get started."
+msgstr "Самое время получить <a href=\"%s\">рекламные материалы</a> и начать."
+
+#: ../html/affiliate_cp_payment_details_form.php:70
+#: ../html/affiliate_cp_payment_details_simple.php:14
+msgid "Please provide your payment details."
+msgstr "Пожалуйста, укажите детали платежа."
+
+#: ../html/affiliate_cp_payment_details_form.php:71
+#: ../html/affiliate_cp_payment_details_simple.php:15
+msgid ""
+"The following information will be used to disperse payments when your "
+"account reaches the minimum payout amount."
+msgstr ""
+"Эти данные будут использоваться для платежей после того, как баланс вашего "
+"счета достигнет минимальной суммы для вывода средств."
+
+#: ../html/affiliate_cp_payment_details_form.php:79
+#: ../html/affiliate_cp_payment_details_simple.php:23
+#: ../html/contact_info.php:94
+msgid "Method"
+msgstr "Метод"
+
+#: ../html/affiliate_cp_payment_details_form.php:96
+#: ../html/affiliate_cp_payment_details_simple.php:40
+#: ../html/contact_info.php:117
+msgid "PayPal E-Mail Address"
+msgstr "PayPal E-Mail"
+
+#: ../html/affiliate_cp_payment_details_form.php:109
+#: ../html/affiliate_cp_payment_details_simple.php:53
+#: ../source/Util/AffiliateFormHelper.php:151
+msgid "Paper Check"
+msgstr "Проверка на бумаге"
+
+#: ../html/affiliate_cp_payment_details_form.php:115
+#: ../html/affiliate_cp_payment_details_simple.php:59
+msgid "Check Recipient"
+msgstr "Проверить получателя"
+
+#: ../html/affiliate_cp_payment_details_form.php:134
+msgid "Mail to Address On Record"
+msgstr "Email для сохранения"
+
+#: ../html/affiliate_cp_payment_details_form.php:143
+#: ../html/affiliate_cp_payment_details_form.php:166
+#: ../html/affiliate_cp_payment_details_simple.php:76
+msgid "Recipient"
+msgstr "Получатель"
+
+#: ../html/affiliate_cp_payment_details_form.php:170
+msgid "Address 1"
+msgstr "Адрес 1"
+
+#: ../html/affiliate_cp_payment_details_form.php:174
+msgid "Address 2"
+msgstr "Адрес 2"
+
+#: ../html/affiliate_cp_payment_details_form.php:178
+msgid "City"
+msgstr "Город"
+
+#: ../html/affiliate_cp_payment_details_form.php:182
+msgid "Country"
+msgstr "Район"
+
+#: ../html/affiliate_cp_payment_details_form.php:192
+msgid "State"
+msgstr "Область (штат)"
+
+#: ../html/affiliate_cp_payment_details_form.php:202
+msgid "Postal Code"
+msgstr "Почтоый код"
+
+#: ../html/affiliate_cp_payment_details_form.php:216
+#: ../html/affiliate_cp_payment_details_simple.php:99
+msgid "Submit Payment Details"
+msgstr "Отправить детали платежа"
+
+#: ../html/affiliate_cp_payment_details_simple.php:69
+msgid "Check will be mailed to the following address:"
+msgstr "Отправить чек на email:"
+
+#: ../html/affiliate_creative_detail.php:47
+msgid "Your Affiliate-Specific HTML snippet"
+msgstr "Ваш партнёр - Специальный HTML код"
+
+#: ../html/affiliate_creative_list.php:62
+msgid "Your Affiliate Link Using Affiliate ID"
+msgstr "Ваша партнёрская ссылка"
+
+#: ../html/affiliate_creative_list.php:67
+msgid "The following creatives are available for publication."
+msgstr "Рекламные материалы для размещения."
+
+#: ../html/affiliate_home.php:1
+msgid "Welcome to the affiliate control panel."
+msgstr "Добро пожаловать в паель управления партнёра."
+
+#: ../html/affiliate_not_logged_in.php:4
+#, php-format
+msgid ""
+"This is the affiliates section of this store.  If you are an existing "
+"affiliate, please <a href=\"%s\">log in</a> to access your control panel."
+msgstr ""
+"Это кабинет участника партнёрской программы. Если вы партнёр, то <a href=\"%s"
+"\">авторизируйтесь</a> для входа в панель управления."
+
+#: ../html/affiliate_not_logged_in.php:7
+#, php-format
+msgid ""
+"If you are not an affiliate, but wish to become one, you will need to "
+"apply.  To apply, you must be a registered user on this blog.  If you have "
+"an existing account on this blog, please <a href=\"%s\">log in</a>.  If not, "
+"please <a href=\"%s\">register</a>."
+msgstr ""
+"Если вы ещё не партнёр, но хотите им стать, перейдите на <a href=\"%s"
+"\">регистрацию</a>, а если вы уже партнёр - <a href=\"%s\">авторизируйтесь</"
+"a>."
+
+#: ../html/affiliate_not_registered.php:1
+#, php-format
+msgid ""
+"This is the affiliates section of this store. You are not currently an "
+"affiliate of this store.  If you wish to become one, please <a href=\"%s\"/"
+">apply</a>."
+msgstr ""
+"Это секция магазина для партнёров. Если вы хотите стать партнёром, то "
+"перейдите <a href=\"%s\"/>сюда</a>."
+
+#: ../html/affiliate_register_form.php:15 ../html/contact_info.php:160
+msgid "* Required fields"
+msgstr "* Обязательные поля"
+
+#: ../html/affiliate_register_form.php:29
+msgid ""
+"This is the email address associated with your currently logged in WordPress "
+"user account."
+msgstr "Email вашего WordPress аккаунта."
+
+#: ../html/affiliate_register_form.php:30
+msgid ""
+"If you want to use a different email address, log out of your WordPress "
+"account then try a new registration."
+msgstr ""
+"Если вы хотите сменить email, выйдите из вашего WordPress аккаунта и "
+"зарегистрируйтесь заново."
+
+#: ../html/affiliate_register_form.php:70
+msgid "I have read and agree to the"
+msgstr "Я прочёл и соглашаюсь с"
+
+#: ../html/affiliate_register_form.php:71
+msgid "You must agree to the terms."
+msgstr "Вы должны согласиться с правилами."
+
+#: ../html/affiliate_register_form.php:82
+msgid "Submit Application"
+msgstr "Отправить заяку"
+
+#: ../html/contact_info.php:14
+msgid ""
+"Changing the affiliate's email address will not change their WordPress "
+"Affiliate Manager login, which may be based on the email address they used "
+"when they signed up."
+msgstr ""
+"Смена email партнёра не повлияет на логин Affiliate Manager, который может "
+"основываться на email-адресе, указанном при регистрации."
+
+#: ../html/contact_info.php:16
+msgid ""
+"Changing your email address will not change your WordPress Affiliate Manager "
+"login, which may be based on the email address you used when you signed up."
+msgstr ""
+"Смена email-адреса не повлияет на логин Affiliate Manager, который может "
+"основываться на email-адресе, указанном при регистрации."
+
+#: ../html/contact_info.php:26
+msgid "Contact Information"
+msgstr "Контакты"
+
+#: ../html/contact_info.php:81
+#, php-format
+msgid ""
+"There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s"
+"\">Cancel</a>"
+msgstr ""
+"Ожидается смена вашего e-mail на <code>%1$s</code>. <a href=\"%2$s\">Отмена</"
+"a>"
+
+#: ../html/contact_info.php:126
+msgid "Bounty Type *"
+msgstr "Тип вознаграждения *"
+
+#: ../html/contact_info.php:144
+#, php-format
+msgid "Bounty Rate (%s per Sale) *"
+msgstr "Размер вознаграждения (%s за продажу) *"
+
+#: ../html/contact_info.php:144
+#, php-format
+msgid "Bounty Rate (% of Sale) *"
+msgstr "Размер вознаграждения (%s от продажи) *"
+
+#: ../html/contact_info.php:162
+msgid "+ Custom fields"
+msgstr "+ Пользовательские поля"
+
+#: ../html/contact_info.php:166
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: ../html/impressions_table.php:1
+#, php-format
+msgid "Displaying %1$d of %2$d impressions"
+msgstr "Отображаются %1$d из %2$d отпечатков"
+
+#: ../html/impressions_table.php:9
+msgid "Referrer"
+msgstr "Реферал"
+
+#: ../html/impressions_table.php:31 ../html/transaction_table.php:77
+msgid "No records found for the date range selected."
+msgstr "Нет записей за выбранный временной интервал."
+
+#: ../html/transaction_table.php:29
+msgid "From"
+msgstr "От"
+
+#: ../html/transaction_table.php:49
+msgid "Reference ID"
+msgstr "ID ссылки"
+
+#: ../source/Admin-menu/wpam-addons-menu.php:6 ../source/Plugin.php:647
+msgid "Affiliates Manager Add-ons"
+msgstr "Дополнения Affiliates Manager"
+
+#: ../source/Admin-menu/wpam-clicks-menu.php:8 ../source/Plugin.php:639
+msgid "Click Tracking"
+msgstr "Отслеживание клика"
+
+#: ../source/Admin-menu/wpam-clicks-menu.php:11
+msgid "Unique Click Tracking"
+msgstr "Отслеживание уникальных кликов"
+
+#: ../source/Admin-menu/wpam-clicks-menu.php:34
+msgid "This tab shows unique referrals to your website from your affiliates"
+msgstr ""
+"Эта вкладка показывает уникальных рефералов, которые зашли на сайт от ваших "
+"партнёров"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:8
+msgid "Affiliate Commissions"
+msgstr "Комиссии партнёров"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:11
+msgid "Overall Commissions"
+msgstr "Все комиссии"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:12
+msgid "Manual Commission"
+msgstr "Ручная установка комиссии"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:48
+msgid "This tab shows all affiliate commission data"
+msgstr "Эта вкладка показывает все комиссии партнёров"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:104
+msgid "You need to enter an affiliate ID"
+msgstr "Введите ID партнёра"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:108
+msgid "You need to enter a numeric commission amount"
+msgstr "Введите численное значение комиссии"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:112
+msgid "You need to enter a numeric purchase amount"
+msgstr "Введите численное значение стоимости"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:136
+msgid "A commission with this transaction ID already exists"
+msgstr "Комиссия для транзакции с этим ID уже определена"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:154
+msgid "Commission added!"
+msgstr "Комиссия добавлена!"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:164
+msgid "This tab allows you to manually award commission to an affiliate."
+msgstr "На этой вкладке вы можете вручную установить комиссию для покупки."
+
+#: ../source/Admin-menu/wpam-commission-menu.php:174
+msgid "Enter the affiliate ID. Example: "
+msgstr "Введите ID партнёра. Например: "
+
+#: ../source/Admin-menu/wpam-commission-menu.php:178
+msgid "Commission Amount"
+msgstr "Величина комиссии"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:180
+msgid "Enter the commission amount. Example: "
+msgstr "Введите величину комиссии. Например:"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:184
+msgid "Purchase Amount"
+msgstr "Стоимость покупки"
+
+#: ../source/Admin-menu/wpam-commission-menu.php:186
+msgid "Enter the purchase amount. Example: "
+msgstr "Введите стоимость покупки. Например: "
+
+#: ../source/Admin-menu/wpam-commission-menu.php:192
+msgid ""
+"Enter the unique transaction ID (leave empty to generate a unique ID). "
+"Example: "
+msgstr ""
+"Введите уникальный ID транзакции (оставьте пустым для автоматической "
+"генерации). Например: "
+
+#: ../source/Admin-menu/wpam-commission-menu.php:198
+msgid "Enter the email address of the buyer (optional)."
+msgstr "Введите email покупателя (не обязательно)."
+
+#: ../source/Admin-menu/wpam-commission-menu.php:204
+msgid "Enter the date in yyyy-mm-dd format. Example: "
+msgstr "Введите дату в формате гггг-мм-дд. Например: "
+
+#: ../source/Data/GenericRepository.php:31
+#: ../source/Data/GenericRepository.php:76
+#, php-format
+msgid "'model' must be of type '%s'"
+msgstr "'модель' должна соответствовать типу '%s'"
+
+#: ../source/Data/Models/AffiliateModel.php:169
+msgid "Percent"
+msgstr "Процент"
+
+#: ../source/Data/Models/AffiliateModel.php:171
+msgid "Fixed"
+msgstr "Фиксированный"
+
+#: ../source/Data/Models/ModelMapper.php:34
+#, php-format
+msgid "Model mapping error.  Could not map key %s."
+msgstr "Ошибка привязки модели. Не удалось привязать ключ %s."
+
+#: ../source/MessageHelper.php:29
+#, php-format
+msgid "Attempt to load invalid message of name '%s'"
+msgstr "Попытка загрузить неправильное сообщение с именем '%s'"
+
+#: ../source/Options.php:27
+msgid "Invalid PayPal API value"
+msgstr "Неправильное значение PayPal API"
+
+#: ../source/Pages/Admin/MyAffiliatesPage.php:161
+#: ../source/Pages/Admin/NewAffiliatePage.php:84
+#: ../source/Pages/AffiliatesHome.php:526
+#, php-format
+msgid "Bounty Rate (%s per Sale)"
+msgstr "Величина вознаграждения (%s за продажу)"
+
+#: ../source/Pages/Admin/MyCreativesPage.php:57
+msgid "All"
+msgstr "Все"
+
+#: ../source/Pages/Admin/MyCreativesPage.php:108
+#: ../source/Pages/Admin/MyCreativesPage.php:261
+#: ../source/Pages/Admin/MyCreativesPage.php:268
+#: ../source/Pages/AffiliatesHome.php:172 ../source/Util/JsonHandler.php:228
+msgid "Invalid creative."
+msgstr "Неправильный рекламный материал."
+
+#: ../source/Pages/Admin/MyCreativesPage.php:157
+#, php-format
+msgid "Image Upload Error: %s"
+msgstr "Ошибка при загрузке картинки: %s"
+
+#: ../source/Pages/Admin/MyCreativesPage.php:222
+msgid "Insert failed: Bad creative type."
+msgstr "Ошибка при вставке: неправильный тип рекламного материала"
+
+#: ../source/Pages/Admin/MyCreativesPage.php:231
+msgid "Creative Updated."
+msgstr "Рекламный материал обновлён."
+
+#: ../source/Pages/Admin/MyCreativesPage.php:238
+msgid "Creative ... created."
+msgstr "Рекламный материал ... создан."
+
+#: ../source/Pages/Admin/MyCreativesPage.php:242
+msgid "Insert failed: invalid creative update mechanism."
+msgstr ""
+"Ошибка при вставке: неправильный механизм обновления рекламного материала."
+
+#: ../source/Pages/Admin/NewAffiliatePage.php:73
+msgid "Add Affiliate"
+msgstr "Добавить партнёра"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:53
+msgid "This results file does not appear to match this payment."
+msgstr "Этот файл результатов не соответствует этому платежу."
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:87
+#, php-format
+msgid ""
+"Matched a transaction in your results file, but the value was incorrect. "
+"Expected %s but found '%s'"
+msgstr ""
+"Неверное значение указанной транзакции в файле результатов. Ожидаемое "
+"значение %s а текущее значение '%s'"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:95
+msgid ""
+"Could not correlate a transaction from your results file with the "
+"transactions on record."
+msgstr ""
+"Не удаётся соотнести транзакцию из файла результатов и транзакцию в записи."
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:101
+msgid "Could not correlate all transactions"
+msgstr "Не удаётся соотнести все транзакции."
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:145
+msgid "Invalid PayPal LogID"
+msgstr "Неверный PayPal LogID"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:151
+msgid "Transaction not found"
+msgstr "Транзакция не найдена"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:162
+msgid "Invalid transaction status"
+msgstr "Неверный статус транзакции"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:220
+msgid "Affiliate Payment"
+msgstr "Платёж партнёра"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:232
+msgid "Affiliate not found"
+msgstr "Партнёр не найден"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:235
+msgid "Payment method for affiliate is not PayPal"
+msgstr "Метода платежа для партнёра не PayPal"
+
+#: ../source/Pages/Admin/PaypalPaymentsPage.php:242
+msgid "Payout via PayPal Mass Pay"
+msgstr "Вывод через групповой платёж PayPal"
+
+#: ../source/Pages/AffiliatesHome.php:33
+msgid "Sales"
+msgstr "Продажи"
+
+#: ../source/Pages/AffiliatesHome.php:34
+msgid "Payment History"
+msgstr "История платежей"
+
+#: ../source/Pages/AffiliatesHome.php:35 ../source/Plugin.php:95
+msgid "Creatives"
+msgstr "Рекламные материалы"
+
+#: ../source/Pages/AffiliatesHome.php:36
+msgid "Edit Profile"
+msgstr "Редактировать профиль"
+
+#: ../source/Pages/AffiliatesHome.php:174 ../source/Util/JsonHandler.php:28
+#: ../source/Util/JsonHandler.php:52 ../source/Util/JsonHandler.php:83
+#: ../source/Util/JsonHandler.php:109 ../source/Util/JsonHandler.php:133
+#: ../source/Util/JsonHandler.php:207
+msgid "Invalid affiliate"
+msgstr "Неверный партнёр"
+
+#: ../source/Pages/AffiliatesHome.php:176
+msgid "Inactive creative."
+msgstr "Неактивный рекламный материал."
+
+#: ../source/Pages/AffiliatesHome.php:387
+#, php-format
+msgid "%s per sale."
+msgstr "%s за продажу."
+
+#: ../source/Pages/AffiliatesHome.php:389
+#, php-format
+msgid "%s%% of each completed sale, pre-tax"
+msgstr "%s%% от каждой совершённой продажи"
+
+#: ../source/Pages/AffiliatesRegister.php:62 ../source/Util/UserHandler.php:138
+msgid ""
+"Error submitting your details to the database. This is a bug, and your "
+"application was not submitted."
+msgstr ""
+"Ошибка при отправке данных в базу данных. Ваша заявка не была отправлена."
+
+#: ../source/Pages/AffiliatesRegister.php:70 ../source/Util/UserHandler.php:141
+#, php-format
+msgid "New affiliate registration on your site %s:"
+msgstr "Новый партнёр зарегистрировался на сайте %s:"
+
+#: ../source/Pages/AffiliatesRegister.php:71 ../source/Util/UserHandler.php:142
+#, php-format
+msgid "Name: %s %s"
+msgstr "Имя: %s %s"
+
+#: ../source/Pages/AffiliatesRegister.php:72 ../source/Util/UserHandler.php:143
+#, php-format
+msgid "Email: %s"
+msgstr "Email: %s"
+
+#: ../source/Pages/AffiliatesRegister.php:73 ../source/Util/UserHandler.php:144
+#, php-format
+msgid "Company: %s"
+msgstr "Компания: %s"
+
+#: ../source/Pages/AffiliatesRegister.php:74 ../source/Util/UserHandler.php:145
+#, php-format
+msgid "Website: %s"
+msgstr "Сайт: %s"
+
+#: ../source/Pages/AffiliatesRegister.php:75 ../source/Util/UserHandler.php:146
+#, php-format
+msgid "View Application: %s"
+msgstr "Просмотреть заявку: %s"
+
+#: ../source/Pages/AffiliatesRegister.php:76 ../source/Util/UserHandler.php:147
+msgid "New Affiliate Registration"
+msgstr "Регистрация нового партнёра"
+
+#: ../source/Pages/AffiliatesRegister.php:79
+#, php-format
+msgid "Affiliate application for %s"
+msgstr "Заявка партнёра для %s"
+
+#: ../source/Pages/PublicPage.php:95 ../source/Util/JsonHandler.php:14
+#: ../source/Util/JsonHandler.php:44 ../source/Util/JsonHandler.php:75
+#: ../source/Util/JsonHandler.php:101 ../source/Util/JsonHandler.php:125
+#: ../source/Util/JsonHandler.php:136 ../source/Util/JsonHandler.php:150
+#: ../source/Util/JsonHandler.php:196 ../source/Util/JsonHandler.php:224
+msgid "Access denied."
+msgstr "Доступ запрещён."
+
+#: ../source/PayPal/MassPayRequest.php:24
+msgid "receiverType must be one of the RECEIVERTYPE_* constants"
+msgstr ""
+"receiverType должен быть из списка предопределённых значений RECEIVERTYPE_*"
+
+#: ../source/PayPal/MassPayRequest.php:33
+msgid "'amount' must be a valid monetary value"
+msgstr "'стоимость' должна быть правильным денежным значением"
+
+#: ../source/PayPal/MassPayResultFile.php:113
+#: ../source/PayPal/MassPayResultFile.php:124
+#, php-format
+msgid "Failed to parse amounts from field: %s"
+msgstr "Не удалось извлечь стоимости из поля: %s"
+
+#: ../source/PayPal/Service.php:77
+#, php-format
+msgid ""
+"POST failed\n"
+"errors:\n"
+"%serrordata:\n"
+"%s"
+msgstr ""
+"Ошибка при POST запросе\n"
+"ошибки:\n"
+"%sинформация об ошибке:\n"
+"%s"
+
+#: ../source/PayPal/Service.php:82
+#, php-format
+msgid "Unknown response: %s"
+msgstr "Неизвестный ответ: %s"
+
+#: ../source/Plugin.php:77 ../source/Plugin.php:610
+msgid "Affiliate Management"
+msgstr "Управление партнёрами"
+
+#: ../source/Plugin.php:78 ../source/Plugin.php:83 ../source/Plugin.php:586
+#: ../source/Plugin.php:600 ../source/Plugin.php:610
+msgid "Affiliates"
+msgstr "Партнёры"
+
+#: ../source/Plugin.php:109
+msgid "Store Affiliates"
+msgstr "Кабинет партнёра"
+
+#: ../source/Plugin.php:110
+msgid "Register"
+msgstr "Регистрация"
+
+#: ../source/Plugin.php:111
+msgid "Affiliate Login"
+msgstr "Логин партнёра"
+
+#: ../source/Plugin.php:317
+msgid "You are currently logged in"
+msgstr "Вы уже авторизированы"
+
+#: ../source/Plugin.php:319
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: ../source/Plugin.php:321
+msgid "Log out"
+msgstr "Выйти"
+
+#: ../source/Plugin.php:331
+msgid "Password Lost and Found"
+msgstr "Восстановление пароля"
+
+#: ../source/Plugin.php:331
+msgid "Lost your password?"
+msgstr "Забыли пароль?"
+
+#: ../source/Plugin.php:377
+msgid "Become an affiliate"
+msgstr "Стать партнёром"
+
+#: ../source/Plugin.php:378
+msgid "Are you interested in earning money by directing visitors to our site?"
+msgstr "Хотите зарабатывать на привлечении посетителей на сайт?"
+
+#: ../source/Plugin.php:380
+msgid "Sign up"
+msgstr "Зарегистрироваться"
+
+#: ../source/Plugin.php:380
+msgid " to become an affiliate today!"
+msgstr " стань партнёром сегодня!"
+
+#: ../source/Plugin.php:601
+msgid "Be An Affiliate"
+msgstr "Быть партнёром"
+
+#: ../source/Plugin.php:635
+msgid "Settings"
+msgstr "Настройки"
+
+#: ../source/Plugin.php:639
+msgid "Affiliates Manager Click Tracking"
+msgstr "Отслеживание кликов Affiliates Manager"
+
+#: ../source/Plugin.php:643
+msgid "Affiliates Manager Commission Data"
+msgstr "Данные по комиссиям Affiliates Manager"
+
+#: ../source/Plugin.php:643
+msgid "Commissions"
+msgstr "Комиссии"
+
+#: ../source/Plugin.php:647
+msgid "Add-ons"
+msgstr "Дополнения"
+
+#: ../source/Plugin.php:776
+msgid "Invalid JSON handler."
+msgstr "Неправильный обработчик JSON."
+
+#: ../source/Tracking/RequestTracker.php:131
+#: ../source/Tracking/RequestTracker.php:228
+msgid "no refkey in request."
+msgstr "в запросе нет refkey."
+
+#: ../source/Tracking/RequestTracker.php:188
+msgid "invalid refkey data."
+msgstr "неверные данные refkey."
+
+#: ../source/Tracking/RequestTracker.php:239
+msgid "invalid refkey data: "
+msgstr "неверные данные refkey: "
+
+#: ../source/Tracking/TrackingKey.php:35
+#, php-format
+msgid "invalid refkey format. (length=%s)"
+msgstr "неверный формат refkey. (длина=%s)"
+
+#: ../source/Util/AffiliateFormHelper.php:93
+msgid "is a blocked e-mail "
+msgstr "заблокированный e-mail "
+
+#: ../source/Util/AffiliateFormHelper.php:95
+msgid "is in use"
+msgstr "уже используется"
+
+#: ../source/Util/AffiliateFormHelper.php:154
+msgid "PayPal Transfer"
+msgstr "PayPal перевод"
+
+#: ../source/Util/AffiliateFormHelper.php:157
+msgid "Manual Transfer"
+msgstr "Ручной перевод"
+
+#: ../source/Util/EmailHandler.php:66
+msgid "Your username and password"
+msgstr "Ваши логин и пароль"
+
+#: ../source/Util/EmailHandler.php:70
+#, php-format
+msgid "[%s] Your username and password for Affiliate Manager"
+msgstr "[%s] Ваши логин и пароль для Affiliate Manager"
+
+#: ../source/Util/EmailHandler.php:71 ../source/Util/UserHandler.php:20
+#: ../source/Util/UserHandler.php:84
+#, php-format
+msgid "New affiliate registration for %s: has been approved!"
+msgstr "Регистрация нового партнёра для %s: подтверждена!"
+
+#: ../source/Util/JsonHandler.php:17
+msgid "Invalid bounty amount."
+msgstr "Неверное значение вознаграждения."
+
+#: ../source/Util/JsonHandler.php:20
+msgid "Invalid bounty type."
+msgstr "Неверный тип вознаграждения."
+
+#: ../source/Util/JsonHandler.php:36 ../source/Util/JsonHandler.php:68
+#: ../source/Util/JsonHandler.php:93 ../source/Util/JsonHandler.php:112
+#: ../source/Util/JsonHandler.php:169
+msgid "Invalid state transition."
+msgstr "Неверное состояние перевода."
+
+#: ../source/Util/JsonHandler.php:60 ../source/Util/UserHandler.php:60
+#: ../source/Util/UserHandler.php:151
+#, php-format
+msgid "Affiliate Application for %s"
+msgstr "Партнёрская заявка для %s"
+
+#: ../source/Util/JsonHandler.php:153
+msgid "Invalid status."
+msgstr "Неверный статус."
+
+#: ../source/Util/JsonHandler.php:166
+msgid "Invalid creative"
+msgstr "Неверный рекламный материал"
+
+#: ../source/Util/JsonHandler.php:199
+msgid "Invalid transaction type."
+msgstr "Неверный тип транзакции."
+
+#: ../source/Util/JsonHandler.php:202
+msgid "Invalid value for amount."
+msgstr "Неверное значение стоимости."
+
+#: ../source/Util/UserHandler.php:25 ../source/Util/UserHandler.php:34
+#: ../source/Util/UserHandler.php:89 ../source/Util/UserHandler.php:98
+msgid "User already has an account and is already an affiliate"
+msgstr "Пользователь уже явлется партнёром"
+
+#: ../source/Util/UserHandler.php:28 ../source/Util/UserHandler.php:37
+#: ../source/Util/UserHandler.php:92 ../source/Util/UserHandler.php:101
+msgid "Log into the site with your existing account and get started."
+msgstr "Авторизируйтесь на сайте через существующий аккаунт, чтобы начать."
+
+#: ../source/Validation/CallbackValidator.php:17
+msgid "Argument 'callback' must be callable"
+msgstr "Аргумент 'callback' должен быть исполняемым (являться функцией)"
+
+#: ../source/Validation/CountryCodeValidator.php:15
+#: ../source/Validation/StringValidator.php:29
+msgid "is required"
+msgstr "является обязательным"
+
+#: ../source/Validation/EmailValidator.php:14
+msgid "must be a valid e-mail address"
+msgstr "неверный email"
+
+#: ../source/Validation/MoneyValidator.php:12
+msgid "must be a valid monetary value"
+msgstr "неверное денежное значение"
+
+#: ../source/Validation/MultiPartPhoneNumberValidator.php:12
+msgid "must be a valid phone number"
+msgstr "неверный телефон"
+
+#: ../source/Validation/MultiPartSocialSecurityNumberValidator.php:13
+msgid "must be a valid social security number"
+msgstr "неверный номер соц страхования"
+
+#: ../source/Validation/NumberValidator.php:14
+msgid "must be a number"
+msgstr "число"
+
+#: ../source/Validation/PhoneNumberValidator.php:12
+msgid "must be a phone number"
+msgstr "телефон"
+
+#: ../source/Validation/SetValidator.php:18
+#: ../source/Validation/StateCodeValidator.php:14
+msgid "must be selected"
+msgstr "не выбрано"
+
+#: ../source/Validation/StringValidator.php:24
+msgid "must be between % and %s characters"
+msgstr "выходит из диапазона символов между % и %s"
+
+#: ../source/Validation/StringValidator.php:31
+#, php-format
+msgid "must be at least %s characters"
+msgstr "не может содержать менее %s символов"
+
+#: ../source/Validation/StringValidator.php:35
+#, php-format
+msgid "must be no more than %s characters"
+msgstr "превышает допустимое количество символов %s"
+
+#: ../source/Validation/ZipCodeValidator.php:16
+msgid "must be a valid zip code"
+msgstr "неверный zip код"
+
+#: ../source/display_functions.php:11
+msgid "Affiliate has applied, but is waiting on your decision."
+msgstr "Партнёр подтверждён, но ожидает вашего решения."
+
+#: ../source/display_functions.php:12
+msgid "Affiliate has been approved, but has not accepted terms."
+msgstr ""
+"Партнёр подтверждён, но не ознакомился с правилами партнёрской программы."
+
+#: ../source/display_functions.php:13
+msgid "Affiliate is active, and will receive credit for leads."
+msgstr ""
+"Партнёр активирован, и получает вознаграждение за привлечённых клиентов."
+
+#: ../source/display_functions.php:14
+msgid ""
+"Affiliate has accepted terms and provided payment details.<br /> If the "
+"details look good, you should activate this affiliate so they can begin "
+"sending traffic."
+msgstr ""
+"Партнёр ознакомился с правилами партнёрской программы и указал детали "
+"платежа.<br /> Если всё указано правильно, нужно активировать партнёра, "
+"чтобы он мог начать привлекать клиентов."
+
+#: ../source/display_functions.php:15
+msgid "Affiliate has been disabled."
+msgstr "Партнёр деактивирован."
+
+#: ../source/display_functions.php:16
+msgid "Affiliate was declined."
+msgstr "Партнёр отклонён."
+
+#: ../source/display_functions.php:17
+msgid "Affiliate was blocked and cannot re-apply."
+msgstr "Партнёр заблокирован и не может восстановиться."
+
+#: ../source/display_functions.php:23
+#, php-format
+msgid "%s per sale"
+msgstr "%s за продажу"
+
+#: ../source/display_functions.php:25
+#, php-format
+msgid "%s%% of pre-tax sales"
+msgstr "%s%% от продаж"
+
+#: ../source/dynamic-translatable-strings.php:4
+msgid "Address Line 1"
+msgstr "Адрес 1"
+
+#: ../source/dynamic-translatable-strings.php:5
+msgid "Address Line 2"
+msgstr "Адрес 2"
+
+#: ../source/dynamic-translatable-strings.php:6
+msgid "Zip Code"
+msgstr "Zip код"
+
+#: ../source/dynamic-translatable-strings.php:7
+msgid "Company Name"
+msgstr "Компания"
+
+#: ../source/dynamic-translatable-strings.php:8
+msgid "Website URL"
+msgstr "Сайт"
