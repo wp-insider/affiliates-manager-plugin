@@ -7,17 +7,6 @@ if( ! isset( $model ) && isset( $this->viewData['affiliate'] ) ){
 }
 
 ?>
-<div id="email_help" style="display: none;">
-<p>
-<?php
-if( is_admin() ){
-	_e( "Changing the affiliate's email address will not change their WordPress Affiliate Manager login, which may be based on the email address they used when they signed up.", 'affiliates-manager' );
-}else{
-	_e( 'Changing your email address will not change your WordPress Affiliate Manager login, which may be based on the email address you used when you signed up.', 'affiliates-manager' );
-}
-?>
-</p>
-</div>
 
 	<form method="post" id="infoForm" class="pure-form">
 		<table class="pure-table">
@@ -46,21 +35,22 @@ if( is_admin() ){
 						</label>
 						<?php
 						echo $field->required ? '&nbsp;*': '';
-						if( is_admin() )
+						if( is_admin() ){
 							echo $field->type == 'custom' ? '&nbsp;+': '';
-						if ( $field->fieldType == 'email' ){ ?>
-							<img id="emailInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
-                                                <?php } ?>
+                                                } ?>
 					</td>
 					<td>
 						<?php switch ($field->fieldType) {
 							case 'string':
-							case 'email':
 							case 'number':
 							case 'zipCode':
-								?>
+                                                        ?>
 							<input type="text" size="20" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo $value; ?>" />
 							<?php break;
+                                                        case 'email':
+                                                        ?>
+                                                        <input type="text" size="20" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo $value; ?>" readonly />
+                                                        <?php break;
 							case 'phoneNumber':?>							
 							<input type="text" size="20" maxlength="14" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo $value; ?>" />
 							<?php break;
