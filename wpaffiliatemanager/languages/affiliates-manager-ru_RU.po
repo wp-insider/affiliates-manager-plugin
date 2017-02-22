@@ -685,7 +685,7 @@ msgstr "Текстовая ссылка"
 
 #: ../html/admin/creatives_detail.php:10
 msgid "Unknown creative type."
-msgstr "Неизвестный тип рекламных матереалов."
+msgstr "Неизвестный тип рекламных материалов."
 
 #: ../html/admin/creatives_detail.php:143
 msgid "ACTIVATE"
@@ -701,7 +701,7 @@ msgstr "Вы уверены, что хотите"
 
 #: ../html/admin/creatives_detail.php:167
 msgid "this creative?"
-msgstr "этот рекламный матереал?"
+msgstr "этот рекламный материал?"
 
 #: ../html/admin/creatives_detail.php:174
 #: ../html/admin/creatives_detail.php:215
@@ -713,7 +713,7 @@ msgstr "Предпросмотр"
 #: ../html/admin/creatives_detail.php:194
 #: ../html/affiliate_creative_detail.php:43
 msgid "Creative:"
-msgstr "Рекламные матереалы:"
+msgstr "Рекламные материалы:"
 
 #: ../html/admin/creatives_detail.php:206
 #: ../html/admin/manage_creatives.php:163
@@ -752,7 +752,7 @@ msgstr "Идёт обновление, пожалуйста, подождите 
 
 #: ../html/admin/manage_creatives.php:120
 msgid "Delete Creative?"
-msgstr "Удалить  рекманый материал?"
+msgstr "Удалить  рекламный материал?"
 
 #: ../html/admin/manage_creatives.php:121
 msgid "This creative will be deleted. Are you sure?"
@@ -2186,7 +2186,7 @@ msgstr "Неверное значение стоимости."
 #: ../source/Util/UserHandler.php:25 ../source/Util/UserHandler.php:34
 #: ../source/Util/UserHandler.php:89 ../source/Util/UserHandler.php:98
 msgid "User already has an account and is already an affiliate"
-msgstr "Пользователь уже явлется партнёром"
+msgstr "Пользователь уже является партнёром"
 
 #: ../source/Util/UserHandler.php:28 ../source/Util/UserHandler.php:37
 #: ../source/Util/UserHandler.php:92 ../source/Util/UserHandler.php:101
