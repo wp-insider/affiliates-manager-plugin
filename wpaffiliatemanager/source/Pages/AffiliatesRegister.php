@@ -93,8 +93,12 @@ class WPAM_Pages_AffiliatesRegister extends WPAM_Pages_PublicPage
 	protected function getForm($affiliateFields, $request = null, WPAM_Validation_ValidatorResult $validationResult = null)
 	{
 		add_action('wp_footer', array( $this, 'onFooter' ) );
-		
-		$tncBuilder = new WPAM_TermsCompiler(get_option(WPAM_PluginConfig::$TNCOptionOption));
+		//
+                $tnc_page_url = get_option( WPAM_PluginConfig::$AffTncPageURL );
+                $tnc_page_id = url_to_postid($tnc_page_url);
+                $tnc_page = get_post($tnc_page_id);
+                $tnc_content = $tnc_page->post_content;
+		$tncBuilder = new WPAM_TermsCompiler($tnc_content);
 
 		$response = new WPAM_Pages_TemplateResponse('affiliate_register_form');
 

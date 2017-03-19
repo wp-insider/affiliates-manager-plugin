@@ -133,9 +133,10 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.4.2 =
+= 2.4.2 =
 - Changed a label in the affiliate login page from "Username" to "Email Address".
 - Added support for Russian language translation. The translation file was submitted by Artyom Pokatilov.
+- Affiliate terms and conditions are now displayed in a page instead of popup.
 
 = 2.4.1 =
 - Added a function to retrieve the referrer ID via IP address.

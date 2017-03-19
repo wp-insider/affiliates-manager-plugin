@@ -269,7 +269,8 @@ class WPAM_Plugin
 		add_shortcode('AffiliatesHome', array( $this->publicPages[self::PAGE_NAME_HOME], 'doShortcode' ) );
                 add_shortcode('AffiliatesLogin', array($this, 'doLoginShortcode'));
 		add_action( 'save_post' , array( $this, 'onSavePage' ), 10, 2 );
-
+                $this->do_page_upgrade_task();
+                /*
 		try	{
 			if ( isset( $_GET[WPAM_PluginConfig::$RefKey] ) ) {
 				$requestTracker = new WPAM_Tracking_RequestTracker();
@@ -279,6 +280,7 @@ class WPAM_Plugin
 		} catch (Exception $e) {
 			wp_die("WPAM FAILED: " . $e->getMessage());			
 		}
+                */
                 //new affiliate tracking code
                 WPAM_Click_Tracking::record_click();
 	}
@@ -301,6 +303,13 @@ class WPAM_Plugin
         {
             $debug_marker = "<!-- Affiliates Manager plugin v" . WPAM_VERSION . " - https://wpaffiliatemanager.com/ -->";
             echo "\n${debug_marker}\n";
+        }
+        
+        public function do_page_upgrade_task(){ //doing page upgrade task on init since get_permalink() doesn't work on plugins_loaded
+            //version comparison not possible since the version is automatically updated earlier in the doDbInstall function on plugins_loaded
+            global $wpdb;
+            $dbInstaller = new WPAM_Data_DatabaseInstaller($wpdb);
+            $dbInstaller->doInstallPages( $this->publicPages );
         }
         
         public function doLoginShortcode()

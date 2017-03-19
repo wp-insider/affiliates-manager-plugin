@@ -405,8 +405,12 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 		{
 			$response = new WPAM_Pages_TemplateResponse('affiliate_cp_agree_terms');
 			$response->viewData['affiliate'] = $affiliate;
-
-			$termsCompiler = new WPAM_TermsCompiler(get_option(WPAM_PluginConfig::$TNCOptionOption));
+                        //
+                        $tnc_page_url = get_option( WPAM_PluginConfig::$AffTncPageURL );
+                        $tnc_page_id = url_to_postid($tnc_page_url);
+                        $tnc_page = get_post($tnc_page_id);
+                        $tnc_content = $tnc_page->post_content;
+			$termsCompiler = new WPAM_TermsCompiler($tnc_content);
 			$response->viewData['tnc'] = $termsCompiler->build();
 			$response->viewData['nextStepUrl'] = $this->getLink(
 				array(

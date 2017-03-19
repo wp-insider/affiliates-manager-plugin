@@ -67,7 +67,7 @@ $request = @$this->viewData['request'];
 
 			<tr>
 				<td colspan="2">
-					<input type="checkbox" id="chkAgreeTerms" name="chkAgreeTerms" <?php echo (isset($request['chkAgreeTerms']) ? 'checked="checked"':'')?> />&nbsp;<label for="chkAgreeTerms" id="agreeTermsLabel"><?php _e('I have read and agree to the', 'affiliates-manager' ) ?> <a href="#" id="tncLink"><?php _e('Terms and Conditions', 'affiliates-manager' ) ?></a></label>
+					<input type="checkbox" id="chkAgreeTerms" name="chkAgreeTerms" <?php echo (isset($request['chkAgreeTerms']) ? 'checked="checked"':'')?> />&nbsp;<label for="chkAgreeTerms" id="agreeTermsLabel"><?php _e('I have read and agree to the', 'affiliates-manager' ) ?> <a target="_blank" href="<?php echo get_option( WPAM_PluginConfig::$AffTncPageURL );?>"><?php _e('Terms and Conditions', 'affiliates-manager' ) ?></a></label>
 					<span id="termsAgreeWarning" style="color: red; display: none"><br><?php _e( 'You must agree to the terms.', 'affiliates-manager' ) ?></span>
 				</td>
 			</tr>

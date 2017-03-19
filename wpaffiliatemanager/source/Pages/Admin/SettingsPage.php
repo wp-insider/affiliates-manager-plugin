@@ -152,13 +152,7 @@ class WPAM_Pages_Admin_SettingsPage {
                     } else {
                         $affiliateFieldRepository->update($field);
                     }
-                }
-                
-                $txtTnc = $request['txtTnc'];
-                if(empty($txtTnc)){  //save the default T&C message if empty
-                    $txtTnc = file_get_contents( WPAM_RESOURCES_DIR . "default_tnc.txt" );
-                }
-                update_option(WPAM_PluginConfig::$TNCOptionOption, $txtTnc);
+                }              
                 
                 $affhomemsg = $request['affhomemsg'];
                 if(empty($affhomemsg)){  //save the default home message if empty
@@ -185,6 +179,7 @@ class WPAM_Pages_Admin_SettingsPage {
                     update_option(WPAM_PluginConfig::$RegPageId, $reg_page_id);
                 }
                 update_option(WPAM_PluginConfig::$AffLoginPageURL, $request['affLoginPage']);
+                update_option(WPAM_PluginConfig::$AffTncPageURL, $request['affTncPage']);
             }
             
             if (isset($request['AffAdvancedSettings'])) {    //Advanced Settings options submitted
@@ -208,7 +203,6 @@ class WPAM_Pages_Admin_SettingsPage {
         $response->viewData['messages'] = $db->getMessageRepository()->loadAll();
 
         if ($request !== NULL) {
-            $response->viewData['request']['txtTnc'] = isset($request['txtTnc']) ? $request['txtTnc'] : '';
             $response->viewData['request']['affhomemsg'] = isset($request['affhomemsg']) ? $request['affhomemsg'] : '';
             $response->viewData['request']['txtMinimumPayout'] = $request['txtMinimumPayout'];
             $response->viewData['request']['txtCookieExpire'] = $request['txtCookieExpire'];
@@ -233,10 +227,10 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['affHomePage'] = isset($request['affHomePage']) ? $request['affHomePage'] : '';
             $response->viewData['request']['affRegPage'] = isset($request['affRegPage']) ? $request['affRegPage'] : '';
             $response->viewData['request']['affLoginPage'] = isset($request['affLoginPage']) ? $request['affLoginPage'] : '';
+            $response->viewData['request']['affTncPage'] = isset($request['affTncPage']) ? $request['affTncPage'] : '';
             $response->viewData['request']['affLandingPage'] = isset($request['affLandingPage']) ? $request['affLandingPage'] : '';
             $response->viewData['validationResult'] = $vr;
         } else {
-            $response->viewData['request']['txtTnc'] = get_option(WPAM_PluginConfig::$TNCOptionOption);
             $response->viewData['request']['affhomemsg'] = get_option(WPAM_PluginConfig::$AffHomeMsg);
             $response->viewData['request']['txtMinimumPayout'] = get_option(WPAM_PluginConfig::$MinPayoutAmountOption);
             $response->viewData['request']['txtCookieExpire'] = get_option(WPAM_PluginConfig::$CookieExpireOption);
@@ -261,6 +255,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['affHomePage'] = get_option(WPAM_PluginConfig::$AffHomePageURL);
             $response->viewData['request']['affRegPage'] = get_option(WPAM_PluginConfig::$AffRegPageURL);
             $response->viewData['request']['affLoginPage'] = get_option(WPAM_PluginConfig::$AffLoginPageURL);
+            $response->viewData['request']['affTncPage'] = get_option(WPAM_PluginConfig::$AffTncPageURL);
             $response->viewData['request']['affLandingPage'] = get_option(WPAM_PluginConfig::$AffLandingPageURL);
         }
 

@@ -340,9 +340,7 @@ class WPAM_Data_DatabaseInstaller {
             $login_page_id = $new_pages[WPAM_Plugin::PAGE_NAME_LOGIN]->install();
             $login_page = get_permalink($login_page_id);          
         }
-        update_option(WPAM_PluginConfig::$AffLoginPageURL, $login_page); //Save the URL of the login page
-        //Add code for any new page needed for this plugin.
-        
+        update_option(WPAM_PluginConfig::$AffLoginPageURL, $login_page); //Save the URL of the login page      
         // save default messages for the pages
         $login_url = get_option(WPAM_PluginConfig::$AffLoginPageURL);
         $register_page_id = get_option(WPAM_PluginConfig::$RegPageId);
@@ -352,8 +350,27 @@ class WPAM_Data_DatabaseInstaller {
         $affhomemsg .= '<br />';
         $affhomemsg .= 'If you are not an affiliate, but wish to become one, you will need to apply. To apply, you must be a registered user on this blog. If you have an existing account on this blog, please <a href="'.$login_url.'">log in</a>. If not, please <a href="'.$register_page_url.'">register</a>.';
         add_option( WPAM_PluginConfig::$AffHomeMsg, $affhomemsg );
+        //
+        $tnc_page = get_option( WPAM_PluginConfig::$AffTncPageURL );
+        if (!isset($tnc_page) || empty($tnc_page)) {
+            //Could not find the URL of the affiliate terms and conditions page. Lets create this page
+            $tncBuilder = new WPAM_TermsCompiler(file_get_contents(WPAM_RESOURCES_DIR."default_tnc.txt"));
+            $tnc_page_content = $tncBuilder->build();
+            $tnc_post = array(
+                'post_title' => 'Terms and Conditions',
+                'comment_status' => 'closed',
+                'ping_status' => 'closed',
+                'post_content' => $tnc_page_content,
+                'post_status' => 'publish',
+                'post_type' => 'page'
+            );
+            $tnc_page_id = wp_insert_post($tnc_post);
+            $tnc_page = get_permalink($tnc_page_id);          
+        }
+        update_option(WPAM_PluginConfig::$AffTncPageURL, $tnc_page); //Save the URL of the terms and conditions page
+        //Add code for any new page needed for this plugin.
     }
-
+    
     public function performUpgrade() {
         //Do db upgrade stuff
     }

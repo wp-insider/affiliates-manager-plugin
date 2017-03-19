@@ -53,6 +53,10 @@ class WPAM_Click_Tracking {
             $args['referer'] = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
             $args['affiliateSubCode'] = '';
             $args['ipAddress'] = WPAM_Click_Tracking::get_user_ip();
+            /*
+            WPAM_Logger::log_debug('inserting click');
+            WPAM_Logger::log_debug(print_r($args, true));
+            */
             WPAM_Click_Tracking::insert_click_data($args);
         }
         

@@ -32,5 +32,16 @@
                         <p class="description"><?php _e('This is the URL of your Affiliate Login page', 'affiliates-manager');?></p>
 		</td>
 	</tr>
+        <tr>
+		<th width="200">
+			<label for="affTncPage">
+				<?php _e('Terms and Conditions Page', 'affiliates-manager');?>
+			</label>                       
+		</th>
+		<td>
+			<input type="text" size="60" name="affTncPage" id="affTncPage" value="<?php echo $this->viewData['request']['affTncPage']?>" />
+                        <p class="description"><?php _e('This is the URL of your Terms and Conditions page', 'affiliates-manager');?></p>
+		</td>
+	</tr>
         
 </table>

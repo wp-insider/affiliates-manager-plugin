@@ -2,7 +2,7 @@
 <h2>Agreement</h2>
 By signing up to be an Affiliate in the [site name] Affiliate Program ("Program") you are agreeing to be bound by the following terms and conditions ("Terms of Service").
 
-<strong>[site name]</strong> reserves the right to update and change the Terms of Service from time to time without notice. Any new features that augment or enhance the current Program, including the release of new tools and resources, shall be subject to the Terms of Service. Continued use of the Program after any such changes shall constitute your consent to such changes. You can review the most current version of the Terms of Service at any time at: <a href="[terms url]">[terms url]</a>
+<strong>[site name]</strong> reserves the right to update and change the Terms of Service from time to time without notice. Any new features that augment or enhance the current Program, including the release of new tools and resources, shall be subject to the Terms of Service. Continued use of the Program after any such changes shall constitute your consent to such changes.
 
 Violation of any of the terms below will result in the termination of your Account and for forfeiture of any outstanding affiliate commission payments earned during the violation. You agree to use the Affiliate Program at your own risk.
 

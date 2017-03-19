@@ -19,7 +19,7 @@
 					<td colspan="2">
 						<br/>
 							<strong><?php _e( 'Terms & Conditions', 'affiliates-manager' ) ?></strong><br/>
-						<div id="termsBox" style="width: auto; height: 300px; overflow: scroll; background-color: white; color: black; border: 1px solid black; white-space: pre-wrap;"><?php echo $this->viewData['tnc']?></div>
+						<div id="termsBox" style="padding: 20px; width: auto; height: 300px; overflow: scroll; background-color: white; color: black; border: 1px solid black; white-space: pre-wrap;"><?php echo $this->viewData['tnc']?></div>
 						<br />
 					</td>
 				</tr>

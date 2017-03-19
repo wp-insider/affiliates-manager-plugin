@@ -453,15 +453,6 @@ jQuery(function($) {
 	</tr>
         <tr>
 		<th width="200">
-			<label for="txtTnC"><?php _e('Terms and Conditions', 'affiliates-manager');?></label>
-			<img id="tncInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
-		</th>
-		<td>
-			<textarea id="txtTnC" name="txtTnc" cols="60" rows="20"><?php echo $this->viewData['request']['txtTnc']?></textarea>
-		</td>
-	</tr>
-        <tr>
-		<th width="200">
 			<label for="affhomemsg"><?php _e('Affiliates Homepage Message', 'affiliates-manager');?></label>
 		</th>
 		<td>
