@@ -166,7 +166,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
         
         <tr>
                 <th>
-                        <label id="lblaffBountyAmount" for="affBountyAmount"><?php _e( 'Bounty Rate (% of Sale)', 'affiliates-manager' ) ?></label>
+                        <label id="lblaffBountyAmount" for="affBountyAmount"><?php _e( 'Bounty Rate (% of Sale) / Amount', 'affiliates-manager' ) ?></label>
                 </th>
                 <td>
                         <input type="text" id="affBountyAmount" name="affBountyAmount" size="5" value="<?php echo $this->viewData['request']['affBountyAmount']?>" />

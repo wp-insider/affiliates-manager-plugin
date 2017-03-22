@@ -49,7 +49,7 @@ if( ! isset( $model ) && isset( $this->viewData['affiliate'] ) ){
 							<?php break;
                                                         case 'email':
                                                         ?>
-                                                        <input type="text" size="20" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo $value; ?>" readonly />
+                                                        <input type="text" size="20" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo $value; ?>" <?php if(isset($value) && !empty($value)){ echo ' readonly';}?> />
                                                         <?php break;
 							case 'phoneNumber':?>							
 							<input type="text" size="20" maxlength="14" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo $value; ?>" />
