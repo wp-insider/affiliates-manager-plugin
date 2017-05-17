@@ -70,6 +70,27 @@ if( ! isset( $model ) && isset( $this->viewData['affiliate'] ) ){
 				<?php if( !is_admin() && $field->fieldType == 'email' && isset( $this->viewData['newEmail'] ) ){ ?>
 					<tr><td colspan="2"><?php printf( __('There is a pending change of your e-mail to <code>%1$s</code>. <a href="%2$s">Cancel</a>', 'affiliates-manager' ), $this->viewData['newEmail']['newemail'], esc_url( self_admin_url( 'profile.php?dismiss=' . $this->viewData['userId'] . '_new_email' ) ) ); ?></td></tr>
                                 <?php } ?>
+                                <?php } 
+                                if(!is_admin()){
+                                ?>
+                                <tr>
+                                    <td><label for="_aff_New_Password">
+                                        <?php _e( 'New Password', 'affiliates-manager' ); ?>
+                                        </label>	
+                                    </td>
+                                    <td>
+                                        <input type="password" size="20" id="_aff_New_Password" name="_aff_New_Password" autocomplete="off" value="" />
+                                    </td>
+				</tr> 
+                                <tr>
+                                    <td><label for="_aff_Repeat_New_Password">
+                                        <?php _e( 'Repeat New Password', 'affiliates-manager' ); ?>
+                                        </label>	
+                                    </td>
+                                    <td>
+                                        <input type="password" size="20" id="_aff_Repeat_New_Password" name="_aff_Repeat_New_Password" autocomplete="off" value="" />
+                                    </td>
+				</tr>
                                 <?php } ?>
 			</tbody>
 			<?php if ( ! isset( $model ) || ( ! $model->isPending() && ! $model->isBlocked() && ! $model->isDeclined() ) ): ?>

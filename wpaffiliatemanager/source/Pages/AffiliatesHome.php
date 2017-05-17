@@ -314,6 +314,30 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 			}
 			
 			$vr = $affiliateHelper->validateForm($validator, $request, $affiliateFields, TRUE);
+                        
+                        //update the password if set
+                        if(isset($_POST['_aff_New_Password']) && !empty($_POST['_aff_New_Password'])){
+                            $aff_id = $affiliate->affiliateId;
+                            $user_id = $affiliate->userId;
+                            $new_password = sanitize_text_field($_POST['_aff_New_Password']);
+                            $repeat_new_password = (isset($_POST['_aff_Repeat_New_Password']) && !empty($_POST['_aff_Repeat_New_Password'])) ? sanitize_text_field($_POST['_aff_Repeat_New_Password']) : '';
+                            $update_pass = true;
+                            // Check for "\" in password.
+                            if ( false !== strpos( wp_unslash( $new_password ), "\\" ) ) {
+                                $update_pass = false;                          
+                                $vr->addError( new WPAM_Validation_ValidatorError( '_aff_New_Password', __(': Password may not contain slashes.', 'affiliates-manager') ) );
+                            }                           
+                            // Checking the password has been typed twice the same.
+                            if ( ( ! empty( $new_password ) ) && $new_password != $repeat_new_password ) { 
+                                $update_pass = false;
+                                $vr->addError( new WPAM_Validation_ValidatorError( '_aff_New_Password', __(': Please enter the same password in both password fields.', 'affiliates-manager') ) );
+                            }
+                            if($update_pass){
+                                wp_set_password( $new_password, $user_id );
+                            }
+                            //echo "affiliate ID: ".$aff_id.", user ID: ".$user_id.", password: ".$new_password;
+                        }
+                        
 			if ($vr->getIsValid()) {
 				//#79 hackery to do the "normal" WP email approval process
 				require_once ABSPATH . 'wp-admin/includes/ms.php';
