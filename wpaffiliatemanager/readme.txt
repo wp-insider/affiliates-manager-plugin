@@ -133,7 +133,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.4.4 =
+= 2.4.4 =
 - Affiliates will now able to change the password from their dashboard.
 
 = 2.4.3 =
