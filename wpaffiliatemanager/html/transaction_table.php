@@ -1,7 +1,7 @@
 <script>
     jQuery(function($) {
         var dates = $("#from, #to").datepicker({
-            numberOfMonths: 2,
+            numberOfMonths: 1,
             onSelect: function(selectedDate) {
                 var option = this.id == "from" ? "minDate" : "maxDate",
                         instance = $(this).data("datepicker"),
@@ -38,7 +38,7 @@
     </form>
 </div>
 
-<table class="pure-table">
+<table class="pure-table wpam-responsive-table">
     <thead>
         <tr>
             <th><?php _e('ID', 'affiliates-manager') ?></th>
@@ -56,15 +56,15 @@
     <tbody>
         <?php foreach ($this->viewData['transactions'] as $transaction) { ?>
             <tr class="transaction-<?php echo $transaction->status ?>">
-                <td><?php echo $transaction->transactionId ?></td>
-                <td><?php echo $transaction->type ?></td>
-                <td><?php echo date("m/d/Y", $transaction->dateCreated) ?></td>
-                <td><?php echo $transaction->status ?></td>
-                <td><?php echo $transaction->description ?></td>
-                <td><?php echo $transaction->referenceId ?></td>
-                <td style="text-align: right"><?php echo wpam_format_money($transaction->amount) ?></td>
-                <?php if ($this->viewData['showBalance']): ?>
-                    <td style="text-align: right"><?php echo wpam_format_money($transaction->balance) ?></td>
+                <td data-column="<?php _e('ID', 'affiliates-manager') ?>"><?php echo $transaction->transactionId ?></td>
+                <td data-column="<?php _e('Type', 'affiliates-manager') ?>"><?php echo $transaction->type ?></td>
+                <td data-column="<?php _e('Date Occurred', 'affiliates-manager') ?>"><?php echo date("m/d/Y", $transaction->dateCreated) ?></td>
+                <td data-column="<?php _e('Status', 'affiliates-manager') ?>"><?php echo $transaction->status ?></td>
+                <td data-column="<?php _e('Description', 'affiliates-manager') ?>"><?php echo $transaction->description ?></td>
+                <td data-column="<?php _e('Reference ID', 'affiliates-manager') ?>"><?php echo (empty($transaction->referenceId) ? '&nbsp;' : $transaction->referenceId) ?></td>
+                <td data-column="<?php _e('Amount', 'affiliates-manager') ?>"><?php echo wpam_format_money($transaction->amount) ?></td>
+                <?php if (isset($this->viewData['showBalance']) && $this->viewData['showBalance']): ?>
+                    <td data-column="<?php _e('Balance', 'affiliates-manager') ?>"><?php echo wpam_format_money($transaction->balance) ?></td>
                 <?php endif; ?>
             </tr>
         <?php } ?>

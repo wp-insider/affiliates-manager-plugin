@@ -115,7 +115,7 @@ div.summaryPanelLine{
 div.summaryPanelLineValue
 {
     float: left;
-    width: 50px;
+    width: 80px;
     font-weight: bold;
 }
 
@@ -164,6 +164,16 @@ div.summaryPanelLineValue
 .wpam-daterange-selection{
     margin-bottom: 15px;
     text-align: center;
+}
+
+.wpam-daterange-selection input {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+
+.wpam-daterange-selection label {
+    display: block;
 }
 .wpam-daterange-action-buttons{
     margin-bottom: 15px;
@@ -252,4 +262,93 @@ td#landing-page-slug {
 /*** Affiliate registration page ***/
 .wpam_registration_input_help_text{
     max-width: 350px;
+}
+
+/*** Contact info table ***/
+
+.wpam-contact-info tbody, .wpam-contact-info td, .wpam-contact-info tr { 
+    display: block; 
+}
+
+.wpam-contact-info td + td {
+    border: none;
+    border-bottom: 1px solid #cbcbcb;
+    padding-bottom: 20px;
+}
+
+.wpam-contact-info input, .wpam-contact-info select {
+    min-width: 50%;
+}
+
+/*** Responsive table ***/
+table.wpam-responsive-table { 
+    border-collapse: collapse; 
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    .wpam-contact-info input, .wpam-contact-info select {
+        width: 100%;
+    }
+
+    .wpam-daterange-selection input {
+        width: 100%;
+    }
+
+    .wpam-creative-detail td + td {
+        border: none;
+        border-bottom: 1px solid #cbcbcb;
+        padding-bottom: 20px;
+    }
+
+    .wpam-creative-detail tr td:first-child {
+        font-weight: bold;
+    }
+    .wpam-creative-detail tbody, .wpam-creative-detail td, .wpam-creative-detail tr { 
+        display: block; 
+    }
+    table.wpam-responsive-table { 
+        width: 100%; 
+    }
+
+    /* Force table to not be like tables anymore */
+    table.wpam-responsive-table, table.wpam-responsive-table thead, table.wpam-responsive-table tbody, table.wpam-responsive-table th, table.wpam-responsive-table td, table.wpam-responsive-table tr { 
+        display: block; 
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    table.wpam-responsive-table thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    table.wpam-responsive-table tr { border: 1px solid #ccc; }
+
+    table.wpam-responsive-table td { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+    }
+
+    table.wpam-responsive-table td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+        /* Label the data */
+        content: attr(data-column);
+
+        color: #000;
+        font-weight: bold;
+    }
+
 }

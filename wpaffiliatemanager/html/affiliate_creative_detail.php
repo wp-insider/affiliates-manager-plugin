@@ -50,7 +50,7 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 <p/>
 	<?php if ($model->type == 'text') { ?>
 
-	<table class="pure-table">
+	<table class="pure-table wpam-creative-detail">
 		<thead>
 		<tr>
 			<th colspan="2"><?php _e( 'Text Link Properties', 'affiliates-manager' ) ?></th>
@@ -71,7 +71,7 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 	</table>
 
 	<?php } else if ($model->type == 'image') { ?>
-	<table class="pure-table">
+	<table class="pure-table wpam-creative-detail">
 		<thead>
 		<tr>
 			<th colspan="2"><?php _e( 'Image Properties', 'affiliates-manager' ) ?></th>

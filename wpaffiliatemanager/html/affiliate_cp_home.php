@@ -31,24 +31,24 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>
+                    <td colspan="2">
                         <div class="summaryPanel">
                             <?php if (get_option(WPAM_PluginConfig::$AffEnableImpressions)) { ?>
                                 <div class="summaryPanelLine">
-                                    <div style="width: 80px;" class="summaryPanelLineValue"><?php echo $this->viewData['todayImpressions'] ?></div>
+                                    <div class="summaryPanelLineValue"><?php echo $this->viewData['todayImpressions'] ?></div>
                                     <div class="summaryPanelLineLabel"><?php _e('Impressions', 'affiliates-manager') ?></div>
                                 </div>
                             <?php } ?>
                             <div class="summaryPanelLine">
-                                <div style="width: 80px;" class="summaryPanelLineValue"><?php echo $this->viewData['todayVisitors'] ?></div>
+                                <div class="summaryPanelLineValue"><?php echo $this->viewData['todayVisitors'] ?></div>
                                 <div class="summaryPanelLineLabel"><?php _e('Visitors', 'affiliates-manager') ?></div>
                             </div>
                             <div class="summaryPanelLine">
-                                <div style="width: 80px;" class="summaryPanelLineValue"><?php echo $this->viewData['todayClosedTransactions'] ?></div>
+                                <div class="summaryPanelLineValue"><?php echo $this->viewData['todayClosedTransactions'] ?></div>
                                 <div class="summaryPanelLineLabel"><?php _e('Closed Transactions', 'affiliates-manager') ?></div>
                             </div>
                             <div class="summaryPanelLine">
-                                <div style="width: 80px;" class="summaryPanelLineValue"><?php echo $this->viewData['todayRevenue'] ?></div>
+                                <div class="summaryPanelLineValue"><?php echo $this->viewData['todayRevenue'] ?></div>
                                 <div class="summaryPanelLineLabel"><?php _e('Revenue', 'affiliates-manager') ?></div>
                             </div>
                         </div>
@@ -65,24 +65,24 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>
+                    <td colspan="2">
                         <div class="summaryPanel">
                             <?php if (get_option(WPAM_PluginConfig::$AffEnableImpressions)) { ?>
                                 <div class="summaryPanelLine">
-                                    <div style="width: 80px;" class="summaryPanelLineValue"><?php echo $this->viewData['monthImpressions'] ?></div>
+                                    <div class="summaryPanelLineValue"><?php echo $this->viewData['monthImpressions'] ?></div>
                                     <div class="summaryPanelLineLabel"><?php _e('Impressions', 'affiliates-manager') ?></div>
                                 </div>
                             <?php } ?>
                             <div class="summaryPanelLine">
-                                <div style="width: 80px;" class="summaryPanelLineValue"><?php echo $this->viewData['monthVisitors'] ?></div>
+                                <div class="summaryPanelLineValue"><?php echo $this->viewData['monthVisitors'] ?></div>
                                 <div class="summaryPanelLineLabel"><?php _e('Visitors', 'affiliates-manager') ?></div>
                             </div>
                             <div class="summaryPanelLine">
-                                <div style="width: 80px;" class="summaryPanelLineValue"><?php echo $this->viewData['monthClosedTransactions'] ?></div>
+                                <div class="summaryPanelLineValue"><?php echo $this->viewData['monthClosedTransactions'] ?></div>
                                 <div class="summaryPanelLineLabel"><?php _e('Closed Transactions', 'affiliates-manager') ?></div>
                             </div>
                             <div class="summaryPanelLine">
-                                <div style="width: 80px;" class="summaryPanelLineValue"><?php echo ($this->viewData['monthRevenue']) ?></div>
+                                <div class="summaryPanelLineValue"><?php echo ($this->viewData['monthRevenue']) ?></div>
                                 <div class="summaryPanelLineLabel"><?php _e('Revenue', 'affiliates-manager') ?></div>
                             </div>
                         </div>

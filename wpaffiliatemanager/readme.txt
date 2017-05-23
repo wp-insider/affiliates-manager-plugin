@@ -133,6 +133,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= TODO 2.4.5 =
+- Mobile responsive improvements for the affiliate portal area.
+
 = 2.4.4 =
 - Affiliates will now able to change the password from their dashboard.
 
