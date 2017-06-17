@@ -133,6 +133,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= TODO 2.4.6 =
+- Added a new option to export the affiliates data to a CSV file.
+
 = 2.4.5 =
 - Mobile responsive improvements for the affiliate portal area.
 

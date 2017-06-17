@@ -773,7 +773,7 @@ class WPAM_Plugin {
                 'affiliateId' => 'Affiliate ID',
                 'status' => 'Status',
                 'balance' => 'Balance',
-                'Earnings' => 'Earnings',
+                'earnings' => 'Earnings',
                 'firstName' => 'First Name',
                 'lastName' => 'Last Name',
                 'email' => 'Email',

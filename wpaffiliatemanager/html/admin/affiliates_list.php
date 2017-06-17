@@ -67,11 +67,18 @@
                 </form>
 
             </div>
-            <form method="POST">
-                <?php wp_nonce_field('wpam-export-affiliates-to-csv-nonce'); ?>
-                <p>
-                    <input type="submit" name="wpam-export-affiliates-to-csv" value="<?php _e('Export to CSV', 'affiliates-manager') ?>" class="button-primary"/>
-                </p>
-            </form>
+            
+            <div class="postbox">
+            <h3 class="hndle"><label for="title">Export Affiliates Record</label></h3>
+                <div class="inside">
+                <form method="POST">
+                    <?php wp_nonce_field('wpam-export-affiliates-to-csv-nonce'); ?>
+                    <p>
+                        <input type="submit" name="wpam-export-affiliates-to-csv" value="<?php _e('Export to CSV', 'affiliates-manager') ?>" class="button-primary"/>
+                    </p>
+                </form>
+                </div>
+            </div>
+           
         </div></div>
 </div>
