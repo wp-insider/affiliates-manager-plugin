@@ -35,7 +35,7 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
         $item['dateCreated'] = date("m/d/Y", strtotime($item['dateCreated']));
         return $item['dateCreated'];
     }
-    
+
     function column_viewDetail($item) {
         $item['viewDetail'] = '<a class="button-secondary" href="admin.php?page=wpam-affiliates&viewDetail=' . $item['affiliateId'] . '">' . __('View', 'affiliates-manager') . '</a>';
         return $item['viewDetail'];
@@ -49,9 +49,9 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
 
     function column_cb($item) {
         return sprintf(
-                        '<input type="checkbox" name="%1$s[]" value="%2$s" />',
-                        /* $1%s */ $this->_args['singular'], //Let's reuse singular label
-                        /* $2%s */ $item['affiliateId'] //The value of the checkbox should be the record's key/id
+                '<input type="checkbox" name="%1$s[]" value="%2$s" />',
+                /* $1%s */ $this->_args['singular'], //Let's reuse singular label
+                /* $2%s */ $item['affiliateId'] //The value of the checkbox should be the record's key/id
         );
     }
 
@@ -104,8 +104,8 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
                 $selectdb = $wpdb->get_row("SELECT * FROM $record_table_name WHERE affiliateId='$row'");
                 $aff_email = $selectdb->email;
                 $user = get_user_by('email', $aff_email);
-                if($user){
-                    if(!in_array('administrator', $user->roles)){
+                if ($user) {
+                    if (!in_array('administrator', $user->roles)) {
                         wp_delete_user($user->ID);
                     }
                 }
@@ -121,7 +121,7 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
         if (isset($_REQUEST['page']) && 'wpam-affiliates' == $_REQUEST['page']) {
             if (isset($_REQUEST['delete_aid'])) { //delete an affiliate record
                 $aid = esc_sql($_REQUEST['delete_aid']);
-                if(!is_numeric($aid)){
+                if (!is_numeric($aid)) {
                     return;
                 }
                 global $wpdb;
@@ -129,8 +129,8 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
                 $selectdb = $wpdb->get_row("SELECT * FROM $record_table_name WHERE affiliateId='$aid'");
                 $aff_email = $selectdb->email;
                 $user = get_user_by('email', $aff_email);
-                if($user){
-                    if(!in_array('administrator', $user->roles)){
+                if ($user) {
+                    if (!in_array('administrator', $user->roles)) {
                         wp_delete_user($user->ID);
                     }
                 }
@@ -141,7 +141,7 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
         }
     }
 
-    function prepare_items() {
+    function prepare_items($ignore_pagination = false) {
         // Lets decide how many records per page to show     
         $per_page = '50';
 
@@ -164,10 +164,10 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
         global $wpdb;
         $aff_table_name = WPAM_AFFILIATES_TBL;
         $trn_table_name = WPAM_TRANSACTIONS_TBL;
-        
+
         //pagination requirement
         $current_page = $this->get_pagenum();
-        
+
         $where = "";
         if (isset($_REQUEST['statusFilter']) && !empty($_REQUEST['statusFilter'])) {
             $status = esc_sql($_REQUEST['statusFilter']);
@@ -179,14 +179,13 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
                 $where = " where status = '$status'";
             }
         }
-        
+
         //count the total number of items
-        $query = "select count(*) from $aff_table_name".$where;
-        
+        $query = "select count(*) from $aff_table_name" . $where;
+
         $total_items = $wpdb->get_var($query);
-        
-        $query =
-                "select
+
+        $query = "select
                 $aff_table_name.*,
                 (
                         select coalesce(sum(tr.amount),0)
@@ -206,25 +205,24 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
         $where
         ORDER BY $orderby_column $sort_order     
         ";
-        
-        $offset = ($current_page - 1) * $per_page;
-        $query.=' LIMIT ' . (int) $offset . ',' . (int) $per_page;
 
+        //pagination requirement
+        if (!$ignore_pagination) {
+            $offset = ($current_page - 1) * $per_page;
+            $query .= ' LIMIT ' . (int) $offset . ',' . (int) $per_page;
+            $this->set_pagination_args(array(
+                'total_items' => $total_items, //WE have to calculate the total number of items
+                'per_page' => $per_page, //WE have to determine how many items to show on a page
+                'total_pages' => ceil($total_items / $per_page)   //WE have to calculate the total number of pages
+            ));
+        }
         $data = $wpdb->get_results($query, ARRAY_A);
         /*
           $records_table_name = WPAM_TRACKING_TOKENS_TBL; //The table to query
           $resultset = $wpdb->get_results("SELECT * FROM $records_table_name ORDER BY $orderby_column $sort_order", OBJECT);
          */
-
         // Now we add our *sorted* data to the items property, where it can be used by the rest of the class.
         $this->items = $data;
-
-        //pagination requirement
-        $this->set_pagination_args(array(
-            'total_items' => $total_items, //WE have to calculate the total number of items
-            'per_page' => $per_page, //WE have to determine how many items to show on a page
-            'total_pages' => ceil($total_items / $per_page)   //WE have to calculate the total number of pages
-        ));
     }
 
 }

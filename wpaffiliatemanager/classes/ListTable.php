@@ -14,11 +14,13 @@ class WPAM_List_Table {
             'plural' => '',
             'singular' => '',
             'ajax' => false
-                ));
+        ));
 
         $screen = get_current_screen();
 
-        add_filter("manage_{$screen->id}_columns", array(&$this, 'get_columns'), 0);
+        if (isset($screen->id)) { //workaround for CSS download
+            add_filter("manage_{$screen->id}_columns", array(&$this, 'get_columns'), 0);
+        }
 
         if (!$args['plural'])
             $args['plural'] = $screen->base;
@@ -47,7 +49,7 @@ class WPAM_List_Table {
             'total_items' => 0,
             'total_pages' => 0,
             'per_page' => 0,
-                ));
+        ));
 
         if (!$args['total_pages'] && $args['per_page'] > 0)
             $args['total_pages'] = ceil($args['total_items'] / $args['per_page']);
@@ -91,7 +93,7 @@ class WPAM_List_Table {
         <p class="search-box">
             <label class="screen-reader-text" for="<?php echo $input_id ?>"><?php echo $text; ?>:</label>
             <input type="text" id="<?php echo $input_id ?>" name="s" value="<?php _admin_search_query(); ?>" />
-        <?php submit_button($text, 'button', false, false, array('id' => 'search-submit')); ?>
+            <?php submit_button($text, 'button', false, false, array('id' => 'search-submit')); ?>
         </p>
         <?php
     }
@@ -424,18 +426,18 @@ class WPAM_List_Table {
         <table class="wp-list-table <?php echo implode(' ', $this->get_table_classes()); ?>" cellspacing="0">
             <thead>
                 <tr>
-        <?php $this->print_column_headers(); ?>
+                    <?php $this->print_column_headers(); ?>
                 </tr>
             </thead>
 
             <tfoot>
                 <tr>
-        <?php $this->print_column_headers(false); ?>
+                    <?php $this->print_column_headers(false); ?>
                 </tr>
             </tfoot>
 
             <tbody id="the-list"<?php if ($singular) echo " class='list:$singular'"; ?>>
-        <?php $this->display_rows_or_placeholder(); ?>
+                <?php $this->display_rows_or_placeholder(); ?>
             </tbody>
         </table>
         <?php
@@ -453,12 +455,12 @@ class WPAM_List_Table {
         <div class="tablenav <?php echo esc_attr($which); ?>">
 
             <div class="alignleft actions">
-        <?php $this->bulk_actions($which); ?>
+                <?php $this->bulk_actions($which); ?>
             </div>
-        <?php
-        $this->extra_tablenav($which);
-        $this->pagination($which);
-        ?>
+            <?php
+            $this->extra_tablenav($which);
+            $this->pagination($which);
+            ?>
 
             <br class="clear" />
         </div>
