@@ -33,7 +33,7 @@ class WPAM_Tracking_TrackingLinkBuilder
                     return add_query_arg( array( WPAM_PluginConfig::$wpam_id => $this->affiliate->affiliateId ), $aff_landing_page);
                 }
 		return add_query_arg( array( WPAM_PluginConfig::$wpam_id => $this->affiliate->affiliateId ),
-							  home_url( trim( $this->creative->slug ) ) );
+							  home_url( '/'.trim( $this->creative->slug ) ) );
 	}
 
 	public function getHtmlSnippet() {
