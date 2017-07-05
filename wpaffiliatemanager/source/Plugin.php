@@ -440,24 +440,39 @@ class WPAM_Plugin {
         $order = new WC_Order($order_id);
         $recurring_payment_method = get_post_meta($order_id, '_recurring_payment_method', true);
         if (!empty($recurring_payment_method)) {
-            WPAM_Logger::log_debug("WooCommerce Integration - This is a recurring payment order. Subscription payment method: " . $recurring_payment_method);
-            WPAM_Logger::log_debug("The commission will be calculated via the recurring payemnt api call.");
+            WPAM_Logger::log_debug("WooCommerce Integration - This is a recurring payment order. Subscription payment method: " . $recurring_payment_method, 2);
+            WPAM_Logger::log_debug("The commission will be calculated via the recurring payemnt api call.", 2);
+            return;
+        }
+        $subscription_renewal = get_post_meta($order_id, '_subscription_renewal', true);
+        if (!empty($subscription_renewal)) {
+            WPAM_Logger::log_debug("WooCommerce Integration - This is a subscription payment order since the subscription_renewal meta is set.", 2);
+            WPAM_Logger::log_debug("The commission will be calculated via the recurring payment api call.", 2);
+            return;
+        }
+        $post = get_post($order_id);
+        $post_name = $post->post_name;
+        WPAM_Logger::log_debug("WooCommerce Integration - Order CPT name: " . $post_name);
+        if (stripos($post_name, 'subscription') !== false) {
+            //This is an order for subscription. The recurring payment api hook will handle it .
+            WPAM_Logger::log_debug("WooCommerce Integration - This is a recurring payment order. The commission will be calculated via the recurring payemnt api call.", 2);
             return;
         }
 
         $order_status = $order->status;
         WPAM_Logger::log_debug("WooCommerce Integration - Order status: " . $order_status);
         if (strtolower($order_status) != "completed" && strtolower($order_status) != "processing") {
-            WPAM_Logger::log_debug("WooCommerce Integration - Order status for this transaction is not in a 'completed' or 'processing' state. Commission will not be awarded at this stage.");
-            WPAM_Logger::log_debug("WooCommerce Integration - Commission for this transaciton will be awarded when you set the order status to completed or processing.");
+            WPAM_Logger::log_debug("WooCommerce Integration - Order status for this transaction is not in a 'completed' or 'processing' state. Commission will not be awarded at this stage.", 2);
+            WPAM_Logger::log_debug("WooCommerce Integration - Commission for this transaction will be awarded when you set the order status to completed or processing.", 2);
             return;
         }
 
         $total = $order->order_total;
         $shipping = $order->get_total_shipping();
         $tax = $order->get_total_tax();
-        WPAM_Logger::log_debug('WooCommerce Integration - Total amount: ' . $total . ', Total shipping: ' . $shipping . ', Total tax: ' . $tax);
-        $purchaseAmount = $total - $shipping - $tax;
+        $fees = wpam_get_total_woocommerce_order_fees($order);
+        WPAM_Logger::log_debug('WooCommerce Integration - Total amount: ' . $total . ', Total shipping: ' . $shipping . ', Total tax: ' . $tax . ', Fees: '. $fees);
+        $purchaseAmount = $total - $shipping - $tax - $fees;
         $buyer_email = $order->billing_email;
 
         $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
@@ -467,7 +482,7 @@ class WPAM_Plugin {
         }
         $wpam_refkey = apply_filters('wpam_woo_override_refkey', $wpam_refkey, $order);
         if (empty($wpam_refkey)) {
-            WPAM_Logger::log_debug("WooCommerce Integration - could not get wpam_id/wpam_refkey from cookie. This is not an affiliate sale");
+            WPAM_Logger::log_debug("WooCommerce Integration - could not get wpam_id/wpam_refkey from cookie. This is not an affiliate sale", 4);
             return;
         }
 

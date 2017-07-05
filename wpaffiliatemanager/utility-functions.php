@@ -57,3 +57,18 @@ function wpam_get_cookie_life_time() {
     }
     return $cookie_life_time;
 }
+
+function wpam_get_total_woocommerce_order_fees($order)
+{
+    //Calculate total fee (if any) for this order
+    $total_fee = 0;
+    $order_fee_items = $order->get_fees();
+    if(!is_array($order_fee_items)){
+        return $total_fee;
+    }
+
+    foreach ( $order_fee_items as $fee_item ) {
+        $total_fee += $fee_item['line_total'];
+    }
+    return $total_fee;
+}
