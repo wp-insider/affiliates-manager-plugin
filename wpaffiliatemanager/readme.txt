@@ -32,6 +32,8 @@ Affiliates Manager integrates with some popular e-commerce solutions. It integra
 * Sell Digital Downloads
 * Paid Membership Pro
 * S2Member
+* Simple Membership
+* Stripe Payments
 
 = Real-Time Reporting =
 
