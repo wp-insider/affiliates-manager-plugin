@@ -135,8 +135,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.4.7 =
+= 2.4.7 =
 - Made some improvements to the WooCommerce integration code.
+- Added a "Log Out" button to the affiliate dashboard.
 
 = 2.4.6 =
 - Added a new option to export the affiliates data to a CSV file.

@@ -27,6 +27,9 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 				$affiliate = $db->getAffiliateRepository()->loadByUserId($currentUser->ID);
 				if ($affiliate->isApproved() || $affiliate->isActive())
 				{
+                                        $home_page_id = get_option(WPAM_PluginConfig::$HomePageId);
+                                        $home_page_url = get_permalink($home_page_id);
+                                        $logout_url = wp_logout_url($home_page_url);
 					$response = $this->doAffiliateControlPanel($affiliate, $request);
 					$response->viewData['navigation'] = array(
 						array( __( 'Overview', 'affiliates-manager' ), $this->getLink(array('sub' => 'overview'))),
@@ -34,6 +37,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 						array( __( 'Payment History', 'affiliates-manager' ), $this->getLink(array('sub' => 'payments'))),
 						array( __( 'Creatives', 'affiliates-manager' ), $this->getLink(array('sub' => 'creatives'))),
 						array( __( 'Edit Profile', 'affiliates-manager' ), $this->getLink(array('sub' => 'profile'))),
+                                                array( __( 'Log out', 'affiliates-manager' ), $logout_url),
 					);
 
 					if (get_option (WPAM_PluginConfig::$AffEnableImpressions))
