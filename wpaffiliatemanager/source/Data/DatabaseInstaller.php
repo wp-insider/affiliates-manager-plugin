@@ -273,6 +273,18 @@ class WPAM_Data_DatabaseInstaller {
             $msg->use = 'Body of e-mail sent to a newly registered affiliate immediately following their application being approved.';
             $msgRepo->insert($msg);
         }
+        
+        $db = new WPAM_Data_DataAccess();
+        $msgRepo = $db->getMessageRepository();
+        $message = $msgRepo->loadBy(array('name' => 'affiliate_commission_notification_email'));
+        if($message === NULL){
+            $msg = new WPAM_Data_Models_MessageModel();
+            $msg->content = "Great news, you have just earned a commission by sending a referral to our site! \n\nPlease log into your affiliate account to view the details. \n\nThank You";
+            $msg->name = 'affiliate_commission_notification_email';
+            $msg->type = 'email';
+            $msg->use = 'Body of e-mail sent to the affiliate immediately after earning a commission.';
+            $msgRepo->insert($msg);
+        }
         //Add other options below
         
         

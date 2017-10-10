@@ -95,6 +95,21 @@ class WPAM_Commission_Tracking {
                     $db->getEventRepository()->quickInsert( time(), $binConverter->stringToBin( $strRefKey ), 'purchase' );
                 }
                 */
+                //checking to see if "Send Commission Notification" option is enabled
+                if(get_option(WPAM_PluginConfig::$SendAffCommissionNotification) == 1){
+                    //send a commission notification email
+                    $address = $affiliate->email;
+                    $subject = "You just earned a commission!";               
+                    $body = WPAM_MessageHelper::GetMessage('affiliate_commission_notification_email');
+                    WPAM_Logger::log_debug("Sending a commission notification email to ".$address);
+                    $mail_sent = wp_mail( $address, $subject, $body );
+                    if($mail_sent==true){
+                        WPAM_Logger::log_debug("Email was sent successfully by WordPress");
+                    }
+                    else{
+                        WPAM_Logger::log_debug("Email could not be sent by WordPress");
+                    }
+                }
             }
         }
     }

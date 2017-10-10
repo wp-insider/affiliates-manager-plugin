@@ -21,6 +21,7 @@ class WPAM_PluginConfig
         public static $AffCurrencySymbol = 'wpam_affcurrency_symbol';
         public static $AffCurrencyCode = 'wpam_affcurrency_code';
         public static $AffdoNotRecordZeroAmtCommission = 'wpam_donot_record_zero_amt_commission';
+        public static $SendAffCommissionNotification = 'wpam_send_aff_commission_notification';
         public static $AffEnableImpressions = 'wpam_enable_impressions';
         public static $AffEnableDebug = 'wpam_enable_debug';
 	public static $PayoutMethodCheckIsEnabledOption = 'wpam_payout_check_enabled';

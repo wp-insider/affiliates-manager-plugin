@@ -19,6 +19,7 @@ class WPAM_Plugins_Loaded_Tasks {
             global $wpdb;
             $dbInstaller = new WPAM_Data_DatabaseInstaller($wpdb);
             $dbInstaller->doDbInstall();
+            $dbInstaller->doFreshInstallDbDefaultData();
         }
     }
 
