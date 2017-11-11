@@ -3,8 +3,8 @@ Contributors: wp.insider, affmngr, ElementGreen
 Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal  
 Requires at least: 3.5
-Tested up to: 4.8
-Stable tag: 2.4.8
+Tested up to: 4.9
+Stable tag: 2.4.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -134,6 +134,11 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 2.4.9 =
+- Updated the WooCommerce integration code so it can correctly determine a new subscription payment.
+- Created a new addon to integrate AppThemes with affiliates manager plugin. See details below:
+  https://wpaffiliatemanager.com/affiliates-manager-appthemes-integration/
 
 = 2.4.8 =
 - Added a new option to send a notification email to the affiliate immediately after earning a commission.

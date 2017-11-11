@@ -184,6 +184,14 @@ function wpam_display_addons_menu()
     );
     array_push($addons_data, $addon_22);
     
+    $addon_23 = array(
+        'name' => 'AppThemes Integration',
+        'thumbnail' => WPAM_URL . '/images/addons/appthemes-integration.png',
+        'description' => 'Integrates with AppThemes apps so you can reward affiliates for sending customers.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-appthemes-integration/',
+    );
+    array_push($addons_data, $addon_23);
+    
     //Display the list
     $output = '';
     foreach ($addons_data as $addon) {
