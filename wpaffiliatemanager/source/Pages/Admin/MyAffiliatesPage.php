@@ -11,6 +11,9 @@ class WPAM_Pages_Admin_MyAffiliatesPage extends WPAM_Pages_Admin_AdminPage {
     private $response;
 
     public function processRequest($request) {
+        if(is_array($request)){
+            $request = array_map('sanitize_text_field', $request);
+        }
         $db = new WPAM_Data_DataAccess();
 
         if (isset($request['viewDetail']) && is_numeric($request['viewDetail'])) {

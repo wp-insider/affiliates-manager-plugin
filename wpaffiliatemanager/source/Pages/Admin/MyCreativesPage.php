@@ -15,6 +15,9 @@ class WPAM_Pages_Admin_MyCreativesPage extends WPAM_Pages_Admin_AdminPage
 
 	public function processRequest($request)
 	{
+                if(is_array($request)){
+                    $request = array_map('sanitize_text_field', $request);
+                }
 		$db = new WPAM_Data_DataAccess();
 
 		if(!empty($request['action'])) //changed from isset to resolve strange bug with siliconeapp theme
