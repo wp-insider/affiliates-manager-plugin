@@ -14,7 +14,8 @@ class WPAM_Util_UserHandler {
         //and send them an email telling them they're approved
 
         $userLogin = sanitize_user($affiliate->email);
-        $userEmail = apply_filters('user_registration_email', $affiliate->email);
+        $userEmail = sanitize_email($affiliate->email);
+        $userEmail = apply_filters('user_registration_email', $userEmail);
 
         $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
         $message = sprintf(__('New affiliate registration for %s: has been approved!', 'affiliates-manager'), $blogname) . "\r\n\r\n";
@@ -61,8 +62,8 @@ class WPAM_Util_UserHandler {
 
         $affiliate->approve();
         $affiliate->userId = $userId;
-        $affiliate->bountyType = $bountyType;
-        $affiliate->bountyAmount = $bountyAmount;
+        $affiliate->bountyType = sanitize_text_field($bountyType);
+        $affiliate->bountyAmount = sanitize_text_field($bountyAmount);
         if ($update)
             $db->getAffiliateRepository()->update($affiliate);
         else
@@ -78,7 +79,8 @@ class WPAM_Util_UserHandler {
         //and send them an email telling them they're approved
 
         $userLogin = sanitize_user($affiliate->email);
-        $userEmail = apply_filters('user_registration_email', $affiliate->email);
+        $userEmail = sanitize_email($affiliate->email);
+        $userEmail = apply_filters('user_registration_email', $userEmail);
 
         $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
         $message = sprintf(__('New affiliate registration for %s: has been approved!', 'affiliates-manager'), $blogname) . "\r\n\r\n";
@@ -121,19 +123,19 @@ class WPAM_Util_UserHandler {
         $affiliate->activate();
         $affiliate->userId = $userId;
         if (isset($bountyType) && !empty($bountyType)) {
-            $affiliate->bountyType = $bountyType;
+            $affiliate->bountyType = sanitize_text_field($bountyType);
         } else {
-            $affiliate->bountyType = get_option(WPAM_PluginConfig::$AffBountyType);
+            $affiliate->bountyType = sanitize_text_field(get_option(WPAM_PluginConfig::$AffBountyType));
         }
         if (isset($bountyAmount) && !empty($bountyAmount)) {
-            $affiliate->bountyAmount = $bountyAmount;
+            $affiliate->bountyAmount = sanitize_text_field($bountyAmount);
         } else {
-            $affiliate->bountyAmount = get_option(WPAM_PluginConfig::$AffBountyAmount);
+            $affiliate->bountyAmount = sanitize_text_field(get_option(WPAM_PluginConfig::$AffBountyAmount));
         }
         $id = $db->getAffiliateRepository()->insert($affiliate);
         if ($id == 0) {
             if (WPAM_DEBUG) {
-                echo '<pre>', var_export($model, true), '</pre>';
+                echo '<pre>', var_export($affiliate, true), '</pre>';
             }
             wp_die(__('Error submitting your details to the database. This is a bug, and your application was not submitted.', 'affiliates-manager'));
         }

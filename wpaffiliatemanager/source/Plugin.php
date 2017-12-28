@@ -725,6 +725,7 @@ class WPAM_Plugin {
     public function onAjaxRequest() {
         //die(print_r($_REQUEST, true));
         $jsonHandler = new WPAM_Util_JsonHandler();
+        $_REQUEST = array_map('sanitize_text_field', $_REQUEST);
         try {
             switch ($_REQUEST['handler']) {
                 case 'approveApplication':

@@ -16,7 +16,11 @@ class WPAM_Pages_Admin_NewAffiliatePage extends WPAM_Pages_Admin_AdminPage {
 		);
 		
 		if ( isset( $request['action'] ) && $request['action'] == 'saveInfo' ) {
-
+                        
+                        if(is_array($request)){
+                            $request = array_map('sanitize_text_field', $request);
+                        }
+                    
 			$validator = new WPAM_Validation_Validator();
 
 			$validator->addValidator('ddBountyType', new WPAM_Validation_SetValidator(array('fixed','percent')));
@@ -61,6 +65,9 @@ class WPAM_Pages_Admin_NewAffiliatePage extends WPAM_Pages_Admin_AdminPage {
 		$response->viewData['affiliateFields'] = $affiliateFields;
 		
 		if ( $request !== NULL ) {
+                        if(is_array($request)){
+                            $request = array_map('sanitize_text_field', $request);
+                        }
 			$response->viewData['request'] = $request;
 			$response->viewData['bountyType'] = isset( $request['ddBountyType'] ) ? $request['ddBountyType'] : NULL;
 			$response->viewData['bountyAmount'] = isset( $request['txtBountyAmount'] ) ? $request['txtBountyAmount'] : NULL ;
