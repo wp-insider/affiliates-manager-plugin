@@ -115,9 +115,12 @@ function wpam_display_manual_commission_tab()
         if(empty($txn_id)){
             $txn_id = uniqid();
         }
-        $buyer_email = sanitize_text_field($_POST["wpam_buyer_email"]);
-        $date_created = trim($_POST["wpam_date_created"]);
-        if(empty($date_created)){            
+        $buyer_email = sanitize_email($_POST["wpam_buyer_email"]);
+        $date_created = sanitize_text_field($_POST["wpam_date_created"]);
+        if(isset($date_created) && date("Y-m-d", strtotime($date_created)) === $date_created){  //valid date
+            
+        }
+        else{            
             $date_created = date("Y-m-d");
         }
         $time_created = date("H:i:s");

@@ -155,8 +155,8 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
         $this->process_bulk_action();
 
         // This checks for sorting input and sorts the data.
-        $orderby_column = isset($_GET['orderby']) ? $_GET['orderby'] : '';
-        $sort_order = isset($_GET['order']) ? $_GET['order'] : '';
+        $orderby_column = isset($_GET['orderby']) ? sanitize_text_field($_GET['orderby']) : '';
+        $sort_order = isset($_GET['order']) ? sanitize_text_field($_GET['order']) : '';
         if (empty($orderby_column)) {
             $orderby_column = "affiliateId";
             $sort_order = "DESC";

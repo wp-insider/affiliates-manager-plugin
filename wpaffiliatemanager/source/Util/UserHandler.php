@@ -125,12 +125,12 @@ class WPAM_Util_UserHandler {
         if (isset($bountyType) && !empty($bountyType)) {
             $affiliate->bountyType = sanitize_text_field($bountyType);
         } else {
-            $affiliate->bountyType = sanitize_text_field(get_option(WPAM_PluginConfig::$AffBountyType));
+            $affiliate->bountyType = get_option(WPAM_PluginConfig::$AffBountyType);
         }
         if (isset($bountyAmount) && !empty($bountyAmount)) {
             $affiliate->bountyAmount = sanitize_text_field($bountyAmount);
         } else {
-            $affiliate->bountyAmount = sanitize_text_field(get_option(WPAM_PluginConfig::$AffBountyAmount));
+            $affiliate->bountyAmount = get_option(WPAM_PluginConfig::$AffBountyAmount);
         }
         $id = $db->getAffiliateRepository()->insert($affiliate);
         if ($id == 0) {

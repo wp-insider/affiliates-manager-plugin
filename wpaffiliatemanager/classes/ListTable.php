@@ -370,11 +370,11 @@ class WPAM_List_Table {
         $current_url = remove_query_arg('paged', $current_url);
 
         if (isset($_GET['orderby']))
-            $current_orderby = $_GET['orderby'];
+            $current_orderby = sanitize_text_field($_GET['orderby']);
         else
             $current_orderby = '';
 
-        if (isset($_GET['order']) && 'desc' == $_GET['order'])
+        if (isset($_GET['order']) && 'desc' == sanitize_text_field($_GET['order']))
             $current_order = 'desc';
         else
             $current_order = 'asc';

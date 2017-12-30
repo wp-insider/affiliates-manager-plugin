@@ -354,7 +354,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 			if ($vr->getIsValid()) {
 				//#79 hackery to do the "normal" WP email approval process
 				require_once ABSPATH . 'wp-admin/includes/ms.php';
-				$_POST['email'] = $request['_email'];
+				$_POST['email'] = sanitize_email($request['_email']);
 				$_POST['user_id'] = $user->ID;
 				unset( $request['_email'] );
 				global $errors;
