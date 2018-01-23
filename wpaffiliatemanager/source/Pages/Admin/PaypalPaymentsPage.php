@@ -13,9 +13,11 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 {
 	public function processRequest($request)
 	{
+                /*
                 if(is_array($request)){
                     $request = array_map('sanitize_text_field', $request);
                 }
+                */
 		$options = new WPAM_Options();
 		if ($options->getPaypalMassPayEnabled() !== 0)
 		{
