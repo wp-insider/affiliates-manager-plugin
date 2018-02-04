@@ -465,7 +465,7 @@ class WPAM_Plugin {
             return;
         }
 
-        $order_status = $order->status;
+        $order_status = $order->get_status();
         WPAM_Logger::log_debug("WooCommerce Integration - Order status: " . $order_status);
         if (strtolower($order_status) != "completed" && strtolower($order_status) != "processing") {
             WPAM_Logger::log_debug("WooCommerce Integration - Order status for this transaction is not in a 'completed' or 'processing' state. Commission will not be awarded at this stage.", 2);
@@ -473,13 +473,13 @@ class WPAM_Plugin {
             return;
         }
 
-        $total = $order->order_total;
+        $total = $order->get_total();
         $shipping = $order->get_total_shipping();
         $tax = $order->get_total_tax();
         $fees = wpam_get_total_woocommerce_order_fees($order);
         WPAM_Logger::log_debug('WooCommerce Integration - Total amount: ' . $total . ', Total shipping: ' . $shipping . ', Total tax: ' . $tax . ', Fees: '. $fees);
         $purchaseAmount = $total - $shipping - $tax - $fees;
-        $buyer_email = $order->billing_email;
+        $buyer_email = $order->get_billing_email();
 
         $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
         $wpam_id = get_post_meta($order_id, '_wpam_id', true);
