@@ -4,15 +4,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Affiliate Manager\n"
 "POT-Creation-Date: 2017-01-31 15:25+1100\n"
-"PO-Revision-Date: 2017-01-31 15:25+1100\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt_BR\n"
+"PO-Revision-Date: 2018-02-20 19:38+0000\n"
+"Last-Translator: admin <admin@finavanguarda.com>\n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt-BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Loco https://localise.biz/\n"
+"Report-Msgid-Bugs-To: "
 
 #: ../boot-strap.php:38
 msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
@@ -20,46 +21,48 @@ msgstr "Gerente da filial do WordPress requer PHP 5.1 ou superior."
 
 #: ../boot-strap.php:42
 msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
-msgstr ""
+msgstr "WordPress Affiliate Manager requer WordPress 3.5 ou maior."
 
-#: ../classes/ListAffiliatesTable.php:40 ../html/admin/manage_creatives.php:176
+#: ../classes/ListAffiliatesTable.php:40 
+#: ../html/admin/manage_creatives.php:176 
 #: ../html/admin/paypalpayments/pending_payments.php:23
 msgid "View"
 msgstr "Vista"
 
-#: ../classes/ListAffiliatesTable.php:61 ../classes/ListClicksTable.php:55
-#: ../classes/ListCommissionTable.php:62
+#: ../classes/ListAffiliatesTable.php:61 ../classes/ListClicksTable.php:55 
+#: ../classes/ListCommissionTable.php:62 
 #: ../source/Admin-menu/wpam-commission-menu.php:172
 msgid "Affiliate ID"
-msgstr ""
+msgstr "ID de Afiliado"
 
-#: ../classes/ListAffiliatesTable.php:62 ../html/admin/creatives_detail.php:239
-#: ../html/admin/manage_creatives.php:165
-#: ../html/admin/paypalpayments/pending_payments.php:16
-#: ../html/admin/paypalpayments/view_payment_detail.php:61
+#: ../classes/ListAffiliatesTable.php:62 
+#: ../html/admin/creatives_detail.php:239 
+#: ../html/admin/manage_creatives.php:165 
+#: ../html/admin/paypalpayments/pending_payments.php:16 
+#: ../html/admin/paypalpayments/view_payment_detail.php:61 
 #: ../html/transaction_table.php:47
 msgid "Status"
 msgstr "Status"
 
-#: ../classes/ListAffiliatesTable.php:63
-#: ../html/admin/paypalpayments/review_affiliates.php:58
-#: ../html/admin/paypalpayments/select_affiliates.php:129
+#: ../classes/ListAffiliatesTable.php:63 
+#: ../html/admin/paypalpayments/review_affiliates.php:58 
+#: ../html/admin/paypalpayments/select_affiliates.php:129 
 #: ../html/affiliate_cp_home.php:16 ../html/transaction_table.php:52
 msgid "Balance"
-msgstr "Equilíbrio"
+msgstr "Saldo"
 
 #: ../classes/ListAffiliatesTable.php:64
 msgid "Earnings"
 msgstr "Ganhos"
 
-#: ../classes/ListAffiliatesTable.php:65
-#: ../html/admin/paypalpayments/review_affiliates.php:54
+#: ../classes/ListAffiliatesTable.php:65 
+#: ../html/admin/paypalpayments/review_affiliates.php:54 
 #: ../html/admin/paypalpayments/select_affiliates.php:125
 msgid "First Name"
 msgstr "Primeiro nome"
 
-#: ../classes/ListAffiliatesTable.php:66
-#: ../html/admin/paypalpayments/review_affiliates.php:55
+#: ../classes/ListAffiliatesTable.php:66 
+#: ../html/admin/paypalpayments/review_affiliates.php:55 
 #: ../html/admin/paypalpayments/select_affiliates.php:126
 msgid "Last Name"
 msgstr "Último nome"
@@ -68,8 +71,8 @@ msgstr "Último nome"
 msgid "Email"
 msgstr "Email"
 
-#: ../classes/ListAffiliatesTable.php:68
-#: ../html/admin/paypalpayments/review_affiliates.php:56
+#: ../classes/ListAffiliatesTable.php:68 
+#: ../html/admin/paypalpayments/review_affiliates.php:56 
 #: ../html/admin/paypalpayments/select_affiliates.php:127
 msgid "Company"
 msgstr "Empresa"
@@ -84,88 +87,88 @@ msgstr "Site"
 
 #: ../classes/ListAffiliatesTable.php:97 ../classes/ListCommissionTable.php:91
 msgid "Error! You need to select multiple records to perform a bulk action!"
-msgstr ""
+msgstr "Erro! Você precisa selecionar multiplos items para uma Ação em Massa"
 
-#: ../classes/ListAffiliatesTable.php:115
+#: ../classes/ListAffiliatesTable.php:115 
 #: ../classes/ListCommissionTable.php:100
 msgid "Selected records deleted successfully!"
-msgstr ""
+msgstr "Itens Selecionados deletados com Sucesso!"
 
-#: ../classes/ListAffiliatesTable.php:139
+#: ../classes/ListAffiliatesTable.php:139 
 #: ../classes/ListCommissionTable.php:116
 msgid "Selected record deleted successfully!"
-msgstr ""
+msgstr "Item Selecionado deletado com Sucesso!"
 
 #: ../classes/ListClicksTable.php:53 ../classes/ListCommissionTable.php:60
 msgid "Row ID"
-msgstr ""
+msgstr "Linha ID"
 
-#: ../classes/ListClicksTable.php:54 ../classes/ListCommissionTable.php:61
+#: ../classes/ListClicksTable.php:54 ../classes/ListCommissionTable.php:61 
 #: ../source/Admin-menu/wpam-commission-menu.php:202
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #: ../classes/ListClicksTable.php:56
 msgid "Tracking Key"
-msgstr ""
+msgstr "Chave de Rastreio"
 
 #: ../classes/ListClicksTable.php:57
 msgid "Referring URL"
-msgstr ""
+msgstr "URL para Referência"
 
 #: ../classes/ListClicksTable.php:58
 msgid "IP Address"
-msgstr ""
+msgstr "Endereço IP"
 
-#: ../classes/ListCommissionTable.php:63
-#: ../html/admin/paypalpayments/pending_payments.php:13
-#: ../html/admin/paypalpayments/view_payment_detail.php:20
-#: ../html/admin/paypalpayments/view_payment_detail.php:63
+#: ../classes/ListCommissionTable.php:63 
+#: ../html/admin/paypalpayments/pending_payments.php:13 
+#: ../html/admin/paypalpayments/view_payment_detail.php:20 
+#: ../html/admin/paypalpayments/view_payment_detail.php:63 
 #: ../html/transaction_table.php:50
 msgid "Amount"
 msgstr "Quantidade"
 
-#: ../classes/ListCommissionTable.php:64
+#: ../classes/ListCommissionTable.php:64 
 #: ../source/Admin-menu/wpam-commission-menu.php:190
 msgid "Transaction ID"
-msgstr ""
+msgstr "ID da Transação"
 
-#: ../classes/ListCommissionTable.php:65
+#: ../classes/ListCommissionTable.php:65 
 #: ../source/Admin-menu/wpam-commission-menu.php:196
 msgid "Buyer Email"
-msgstr ""
+msgstr "Email Comprador"
 
 #: ../classes/ListTable.php:77
 msgid "No items found."
-msgstr ""
+msgstr "Nenhum item encontrado."
 
 #: ../classes/ListTable.php:141
 msgid "Bulk Actions"
-msgstr ""
+msgstr "Ações em Massa"
 
-#: ../classes/ListTable.php:151 ../html/admin/affiliate_detail.php:283
-#: ../html/admin/affiliate_detail.php:314
-#: ../html/admin/paypalpayments/select_affiliates.php:115
+#: ../classes/ListTable.php:151 ../html/admin/affiliate_detail.php:283 
+#: ../html/admin/affiliate_detail.php:314 
+#: ../html/admin/paypalpayments/select_affiliates.php:115 
 #: ../html/transaction_table.php:35
 msgid "Apply"
-msgstr "Aplicam-se"
+msgstr "Aplicar"
 
 #: ../classes/ListTable.php:201
 msgid "Show all dates"
-msgstr ""
+msgstr "Mostrar Todas as Datas"
 
 #: ../classes/ListTable.php:220
 msgid "List View"
-msgstr ""
+msgstr "Visualisar em Lista"
 
 #: ../classes/ListTable.php:221
 msgid "Excerpt View"
-msgstr ""
+msgstr "Ver Excerto"
 
 #: ../classes/ListTable.php:237
 #, php-format
 msgid "%s pending"
-msgstr ""
+msgstr "%s pendente"
 
 #: ../html/admin/affiliate_detail.php:141
 #, php-format
@@ -188,22 +191,24 @@ msgstr ""
 msgid "Payout"
 msgstr "Pagamento"
 
-#: ../html/admin/affiliate_detail.php:219
-#: ../html/admin/affiliate_detail.php:236
-#: ../html/admin/creative_update_form.php:82
-#: ../html/admin/creatives_detail.php:114
-#: ../html/admin/creatives_detail.php:137 ../html/admin/manage_creatives.php:38
-#: ../html/affiliate_creative_detail.php:19
-#: ../source/Pages/Admin/MyAffiliatesPage.php:163
-#: ../source/Pages/Admin/NewAffiliatePage.php:86
+#: ../html/admin/affiliate_detail.php:219 
+#: ../html/admin/affiliate_detail.php:236 
+#: ../html/admin/creative_update_form.php:82 
+#: ../html/admin/creatives_detail.php:114 
+#: ../html/admin/creatives_detail.php:137 
+#: ../html/admin/manage_creatives.php:38 
+#: ../html/affiliate_creative_detail.php:19 
+#: ../source/Pages/Admin/MyAffiliatesPage.php:163 
+#: ../source/Pages/Admin/NewAffiliatePage.php:86 
 #: ../source/Pages/AffiliatesHome.php:528
 msgid "OK"
 msgstr "Razoável"
 
-#: ../html/admin/affiliate_detail.php:236
-#: ../html/admin/affiliate_detail.php:279
-#: ../html/admin/affiliate_detail.php:310 ../html/admin/creatives_detail.php:83
-#: ../html/admin/creatives_detail.php:92 ../html/admin/manage_creatives.php:90
+#: ../html/admin/affiliate_detail.php:236 
+#: ../html/admin/affiliate_detail.php:279 
+#: ../html/admin/affiliate_detail.php:310 
+#: ../html/admin/creatives_detail.php:83 ../html/admin/creatives_detail.php:92 
+#: ../html/admin/manage_creatives.php:90
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -219,19 +224,19 @@ msgstr "Sim, aprove."
 msgid "Are you sure you wish to apply an adjustment of "
 msgstr "Tem certeza que deseja aplicar um ajuste de"
 
-#: ../html/admin/affiliate_detail.php:292
+#: ../html/admin/affiliate_detail.php:292 
 #: ../html/admin/affiliate_detail.php:334
 msgid " to this account? The new balance will be "
-msgstr "para esta conta? O novo equilíbrio será"
+msgstr "para esta conta? O novo saldo será"
 
-#: ../html/admin/affiliate_detail.php:293
+#: ../html/admin/affiliate_detail.php:293 
 #: ../html/admin/affiliate_detail.php:335
 msgid "Yes, apply it."
 msgstr "Sim, aplicá-lo."
 
 #: ../html/admin/affiliate_detail.php:334
 msgid "Are you sure you wish to apply a payout of "
-msgstr "Tem certeza que deseja aplicar um payout de"
+msgstr "Tem certeza que deseja aplicar um reembolso de"
 
 #: ../html/admin/affiliate_detail.php:369
 msgid "Are you sure you wish to decline this affiliate?"
@@ -255,7 +260,7 @@ msgid ""
 "DECLINED."
 msgstr ""
 "Tem certeza que deseja desbloquear este afiliado?<br>Usuário irá tornar-se "
-"recusou."
+"um RECUSADO."
 
 #: ../html/admin/affiliate_detail.php:383
 msgid "Yes, UNBLOCK."
@@ -271,7 +276,7 @@ msgstr "Sim, ative."
 
 #: ../html/admin/affiliate_detail.php:398
 msgid "Are you sure you wish to deactivate this affiliate?"
-msgstr "Tem certeza que deseja desactivar esta filial?"
+msgstr "Tem certeza que deseja desactivar este afiliado?"
 
 #: ../html/admin/affiliate_detail.php:398 ../html/admin/creatives_detail.php:95
 msgid "Yes, DEACTIVATE."
@@ -279,39 +284,39 @@ msgstr "Sim, desative."
 
 #: ../html/admin/affiliate_detail.php:417
 msgid "Approve Application"
-msgstr "Aprovar a aplicação"
+msgstr "Aprovar a Aplicação"
 
-#: ../html/admin/affiliate_detail.php:423
-#: ../html/admin/affiliate_detail.php:567
+#: ../html/admin/affiliate_detail.php:423 
+#: ../html/admin/affiliate_detail.php:567 
 #: ../html/admin/settings/settings_general.php:157
 msgid "Bounty Type"
 msgstr "Tipo de recompensas"
 
-#: ../html/admin/affiliate_detail.php:427
+#: ../html/admin/affiliate_detail.php:427 
 #: ../html/admin/settings/settings_general.php:161 ../html/contact_info.php:132
 msgid "Percentage of Sales"
 msgstr "Percentagem das vendas"
 
-#: ../html/admin/affiliate_detail.php:428
+#: ../html/admin/affiliate_detail.php:428 
 #: ../html/admin/settings/settings_general.php:162 ../html/contact_info.php:133
 msgid "Fixed Amount per Sale"
 msgstr "Montante fixo por venda"
 
-#: ../html/admin/affiliate_detail.php:434
-#: ../html/admin/settings/settings_general.php:169
-#: ../source/Pages/Admin/MyAffiliatesPage.php:162
-#: ../source/Pages/Admin/NewAffiliatePage.php:85
+#: ../html/admin/affiliate_detail.php:434 
+#: ../html/admin/settings/settings_general.php:169 
+#: ../source/Pages/Admin/MyAffiliatesPage.php:162 
+#: ../source/Pages/Admin/NewAffiliatePage.php:85 
 #: ../source/Pages/AffiliatesHome.php:527
 #, php-format
 msgid "Bounty Rate (% of Sale)"
 msgstr "Taxa de recompensa (% de venda)"
 
-#: ../html/admin/affiliate_detail.php:446
+#: ../html/admin/affiliate_detail.php:446 
 #: ../html/admin/creatives_detail.php:161
 msgid "Updating, please wait ... "
 msgstr "Atualizando, aguarde..."
 
-#: ../html/admin/affiliate_detail.php:451
+#: ../html/admin/affiliate_detail.php:451 
 #: ../html/admin/creatives_detail.php:166
 msgid "Are you sure?"
 msgstr "Tem certeza?"
@@ -320,20 +325,20 @@ msgstr "Tem certeza?"
 msgid "approve"
 msgstr "aprovar"
 
-#: ../html/admin/affiliate_detail.php:454
+#: ../html/admin/affiliate_detail.php:454 
 #: ../html/admin/creatives_detail.php:169
 msgid "Error"
 msgstr "Erro"
 
-#: ../html/admin/affiliate_detail.php:455
-#: ../html/admin/creatives_detail.php:170
+#: ../html/admin/affiliate_detail.php:455 
+#: ../html/admin/creatives_detail.php:170 
 #: ../html/admin/manage_creatives.php:109
 msgid "ERROR:"
 msgstr "ERRO:"
 
 #: ../html/admin/affiliate_detail.php:458
 msgid "Apply Adjustment "
-msgstr "Aplicar ajuste"
+msgstr "Aplicar Ajuste"
 
 #: ../html/admin/affiliate_detail.php:462
 msgid "Amount "
@@ -345,7 +350,7 @@ msgstr "Descrição"
 
 #: ../html/admin/affiliate_detail.php:477
 msgid "Apply Payout "
-msgstr "Aplicar o pagamento"
+msgstr "Aplicar o Pagamento"
 
 #: ../html/admin/affiliate_detail.php:481
 msgid "Payout Amount "
@@ -361,7 +366,7 @@ msgstr "Outra quantidade"
 
 #: ../html/admin/affiliate_detail.php:496
 msgid "Affiliate:"
-msgstr "Filial:"
+msgstr "Afiliado:"
 
 #: ../html/admin/affiliate_detail.php:502 ../source/Pages/AffiliatesHome.php:32
 msgid "Overview"
@@ -369,7 +374,7 @@ msgstr "Visão geral"
 
 #: ../html/admin/affiliate_detail.php:503
 msgid "Account Finances"
-msgstr "Conta as finanças"
+msgstr "Finanças a Conta"
 
 #: ../html/admin/affiliate_detail.php:504
 msgid "Information"
@@ -377,13 +382,13 @@ msgstr "Informações"
 
 #: ../html/admin/affiliate_detail.php:505
 msgid "Affiliate Links"
-msgstr "Links afiliados"
+msgstr "Links Afiliados"
 
-#: ../html/admin/affiliate_detail.php:507
-#: ../html/admin/affiliate_detail.php:589 ../html/affiliate_cp_home.php:39
+#: ../html/admin/affiliate_detail.php:507 
+#: ../html/admin/affiliate_detail.php:589 ../html/affiliate_cp_home.php:39 
 #: ../html/affiliate_cp_home.php:73 ../source/Pages/AffiliatesHome.php:40
 msgid "Impressions"
-msgstr ""
+msgstr "Impressões"
 
 #: ../html/admin/affiliate_detail.php:516
 msgid "Approve"
@@ -393,7 +398,7 @@ msgstr "Aprovar"
 msgid "Decline"
 msgstr "Declínio"
 
-#: ../html/admin/affiliate_detail.php:519
+#: ../html/admin/affiliate_detail.php:519 
 #: ../html/admin/creatives_detail.php:212
 msgid "Activate"
 msgstr "Ativar"
@@ -410,9 +415,9 @@ msgstr "Desbloquear"
 msgid "Block"
 msgstr "Bloco"
 
-#: ../html/admin/affiliate_detail.php:531
-#: ../html/admin/creative_update_form.php:131
-#: ../html/admin/creatives_detail.php:227
+#: ../html/admin/affiliate_detail.php:531 
+#: ../html/admin/creative_update_form.php:131 
+#: ../html/admin/creatives_detail.php:227 
 #: ../html/admin/settings/settings.php:46
 msgid "General"
 msgstr "Geral"
@@ -423,15 +428,15 @@ msgstr "Data aplicada"
 
 #: ../html/admin/affiliate_detail.php:536
 msgid "Affiliate Status"
-msgstr "Afiliados Status"
+msgstr "Estado do Afiliado"
 
 #: ../html/admin/affiliate_detail.php:539
 msgid "Account Standing"
-msgstr "Conta em pé"
+msgstr "Situação da Conta"
 
-#: ../html/admin/affiliate_detail.php:563
-#: ../html/affiliate_cp_payment_details_form.php:69
-#: ../html/affiliate_cp_payment_details_simple.php:13
+#: ../html/admin/affiliate_detail.php:563 
+#: ../html/affiliate_cp_payment_details_form.php:69 
+#: ../html/affiliate_cp_payment_details_simple.php:13 
 #: ../html/contact_info.php:88
 msgid "Payment Details"
 msgstr "Detalhes de pagamento"
@@ -454,19 +459,19 @@ msgstr "Certifique-se de verificar para fora para"
 
 #: ../html/admin/affiliate_detail.php:584
 msgid "Statistics"
-msgstr ""
+msgstr "Estatísticas"
 
 #: ../html/admin/affiliate_detail.php:591
 msgid "Visits"
-msgstr ""
+msgstr "Visitas"
 
 #: ../html/admin/affiliate_detail.php:592
 msgid "Purchases"
-msgstr ""
+msgstr "Compras"
 
 #: ../html/admin/affiliate_detail.php:603
 msgid "Balance:"
-msgstr "Equilíbrio:"
+msgstr "Saldo:"
 
 #: ../html/admin/affiliate_detail.php:606
 msgid "Earnings:"
@@ -482,24 +487,24 @@ msgstr "Ajustes:"
 
 #: ../html/admin/affiliate_detail.php:612
 msgid "Apply Payout"
-msgstr "Aplicar o pagamento"
+msgstr "Aplicar o Pagamento"
 
 #: ../html/admin/affiliate_detail.php:613
 msgid "Apply Manual Adjustment"
-msgstr "Aplicar ajuste Manual"
+msgstr "Aplicar Ajuste Manual"
 
-#: ../html/admin/affiliate_detail.php:625
-#: ../html/admin/creative_update_form.php:108
+#: ../html/admin/affiliate_detail.php:625 
+#: ../html/admin/creative_update_form.php:108 
 #: ../html/admin/creative_update_success.php:4 ../html/impressions_table.php:8
 msgid "Creative"
-msgstr "Criativa"
+msgstr "Criativos"
 
-#: ../html/admin/affiliate_detail.php:626
-#: ../html/admin/creative_update_form.php:155
-#: ../html/admin/creatives_detail.php:247
-#: ../html/admin/manage_creatives.php:167
-#: ../html/admin/settings/settings_messaging.php:86
-#: ../html/admin/settings/settings_registration.php:440
+#: ../html/admin/affiliate_detail.php:626 
+#: ../html/admin/creative_update_form.php:155 
+#: ../html/admin/creatives_detail.php:247 
+#: ../html/admin/manage_creatives.php:167 
+#: ../html/admin/settings/settings_messaging.php:86 
+#: ../html/admin/settings/settings_registration.php:440 
 #: ../html/affiliate_creative_list.php:72 ../html/transaction_table.php:45
 msgid "Type"
 msgstr "Tipo"
@@ -512,7 +517,7 @@ msgstr "Link"
 msgid "Affiliate Management Control Panel"
 msgstr "Painel de controle de gestão de afiliados"
 
-#: ../html/admin/affiliate_new.php:3 ../html/admin/affiliate_new_success.php:2
+#: ../html/admin/affiliate_new.php:3 ../html/admin/affiliate_new_success.php:2 
 #: ../source/Plugin.php:89 ../source/Plugin.php:90
 msgid "New Affiliate"
 msgstr "Novo afiliado"
@@ -520,11 +525,11 @@ msgstr "Novo afiliado"
 #: ../html/admin/affiliate_new.php:6
 msgid ""
 "As an Affiliate Manager, if you want to create an affiliate account rather "
-"than directing someone to the normal registration form, you can do that "
-"here. Once you fill out the required contact information, your new affiliate "
-"will receive an email with their username and password.  They will "
-"automatically be approved, but will still have to log in to agree to the "
-"terms &amp; conditions and set their preferred payment method."
+"than directing someone to the normal registration form, you can do that here."
+" Once you fill out the required contact information, your new affiliate will "
+"receive an email with their username and password.  They will automatically "
+"be approved, but will still have to log in to agree to the terms &amp; "
+"conditions and set their preferred payment method."
 msgstr ""
 "Como um gerente de afiliados, se você deseja criar uma conta de afiliado ao "
 "invés de dirigir a alguém para o formulário de registo normal, você pode "
@@ -544,14 +549,14 @@ msgstr "Meus afiliados"
 
 #: ../html/admin/affiliates_list.php:8
 msgid "All Active"
-msgstr "Todo ativo"
+msgstr "Todos ativos"
 
 #: ../html/admin/affiliates_list.php:9
 msgid "All (Including Closed)"
 msgstr "Todos (incluindo fechado)"
 
-#: ../html/admin/affiliates_list.php:10
-#: ../source/Pages/Admin/MyCreativesPage.php:58
+#: ../html/admin/affiliates_list.php:10 
+#: ../source/Pages/Admin/MyCreativesPage.php:58 
 #: ../source/display_functions.php:166
 msgid "Active"
 msgstr "Ativo"
@@ -564,8 +569,8 @@ msgstr "Aplicado"
 msgid "Approved"
 msgstr "Aprovado"
 
-#: ../html/admin/affiliates_list.php:13
-#: ../html/affiliate_cp_payment_details_confirmed.php:2
+#: ../html/admin/affiliates_list.php:13 
+#: ../html/affiliate_cp_payment_details_confirmed.php:2 
 #: ../source/display_functions.php:170
 msgid "Confirmed"
 msgstr "Confirmado"
@@ -578,8 +583,8 @@ msgstr "Declinou"
 msgid "Blocked"
 msgstr "Bloqueado"
 
-#: ../html/admin/affiliates_list.php:16
-#: ../source/Pages/Admin/MyCreativesPage.php:59
+#: ../html/admin/affiliates_list.php:16 
+#: ../source/Pages/Admin/MyCreativesPage.php:59 
 #: ../source/display_functions.php:168
 msgid "Inactive"
 msgstr "Inativo"
@@ -601,26 +606,26 @@ msgstr ""
 "entanto, a imagem antiga ainda permanecerá na biblioteca de mídia para uso "
 "futuro."
 
-#: ../html/admin/creative_update_form.php:108
-#: ../html/admin/creative_update_success.php:4
+#: ../html/admin/creative_update_form.php:108 
+#: ../html/admin/creative_update_success.php:4 
 #: ../html/admin/creatives_detail.php:216
 msgid "Edit"
 msgstr "Editar"
 
-#: ../html/admin/creative_update_form.php:108
+#: ../html/admin/creative_update_form.php:108 
 #: ../html/admin/creative_update_success.php:4
 msgid "New"
 msgstr "Novo"
 
-#: ../html/admin/creative_update_form.php:138
-#: ../html/admin/creatives_detail.php:243
-#: ../html/admin/manage_creatives.php:168
-#: ../html/admin/settings/settings_messaging.php:85
+#: ../html/admin/creative_update_form.php:138 
+#: ../html/admin/creatives_detail.php:243 
+#: ../html/admin/manage_creatives.php:168 
+#: ../html/admin/settings/settings_messaging.php:85 
 #: ../html/affiliate_creative_list.php:73
 msgid "Name"
 msgstr "Nome"
 
-#: ../html/admin/creative_update_form.php:148
+#: ../html/admin/creative_update_form.php:148 
 #: ../html/admin/creatives_detail.php:259
 msgid "Landing Page"
 msgstr "Página inicial"
@@ -641,11 +646,11 @@ msgstr "Imagem de arquivo de biblioteca de mídia"
 msgid "Preview:"
 msgstr "Visualizar:"
 
-#: ../html/admin/creative_update_form.php:213
-#: ../html/admin/creative_update_form.php:248
-#: ../html/admin/creatives_detail.php:280
-#: ../html/admin/creatives_detail.php:303
-#: ../html/affiliate_creative_detail.php:65
+#: ../html/admin/creative_update_form.php:213 
+#: ../html/admin/creative_update_form.php:248 
+#: ../html/admin/creatives_detail.php:280 
+#: ../html/admin/creatives_detail.php:303 
+#: ../html/affiliate_creative_detail.php:65 
 #: ../html/affiliate_creative_detail.php:88
 msgid "Alt Text"
 msgstr "Texto alt"
@@ -654,8 +659,8 @@ msgstr "Texto alt"
 msgid "Text Link Parameters"
 msgstr "Parâmetros de Link de texto"
 
-#: ../html/admin/creative_update_form.php:237
-#: ../html/admin/creatives_detail.php:276
+#: ../html/admin/creative_update_form.php:237 
+#: ../html/admin/creatives_detail.php:276 
 #: ../html/affiliate_creative_detail.php:61
 msgid "Link Text"
 msgstr "Texto do link"
@@ -666,7 +671,7 @@ msgstr "Salvar Creative"
 
 #: ../html/admin/creative_update_success.php:9
 msgid "Creative updated."
-msgstr "Proveja atualizada."
+msgstr "Criativo atualizada."
 
 #: ../html/admin/creative_update_success.php:11
 msgid "New creative created.  This creative is not yet active."
@@ -674,9 +679,9 @@ msgstr "Novo criativo criado. Este criativo ainda não está ativo."
 
 #: ../html/admin/creative_update_success.php:16
 msgid "Return to Creatives"
-msgstr "Retornar para criativos"
+msgstr "Retornar para Criativos"
 
-#: ../html/admin/creatives_detail.php:8 ../html/admin/creatives_detail.php:297
+#: ../html/admin/creatives_detail.php:8 ../html/admin/creatives_detail.php:297 
 #: ../html/affiliate_creative_detail.php:82
 msgid "Image"
 msgstr "Imagem"
@@ -705,19 +710,19 @@ msgstr "Tem certeza que deseja"
 msgid "this creative?"
 msgstr "Este criativo?"
 
-#: ../html/admin/creatives_detail.php:174
-#: ../html/admin/creatives_detail.php:215
-#: ../html/affiliate_creative_detail.php:32
+#: ../html/admin/creatives_detail.php:174 
+#: ../html/admin/creatives_detail.php:215 
+#: ../html/affiliate_creative_detail.php:32 
 #: ../html/affiliate_creative_detail.php:45
 msgid "Preview"
 msgstr "Visualizar"
 
-#: ../html/admin/creatives_detail.php:194
+#: ../html/admin/creatives_detail.php:194 
 #: ../html/affiliate_creative_detail.php:43
 msgid "Creative:"
-msgstr "Criativa:"
+msgstr "Criativo:"
 
-#: ../html/admin/creatives_detail.php:206
+#: ../html/admin/creatives_detail.php:206 
 #: ../html/admin/manage_creatives.php:163
 msgid "Actions"
 msgstr "Ações"
@@ -726,20 +731,20 @@ msgstr "Ações"
 msgid "Deactivate"
 msgstr "Desativar"
 
-#: ../html/admin/creatives_detail.php:234
-#: ../html/admin/manage_creatives.php:164
-#: ../html/admin/paypalpayments/pending_payments.php:10
-#: ../html/admin/paypalpayments/view_payment_detail.php:57
+#: ../html/admin/creatives_detail.php:234 
+#: ../html/admin/manage_creatives.php:164 
+#: ../html/admin/paypalpayments/pending_payments.php:10 
+#: ../html/admin/paypalpayments/view_payment_detail.php:57 
 #: ../html/impressions_table.php:6 ../html/transaction_table.php:44
 msgid "ID"
 msgstr "ID"
 
-#: ../html/admin/creatives_detail.php:271
+#: ../html/admin/creatives_detail.php:271 
 #: ../html/affiliate_creative_detail.php:56
 msgid "Text Link Properties"
 msgstr "Propriedades de Link de texto"
 
-#: ../html/admin/creatives_detail.php:292
+#: ../html/admin/creatives_detail.php:292 
 #: ../html/affiliate_creative_detail.php:77
 msgid "Image Properties"
 msgstr "Propriedades da imagem"
@@ -786,17 +791,17 @@ msgstr "Excluir"
 
 #: ../html/admin/paypalpayments/home.php:17
 msgid "New Mass Payment"
-msgstr ""
+msgstr "Novo Pagamento em Massa"
 
 #: ../html/admin/paypalpayments/home.php:20
 msgid "View Previous Mass Payments"
-msgstr ""
+msgstr "Ver Pagamentos em Massa Anteriores"
 
-#: ../html/admin/paypalpayments/not_configured.php:2
-#: ../html/admin/paypalpayments/pending_payments.php:3
-#: ../html/admin/paypalpayments/review_affiliates.php:45
-#: ../html/admin/paypalpayments/select_affiliates.php:102
-#: ../html/admin/paypalpayments/view_payment_detail.php:7
+#: ../html/admin/paypalpayments/not_configured.php:2 
+#: ../html/admin/paypalpayments/pending_payments.php:3 
+#: ../html/admin/paypalpayments/review_affiliates.php:45 
+#: ../html/admin/paypalpayments/select_affiliates.php:102 
+#: ../html/admin/paypalpayments/view_payment_detail.php:7 
 #: ../source/Plugin.php:101 ../source/Plugin.php:102
 msgid "PayPal Mass Pay"
 msgstr "Pagamento PayPal massa"
@@ -817,37 +822,37 @@ msgstr ""
 
 #: ../html/admin/paypalpayments/pending_payments.php:4
 msgid "View Existing Payments"
-msgstr ""
+msgstr "Ver Pagamentos Existentes"
 
 #: ../html/admin/paypalpayments/pending_payments.php:11
 msgid "Date Posted"
-msgstr ""
+msgstr "Postado Em"
 
 #: ../html/admin/paypalpayments/pending_payments.php:12
 msgid "PayPal ID"
-msgstr ""
+msgstr "PayPal ID"
 
-#: ../html/admin/paypalpayments/pending_payments.php:14
+#: ../html/admin/paypalpayments/pending_payments.php:14 
 #: ../html/admin/paypalpayments/view_payment_detail.php:21
 msgid "Fee"
-msgstr ""
+msgstr "Taxa"
 
 #: ../html/admin/paypalpayments/pending_payments.php:15
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #: ../html/admin/paypalpayments/pending_payments.php:36
 msgid "(No Mass Payments on Record)"
-msgstr ""
+msgstr "(Nenhum Registro de Pagamento em Massa)"
 
-#: ../html/admin/paypalpayments/reconcile_file_review.php:66
+#: ../html/admin/paypalpayments/reconcile_file_review.php:66 
 #: ../html/admin/paypalpayments/reconcile_manual.php:81
 msgid "Reconcile Mass Payment"
-msgstr ""
+msgstr "Reconciliar Pagamento em Massa"
 
 #: ../html/admin/paypalpayments/reconcile_with_file.php:54
 msgid "Reconcile with this file"
-msgstr ""
+msgstr "Reconciliar com esse arquivo"
 
 #: ../html/admin/paypalpayments/review_affiliates.php:10
 msgid "Yes, Submit to PayPal"
@@ -874,18 +879,18 @@ msgstr "Sua conta PayPal será cobrada %s!"
 msgid "Review Your Mass Payment"
 msgstr "Rever o seu pagamento em massa"
 
-#: ../html/admin/paypalpayments/review_affiliates.php:53
+#: ../html/admin/paypalpayments/review_affiliates.php:53 
 #: ../html/admin/paypalpayments/select_affiliates.php:124
 msgid "AID"
 msgstr "AUXÍLIO"
 
-#: ../html/admin/paypalpayments/review_affiliates.php:57
-#: ../html/admin/paypalpayments/select_affiliates.php:128
+#: ../html/admin/paypalpayments/review_affiliates.php:57 
+#: ../html/admin/paypalpayments/select_affiliates.php:128 
 #: ../html/admin/paypalpayments/view_payment_detail.php:60
 msgid "PayPal E-Mail"
 msgstr "PayPal E-Mail"
 
-#: ../html/admin/paypalpayments/review_affiliates.php:60
+#: ../html/admin/paypalpayments/review_affiliates.php:60 
 #: ../html/admin/settings/settings.php:49
 msgid "Payment"
 msgstr "Pagamento"
@@ -898,14 +903,14 @@ msgstr "Novo equilíbrio"
 msgid "Sub-Total"
 msgstr "Sub-total"
 
-#: ../html/admin/paypalpayments/review_affiliates.php:97
+#: ../html/admin/paypalpayments/review_affiliates.php:97 
 #: ../html/admin/paypalpayments/select_affiliates.php:175
 #, php-format
 msgid "PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>"
 msgstr ""
 "Taxa PayPal <br /> <small>2%% por pagamento, max %s1 por pagamento</small>"
 
-#: ../html/admin/paypalpayments/review_affiliates.php:102
+#: ../html/admin/paypalpayments/review_affiliates.php:102 
 #: ../html/admin/paypalpayments/select_affiliates.php:180
 msgid "Estimated Total"
 msgstr "Total estimado"
@@ -923,7 +928,7 @@ msgstr "Selecione afiliados para pagar"
 msgid "Not showing %s affiliates that do not have a PayPal account on file."
 msgstr "Não mostrando %s filiais que não têm uma conta PayPal no arquivo."
 
-#: ../html/admin/paypalpayments/select_affiliates.php:110
+#: ../html/admin/paypalpayments/select_affiliates.php:110 
 #: ../html/transaction_table.php:27
 msgid "Date Range:"
 msgstr "Intervalo de datas:"
@@ -936,10 +941,10 @@ msgstr "De"
 msgid "to"
 msgstr "Para"
 
-#: ../html/admin/paypalpayments/select_affiliates.php:116
+#: ../html/admin/paypalpayments/select_affiliates.php:116 
 #: ../html/transaction_table.php:36
 msgid "Clear"
-msgstr "Clara"
+msgstr "Limpar"
 
 #: ../html/admin/paypalpayments/select_affiliates.php:130
 msgid "Payment Amount"
@@ -951,94 +956,94 @@ msgstr "Continue com esses pagamentos."
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:8
 msgid "Payment Detail"
-msgstr ""
+msgstr "Detalhes Pagamento"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:16
 msgid "Database ID"
-msgstr ""
+msgstr "ID da Base de Dados"
 
-#: ../html/admin/paypalpayments/view_payment_detail.php:17
-#: ../html/admin/paypalpayments/view_payment_detail.php:58
+#: ../html/admin/paypalpayments/view_payment_detail.php:17 
+#: ../html/admin/paypalpayments/view_payment_detail.php:58 
 #: ../html/impressions_table.php:7 ../html/transaction_table.php:46
 msgid "Date Occurred"
 msgstr "Data ocorreu"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:18
 msgid "PayPal Timestamp"
-msgstr ""
+msgstr "Paypal Timestamp"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:19
 msgid "PayPal Correlation ID"
-msgstr ""
+msgstr "ID Correlação PayPal"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:22
 msgid "Total Amount"
-msgstr ""
+msgstr "Valor Total"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:26
 msgid "Reconciliation"
-msgstr ""
+msgstr "Reconciliação"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:29
 msgid "Manually reconcile payments ... "
-msgstr ""
+msgstr "Reconciliar manualmente os pagamentos ..."
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:30
 msgid "Reconcile using PayPal Mass Payment results file ... "
-msgstr ""
+msgstr "Reconciliação usando Pagamento em Massa PayPal. Resultado ..."
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:37
 msgid "Errors"
-msgstr ""
+msgstr "Erros"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:40
 msgid "Code:"
-msgstr ""
+msgstr "Código:"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:41
 msgid "Message:"
-msgstr ""
+msgstr "Mensagem:"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:42
 msgid "Severity:"
-msgstr ""
+msgstr "Severidade:"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:52
 msgid "Associated Transactions"
-msgstr ""
+msgstr "Traduções Associadas"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:59
 msgid "Affiliate"
-msgstr ""
+msgstr "Afiliados"
 
-#: ../html/admin/paypalpayments/view_payment_detail.php:62
+#: ../html/admin/paypalpayments/view_payment_detail.php:62 
 #: ../html/transaction_table.php:48
 msgid "Description"
 msgstr "Descrição"
 
 #: ../html/admin/settings/settings.php:47
 msgid "Affiliate Registration"
-msgstr ""
+msgstr "Registro de Afiliado"
 
 #: ../html/admin/settings/settings.php:48
 msgid "Messaging"
-msgstr ""
+msgstr "Mensagens"
 
 #: ../html/admin/settings/settings.php:50
 msgid "Pages/Forms"
-msgstr ""
+msgstr "Páginas/Formulários"
 
 #: ../html/admin/settings/settings.php:51
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Configurações Avançadas"
 
 #: ../html/admin/settings/settings.php:122
 msgid "Save Settings"
-msgstr ""
+msgstr "Salvar Configurações"
 
 #: ../html/admin/settings/settings_advanced.php:8
 msgid "Default Landing Page"
-msgstr ""
+msgstr "Landing Page Padrão"
 
 #: ../html/admin/settings/settings_advanced.php:13
 #, php-format
@@ -1046,100 +1051,106 @@ msgid ""
 "Your default landing page URL is <code>%s</code>. If you want to change to a "
 "different URL you can specify it here."
 msgstr ""
+"Sua landing page padrão é <code>%s</code>. Se quiser outra URL especifique "
+"aqui."
 
 #: ../html/admin/settings/settings_aff_pages.php:5
 msgid "Home Page"
-msgstr ""
+msgstr "Página Principal"
 
 #: ../html/admin/settings/settings_aff_pages.php:10
 msgid "This is the URL of your Affiliate Home page"
-msgstr ""
+msgstr "Essa é a URL da Home page dos Afiliados"
 
 #: ../html/admin/settings/settings_aff_pages.php:16
 msgid "Registration Page"
-msgstr ""
+msgstr "Página de Registro"
 
 #: ../html/admin/settings/settings_aff_pages.php:21
 msgid "This is the URL of your Affiliate Registration page"
-msgstr ""
+msgstr "Essa é a URL da página de Registro dos Afiliados"
 
 #: ../html/admin/settings/settings_aff_pages.php:27
 msgid "Login Page"
-msgstr ""
+msgstr "Login"
 
 #: ../html/admin/settings/settings_aff_pages.php:32
 msgid "This is the URL of your Affiliate Login page"
-msgstr ""
+msgstr "Essa é a URL da página de Login dos Afiliados"
 
 #: ../html/admin/settings/settings_general.php:103
 msgid "Minimum Payout Amount"
-msgstr ""
+msgstr "Pagamento Mínimo"
 
 #: ../html/admin/settings/settings_general.php:112
 msgid "Cookie Duration (days)"
-msgstr ""
+msgstr "Duração dos Cookies (dias)"
 
 #: ../html/admin/settings/settings_general.php:117
 #, php-format
 msgid "<a target=\"_blank\" href=\"%s\">Read more on cookie duration here</a>"
 msgstr ""
+"<a target=\"_blank\" href=\"%s\">Leia mais sobre a duração de Cookies "
+"aqui</a>"
 
 #: ../html/admin/settings/settings_general.php:122
 msgid "Email name"
-msgstr ""
+msgstr "Nome do Email"
 
-#: ../html/admin/settings/settings_general.php:127
+#: ../html/admin/settings/settings_general.php:127 
 #: ../html/admin/settings/settings_general.php:137
 msgid "(Leave blank to use WordPress default)"
-msgstr ""
+msgstr "(Deixe vazio para padrão do  WordPress)"
 
 #: ../html/admin/settings/settings_general.php:132
 msgid "Email address"
-msgstr ""
+msgstr "Endereço de Email"
 
 #: ../html/admin/settings/settings_general.php:144
 msgid "Automatically approve a new affiliate"
-msgstr ""
+msgstr "Aprovar novo afiliado automaticamente"
 
 #: ../html/admin/settings/settings_general.php:178
 msgid "Currency Symbol"
-msgstr ""
+msgstr "Simbolo da Moeda"
 
 #: ../html/admin/settings/settings_general.php:187
 msgid "Currency Code"
-msgstr ""
+msgstr "Código da Moeda"
 
 #: ../html/admin/settings/settings_general.php:197
 msgid "Do Not Record Zero Amount Commission"
-msgstr ""
+msgstr "Não Gravar Comissões Com Valor Zero"
 
 #: ../html/admin/settings/settings_general.php:210
 msgid "Enable Impressions"
-msgstr ""
+msgstr "Habilitar Impressões"
 
 #: ../html/admin/settings/settings_general.php:219
 msgid "Enable Debug"
-msgstr ""
+msgstr "Habilitar Debug"
 
 #: ../html/admin/settings/settings_general.php:222
 msgid ""
 "If checked, debug output will be written to log files. This is useful for "
 "troubleshooting post payment failures."
 msgstr ""
+"Se marcado, a saída do Debug vai ser escrita nos logs. Isso é útil para "
+"resolver problemas em falhas de pagamentos."
 
 #: ../html/admin/settings/settings_general.php:223
 msgid ""
 "You can check the debug log file by clicking on the link below (The log file "
 "can be viewed using any text editor):"
-msgstr ""
+msgstr "Você pode checar o log de Debug clicando no link abaixo."
 
 #: ../html/admin/settings/settings_general.php:227
 msgid "Reset Debug Log file"
-msgstr ""
+msgstr "Resetar Log de Debug"
 
 #: ../html/admin/settings/settings_general.php:228
 msgid "Use it to reset the affiliate manager plugin's log file."
-msgstr ""
+msgstr "Use para Resetar o log do Affiliate Manager Plugin"
 
 #: ../html/admin/settings/settings_messaging.php:66
 msgid ""
@@ -1176,8 +1187,9 @@ msgid ""
 "* Some messages have been modified. These will <strong>NOT</strong> be saved "
 "to the database until you click 'Save Settings' button below."
 msgstr ""
-"* Algumas mensagens foram modificadas. Isto <strong>não</strong> vão ser "
-"salvo no banco de dados até que você clique o botão 'Save Settings' abaixo."
+"* Algumas mensagens foram modificadas. Isto <strong>NÃO</strong> vão ser "
+"salvo no banco de dados até que você clique o botão 'Salvar Confidurações' "
+"abaixo."
 
 #: ../html/admin/settings/settings_payment.php:16
 msgid ""
@@ -1191,6 +1203,7 @@ msgstr ""
 #, php-format
 msgid "<a href=\"%s\" target=\"_blank\">How to Setup PayPal Mass Pay</a> (PDF)"
 msgstr ""
+"<a href=\"%s\" target=\"_blank\">Como Configurar PayPal Mass Pay</a> (PDF)"
 
 #: ../html/admin/settings/settings_payment.php:29
 msgid ""
@@ -1222,7 +1235,7 @@ msgstr "Ponto de extremidade de API"
 
 #: ../html/admin/settings/settings_payment.php:47
 msgid "WARNING: Set to LIVE if you don't know what this is for!"
-msgstr "Aviso: Definido para viver se você não sabe o que é isto!"
+msgstr "Aviso: Marque AO VIVO (LIVE), se você não sabe o que é isto!"
 
 #: ../html/admin/settings/settings_payment.php:50
 #, php-format
@@ -1262,12 +1275,12 @@ msgstr "Comprimento do campo deve ser um número positivo não-0."
 msgid "Custom Field"
 msgstr "Campo personalizado"
 
-#: ../html/admin/settings/settings_registration.php:368
+#: ../html/admin/settings/settings_registration.php:368 
 #: ../html/admin/settings/settings_registration.php:442
 msgid "Display Name"
 msgstr "Nome para exibição"
 
-#: ../html/admin/settings/settings_registration.php:375
+#: ../html/admin/settings/settings_registration.php:375 
 #: ../html/admin/settings/settings_registration.php:443
 msgid "Field Name"
 msgstr "Nome do campo"
@@ -1294,11 +1307,11 @@ msgstr "Número de telefone"
 
 #: ../html/admin/settings/settings_registration.php:389
 msgid "State Code (US)"
-msgstr "Código de estado (EUA)"
+msgstr "Código de estado"
 
 #: ../html/admin/settings/settings_registration.php:390
 msgid "Zip Code (US)"
-msgstr "CEP (EUA)"
+msgstr "CEP "
 
 #: ../html/admin/settings/settings_registration.php:391
 msgid "Country Code"
@@ -1306,9 +1319,9 @@ msgstr "Código do país"
 
 #: ../html/admin/settings/settings_registration.php:392
 msgid "Social Security Number (US)"
-msgstr "Número de segurança social (EUA)"
+msgstr "CPF"
 
-#: ../html/admin/settings/settings_registration.php:399
+#: ../html/admin/settings/settings_registration.php:399 
 #: ../html/admin/settings/settings_registration.php:444
 msgid "Max Length"
 msgstr "Comprimento máximo"
@@ -1317,20 +1330,20 @@ msgstr "Comprimento máximo"
 msgid "Available Payout Methods"
 msgstr "Métodos de pagamento disponíveis"
 
-#: ../html/admin/settings/settings_registration.php:418
+#: ../html/admin/settings/settings_registration.php:418 
 #: ../source/Data/Models/AffiliateModel.php:180
 msgid "Check"
 msgstr "Verificar"
 
-#: ../html/admin/settings/settings_registration.php:422
+#: ../html/admin/settings/settings_registration.php:422 
 #: ../source/Data/Models/AffiliateModel.php:176
 msgid "PayPal"
 msgstr "PayPal"
 
-#: ../html/admin/settings/settings_registration.php:426
+#: ../html/admin/settings/settings_registration.php:426 
 #: ../source/Data/Models/AffiliateModel.php:178
 msgid "Manual"
-msgstr ""
+msgstr "Manual"
 
 #: ../html/admin/settings/settings_registration.php:431
 msgid "Affiliate Register Fields"
@@ -1338,7 +1351,7 @@ msgstr "Filial campos do registo"
 
 #: ../html/admin/settings/settings_registration.php:434
 msgid "Add Custom Field"
-msgstr "Adicionar campo personalizado"
+msgstr "Adicionar Campo Personalizado"
 
 #: ../html/admin/settings/settings_registration.php:439
 msgid "Enabled"
@@ -1352,14 +1365,14 @@ msgstr "Formato do campo"
 msgid "Required"
 msgstr "Necessário"
 
-#: ../html/admin/settings/settings_registration.php:456
+#: ../html/admin/settings/settings_registration.php:456 
 #: ../html/affiliate_register_form.php:70
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Termos e Condições"
 
 #: ../html/admin/settings/settings_registration.php:465
 msgid "Affiliates Homepage Message"
-msgstr ""
+msgstr "Mensagem Central dos Afiliados"
 
 #: ../html/affiliate_approved.php:1
 #, php-format
@@ -1372,7 +1385,7 @@ msgstr ""
 
 #: ../html/affiliate_cp_agree_terms.php:3
 msgid "Affiliate Confirmation"
-msgstr "Confirmação de afiliados"
+msgstr "Confirmação de Afiliados"
 
 #: ../html/affiliate_cp_agree_terms.php:5
 msgid "Contract Terms"
@@ -1388,11 +1401,11 @@ msgstr "Termos e condições"
 
 #: ../html/affiliate_cp_agree_terms.php:27
 msgid "Agree to Terms"
-msgstr "Concorda com os termos"
+msgstr "Concordar com os termos"
 
 #: ../html/affiliate_cp_approved.php:3
 msgid "Affiliate Control Panel"
-msgstr "Painel de controlo de afiliados"
+msgstr "Painel de Controle de Afiliados"
 
 #: ../html/affiliate_cp_approved.php:5
 msgid "Welcome!"
@@ -1436,15 +1449,15 @@ msgid ""
 "Now would be a great time to go pick <a href=\"%s\">some creative</a> and "
 "get started."
 msgstr ""
-"Agora seria um grande momento para ir buscar <a href=\"%s\"> algum criativo</"
-"a> e começar."
+"Agora seria um grande momento para ir buscar <a href=\"%s\"> algum "
+"criativo</a> e começar."
 
-#: ../html/affiliate_cp_payment_details_form.php:70
+#: ../html/affiliate_cp_payment_details_form.php:70 
 #: ../html/affiliate_cp_payment_details_simple.php:14
 msgid "Please provide your payment details."
 msgstr "Por favor, forneça seus detalhes de pagamento."
 
-#: ../html/affiliate_cp_payment_details_form.php:71
+#: ../html/affiliate_cp_payment_details_form.php:71 
 #: ../html/affiliate_cp_payment_details_simple.php:15
 msgid ""
 "The following information will be used to disperse payments when your "
@@ -1453,25 +1466,25 @@ msgstr ""
 "As informações a seguir serão usadas para dispersar os pagamentos quando sua "
 "conta atinge o montante mínimo de pagamento."
 
-#: ../html/affiliate_cp_payment_details_form.php:79
-#: ../html/affiliate_cp_payment_details_simple.php:23
+#: ../html/affiliate_cp_payment_details_form.php:79 
+#: ../html/affiliate_cp_payment_details_simple.php:23 
 #: ../html/contact_info.php:94
 msgid "Method"
 msgstr "Método"
 
-#: ../html/affiliate_cp_payment_details_form.php:96
-#: ../html/affiliate_cp_payment_details_simple.php:40
+#: ../html/affiliate_cp_payment_details_form.php:96 
+#: ../html/affiliate_cp_payment_details_simple.php:40 
 #: ../html/contact_info.php:117
 msgid "PayPal E-Mail Address"
 msgstr "Endereço de E-Mail de PayPal"
 
-#: ../html/affiliate_cp_payment_details_form.php:109
-#: ../html/affiliate_cp_payment_details_simple.php:53
+#: ../html/affiliate_cp_payment_details_form.php:109 
+#: ../html/affiliate_cp_payment_details_simple.php:53 
 #: ../source/Util/AffiliateFormHelper.php:151
 msgid "Paper Check"
 msgstr "Seleção de papel"
 
-#: ../html/affiliate_cp_payment_details_form.php:115
+#: ../html/affiliate_cp_payment_details_form.php:115 
 #: ../html/affiliate_cp_payment_details_simple.php:59
 msgid "Check Recipient"
 msgstr "Verifique o destinatário"
@@ -1480,8 +1493,8 @@ msgstr "Verifique o destinatário"
 msgid "Mail to Address On Record"
 msgstr "Correio para o endereço no registro"
 
-#: ../html/affiliate_cp_payment_details_form.php:143
-#: ../html/affiliate_cp_payment_details_form.php:166
+#: ../html/affiliate_cp_payment_details_form.php:143 
+#: ../html/affiliate_cp_payment_details_form.php:166 
 #: ../html/affiliate_cp_payment_details_simple.php:76
 msgid "Recipient"
 msgstr "Destinatário"
@@ -1510,7 +1523,7 @@ msgstr "Estado"
 msgid "Postal Code"
 msgstr "Código postal"
 
-#: ../html/affiliate_cp_payment_details_form.php:216
+#: ../html/affiliate_cp_payment_details_form.php:216 
 #: ../html/affiliate_cp_payment_details_simple.php:99
 msgid "Submit Payment Details"
 msgstr "Apresentar detalhes de pagamento"
@@ -1525,7 +1538,7 @@ msgstr "Seu trecho HTML específico da filial"
 
 #: ../html/affiliate_creative_list.php:62
 msgid "Your Affiliate Link Using Affiliate ID"
-msgstr ""
+msgstr "Seu Link de Afiliado usando Sua ID"
 
 #: ../html/affiliate_creative_list.php:67
 msgid "The following creatives are available for publication."
@@ -1547,9 +1560,9 @@ msgstr ""
 #: ../html/affiliate_not_logged_in.php:7
 #, php-format
 msgid ""
-"If you are not an affiliate, but wish to become one, you will need to "
-"apply.  To apply, you must be a registered user on this blog.  If you have "
-"an existing account on this blog, please <a href=\"%s\">log in</a>.  If not, "
+"If you are not an affiliate, but wish to become one, you will need to apply. "
+" To apply, you must be a registered user on this blog.  If you have an "
+"existing account on this blog, please <a href=\"%s\">log in</a>.  If not, "
 "please <a href=\"%s\">register</a>."
 msgstr ""
 "Se você não é um afiliado, mas deseja se tornar um, você precisará aplicar. "
@@ -1561,31 +1574,31 @@ msgstr ""
 #, php-format
 msgid ""
 "This is the affiliates section of this store. You are not currently an "
-"affiliate of this store.  If you wish to become one, please <a href=\"%s\"/"
-">apply</a>."
+"affiliate of this store.  If you wish to become one, please <a href=\"%s\"/>"
+"apply</a>."
 msgstr ""
 "Esta é a seção de afiliados desta loja. Atualmente, você não é uma filial da "
-"loja. Se você deseja se tornar um, por favor <a href=\"%s\"/>se aplicam</a>."
+"loja. Se você deseja se tornar um, por favor <a href=\"%s\"/>aplique</a>."
 
 #: ../html/affiliate_register_form.php:15 ../html/contact_info.php:160
 msgid "* Required fields"
-msgstr "* Os campos obrigatórios"
+msgstr "* Campos obrigatórios"
 
 #: ../html/affiliate_register_form.php:29
 msgid ""
 "This is the email address associated with your currently logged in WordPress "
 "user account."
-msgstr ""
+msgstr "Esse é o Email associado à conta atualmente logada no WordPress."
 
 #: ../html/affiliate_register_form.php:30
 msgid ""
 "If you want to use a different email address, log out of your WordPress "
 "account then try a new registration."
-msgstr ""
+msgstr "Se você quer usar um Email diferente, logue em outra conta WordPress"
 
 #: ../html/affiliate_register_form.php:70
 msgid "I have read and agree to the"
-msgstr ""
+msgstr "Eu li e aceito ao"
 
 #: ../html/affiliate_register_form.php:71
 msgid "You must agree to the terms."
@@ -1621,11 +1634,11 @@ msgstr "Informações de contato"
 #: ../html/contact_info.php:81
 #, php-format
 msgid ""
-"There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s"
-"\">Cancel</a>"
+"There is a pending change of your e-mail to <code>%1$s</code>. <a "
+"href=\"%2$s\">Cancel</a>"
 msgstr ""
-"Existe uma alteração pendente de seu e-mail para <code>%1$ s</code>. <a href="
-"\"%2$s\"> Cancelar</a>"
+"Existe uma alteração pendente de seu e-mail para <code>%1$ s</code>. <a "
+"href=\"%2$s\"> Cancelar</a>"
 
 #: ../html/contact_info.php:126
 msgid "Bounty Type *"
@@ -1643,7 +1656,7 @@ msgstr "Taxa de recompensa (% de venda) *"
 
 #: ../html/contact_info.php:162
 msgid "+ Custom fields"
-msgstr "+ Personalizados campos"
+msgstr "+ Campos Personalizados"
 
 #: ../html/contact_info.php:166
 msgid "Save Changes"
@@ -1652,11 +1665,11 @@ msgstr "Salvar as alterações"
 #: ../html/impressions_table.php:1
 #, php-format
 msgid "Displaying %1$d of %2$d impressions"
-msgstr ""
+msgstr "Mostrando %1$d de %2$d impressões"
 
 #: ../html/impressions_table.php:9
 msgid "Referrer"
-msgstr ""
+msgstr "Indicar"
 
 #: ../html/impressions_table.php:31 ../html/transaction_table.php:77
 msgid "No records found for the date range selected."
@@ -1672,95 +1685,95 @@ msgstr "ID de referência"
 
 #: ../source/Admin-menu/wpam-addons-menu.php:6 ../source/Plugin.php:647
 msgid "Affiliates Manager Add-ons"
-msgstr ""
+msgstr "Affiliates Manager Add-Ons"
 
 #: ../source/Admin-menu/wpam-clicks-menu.php:8 ../source/Plugin.php:639
 msgid "Click Tracking"
-msgstr ""
+msgstr "Rastreio de Clicks"
 
 #: ../source/Admin-menu/wpam-clicks-menu.php:11
 msgid "Unique Click Tracking"
-msgstr ""
+msgstr "Rastreamento de Click Único"
 
 #: ../source/Admin-menu/wpam-clicks-menu.php:34
 msgid "This tab shows unique referrals to your website from your affiliates"
-msgstr ""
+msgstr "Essa aba mostra indicações únicas dos sites afiliados para o seu"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:8
 msgid "Affiliate Commissions"
-msgstr ""
+msgstr "Comissões do Afiliado"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:11
 msgid "Overall Commissions"
-msgstr ""
+msgstr "Comissões (Geral)"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:12
 msgid "Manual Commission"
-msgstr ""
+msgstr "Comissão Manual"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:48
 msgid "This tab shows all affiliate commission data"
-msgstr ""
+msgstr "Essa aba mostra todas as comissões dos seus afiliados"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:104
 msgid "You need to enter an affiliate ID"
-msgstr ""
+msgstr "Você precisa colocar um ID de Afiliado"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:108
 msgid "You need to enter a numeric commission amount"
-msgstr ""
+msgstr "Você precisa de um valor numérico para valor da comissão"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:112
 msgid "You need to enter a numeric purchase amount"
-msgstr ""
+msgstr "Você precisar por uma quantidade numérica para compra"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:136
 msgid "A commission with this transaction ID already exists"
-msgstr ""
+msgstr "Uma comissão com essa ID de transação já existe"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:154
 msgid "Commission added!"
-msgstr ""
+msgstr "Comissão Adicionada!"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:164
 msgid "This tab allows you to manually award commission to an affiliate."
-msgstr ""
+msgstr "Essa aba permite que você recompense manualmente seus afiliados."
 
 #: ../source/Admin-menu/wpam-commission-menu.php:174
 msgid "Enter the affiliate ID. Example: "
-msgstr ""
+msgstr "Coloque seu ID de Afiliado. Exemplo:"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:178
 msgid "Commission Amount"
-msgstr ""
+msgstr "Valor Comissão"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:180
 msgid "Enter the commission amount. Example: "
-msgstr ""
+msgstr "Coloque o valor da comissão. Exemplo:"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:184
 msgid "Purchase Amount"
-msgstr ""
+msgstr "Valor Compra"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:186
 msgid "Enter the purchase amount. Example: "
-msgstr ""
+msgstr "Coloque o total da compra. Exemplo:"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:192
 msgid ""
 "Enter the unique transaction ID (leave empty to generate a unique ID). "
 "Example: "
-msgstr ""
+msgstr "Coloque a ID de Transação Única (deixe vazio para gerar a ID).Exemplo:"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:198
 msgid "Enter the email address of the buyer (optional)."
-msgstr ""
+msgstr "Coloque o Email do Comprador (opcional)."
 
 #: ../source/Admin-menu/wpam-commission-menu.php:204
 msgid "Enter the date in yyyy-mm-dd format. Example: "
-msgstr ""
+msgstr "Coloque a data no formato aaaa-mm-dd. Exemplo"
 
-#: ../source/Data/GenericRepository.php:31
+#: ../source/Data/GenericRepository.php:31 
 #: ../source/Data/GenericRepository.php:76
 #, php-format
 msgid "'model' must be of type '%s'"
@@ -1786,10 +1799,10 @@ msgstr "Tentativa de carregar a mensagem inválida de nome '%s'"
 
 #: ../source/Options.php:27
 msgid "Invalid PayPal API value"
-msgstr ""
+msgstr "API do PayPal Inválida"
 
-#: ../source/Pages/Admin/MyAffiliatesPage.php:161
-#: ../source/Pages/Admin/NewAffiliatePage.php:84
+#: ../source/Pages/Admin/MyAffiliatesPage.php:161 
+#: ../source/Pages/Admin/NewAffiliatePage.php:84 
 #: ../source/Pages/AffiliatesHome.php:526
 #, php-format
 msgid "Bounty Rate (%s per Sale)"
@@ -1799,9 +1812,9 @@ msgstr "Taxa de recompensa (%s por venda)"
 msgid "All"
 msgstr "Todos os"
 
-#: ../source/Pages/Admin/MyCreativesPage.php:108
-#: ../source/Pages/Admin/MyCreativesPage.php:261
-#: ../source/Pages/Admin/MyCreativesPage.php:268
+#: ../source/Pages/Admin/MyCreativesPage.php:108 
+#: ../source/Pages/Admin/MyCreativesPage.php:261 
+#: ../source/Pages/Admin/MyCreativesPage.php:268 
 #: ../source/Pages/AffiliatesHome.php:172 ../source/Util/JsonHandler.php:228
 msgid "Invalid creative."
 msgstr "Proveja inválida."
@@ -1817,7 +1830,7 @@ msgstr "Inserir falhado: mau tipo criativo."
 
 #: ../source/Pages/Admin/MyCreativesPage.php:231
 msgid "Creative Updated."
-msgstr "Proveja atualizada."
+msgstr "Criativo atualizada."
 
 #: ../source/Pages/Admin/MyCreativesPage.php:238
 msgid "Creative ... created."
@@ -1829,7 +1842,7 @@ msgstr "Inserir falhado: mecanismo de atualização criativa inválido."
 
 #: ../source/Pages/Admin/NewAffiliatePage.php:73
 msgid "Add Affiliate"
-msgstr "Adicionar afiliados"
+msgstr "Adicionar Afiliados"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:53
 msgid "This results file does not appear to match this payment."
@@ -1858,7 +1871,7 @@ msgstr "Não poderia correlacionar todas as transações"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:145
 msgid "Invalid PayPal LogID"
-msgstr ""
+msgstr "LogID do PayPal Inválida"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:151
 msgid "Transaction not found"
@@ -1870,11 +1883,11 @@ msgstr "Status da transação inválida"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:220
 msgid "Affiliate Payment"
-msgstr "Pagamento de afiliados"
+msgstr "Pagamento de Afiliados"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:232
 msgid "Affiliate not found"
-msgstr "Filial não encontrado"
+msgstr "Afiliado não encontrado"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:235
 msgid "Payment method for affiliate is not PayPal"
@@ -1900,9 +1913,9 @@ msgstr "Criativos"
 msgid "Edit Profile"
 msgstr "Editar perfil"
 
-#: ../source/Pages/AffiliatesHome.php:174 ../source/Util/JsonHandler.php:28
-#: ../source/Util/JsonHandler.php:52 ../source/Util/JsonHandler.php:83
-#: ../source/Util/JsonHandler.php:109 ../source/Util/JsonHandler.php:133
+#: ../source/Pages/AffiliatesHome.php:174 ../source/Util/JsonHandler.php:28 
+#: ../source/Util/JsonHandler.php:52 ../source/Util/JsonHandler.php:83 
+#: ../source/Util/JsonHandler.php:109 ../source/Util/JsonHandler.php:133 
 #: ../source/Util/JsonHandler.php:207
 msgid "Invalid affiliate"
 msgstr "Filial inválido"
@@ -1919,7 +1932,7 @@ msgstr "%s por venda."
 #: ../source/Pages/AffiliatesHome.php:389
 #, php-format
 msgid "%s%% of each completed sale, pre-tax"
-msgstr "%s%% de cada venda concluída, antes do imposto"
+msgstr "%s%% de cada venda concluída."
 
 #: ../source/Pages/AffiliatesRegister.php:62 ../source/Util/UserHandler.php:138
 msgid ""
@@ -1968,10 +1981,10 @@ msgstr "Novo registo de afiliados"
 msgid "Affiliate application for %s"
 msgstr "Afiliado a aplicação para %s"
 
-#: ../source/Pages/PublicPage.php:95 ../source/Util/JsonHandler.php:14
-#: ../source/Util/JsonHandler.php:44 ../source/Util/JsonHandler.php:75
-#: ../source/Util/JsonHandler.php:101 ../source/Util/JsonHandler.php:125
-#: ../source/Util/JsonHandler.php:136 ../source/Util/JsonHandler.php:150
+#: ../source/Pages/PublicPage.php:95 ../source/Util/JsonHandler.php:14 
+#: ../source/Util/JsonHandler.php:44 ../source/Util/JsonHandler.php:75 
+#: ../source/Util/JsonHandler.php:101 ../source/Util/JsonHandler.php:125 
+#: ../source/Util/JsonHandler.php:136 ../source/Util/JsonHandler.php:150 
 #: ../source/Util/JsonHandler.php:196 ../source/Util/JsonHandler.php:224
 msgid "Access denied."
 msgstr "Acesso negado."
@@ -1984,7 +1997,7 @@ msgstr "receiverType deve ser uma das constantes RECEIVERTYPE_ *"
 msgid "'amount' must be a valid monetary value"
 msgstr "'quantidade' deve ser um valor monetário válido"
 
-#: ../source/PayPal/MassPayResultFile.php:113
+#: ../source/PayPal/MassPayResultFile.php:113 
 #: ../source/PayPal/MassPayResultFile.php:124
 #, php-format
 msgid "Failed to parse amounts from field: %s"
@@ -2012,10 +2025,10 @@ msgstr "Resposta desconhecida: %s"
 msgid "Affiliate Management"
 msgstr "Gerenciamento de afiliados"
 
-#: ../source/Plugin.php:78 ../source/Plugin.php:83 ../source/Plugin.php:586
+#: ../source/Plugin.php:78 ../source/Plugin.php:83 ../source/Plugin.php:586 
 #: ../source/Plugin.php:600 ../source/Plugin.php:610
 msgid "Affiliates"
-msgstr "Afiliadas"
+msgstr "Afiliados"
 
 #: ../source/Plugin.php:109
 msgid "Store Affiliates"
@@ -2027,27 +2040,27 @@ msgstr "Registre-se"
 
 #: ../source/Plugin.php:111
 msgid "Affiliate Login"
-msgstr ""
+msgstr "Login de Afiliado"
 
 #: ../source/Plugin.php:317
 msgid "You are currently logged in"
-msgstr ""
+msgstr "Você está atualmente logado em"
 
 #: ../source/Plugin.php:319
 msgid "Username"
-msgstr ""
+msgstr "Usuário"
 
 #: ../source/Plugin.php:321
 msgid "Log out"
-msgstr ""
+msgstr "Sair"
 
 #: ../source/Plugin.php:331
 msgid "Password Lost and Found"
-msgstr ""
+msgstr "Senha Achados e Perdidos"
 
 #: ../source/Plugin.php:331
 msgid "Lost your password?"
-msgstr ""
+msgstr "Perdeu a Senha ?"
 
 #: ../source/Plugin.php:377
 msgid "Become an affiliate"
@@ -2076,25 +2089,25 @@ msgstr "Configurações"
 
 #: ../source/Plugin.php:639
 msgid "Affiliates Manager Click Tracking"
-msgstr ""
+msgstr "Affiliates Manager Rastreamento de Clicks"
 
 #: ../source/Plugin.php:643
 msgid "Affiliates Manager Commission Data"
-msgstr ""
+msgstr "Affiliates Manager Dados de Comissões"
 
 #: ../source/Plugin.php:643
 msgid "Commissions"
-msgstr ""
+msgstr "Comissões"
 
 #: ../source/Plugin.php:647
 msgid "Add-ons"
-msgstr ""
+msgstr "Add-Ons"
 
 #: ../source/Plugin.php:776
 msgid "Invalid JSON handler."
 msgstr "Inválido manipulador JSON."
 
-#: ../source/Tracking/RequestTracker.php:131
+#: ../source/Tracking/RequestTracker.php:131 
 #: ../source/Tracking/RequestTracker.php:228
 msgid "no refkey in request."
 msgstr "Não refkey no pedido."
@@ -2105,7 +2118,7 @@ msgstr "dados de refkey inválido."
 
 #: ../source/Tracking/RequestTracker.php:239
 msgid "invalid refkey data: "
-msgstr ""
+msgstr "refkey data Inválida"
 
 #: ../source/Tracking/TrackingKey.php:35
 #, php-format
@@ -2126,18 +2139,18 @@ msgstr "Transferência PayPal"
 
 #: ../source/Util/AffiliateFormHelper.php:157
 msgid "Manual Transfer"
-msgstr ""
+msgstr "Transferência Manual"
 
 #: ../source/Util/EmailHandler.php:66
 msgid "Your username and password"
-msgstr "Seu nome de usuário e senha"
+msgstr "Seu nome de Usuário e Senha"
 
 #: ../source/Util/EmailHandler.php:70
 #, php-format
 msgid "[%s] Your username and password for Affiliate Manager"
-msgstr "[%s] Seu username e senha para o gerente da filial"
+msgstr "[%s] Seu Usuário e Senha para o gerente da filial"
 
-#: ../source/Util/EmailHandler.php:71 ../source/Util/UserHandler.php:20
+#: ../source/Util/EmailHandler.php:71 ../source/Util/UserHandler.php:20 
 #: ../source/Util/UserHandler.php:84
 #, php-format
 msgid "New affiliate registration for %s: has been approved!"
@@ -2151,13 +2164,13 @@ msgstr "Quantidade de recompensas inválido."
 msgid "Invalid bounty type."
 msgstr "Tipo de recompensas inválido."
 
-#: ../source/Util/JsonHandler.php:36 ../source/Util/JsonHandler.php:68
-#: ../source/Util/JsonHandler.php:93 ../source/Util/JsonHandler.php:112
+#: ../source/Util/JsonHandler.php:36 ../source/Util/JsonHandler.php:68 
+#: ../source/Util/JsonHandler.php:93 ../source/Util/JsonHandler.php:112 
 #: ../source/Util/JsonHandler.php:169
 msgid "Invalid state transition."
 msgstr "Transição de estado inválido."
 
-#: ../source/Util/JsonHandler.php:60 ../source/Util/UserHandler.php:60
+#: ../source/Util/JsonHandler.php:60 ../source/Util/UserHandler.php:60 
 #: ../source/Util/UserHandler.php:151
 #, php-format
 msgid "Affiliate Application for %s"
@@ -2179,12 +2192,12 @@ msgstr "Tipo de transação inválida."
 msgid "Invalid value for amount."
 msgstr "Valor inválido para montante."
 
-#: ../source/Util/UserHandler.php:25 ../source/Util/UserHandler.php:34
+#: ../source/Util/UserHandler.php:25 ../source/Util/UserHandler.php:34 
 #: ../source/Util/UserHandler.php:89 ../source/Util/UserHandler.php:98
 msgid "User already has an account and is already an affiliate"
 msgstr "Usuário já tem uma conta e já é um afiliado"
 
-#: ../source/Util/UserHandler.php:28 ../source/Util/UserHandler.php:37
+#: ../source/Util/UserHandler.php:28 ../source/Util/UserHandler.php:37 
 #: ../source/Util/UserHandler.php:92 ../source/Util/UserHandler.php:101
 msgid "Log into the site with your existing account and get started."
 msgstr "Entrar no site com sua conta existente e começar."
@@ -2193,7 +2206,7 @@ msgstr "Entrar no site com sua conta existente e começar."
 msgid "Argument 'callback' must be callable"
 msgstr "Argumento 'callback' deve ser callable"
 
-#: ../source/Validation/CountryCodeValidator.php:15
+#: ../source/Validation/CountryCodeValidator.php:15 
 #: ../source/Validation/StringValidator.php:29
 msgid "is required"
 msgstr "é necessário"
@@ -2222,7 +2235,7 @@ msgstr "deve ser um número"
 msgid "must be a phone number"
 msgstr "deve ser um número de telefone"
 
-#: ../source/Validation/SetValidator.php:18
+#: ../source/Validation/SetValidator.php:18 
 #: ../source/Validation/StateCodeValidator.php:14
 msgid "must be selected"
 msgstr "deve ser selecionado"
@@ -2247,15 +2260,15 @@ msgstr "deve ser um CEP válido"
 
 #: ../source/display_functions.php:11
 msgid "Affiliate has applied, but is waiting on your decision."
-msgstr "Filial tem aplicado, mas está à espera de sua decisão."
+msgstr "Afiliado aplicou, mas está à espera de sua decisão."
 
 #: ../source/display_functions.php:12
 msgid "Affiliate has been approved, but has not accepted terms."
-msgstr "Filial foi aprovada, mas não aceitou os termos."
+msgstr "Afiliado foi aprovado, mas não aceitou os termos."
 
 #: ../source/display_functions.php:13
 msgid "Affiliate is active, and will receive credit for leads."
-msgstr "Filial está ativa e receberá crédito para ligações."
+msgstr "Afiliado está ativo e receberá créditos por vendas."
 
 #: ../source/display_functions.php:14
 msgid ""
@@ -2263,21 +2276,21 @@ msgid ""
 "details look good, you should activate this affiliate so they can begin "
 "sending traffic."
 msgstr ""
-"Filial tem aceitou os termos e forneceu detalhes de pagamento. <br /> se os "
-"detalhes forem boas, você deve ativar este afiliado assim eles podem começar "
+"Afiliado aceitou os termos e forneceu detalhes de pagamento. <br /> se os "
+"detalhes forem bons, você deve ativar este afiliado assim eles podem começar "
 "a enviar o tráfego."
 
 #: ../source/display_functions.php:15
 msgid "Affiliate has been disabled."
-msgstr "Filial foi desativada."
+msgstr "Afiliado foi desativado."
 
 #: ../source/display_functions.php:16
 msgid "Affiliate was declined."
-msgstr "Filial foi recusada."
+msgstr "Afiliado foi recusado"
 
 #: ../source/display_functions.php:17
 msgid "Affiliate was blocked and cannot re-apply."
-msgstr "Filial foi bloqueada e não pode recandidatar-se."
+msgstr "Afiliado bloqueado e não pode se recandidatar."
 
 #: ../source/display_functions.php:23
 #, php-format
@@ -2287,85 +2300,24 @@ msgstr "%s por venda"
 #: ../source/display_functions.php:25
 #, php-format
 msgid "%s%% of pre-tax sales"
-msgstr ""
+msgstr "%s%% das vendas"
 
 #: ../source/dynamic-translatable-strings.php:4
 msgid "Address Line 1"
-msgstr ""
+msgstr "Endereço Linha 1"
 
 #: ../source/dynamic-translatable-strings.php:5
 msgid "Address Line 2"
-msgstr ""
+msgstr "Endereço Linha 2"
 
 #: ../source/dynamic-translatable-strings.php:6
 msgid "Zip Code"
-msgstr ""
+msgstr "CEP"
 
 #: ../source/dynamic-translatable-strings.php:7
 msgid "Company Name"
-msgstr ""
+msgstr "Nome da Empresa"
 
 #: ../source/dynamic-translatable-strings.php:8
 msgid "Website URL"
-msgstr ""
-
-#~ msgid "WordPress Affiliate Manager requires WordPress 3.1 or higher."
-#~ msgstr "Gerente da filial do WordPress requer WordPress 3.1 ou superior."
-
-#~ msgid "unknown creative type."
-#~ msgstr "tipo criativo desconhecido."
-
-#~ msgid "Only over payout minimum. (Balance >= %s)"
-#~ msgstr "Apenas sobre o pagamento mínimo. (Equilíbrio  >= %s)"
-
-#~ msgid "<a href=\"%s\">How to Setup PayPal Mass Pay</a> (PDF)"
-#~ msgstr "<a href=\"%s\"> como configurar o pagamento PayPal massa</a> (PDF)"
-
-#~ msgid "Invalid PaPpal API value"
-#~ msgstr "Valor inválido API do PayPal"
-
-#~ msgid ""
-#~ "WP Affiliate Manager was unable to load your currency from your WPLANG "
-#~ "setting: %s"
-#~ msgstr ""
-#~ "Gerente da filial do WP foi incapaz de carregar a sua moeda de seu ajuste "
-#~ "WPLANG: %s"
-
-#~ msgid ""
-#~ "Your currency will be displayed as %s and PayPal payments will be paid in "
-#~ "%s"
-#~ msgstr "Sua moeda será exibida como %s e pagamentos PayPal serão pago em %s"
-
-#~ msgid ""
-#~ "WP Affiliate Manager has been updated and needs to be deactivated and re-"
-#~ "activated to perform upgrades in order work"
-#~ msgstr ""
-#~ "Gerente da filial do WP foi atualizada e precisa ser desativado e "
-#~ "reativado para realizar upgrades no trabalho de ordem"
-
-#~ msgid "Invalid PayPa LogID"
-#~ msgstr "Inválido PayPal LogID"
-
-#~ msgid "Status: Active"
-#~ msgstr "Status: ativo"
-
-#~ msgid "Status: Applied"
-#~ msgstr "Status: aplicado"
-
-#~ msgid "Status: Approved"
-#~ msgstr "Status: aprovado"
-
-#~ msgid "Status: Confirmed"
-#~ msgstr "Status: confirmado"
-
-#~ msgid "Status: Declined"
-#~ msgstr "Status: recusado"
-
-#~ msgid "Status: Blocked"
-#~ msgstr "Status: bloqueado"
-
-#~ msgid "Status: Inactive"
-#~ msgstr "Status: inativo"
-
-#~ msgid "CANNOT PERFORM DB UPGRADE FROM %s to %s"
-#~ msgstr "Não é possível executar o UPGRADE do DB de %s para %s"
+msgstr "URL do Site"
