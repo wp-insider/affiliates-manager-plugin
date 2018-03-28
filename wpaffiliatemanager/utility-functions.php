@@ -72,3 +72,19 @@ function wpam_get_total_woocommerce_order_fees($order)
     }
     return $total_fee;
 }
+
+function wpam_filter_from_email($address) {
+    $addrOverride = get_option( WPAM_PluginConfig::$EmailAddressOption );
+    if(!empty($addrOverride)){
+        return $addrOverride;
+    }
+    return $address;
+}
+
+function wpam_filter_from_name($name) {
+    $nameOverride = get_option( WPAM_PluginConfig::$EmailNameOption );
+    if(!empty($nameOverride)){
+        return $nameOverride;
+    }
+    return $name;
+}

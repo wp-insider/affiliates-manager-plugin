@@ -97,6 +97,9 @@ class WPAM_Commission_Tracking {
                 */
                 //checking to see if "Send Commission Notification" option is enabled
                 if(get_option(WPAM_PluginConfig::$SendAffCommissionNotification) == 1){
+                    //override from email & name
+                    add_filter('wp_mail_from', 'wpam_filter_from_email');
+                    add_filter('wp_mail_from_name', 'wpam_filter_from_name');
                     //send a commission notification email
                     $address = $affiliate->email;
                     $subject = "You just earned a commission!";               
@@ -109,6 +112,8 @@ class WPAM_Commission_Tracking {
                     else{
                         WPAM_Logger::log_debug("Email could not be sent by WordPress");
                     }
+                    remove_filter('wp_mail_from', 'wpam_filter_from_email');
+                    remove_filter('wp_mail_from_name', 'wpam_filter_from_name');
                 }
             }
         }
