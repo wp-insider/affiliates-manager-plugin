@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
 "POT-Creation-Date: 2018-04-04 21:12+0800\n"
-"PO-Revision-Date: 2018-04-04 21:43+0800\n"
+"PO-Revision-Date: 2018-04-07 17:53+0800\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -631,7 +631,7 @@ msgstr ""
 #: ../html/affiliate_creative_detail.php:65
 #: ../html/affiliate_creative_detail.php:88
 msgid "Alt Text"
-msgstr ""
+msgstr "替代文本"
 
 #: ../html/admin/creative_update_form.php:229
 msgid "Text Link Parameters"
@@ -641,7 +641,7 @@ msgstr ""
 #: ../html/admin/creatives_detail.php:276
 #: ../html/affiliate_creative_detail.php:61
 msgid "Link Text"
-msgstr ""
+msgstr "链接文字"
 
 #: ../html/admin/creative_update_form.php:261
 msgid "Save Creative"
@@ -693,12 +693,12 @@ msgstr ""
 #: ../html/affiliate_creative_detail.php:32
 #: ../html/affiliate_creative_detail.php:45
 msgid "Preview"
-msgstr ""
+msgstr "预览"
 
 #: ../html/admin/creatives_detail.php:194
 #: ../html/affiliate_creative_detail.php:43
 msgid "Creative:"
-msgstr ""
+msgstr "分销链接:"
 
 #: ../html/admin/creatives_detail.php:206
 #: ../html/admin/manage_creatives.php:163
@@ -720,7 +720,7 @@ msgstr "ID"
 #: ../html/admin/creatives_detail.php:271
 #: ../html/affiliate_creative_detail.php:56
 msgid "Text Link Properties"
-msgstr ""
+msgstr "文字链接设置"
 
 #: ../html/admin/creatives_detail.php:292
 #: ../html/affiliate_creative_detail.php:77
@@ -1483,7 +1483,7 @@ msgstr ""
 
 #: ../html/affiliate_creative_detail.php:47
 msgid "Your Affiliate-Specific HTML snippet"
-msgstr ""
+msgstr "HTML链接"
 
 #: ../html/affiliate_creative_list.php:62
 msgid "Your Affiliate Link Using Affiliate ID"
