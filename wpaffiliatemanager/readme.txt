@@ -137,6 +137,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = TODO2.5.4 =
 - Added support for Chinese language translation. The translation file was submitted by Nicolas Laurent
+- Fixed a tab issue in the My Affiliates menu
 
 = 2.5.3 =
 - Updated the Portuguese(Brazil), Italian and German language files

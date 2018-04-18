@@ -5,8 +5,7 @@
         'wpam-affiliates&tab=export_data' => __('Export Data', 'affiliates-manager')
     );
     
-    echo '<div class="wrap"><h1>'.__('My Affiliates', 'affiliates-manager').'</h1>';    
-    echo '<div id="poststuff"><div id="post-body">'; 
+    echo '<div class="wrap"><h1>'.__('My Affiliates', 'affiliates-manager').'</h1>'; 
     
     if(isset($_GET['page'])){
         $current = $_GET['page'];
@@ -27,7 +26,7 @@
     }
     $content .= '</h2>';
     echo $content;
-
+    echo '<div id="poststuff"><div id="post-body">';
     if(isset($_GET['tab']))
     { 
         switch ($_GET['tab'])
