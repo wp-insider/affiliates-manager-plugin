@@ -103,7 +103,14 @@ class WPAM_Commission_Tracking {
                     //send a commission notification email
                     $address = $affiliate->email;
                     $subject = "You just earned a commission!";               
-                    $body = WPAM_MessageHelper::GetMessage('affiliate_commission_notification_email');
+                    $message = WPAM_MessageHelper::GetMessage('affiliate_commission_notification_email');
+                    $aff_id = $affiliate->affiliateId;
+                    $aff_first_name = $affiliate->firstName;
+                    $aff_last_name = $affiliate->lastName; 
+                    $aff_email = $affiliate->email;
+                    $tags = array("{aff_id}","{aff_first_name}","{aff_last_name}","{aff_email}");
+                    $vals = array($aff_id, $aff_first_name, $aff_last_name, $aff_email);
+                    $body = str_replace($tags,$vals,$message);
                     WPAM_Logger::log_debug("Sending a commission notification email to ".$address);
                     $mail_sent = wp_mail( $address, $subject, $body );
                     if($mail_sent==true){

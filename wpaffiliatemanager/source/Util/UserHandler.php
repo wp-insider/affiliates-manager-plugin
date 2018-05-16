@@ -6,13 +6,14 @@
 class WPAM_Util_UserHandler {
 
     public function approveAffiliate($affiliate, $bountyType, $bountyAmount, $update = true) {
-        $sendEmail = true;
+        $new_user = false;
         $mailer = new WPAM_Util_EmailHandler();
         $db = new WPAM_Data_DataAccess();
 
         //Create Affiliate account in WP (1.1.2 if they don't have one)
         //and send them an email telling them they're approved
-
+        $userId = '';
+        $userPass = '';
         $userLogin = sanitize_user($affiliate->email);
         $userEmail = sanitize_email($affiliate->email);
         $userEmail = apply_filters('user_registration_email', $userEmail);
@@ -47,37 +48,42 @@ class WPAM_Util_UserHandler {
             if (is_wp_error($userId))
                 throw new Exception($userId->get_error_message());
 
-            //$mailer->mailNewAffiliate( $userId, $userPass );
-            $mailer->mailNewApproveAffiliate($userId, $userPass);
-            $sendEmail = false;
+            $new_user = true;
 
             $user = new WP_User($userId);
             $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
             $user->set_role( 'affiliate' );
         }
-
-        //Send user email indicating they're approved
-        if ($sendEmail)
-            $mailer->mailAffiliate($userEmail, sprintf(__('Affiliate Application for %s', 'affiliates-manager'), $blogname), $message);
-
         $affiliate->approve();
         $affiliate->userId = $userId;
         $affiliate->bountyType = sanitize_text_field($bountyType);
         $affiliate->bountyAmount = sanitize_text_field($bountyAmount);
-        if ($update)
+        if ($update){
             $db->getAffiliateRepository()->update($affiliate);
-        else
+        }
+        else{
             $db->getAffiliateRepository()->insert($affiliate);
+        }
+        //notify the affiliate
+        if ($new_user) {
+            //$mailer->mailNewAffiliate( $userId, $userPass );
+            $mailer->mailNewApproveAffiliate($userId, $userPass, $affiliate);
+        }
+        //Send user email indicating they're approved
+        if (!$new_user) {
+            $mailer->mailAffiliate($userEmail, sprintf(__('Affiliate Application for %s', 'affiliates-manager'), $blogname), $message);
+        }
     }
 
     public function AutoapproveAffiliate($affiliate, $bountyType = '', $bountyAmount = '') {
-        $sendEmail = true;
+        $new_user = false;
         $mailer = new WPAM_Util_EmailHandler();
         $db = new WPAM_Data_DataAccess();
 
         //Create Affiliate account in WP (1.1.2 if they don't have one)
         //and send them an email telling them they're approved
-
+        $userId = '';
+        $userPass = '';
         $userLogin = sanitize_user($affiliate->email);
         $userEmail = sanitize_email($affiliate->email);
         $userEmail = apply_filters('user_registration_email', $userEmail);
@@ -109,13 +115,10 @@ class WPAM_Util_UserHandler {
             $userPass = wp_generate_password();
             $userId = wp_create_user($userLogin, $userPass, $userEmail);
 
-            if (is_wp_error($userId))
+            if (is_wp_error($userId)){
                 throw new Exception($userId->get_error_message());
-
-            //$mailer->mailNewAffiliate( $userId, $userPass );
-            $mailer->mailNewApproveAffiliate($userId, $userPass);
-            $sendEmail = false;
-
+            }
+            $new_user = true;
             $user = new WP_User($userId);
             $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
             $user->set_role( 'affiliate' );
@@ -139,6 +142,12 @@ class WPAM_Util_UserHandler {
             }
             wp_die(__('Error submitting your details to the database. This is a bug, and your application was not submitted.', 'affiliates-manager'));
         }
+        //notify the affiliate
+        if ($new_user) {
+            //$mailer->mailNewAffiliate( $userId, $userPass );
+            $affiliate->affiliateId = $id;
+            $mailer->mailNewApproveAffiliate($userId, $userPass, $affiliate);
+        }
         //Notify admin that affiliate has registered
         $admin_message = sprintf(__('New affiliate registration on your site %s:', 'affiliates-manager'), $blogname) . "\r\n\r\n";
         $admin_message .= sprintf(__('Name: %s %s', 'affiliates-manager'), $affiliate->firstName, $affiliate->lastName) . "\r\n";
@@ -149,7 +158,7 @@ class WPAM_Util_UserHandler {
         $mailer->mailAffiliate(get_option('admin_email'), __('New Affiliate Registration', 'affiliates-manager'), $admin_message);
 
         //Send user email indicating they're approved
-        if ($sendEmail) {
+        if (!$new_user) {
             $mailer->mailAffiliate($userEmail, sprintf(__('Affiliate Application for %s', 'affiliates-manager'), $blogname), $message);
         }
     }
