@@ -29,7 +29,7 @@ class WPAM_Pages_AffiliatesRegister extends WPAM_Pages_PublicPage
 			array('order' => 'asc')
 		);
 
-		if ( isset( $request['action'] ) && $request['action'] == 'submit' ) {
+		if ( isset( $request['wpam_reg_submit'] ) && $request['wpam_reg_submit'] == '1' ) {
                         $form_validated = false;
 			$affiliateHelper = new WPAM_Util_AffiliateFormHelper();
 			$vr = $affiliateHelper->validateForm( new WPAM_Validation_Validator(), $request, $affiliateFields );
@@ -113,13 +113,15 @@ class WPAM_Pages_AffiliatesRegister extends WPAM_Pages_PublicPage
 		}
 		$response->viewData['affiliateFields'] = $affiliateFields;
 		$response->viewData['tnc'] = $tncBuilder->build();
-		$postHelper = new WPAM_PostHelper();		
+                /*
+		$postHelper = new WPAM_PostHelper();
+                
 		$response->viewData['postBackUrl'] = $this->getLink(
 			array(
 				//'page_id' => $postHelper->getPostId(WPAM_Plugin::PAGE_NAME_REGISTER),
 				'action' => 'submit' )
 		);
-
+                */
 		//save for form validation in the footer
 		$this->response = $response;
 		

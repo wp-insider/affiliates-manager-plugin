@@ -6,10 +6,20 @@
 require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 
 $request = @$this->viewData['request'];
-
+if(is_user_logged_in()){  //this block checks whether the user is logged in and already has an affiliate account
+    global $wpdb;
+    $current_user = wp_get_current_user();
+    $user_id = $current_user->ID;  
+    $query = "SELECT * FROM ".WPAM_AFFILIATES_TBL." WHERE userId = %d";        
+    $affiliate = $wpdb->get_row($wpdb->prepare($query, $user_id));
+    if($affiliate != null) { //The affiliate has an account already
+        _e("Looks like you already have an affiliate account. So you don't need to register again. Simply go to the affiliate portal and start referring users.", 'affiliates-manager');
+        return;
+    }
+}
 ?>
 
-<form action="<?php echo $this->viewData['postBackUrl']?>" method="post" id="mainForm" class="pure-form">
+<form action="" method="post" id="mainForm" class="pure-form">
 
 
 		<?php _e( '* Required fields', 'affiliates-manager' ) ?><br /><br />
@@ -71,7 +81,7 @@ $request = @$this->viewData['request'];
 					<span id="termsAgreeWarning" style="color: red; display: none"><br><?php _e( 'You must agree to the terms.', 'affiliates-manager' ) ?></span>
 				</td>
 			</tr>
-		</table>
+		</table>               
                 <?php 
                 $output = apply_filters( 'wpam_before_registration_submit_button', '');
                 if(!empty($output)){
@@ -79,6 +89,7 @@ $request = @$this->viewData['request'];
                 }
                 ?>
                 <div class="wpam-registration-form">
+                    <input type="hidden" name="wpam_reg_submit" value="1" />
                     <input type="submit" name="submit" value="<?php _e( 'Submit Application', 'affiliates-manager' ) ?>" class="pure-button pure-button-active" />
                 </div>
 </form>
