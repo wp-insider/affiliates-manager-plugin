@@ -102,7 +102,7 @@ class WPAM_Commission_Tracking {
                     add_filter('wp_mail_from_name', 'wpam_filter_from_name');
                     //send a commission notification email
                     $address = $affiliate->email;
-                    $subject = "You just earned a commission!";               
+                    $subject = __("You just earned a commission!", 'affiliates-manager');               
                     $message = WPAM_MessageHelper::GetMessage('affiliate_commission_notification_email');
                     $aff_id = $affiliate->affiliateId;
                     $aff_first_name = $affiliate->firstName;

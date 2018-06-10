@@ -28,7 +28,7 @@
         <div class="wpam-daterange-selection">
         <label for="from"><?php _e('From', 'affiliates-manager') ?></label>
         <input type="text" id="from" name="from" value="<?php echo $this->viewData['from']; ?>"/>
-        <label for="to">to</label>
+        <label for="to"><?php _e('to', 'affiliates-manager') ?></label>
         <input type="text" id="to" name="to" value="<?php echo $this->viewData['to']; ?>"/>
         </div>
         <div class="wpam-daterange-action-buttons">

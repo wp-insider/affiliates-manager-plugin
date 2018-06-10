@@ -254,7 +254,7 @@ class WPAM_Data_DatabaseInstaller {
             $db = new WPAM_Data_DataAccess();
             $msgRepo = $db->getMessageRepository();
             $msg = new WPAM_Data_Models_MessageModel();
-            $msg->content = "Thank you. Your registration is now complete. You can log into the affiliate area and begin promoting.";
+            $msg->content = __("Thank you. Your registration is now complete. You can log into the affiliate area and begin promoting.", 'affiliates-manager');
             $msg->name = 'aff_app_submitted_auto_approved';
             $msg->type = 'web';
             $msg->use = 'Displayed to a newly registered affiliate if automatic affiliate approval option is enabled.';
@@ -267,7 +267,7 @@ class WPAM_Data_DatabaseInstaller {
         $message = $msgRepo->loadBy(array('name' => 'affiliate_application_approved_email'));
         if($message === NULL){
             $msg = new WPAM_Data_Models_MessageModel();
-            $msg->content = "Your affiliate account for {blogname} has been approved!. \n\nUsername: {affusername} \nPassword: {affpassword} \nLogin URL: {affloginurl} \n\nPlease log into your account to get referral code.";
+            $msg->content = __("Your affiliate account for {blogname} has been approved!. \n\nUsername: {affusername} \nPassword: {affpassword} \nLogin URL: {affloginurl} \n\nPlease log into your account to get referral code.", 'affiliates-manager');
             $msg->name = 'affiliate_application_approved_email';
             $msg->type = 'email';
             $msg->use = 'Body of e-mail sent to a newly registered affiliate immediately following their application being approved.';
