@@ -26,7 +26,7 @@ function wpam_display_addons_menu()
 
     $addon_3 = array(
         'name' => 'Mailpoet Newsletter',
-        'thumbnail' => WPAM_URL . '/images/addons/mailpoet-integration.jpg',
+        'thumbnail' => WPAM_URL . '/images/addons/mailpoet-integration.png',
         'description' => 'You can automatically sign up your affiliates to a specific MailPoet newsletter list.',
         'page_url' => 'https://wpaffiliatemanager.com/sign-affiliates-to-mailpoet-list/',
     );
