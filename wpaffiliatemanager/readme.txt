@@ -136,7 +136,7 @@ https://wpaffiliatemanager.com/screen-shots/
 == Changelog ==
 
 = TODO2.5.6 =
-- 
+- Added Hungarian language translation to the plugin. The translation was submitted by Peter Nyiri.
 
 = 2.5.5 =
 - The registration form is no longer shown to an affiliate when logged in.
