@@ -140,6 +140,11 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                             $pp_email_field_style = ' style="display: none;"';
                         }
                     }
+                    if (count($this->viewData['paymentMethods']) == 2) {//Admin supports two available payment methods
+                        if (array_key_exists('paypal', $this->viewData['paymentMethods']) && array_key_exists('manual', $this->viewData['paymentMethods']) && empty($this->viewData['paymentMethod'])) {//Supports both paypal and manual options
+                            $pp_email_field_style = '';
+                        }
+                    }
                     ?>
                     <tr id="rowPaypalEmail" <?php echo $pp_email_field_style; ?>>
                         <td><label for="txtPaypalEmail"><?php _e('PayPal E-Mail Address', 'affiliates-manager') ?></label> *</td>
