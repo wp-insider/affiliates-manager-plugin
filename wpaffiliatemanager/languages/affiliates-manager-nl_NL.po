@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Affiliate Manager\n"
 "POT-Creation-Date: 2017-01-31 15:24+1100\n"
-"PO-Revision-Date: 2018-07-10 16:25+0200\n"
+"PO-Revision-Date: 2018-07-20 16:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.0.8\n"
+"X-Generator: Poedit 2.0.9\n"
 
 #: ../boot-strap.php:38
 msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
@@ -142,7 +142,7 @@ msgstr "Geen producten gevonden."
 
 #: ../classes/ListTable.php:141
 msgid "Bulk Actions"
-msgstr "Bulk Actie"
+msgstr "Bul actie"
 
 #: ../classes/ListTable.php:151 ../html/admin/affiliate_detail.php:283
 #: ../html/admin/affiliate_detail.php:314
@@ -175,7 +175,7 @@ msgstr "Ja, blokkeer alle aanmeldingen van %s"
 
 #: ../html/admin/affiliate_detail.php:150
 msgid "NO, They may re-apply"
-msgstr "Nee, ze mogen opnieuw aanmelden"
+msgstr "Nee, ze moeten opnieuw aanmelden"
 
 #: ../html/admin/affiliate_detail.php:159
 msgid ""
@@ -240,7 +240,7 @@ msgstr "Weet u zeker dat u deze affiliate wilt afwijzen?"
 
 #: ../html/admin/affiliate_detail.php:369
 msgid "Yes, DECLINE."
-msgstr "Ja, AFWIJZEN."
+msgstr "Ja, afwijzen."
 
 #: ../html/admin/affiliate_detail.php:373
 msgid "Are you sure you wish to block this affiliate?"
@@ -248,7 +248,7 @@ msgstr "Weet u zeker dat u deze affiliate wilt blokkeren?"
 
 #: ../html/admin/affiliate_detail.php:373
 msgid "Yes, BLOCK."
-msgstr "Ja, BLOKKEREN."
+msgstr "Ja, blokkeren."
 
 #: ../html/admin/affiliate_detail.php:383
 msgid ""
@@ -256,11 +256,11 @@ msgid ""
 "DECLINED."
 msgstr ""
 "Weet u zeker dat u deze affiliate wilt deblokkeren?<br>De gebruiker zal "
-"worden GEWEIGERD."
+"worden geweigerd."
 
 #: ../html/admin/affiliate_detail.php:383
 msgid "Yes, UNBLOCK."
-msgstr "Ja, DEBLOKKEREN."
+msgstr "Ja, deblokkeren."
 
 #: ../html/admin/affiliate_detail.php:394
 msgid "Are you sure you wish to activate this affiliate?"
@@ -268,7 +268,7 @@ msgstr "Weet u zeker dat u deze affiliate wilt activeren?"
 
 #: ../html/admin/affiliate_detail.php:394 ../html/admin/creatives_detail.php:86
 msgid "Yes, ACTIVATE."
-msgstr "Ja, ACTIVEREN."
+msgstr "Ja, activeren."
 
 #: ../html/admin/affiliate_detail.php:398
 msgid "Are you sure you wish to deactivate this affiliate?"
@@ -276,7 +276,7 @@ msgstr "Weet u zeker dat u deze affiliate wilt deactiveren?"
 
 #: ../html/admin/affiliate_detail.php:398 ../html/admin/creatives_detail.php:95
 msgid "Yes, DEACTIVATE."
-msgstr "Ja, DEACTIVEREN."
+msgstr "Ja, deactiveren."
 
 #: ../html/admin/affiliate_detail.php:417
 msgid "Approve Application"
@@ -507,11 +507,11 @@ msgstr "Type"
 
 #: ../html/admin/affiliate_detail.php:627
 msgid "Link"
-msgstr "Link"
+msgstr "\\link"
 
 #: ../html/admin/affiliate_management_home.php:2
 msgid "Affiliate Management Control Panel"
-msgstr "Affiliate Management Controle Paneel"
+msgstr "Affiliate Management Paneel"
 
 #: ../html/admin/affiliate_new.php:3 ../html/admin/affiliate_new_success.php:2
 #: ../source/Plugin.php:89 ../source/Plugin.php:90
@@ -544,7 +544,7 @@ msgstr "Mijn Affiliates"
 
 #: ../html/admin/affiliates_list.php:8
 msgid "All Active"
-msgstr "Alle Actieve"
+msgstr "Alle actieve"
 
 #: ../html/admin/affiliates_list.php:9
 msgid "All (Including Closed)"
@@ -626,7 +626,7 @@ msgstr "Landingspagina"
 
 #: ../html/admin/creative_update_form.php:175
 msgid "Image Parameters"
-msgstr "Afbeelding Instellingen"
+msgstr "Afbeelding parameters"
 
 #: ../html/admin/creative_update_form.php:181
 msgid "New Image File"
@@ -647,11 +647,11 @@ msgstr "Voorbeeld:"
 #: ../html/affiliate_creative_detail.php:65
 #: ../html/affiliate_creative_detail.php:88
 msgid "Alt Text"
-msgstr "Alt tekst"
+msgstr "ALT-tekst"
 
 #: ../html/admin/creative_update_form.php:229
 msgid "Text Link Parameters"
-msgstr "Tekst link parameters"
+msgstr "Text link parameters"
 
 #: ../html/admin/creative_update_form.php:237
 #: ../html/admin/creatives_detail.php:276
@@ -984,7 +984,7 @@ msgstr "Manueel betaling combineren … "
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:30
 msgid "Reconcile using PayPal Mass Payment results file ... "
-msgstr "Combineer het gebruik van PayPal Bulkbetaling resultaat bestaand … "
+msgstr ""
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:37
 msgid "Errors"
@@ -1173,14 +1173,14 @@ msgstr "Inhoud"
 #: ../html/admin/settings/settings_messaging.php:118
 #, php-format
 msgid "%s(More)"
-msgstr "%s(Meer)"
+msgstr "%s(meer)"
 
 #: ../html/admin/settings/settings_messaging.php:125
 msgid ""
 "* Some messages have been modified. These will <strong>NOT</strong> be saved "
 "to the database until you click 'Save Settings' button below."
 msgstr ""
-"* Sommige berichten zijn gewijzigd. Deze zullen <strong>NIET</strong> worden "
+"* Sommige berichten zijn gewijzigd. Deze zullen <strong>NIEt</strong> worden "
 "opgeslagen in de database totdat u klikt op de ‘Instellingen opslaan' knop "
 "hieronder."
 
@@ -1203,7 +1203,7 @@ msgid ""
 "Enable PayPal Mass Pay &#0153;<br /><small>NOTE: Requires a PayPal Premier "
 "or PayPal Business account</small>"
 msgstr ""
-"Inschakelen PayPal bulkbetalingen &#0153; <br /> <small>OPMERKING: vereist "
+"Inschakelen PayPal bulkbetalingen &#0153; <br /> <small>Opmerking: vereist "
 "een PayPal Premier of Business PayPal-account</small>"
 
 #: ../html/admin/settings/settings_payment.php:32
@@ -1398,7 +1398,7 @@ msgstr "Affiliate controle paneel"
 
 #: ../html/affiliate_cp_approved.php:3
 msgid "Affiliate Control Panel"
-msgstr "Het filiaal van het Configuratiescherm"
+msgstr "Het Affiliate controle paneel"
 
 #: ../html/affiliate_cp_approved.php:5
 msgid "Welcome!"
