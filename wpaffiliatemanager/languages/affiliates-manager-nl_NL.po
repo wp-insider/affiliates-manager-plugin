@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Affiliate Manager\n"
 "POT-Creation-Date: 2017-01-31 15:24+1100\n"
-"PO-Revision-Date: 2018-07-20 16:12+0200\n"
+"PO-Revision-Date: 2018-07-20 16:21+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -142,7 +142,7 @@ msgstr "Geen producten gevonden."
 
 #: ../classes/ListTable.php:141
 msgid "Bulk Actions"
-msgstr "Bul actie"
+msgstr "Bulk Actie"
 
 #: ../classes/ListTable.php:151 ../html/admin/affiliate_detail.php:283
 #: ../html/admin/affiliate_detail.php:314
@@ -507,11 +507,11 @@ msgstr "Type"
 
 #: ../html/admin/affiliate_detail.php:627
 msgid "Link"
-msgstr "\\link"
+msgstr "Link"
 
 #: ../html/admin/affiliate_management_home.php:2
 msgid "Affiliate Management Control Panel"
-msgstr "Affiliate Management Paneel"
+msgstr "Affiliate Management Controle Paneel"
 
 #: ../html/admin/affiliate_new.php:3 ../html/admin/affiliate_new_success.php:2
 #: ../source/Plugin.php:89 ../source/Plugin.php:90
@@ -544,7 +544,7 @@ msgstr "Mijn Affiliates"
 
 #: ../html/admin/affiliates_list.php:8
 msgid "All Active"
-msgstr "Alle actieve"
+msgstr "Alle Actieve"
 
 #: ../html/admin/affiliates_list.php:9
 msgid "All (Including Closed)"
@@ -651,7 +651,7 @@ msgstr "ALT-tekst"
 
 #: ../html/admin/creative_update_form.php:229
 msgid "Text Link Parameters"
-msgstr "Text link parameters"
+msgstr "Tekst link parameters"
 
 #: ../html/admin/creative_update_form.php:237
 #: ../html/admin/creatives_detail.php:276
@@ -984,7 +984,7 @@ msgstr "Manueel betaling combineren … "
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:30
 msgid "Reconcile using PayPal Mass Payment results file ... "
-msgstr ""
+msgstr "Combineer gebruik van Paypal Mass Payment resultaten file"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:37
 msgid "Errors"
@@ -1173,14 +1173,14 @@ msgstr "Inhoud"
 #: ../html/admin/settings/settings_messaging.php:118
 #, php-format
 msgid "%s(More)"
-msgstr "%s(meer)"
+msgstr "%s(Meer)"
 
 #: ../html/admin/settings/settings_messaging.php:125
 msgid ""
 "* Some messages have been modified. These will <strong>NOT</strong> be saved "
 "to the database until you click 'Save Settings' button below."
 msgstr ""
-"* Sommige berichten zijn gewijzigd. Deze zullen <strong>NIEt</strong> worden "
+"* Sommige berichten zijn gewijzigd. Deze zullen <strong>NIET</strong> worden "
 "opgeslagen in de database totdat u klikt op de ‘Instellingen opslaan' knop "
 "hieronder."
 
