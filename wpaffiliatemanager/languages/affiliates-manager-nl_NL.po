@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Affiliate Manager\n"
 "POT-Creation-Date: 2017-01-31 15:24+1100\n"
-"PO-Revision-Date: 2017-01-31 15:24+1100\n"
+"PO-Revision-Date: 2018-07-20 16:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.9\n"
 
 #: ../boot-strap.php:38
 msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
@@ -20,7 +20,7 @@ msgstr "WordPress Affiliate Manager vereist PHP 5.1 of hoger."
 
 #: ../boot-strap.php:42
 msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
-msgstr ""
+msgstr "Wordpress Affiliate Manager vereist Wordpress 3.5 of hoger."
 
 #: ../classes/ListAffiliatesTable.php:40 ../html/admin/manage_creatives.php:176
 #: ../html/admin/paypalpayments/pending_payments.php:23
@@ -31,7 +31,7 @@ msgstr "Weergave"
 #: ../classes/ListCommissionTable.php:62
 #: ../source/Admin-menu/wpam-commission-menu.php:172
 msgid "Affiliate ID"
-msgstr ""
+msgstr "Affiliate ID"
 
 #: ../classes/ListAffiliatesTable.php:62 ../html/admin/creatives_detail.php:239
 #: ../html/admin/manage_creatives.php:165
@@ -50,7 +50,7 @@ msgstr "Saldo"
 
 #: ../classes/ListAffiliatesTable.php:64
 msgid "Earnings"
-msgstr "Winst"
+msgstr "Verdiensten"
 
 #: ../classes/ListAffiliatesTable.php:65
 #: ../html/admin/paypalpayments/review_affiliates.php:54
@@ -85,37 +85,38 @@ msgstr "Website"
 #: ../classes/ListAffiliatesTable.php:97 ../classes/ListCommissionTable.php:91
 msgid "Error! You need to select multiple records to perform a bulk action!"
 msgstr ""
+"Error! U moet meerdere records selecteren om een bulk actie uit te voeren!"
 
 #: ../classes/ListAffiliatesTable.php:115
 #: ../classes/ListCommissionTable.php:100
 msgid "Selected records deleted successfully!"
-msgstr ""
+msgstr "De geselecteerde records zijn verwijderd!"
 
 #: ../classes/ListAffiliatesTable.php:139
 #: ../classes/ListCommissionTable.php:116
 msgid "Selected record deleted successfully!"
-msgstr ""
+msgstr "De geselecteerde record is verwijderd!"
 
 #: ../classes/ListClicksTable.php:53 ../classes/ListCommissionTable.php:60
 msgid "Row ID"
-msgstr ""
+msgstr "Regel ID"
 
 #: ../classes/ListClicksTable.php:54 ../classes/ListCommissionTable.php:61
 #: ../source/Admin-menu/wpam-commission-menu.php:202
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: ../classes/ListClicksTable.php:56
 msgid "Tracking Key"
-msgstr ""
+msgstr "Trackingsleutel"
 
 #: ../classes/ListClicksTable.php:57
 msgid "Referring URL"
-msgstr ""
+msgstr "Verwijzende URL"
 
 #: ../classes/ListClicksTable.php:58
 msgid "IP Address"
-msgstr ""
+msgstr "IP Adres"
 
 #: ../classes/ListCommissionTable.php:63
 #: ../html/admin/paypalpayments/pending_payments.php:13
@@ -128,61 +129,61 @@ msgstr "Bedrag"
 #: ../classes/ListCommissionTable.php:64
 #: ../source/Admin-menu/wpam-commission-menu.php:190
 msgid "Transaction ID"
-msgstr ""
+msgstr "Transactie ID"
 
 #: ../classes/ListCommissionTable.php:65
 #: ../source/Admin-menu/wpam-commission-menu.php:196
 msgid "Buyer Email"
-msgstr ""
+msgstr "Koper E-mail"
 
 #: ../classes/ListTable.php:77
 msgid "No items found."
-msgstr ""
+msgstr "Geen producten gevonden."
 
 #: ../classes/ListTable.php:141
 msgid "Bulk Actions"
-msgstr ""
+msgstr "Bul actie"
 
 #: ../classes/ListTable.php:151 ../html/admin/affiliate_detail.php:283
 #: ../html/admin/affiliate_detail.php:314
 #: ../html/admin/paypalpayments/select_affiliates.php:115
 #: ../html/transaction_table.php:35
 msgid "Apply"
-msgstr "Toepassing"
+msgstr "Toepassen"
 
 #: ../classes/ListTable.php:201
 msgid "Show all dates"
-msgstr ""
+msgstr "Alle datums weergeven"
 
 #: ../classes/ListTable.php:220
 msgid "List View"
-msgstr ""
+msgstr "Lijst overzicht"
 
 #: ../classes/ListTable.php:221
 msgid "Excerpt View"
-msgstr ""
+msgstr "Uittreksel overzicht"
 
 #: ../classes/ListTable.php:237
 #, php-format
 msgid "%s pending"
-msgstr ""
+msgstr "%s in afwachting"
 
 #: ../html/admin/affiliate_detail.php:141
 #, php-format
 msgid "YES, Block all applications from %s"
-msgstr "Ja, het blokkeren van alle toepassingen van %s"
+msgstr "Ja, blokkeer alle aanmeldingen van %s"
 
 #: ../html/admin/affiliate_detail.php:150
 msgid "NO, They may re-apply"
-msgstr "Nee, ze opnieuw kunnen toepassen"
+msgstr "Nee, ze moeten opnieuw aanmelden"
 
 #: ../html/admin/affiliate_detail.php:159
 msgid ""
 "Do you want to block all future applications from this email address, or "
 "allow them to sign up at a later date?"
 msgstr ""
-"U wilt blokkeren alle toekomstige toepassingen van dit e-mailadres, of laten "
-"aanmelden op een later tijdstip?"
+"Wilt u alle toekomstige aanmeldingen van dit e-mail adres blokkeren, of "
+"laten aanmelden op een latere datum?"
 
 #: ../html/admin/affiliate_detail.php:188
 msgid "Payout"
@@ -209,20 +210,20 @@ msgstr "Annuleren"
 
 #: ../html/admin/affiliate_detail.php:249
 msgid "Are you sure you wish to approve this affiliate?"
-msgstr "Weet u zeker dat u wilt goedkeuren van deze affiliate?"
+msgstr "Weet u zeker dat u deze affiliate wilt goedkeuren?"
 
 #: ../html/admin/affiliate_detail.php:250
 msgid "Yes, approve."
-msgstr "Ja, goed te keuren."
+msgstr "Ja, goedkeuren."
 
 #: ../html/admin/affiliate_detail.php:292
 msgid "Are you sure you wish to apply an adjustment of "
-msgstr "Weet u zeker dat u wilt toepassen op een aanpassing van"
+msgstr "Weet u zeker dat u een aanpassing wilt maken "
 
 #: ../html/admin/affiliate_detail.php:292
 #: ../html/admin/affiliate_detail.php:334
 msgid " to this account? The new balance will be "
-msgstr "aan deze account? Het nieuwe evenwicht zal worden"
+msgstr " op dit account? De nieuwe balans zal zijn "
 
 #: ../html/admin/affiliate_detail.php:293
 #: ../html/admin/affiliate_detail.php:335
@@ -231,19 +232,19 @@ msgstr "Ja, toepassen."
 
 #: ../html/admin/affiliate_detail.php:334
 msgid "Are you sure you wish to apply a payout of "
-msgstr "Weet u zeker dat u wilt vereffenen een uitbetaling van"
+msgstr "Weet u zeker dat u een uitbetaling wilt doen van "
 
 #: ../html/admin/affiliate_detail.php:369
 msgid "Are you sure you wish to decline this affiliate?"
-msgstr "Weet u zeker dat u wilt dit filiaal weigeren?"
+msgstr "Weet u zeker dat u deze affiliate wilt afwijzen?"
 
 #: ../html/admin/affiliate_detail.php:369
 msgid "Yes, DECLINE."
-msgstr "Ja, af te wijzen."
+msgstr "Ja, afwijzen."
 
 #: ../html/admin/affiliate_detail.php:373
 msgid "Are you sure you wish to block this affiliate?"
-msgstr "Weet u zeker dat u wilt blokkeren deze affiliate?"
+msgstr "Weet u zeker dat u deze affiliate wilt blokkeren?"
 
 #: ../html/admin/affiliate_detail.php:373
 msgid "Yes, BLOCK."
@@ -254,16 +255,16 @@ msgid ""
 "Are you sure you wish to unblock this affiliate?<br>User will become "
 "DECLINED."
 msgstr ""
-"Weet u zeker dat u wenst om de blokkering van deze affiliate?<br>Gebruiker "
-"zal worden afgewezen."
+"Weet u zeker dat u deze affiliate wilt deblokkeren?<br>De gebruiker zal "
+"worden geweigerd."
 
 #: ../html/admin/affiliate_detail.php:383
 msgid "Yes, UNBLOCK."
-msgstr "Ja, de blokkering opheffen."
+msgstr "Ja, deblokkeren."
 
 #: ../html/admin/affiliate_detail.php:394
 msgid "Are you sure you wish to activate this affiliate?"
-msgstr "Weet u zeker dat u wilt activeren deze affiliate?"
+msgstr "Weet u zeker dat u deze affiliate wilt activeren?"
 
 #: ../html/admin/affiliate_detail.php:394 ../html/admin/creatives_detail.php:86
 msgid "Yes, ACTIVATE."
@@ -271,7 +272,7 @@ msgstr "Ja, activeren."
 
 #: ../html/admin/affiliate_detail.php:398
 msgid "Are you sure you wish to deactivate this affiliate?"
-msgstr "Weet u zeker dat u wilt deactiveren deze affiliate?"
+msgstr "Weet u zeker dat u deze affiliate wilt deactiveren?"
 
 #: ../html/admin/affiliate_detail.php:398 ../html/admin/creatives_detail.php:95
 msgid "Yes, DEACTIVATE."
@@ -279,18 +280,18 @@ msgstr "Ja, deactiveren."
 
 #: ../html/admin/affiliate_detail.php:417
 msgid "Approve Application"
-msgstr "Aanvraag goed te keuren"
+msgstr "Aanvraag goedkeuren"
 
 #: ../html/admin/affiliate_detail.php:423
 #: ../html/admin/affiliate_detail.php:567
 #: ../html/admin/settings/settings_general.php:157
 msgid "Bounty Type"
-msgstr "Bounty Type"
+msgstr "Vergoedingstype"
 
 #: ../html/admin/affiliate_detail.php:427
 #: ../html/admin/settings/settings_general.php:161 ../html/contact_info.php:132
 msgid "Percentage of Sales"
-msgstr "Percentage van verkoop"
+msgstr "Percentage per verkoop"
 
 #: ../html/admin/affiliate_detail.php:428
 #: ../html/admin/settings/settings_general.php:162 ../html/contact_info.php:133
@@ -302,19 +303,19 @@ msgstr "Vast bedrag per verkoop"
 #: ../source/Pages/Admin/MyAffiliatesPage.php:162
 #: ../source/Pages/Admin/NewAffiliatePage.php:85
 #: ../source/Pages/AffiliatesHome.php:527
-#, fuzzy, php-format
+#, php-format
 msgid "Bounty Rate (% of Sale)"
-msgstr "Bounty percentage (% van verkoop)"
+msgstr "Commissie (% per verkoop)"
 
 #: ../html/admin/affiliate_detail.php:446
 #: ../html/admin/creatives_detail.php:161
 msgid "Updating, please wait ... "
-msgstr "Bijwerken, even geduld..."
+msgstr "Updaten, een moment geduld aub …"
 
 #: ../html/admin/affiliate_detail.php:451
 #: ../html/admin/creatives_detail.php:166
 msgid "Are you sure?"
-msgstr "Weet je het zeker?"
+msgstr "Weet u het zeker?"
 
 #: ../html/admin/affiliate_detail.php:452
 msgid "approve"
@@ -333,23 +334,23 @@ msgstr "FOUT:"
 
 #: ../html/admin/affiliate_detail.php:458
 msgid "Apply Adjustment "
-msgstr "De aanpassing van toepassen"
+msgstr "Aanpassen "
 
 #: ../html/admin/affiliate_detail.php:462
 msgid "Amount "
-msgstr "Bedrag"
+msgstr "Bedrag "
 
 #: ../html/admin/affiliate_detail.php:468
 msgid "Description "
-msgstr "Beschrijving"
+msgstr "Beschrijving "
 
 #: ../html/admin/affiliate_detail.php:477
 msgid "Apply Payout "
-msgstr "Uitbetaling van toepassing"
+msgstr "Uitbetalen "
 
 #: ../html/admin/affiliate_detail.php:481
 msgid "Payout Amount "
-msgstr "Uitbetaling bedrag"
+msgstr "Uit te betalen bedrag "
 
 #: ../html/admin/affiliate_detail.php:484
 msgid "Current balance"
@@ -361,7 +362,7 @@ msgstr "Ander bedrag"
 
 #: ../html/admin/affiliate_detail.php:496
 msgid "Affiliate:"
-msgstr "Partner:"
+msgstr "Affiliate:"
 
 #: ../html/admin/affiliate_detail.php:502 ../source/Pages/AffiliatesHome.php:32
 msgid "Overview"
@@ -369,7 +370,7 @@ msgstr "Overzicht"
 
 #: ../html/admin/affiliate_detail.php:503
 msgid "Account Finances"
-msgstr "Rekening Financiën"
+msgstr "Account saldo"
 
 #: ../html/admin/affiliate_detail.php:504
 msgid "Information"
@@ -383,7 +384,7 @@ msgstr "Affiliate Links"
 #: ../html/admin/affiliate_detail.php:589 ../html/affiliate_cp_home.php:39
 #: ../html/affiliate_cp_home.php:73 ../source/Pages/AffiliatesHome.php:40
 msgid "Impressions"
-msgstr ""
+msgstr "Impressies"
 
 #: ../html/admin/affiliate_detail.php:516
 msgid "Approve"
@@ -391,7 +392,7 @@ msgstr "Goedkeuren"
 
 #: ../html/admin/affiliate_detail.php:517
 msgid "Decline"
-msgstr "Daling van de"
+msgstr "Weigeren"
 
 #: ../html/admin/affiliate_detail.php:519
 #: ../html/admin/creatives_detail.php:212
@@ -404,11 +405,11 @@ msgstr "Deactiveren"
 
 #: ../html/admin/affiliate_detail.php:523
 msgid "Unblock"
-msgstr "Blokkering opheffen"
+msgstr "Deblokkeren"
 
 #: ../html/admin/affiliate_detail.php:525
 msgid "Block"
-msgstr "Blok"
+msgstr "Blokkeren"
 
 #: ../html/admin/affiliate_detail.php:531
 #: ../html/admin/creative_update_form.php:131
@@ -423,11 +424,11 @@ msgstr "Datum toegepast"
 
 #: ../html/admin/affiliate_detail.php:536
 msgid "Affiliate Status"
-msgstr "Status van het filiaal"
+msgstr "Affiliate Status"
 
 #: ../html/admin/affiliate_detail.php:539
 msgid "Account Standing"
-msgstr "Rekening staande"
+msgstr "Openstaand saldo"
 
 #: ../html/admin/affiliate_detail.php:563
 #: ../html/affiliate_cp_payment_details_form.php:69
@@ -438,11 +439,11 @@ msgstr "Betalingsgegevens"
 
 #: ../html/admin/affiliate_detail.php:568
 msgid "Bounty Amount"
-msgstr "Bounty bedrag"
+msgstr "Vergoeding"
 
 #: ../html/admin/affiliate_detail.php:570
 msgid "Payment Method"
-msgstr "Betalingsmethode"
+msgstr "Betaalmethode"
 
 #: ../html/admin/affiliate_detail.php:572
 msgid "Paypal E-Mail"
@@ -450,19 +451,19 @@ msgstr "PayPal e-mail"
 
 #: ../html/admin/affiliate_detail.php:574
 msgid "Make Check Out To"
-msgstr "Check uit te maken"
+msgstr "Check opmaken aan"
 
 #: ../html/admin/affiliate_detail.php:584
 msgid "Statistics"
-msgstr ""
+msgstr "Statistieken"
 
 #: ../html/admin/affiliate_detail.php:591
 msgid "Visits"
-msgstr ""
+msgstr "Bezoeken"
 
 #: ../html/admin/affiliate_detail.php:592
 msgid "Purchases"
-msgstr ""
+msgstr "Aankopen"
 
 #: ../html/admin/affiliate_detail.php:603
 msgid "Balance:"
@@ -470,7 +471,7 @@ msgstr "Saldo:"
 
 #: ../html/admin/affiliate_detail.php:606
 msgid "Earnings:"
-msgstr "Inkomsten:"
+msgstr "Verdiensten:"
 
 #: ../html/admin/affiliate_detail.php:607
 msgid "Payments:"
@@ -482,17 +483,17 @@ msgstr "Aanpassingen:"
 
 #: ../html/admin/affiliate_detail.php:612
 msgid "Apply Payout"
-msgstr "Uitbetaling van toepassing"
+msgstr "Uitbetalen"
 
 #: ../html/admin/affiliate_detail.php:613
 msgid "Apply Manual Adjustment"
-msgstr "Handmatige aanpassing toepassen"
+msgstr "Handmatige aanpassen"
 
 #: ../html/admin/affiliate_detail.php:625
 #: ../html/admin/creative_update_form.php:108
 #: ../html/admin/creative_update_success.php:4 ../html/impressions_table.php:8
 msgid "Creative"
-msgstr "Creatieve"
+msgstr "Advertentie"
 
 #: ../html/admin/affiliate_detail.php:626
 #: ../html/admin/creative_update_form.php:155
@@ -506,11 +507,11 @@ msgstr "Type"
 
 #: ../html/admin/affiliate_detail.php:627
 msgid "Link"
-msgstr "Koppeling"
+msgstr "\\link"
 
 #: ../html/admin/affiliate_management_home.php:2
 msgid "Affiliate Management Control Panel"
-msgstr "Affiliate beheerscontrolebord"
+msgstr "Affiliate Management Paneel"
 
 #: ../html/admin/affiliate_new.php:3 ../html/admin/affiliate_new_success.php:2
 #: ../source/Plugin.php:89 ../source/Plugin.php:90
@@ -526,20 +527,20 @@ msgid ""
 "automatically be approved, but will still have to log in to agree to the "
 "terms &amp; conditions and set their preferred payment method."
 msgstr ""
-"Als een Affiliate Manager, als je wilt maken van een affiliate account in "
-"plaats van leiding iemand aan het normale registratieformulier, kunt u dat "
-"hier doen. Zodra u de vereiste contactinformatie invullen, ontvangt uw "
-"nieuwe affiliate een e-mail met hun gebruikersnaam en wachtwoord. Ze zal "
-"automatisch worden goedgekeurd, maar zal nog steeds in te loggen op ga "
-"akkoord met de terms &amp; conditions en stel de gewenste betaalmethode."
+"Indien u een affiliatie account wilt aanmaken in plaats van iemand door te "
+"sturen naar het standaard aanmeldformulier, kunt u dat hier doen. Wanneer "
+"het volledige formulier is ingevoerd zal de nieuwe affiliate een e-mail "
+"ontvangen met gebruikersnaam en wachtwoord. Het account wordt automatisch "
+"goedgekeurd, maar zal wel nog akkoord moeten gaan met de algemene "
+"voorwaarden en de uitbetaal methode moeten instellen bij de eerste login."
 
 #: ../html/admin/affiliate_new_success.php:3
 msgid "New Affiliate has been created"
-msgstr "Nieuwe Affiliate is gemaakt"
+msgstr "Nieuwe Affiliate is aangemaakt"
 
 #: ../html/admin/affiliates_list.php:5 ../source/Plugin.php:84
 msgid "My Affiliates"
-msgstr "Mijn filialen"
+msgstr "Mijn Affiliates"
 
 #: ../html/admin/affiliates_list.php:8
 msgid "All Active"
@@ -547,7 +548,7 @@ msgstr "Alle actieve"
 
 #: ../html/admin/affiliates_list.php:9
 msgid "All (Including Closed)"
-msgstr "Alle (inclusief gesloten)"
+msgstr "Alle (inclusief inactief)"
 
 #: ../html/admin/affiliates_list.php:10
 #: ../source/Pages/Admin/MyCreativesPage.php:58
@@ -571,7 +572,7 @@ msgstr "Bevestigd"
 
 #: ../html/admin/affiliates_list.php:14 ../source/display_functions.php:162
 msgid "Declined"
-msgstr "Daalde"
+msgstr "Geweigerd"
 
 #: ../html/admin/affiliates_list.php:15 ../source/display_functions.php:172
 msgid "Blocked"
@@ -592,13 +593,12 @@ msgid ""
 "image for this creative link. However, the old image will still remain in "
 "the media library for future use."
 msgstr ""
-"Deze lijst bevat beelden van de mediabibliotheek. Als u een nieuwe "
-"afbeelding uploaden wordt toegevoegd aan de mediabibliotheek en kunt u "
-"afbeeldingen op meerdere advertenties opnieuw te gebruiken door deze te "
-"selecteren uit de lijst. Als een nieuwe image-bestand wordt toegevoegd, "
-"worden geüpload en overschrijft de momenteel geselecteerde media bibliotheek "
-"afbeelding voor deze creatieve link. Het oude beeld blijft echter nog steeds "
-"in de mediabibliotheek voor toekomstig gebruik."
+"Deze lijst bevat afbeeldingen van de media bibliotheek. Wanneer u een nieuwe "
+"afbeelding upload wordt deze toegevoegd aan de media bibliotheek. U kunt een "
+"of meerdere afbeeldingen gebruiker door ze te selecteren in de lijst. "
+"Wanneer een nieuwe afbeelding is toegevoegd zal deze de huidige "
+"geselecteerde afbeelding overschrijven. De overschreven afbeelding blijft "
+"wel altijd beschikbaar in de mediabibliotheek."
 
 #: ../html/admin/creative_update_form.php:108
 #: ../html/admin/creative_update_success.php:4
@@ -622,19 +622,19 @@ msgstr "Naam"
 #: ../html/admin/creative_update_form.php:148
 #: ../html/admin/creatives_detail.php:259
 msgid "Landing Page"
-msgstr "Landing Page"
+msgstr "Landingspagina"
 
 #: ../html/admin/creative_update_form.php:175
 msgid "Image Parameters"
-msgstr "Parameters van afbeelding"
+msgstr "Afbeelding parameters"
 
 #: ../html/admin/creative_update_form.php:181
 msgid "New Image File"
-msgstr "Nieuwe Image-bestand"
+msgstr "Nieuw bestand"
 
 #: ../html/admin/creative_update_form.php:192
 msgid "Image File from Media Library"
-msgstr "Image-bestand uit de mediabibliotheek"
+msgstr "Afbeelding uit de mediabibliotheek"
 
 #: ../html/admin/creative_update_form.php:202
 msgid "Preview:"
@@ -651,29 +651,29 @@ msgstr "ALT-tekst"
 
 #: ../html/admin/creative_update_form.php:229
 msgid "Text Link Parameters"
-msgstr "Tekst Link Parameters"
+msgstr "Text link parameters"
 
 #: ../html/admin/creative_update_form.php:237
 #: ../html/admin/creatives_detail.php:276
 #: ../html/affiliate_creative_detail.php:61
 msgid "Link Text"
-msgstr "Koppelingstekst"
+msgstr "Link tekst"
 
 #: ../html/admin/creative_update_form.php:261
 msgid "Save Creative"
-msgstr "Creative opslaan"
+msgstr "Advertentie opslaan"
 
 #: ../html/admin/creative_update_success.php:9
 msgid "Creative updated."
-msgstr "Creative bijgewerkt."
+msgstr "Advertentie is geupdate."
 
 #: ../html/admin/creative_update_success.php:11
 msgid "New creative created.  This creative is not yet active."
-msgstr "Nieuwe creatieve gemaakt. Deze creatieve nog niet actief is."
+msgstr "Nieuwe advertentie aangemaakt, deze is nog niet actief."
 
 #: ../html/admin/creative_update_success.php:16
 msgid "Return to Creatives"
-msgstr "Terug naar creatieven"
+msgstr "Terugkeren naar advertenties"
 
 #: ../html/admin/creatives_detail.php:8 ../html/admin/creatives_detail.php:297
 #: ../html/affiliate_creative_detail.php:82
@@ -686,7 +686,7 @@ msgstr "Tekstlink"
 
 #: ../html/admin/creatives_detail.php:10
 msgid "Unknown creative type."
-msgstr "Onbekende creatieve type."
+msgstr "Onbekende advertentie type."
 
 #: ../html/admin/creatives_detail.php:143
 msgid "ACTIVATE"
@@ -702,7 +702,7 @@ msgstr "Weet u zeker dat u wilt"
 
 #: ../html/admin/creatives_detail.php:167
 msgid "this creative?"
-msgstr "Dit creatieve?"
+msgstr "deze advertentie?"
 
 #: ../html/admin/creatives_detail.php:174
 #: ../html/admin/creatives_detail.php:215
@@ -714,7 +714,7 @@ msgstr "Voorbeeld"
 #: ../html/admin/creatives_detail.php:194
 #: ../html/affiliate_creative_detail.php:43
 msgid "Creative:"
-msgstr "Creatieve:"
+msgstr "Advertentie:"
 
 #: ../html/admin/creatives_detail.php:206
 #: ../html/admin/manage_creatives.php:163
@@ -736,7 +736,7 @@ msgstr "ID"
 #: ../html/admin/creatives_detail.php:271
 #: ../html/affiliate_creative_detail.php:56
 msgid "Text Link Properties"
-msgstr "Tekst Link-eigenschappen"
+msgstr "Tekstlink eigenschappen"
 
 #: ../html/admin/creatives_detail.php:292
 #: ../html/affiliate_creative_detail.php:77
@@ -745,23 +745,23 @@ msgstr "Afbeeldingseigenschappen"
 
 #: ../html/admin/manage_creatives.php:64
 msgid "Yes, delete this creative"
-msgstr "Ja, deze creatieve verwijderen"
+msgstr "Ja, deze advertentie verwijderen"
 
 #: ../html/admin/manage_creatives.php:113
 msgid "Updating, please wait ..."
-msgstr "Bijwerken, even geduld..."
+msgstr "Wordt geupdate, even geduld aub…"
 
 #: ../html/admin/manage_creatives.php:120
 msgid "Delete Creative?"
-msgstr "Creative verwijderen?"
+msgstr "Advertentie verwijderen?"
 
 #: ../html/admin/manage_creatives.php:121
 msgid "This creative will be deleted. Are you sure?"
-msgstr "Deze creatieve worden verwijderd. Weet je het zeker?"
+msgstr "Deze advertentie wordt verwijderd. Weet u het zeker?"
 
 #: ../html/admin/manage_creatives.php:126 ../source/Plugin.php:96
 msgid "My Creatives"
-msgstr "Mijn advertenties"
+msgstr "Mijn Advertenties"
 
 #: ../html/admin/manage_creatives.php:132
 msgid "Filter"
@@ -769,7 +769,7 @@ msgstr "Filter"
 
 #: ../html/admin/manage_creatives.php:137
 msgid "Status:"
-msgstr "Statuut:"
+msgstr "Status:"
 
 #: ../html/admin/manage_creatives.php:155
 msgid "Create New"
@@ -777,7 +777,7 @@ msgstr "Nieuwe maken"
 
 #: ../html/admin/manage_creatives.php:166
 msgid "Created"
-msgstr "Gemaakt"
+msgstr "Aangemaakt"
 
 #: ../html/admin/manage_creatives.php:177
 msgid "Delete"
@@ -785,11 +785,11 @@ msgstr "Verwijderen"
 
 #: ../html/admin/paypalpayments/home.php:17
 msgid "New Mass Payment"
-msgstr ""
+msgstr "Nieuwe bulkbetaling"
 
 #: ../html/admin/paypalpayments/home.php:20
 msgid "View Previous Mass Payments"
-msgstr ""
+msgstr "Vorige bulkbetalingen bekijken"
 
 #: ../html/admin/paypalpayments/not_configured.php:2
 #: ../html/admin/paypalpayments/pending_payments.php:3
@@ -798,7 +798,7 @@ msgstr ""
 #: ../html/admin/paypalpayments/view_payment_detail.php:7
 #: ../source/Plugin.php:101 ../source/Plugin.php:102
 msgid "PayPal Mass Pay"
-msgstr "PayPal massa Pay"
+msgstr "PayPal bulkbetaling"
 
 #: ../html/admin/paypalpayments/not_configured.php:3
 msgid "Not configured"
@@ -810,47 +810,46 @@ msgid ""
 "You have not configured the Affiliate Manager with your PayPal account "
 "information. You can do so in the <a href=\"%s\">Payment Settings page</a>."
 msgstr ""
-"U hebt niet de Manager van het filiaal geconfigureerd met de gegevens van uw "
-"PayPal-account. U kunt dit doen op de <a href=\"%s\"> pagina betaling "
-"instellingen</a>."
+"U heeft uw PayPal account informatie niet ingesteld in de Affiliate Manager. "
+"U kunt dit doen op de <a href=“%s”>Betaal Instellingen pagina</a>."
 
 #: ../html/admin/paypalpayments/pending_payments.php:4
 msgid "View Existing Payments"
-msgstr ""
+msgstr "Bestaande betalingen bekijken"
 
 #: ../html/admin/paypalpayments/pending_payments.php:11
 msgid "Date Posted"
-msgstr ""
+msgstr "Datum toegevoegd"
 
 #: ../html/admin/paypalpayments/pending_payments.php:12
 msgid "PayPal ID"
-msgstr ""
+msgstr "Paypal ID"
 
 #: ../html/admin/paypalpayments/pending_payments.php:14
 #: ../html/admin/paypalpayments/view_payment_detail.php:21
 msgid "Fee"
-msgstr ""
+msgstr "Fee"
 
 #: ../html/admin/paypalpayments/pending_payments.php:15
 msgid "Total"
-msgstr ""
+msgstr "Totaal"
 
 #: ../html/admin/paypalpayments/pending_payments.php:36
 msgid "(No Mass Payments on Record)"
-msgstr ""
+msgstr "(Geen geregistreerde bulkbetalingen)"
 
 #: ../html/admin/paypalpayments/reconcile_file_review.php:66
 #: ../html/admin/paypalpayments/reconcile_manual.php:81
 msgid "Reconcile Mass Payment"
-msgstr ""
+msgstr "Combineer bulkbetaling"
 
 #: ../html/admin/paypalpayments/reconcile_with_file.php:54
 msgid "Reconcile with this file"
-msgstr ""
+msgstr "Combineer met deze file"
 
 #: ../html/admin/paypalpayments/review_affiliates.php:10
 msgid "Yes, Submit to PayPal"
-msgstr "Ja, dienen naar PayPal"
+msgstr "Ja, versturen naar PayPal"
 
 #: ../html/admin/paypalpayments/review_affiliates.php:17
 msgid "No, Cancel"
@@ -858,20 +857,20 @@ msgstr "Nee, annuleren"
 
 #: ../html/admin/paypalpayments/review_affiliates.php:39
 msgid "Submit to PayPal?"
-msgstr "Verzenden naar PayPal?"
+msgstr "Vesrturen naar PayPal?"
 
 #: ../html/admin/paypalpayments/review_affiliates.php:40
 msgid "Are you sure you wish to submit a mass payment to PayPal?"
-msgstr "Weet u zeker dat u wenst in te dienen een massale betaling van PayPal?"
+msgstr "Weet u zeker dat u een bulkbetaling wilt versturen naar payPal?"
 
 #: ../html/admin/paypalpayments/review_affiliates.php:41
 #, php-format
 msgid "Your PayPal account will be charged %s!"
-msgstr "Uw PayPal-account in rekening gebracht %s!"
+msgstr "Op uw PayPal account zal %s In rekening worden gebracht!"
 
 #: ../html/admin/paypalpayments/review_affiliates.php:46
 msgid "Review Your Mass Payment"
-msgstr "Uw massa betaling bekijken"
+msgstr "Beoordeel uw bulkbetaling"
 
 #: ../html/admin/paypalpayments/review_affiliates.php:53
 #: ../html/admin/paypalpayments/select_affiliates.php:124
@@ -891,7 +890,7 @@ msgstr "Betaling"
 
 #: ../html/admin/paypalpayments/review_affiliates.php:62
 msgid "New Balance"
-msgstr "Nieuw evenwicht"
+msgstr "Nieuw saldo"
 
 #: ../html/admin/paypalpayments/review_affiliates.php:93
 msgid "Sub-Total"
@@ -902,7 +901,7 @@ msgstr "Subtotaal"
 #, php-format
 msgid "PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>"
 msgstr ""
-"PayPal vergoeding <br /> <small>2 %% max %s1 per betaling per betaling,</"
+"PayPal kosten <br /> <small>2 %% per betaling, maximaal %s1 per betaling</"
 "small>"
 
 #: ../html/admin/paypalpayments/review_affiliates.php:102
@@ -912,18 +911,16 @@ msgstr "Geschatte totaal"
 
 #: ../html/admin/paypalpayments/review_affiliates.php:106
 msgid "Submit Mass Payment to PayPal"
-msgstr "Massa van de betaling aan PayPal"
+msgstr "Verstuur bulkbetaling aan PayPal"
 
 #: ../html/admin/paypalpayments/select_affiliates.php:103
 msgid "Select Affiliates to Pay"
-msgstr "Selecteer filialen te betalen"
+msgstr "Selecteer een affiliate om te betalen"
 
 #: ../html/admin/paypalpayments/select_affiliates.php:106
 #, php-format
 msgid "Not showing %s affiliates that do not have a PayPal account on file."
-msgstr ""
-"%s filialen die nog geen PayPal-rekening in het bestand niet wordt "
-"weergegeven."
+msgstr "%s affiliate zonder PayPal account worden niet weergegeven."
 
 #: ../html/admin/paypalpayments/select_affiliates.php:110
 #: ../html/transaction_table.php:27
@@ -932,58 +929,58 @@ msgstr "Datumbereik:"
 
 #: ../html/admin/paypalpayments/select_affiliates.php:111
 msgid "from"
-msgstr "Van"
+msgstr "van"
 
 #: ../html/admin/paypalpayments/select_affiliates.php:113
 msgid "to"
-msgstr "Aan"
+msgstr "aan"
 
 #: ../html/admin/paypalpayments/select_affiliates.php:116
 #: ../html/transaction_table.php:36
 msgid "Clear"
-msgstr "Duidelijk"
+msgstr "Wissen"
 
 #: ../html/admin/paypalpayments/select_affiliates.php:130
 msgid "Payment Amount"
-msgstr "Betalingsbedrag"
+msgstr "Totaalbedrag"
 
 #: ../html/admin/paypalpayments/select_affiliates.php:185
 msgid "Continue with these payments"
-msgstr "Ga verder met deze betalingen"
+msgstr "Doorgaan met deze betalingen"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:8
 msgid "Payment Detail"
-msgstr ""
+msgstr "Betalingsgegevens"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:16
 msgid "Database ID"
-msgstr ""
+msgstr "Database ID"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:17
 #: ../html/admin/paypalpayments/view_payment_detail.php:58
 #: ../html/impressions_table.php:7 ../html/transaction_table.php:46
 msgid "Date Occurred"
-msgstr "Datum is opgetreden"
+msgstr "Aanmaak datum"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:18
 msgid "PayPal Timestamp"
-msgstr ""
+msgstr "PayPal Timestamp"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:19
 msgid "PayPal Correlation ID"
-msgstr ""
+msgstr "PayPal Correlation ID"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:22
 msgid "Total Amount"
-msgstr ""
+msgstr "Totaal bedrag"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:26
 msgid "Reconciliation"
-msgstr ""
+msgstr "Combinatie"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:29
 msgid "Manually reconcile payments ... "
-msgstr ""
+msgstr "Manueel betaling combineren … "
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:30
 msgid "Reconcile using PayPal Mass Payment results file ... "
@@ -991,56 +988,56 @@ msgstr ""
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:37
 msgid "Errors"
-msgstr ""
+msgstr "Fouten"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:40
 msgid "Code:"
-msgstr ""
+msgstr "Code:"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:41
 msgid "Message:"
-msgstr ""
+msgstr "Bericht:"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:42
 msgid "Severity:"
-msgstr ""
+msgstr "Ernst:"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:52
 msgid "Associated Transactions"
-msgstr ""
+msgstr "Gekoppelde Transacties"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:59
 msgid "Affiliate"
-msgstr ""
+msgstr "Affiliate"
 
 #: ../html/admin/paypalpayments/view_payment_detail.php:62
 #: ../html/transaction_table.php:48
 msgid "Description"
-msgstr "Beschrijving"
+msgstr "Omschrijving"
 
 #: ../html/admin/settings/settings.php:47
 msgid "Affiliate Registration"
-msgstr ""
+msgstr "Affiliate Registratie"
 
 #: ../html/admin/settings/settings.php:48
 msgid "Messaging"
-msgstr ""
+msgstr "Berichten versturen"
 
 #: ../html/admin/settings/settings.php:50
 msgid "Pages/Forms"
-msgstr ""
+msgstr "Pagina’s/Formulieren"
 
 #: ../html/admin/settings/settings.php:51
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Uitgebreide instellingen"
 
 #: ../html/admin/settings/settings.php:122
 msgid "Save Settings"
-msgstr ""
+msgstr "Instellingen opslaan"
 
 #: ../html/admin/settings/settings_advanced.php:8
 msgid "Default Landing Page"
-msgstr ""
+msgstr "Standaard landingspagina"
 
 #: ../html/admin/settings/settings_advanced.php:13
 #, php-format
@@ -1048,109 +1045,114 @@ msgid ""
 "Your default landing page URL is <code>%s</code>. If you want to change to a "
 "different URL you can specify it here."
 msgstr ""
+"Uw standaard landingspagina URL is <code>%s</code>. Indien u deze wilt "
+"wijzigen naar een andere link kan dat hier."
 
 #: ../html/admin/settings/settings_aff_pages.php:5
 msgid "Home Page"
-msgstr ""
+msgstr "Home pagina"
 
 #: ../html/admin/settings/settings_aff_pages.php:10
 msgid "This is the URL of your Affiliate Home page"
-msgstr ""
+msgstr "Dit is de link van uw Affiliate home pagina"
 
 #: ../html/admin/settings/settings_aff_pages.php:16
 msgid "Registration Page"
-msgstr ""
+msgstr "Registratie Pagina"
 
 #: ../html/admin/settings/settings_aff_pages.php:21
 msgid "This is the URL of your Affiliate Registration page"
-msgstr ""
+msgstr "Dit is de link van de Affiliate registratie pagina"
 
 #: ../html/admin/settings/settings_aff_pages.php:27
 msgid "Login Page"
-msgstr ""
+msgstr "Inlog pagina"
 
 #: ../html/admin/settings/settings_aff_pages.php:32
 msgid "This is the URL of your Affiliate Login page"
-msgstr ""
+msgstr "Dit is de link van uw Affiliate login pagina"
 
 #: ../html/admin/settings/settings_general.php:103
 msgid "Minimum Payout Amount"
-msgstr ""
+msgstr "Minimale uitbetaalbedrag"
 
 #: ../html/admin/settings/settings_general.php:112
 msgid "Cookie Duration (days)"
-msgstr ""
+msgstr "Cookie duur (dagen)"
 
 #: ../html/admin/settings/settings_general.php:117
 #, php-format
 msgid "<a target=\"_blank\" href=\"%s\">Read more on cookie duration here</a>"
-msgstr ""
+msgstr "<a target=“_blank” href=“%s”>Lees hier meer over de cookie duur</a>"
 
 #: ../html/admin/settings/settings_general.php:122
 msgid "Email name"
-msgstr ""
+msgstr "E-mail naam"
 
 #: ../html/admin/settings/settings_general.php:127
 #: ../html/admin/settings/settings_general.php:137
 msgid "(Leave blank to use WordPress default)"
-msgstr ""
+msgstr "(Laat leeg om de standaard van Wordpress te gebruiken)"
 
 #: ../html/admin/settings/settings_general.php:132
 msgid "Email address"
-msgstr ""
+msgstr "E-mailadres"
 
 #: ../html/admin/settings/settings_general.php:144
 msgid "Automatically approve a new affiliate"
-msgstr ""
+msgstr "Keur nieuwe affiliaties automatisch goed"
 
 #: ../html/admin/settings/settings_general.php:178
 msgid "Currency Symbol"
-msgstr ""
+msgstr "Valuta Symbool"
 
 #: ../html/admin/settings/settings_general.php:187
 msgid "Currency Code"
-msgstr ""
+msgstr "Valuta code"
 
 #: ../html/admin/settings/settings_general.php:197
 msgid "Do Not Record Zero Amount Commission"
-msgstr ""
+msgstr "Sla commissie nulwaarden niet op"
 
 #: ../html/admin/settings/settings_general.php:210
 msgid "Enable Impressions"
-msgstr ""
+msgstr "Impressies activeren"
 
 #: ../html/admin/settings/settings_general.php:219
 msgid "Enable Debug"
-msgstr ""
+msgstr "Debug activeren"
 
 #: ../html/admin/settings/settings_general.php:222
 msgid ""
 "If checked, debug output will be written to log files. This is useful for "
 "troubleshooting post payment failures."
 msgstr ""
+"Wanneer aangevinkt zal de debug output worden opgeslagen in de log file. Dit "
+"is handig voor het oplossen van mislukte betalingen."
 
 #: ../html/admin/settings/settings_general.php:223
 msgid ""
 "You can check the debug log file by clicking on the link below (The log file "
 "can be viewed using any text editor):"
 msgstr ""
+"U kunt de debug logs bekijken door op de onderstaande link te klikken. (De "
+"bestanden kunnen met elke editor bekeken worden)"
 
 #: ../html/admin/settings/settings_general.php:227
 msgid "Reset Debug Log file"
-msgstr ""
+msgstr "Debug logs resetten"
 
 #: ../html/admin/settings/settings_general.php:228
 msgid "Use it to reset the affiliate manager plugin's log file."
-msgstr ""
+msgstr "Gebruik dit om de affiliate manager login files te wissen."
 
 #: ../html/admin/settings/settings_messaging.php:66
 msgid ""
 "These settings allow you to control text that is displayed to affiliates at "
 "various points in the affiliate plug-in, as well as e-mails that are sent."
 msgstr ""
-"Met deze instellingen kunt u aan het besturingselement tekst die wordt "
-"weergegeven aan filialen op verschillende punten in de affiliate plug-in, "
-"evenals e-mailberichten die worden verzonden."
+"Deze instellingen laten u de tekst beheren welke op meerdere plaatsen word "
+"getoond en welke in de e-mails staat vermeld van de affiliaties."
 
 #: ../html/admin/settings/settings_messaging.php:71
 msgid "Use:"
@@ -1162,7 +1164,7 @@ msgstr "Inhoud:"
 
 #: ../html/admin/settings/settings_messaging.php:87
 msgid "Use"
-msgstr " Gebruik"
+msgstr "Gebruik"
 
 #: ../html/admin/settings/settings_messaging.php:88
 msgid "Content"
@@ -1171,15 +1173,15 @@ msgstr "Inhoud"
 #: ../html/admin/settings/settings_messaging.php:118
 #, php-format
 msgid "%s(More)"
-msgstr "%s(more)"
+msgstr "%s(meer)"
 
 #: ../html/admin/settings/settings_messaging.php:125
 msgid ""
 "* Some messages have been modified. These will <strong>NOT</strong> be saved "
 "to the database until you click 'Save Settings' button below."
 msgstr ""
-"* Sommige berichten zijn gewijzigd. Deze zullen <strong>niet</strong> worden "
-"opgeslagen in de database totdat u klikt op 'Instellingen opslaan' knop "
+"* Sommige berichten zijn gewijzigd. Deze zullen <strong>NIEt</strong> worden "
+"opgeslagen in de database totdat u klikt op de ‘Instellingen opslaan' knop "
 "hieronder."
 
 #: ../html/admin/settings/settings_payment.php:16
@@ -1188,19 +1190,20 @@ msgid ""
 "PayPal Mass Pay:"
 msgstr ""
 "Op zoek naar hulp? Check out de gebundelde stapsgewijze gids voor het "
-"opzetten van PayPal massa betalen:"
+"opzetten van PayPal bulkbetalingen:"
 
 #: ../html/admin/settings/settings_payment.php:20
 #, php-format
 msgid "<a href=\"%s\" target=\"_blank\">How to Setup PayPal Mass Pay</a> (PDF)"
 msgstr ""
+"<a href=“%s” target=“_blank”>Hoe zet u PayPal bulkbetalingen op</a> (PDF)"
 
 #: ../html/admin/settings/settings_payment.php:29
 msgid ""
 "Enable PayPal Mass Pay &#0153;<br /><small>NOTE: Requires a PayPal Premier "
 "or PayPal Business account</small>"
 msgstr ""
-"Inschakelen PayPal massa betalen &#0153; <br /> <small>Opmerking: vereist "
+"Inschakelen PayPal bulkbetalingen &#0153; <br /> <small>Opmerking: vereist "
 "een PayPal Premier of Business PayPal-account</small>"
 
 #: ../html/admin/settings/settings_payment.php:32
@@ -1225,7 +1228,7 @@ msgstr "API-eindpunt"
 
 #: ../html/admin/settings/settings_payment.php:47
 msgid "WARNING: Set to LIVE if you don't know what this is for!"
-msgstr "Waarschuwing: Stel op LIVE als u niet wat dit is weet voor!"
+msgstr "Waarschuwing: Stel in op LIVE als u niet weet waar dit voor is!"
 
 #: ../html/admin/settings/settings_payment.php:50
 #, php-format
@@ -1235,7 +1238,7 @@ msgstr "Live (%s)"
 #: ../html/admin/settings/settings_payment.php:51
 #, php-format
 msgid "Sandbox - TESTING (%s)"
-msgstr "Sandbox - testen (%s)"
+msgstr "Sandbox - TESTEN (%s)"
 
 #: ../html/admin/settings/settings_registration.php:218
 msgid "Display name is required."
@@ -1249,15 +1252,17 @@ msgstr "Naam veld is vereist."
 msgid ""
 "Field name may only contains letters, numbers, underscores and hyphens, and "
 "must begin with a letter."
-msgstr "Naam veld is vereist."
+msgstr ""
+"Naam veld moet beginnen met een letter en mag alleen letters, cijfers, "
+"onderscores en koppeltekens bevatten."
 
 #: ../html/admin/settings/settings_registration.php:235
 msgid "This field name is already in use."
-msgstr "Deze veldnaam is al in gebruik."
+msgstr "Dit naamveld is al in gebruik.."
 
 #: ../html/admin/settings/settings_registration.php:247
 msgid "Field length must be an non-0 positive number."
-msgstr "Veldlengte moet een positief getal van niet-0."
+msgstr "Het veld mag niet leeg zijn."
 
 #: ../html/admin/settings/settings_registration.php:361
 msgid "Custom Field"
@@ -1312,7 +1317,7 @@ msgstr "Sofi-nummer (VS)"
 #: ../html/admin/settings/settings_registration.php:399
 #: ../html/admin/settings/settings_registration.php:444
 msgid "Max Length"
-msgstr "Max lengte"
+msgstr "Max. lengte"
 
 #: ../html/admin/settings/settings_registration.php:412
 msgid "Available Payout Methods"
@@ -1331,11 +1336,11 @@ msgstr "PayPal"
 #: ../html/admin/settings/settings_registration.php:426
 #: ../source/Data/Models/AffiliateModel.php:178
 msgid "Manual"
-msgstr ""
+msgstr "Manueel"
 
 #: ../html/admin/settings/settings_registration.php:431
 msgid "Affiliate Register Fields"
-msgstr "Affiliate Register velden"
+msgstr "Affiliate registratie velden"
 
 #: ../html/admin/settings/settings_registration.php:434
 msgid "Add Custom Field"
@@ -1356,11 +1361,11 @@ msgstr "Vereist"
 #: ../html/admin/settings/settings_registration.php:456
 #: ../html/affiliate_register_form.php:70
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Algemene Voorwaarden"
 
 #: ../html/admin/settings/settings_registration.php:465
 msgid "Affiliates Homepage Message"
-msgstr ""
+msgstr "Affiliate homepagina bericht"
 
 #: ../html/affiliate_approved.php:1
 #, php-format
@@ -1368,16 +1373,16 @@ msgid ""
 "Your application was approved.  Please go to the <a href=\"%s\">affiliate "
 "control panel</a> to get started."
 msgstr ""
-"Uw aanvraag is goedgekeurd. Ga naar het <a href=\"%s\"> Configuratiescherm "
-"van het filiaal</a> aan de slag."
+"Uw aanvraag is goedgekeurd. Ga naar het <a href=\"%s\"> affiliate controle "
+"paneel </a> om te starten."
 
 #: ../html/affiliate_cp_agree_terms.php:3
 msgid "Affiliate Confirmation"
-msgstr "Bevestiging partner"
+msgstr "Affiliate bevestiging"
 
 #: ../html/affiliate_cp_agree_terms.php:5
 msgid "Contract Terms"
-msgstr "Bedingen in overeenkomsten"
+msgstr "Overeenkomst voorwaarden"
 
 #: ../html/affiliate_cp_agree_terms.php:12 ../html/affiliate_cp_home.php:20
 msgid "Commission Rate"
@@ -1385,15 +1390,15 @@ msgstr "Commissie tarief"
 
 #: ../html/affiliate_cp_agree_terms.php:21
 msgid "Terms & Conditions"
-msgstr "Voorwaarden & condities"
+msgstr "Algemene voorwaarden"
 
 #: ../html/affiliate_cp_agree_terms.php:27
 msgid "Agree to Terms"
-msgstr "Ga akkoord met voorwaarden"
+msgstr "Affiliate controle paneel"
 
 #: ../html/affiliate_cp_approved.php:3
 msgid "Affiliate Control Panel"
-msgstr "Het filiaal van het Configuratiescherm"
+msgstr "Het Affiliate controle paneel"
 
 #: ../html/affiliate_cp_approved.php:5
 msgid "Welcome!"
@@ -1401,7 +1406,7 @@ msgstr "Welkom!"
 
 #: ../html/affiliate_cp_approved.php:9
 msgid "Review Terms and Get Started!"
-msgstr "Voorwaarden en aan de slag!"
+msgstr "Bekijk de Algemene Voorwaarden en start direct!"
 
 #: ../html/affiliate_cp_home.php:11
 msgid "Account Summary"
@@ -1421,7 +1426,7 @@ msgstr "Gesloten transacties"
 
 #: ../html/affiliate_cp_home.php:52 ../html/affiliate_cp_home.php:86
 msgid "Revenue"
-msgstr "Ontvangsten"
+msgstr "Verdiensten"
 
 #: ../html/affiliate_cp_home.php:63
 msgid "This Month"
@@ -1429,21 +1434,19 @@ msgstr "Deze maand"
 
 #: ../html/affiliate_cp_payment_details_confirmed.php:3
 msgid "Your payment details have been submitted"
-msgstr "Uw betalingsgegevens zijn ingediend"
+msgstr "Uw betaalgegevens zijn verzonden"
 
 #: ../html/affiliate_cp_payment_details_confirmed.php:5
 #, php-format
 msgid ""
 "Now would be a great time to go pick <a href=\"%s\">some creative</a> and "
 "get started."
-msgstr ""
-"Nu zou een geweldige tijd om te gaan halen <a href=\"%s\"> sommige "
-"creatieve</a> en aan de slag."
+msgstr "Kies direct een <a href=\"%s\"> advertentie</a> en ga aan de slag."
 
 #: ../html/affiliate_cp_payment_details_form.php:70
 #: ../html/affiliate_cp_payment_details_simple.php:14
 msgid "Please provide your payment details."
-msgstr "Geef uw betalingsgegevens."
+msgstr "Geef aub uw betaal informatie door."
 
 #: ../html/affiliate_cp_payment_details_form.php:71
 #: ../html/affiliate_cp_payment_details_simple.php:15
@@ -1451,8 +1454,8 @@ msgid ""
 "The following information will be used to disperse payments when your "
 "account reaches the minimum payout amount."
 msgstr ""
-"De volgende informatie zal worden gebruikt om de verspreiding van betalingen "
-"als uw account het minimum uitbetaling bedrag bereikt."
+"De volgende informatie wordt gebruik om de betaling te verzenden wanneer uw "
+"account het uitbetaal limiet heeft bereikt."
 
 #: ../html/affiliate_cp_payment_details_form.php:79
 #: ../html/affiliate_cp_payment_details_simple.php:23
@@ -1479,7 +1482,7 @@ msgstr "Controleer ontvanger"
 
 #: ../html/affiliate_cp_payment_details_form.php:134
 msgid "Mail to Address On Record"
-msgstr "Mail naar adres op Record"
+msgstr "Mail naar het opgeslagen record"
 
 #: ../html/affiliate_cp_payment_details_form.php:143
 #: ../html/affiliate_cp_payment_details_form.php:166
@@ -1514,11 +1517,11 @@ msgstr "Postcode"
 #: ../html/affiliate_cp_payment_details_form.php:216
 #: ../html/affiliate_cp_payment_details_simple.php:99
 msgid "Submit Payment Details"
-msgstr "Betalingsgegevens verzenden"
+msgstr "Betaalgegevens verzenden"
 
 #: ../html/affiliate_cp_payment_details_simple.php:69
 msgid "Check will be mailed to the following address:"
-msgstr "Cheque worden gestuurd naar het volgende adres:"
+msgstr "De check wordt verzonden aan de adressen:"
 
 #: ../html/affiliate_creative_detail.php:47
 msgid "Your Affiliate-Specific HTML snippet"
@@ -1526,7 +1529,7 @@ msgstr "Uw Affiliate-specifieke HTML-fragment"
 
 #: ../html/affiliate_creative_list.php:62
 msgid "Your Affiliate Link Using Affiliate ID"
-msgstr ""
+msgstr "Uw affiliate link met uw affiliate ID"
 
 #: ../html/affiliate_creative_list.php:67
 msgid "The following creatives are available for publication."
@@ -1534,7 +1537,7 @@ msgstr "De volgende advertenties zijn beschikbaar voor publicatie."
 
 #: ../html/affiliate_home.php:1
 msgid "Welcome to the affiliate control panel."
-msgstr "Welkom bij het filiaal control panel."
+msgstr "Welkom bij het affiliate controle paneel."
 
 #: ../html/affiliate_not_logged_in.php:4
 #, php-format
@@ -1542,9 +1545,9 @@ msgid ""
 "This is the affiliates section of this store.  If you are an existing "
 "affiliate, please <a href=\"%s\">log in</a> to access your control panel."
 msgstr ""
-"Dit is het gedeelte van de filialen van deze winkel. Als u een bestaande "
-"affiliate, kunt u <a href=\"%s\"> inloggen</a> om uw Configuratiescherm te "
-"openen."
+"Dit is het affiliate gedeelte van de webwinkel. Indien u een bestaande "
+"affiliate bent kunt u <a href=“%s”>inloggen</a> om toegang te krijgen tot uw "
+"controle paneel."
 
 #: ../html/affiliate_not_logged_in.php:7
 #, php-format
@@ -1554,10 +1557,10 @@ msgid ""
 "an existing account on this blog, please <a href=\"%s\">log in</a>.  If not, "
 "please <a href=\"%s\">register</a>."
 msgstr ""
-"Als u niet een filiaal bent, maar willen worden een, zal u wilt toepassen. "
-"Als u wilt toepassen, moet u een geregistreerde gebruiker op deze blog. Hebt "
-"u een bestaande account op deze blog, kunt u <a href=\"%s\"> inloggen</a>. "
-"Zo niet, gelieve te <a href=\"%s\"> registreren</a>."
+"Als u nog geen affiliate bent kunt u zich registreren. Hiervoor moet u een "
+"geregistreerde gebruiker zijn van deze website. Heeft u al een account? Dan "
+"kunt u hier <a href=“%s”>inloggen</a>. Anders dient u zich hier te <a "
+"href=“%s”>registeren</a>."
 
 #: ../html/affiliate_not_registered.php:1
 #, php-format
@@ -1566,9 +1569,9 @@ msgid ""
 "affiliate of this store.  If you wish to become one, please <a href=\"%s\"/"
 ">apply</a>."
 msgstr ""
-"Dit is het gedeelte filialen van deze winkel. Je bent op dit moment niet een "
-"filiaal van deze winkel. Indien u wenst om een te worden, kunt u <a href=\"%s"
-"\"/> toepassen </a>."
+"Dit is het affiliate gedeelte van de webwinkel. U bent op het moment geen "
+"actieve affiliate. Registeren als affiliate is mogelijk via deze <a "
+"href=“%s”> link</a>."
 
 #: ../html/affiliate_register_form.php:15 ../html/contact_info.php:160
 msgid "* Required fields"
@@ -1579,20 +1582,24 @@ msgid ""
 "This is the email address associated with your currently logged in WordPress "
 "user account."
 msgstr ""
+"Dit is het e-mailadres waarmee u ingelogd bent op uw huidige WordPress "
+"gebruikers account."
 
 #: ../html/affiliate_register_form.php:30
 msgid ""
 "If you want to use a different email address, log out of your WordPress "
 "account then try a new registration."
 msgstr ""
+"Indien u een ander e-mailadres wilt gebruiken dient u uit te loggen en "
+"opnieuw te registeren met het gewenste e-mailadres."
 
 #: ../html/affiliate_register_form.php:70
 msgid "I have read and agree to the"
-msgstr ""
+msgstr "Ik heb de algemene voorwaarden gelezen en ga akkoord"
 
 #: ../html/affiliate_register_form.php:71
 msgid "You must agree to the terms."
-msgstr "U moet akkoord gaan met de voorwaarden."
+msgstr "U moet akkoord gaan met de algemene voorwaarden."
 
 #: ../html/affiliate_register_form.php:82
 msgid "Submit Application"
@@ -1604,18 +1611,18 @@ msgid ""
 "Affiliate Manager login, which may be based on the email address they used "
 "when they signed up."
 msgstr ""
-"De affiliate e-mailadres wijzigen zal niet veranderen hun login WordPress "
-"Affiliate Manager, die kan worden gebaseerd op het e-mailadres dat ze "
-"gebruikt toen zij omhoog ondertekende."
+"Het aanpassen van het affiliate e-mailadres zal geen gevolgen hebben voor "
+"het Wordpress Affiliate Manager inlog, welke gebruikt is bij de registratie "
+"van het account."
 
 #: ../html/contact_info.php:16
 msgid ""
 "Changing your email address will not change your WordPress Affiliate Manager "
 "login, which may be based on the email address you used when you signed up."
 msgstr ""
-"Wijzigen van uw e-mailadres zal niet veranderen uw login WordPress Affiliate "
-"Manager, die kan worden gebaseerd op het e-mailadres dat u gebruikt wanneer "
-"u zich aanmeldde."
+"Het aanpassen van uw e-mailadres zal geen gevolgen hebben voor het Wordpress "
+"Affiliate Manager inlog, welke gebruikt is bij de registratie van het "
+"account."
 
 #: ../html/contact_info.php:26
 msgid "Contact Information"
@@ -1627,22 +1634,22 @@ msgid ""
 "There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s"
 "\">Cancel</a>"
 msgstr ""
-"Er is een wachtende verandering van uw e-mail naar <code>%1$ s</code>. <a "
-"href=\"%2$s\"> Annuleren</a>"
+"Er is een wijziging van uw e-mailadres in behandeling naar <code>%1$ s</"
+"code>. <a href=\"%2$s\"> Annuleren</a>"
 
 #: ../html/contact_info.php:126
 msgid "Bounty Type *"
-msgstr "Bounty Type *"
+msgstr "Verdiensten Type *"
 
 #: ../html/contact_info.php:144
 #, php-format
 msgid "Bounty Rate (%s per Sale) *"
-msgstr "Bounty tarief (%s per verkoop) *"
+msgstr "Verdiensten tarief (%s per verkoop) *"
 
 #: ../html/contact_info.php:144
-#, fuzzy, php-format
+#, php-format
 msgid "Bounty Rate (% of Sale) *"
-msgstr "Bounty percentage (% van verkoop) *"
+msgstr "Commissie percentage (% van verkoop) *"
 
 #: ../html/contact_info.php:162
 msgid "+ Custom fields"
@@ -1655,11 +1662,11 @@ msgstr "Wijzigingen opslaan"
 #: ../html/impressions_table.php:1
 #, php-format
 msgid "Displaying %1$d of %2$d impressions"
-msgstr ""
+msgstr "Weergave %1$d van %2$d impressies"
 
 #: ../html/impressions_table.php:9
 msgid "Referrer"
-msgstr ""
+msgstr "Verwijzer"
 
 #: ../html/impressions_table.php:31 ../html/transaction_table.php:77
 msgid "No records found for the date range selected."
@@ -1675,99 +1682,103 @@ msgstr "Referentie-ID"
 
 #: ../source/Admin-menu/wpam-addons-menu.php:6 ../source/Plugin.php:647
 msgid "Affiliates Manager Add-ons"
-msgstr ""
+msgstr "Affiliate Manager Add-ons"
 
 #: ../source/Admin-menu/wpam-clicks-menu.php:8 ../source/Plugin.php:639
 msgid "Click Tracking"
-msgstr ""
+msgstr "Klik Traceren"
 
 #: ../source/Admin-menu/wpam-clicks-menu.php:11
 msgid "Unique Click Tracking"
-msgstr ""
+msgstr "Unieke klik traceren"
 
 #: ../source/Admin-menu/wpam-clicks-menu.php:34
 msgid "This tab shows unique referrals to your website from your affiliates"
-msgstr ""
+msgstr "Deze tab laat uw unieke referrals zien van uw affiliaties"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:8
 msgid "Affiliate Commissions"
-msgstr ""
+msgstr "Affiliate Commissies"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:11
 msgid "Overall Commissions"
-msgstr ""
+msgstr "Alle Commissies"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:12
 msgid "Manual Commission"
-msgstr ""
+msgstr "Manuele Commissies"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:48
 msgid "This tab shows all affiliate commission data"
-msgstr ""
+msgstr "Deze tab laat alle commissie gegevens zien"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:104
 msgid "You need to enter an affiliate ID"
-msgstr ""
+msgstr "U dient een affiliate ID op te geven"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:108
 msgid "You need to enter a numeric commission amount"
-msgstr ""
+msgstr "U dient een numerieke commissie in te geven"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:112
 msgid "You need to enter a numeric purchase amount"
-msgstr ""
+msgstr "U dient een numeriek aankoopbedrag in te geven"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:136
 msgid "A commission with this transaction ID already exists"
-msgstr ""
+msgstr "Een commissie met deze transactie ID bestaat al"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:154
 msgid "Commission added!"
-msgstr ""
+msgstr "Commissie toegevoegd!"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:164
 msgid "This tab allows you to manually award commission to an affiliate."
 msgstr ""
+"Deze tab geeft u de mogelijkheid om manueel commissies toe te kennen aan "
+"affiliates."
 
 #: ../source/Admin-menu/wpam-commission-menu.php:174
 msgid "Enter the affiliate ID. Example: "
-msgstr ""
+msgstr "Geef het affiliate ID op. Voorbeeld: "
 
 #: ../source/Admin-menu/wpam-commission-menu.php:178
 msgid "Commission Amount"
-msgstr ""
+msgstr "Commissie bedrag"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:180
 msgid "Enter the commission amount. Example: "
-msgstr ""
+msgstr "Geef het commissie bedrag op. Voorbeeld: "
 
 #: ../source/Admin-menu/wpam-commission-menu.php:184
 msgid "Purchase Amount"
-msgstr ""
+msgstr "Aankoop bedrag"
 
 #: ../source/Admin-menu/wpam-commission-menu.php:186
 msgid "Enter the purchase amount. Example: "
-msgstr ""
+msgstr "Geef het aankoop bedrag op. Voorbeeld: "
 
 #: ../source/Admin-menu/wpam-commission-menu.php:192
 msgid ""
 "Enter the unique transaction ID (leave empty to generate a unique ID). "
 "Example: "
 msgstr ""
+"Geef het unieke transactie ID op (laat leeg om automatisch een ID aan te "
+"maken). Voorbeeld: "
 
 #: ../source/Admin-menu/wpam-commission-menu.php:198
 msgid "Enter the email address of the buyer (optional)."
-msgstr ""
+msgstr "Geef het e-mailadres van de koper op. (Optioneel)."
 
 #: ../source/Admin-menu/wpam-commission-menu.php:204
 msgid "Enter the date in yyyy-mm-dd format. Example: "
-msgstr ""
+msgstr "Geef de datum op in het formaat yyyy-mm-dd. Voorbeeld: "
 
 #: ../source/Data/GenericRepository.php:31
 #: ../source/Data/GenericRepository.php:76
 #, php-format
 msgid "'model' must be of type '%s'"
-msgstr "'model' moet van het type '%s'"
+msgstr "'model' moet het type '%s' zijn"
 
 #: ../source/Data/Models/AffiliateModel.php:169
 msgid "Percent"
@@ -1775,28 +1786,28 @@ msgstr "Procent"
 
 #: ../source/Data/Models/AffiliateModel.php:171
 msgid "Fixed"
-msgstr "Vaste"
+msgstr "Vast"
 
 #: ../source/Data/Models/ModelMapper.php:34
 #, php-format
 msgid "Model mapping error.  Could not map key %s."
-msgstr "Toewijzing modelfouten. Toets %s kon niet wordt toegewezen."
+msgstr "Modelfout. Kon sleutel %s niet verwerken."
 
 #: ../source/MessageHelper.php:29
 #, php-format
 msgid "Attempt to load invalid message of name '%s'"
-msgstr "Probeert te laden ongeldige bericht van de naam '%s'"
+msgstr "Poging om het ongeldige bericht in te laden met naam ‘%s’"
 
 #: ../source/Options.php:27
 msgid "Invalid PayPal API value"
-msgstr ""
+msgstr "Ongeldig PayPal API waarde"
 
 #: ../source/Pages/Admin/MyAffiliatesPage.php:161
 #: ../source/Pages/Admin/NewAffiliatePage.php:84
 #: ../source/Pages/AffiliatesHome.php:526
 #, php-format
 msgid "Bounty Rate (%s per Sale)"
-msgstr "Bounty tarief (%s per verkoop)"
+msgstr "Commissie tarief (%s per verkoop)"
 
 #: ../source/Pages/Admin/MyCreativesPage.php:57
 msgid "All"
@@ -1807,7 +1818,7 @@ msgstr "Alle"
 #: ../source/Pages/Admin/MyCreativesPage.php:268
 #: ../source/Pages/AffiliatesHome.php:172 ../source/Util/JsonHandler.php:228
 msgid "Invalid creative."
-msgstr "Ongeldige creatief."
+msgstr "Ongeldige advertentie."
 
 #: ../source/Pages/Admin/MyCreativesPage.php:157
 #, php-format
@@ -1816,19 +1827,19 @@ msgstr "Afbeelding Upload Error: %s"
 
 #: ../source/Pages/Admin/MyCreativesPage.php:222
 msgid "Insert failed: Bad creative type."
-msgstr "Invoegen mislukt: Bad creatieve type."
+msgstr "Invoegen mislukt: foutief advertentie type."
 
 #: ../source/Pages/Admin/MyCreativesPage.php:231
 msgid "Creative Updated."
-msgstr "Creative bijgewerkt."
+msgstr "Advertentie bijgewerkt."
 
 #: ../source/Pages/Admin/MyCreativesPage.php:238
 msgid "Creative ... created."
-msgstr "Creative... gemaakt."
+msgstr "Advertentie… gemaakt."
 
 #: ../source/Pages/Admin/MyCreativesPage.php:242
 msgid "Insert failed: invalid creative update mechanism."
-msgstr "Invoegen mislukt: mechanisme voor ongeldig creatieve updates."
+msgstr "Invoegen mislukt: foutief advertentie update mechanisme."
 
 #: ../source/Pages/Admin/NewAffiliatePage.php:73
 msgid "Add Affiliate"
@@ -1836,7 +1847,7 @@ msgstr "Affiliate toevoegen"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:53
 msgid "This results file does not appear to match this payment."
-msgstr "Dit bestand met resultaten lijkt niet te voldoen aan deze betaling."
+msgstr "Dit resultaat bestand hoort niet bij deze betaling."
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:87
 #, php-format
@@ -1844,24 +1855,22 @@ msgid ""
 "Matched a transaction in your results file, but the value was incorrect. "
 "Expected %s but found '%s'"
 msgstr ""
-"Evenementen van een transactie in uw bestand met resultaten, maar de waarde "
-"onjuist was. Verwachte %s maar gevonden '%s'"
+"De transactie is gekoppeld in uw resultaten, maar de waarde was niet "
+"correct. Verwachte %s maar ‘%s’ gevonden"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:95
 msgid ""
 "Could not correlate a transaction from your results file with the "
 "transactions on record."
-msgstr ""
-"Niet kunnen een transactie uit uw bestand met resultaten met de transacties "
-"op record correleren."
+msgstr "Kon geen transacties inden van uw resultaten pagina met de transactie."
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:101
 msgid "Could not correlate all transactions"
-msgstr "Niet kunnen alle transacties correleren"
+msgstr "Kon geen transactie koppelen"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:145
 msgid "Invalid PayPal LogID"
-msgstr ""
+msgstr "Ongeldig PayPal LogID"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:151
 msgid "Transaction not found"
@@ -1873,7 +1882,7 @@ msgstr "Ongeldige transactie status"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:220
 msgid "Affiliate Payment"
-msgstr "Filiaal van betaling"
+msgstr "Affiliate betaling"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:232
 msgid "Affiliate not found"
@@ -1885,7 +1894,7 @@ msgstr "Betalingsmethode voor partner is niet PayPal"
 
 #: ../source/Pages/Admin/PaypalPaymentsPage.php:242
 msgid "Payout via PayPal Mass Pay"
-msgstr "Uitbetaling via PayPal massa Pay"
+msgstr "Uitbetaling via PayPal Mass Pay"
 
 #: ../source/Pages/AffiliatesHome.php:33
 msgid "Sales"
@@ -1893,7 +1902,7 @@ msgstr "Verkoop"
 
 #: ../source/Pages/AffiliatesHome.php:34
 msgid "Payment History"
-msgstr "Geschiedenis van de betaling"
+msgstr "Betaling geschiedenis"
 
 #: ../source/Pages/AffiliatesHome.php:35 ../source/Plugin.php:95
 msgid "Creatives"
@@ -1912,7 +1921,7 @@ msgstr "Ongeldige affiliate"
 
 #: ../source/Pages/AffiliatesHome.php:176
 msgid "Inactive creative."
-msgstr "Inactieve creatief."
+msgstr "Inactieve advertentie."
 
 #: ../source/Pages/AffiliatesHome.php:387
 #, php-format
@@ -1929,13 +1938,13 @@ msgid ""
 "Error submitting your details to the database. This is a bug, and your "
 "application was not submitted."
 msgstr ""
-"Fout bij het voorleggen van uw details aan de database. Dit is een bug, en "
-"uw aanvraag niet is ingediend."
+"Fout bij het verwerken van de details in de database. Dit is een bug, uw "
+"toevoeging is niet verwerkt."
 
 #: ../source/Pages/AffiliatesRegister.php:70 ../source/Util/UserHandler.php:141
 #, php-format
 msgid "New affiliate registration on your site %s:"
-msgstr "Nieuwe affiliate registratie op uw site %s:"
+msgstr "Er is een nieuwe affiliate geregisseerd op uw website %s:"
 
 #: ../source/Pages/AffiliatesRegister.php:71 ../source/Util/UserHandler.php:142
 #, php-format
@@ -1960,7 +1969,7 @@ msgstr "Website: %s"
 #: ../source/Pages/AffiliatesRegister.php:75 ../source/Util/UserHandler.php:146
 #, php-format
 msgid "View Application: %s"
-msgstr "Toepassing bekijken: %s"
+msgstr "Aanmeldingen bekijken: %s"
 
 #: ../source/Pages/AffiliatesRegister.php:76 ../source/Util/UserHandler.php:147
 msgid "New Affiliate Registration"
@@ -1969,7 +1978,7 @@ msgstr "Nieuwe Affiliate Registratie"
 #: ../source/Pages/AffiliatesRegister.php:79
 #, php-format
 msgid "Affiliate application for %s"
-msgstr "Affiliate toepassing voor %s"
+msgstr "Affiliate registratie voor %s"
 
 #: ../source/Pages/PublicPage.php:95 ../source/Util/JsonHandler.php:14
 #: ../source/Util/JsonHandler.php:44 ../source/Util/JsonHandler.php:75
@@ -1981,17 +1990,17 @@ msgstr "Toegang geweigerd."
 
 #: ../source/PayPal/MassPayRequest.php:24
 msgid "receiverType must be one of the RECEIVERTYPE_* constants"
-msgstr "receiverType moet een van de constanten RECEIVERTYPE_ *"
+msgstr "receiverType moet een van de RECEIVERTYPE_* constanten zijn"
 
 #: ../source/PayPal/MassPayRequest.php:33
 msgid "'amount' must be a valid monetary value"
-msgstr "'bedrag' moet een geldige monetaire waarde"
+msgstr "'bedrag' moet een geldige monetaire waarde zijn"
 
 #: ../source/PayPal/MassPayResultFile.php:113
 #: ../source/PayPal/MassPayResultFile.php:124
 #, php-format
 msgid "Failed to parse amounts from field: %s"
-msgstr "Failed to parse bedragen uit veld: %s"
+msgstr "Het verwerken van de verstuurde bedragen van veld  %s is mislukt"
 
 #: ../source/PayPal/Service.php:77
 #, php-format
@@ -2013,16 +2022,16 @@ msgstr "Onbekende reactie: %s"
 
 #: ../source/Plugin.php:77 ../source/Plugin.php:610
 msgid "Affiliate Management"
-msgstr "Beheer van het filiaal"
+msgstr "Affiliate Management"
 
 #: ../source/Plugin.php:78 ../source/Plugin.php:83 ../source/Plugin.php:586
 #: ../source/Plugin.php:600 ../source/Plugin.php:610
 msgid "Affiliates"
-msgstr "Filialen"
+msgstr "Affiliates"
 
 #: ../source/Plugin.php:109
 msgid "Store Affiliates"
-msgstr "Opgeslagen gelieerde ondernemingen"
+msgstr "Winkel Affiliaties"
 
 #: ../source/Plugin.php:110
 msgid "Register"
@@ -2030,36 +2039,37 @@ msgstr "Registreren"
 
 #: ../source/Plugin.php:111
 msgid "Affiliate Login"
-msgstr ""
+msgstr "Affiliate inlog"
 
 #: ../source/Plugin.php:317
 msgid "You are currently logged in"
-msgstr ""
+msgstr "U bent ingelogd"
 
 #: ../source/Plugin.php:319
 msgid "Username"
-msgstr ""
+msgstr "Gebruikersnaam"
 
 #: ../source/Plugin.php:321
 msgid "Log out"
-msgstr ""
+msgstr "Uitloggen"
 
 #: ../source/Plugin.php:331
 msgid "Password Lost and Found"
-msgstr ""
+msgstr "Wachtwoord vergeten"
 
 #: ../source/Plugin.php:331
 msgid "Lost your password?"
-msgstr ""
+msgstr "Wachtwoord vergeten?"
 
 #: ../source/Plugin.php:377
 msgid "Become an affiliate"
-msgstr "Word een filiaal"
+msgstr "Aanmelden als affiliatie"
 
 #: ../source/Plugin.php:378
 msgid "Are you interested in earning money by directing visitors to our site?"
 msgstr ""
-"Bent u geïnteresseerd in geld te verdienen door bezoekers van onze site?"
+"Bent u geïnteresseerd om geld te verdienen met bezoekers door te verwijzen "
+"naar onze website?"
 
 #: ../source/Plugin.php:380
 msgid "Sign up"
@@ -2067,11 +2077,11 @@ msgstr "Aanmelden"
 
 #: ../source/Plugin.php:380
 msgid " to become an affiliate today!"
-msgstr "om een affiliate vandaag!"
+msgstr " om vandaag een affiliatie te worden!"
 
 #: ../source/Plugin.php:601
 msgid "Be An Affiliate"
-msgstr "Een affiliate"
+msgstr "Wordt een affilate"
 
 #: ../source/Plugin.php:635
 msgid "Settings"
@@ -2079,19 +2089,19 @@ msgstr "Instellingen"
 
 #: ../source/Plugin.php:639
 msgid "Affiliates Manager Click Tracking"
-msgstr ""
+msgstr "Affiliaties Manager Klik Traceren"
 
 #: ../source/Plugin.php:643
 msgid "Affiliates Manager Commission Data"
-msgstr ""
+msgstr "Affiliates Manager Commissie Gegevens"
 
 #: ../source/Plugin.php:643
 msgid "Commissions"
-msgstr ""
+msgstr "Commissies"
 
 #: ../source/Plugin.php:647
 msgid "Add-ons"
-msgstr ""
+msgstr "Add-ons"
 
 #: ../source/Plugin.php:776
 msgid "Invalid JSON handler."
@@ -2104,20 +2114,20 @@ msgstr "geen refkey in de aanvraag."
 
 #: ../source/Tracking/RequestTracker.php:188
 msgid "invalid refkey data."
-msgstr "Ongeldige refkey gegevens."
+msgstr "ongeldige refkey gegevens."
 
 #: ../source/Tracking/RequestTracker.php:239
 msgid "invalid refkey data: "
-msgstr ""
+msgstr "ongeldige refkey gegevens: "
 
 #: ../source/Tracking/TrackingKey.php:35
 #, php-format
 msgid "invalid refkey format. (length=%s)"
-msgstr "Ongeldige refkey formaat. (lengte=%s)"
+msgstr "ongeldige refkey formaat (lengte=%s)"
 
 #: ../source/Util/AffiliateFormHelper.php:93
 msgid "is a blocked e-mail "
-msgstr "is een geblokkeerde e-mailbericht"
+msgstr "is een geblokkeerd e-mailadres "
 
 #: ../source/Util/AffiliateFormHelper.php:95
 msgid "is in use"
@@ -2125,11 +2135,11 @@ msgstr "is in gebruik"
 
 #: ../source/Util/AffiliateFormHelper.php:154
 msgid "PayPal Transfer"
-msgstr "PayPal overdracht"
+msgstr "PayPal Transfer"
 
 #: ../source/Util/AffiliateFormHelper.php:157
 msgid "Manual Transfer"
-msgstr ""
+msgstr "Manuele Transfer"
 
 #: ../source/Util/EmailHandler.php:66
 msgid "Your username and password"
@@ -2148,11 +2158,11 @@ msgstr "Nieuwe affiliate registratie voor %s: is goedgekeurd!"
 
 #: ../source/Util/JsonHandler.php:17
 msgid "Invalid bounty amount."
-msgstr "Ongeldige bounty bedrag."
+msgstr "Ongeldige commissie bedrag."
 
 #: ../source/Util/JsonHandler.php:20
 msgid "Invalid bounty type."
-msgstr "Ongeldige bounty type."
+msgstr "Ongeldige commissie type."
 
 #: ../source/Util/JsonHandler.php:36 ../source/Util/JsonHandler.php:68
 #: ../source/Util/JsonHandler.php:93 ../source/Util/JsonHandler.php:112
@@ -2164,7 +2174,7 @@ msgstr "Ongeldige status overgang."
 #: ../source/Util/UserHandler.php:151
 #, php-format
 msgid "Affiliate Application for %s"
-msgstr "Affiliate toepassing voor %s"
+msgstr "Affiliate aanmelding voor %s"
 
 #: ../source/Util/JsonHandler.php:153
 msgid "Invalid status."
@@ -2172,11 +2182,11 @@ msgstr "Ongeldige status."
 
 #: ../source/Util/JsonHandler.php:166
 msgid "Invalid creative"
-msgstr "Ongeldige creative"
+msgstr "Ongeldige advertentie"
 
 #: ../source/Util/JsonHandler.php:199
 msgid "Invalid transaction type."
-msgstr "Ongeldige Transactiesoort."
+msgstr "Ongeldige transactie type."
 
 #: ../source/Util/JsonHandler.php:202
 msgid "Invalid value for amount."
@@ -2185,16 +2195,16 @@ msgstr "Ongeldige waarde voor bedrag."
 #: ../source/Util/UserHandler.php:25 ../source/Util/UserHandler.php:34
 #: ../source/Util/UserHandler.php:89 ../source/Util/UserHandler.php:98
 msgid "User already has an account and is already an affiliate"
-msgstr "Gebruiker al een account heeft en is reeds een affiliate"
+msgstr "Gebruiker heeft al een account heeft en is reeds een affiliate"
 
 #: ../source/Util/UserHandler.php:28 ../source/Util/UserHandler.php:37
 #: ../source/Util/UserHandler.php:92 ../source/Util/UserHandler.php:101
 msgid "Log into the site with your existing account and get started."
-msgstr "Log into the site with your existing account and get started"
+msgstr "Log in op de website met uw bestaande account om te starten."
 
 #: ../source/Validation/CallbackValidator.php:17
 msgid "Argument 'callback' must be callable"
-msgstr "Argument 'terugbellen' moet worden vervroegd aflosbaar"
+msgstr "Argument 'terugbellen' moet een telefoonnummer zijn"
 
 #: ../source/Validation/CountryCodeValidator.php:15
 #: ../source/Validation/StringValidator.php:29
@@ -2203,15 +2213,15 @@ msgstr "is vereist"
 
 #: ../source/Validation/EmailValidator.php:14
 msgid "must be a valid e-mail address"
-msgstr "moet een geldig e-mailadres"
+msgstr "moet een geldig e-mailadres zijn"
 
 #: ../source/Validation/MoneyValidator.php:12
 msgid "must be a valid monetary value"
-msgstr "moet een geldige monetaire waarde"
+msgstr "moet een geldige monetaire waarde zijn"
 
 #: ../source/Validation/MultiPartPhoneNumberValidator.php:12
 msgid "must be a valid phone number"
-msgstr "moet een geldig telefoonnummer"
+msgstr "moet een geldig telefoonnummer zijn"
 
 #: ../source/Validation/MultiPartSocialSecurityNumberValidator.php:13
 msgid "must be a valid social security number"
@@ -2219,16 +2229,16 @@ msgstr "moet een geldig sofi-nummer"
 
 #: ../source/Validation/NumberValidator.php:14
 msgid "must be a number"
-msgstr "must be a number"
+msgstr "moet een nummer zijn"
 
 #: ../source/Validation/PhoneNumberValidator.php:12
 msgid "must be a phone number"
-msgstr "een telefoonnummer moet worden"
+msgstr "moet een telefoon nummer zijn"
 
 #: ../source/Validation/SetValidator.php:18
 #: ../source/Validation/StateCodeValidator.php:14
 msgid "must be selected"
-msgstr "moet worden geselecteerd"
+msgstr "moet geselecteerd zijn"
 
 #: ../source/Validation/StringValidator.php:24
 msgid "must be between % and %s characters"
@@ -2237,29 +2247,28 @@ msgstr "moet tussen % en %s tekens bevatten"
 #: ../source/Validation/StringValidator.php:31
 #, php-format
 msgid "must be at least %s characters"
-msgstr "moet ten minste %s tekens"
+msgstr "moet ten minste %s tekens zijn"
 
 #: ../source/Validation/StringValidator.php:35
 #, php-format
 msgid "must be no more than %s characters"
-msgstr "moet niet meer dan tekens %s"
+msgstr "mag niet meer dan %s tekens bevatten"
 
 #: ../source/Validation/ZipCodeValidator.php:16
 msgid "must be a valid zip code"
-msgstr "moet een geldige postcode"
+msgstr "moet een geldige postcode zijn"
 
 #: ../source/display_functions.php:11
 msgid "Affiliate has applied, but is waiting on your decision."
-msgstr "Filiaal heeft verzocht, maar wacht op uw beslissing."
+msgstr "Affiliate heeft zich aangemeld, maar wacht op uw beslissing."
 
 #: ../source/display_functions.php:12
 msgid "Affiliate has been approved, but has not accepted terms."
-msgstr ""
-"Affiliate is goedgekeurd, maar heeft niet akkoord gaat met voorwaarden."
+msgstr "Affiliate is goedgekeurd, maar heeft de voorwaarden niet geaccepteerd."
 
 #: ../source/display_functions.php:13
 msgid "Affiliate is active, and will receive credit for leads."
-msgstr "Filiaal is actief en ontvangt creditering voor leads."
+msgstr "Filiaal is actief en ontvangt betaling voor leads."
 
 #: ../source/display_functions.php:14
 msgid ""
@@ -2267,13 +2276,12 @@ msgid ""
 "details look good, you should activate this affiliate so they can begin "
 "sending traffic."
 msgstr ""
-"Affiliate heeft akkoord gaat met voorwaarden en mits betaling details. <br /"
-"> als de details er goed uitziet, moet u deze affiliate activeren zodat ze "
-"kunnen beginnen met het verzenden van het verkeer."
+"Affiliate heeft de algemene voorwaarden geaccepteerd en betaalinformatie "
+"doorgegeven.<br /> Als de informatie goed is kunt u de affiliate activeren."
 
 #: ../source/display_functions.php:15
 msgid "Affiliate has been disabled."
-msgstr "Filiaal heeft geweest verminkte."
+msgstr "Affiliate is geblokkeerd."
 
 #: ../source/display_functions.php:16
 msgid "Affiliate was declined."
@@ -2281,7 +2289,7 @@ msgstr "Affiliate is geweigerd."
 
 #: ../source/display_functions.php:17
 msgid "Affiliate was blocked and cannot re-apply."
-msgstr "Affiliate werd geblokkeerd en kan niet opnieuw toepassen."
+msgstr "Affiliate is geblokkeerd en kan zich niet opnieuw aanmelden."
 
 #: ../source/display_functions.php:23
 #, php-format
@@ -2291,27 +2299,27 @@ msgstr "%s per verkoop"
 #: ../source/display_functions.php:25
 #, php-format
 msgid "%s%% of pre-tax sales"
-msgstr ""
+msgstr "%s%% voor belasting"
 
 #: ../source/dynamic-translatable-strings.php:4
 msgid "Address Line 1"
-msgstr ""
+msgstr "Adres regel 1"
 
 #: ../source/dynamic-translatable-strings.php:5
 msgid "Address Line 2"
-msgstr ""
+msgstr "Adres regel 2"
 
 #: ../source/dynamic-translatable-strings.php:6
 msgid "Zip Code"
-msgstr ""
+msgstr "Postcode"
 
 #: ../source/dynamic-translatable-strings.php:7
 msgid "Company Name"
-msgstr ""
+msgstr "Bedrijfsnaam"
 
 #: ../source/dynamic-translatable-strings.php:8
 msgid "Website URL"
-msgstr ""
+msgstr "Website URL"
 
 #~ msgid "WordPress Affiliate Manager requires WordPress 3.1 or higher."
 #~ msgstr "WordPress Affiliate Manager vereist WordPress 3.1 of hoger."
