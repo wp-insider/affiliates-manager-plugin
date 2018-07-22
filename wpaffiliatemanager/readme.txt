@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal  
 Requires at least: 3.5
 Tested up to: 4.9
-Stable tag: 2.5.6
+Stable tag: 2.5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -134,6 +134,10 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 2.5.7 =
+- Made some improvements to the creative media uploader to make adding/editing an image easier.
+- Plugin action hooks and shortcodes are now registered as soon as the main plugin file loads.
 
 = 2.5.6 =
 - Added Hungarian language translation to the plugin. The translation was submitted by Peter Nyiri.

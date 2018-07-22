@@ -81,8 +81,15 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 		<tr>
 			<td width="150"><?php _e( 'Image', 'affiliates-manager' ) ?></td>
 			<td><img src="<?php
-				$url = wp_get_attachment_image_src($model->imagePostId);
-				echo $url[0];?>" style="max-width: 200px; max-height: 200px;"/></td>
+                                $img_url = '';
+                                if(isset($model->image) && !empty($model->image)){  //new way of retrieving an image URL
+                                    $img_url = $model->image;
+                                }
+                                else if(isset($model->imagePostId) && !empty($model->imagePostId)){  //old way for backwards compatiblity
+                                    $img_url = wp_get_attachment_url($model->imagePostId);
+                                }
+				//$url = wp_get_attachment_image_src($model->imagePostId);
+				echo $img_url;?>" style="max-width: 200px; max-height: 200px;"/></td>
 		</tr>
 		<tr>
 			<td><?php _e( 'Alt Text', 'affiliates-manager' ) ?></td>

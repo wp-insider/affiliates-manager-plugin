@@ -75,6 +75,7 @@ class WPAM_Data_DatabaseInstaller {
         `name` varchar(250) NOT NULL,
         `linkText` varchar(255) DEFAULT NULL,
         `slug` VARCHAR(255) NOT NULL default '',
+        `image` varchar(255) default '',
         PRIMARY KEY (`creativeId`)
         )" . $charset_collate . ";";
         dbDelta($creatives_tbl_sql);

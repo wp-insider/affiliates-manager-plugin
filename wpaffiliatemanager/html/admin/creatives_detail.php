@@ -174,18 +174,19 @@ function formatType($type)
 <div id="dialog-preview" title="<?php _e( 'Preview', 'affiliates-manager' ) ?>" style="display: none">
 <?php if ($model->type === 'image') { ?>
 <a href="" title="<?php echo $model->altText?>"><img src="<?php
-				$url = wp_get_attachment_image_src($model->imagePostId);
-				echo $url[0];
+                                $img_url = '';
+                                if(isset($model->image) && !empty($model->image)){  //new way of retrieving an image URL
+                                    $img_url = $model->image;
+                                }
+                                else if(isset($model->imagePostId) && !empty($model->imagePostId)){  //old way for backwards compatiblity
+                                    $img_url = wp_get_attachment_url($model->imagePostId);
+                                }
+				//$url = wp_get_attachment_image_src($model->imagePostId);
+				echo $img_url;
 ?>" /></a>
 <?php } else if ($model->type === 'text') { ?>
 	<a href="" title="<?php echo $model->altText?>"><?php echo $model->linkText?></a>
 <?php } ?>
-	<div id="textLinkPreview">
-
-	</div>
-	<div id="imagePreview" style="display: none">
-
-	</div>
 </div>
 
 
@@ -296,8 +297,15 @@ function formatType($type)
 		<tr>
 			<td width="150"><?php _e( 'Image', 'affiliates-manager' ) ?></td>
 			<td><img src="<?php
-				$url = wp_get_attachment_image_src($model->imagePostId);
-				echo $url[0];?>" style="max-width: 200px; max-height: 200px;"/></td>
+                                $img_url = '';
+                                if(isset($model->image) && !empty($model->image)){  //new way of retrieving an image URL
+                                    $img_url = $model->image;
+                                }
+                                else if(isset($model->imagePostId) && !empty($model->imagePostId)){  //old way for backwards compatiblity
+                                    $img_url = wp_get_attachment_url($model->imagePostId);
+                                }
+				//$url = wp_get_attachment_image_src($model->imagePostId);
+				echo $img_url;?>" style="max-width: 200px; max-height: 200px;"/></td>
 		</tr>
 		<tr>
 			<td><?php _e( 'Alt Text', 'affiliates-manager' ) ?></td>

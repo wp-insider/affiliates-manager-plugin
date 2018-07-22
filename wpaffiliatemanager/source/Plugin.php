@@ -103,6 +103,38 @@ class WPAM_Plugin {
 
         //set up base actions
         add_action('init', array($this, 'onInit'));
+        
+        add_action('wp_enqueue_scripts', array($this, 'load_shortcode_specific_scripts'));
+
+        add_action('wp_head', array($this, 'handle_wp_head_hook'));
+
+        //actions & filters
+        add_action('template_redirect', array($this, 'onTemplateRedirect'));
+        add_action('admin_menu', array($this, 'onAdminMenu'));
+        add_action('current_screen', array($this, 'onCurrentScreen'));
+
+        add_action('wp_ajax_wpam-ajax_request', array($this, 'onAjaxRequest'));
+
+        add_filter('pre_user_email', array($this, 'filterUserEmail'));
+
+        //set the locale for money format & paypal
+        /*
+          $this->locale = WPAM_LOCALE_OVERRIDE ? WPAM_LOCALE_OVERRIDE : get_locale();
+          $this->setloc = $this->setMonetaryLocale( $this->locale );
+          //loading provided locale didn't work, choose default
+          if ( ! $this->setloc && setlocale( LC_MONETARY, 0 ) == 'C')
+          setlocale( LC_MONETARY, '' );
+         */
+        add_action('admin_notices', array($this, 'showAdminMessages'));
+
+        if (!is_admin()) {
+            add_filter('widget_text', 'do_shortcode');
+        }
+
+        add_shortcode('AffiliatesRegister', array($this->publicPages[self::PAGE_NAME_REGISTER], 'doShortcode'));
+        add_shortcode('AffiliatesHome', array($this->publicPages[self::PAGE_NAME_HOME], 'doShortcode'));
+        add_shortcode('AffiliatesLogin', array($this, 'doLoginShortcode'));
+        add_action('save_post', array($this, 'onSavePage'), 10, 2);
 
         //handle CSV download
         add_action('admin_init', array($this, 'handle_csv_download'));
@@ -213,38 +245,8 @@ class WPAM_Plugin {
     }
 
     public function onInit() {
-
-        add_action('wp_enqueue_scripts', array($this, 'load_shortcode_specific_scripts'));
-
-        add_action('wp_head', array($this, 'handle_wp_head_hook'));
-
-        //actions & filters
-        add_action('template_redirect', array($this, 'onTemplateRedirect'));
-        add_action('admin_menu', array($this, 'onAdminMenu'));
-        add_action('current_screen', array($this, 'onCurrentScreen'));
-
-        add_action('wp_ajax_wpam-ajax_request', array($this, 'onAjaxRequest'));
-
-        add_filter('pre_user_email', array($this, 'filterUserEmail'));
-
-        //set the locale for money format & paypal
-        /*
-          $this->locale = WPAM_LOCALE_OVERRIDE ? WPAM_LOCALE_OVERRIDE : get_locale();
-          $this->setloc = $this->setMonetaryLocale( $this->locale );
-          //loading provided locale didn't work, choose default
-          if ( ! $this->setloc && setlocale( LC_MONETARY, 0 ) == 'C')
-          setlocale( LC_MONETARY, '' );
-         */
-        add_action('admin_notices', array($this, 'showAdminMessages'));
-
-        if (!is_admin()) {
-            add_filter('widget_text', 'do_shortcode');
-        }
-
-        add_shortcode('AffiliatesRegister', array($this->publicPages[self::PAGE_NAME_REGISTER], 'doShortcode'));
-        add_shortcode('AffiliatesHome', array($this->publicPages[self::PAGE_NAME_HOME], 'doShortcode'));
-        add_shortcode('AffiliatesLogin', array($this, 'doLoginShortcode'));
-        add_action('save_post', array($this, 'onSavePage'), 10, 2);
+        
+        $this->do_init_task();
         $this->do_page_upgrade_task();
         /*
           try	{
@@ -259,6 +261,16 @@ class WPAM_Plugin {
          */
         //new affiliate tracking code
         WPAM_Click_Tracking::record_click();
+    }
+    
+    public function do_init_task(){
+        if(is_admin()){
+            if (isset($_GET['page'])) {
+                if ($_GET['page'] == 'wpam-creatives') { //affiliates manager creatives page
+                    wp_enqueue_media();
+                }
+            }
+        }
     }
 
     public function load_shortcode_specific_scripts() {
@@ -748,9 +760,6 @@ class WPAM_Plugin {
                     break;
                 case 'addTransaction':
                     $response = $jsonHandler->addTransaction($_REQUEST['affiliateId'], $_REQUEST['type'], $_REQUEST['amount'], $_REQUEST['description']);
-                    break;
-                case 'getPostImageElement':
-                    $response = $jsonHandler->getPostImageElement($_REQUEST['postId']);
                     break;
                 case 'deleteCreative':
                     $response = $jsonHandler->deleteCreative($_REQUEST['creativeId']);

@@ -26,7 +26,7 @@ class WPAM_Validation_StringValidator implements WPAM_Validation_IValidator
 		else if ($this->minLength >= 1)
 		{
 			if ($this->minLength == 1)
-				return __( 'is required' );
+				return __( 'is required', 'affiliates-manager' );
 			else
 				return sprintf( __( 'must be at least %s characters', 'affiliates-manager' ), $this->minLength );
 		}

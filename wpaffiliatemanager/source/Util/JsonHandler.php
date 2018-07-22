@@ -174,22 +174,6 @@ class WPAM_Util_JsonHandler
 		return new JsonResponse(JsonResponse::STATUS_OK);
 	}
 
-	public function getPostImageElement($postId)
-	{
-		$imgElement = wp_get_attachment_image_src((int)$postId);
-
-		if (is_array($imgElement))
-		{
-			$response = new JsonResponse(JsonResponse::STATUS_OK);
-			$response->data = $imgElement[0];
-			return $response;
-		}
-		else
-		{
-			return new JsonResponse(JsonResponse::STATUS_ERROR, "No image found.");
-		}
-	}
-
 	public function addTransaction($affiliateId, $type, $amount, $description = NULL)
 	{
 		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))

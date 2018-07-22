@@ -18,6 +18,7 @@ class WPAM_Data_Models_CreativeModel implements WPAM_Data_Models_IDataModel
 	public $imagePostId;
 	public $linkText;
 	public $slug;
+        public $image;
 	
     public function fromRow($rowData)
     {

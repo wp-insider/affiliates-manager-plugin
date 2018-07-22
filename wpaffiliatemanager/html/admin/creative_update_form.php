@@ -1,10 +1,3 @@
-<style type="text/css">
-DIV#previewImageDiv.loading {
-  background: url(<?php echo WPAM_URL . "/images/ajaxSpinner.gif"?>) no-repeat center center;
-}
-</style>
-
-
 <script type="text/javascript">
 	jQuery(function($) {
 		function updateTypeDivs()
@@ -26,50 +19,10 @@ DIV#previewImageDiv.loading {
 				$("#textLinkDiv").hide();
 			}
 		}
-
-		function updatePreview()
-		{
-			if (!isNaN($("#ddFileImage").val()) && $("#ddFileImage").val().length != 0)
-			{
-				$("#fileImageNew").val('');
-				$('#imagePreview').show();
-				$.getJSON(
-					ajaxurl,
-					{
-						'action' : 'wpam-ajax_request',
-						'handler' : 'getPostImageElement',
-						'postId' : $("#ddFileImage").val()
-					},
-					function(result) {
-						if (result['status'] == 'OK')
-						{
-							$("#previewError").html("");
-							$("#previewImageDiv").addClass("loading");
-							$("#previewImageElement").hide();
-							$("#previewImageElement").attr("src", result['data']);
-						}
-						else
-						{
-							$("#previewError").html(result['message']);
-						}
-					}
-				);
-			} else {
-				$('#imagePreview').hide();
-			}
-
-		}
 		
 		$("#ddType").change(updateTypeDivs);
-		$("#previewImageElement").load(function() {
-			$("#previewImageDiv").removeClass("loading");
-			$("#previewImageElement").fadeIn();
-		});
-
-		$("#ddFileImage").change(updatePreview);
 
 		updateTypeDivs();
-		updatePreview();
 
 		var dialog = {
 		  resizable: false,
@@ -89,12 +42,36 @@ DIV#previewImageDiv.loading {
 		$("#imageInfo").click(function() {
 			$("#image_help").dialog('open');
 		});
+                
+                //image upload handler
+                var wpam_media_prev_setting = wp.media.controller.Library.prototype.defaults.contentUserSetting;
+                function wpam_attach_media_uploader(key) {
+                    var wpam_frame;
+                    var libType = 'image';
+                    jQuery('#' + key + '_button').click(function () {
+                        wp.media.controller.Library.prototype.defaults.contentUserSetting = false;
+                        wpam_frame = wp.media({
+                            title: '<?php _e( 'Upload a File or Select from Media Library', 'affiliates-manager' ) ?>',
+                            button: {
+                                text: '<?php _e( 'Insert', 'affiliates-manager' ) ?>',
+                            },
+                            multiple: false,
+                            library: {type: libType},
+                        });
+                        text_element = jQuery('#' + key).attr('name');
+                        button_element = jQuery('#' + key + '_button').attr('name');
 
-		$('#fileImageNew').change(function(){
-			$('#imagePreview').hide();
-			$("#ddFileImage").val('');
-		});
+                        wpam_frame.open();
+                        wp.media.controller.Library.prototype.defaults.contentUserSetting = wpam_media_prev_setting;
+                        wpam_frame.on('select', function () {
+                            var attachment = wpam_frame.state().get('selection').first().toJSON();
+                            jQuery('#' + text_element).val(attachment.url);
 
+                        });
+                        return false;
+                    });
+                }
+                wpam_attach_media_uploader('image_url');
 	});
 </script>
 
@@ -176,37 +153,22 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 			</tr>
 			</theaD>
 			<tbody>
-			<tr>
-				<td width="200">
-					<label for="fileImageNew"><?php _e( 'New Image File', 'affiliates-manager' ) ?></label>
-				</td>
-				<td>
-					<input type="file" id="fileImageNew" name="fileImageNew" />
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;<strong>or</strong></td>
-			</tr>
-			<tr>
-				<td width="200">
-					<label for="ddFileImage"><?php _e( 'Image File from Media Library', 'affiliates-manager' ) ?></label>
-					<img id="imageInfo" style="cursor: pointer;" src="<?php echo WPAM_URL."/images/info_icon.png"?>"/>
-				</td>
-				<td>
-					<select id="ddFileImage" name="ddFileImage">
-						<?php foreach ($this->viewData['images'] as $imageId => $image) {?>
-					<option value="<?php echo $imageId?>" <?php echo (isset($this->viewData['request']['ddFileImage']) && $this->viewData['request']['ddFileImage'] == $imageId ? 'selected="selected"' : '')?>><?php echo $image?></option>
-						<?php } ?>
-					</select>&nbsp;&nbsp;&nbsp;&nbsp;
-					<div id="imagePreview" style="display: none;">
-					<span><?php _e( 'Preview:', 'affiliates-manager' ) ?></span> <span style="color: red" id="previewError"></span>
-					<div id="previewImageDiv" style="margin: 5px; width: 400px; height: 300px; padding: 20px; border: 1px solid #ddd;">
-						<img id="previewImageElement" style="max-width: 400px; max-height: 300px;"/>
-					</div>
-					</div>
-				</td>
-			</tr>
-
+                        <?php
+                            $img_url = '';
+                            if(isset($this->viewData['request']['image_url']) && !empty($this->viewData['request']['image_url'])){  //new way of retrieving an image URL
+                                $img_url = $this->viewData['request']['image_url'];
+                            }
+                            else if(isset($this->viewData['request']['ddFileImage']) && !empty($this->viewData['request']['ddFileImage'])){  //old way for backwards compatiblity
+                                $img_url = wp_get_attachment_url($this->viewData['request']['ddFileImage']);
+                            } 
+                        ?>
+                        <tr valign="top">
+                            <th scope="row">Image URL</th>
+                            <td><input name="image_url" type="text" id="image_url" value="<?php echo $img_url?>" size="100" />
+                                <input type="button" id="image_url_button" name="image_url_button" class="button rbutton" value="Upload File" />
+                                <p class="description">The URL of the image to be used for the creative.</p>
+                            </td>
+                        </tr>
 			<tr>
 				<td width="200">
 					<label for="txtImageAltText">

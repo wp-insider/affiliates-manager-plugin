@@ -40,7 +40,14 @@ class WPAM_Tracking_TrackingLinkBuilder
 		switch ($this->creative->type) {
 			case 'image':
 				$html = "<a href=\"" . $this->getUrl() . "\">";
-				$html .= "<img src=\"" . wp_get_attachment_url($this->creative->imagePostId) . "\" style=\"border: 0;\" title=\"{$this->creative->altText}\"/>";
+                                $img_url = '';
+                                if(isset($this->creative->image) && !empty($this->creative->image)){  //new way of retrieving an image URL
+                                    $img_url = $this->creative->image;
+                                }
+                                else if(isset($this->creative->imagePostId) && !empty($this->creative->imagePostId)){  //old way for backwards compatiblity
+                                    $img_url = wp_get_attachment_url($this->creative->imagePostId);
+                                }
+				$html .= "<img src=\"" . $img_url . "\" style=\"border: 0;\" title=\"{$this->creative->altText}\"/>";
 				$html .= "</a>";
 				return $html;
 			case 'text':

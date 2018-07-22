@@ -119,6 +119,7 @@ class WPAM_Pages_Admin_MyCreativesPage extends WPAM_Pages_Admin_AdminPage
 		{
 			$request['txtImageAltText'] = $creative->altText;
 			$request['ddFileImage'] = $creative->imagePostId;
+                        $request['image_url'] = isset($creative->image) && !empty($creative->image) ? $creative->image : '';
 		}
 		else if ($creative->type === 'text')
 		{
@@ -140,58 +141,24 @@ class WPAM_Pages_Admin_MyCreativesPage extends WPAM_Pages_Admin_AdminPage
 
 	protected function doCreativeSubmit($request)
 	{
-		$validator = new WPAM_Validation_Validator();
-
-		//#23 before getting media library images, upload an image file if there is one
-		$has_new_image = isset( $_FILES['fileImageNew'] ) && trim( $_FILES['fileImageNew']['name'] ) != '';
-		if ( $has_new_image ) {
-			$mimes = array(
-				'jpg|jpeg|jpe' => 'image/jpeg',
-				'gif' => 'image/gif',
-				'png' => 'image/png',
-				'bmp' => 'image/bmp',
-				'tif|tiff' => 'image/tiff'
-			);
-			$file = wp_handle_upload( $_FILES['fileImageNew'], array( 'mimes' => $mimes, 'test_form' => false ) );
-
-			if ( isset( $file['error'] ) ) {
-				$validator->addError(
-					new WPAM_Validation_ValidatorError( 'fileImageNew',
-														sprintf ( __( 'Image Upload Error: %s', 'affiliates-manager' ), $file['error'] ) ) );
-			} else {
-				//successfully uploaded an image
-				$object = array(
-					'post_title' => basename( $file['url'] ),
-					'post_content' => $file['url'],
-					'post_mime_type' => $file['type'],
-					'guid' => $file['url'] );
-
-				// Save the attachment
-				$attachment_id = wp_insert_attachment($object, $file['file']);
-
-				//make it selected in the media library dropdown
-				$has_new_image = false;
-				$request['ddFileImage'] = $attachment_id;
-			}
-		}
-				
+		$validator = new WPAM_Validation_Validator();				
 		$db = new WPAM_Data_DataAccess();
-		$images = $db->getWordPressRepository()->getAllImageAttachments();
-		$imageIds = array();
-		foreach ($images as $image)
-			$imageIds[] = $image->ID;
-
+		$image_url = '';
 		$validator->addValidator('txtName', new WPAM_Validation_StringValidator(1));
 		//$validator->addValidator('ddLandingPage', new WPAM_Validation_SetValidator(array('index','products')));
 		$validator->addValidator('ddType', new WPAM_Validation_SetValidator(array('image','text')));
 
-		if ($request['ddType'] === 'image' && ! $has_new_image )
+		if ($request['ddType'] === 'image')
 		{
-			$validator->addValidator('ddFileImage', new WPAM_Validation_SetValidator($imageIds));
+                    if(isset($request['image_url']) && !empty($request['image_url'])){
+                        $image_url = $request['image_url'];
+                    }
+                    //$validator->addValidator('image_url', new WPAM_Validation_SetValidator($imageIds));
+                    $validator->addValidator('image_url', new WPAM_Validation_StringValidator(1, strlen($image_url)));
 		}
 		else if ($request['ddType'] === 'text')
 		{
-			$validator->addValidator('txtLinkText', new WPAM_Validation_StringValidator(1));
+                    $validator->addValidator('txtLinkText', new WPAM_Validation_StringValidator(1));
 		}
 
 		$vr = $validator->validate($request);
@@ -212,8 +179,11 @@ class WPAM_Pages_Admin_MyCreativesPage extends WPAM_Pages_Admin_AdminPage
 			$model->type = $request['ddType'];
 			if ($model->type === 'image')
 			{
+                            if(isset($request['ddFileImage']) && !empty($request['ddFileImage'])){
 				$model->imagePostId = $request['ddFileImage'];
-				$model->altText = $request['txtImageAltText'];
+                            }
+                            $model->altText = $request['txtImageAltText'];
+                            $model->image = $image_url;
 			}
 			else if ($model->type === 'text')
 			{
