@@ -153,8 +153,7 @@ class WPAM_Pages_Admin_MyCreativesPage extends WPAM_Pages_Admin_AdminPage
                     if(isset($request['image_url']) && !empty($request['image_url'])){
                         $image_url = $request['image_url'];
                     }
-                    //$validator->addValidator('image_url', new WPAM_Validation_SetValidator($imageIds));
-                    $validator->addValidator('image_url', new WPAM_Validation_StringValidator(1, strlen($image_url)));
+                    $validator->addValidator('image_url', new WPAM_Validation_StringValidator(1));
 		}
 		else if ($request['ddType'] === 'text')
 		{

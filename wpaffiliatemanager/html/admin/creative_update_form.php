@@ -163,10 +163,10 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
                             } 
                         ?>
                         <tr valign="top">
-                            <th scope="row">Image URL</th>
+                            <th scope="row"><label for="image_url"><?php _e( 'Image URL', 'affiliates-manager' ) ?></label></th>
                             <td><input name="image_url" type="text" id="image_url" value="<?php echo $img_url?>" size="100" />
-                                <input type="button" id="image_url_button" name="image_url_button" class="button rbutton" value="Upload File" />
-                                <p class="description">The URL of the image to be used for the creative.</p>
+                                <input type="button" id="image_url_button" name="image_url_button" class="button rbutton" value="<?php _e( 'Upload File', 'affiliates-manager' ) ?>" />
+                                <p class="description"><?php _e( 'The URL of the image to be used for the creative.', 'affiliates-manager' ) ?></p>
                             </td>
                         </tr>
 			<tr>
