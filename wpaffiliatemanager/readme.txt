@@ -139,6 +139,7 @@ https://wpaffiliatemanager.com/screen-shots/
 - Made some improvements to the creative media uploader to make adding/editing an image easier.
 - Plugin action hooks and shortcodes are now registered as soon as the main plugin file loads.
 - Updated the Dutch language translation. The translation file was submitted by Mitchell van Honk.
+- Made all the strings in the "Messaging" tab translatable.
 
 = 2.5.6 =
 - Added Hungarian language translation to the plugin. The translation was submitted by Peter Nyiri.

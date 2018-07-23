@@ -36,7 +36,7 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
     /* overridden function to show a custom message when no records are present */
 
     function no_items() {
-        echo '<br />No Clicks Found!';
+        echo '<br />'.__('No Clicks Found!', 'affiliates-manager');
     }
 
     function column_cb($item) {
@@ -70,7 +70,7 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
 
     function get_bulk_actions() {
         $actions = array(
-            'delete' => 'Delete'
+            'delete' => __('Delete', 'affiliates-manager')
         );
         return $actions;
     }
@@ -81,7 +81,7 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
             $nvp_key = $this->_args['singular'];
             $records_to_delete = $_GET[$nvp_key];
             if (empty($records_to_delete)) {
-                echo '<div id="message" class="updated fade"><p>Error! You need to select multiple records to perform a bulk action!</p></div>';
+                echo '<div id="message" class="updated fade"><p>'.__('Error! You need to select multiple records to perform a bulk action!', 'affiliates-manager').'</p></div>';
                 return;
             }
             global $wpdb;
@@ -90,7 +90,7 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
                 $updatedb = "DELETE FROM $record_table_name WHERE trackingTokenId='$row'";
                 $results = $wpdb->query($updatedb);
             }
-            echo '<div id="message" class="updated fade"><p>Selected records deleted successfully!</p></div>';
+            echo '<div id="message" class="updated fade"><p>'.__('Selected records deleted successfully!', 'affiliates-manager').'</p></div>';
         }
     }
 

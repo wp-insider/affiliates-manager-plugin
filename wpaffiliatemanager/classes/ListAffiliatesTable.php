@@ -83,7 +83,7 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
 
     function get_bulk_actions() {
         $actions = array(
-            'delete' => 'Delete'
+            'delete' => __('Delete', 'affiliates-manager')
         );
         return $actions;
     }

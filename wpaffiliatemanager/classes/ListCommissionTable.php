@@ -43,7 +43,7 @@ class WPAM_List_Commission_Table extends WPAM_List_Table {
     /* overridden function to show a custom message when no records are present */
 
     function no_items() {
-        echo '<br />No Commission Data Found!';
+        echo '<br />'.__('No Commission Data Found!', 'affiliates-manager');
     }
 
     function column_cb($item) {
@@ -77,7 +77,7 @@ class WPAM_List_Commission_Table extends WPAM_List_Table {
 
     function get_bulk_actions() {
         $actions = array(
-            'delete' => 'Delete'
+            'delete' => __('Delete', 'affiliates-manager')
         );
         return $actions;
     }
