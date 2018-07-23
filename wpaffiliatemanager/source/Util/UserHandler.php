@@ -42,17 +42,25 @@ class WPAM_Util_UserHandler {
         } else {
             //user not found by email address as username and no account with that email address exists
             //create new user using email address as username
+            $userFirstName = sanitize_text_field($affiliate->firstName);
+            $userLastName = sanitize_text_field($affiliate->lastName);
             $userPass = wp_generate_password();
             $userId = wp_create_user($userLogin, $userPass, $userEmail);
 
-            if (is_wp_error($userId))
+            if (is_wp_error($userId)){
                 throw new Exception($userId->get_error_message());
-
+            }
             $new_user = true;
-
             $user = new WP_User($userId);
             $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
             $user->set_role( 'affiliate' );
+            $userdata = array(
+                'ID' => $userId,
+                'user_login' => $userLogin,
+                'first_name' => $userFirstName,
+                'last_name' => $userLastName
+            );
+            $insert_user_id = wp_insert_user($userdata);
         }
         $affiliate->approve();
         $affiliate->userId = $userId;
@@ -112,6 +120,8 @@ class WPAM_Util_UserHandler {
         } else {
             //user not found by email address as username and no account with that email address exists
             //create new user using email address as username
+            $userFirstName = sanitize_text_field($affiliate->firstName);
+            $userLastName = sanitize_text_field($affiliate->lastName);
             $userPass = wp_generate_password();
             $userId = wp_create_user($userLogin, $userPass, $userEmail);
 
@@ -122,6 +132,13 @@ class WPAM_Util_UserHandler {
             $user = new WP_User($userId);
             $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
             $user->set_role( 'affiliate' );
+            $userdata = array(
+                'ID' => $userId,
+                'user_login' => $userLogin,
+                'first_name' => $userFirstName,
+                'last_name' => $userLastName
+            );
+            $insert_user_id = wp_insert_user($userdata);
         }
         $affiliate->activate();
         $affiliate->userId = $userId;

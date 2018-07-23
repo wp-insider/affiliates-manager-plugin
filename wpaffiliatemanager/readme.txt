@@ -140,6 +140,7 @@ https://wpaffiliatemanager.com/screen-shots/
 - Plugin action hooks and shortcodes are now registered as soon as the main plugin file loads.
 - Updated the Dutch language translation. The translation file was submitted by Mitchell van Honk.
 - Made all the strings in the "Messaging" tab translatable.
+- Fixed a bug where the user's first and last names were not getting set when a new affiliate registered.
 
 = 2.5.6 =
 - Added Hungarian language translation to the plugin. The translation was submitted by Peter Nyiri.
