@@ -56,11 +56,10 @@ class WPAM_Util_UserHandler {
             $user->set_role( 'affiliate' );
             $userdata = array(
                 'ID' => $userId,
-                'user_login' => $userLogin,
                 'first_name' => $userFirstName,
                 'last_name' => $userLastName
             );
-            $insert_user_id = wp_insert_user($userdata);
+            $update_user_id = wp_update_user($userdata);
         }
         $affiliate->approve();
         $affiliate->userId = $userId;
@@ -134,11 +133,10 @@ class WPAM_Util_UserHandler {
             $user->set_role( 'affiliate' );
             $userdata = array(
                 'ID' => $userId,
-                'user_login' => $userLogin,
                 'first_name' => $userFirstName,
                 'last_name' => $userLastName
             );
-            $insert_user_id = wp_insert_user($userdata);
+            $update_user_id = wp_update_user($userdata);
         }
         $affiliate->activate();
         $affiliate->userId = $userId;
