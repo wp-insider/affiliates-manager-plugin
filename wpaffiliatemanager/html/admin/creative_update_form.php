@@ -101,7 +101,7 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 		<input type="hidden" name="creativeId" value="<?php echo $this->viewData['request']['creativeId']?>" />
 	<?php } ?>
 
-	<div id="mainForm" style="max-width: 1000px">
+	<div id="mainForm">
 		<table class="widefat">
 			<thead>
 			<tr>
@@ -145,7 +145,7 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 
 	<br/>
 
-	<div id="imageDiv" style="display: none; width: 700px; ">
+	<div id="imageDiv" style="display: none;">
 		<table class="widefat">
 			<theaD>
 			<tr>
@@ -184,7 +184,7 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 
 	</div>
 
-	<div id="textLinkDiv" style="display: none; width: 700px;">
+	<div id="textLinkDiv" style="display: none;">
 		<table class="widefat">
 			<thead>
 			<tr>
@@ -219,7 +219,7 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 
 	</div>
 <br />
-	<div style="width: 700px; text-align: center">
+	<div>
 	<input class="button-primary" type="submit" id="btnSubmit" name="btnSubmit" value="<?php _e( 'Save Creative', 'affiliates-manager' ) ?>" />	
 	</div>
 
