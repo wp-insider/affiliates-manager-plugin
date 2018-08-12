@@ -338,7 +338,7 @@ jQuery(function($) {
 		"<?php echo $affiliateField->type?>",
 		"<?php echo $affiliateField->fieldType?>",
 		"<?php echo $affiliateField->databaseField?>",
-		"<?php echo $affiliateField->name?>",
+		"<?php echo __($affiliateField->name, 'affiliates-manager')?>",
 		"<?php echo $affiliateField->length?>",
 		<?php echo $affiliateField->required?'true':'false'?>
 	);

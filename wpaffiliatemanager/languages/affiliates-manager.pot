@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2018-07-23 17:58+0600\n"
+"POT-Creation-Date: 2018-08-12 15:31+0600\n"
 "PO-Revision-Date: 2018-05-28 13:21+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1419,13 +1419,13 @@ msgid "This Month"
 msgstr ""
 
 #: html/affiliate_cp_payment_details_confirmed.php:3
-msgid "Your payment details have been submitted"
+msgid "Your payment details have been submitted."
 msgstr ""
 
 #: html/affiliate_cp_payment_details_confirmed.php:5
 #, php-format
 msgid ""
-"Now would be a great time to go pick <a href=\"%s\">some creative</a> and "
+"Now would be a great time to go pick <a href=\"%s\">some creatives</a> and "
 "get started."
 msgstr ""
 
@@ -2015,43 +2015,43 @@ msgstr ""
 msgid "%s%% of each completed sale, pre-tax"
 msgstr ""
 
-#: source/Pages/AffiliatesRegister.php:65 source/Util/UserHandler.php:143
+#: source/Pages/AffiliatesRegister.php:65 source/Util/UserHandler.php:158
 msgid ""
 "Error submitting your details to the database. This is a bug, and your "
 "application was not submitted."
 msgstr ""
 
-#: source/Pages/AffiliatesRegister.php:73 source/Util/UserHandler.php:152
+#: source/Pages/AffiliatesRegister.php:73 source/Util/UserHandler.php:167
 #, php-format
 msgid "New affiliate registration on your site %s:"
 msgstr ""
 
-#: source/Pages/AffiliatesRegister.php:74 source/Util/UserHandler.php:153
+#: source/Pages/AffiliatesRegister.php:74 source/Util/UserHandler.php:168
 #, php-format
 msgid "Name: %s %s"
 msgstr ""
 
-#: source/Pages/AffiliatesRegister.php:75 source/Util/UserHandler.php:154
+#: source/Pages/AffiliatesRegister.php:75 source/Util/UserHandler.php:169
 #, php-format
 msgid "Email: %s"
 msgstr ""
 
-#: source/Pages/AffiliatesRegister.php:76 source/Util/UserHandler.php:155
+#: source/Pages/AffiliatesRegister.php:76 source/Util/UserHandler.php:170
 #, php-format
 msgid "Company: %s"
 msgstr ""
 
-#: source/Pages/AffiliatesRegister.php:77 source/Util/UserHandler.php:156
+#: source/Pages/AffiliatesRegister.php:77 source/Util/UserHandler.php:171
 #, php-format
 msgid "Website: %s"
 msgstr ""
 
-#: source/Pages/AffiliatesRegister.php:78 source/Util/UserHandler.php:157
+#: source/Pages/AffiliatesRegister.php:78 source/Util/UserHandler.php:172
 #, php-format
 msgid "View Application: %s"
 msgstr ""
 
-#: source/Pages/AffiliatesRegister.php:79 source/Util/UserHandler.php:158
+#: source/Pages/AffiliatesRegister.php:79 source/Util/UserHandler.php:173
 msgid "New Affiliate Registration"
 msgstr ""
 
@@ -2220,7 +2220,7 @@ msgid "Manual Transfer"
 msgstr ""
 
 #: source/Util/EmailHandler.php:49 source/Util/JsonHandler.php:60
-#: source/Util/UserHandler.php:74 source/Util/UserHandler.php:162
+#: source/Util/UserHandler.php:81 source/Util/UserHandler.php:177
 #, php-format
 msgid "Affiliate Application for %s"
 msgstr ""
@@ -2235,7 +2235,7 @@ msgid "[%s] Your username and password for Affiliate Manager"
 msgstr ""
 
 #: source/Util/EmailHandler.php:75 source/Util/UserHandler.php:22
-#: source/Util/UserHandler.php:92
+#: source/Util/UserHandler.php:99
 #, php-format
 msgid "New affiliate registration for %s: has been approved!"
 msgstr ""
@@ -2271,12 +2271,12 @@ msgid "Invalid value for amount."
 msgstr ""
 
 #: source/Util/UserHandler.php:27 source/Util/UserHandler.php:36
-#: source/Util/UserHandler.php:97 source/Util/UserHandler.php:106
+#: source/Util/UserHandler.php:104 source/Util/UserHandler.php:113
 msgid "User already has an account and is already an affiliate"
 msgstr ""
 
 #: source/Util/UserHandler.php:30 source/Util/UserHandler.php:39
-#: source/Util/UserHandler.php:100 source/Util/UserHandler.php:109
+#: source/Util/UserHandler.php:107 source/Util/UserHandler.php:116
 msgid "Log into the site with your existing account and get started."
 msgstr ""
 

@@ -137,6 +137,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = TODO2.5.9 =
 - Made some CSS specific changes to improve the appearance of the "Edit Creative" interface.
+- Made the affiliate register fields translatable in the "Affiliate Registration" tab.
 
 = 2.5.8 =
 - Fixed a bug where WordPress wasn't sending an email after a new affiliate registered.
