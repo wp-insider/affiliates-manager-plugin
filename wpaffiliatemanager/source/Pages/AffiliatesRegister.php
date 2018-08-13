@@ -21,7 +21,7 @@ class WPAM_Pages_AffiliatesRegister extends WPAM_Pages_PublicPage
 	public function processRequest($request)
 	{
                 if(is_array($request)){
-                    $request = array_map('sanitize_text_field', $request);
+                    $request = wpam_sanitize_array($request);
                 }
 		$db = new WPAM_Data_DataAccess();
 		$affiliateFields = $db->getAffiliateFieldRepository()->loadMultipleBy(

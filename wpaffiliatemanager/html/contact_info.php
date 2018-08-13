@@ -21,10 +21,12 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                 if (isset($this->viewData['request']['_' . $field->databaseField])) {
                     $value = $this->viewData['request']['_' . $field->databaseField];
                 } elseif (isset($model)) {
-                    if ($field->type == 'base')
+                    if ($field->type == 'base'){
                         $value = $model->{$field->databaseField};
-                    else
-                        $value = $model->userData[$field->databaseField];
+                    }
+                    else{
+                        $value = isset($model->userData[$field->databaseField]) ? $model->userData[$field->databaseField] : '';
+                    }
                 }
                 ?>
                 <tr>
@@ -75,8 +77,21 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                                 <select id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>">
                                 <?php wpam_html_country_code_options($value); ?>
                                 </select>
-                        <?php
-                        break;
+                                <?php
+                                break;
+                                case 'ssn':
+                                $ssn = array('', '', '');    
+                                if(is_string($value) && strlen($value) >= 9){                                 
+                                    $ssn[0] = substr($value, 0, 3);
+                                    $ssn[1] = substr($value, 3, 2);
+                                    $ssn[2] = substr($value, 5);
+                                }
+                                ?>
+                                <input type="password" size="3" maxlength="3" id="_<?php echo $field->databaseField?>[0]" name="_<?php echo $field->databaseField?>[0]" value="<?php echo $ssn[0]?>" /> -
+				<input type="password" size="2" maxlength="2" id="_<?php echo $field->databaseField?>[1]" name="_<?php echo $field->databaseField?>[1]" value="<?php echo $ssn[1]?>" /> -
+				<input type="password" size="4" maxlength="4" id="_<?php echo $field->databaseField?>[2]" name="_<?php echo $field->databaseField?>[2]" value="<?php echo $ssn[2]?>" />
+                                <?php
+                                break;
                     default: break;
                 }
                 ?>
@@ -91,7 +106,7 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                             ?>
                 <tr>
                     <td><label for="_aff_New_Password">
-    <?php _e('New Password', 'affiliates-manager'); ?>
+                    <?php _e('New Password', 'affiliates-manager'); ?>
                         </label>	
                     </td>
                     <td>

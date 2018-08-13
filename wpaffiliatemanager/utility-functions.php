@@ -88,3 +88,12 @@ function wpam_filter_from_name($name) {
     }
     return $name;
 }
+
+function wpam_sanitize_array($arr) {
+  $result = array();
+  foreach ($arr as $key => $val)
+  {
+      $result[$key] = is_array($val) ? wpam_sanitize_array($val) : sanitize_text_field($val);
+  }
+  return $result;
+}

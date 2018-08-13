@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2018-08-12 15:31+0600\n"
+"POT-Creation-Date: 2018-08-13 16:20+0600\n"
 "PO-Revision-Date: 2018-05-28 13:21+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -297,12 +297,12 @@ msgid "Bounty Type"
 msgstr ""
 
 #: html/admin/affiliate_detail.php:427
-#: html/admin/settings/settings_general.php:161 html/contact_info.php:164
+#: html/admin/settings/settings_general.php:161 html/contact_info.php:179
 msgid "Percentage of Sales"
 msgstr ""
 
 #: html/admin/affiliate_detail.php:428
-#: html/admin/settings/settings_general.php:162 html/contact_info.php:165
+#: html/admin/settings/settings_general.php:162 html/contact_info.php:180
 msgid "Fixed Amount per Sale"
 msgstr ""
 
@@ -432,7 +432,7 @@ msgstr ""
 
 #: html/admin/affiliate_detail.php:563
 #: html/affiliate_cp_payment_details_form.php:69
-#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:115
+#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:130
 msgid "Payment Details"
 msgstr ""
 
@@ -1442,18 +1442,18 @@ msgid ""
 msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:79
-#: html/affiliate_cp_payment_details_simple.php:23 html/contact_info.php:121
+#: html/affiliate_cp_payment_details_simple.php:23 html/contact_info.php:136
 msgid "Method"
 msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:96
-#: html/affiliate_cp_payment_details_simple.php:40 html/contact_info.php:150
+#: html/affiliate_cp_payment_details_simple.php:40 html/contact_info.php:165
 msgid "PayPal E-Mail Address"
 msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:109
 #: html/affiliate_cp_payment_details_simple.php:53
-#: source/Util/AffiliateFormHelper.php:151
+#: source/Util/AffiliateFormHelper.php:153
 msgid "Paper Check"
 msgstr ""
 
@@ -1467,37 +1467,37 @@ msgid "Mail to Address On Record"
 msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:143
-#: html/affiliate_cp_payment_details_form.php:166
+#: html/affiliate_cp_payment_details_form.php:168
 #: html/affiliate_cp_payment_details_simple.php:76
 msgid "Recipient"
 msgstr ""
 
-#: html/affiliate_cp_payment_details_form.php:170
+#: html/affiliate_cp_payment_details_form.php:172
 msgid "Address 1"
 msgstr ""
 
-#: html/affiliate_cp_payment_details_form.php:174
+#: html/affiliate_cp_payment_details_form.php:176
 msgid "Address 2"
 msgstr ""
 
-#: html/affiliate_cp_payment_details_form.php:178
+#: html/affiliate_cp_payment_details_form.php:180
 msgid "City"
 msgstr ""
 
-#: html/affiliate_cp_payment_details_form.php:182
+#: html/affiliate_cp_payment_details_form.php:184
 msgid "Country"
 msgstr ""
 
-#: html/affiliate_cp_payment_details_form.php:192
+#: html/affiliate_cp_payment_details_form.php:194
 msgid "State"
 msgstr ""
 
-#: html/affiliate_cp_payment_details_form.php:202
+#: html/affiliate_cp_payment_details_form.php:204
 msgid "Postal Code"
 msgstr ""
 
-#: html/affiliate_cp_payment_details_form.php:216
-#: html/affiliate_cp_payment_details_simple.php:99
+#: html/affiliate_cp_payment_details_form.php:218
+#: html/affiliate_cp_payment_details_simple.php:101
 msgid "Submit Payment Details"
 msgstr ""
 
@@ -1551,7 +1551,7 @@ msgid ""
 "register again. Simply go to the affiliate portal and start referring users."
 msgstr ""
 
-#: html/affiliate_register_form.php:25 html/contact_info.php:191
+#: html/affiliate_register_form.php:25 html/contact_info.php:206
 msgid "* Required fields"
 msgstr ""
 
@@ -1587,40 +1587,40 @@ msgstr ""
 msgid "Contact Information"
 msgstr ""
 
-#: html/contact_info.php:86
+#: html/contact_info.php:101
 #, php-format
 msgid ""
 "There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s"
 "\">Cancel</a>"
 msgstr ""
 
-#: html/contact_info.php:94
+#: html/contact_info.php:109
 msgid "New Password"
 msgstr ""
 
-#: html/contact_info.php:103
+#: html/contact_info.php:118
 msgid "Repeat New Password"
 msgstr ""
 
-#: html/contact_info.php:159
+#: html/contact_info.php:174
 msgid "Bounty Type *"
 msgstr ""
 
-#: html/contact_info.php:176
+#: html/contact_info.php:191
 #, php-format
 msgid "Bounty Rate (%s per Sale) *"
 msgstr ""
 
-#: html/contact_info.php:176
+#: html/contact_info.php:191
 #, php-format
 msgid "Bounty Rate (% of Sale) *"
 msgstr ""
 
-#: html/contact_info.php:193
+#: html/contact_info.php:208
 msgid "+ Custom fields"
 msgstr ""
 
-#: html/contact_info.php:197
+#: html/contact_info.php:212
 msgid "Save Changes"
 msgstr ""
 
@@ -2203,19 +2203,19 @@ msgstr ""
 msgid "invalid refkey format. (length=%s)"
 msgstr ""
 
-#: source/Util/AffiliateFormHelper.php:93
+#: source/Util/AffiliateFormHelper.php:95
 msgid "is a blocked e-mail "
 msgstr ""
 
-#: source/Util/AffiliateFormHelper.php:95
+#: source/Util/AffiliateFormHelper.php:97
 msgid "is in use"
 msgstr ""
 
-#: source/Util/AffiliateFormHelper.php:154
+#: source/Util/AffiliateFormHelper.php:156
 msgid "PayPal Transfer"
 msgstr ""
 
-#: source/Util/AffiliateFormHelper.php:157
+#: source/Util/AffiliateFormHelper.php:159
 msgid "Manual Transfer"
 msgstr ""
 
@@ -2287,6 +2287,950 @@ msgstr ""
 #: source/Validation/CountryCodeValidator.php:15
 #: source/Validation/StringValidator.php:29
 msgid "is required"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:14
+msgid "AFGHANISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:15
+msgid "ALAND ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:16
+msgid "ALBANIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:17
+msgid "ALGERIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:18
+msgid "AMERICAN SAMOA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:19
+msgid "ANDORRA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:20
+msgid "ANGOLA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:21
+msgid "ANGUILLA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:22
+msgid "ANTARCTICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:23
+msgid "ANTIGUA AND BARBUDA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:24
+msgid "ARGENTINA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:25
+msgid "ARMENIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:26
+msgid "ARUBA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:27
+msgid "AUSTRALIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:28
+msgid "AUSTRIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:29
+msgid "AZERBAIJAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:30
+msgid "BAHAMAS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:31
+msgid "BAHRAIN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:32
+msgid "BANGLADESH"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:33
+msgid "BARBADOS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:34
+msgid "BELARUS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:35
+msgid "BELGIUM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:36
+msgid "BELIZE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:37
+msgid "BENIN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:38
+msgid "BERMUDA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:39
+msgid "BHUTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:40
+msgid "BOLIVIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:41
+msgid "BOSNIA AND HERZEGOVINA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:42
+msgid "BOTSWANA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:43
+msgid "BOUVET ISLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:44
+msgid "BRAZIL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:45
+msgid "BRUNEI DARUSSALAM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:46
+msgid "BULGARIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:47
+msgid "BURKINA FASO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:48
+msgid "BURUNDI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:49
+msgid "CAMBODIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:50
+msgid "CAMEROON"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:51
+msgid "CANADA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:52
+msgid "CAPE VERDE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:53
+msgid "CAYMAN ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:54
+msgid "CENTRAL AFRICAN REPUBLIC"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:55
+msgid "CHAD"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:56
+msgid "CHILE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:57
+msgid "CHINA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:58
+msgid "CHRISTMAS ISLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:59
+msgid "COCOS (KEELING) ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:60
+msgid "COLOMBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:61
+msgid "COMOROS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:62
+msgid "CONGO (BRAZZAVILLE)"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:63
+msgid "CONGO (KINSHASA)"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:64
+msgid "COOK ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:65
+msgid "COSTA RICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:66
+msgid "CROATIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:67
+msgid "CUBA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:68
+msgid "CYPRUS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:69
+msgid "CZECH REPUBLIC"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:70
+msgid "DENMARK"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:71
+msgid "DJIBOUTI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:72
+msgid "DOMINICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:73
+msgid "DOMINICAN REPUBLIC"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:74
+msgid "ECUADOR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:75
+msgid "EGYPT"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:76
+msgid "EL SALVADOR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:77
+msgid "EQUATORIAL GUINEA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:78
+msgid "ERITREA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:79
+msgid "ESTONIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:80
+msgid "ETHIOPIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:81
+msgid "FALKLAND ISLANDS (MALVINAS)"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:82
+msgid "FAROE ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:83
+msgid "FIJI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:84
+msgid "FINLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:85
+msgid "FRANCE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:86
+msgid "FRENCH GUIANA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:87
+msgid "FRENCH POLYNESIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:88
+msgid "FRENCH SOUTHERN TERRITORIES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:89
+msgid "GABON"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:90
+msgid "GAMBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:91
+msgid "GEORGIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:92
+msgid "GERMANY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:93
+msgid "GHANA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:94
+msgid "GIBRALTAR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:95
+msgid "GREECE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:96
+msgid "GREENLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:97
+msgid "GRENADA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:98
+msgid "GUADELOUPE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:99
+msgid "GUAM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:100
+msgid "GUATEMALA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:101
+msgid "GUINEA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:102
+msgid "GUINEA-BISSAU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:103
+msgid "GUYANA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:104
+msgid "HAITI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:105
+msgid "HOLY SEE (VATICAN CITY STATE)"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:106
+msgid "HONDURAS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:107
+msgid "HONG KONG"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:108
+msgid "HUNGARY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:109
+msgid "ICELAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:110
+msgid "INDIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:111
+msgid "INDONESIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:112
+msgid "IRAN ISLAMIC REPUBLIC OF"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:113
+msgid "IRAQ"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:114
+msgid "IRELAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:115
+msgid "ISRAEL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:116
+msgid "ITALY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:117
+msgid "IVORY COAST"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:118
+msgid "JAMAICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:119
+msgid "JAPAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:120
+msgid "JORDAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:121
+msgid "KAZAKHSTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:122
+msgid "KENYA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:123
+msgid "KIRIBATI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:124
+msgid "KOREA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:125
+msgid "KOREA REPUBLIC OF"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:126
+msgid "KUWAIT"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:127
+msgid "KYRGYZSTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:128
+msgid "LAO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:129
+msgid "LATVIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:130
+msgid "LEBANON"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:131
+msgid "LESOTHO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:132
+msgid "LIBERIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:133
+msgid "LIBYAN ARAB JAMAHIRIYA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:134
+msgid "LIECHTENSTEIN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:135
+msgid "LITHUANIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:136
+msgid "LUXEMBOURG"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:137
+msgid "MACAO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:138
+msgid "MACEDONIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:139
+msgid "MADAGASCAR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:140
+msgid "MALAWI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:141
+msgid "MALAYSIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:142
+msgid "MALDIVES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:143
+msgid "MALI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:144
+msgid "MALTA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:145
+msgid "MARSHALL ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:146
+msgid "MARTINIQUE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:147
+msgid "MAURITANIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:148
+msgid "MAURITIUS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:149
+msgid "MAYOTTE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:150
+msgid "MEXICO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:151
+msgid "MICRONESIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:152
+msgid "MOLDOVA, REPUBLIC OF"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:153
+msgid "MONACO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:154
+msgid "MONGOLIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:155
+msgid "MONTENEGRO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:156
+msgid "MONTSERRAT"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:157
+msgid "MOROCCO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:158
+msgid "MOZAMBIQUE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:159
+msgid "MYANMAR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:160
+msgid "NAMIBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:161
+msgid "NAURU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:162
+msgid "NEPAL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:163
+msgid "NETHERLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:164
+msgid "NETHERLANDS ANTILLES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:165
+msgid "NEW CALEDONIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:166
+msgid "NEW ZEALAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:167
+msgid "NICARAGUA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:168
+msgid "NIGER"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:169
+msgid "NIGERIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:170
+msgid "NIUE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:171
+msgid "NORFOLK ISLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:172
+msgid "NORTHERN MARIANA ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:173
+msgid "NORWAY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:174
+msgid "OMAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:175
+msgid "PAKISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:176
+msgid "PALAU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:177
+msgid "PALESTINIAN TERRITORY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:178
+msgid "PANAMA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:179
+msgid "PAPUA NEW GUINEA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:180
+msgid "PARAGUAY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:181
+msgid "PERU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:182
+msgid "PHILIPPINES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:183
+msgid "PITCAIRN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:184
+msgid "POLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:185
+msgid "PORTUGAL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:186
+msgid "PUERTO RICO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:187
+msgid "QATAR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:188
+msgid "REUNION"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:189
+msgid "ROMANIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:190
+msgid "RUSSIAN FEDERATION"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:191
+msgid "RWANDA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:192
+msgid "SAINT HELENA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:193
+msgid "SAINT KITTS AND NEVIS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:194
+msgid "SAINT LUCIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:195
+msgid "SAINT PIERRE AND MIQUELON"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:196
+msgid "SAMOA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:197
+msgid "SAN MARINO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:198
+msgid "SAO TOME AND PRINCIPE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:199
+msgid "SAUDI ARABIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:200
+msgid "SENEGAL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:201
+msgid "SERBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:202
+msgid "SEYCHELLES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:203
+msgid "SIERRA LEONE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:204
+msgid "SINGAPORE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:205
+msgid "SLOVAKIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:206
+msgid "SLOVENIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:207
+msgid "SOLOMON ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:208
+msgid "SOMALIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:209
+msgid "SOUTH AFRICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:210
+msgid "SPAIN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:211
+msgid "SRI LANKA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:212
+msgid "SUDAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:213
+msgid "SURINAME"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:214
+msgid "SVALBARD AND JAN MAYEN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:215
+msgid "SWAZILAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:216
+msgid "SWEDEN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:217
+msgid "SWITZERLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:218
+msgid "SYRIAN ARAB REPUBLIC"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:219
+msgid "TAIWAN PROVINCE OF CHINA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:220
+msgid "TAJIKISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:221
+msgid "TANZANIA UNITED REPUBLIC OF"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:222
+msgid "THAILAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:223
+msgid "TIMOR-LESTE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:224
+msgid "TOGO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:225
+msgid "TOKELAU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:226
+msgid "TONGA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:227
+msgid "TRINIDAD AND TOBAGO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:228
+msgid "TUNISIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:229
+msgid "TURKEY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:230
+msgid "TURKMENISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:231
+msgid "TURKS AND CAICOS ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:232
+msgid "TUVALU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:233
+msgid "UGANDA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:234
+msgid "UKRAINE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:235
+msgid "UNITED ARAB EMIRATES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:236
+msgid "UNITED KINGDOM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:237
+msgid "UNITED STATES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:238
+msgid "URUGUAY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:239
+msgid "UZBEKISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:240
+msgid "VANUATU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:241
+msgid "VENEZUELA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:242
+msgid "VIETNAM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:243
+msgid "VIRGIN ISLANDS BRITISH"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:244
+msgid "VIRGIN ISLANDS U.S."
+msgstr ""
+
+#: source/Validation/CountryCodes.php:245
+msgid "WALLIS AND FUTUNA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:246
+msgid "WESTERN SAHARA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:247
+msgid "YEMEN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:248
+msgid "ZAMBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:249
+msgid "ZIMBABWE"
 msgstr ""
 
 #: source/Validation/EmailValidator.php:14

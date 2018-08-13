@@ -85,7 +85,9 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 						{
 							echo ", " .$model->addressState;
 						}?> <?php echo $model->addressZipCode?><br/>
-						<?php echo  WPAM_Validation_CountryCodes::$countryCodes[$model->addressCountry]?>
+						<?php
+                                                $countries = WPAM_Validation_CountryCodes::get_countries();
+                                                echo  $countries[$model->addressCountry]?>
 					</td>
 					</tr>
 				</tbody>

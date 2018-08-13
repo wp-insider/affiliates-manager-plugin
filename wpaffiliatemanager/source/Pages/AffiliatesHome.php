@@ -17,7 +17,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 	public function processRequest($request)
 	{
                 if(is_array($request)){
-                    $request = array_map('sanitize_text_field', $request);
+                    $request = wpam_sanitize_array($request);
                 }
 		$db = new WPAM_Data_DataAccess();
 
@@ -117,7 +117,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 	public function doAffiliateControlPanel($model, $request)
 	{
                 if(is_array($request)){
-                    $request = array_map('sanitize_text_field', $request);
+                    $request = wpam_sanitize_array($request);
                 }
 		$user = wp_get_current_user();
 		$db = new WPAM_Data_DataAccess();
@@ -152,7 +152,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 	protected function doHome( $request, $affiliate )
 	{
                 if(is_array($request)){
-                    $request = array_map('sanitize_text_field', $request);
+                    $request = wpam_sanitize_array($request);
                 }
 		$sub = isset( $request['sub'] ) ? $request['sub'] : '';
 		switch ( $sub )	{

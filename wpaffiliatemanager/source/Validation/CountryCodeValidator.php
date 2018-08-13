@@ -17,6 +17,6 @@ class WPAM_Validation_CountryCodeValidator implements WPAM_Validation_IValidator
 
 	public function isValid($value)
 	{
-		return array_key_exists($value, WPAM_Validation_CountryCodes::$countryCodes);
+		return array_key_exists($value, WPAM_Validation_CountryCodes::get_countries());
 	}
 }

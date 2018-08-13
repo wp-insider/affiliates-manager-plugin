@@ -40,7 +40,7 @@ function wpam_html_state_code_options( $fieldValue ) {
 function wpam_html_country_code_options( $fieldValue ) {
 	echo '<option value="--"></option>';
 
-	foreach ( WPAM_Validation_CountryCodes::$countryCodes as $code => $name ) {
+	foreach ( WPAM_Validation_CountryCodes::get_countries() as $code => $name ) {
 		echo '<option value="'.$code.'"';
 		if ( $fieldValue == $code )
 			echo ' selected="selected"';

@@ -6,15 +6,17 @@ class WPAM_Util_AffiliateFormHelper {
 
 		foreach ($affiliateFields as $affiliateField)
 		{
-			$request_value = $request['_'.$affiliateField->databaseField];
-			
-			if ( $affiliateField->fieldType == 'phoneNumber' )
+			$request_value = isset($request['_'.$affiliateField->databaseField]) ? $request['_'.$affiliateField->databaseField] : '';
+                        
+			if ( $affiliateField->fieldType == 'phoneNumber' ){
 				$value = $request_value;
-			else if ( $affiliateField->fieldType == 'ssn' && is_array( $request_value ) )
+                        }
+			else if ( $affiliateField->fieldType == 'ssn' && is_array( $request_value ) ){
 				$value = implode($request_value);
-			else
+                        }
+			else{
 				$value = $request_value;
-
+                        }
 			if ($affiliateField->type == 'base')
 			{
 				if ( $affiliateField->fieldType == 'email' && empty( $value ) )

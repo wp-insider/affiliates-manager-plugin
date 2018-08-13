@@ -15,7 +15,7 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 	{
                 /*
                 if(is_array($request)){
-                    $request = array_map('sanitize_text_field', $request);
+                    $request = wpam_sanitize_array($request);
                 }
                 */
 		$options = new WPAM_Options();

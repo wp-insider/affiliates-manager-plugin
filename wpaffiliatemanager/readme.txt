@@ -135,9 +135,12 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.5.9 =
+= 2.5.9 =
 - Made some CSS specific changes to improve the appearance of the "Edit Creative" interface.
 - Made the affiliate register fields translatable in the "Affiliate Registration" tab.
+- Made the country names translatable.
+- Fixed the "Undefined index" warning notice when saving an email address.
+- Fixed an issue where submitting a social security number would cause a formatting error.
 
 = 2.5.8 =
 - Fixed a bug where WordPress wasn't sending an email after a new affiliate registered.
