@@ -380,7 +380,7 @@ $user = $this->viewData['user'];
 		});
 
 		jQuery("#unblockButton").click(function() {
-			showConfirmDialog('<?php _e( 'Are you sure you wish to unblock this affiliate?<br>User will become DECLINED.', 'affiliates-manager' ) ?>', '<?php _e( 'Yes, UNBLOCK.', 'affiliates-manager' ) ?>', function() {
+			showConfirmDialog("<?php _e( 'Are you sure you wish to unblock this affiliate?<br>User will become DECLINED.', 'affiliates-manager' ) ?>", '<?php _e( 'Yes, UNBLOCK.', 'affiliates-manager' ) ?>', function() {
 				doJsonRequest({
 					handler : 'declineApplication',
 					affiliateId : <?php echo $model->affiliateId?>

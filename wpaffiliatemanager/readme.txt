@@ -135,6 +135,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= TODO2.6.0 =
+- Fixed an issue where the affiliate "approve" button would cause an error for Italian translation.
+
 = 2.5.9 =
 - Made some CSS specific changes to improve the appearance of the "Edit Creative" interface.
 - Made the affiliate register fields translatable in the "Affiliate Registration" tab.
