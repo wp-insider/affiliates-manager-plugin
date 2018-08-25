@@ -137,6 +137,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = TODO2.6.0 =
 - Fixed an issue where the affiliate "approve" button would cause an error for Italian translation.
+- Fixed an issue that was causing this warning on some servers: count() Parameter must be an array or an object that implements Countable in /affiliates-manager/source/Validation/ValidatorResult.php on line 7
 
 = 2.5.9 =
 - Made some CSS specific changes to improve the appearance of the "Edit Creative" interface.

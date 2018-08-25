@@ -6,7 +6,7 @@ class WPAM_Validation_ValidatorResult
 	public function getErrors() { return $this->errors; }
 	public function getIsValid() { return count($this->errors) == 0; }
 
-	private $errors;
+	private $errors = array();
 
 	public function addError(WPAM_Validation_ValidatorError $error)
 	{
