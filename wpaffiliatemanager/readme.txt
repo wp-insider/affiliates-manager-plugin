@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal  
 Requires at least: 3.5
 Tested up to: 4.9
-Stable tag: 2.5.9
+Stable tag: 2.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -135,9 +135,12 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= TODO2.6.0 =
+= 2.6.0 =
 - Fixed an issue where the affiliate "approve" button would cause an error for Italian translation.
-- Fixed an issue that was causing this warning on some servers: count() Parameter must be an array or an object that implements Countable in /affiliates-manager/source/Validation/ValidatorResult.php on line 7
+- Fixed an issue that was causing this warning on some servers: count() Parameter must be an array or an object that implements Countable in /affiliates-manager/source/Validation/ValidatorResult.php on line 7.
+- Added an option for affiliates to generate referral URLs from their dashboard.
+- Integrated LifterLMS with affiliates manager plugin: https://wpaffiliatemanager.com/affiliates-manager-lifterlms-integration/
+- Integrated ActiveCampaign with affiliates manager plugin: https://wpaffiliatemanager.com/signup-affiliates-activecampaign-list/
 
 = 2.5.9 =
 - Made some CSS specific changes to improve the appearance of the "Edit Creative" interface.

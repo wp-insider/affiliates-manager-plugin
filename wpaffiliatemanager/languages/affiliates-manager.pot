@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2018-08-13 16:20+0600\n"
+"POT-Creation-Date: 2018-08-29 18:39+0600\n"
 "PO-Revision-Date: 2018-05-28 13:21+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -497,7 +497,7 @@ msgstr ""
 #: html/admin/creatives_detail.php:248 html/admin/manage_creatives.php:167
 #: html/admin/settings/settings_messaging.php:86
 #: html/admin/settings/settings_registration.php:440
-#: html/affiliate_creative_list.php:72 html/transaction_table.php:45
+#: html/affiliate_creative_list.php:90 html/transaction_table.php:45
 #: html/transaction_table.php:60
 msgid "Type"
 msgstr ""
@@ -620,7 +620,7 @@ msgstr ""
 #: html/admin/creative_update_form.php:115 html/admin/creatives_detail.php:244
 #: html/admin/manage_creatives.php:168
 #: html/admin/settings/settings_messaging.php:85
-#: html/affiliate_creative_list.php:73
+#: html/affiliate_creative_list.php:91
 msgid "Name"
 msgstr ""
 
@@ -1509,11 +1509,28 @@ msgstr ""
 msgid "Your Affiliate-Specific HTML snippet"
 msgstr ""
 
-#: html/affiliate_creative_list.php:62
+#: html/affiliate_creative_list.php:66
 msgid "Your Affiliate Link Using Affiliate ID"
 msgstr ""
 
-#: html/affiliate_creative_list.php:67
+#: html/affiliate_creative_list.php:70
+msgid "Referral URL Generator"
+msgstr ""
+
+#: html/affiliate_creative_list.php:72
+msgid ""
+"Enter any URL from this site in the form below to generate a referral link"
+msgstr ""
+
+#: html/affiliate_creative_list.php:77
+msgid "Below is your referral URL (You can copy it and share anywhere)"
+msgstr ""
+
+#: html/affiliate_creative_list.php:81
+msgid "Generate Referral URL"
+msgstr ""
+
+#: html/affiliate_creative_list.php:85
 msgid "The following creatives are available for publication."
 msgstr ""
 
