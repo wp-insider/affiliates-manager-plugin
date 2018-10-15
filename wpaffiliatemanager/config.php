@@ -35,6 +35,7 @@ class WPAM_PluginConfig
         public static $AffHomeMsg = 'wpam_aff_home_msg';
         public static $AffLandingPageURL = 'wpam_landing_page';
         public static $AffTncPageURL = 'wpam_aff_tnc_page';
+        public static $DisableOwnReferrals = 'wpam_disable_own_referrals';
 	// paypal
 	public static $PaypalMassPayEnabledOption = 'wpam_paypal_mass_pay_enabled';
 	public static $PaypalAPIUserOption = 'wpam_paypal_api_user';

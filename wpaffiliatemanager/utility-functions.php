@@ -97,3 +97,15 @@ function wpam_sanitize_array($arr) {
   }
   return $result;
 }
+
+function wpam_check_if_buyer_is_referrer($aff_id, $buyer_email) {
+    global $wpdb;
+    $query = "SELECT * FROM ".WPAM_AFFILIATES_TBL." WHERE affiliateId = %d";        
+    $affiliate = $wpdb->get_row($wpdb->prepare($query, $aff_id));
+    if($affiliate != null) {
+        if($affiliate->email == $buyer_email || $affiliate->paypalEmail == $buyer_email) {
+            return true;
+        }
+    }
+    return false;
+}

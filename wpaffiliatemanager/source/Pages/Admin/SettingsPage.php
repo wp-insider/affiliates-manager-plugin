@@ -189,6 +189,11 @@ class WPAM_Pages_Admin_SettingsPage {
             
             if (isset($request['AffAdvancedSettings'])) {    //Advanced Settings options submitted
                 update_option(WPAM_PluginConfig::$AffLandingPageURL, $request['affLandingPage']);
+                if (isset($request['disableOwnReferrals'])) {
+                    update_option(WPAM_PluginConfig::$DisableOwnReferrals, 1);
+                } else {
+                    update_option(WPAM_PluginConfig::$DisableOwnReferrals, 0);
+                }
             }
 
             return $this->getSettingsForm(NULL, "Settings updated.");
@@ -235,6 +240,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['affLoginPage'] = isset($request['affLoginPage']) ? $request['affLoginPage'] : '';
             $response->viewData['request']['affTncPage'] = isset($request['affTncPage']) ? $request['affTncPage'] : '';
             $response->viewData['request']['affLandingPage'] = isset($request['affLandingPage']) ? $request['affLandingPage'] : '';
+            $response->viewData['request']['disableOwnReferrals'] = isset($request['disableOwnReferrals']) ? 1 : 0;
             $response->viewData['validationResult'] = $vr;
         } else {
             $response->viewData['request']['affhomemsg'] = get_option(WPAM_PluginConfig::$AffHomeMsg);
@@ -264,6 +270,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['affLoginPage'] = get_option(WPAM_PluginConfig::$AffLoginPageURL);
             $response->viewData['request']['affTncPage'] = get_option(WPAM_PluginConfig::$AffTncPageURL);
             $response->viewData['request']['affLandingPage'] = get_option(WPAM_PluginConfig::$AffLandingPageURL);
+            $response->viewData['request']['disableOwnReferrals'] = get_option(WPAM_PluginConfig::$DisableOwnReferrals);
         }
 
         if ($message !== NULL)

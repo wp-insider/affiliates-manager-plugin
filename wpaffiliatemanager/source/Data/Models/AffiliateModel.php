@@ -172,11 +172,17 @@ class WPAM_Data_Models_AffiliateModel implements WPAM_Data_Models_IDataModel
 	}
 
 	public function getPaymentMethod() {
-                if ( $this->paymentMethod == 'paypal' )
+                if ( $this->paymentMethod == 'paypal' ){
                     return __( 'PayPal', 'affiliates-manager' );
-                elseif ( $this->paymentMethod == 'manual' )
+                }
+                elseif ( $this->paymentMethod == 'manual' ){
                     return __( 'Manual', 'affiliates-manager' );
-                //else
+                }
+                elseif ( $this->paymentMethod == 'check' ){
                     return __( 'Check', 'affiliates-manager' );
+                }
+                else{
+                    return '';
+                }
         }
 }

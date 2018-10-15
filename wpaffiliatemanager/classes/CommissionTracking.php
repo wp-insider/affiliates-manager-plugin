@@ -59,6 +59,18 @@ class WPAM_Commission_Tracking {
                 $creditAmount = $affiliate->bountyAmount;
             }
             $creditAmount = round($creditAmount, 2);
+            //checking to see if "Disable Own Referrals" option is enabled
+            if(get_option(WPAM_PluginConfig::$DisableOwnReferrals) == 1){
+                if (!empty($buyer_email)) {
+                    if (wpam_check_if_buyer_is_referrer($aff_id, $buyer_email)) {
+                        WPAM_Logger::log_debug('The buyer ('.$buyer_email.') is the referrer (affiliate id: '.$aff_id.') so this sale is not eligible for generating any commission.', 4);
+                        return;
+                    }
+                } 
+                else {
+                    WPAM_Logger::log_debug('Buyer email data is missing so the plugin cannot check for own referrals', 2);
+                }
+            }
             //checking to see if "do not record zero amount commission" option is enabled
             if(get_option(WPAM_PluginConfig::$AffdoNotRecordZeroAmtCommission) == 1){              
                 if($creditAmount <= 0){
