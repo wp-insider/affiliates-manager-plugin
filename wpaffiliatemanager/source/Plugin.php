@@ -631,6 +631,10 @@ class WPAM_Plugin {
         $settings_obj = new WPAM_Pages_Admin_SettingsPage();
         add_submenu_page($menu_parent_slug, __('Settings', 'affiliates-manager'), __('Settings', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap, 'wpam-settings', array($settings_obj, 'render_settings_page'));
 
+        //Add manage payouts submenu page
+        include_once(WPAM_BASE_DIRECTORY . "/source/Admin-menu/wpam-manage-payouts-menu.php");
+        add_submenu_page($menu_parent_slug, __("Affiliates Manager Manage Payouts", 'affiliates-manager'), __("Manage Payouts", 'affiliates-manager'), WPAM_PluginConfig::$AdminCap, 'wpam-manage-payouts', 'wpam_display_manage_payouts_menu');
+        
         //Add clicks submenu page
         include_once(WPAM_BASE_DIRECTORY . "/source/Admin-menu/wpam-clicks-menu.php");
         add_submenu_page($menu_parent_slug, __("Affiliates Manager Click Tracking", 'affiliates-manager'), __("Click Tracking", 'affiliates-manager'), WPAM_PluginConfig::$AdminCap, 'wpam-clicktracking', 'wpam_display_clicks_menu');

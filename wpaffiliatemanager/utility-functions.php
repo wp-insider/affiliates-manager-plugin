@@ -109,3 +109,24 @@ function wpam_check_if_buyer_is_referrer($aff_id, $buyer_email) {
     }
     return false;
 }
+
+function wpam_get_total_affiliates_count(){
+    global $wpdb;
+    $status = 'active';
+    $affiliates_table_name = WPAM_AFFILIATES_TBL;
+    $query = "SELECT COUNT(*) FROM $affiliates_table_name WHERE status = %s";
+    $total_items = $wpdb->get_var($wpdb->prepare($query, $status));
+    return $total_items;
+}
+
+function wpam_escape_csv_value($value) {
+    $value = str_replace('"', '""', $value); // First off escape all " and make them ""
+    $value = trim($value, ",");
+    $value = preg_replace("/[\n\r]/", " ", $value); //replace newlines with space
+    $value = preg_replace('/,/', " ", $value); //replace comma with space
+    if (preg_match('/"/', $value)) { // Check if I have any " character
+        return '"' . $value . '"'; // If I have new lines or commas escape them
+    } else {
+        return $value; // If no new lines or commas just return the value
+    }
+}

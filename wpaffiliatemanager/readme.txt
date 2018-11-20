@@ -3,8 +3,8 @@ Contributors: wp.insider, affmngr, ElementGreen
 Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal  
 Requires at least: 3.5
-Tested up to: 4.9
-Stable tag: 2.6.1
+Tested up to: 5.0
+Stable tag: 2.6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -134,6 +134,11 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 2.6.2 =
+- Added an option to generate a payout file that can be used to pay multiple affiliates with the PayPal Payouts API.
+- Added an option to generate a payout file that can used to pay multiple affiliates manually.
+- The plugin is now compatible with WordPress 5.0.
 
 = 2.6.1 =
 - Added an option that will prevent affiliates from earning a commission on their own purchases.
