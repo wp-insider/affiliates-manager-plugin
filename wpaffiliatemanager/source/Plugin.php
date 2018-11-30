@@ -152,6 +152,7 @@ class WPAM_Plugin {
         add_action('woocommerce_order_status_processing', array($this, 'WooCommerceProcessTransaction')); //Executes when a status changes to processing
         add_action('woocommerce_checkout_order_processed', array($this, 'WooCommerceProcessTransaction'));
         add_action('woocommerce_order_status_refunded', array($this, 'WooCommerceRefundTransaction'));  //Executes when a status changes to refunded
+        add_action('woocommerce_order_status_cancelled', array($this, 'WooCommerceRefundTransaction'));  //Executes when a status changes to cancelled
         //Exchange integration
         add_filter('it_exchange_add_transaction', array($this, 'onExchangeCheckout'), 10, 7);
 
@@ -630,6 +631,10 @@ class WPAM_Plugin {
         //Add settings submenu page
         $settings_obj = new WPAM_Pages_Admin_SettingsPage();
         add_submenu_page($menu_parent_slug, __('Settings', 'affiliates-manager'), __('Settings', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap, 'wpam-settings', array($settings_obj, 'render_settings_page'));
+        
+        //Add admin functions submenu page
+        include_once(WPAM_BASE_DIRECTORY . "/source/Admin-menu/wpam-admin-functions-menu.php");
+        add_submenu_page($menu_parent_slug, __("Affiliates Manager Admin Functions", 'affiliates-manager'), __("Admin Functions", 'affiliates-manager'), WPAM_PluginConfig::$AdminCap, 'wpam-admin-functions', 'wpam_display_admin_functions_menu');
 
         //Add manage payouts submenu page
         include_once(WPAM_BASE_DIRECTORY . "/source/Admin-menu/wpam-manage-payouts-menu.php");

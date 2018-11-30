@@ -120,6 +120,29 @@ class WPAM_Click_Tracking {
         return $total_clicks;
     }
     /*
+     * delete clicks data for a given period / delete all clicks data.
+     */
+    public static function delete_clicks_data_by_date($args = array()){
+        global $wpdb;
+        $table = WPAM_TRACKING_TOKENS_TBL;
+        $start_date = (isset($args['start_date']) && !empty($args['start_date'])) ? $args['start_date'] : '';
+        $end_date = (isset($args['end_date']) && !empty($args['end_date'])) ? $args['end_date'] : '';
+        $deletedb = '';
+        if(!empty($start_date) && !empty($end_date)){
+            $deletedb = "DELETE FROM $table WHERE dateCreated BETWEEN '$start_date' AND '$end_date'";
+        }
+        else if(!empty($start_date) && empty($end_date)){
+            $deletedb = "DELETE FROM $table WHERE dateCreated >= '$start_date'";
+        }
+        else if(empty($start_date) && !empty($end_date)){
+            $deletedb = "DELETE FROM $table WHERE dateCreated <= '$end_date'";
+        }
+        else{
+            $deletedb = "DELETE FROM $table";
+        }
+        $result = $wpdb->query($deletedb);
+    }
+    /*
      * Get the IP Address of the user.
      */
     public static function get_user_ip() {
