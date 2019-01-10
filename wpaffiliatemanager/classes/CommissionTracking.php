@@ -80,7 +80,7 @@ class WPAM_Commission_Tracking {
             }
             $creditAmount = apply_filters( 'wpam_credit_amount', $creditAmount, $amount, $txn_id );
             $currency = WPAM_MoneyHelper::getCurrencyCode();
-            $description = "Credit for sale of $amount $currency (PURCHASE LOG ID = $txn_id)";
+            $description = sprintf(__('Credit for sale of %s %s (PURCHASE LOG ID = %s)', 'affiliates-manager'), $amount, $currency, $txn_id);
             $query = "
             SELECT *
             FROM ".WPAM_TRANSACTIONS_TBL."
@@ -163,8 +163,10 @@ class WPAM_Commission_Tracking {
             ";
             $txn_record = $wpdb->get_row($wpdb->prepare($query, $txn_id));
             if($txn_record != null) {  //found the original commission record 
-                $description = $txn_record->description;
-                $description = str_replace("Credit", "Refund", $txn_record->description);
+                //$description = $txn_record->description;
+                //$description = str_replace("Credit", "Refund", $txn_record->description);
+                $currency = WPAM_MoneyHelper::getCurrencyCode();
+                $description = sprintf(__('Refund of %s %s (PURCHASE LOG ID = %s)', 'affiliates-manager'), $txn_record->amount, $currency, $txn_id);
                 $data = array();
                 $data['dateModified'] = date("Y-m-d H:i:s", time());
                 $data['dateCreated'] = date("Y-m-d H:i:s", time());

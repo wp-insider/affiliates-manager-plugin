@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2018-08-29 18:39+0600\n"
+"POT-Creation-Date: 2019-01-10 18:11+0600\n"
 "PO-Revision-Date: 2018-05-28 13:21+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -23,8 +23,18 @@ msgstr ""
 msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
 msgstr ""
 
-#: classes/CommissionTracking.php:105
+#: classes/CommissionTracking.php:83
+#, php-format
+msgid "Credit for sale of %s %s (PURCHASE LOG ID = %s)"
+msgstr ""
+
+#: classes/CommissionTracking.php:117
 msgid "You just earned a commission!"
+msgstr ""
+
+#: classes/CommissionTracking.php:169
+#, php-format
+msgid "Refund of %s %s (PURCHASE LOG ID = %s)"
 msgstr ""
 
 #: classes/ListAffiliatesTable.php:40 html/admin/manage_creatives.php:176
@@ -35,6 +45,7 @@ msgstr ""
 #: classes/ListAffiliatesTable.php:61 classes/ListClicksTable.php:55
 #: classes/ListCommissionTable.php:62
 #: source/Admin-menu/wpam-commission-menu.php:175
+#: source/Admin-menu/wpam-manage-payouts-menu.php:58
 msgid "Affiliate ID"
 msgstr ""
 
@@ -70,7 +81,7 @@ msgstr ""
 msgid "Last Name"
 msgstr ""
 
-#: classes/ListAffiliatesTable.php:67 source/Plugin.php:314
+#: classes/ListAffiliatesTable.php:67 source/Plugin.php:315
 msgid "Email"
 msgstr ""
 
@@ -202,6 +213,7 @@ msgid ""
 msgstr ""
 
 #: html/admin/affiliate_detail.php:188
+#: source/Admin-menu/wpam-manage-payouts-menu.php:225
 msgid "Payout"
 msgstr ""
 
@@ -621,6 +633,7 @@ msgstr ""
 #: html/admin/manage_creatives.php:168
 #: html/admin/settings/settings_messaging.php:85
 #: html/affiliate_creative_list.php:91
+#: source/Admin-menu/wpam-manage-payouts-menu.php:59
 msgid "Name"
 msgstr ""
 
@@ -914,12 +927,13 @@ msgid "Date Range:"
 msgstr ""
 
 #: html/admin/paypalpayments/select_affiliates.php:111
-msgid "from"
+#: html/transaction_table.php:29
+msgid "From Date"
 msgstr ""
 
 #: html/admin/paypalpayments/select_affiliates.php:113
 #: html/transaction_table.php:31
-msgid "to"
+msgid "To Date"
 msgstr ""
 
 #: html/admin/paypalpayments/select_affiliates.php:116
@@ -1032,6 +1046,16 @@ msgstr ""
 msgid ""
 "Your default landing page URL is <code>%s</code>. If you want to change to a "
 "different URL you can specify it here."
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:19
+msgid "Disable Own Referrals"
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:26
+msgid ""
+"If checked, your affiliates will not be able to earn a commission on their "
+"own purchases."
 msgstr ""
 
 #: html/admin/settings/settings_aff_pages.php:5
@@ -1317,7 +1341,7 @@ msgid "Available Payout Methods"
 msgstr ""
 
 #: html/admin/settings/settings_registration.php:418
-#: source/Data/Models/AffiliateModel.php:180
+#: source/Data/Models/AffiliateModel.php:182
 msgid "Check"
 msgstr ""
 
@@ -1327,7 +1351,7 @@ msgid "PayPal"
 msgstr ""
 
 #: html/admin/settings/settings_registration.php:426
-#: source/Data/Models/AffiliateModel.php:178
+#: source/Data/Models/AffiliateModel.php:179
 msgid "Manual"
 msgstr ""
 
@@ -1654,19 +1678,66 @@ msgstr ""
 msgid "No records found for the date range selected."
 msgstr ""
 
-#: html/transaction_table.php:29
-msgid "From"
-msgstr ""
-
 #: html/transaction_table.php:49 html/transaction_table.php:64
 msgid "Reference ID"
 msgstr ""
 
-#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:644
+#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:653
 msgid "Affiliates Manager Add-ons"
 msgstr ""
 
-#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:636
+#: source/Admin-menu/wpam-admin-functions-menu.php:8 source/Plugin.php:637
+msgid "Admin Functions"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:9
+msgid ""
+"The Admin Functions page lets you do various admin stuff from time to time."
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:23
+msgid "Start Date is not valid"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:34
+msgid "End Date is not valid"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:39
+msgid "Clicks data has been deleted!"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:45
+msgid "Reset Buttons"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:48
+msgid ""
+"Do you really want to delete the clicks data? This action cannot be undone."
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:49
+msgid "Start Date:"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:50
+msgid "End Date:"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:51
+msgid ""
+"Select a Start Date and an End Date to delete all clicks data within this "
+"period. If you only select a Start Date all clicks data recorded on or after "
+"this date will be deleted. If you only select an End Date all clicks data "
+"recorded up to this date will be deleted. If no date is selected all clicks "
+"data will be deleted."
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:53
+msgid "Delete Clicks Data"
+msgstr ""
+
+#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:645
 msgid "Click Tracking"
 msgstr ""
 
@@ -1750,6 +1821,130 @@ msgstr ""
 
 #: source/Admin-menu/wpam-commission-menu.php:207
 msgid "Enter the date in yyyy-mm-dd format. Example: "
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:8 source/Plugin.php:641
+msgid "Manage Payouts"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:14
+msgid "Payout Report Generated"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:26
+msgid "Affiliate Mass Payout by Outstanding Amount"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:29
+msgid "Step 1:"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:30
+msgid "Generate Report"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:31
+msgid ""
+"Hit \"Generate Report\" to get a list of all the affiliate earnings that "
+"need to be paid."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:36
+msgid "Step 2:"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:36
+msgid "Create Payment Report File"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:37
+#, php-format
+msgid ""
+"Use this to generate a PayPal payout file and a payment report CSV file. The "
+"PayPal payout file can be used in paypal to pay all your affiliates in one "
+"click. If you have never used PayPal Payouts check <a href=\"%s\" target="
+"\"_blank\">this documentation</a>."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:41
+msgid ""
+"Do you really want to mark all the outstanding payments as paid? This action "
+"cannot be undone."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:42
+msgid "Step 3:"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:42
+msgid "Mark as Paid"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:43
+msgid ""
+"After you have generated the payout report and paid all the affiliates their "
+"outstanding balance, use this button to mark all the payments as paid."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:60
+msgid "PayPal Email"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:61
+msgid "Pending Amount"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:109
+msgid "No Affiliates Found in the Database."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:112
+msgid "No Pending Payment Found."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:131
+msgid "There is no pending payment."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:146
+msgid "can't open file named 'paypal_payout.csv'"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:189
+msgid "can't open file named 'affiliate_payout_report.csv'"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:195
+msgid ""
+"Note: Please make sure that the PayPal email address field of the affiliates "
+"that are about to get paid via PayPal are not empty. PayPal payouts do not "
+"work without PayPal email address. You can ignore this warning if you are "
+"going to pay your affiliates via other means."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:198
+#, php-format
+msgid ""
+"PayPal payout file created. Download the <a href=\"%s\">PayPal Payout File</"
+"a> (Right click and choose \"Save Link As\"). You can use this file to make "
+"a PayPal mass payment and pay the commissions in one go."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:203
+#, php-format
+msgid ""
+"CSV file with outstanding affiliate commission details created. Download the "
+"<a href=\"%s\">Affiliate Payout Report File</a> (Right click and choose "
+"\"Save Link As\"). You can use this file to manually send money to your "
+"affiliates."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:215
+msgid "There is no pending payment to mark"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:230
+msgid "Marked payments as paid"
 msgstr ""
 
 #: source/Data/DatabaseInstaller.php:238
@@ -1999,7 +2194,7 @@ msgstr ""
 msgid "Edit Profile"
 msgstr ""
 
-#: source/Pages/AffiliatesHome.php:43 source/Plugin.php:315
+#: source/Pages/AffiliatesHome.php:43 source/Plugin.php:316
 msgid "Log out"
 msgstr ""
 
@@ -2113,12 +2308,12 @@ msgstr ""
 msgid "Unknown response: %s"
 msgstr ""
 
-#: source/Plugin.php:74 source/Plugin.php:607
+#: source/Plugin.php:74 source/Plugin.php:608
 msgid "Affiliate Management"
 msgstr ""
 
-#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:588
-#: source/Plugin.php:602 source/Plugin.php:607
+#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:589
+#: source/Plugin.php:603 source/Plugin.php:608
 msgid "Affiliates"
 msgstr ""
 
@@ -2134,71 +2329,79 @@ msgstr ""
 msgid "Affiliate Login"
 msgstr ""
 
-#: source/Plugin.php:311
+#: source/Plugin.php:312
 msgid "You are currently logged in"
 msgstr ""
 
-#: source/Plugin.php:313
+#: source/Plugin.php:314
 msgid "Username"
 msgstr ""
 
-#: source/Plugin.php:323
+#: source/Plugin.php:324
 msgid "Email Address"
 msgstr ""
 
-#: source/Plugin.php:325
+#: source/Plugin.php:326
 msgid "Password Lost and Found"
 msgstr ""
 
-#: source/Plugin.php:325
+#: source/Plugin.php:326
 msgid "Lost your password?"
 msgstr ""
 
-#: source/Plugin.php:370
+#: source/Plugin.php:371
 msgid "Become an affiliate"
 msgstr ""
 
-#: source/Plugin.php:371
+#: source/Plugin.php:372
 msgid "Are you interested in earning money by directing visitors to our site?"
 msgstr ""
 
-#: source/Plugin.php:373
+#: source/Plugin.php:374
 msgid "Sign up"
 msgstr ""
 
-#: source/Plugin.php:373
+#: source/Plugin.php:374
 msgid " to become an affiliate today!"
 msgstr ""
 
-#: source/Plugin.php:602
+#: source/Plugin.php:603
 msgid "Be An Affiliate"
 msgstr ""
 
-#: source/Plugin.php:632
+#: source/Plugin.php:633
 msgid "Settings"
 msgstr ""
 
-#: source/Plugin.php:636
+#: source/Plugin.php:637
+msgid "Affiliates Manager Admin Functions"
+msgstr ""
+
+#: source/Plugin.php:641
+msgid "Affiliates Manager Manage Payouts"
+msgstr ""
+
+#: source/Plugin.php:645
 msgid "Affiliates Manager Click Tracking"
 msgstr ""
 
-#: source/Plugin.php:640
+#: source/Plugin.php:649
 msgid "Affiliates Manager Commission Data"
 msgstr ""
 
-#: source/Plugin.php:640
+#: source/Plugin.php:649
 msgid "Commissions"
 msgstr ""
 
-#: source/Plugin.php:644
+#: source/Plugin.php:653
 msgid "Add-ons"
 msgstr ""
 
-#: source/Plugin.php:767
+#: source/Plugin.php:776
 msgid "Invalid JSON handler."
 msgstr ""
 
-#: source/Plugin.php:798
+#: source/Plugin.php:807
 msgid "Nonce check failed for export My Affiliates to CSV!"
 msgstr ""
 

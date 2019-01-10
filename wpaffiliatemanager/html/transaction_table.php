@@ -26,9 +26,9 @@
     <form method="post" id="dateRange" class="pure-form">
         <p class="wpam-daterange-heading"><?php _e('Date Range:', 'affiliates-manager') ?></p>
         <div class="wpam-daterange-selection">
-        <label for="from"><?php _e('From', 'affiliates-manager') ?></label>
+        <label for="from"><?php _e('From Date', 'affiliates-manager') ?></label>
         <input type="text" id="from" name="from" value="<?php echo $this->viewData['from']; ?>"/>
-        <label for="to"><?php _e('to', 'affiliates-manager') ?></label>
+        <label for="to"><?php _e('To Date', 'affiliates-manager') ?></label>
         <input type="text" id="to" name="to" value="<?php echo $this->viewData['to']; ?>"/>
         </div>
         <div class="wpam-daterange-action-buttons">

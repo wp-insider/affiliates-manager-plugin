@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2018-05-28 13:21+0600\n"
-"PO-Revision-Date: 2018-06-19 11:02+0300\n"
+"POT-Creation-Date: 2019-01-10 18:14+0600\n"
+"PO-Revision-Date: 2019-01-10 18:14+0600\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: hu_HU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.8\n"
+"X-Generator: Poedit 1.8.13\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: hu_HU\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: boot-strap.php:38
@@ -26,6 +26,20 @@ msgstr ""
 "WordPress Affiliate Manager WordPress 3.5-öt vagy magasabb verziót követel "
 "meg."
 
+#: classes/CommissionTracking.php:83
+#, php-format
+msgid "Credit for sale of %s %s (PURCHASE LOG ID = %s)"
+msgstr ""
+
+#: classes/CommissionTracking.php:117
+msgid "You just earned a commission!"
+msgstr ""
+
+#: classes/CommissionTracking.php:169
+#, php-format
+msgid "Refund of %s %s (PURCHASE LOG ID = %s)"
+msgstr ""
+
 #: classes/ListAffiliatesTable.php:40 html/admin/manage_creatives.php:176
 #: html/admin/paypalpayments/pending_payments.php:23
 msgid "View"
@@ -34,10 +48,11 @@ msgstr "Nézet"
 #: classes/ListAffiliatesTable.php:61 classes/ListClicksTable.php:55
 #: classes/ListCommissionTable.php:62
 #: source/Admin-menu/wpam-commission-menu.php:175
+#: source/Admin-menu/wpam-manage-payouts-menu.php:58
 msgid "Affiliate ID"
 msgstr "Partnerazonosító"
 
-#: classes/ListAffiliatesTable.php:62 html/admin/creatives_detail.php:239
+#: classes/ListAffiliatesTable.php:62 html/admin/creatives_detail.php:240
 #: html/admin/manage_creatives.php:165
 #: html/admin/paypalpayments/pending_payments.php:16
 #: html/admin/paypalpayments/view_payment_detail.php:61
@@ -69,7 +84,7 @@ msgstr "Keresztnév"
 msgid "Last Name"
 msgstr "Vezetéknév"
 
-#: classes/ListAffiliatesTable.php:67 source/Plugin.php:302
+#: classes/ListAffiliatesTable.php:67 source/Plugin.php:315
 msgid "Email"
 msgstr "Email cím"
 
@@ -87,17 +102,28 @@ msgstr "Csatlakozás dátuma"
 msgid "Website"
 msgstr "Honlap"
 
-#: classes/ListAffiliatesTable.php:97 classes/ListCommissionTable.php:91
+#: classes/ListAffiliatesTable.php:86 classes/ListClicksTable.php:73
+#: classes/ListCommissionTable.php:80 html/admin/manage_creatives.php:177
+msgid "Delete"
+msgstr "Töröl"
+
+#: classes/ListAffiliatesTable.php:97 classes/ListClicksTable.php:84
+#: classes/ListCommissionTable.php:91
 msgid "Error! You need to select multiple records to perform a bulk action!"
 msgstr "Hiba! Tömeges művelethez több rekordot kell kiválasztania!"
 
-#: classes/ListAffiliatesTable.php:115 classes/ListCommissionTable.php:100
+#: classes/ListAffiliatesTable.php:115 classes/ListClicksTable.php:93
+#: classes/ListCommissionTable.php:100
 msgid "Selected records deleted successfully!"
 msgstr "Kiválasztott rekordok sikeresen törölve."
 
 #: classes/ListAffiliatesTable.php:139 classes/ListCommissionTable.php:116
 msgid "Selected record deleted successfully!"
 msgstr "Kiválasztott rekord sikeresen törölve."
+
+#: classes/ListClicksTable.php:39
+msgid "No Clicks Found!"
+msgstr ""
 
 #: classes/ListClicksTable.php:53 classes/ListCommissionTable.php:60
 msgid "Row ID"
@@ -119,6 +145,10 @@ msgstr "Küldő URL"
 #: classes/ListClicksTable.php:58
 msgid "IP Address"
 msgstr "IP cím"
+
+#: classes/ListCommissionTable.php:46
+msgid "No Commission Data Found!"
+msgstr ""
 
 #: classes/ListCommissionTable.php:63
 #: html/admin/paypalpayments/pending_payments.php:13
@@ -188,11 +218,12 @@ msgstr ""
 "címről, vagy engedélyezni fog egy későbbi időpontban történő regisztrációt?"
 
 #: html/admin/affiliate_detail.php:188
+#: source/Admin-menu/wpam-manage-payouts-menu.php:225
 msgid "Payout"
 msgstr "Kifizetés"
 
 #: html/admin/affiliate_detail.php:219 html/admin/affiliate_detail.php:236
-#: html/admin/creative_update_form.php:82 html/admin/creatives_detail.php:114
+#: html/admin/creative_update_form.php:35 html/admin/creatives_detail.php:114
 #: html/admin/creatives_detail.php:137 html/admin/manage_creatives.php:38
 #: html/affiliate_creative_detail.php:19
 #: source/Pages/Admin/MyAffiliatesPage.php:166
@@ -285,12 +316,12 @@ msgid "Bounty Type"
 msgstr "Jutalom típusa"
 
 #: html/admin/affiliate_detail.php:427
-#: html/admin/settings/settings_general.php:161 html/contact_info.php:159
+#: html/admin/settings/settings_general.php:161 html/contact_info.php:179
 msgid "Percentage of Sales"
 msgstr "Eladás százaléka"
 
 #: html/admin/affiliate_detail.php:428
-#: html/admin/settings/settings_general.php:162 html/contact_info.php:160
+#: html/admin/settings/settings_general.php:162 html/contact_info.php:180
 msgid "Fixed Amount per Sale"
 msgstr "Fix összeg."
 
@@ -385,7 +416,7 @@ msgstr "Elfogad"
 msgid "Decline"
 msgstr "Elutasít"
 
-#: html/admin/affiliate_detail.php:519 html/admin/creatives_detail.php:212
+#: html/admin/affiliate_detail.php:519 html/admin/creatives_detail.php:213
 msgid "Activate"
 msgstr "Aktivál"
 
@@ -401,8 +432,8 @@ msgstr "Tiltást eltávolít"
 msgid "Block"
 msgstr "Letilt"
 
-#: html/admin/affiliate_detail.php:531 html/admin/creative_update_form.php:131
-#: html/admin/creatives_detail.php:227 html/admin/settings/settings.php:46
+#: html/admin/affiliate_detail.php:531 html/admin/creative_update_form.php:108
+#: html/admin/creatives_detail.php:228 html/admin/settings/settings.php:46
 msgid "General"
 msgstr "Általános"
 
@@ -420,7 +451,7 @@ msgstr "Fiók státusz"
 
 #: html/admin/affiliate_detail.php:563
 #: html/affiliate_cp_payment_details_form.php:69
-#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:115
+#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:130
 msgid "Payment Details"
 msgstr "Fizetési részletek"
 
@@ -476,16 +507,16 @@ msgstr "Kifizetést elvégez"
 msgid "Apply Manual Adjustment"
 msgstr "Kézi korrekciót elvégez"
 
-#: html/admin/affiliate_detail.php:625 html/admin/creative_update_form.php:108
+#: html/admin/affiliate_detail.php:625 html/admin/creative_update_form.php:85
 #: html/admin/creative_update_success.php:4 html/impressions_table.php:8
 msgid "Creative"
 msgstr "Promóciós eszközök"
 
-#: html/admin/affiliate_detail.php:626 html/admin/creative_update_form.php:155
-#: html/admin/creatives_detail.php:247 html/admin/manage_creatives.php:167
+#: html/admin/affiliate_detail.php:626 html/admin/creative_update_form.php:132
+#: html/admin/creatives_detail.php:248 html/admin/manage_creatives.php:167
 #: html/admin/settings/settings_messaging.php:86
 #: html/admin/settings/settings_registration.php:440
-#: html/affiliate_creative_list.php:72 html/transaction_table.php:45
+#: html/affiliate_creative_list.php:90 html/transaction_table.php:45
 #: html/transaction_table.php:60
 msgid "Type"
 msgstr "Típus"
@@ -583,7 +614,15 @@ msgstr "Partnerrekord exportálása"
 msgid "Export to CSV"
 msgstr "Exportálás CSV-be"
 
-#: html/admin/creative_update_form.php:103
+#: html/admin/creative_update_form.php:54
+msgid "Upload a File or Select from Media Library"
+msgstr ""
+
+#: html/admin/creative_update_form.php:56
+msgid "Insert"
+msgstr ""
+
+#: html/admin/creative_update_form.php:80
 msgid ""
 "This list contains images from the media library. If you upload a new image "
 "it is added to the media library and you can reuse images on multiple "
@@ -598,60 +637,61 @@ msgstr ""
 "kijelölt média könyvtár képét erre a promó linkre. Azonban a régi kép "
 "továbbra is megmarad a médiatárban későbbi használatra."
 
-#: html/admin/creative_update_form.php:108
-#: html/admin/creative_update_success.php:4 html/admin/creatives_detail.php:216
+#: html/admin/creative_update_form.php:85
+#: html/admin/creative_update_success.php:4 html/admin/creatives_detail.php:217
 msgid "Edit"
 msgstr "Szerkesztés"
 
-#: html/admin/creative_update_form.php:108
+#: html/admin/creative_update_form.php:85
 #: html/admin/creative_update_success.php:4
 msgid "New"
 msgstr "Új"
 
-#: html/admin/creative_update_form.php:138 html/admin/creatives_detail.php:243
+#: html/admin/creative_update_form.php:115 html/admin/creatives_detail.php:244
 #: html/admin/manage_creatives.php:168
 #: html/admin/settings/settings_messaging.php:85
-#: html/affiliate_creative_list.php:73
+#: html/affiliate_creative_list.php:91
+#: source/Admin-menu/wpam-manage-payouts-menu.php:59
 msgid "Name"
 msgstr "Név"
 
-#: html/admin/creative_update_form.php:148 html/admin/creatives_detail.php:259
+#: html/admin/creative_update_form.php:125 html/admin/creatives_detail.php:260
 msgid "Landing Page"
 msgstr "Landolási oldal"
 
-#: html/admin/creative_update_form.php:175
+#: html/admin/creative_update_form.php:152
 msgid "Image Parameters"
 msgstr "Kép paraméterei"
 
-#: html/admin/creative_update_form.php:181
-msgid "New Image File"
-msgstr "Új kép akta"
+#: html/admin/creative_update_form.php:166
+msgid "Image URL"
+msgstr ""
 
-#: html/admin/creative_update_form.php:192
-msgid "Image File from Media Library"
-msgstr "Kép akta a Médiakönyvtárból"
+#: html/admin/creative_update_form.php:168
+msgid "Upload File"
+msgstr ""
 
-#: html/admin/creative_update_form.php:202
-msgid "Preview:"
-msgstr "Előnézet:"
+#: html/admin/creative_update_form.php:169
+msgid "The URL of the image to be used for the creative."
+msgstr ""
 
-#: html/admin/creative_update_form.php:213
-#: html/admin/creative_update_form.php:248 html/admin/creatives_detail.php:280
-#: html/admin/creatives_detail.php:303 html/affiliate_creative_detail.php:65
-#: html/affiliate_creative_detail.php:88
+#: html/admin/creative_update_form.php:175
+#: html/admin/creative_update_form.php:210 html/admin/creatives_detail.php:281
+#: html/admin/creatives_detail.php:311 html/affiliate_creative_detail.php:65
+#: html/affiliate_creative_detail.php:95
 msgid "Alt Text"
 msgstr "Alt szöveg"
 
-#: html/admin/creative_update_form.php:229
+#: html/admin/creative_update_form.php:191
 msgid "Text Link Parameters"
 msgstr "Szöveglink paraméterei"
 
-#: html/admin/creative_update_form.php:237 html/admin/creatives_detail.php:276
+#: html/admin/creative_update_form.php:199 html/admin/creatives_detail.php:277
 #: html/affiliate_creative_detail.php:61
 msgid "Link Text"
 msgstr "Link szövege"
 
-#: html/admin/creative_update_form.php:261
+#: html/admin/creative_update_form.php:223
 msgid "Save Creative"
 msgstr "Promóanyag elmentése"
 
@@ -667,7 +707,7 @@ msgstr "Új promóanyag létrehozva. A promó még nem aktív."
 msgid "Return to Creatives"
 msgstr "Visszatér a promóanyagokhoz"
 
-#: html/admin/creatives_detail.php:8 html/admin/creatives_detail.php:297
+#: html/admin/creatives_detail.php:8 html/admin/creatives_detail.php:298
 #: html/affiliate_creative_detail.php:82
 msgid "Image"
 msgstr "Kép"
@@ -696,24 +736,24 @@ msgstr "Biztos, hogy akarsz "
 msgid "this creative?"
 msgstr "ezt a promót?"
 
-#: html/admin/creatives_detail.php:174 html/admin/creatives_detail.php:215
+#: html/admin/creatives_detail.php:174 html/admin/creatives_detail.php:216
 #: html/affiliate_creative_detail.php:32 html/affiliate_creative_detail.php:45
 msgid "Preview"
 msgstr "Előnézet"
 
-#: html/admin/creatives_detail.php:194 html/affiliate_creative_detail.php:43
+#: html/admin/creatives_detail.php:195 html/affiliate_creative_detail.php:43
 msgid "Creative:"
 msgstr "Promóciós anyag"
 
-#: html/admin/creatives_detail.php:206 html/admin/manage_creatives.php:163
+#: html/admin/creatives_detail.php:207 html/admin/manage_creatives.php:163
 msgid "Actions"
 msgstr "Akciók"
 
-#: html/admin/creatives_detail.php:210
+#: html/admin/creatives_detail.php:211
 msgid "Deactivate"
 msgstr "Deaktivál"
 
-#: html/admin/creatives_detail.php:234 html/admin/manage_creatives.php:164
+#: html/admin/creatives_detail.php:235 html/admin/manage_creatives.php:164
 #: html/admin/paypalpayments/pending_payments.php:10
 #: html/admin/paypalpayments/view_payment_detail.php:57
 #: html/impressions_table.php:6 html/transaction_table.php:44
@@ -721,11 +761,11 @@ msgstr "Deaktivál"
 msgid "ID"
 msgstr "Azonosító"
 
-#: html/admin/creatives_detail.php:271 html/affiliate_creative_detail.php:56
+#: html/admin/creatives_detail.php:272 html/affiliate_creative_detail.php:56
 msgid "Text Link Properties"
 msgstr "Szöveglink jellemzők "
 
-#: html/admin/creatives_detail.php:292 html/affiliate_creative_detail.php:77
+#: html/admin/creatives_detail.php:293 html/affiliate_creative_detail.php:77
 msgid "Image Properties"
 msgstr "Kép jellemzők"
 
@@ -764,10 +804,6 @@ msgstr "Új létrehozása"
 #: html/admin/manage_creatives.php:166
 msgid "Created"
 msgstr "Létrehozva"
-
-#: html/admin/manage_creatives.php:177
-msgid "Delete"
-msgstr "Töröl"
 
 #: html/admin/paypalpayments/home.php:17
 msgid "New Mass Payment"
@@ -913,12 +949,14 @@ msgid "Date Range:"
 msgstr "Dátumtartomány"
 
 #: html/admin/paypalpayments/select_affiliates.php:111
-msgid "from"
-msgstr "-tól"
+#: html/transaction_table.php:29
+msgid "From Date"
+msgstr ""
 
 #: html/admin/paypalpayments/select_affiliates.php:113
-msgid "to"
-msgstr "-ig"
+#: html/transaction_table.php:31
+msgid "To Date"
+msgstr ""
 
 #: html/admin/paypalpayments/select_affiliates.php:116
 #: html/transaction_table.php:36
@@ -1033,6 +1071,16 @@ msgid ""
 msgstr ""
 "Az alap landolási oldal URL <code>%s</code>. Ha meg akarod változtatni egy "
 "másik URL-re, azt itt teheted meg."
+
+#: html/admin/settings/settings_advanced.php:19
+msgid "Disable Own Referrals"
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:26
+msgid ""
+"If checked, your affiliates will not be able to earn a commission on their "
+"own purchases."
+msgstr ""
 
 #: html/admin/settings/settings_aff_pages.php:5
 msgid "Home Page"
@@ -1203,14 +1251,12 @@ msgstr ""
 "Segítséget keresel? Tekintsd meg a mellékelt, lépésenkénti útmutatót a "
 "PayPal Tömeges Kifizetés használatához:"
 
-#: html/admin/settings/settings_payment.php:20
+#: html/admin/settings/settings_payment.php:18
 #, php-format
-msgid "<a href=\"%s\" target=\"_blank\">How to Setup PayPal Mass Pay</a> (PDF)"
+msgid "<a href=\"%s\" target=\"_blank\">How to Setup PayPal Mass Pay</a>"
 msgstr ""
-"<a href=\"%s\" target=\"_blank\">Hogyan állítsuk be a PayPal tömeges "
-"kifizetést</a> (PDF)"
 
-#: html/admin/settings/settings_payment.php:29
+#: html/admin/settings/settings_payment.php:26
 msgid ""
 "Enable PayPal Mass Pay &#0153;<br /><small>NOTE: Requires a PayPal Premier "
 "or PayPal Business account</small>"
@@ -1218,36 +1264,36 @@ msgstr ""
 "PayPal tömeges kifizetés bekapcsolása&#0153;<br /><small>MEGJEGYZÉS: "
 "Használata PayPal Premier vagy PayPal üzleti fiókot igényel</small>"
 
-#: html/admin/settings/settings_payment.php:32
+#: html/admin/settings/settings_payment.php:29
 msgid "PayPal API Configuration"
 msgstr "PayPal API konfiguráció"
 
-#: html/admin/settings/settings_payment.php:35
+#: html/admin/settings/settings_payment.php:32
 msgid "API Username"
 msgstr "API felhasználói név"
 
-#: html/admin/settings/settings_payment.php:39
+#: html/admin/settings/settings_payment.php:36
 msgid "API Password"
 msgstr "API jelszó"
 
-#: html/admin/settings/settings_payment.php:43
+#: html/admin/settings/settings_payment.php:40
 msgid "Signature"
 msgstr "Aláírás"
 
-#: html/admin/settings/settings_payment.php:47
+#: html/admin/settings/settings_payment.php:44
 msgid "API End Point"
 msgstr "API végpont"
 
-#: html/admin/settings/settings_payment.php:47
+#: html/admin/settings/settings_payment.php:44
 msgid "WARNING: Set to LIVE if you don't know what this is for!"
 msgstr "FIGYELMEZTETÉS: Ha nem tudod, hogy ez mire való, állítsd be ÉLŐ-re!"
 
-#: html/admin/settings/settings_payment.php:50
+#: html/admin/settings/settings_payment.php:47
 #, php-format
 msgid "Live (%s)"
 msgstr "Élő (%s)"
 
-#: html/admin/settings/settings_payment.php:51
+#: html/admin/settings/settings_payment.php:48
 #, php-format
 msgid "Sandbox - TESTING (%s)"
 msgstr "Tesztkörnyezet - TESZTELÉS (%s)"
@@ -1336,7 +1382,7 @@ msgid "Available Payout Methods"
 msgstr "Elérhető kifizetési módszerek"
 
 #: html/admin/settings/settings_registration.php:418
-#: source/Data/Models/AffiliateModel.php:180
+#: source/Data/Models/AffiliateModel.php:182
 msgid "Check"
 msgstr "csekk"
 
@@ -1346,7 +1392,7 @@ msgid "PayPal"
 msgstr "PayPal"
 
 #: html/admin/settings/settings_registration.php:426
-#: source/Data/Models/AffiliateModel.php:178
+#: source/Data/Models/AffiliateModel.php:179
 msgid "Manual"
 msgstr "Kézi"
 
@@ -1440,17 +1486,15 @@ msgid "This Month"
 msgstr "Ezen hónap"
 
 #: html/affiliate_cp_payment_details_confirmed.php:3
-msgid "Your payment details have been submitted"
-msgstr "Fizetési adataidat benyújtottuk"
+msgid "Your payment details have been submitted."
+msgstr ""
 
 #: html/affiliate_cp_payment_details_confirmed.php:5
 #, php-format
 msgid ""
-"Now would be a great time to go pick <a href=\"%s\">some creative</a> and "
+"Now would be a great time to go pick <a href=\"%s\">some creatives</a> and "
 "get started."
 msgstr ""
-"Most ideje lenne a <a href=\"%s\"> egyes hirdetések </a> kiválasztása és "
-"elindulni."
 
 #: html/affiliate_cp_payment_details_form.php:70
 #: html/affiliate_cp_payment_details_simple.php:14
@@ -1467,18 +1511,18 @@ msgstr ""
 "fiókja eléri a minimális kifizetési összeget."
 
 #: html/affiliate_cp_payment_details_form.php:79
-#: html/affiliate_cp_payment_details_simple.php:23 html/contact_info.php:121
+#: html/affiliate_cp_payment_details_simple.php:23 html/contact_info.php:136
 msgid "Method"
 msgstr "Módszer"
 
 #: html/affiliate_cp_payment_details_form.php:96
-#: html/affiliate_cp_payment_details_simple.php:40 html/contact_info.php:145
+#: html/affiliate_cp_payment_details_simple.php:40 html/contact_info.php:165
 msgid "PayPal E-Mail Address"
 msgstr "PayPal email cim "
 
 #: html/affiliate_cp_payment_details_form.php:109
 #: html/affiliate_cp_payment_details_simple.php:53
-#: source/Util/AffiliateFormHelper.php:151
+#: source/Util/AffiliateFormHelper.php:153
 msgid "Paper Check"
 msgstr "Papír csekk"
 
@@ -1492,37 +1536,37 @@ msgid "Mail to Address On Record"
 msgstr "Levelezési cím"
 
 #: html/affiliate_cp_payment_details_form.php:143
-#: html/affiliate_cp_payment_details_form.php:166
+#: html/affiliate_cp_payment_details_form.php:168
 #: html/affiliate_cp_payment_details_simple.php:76
 msgid "Recipient"
 msgstr "Címzett"
 
-#: html/affiliate_cp_payment_details_form.php:170
+#: html/affiliate_cp_payment_details_form.php:172
 msgid "Address 1"
 msgstr "Cím 1"
 
-#: html/affiliate_cp_payment_details_form.php:174
+#: html/affiliate_cp_payment_details_form.php:176
 msgid "Address 2"
 msgstr "Cím 2"
 
-#: html/affiliate_cp_payment_details_form.php:178
+#: html/affiliate_cp_payment_details_form.php:180
 msgid "City"
 msgstr "Város"
 
-#: html/affiliate_cp_payment_details_form.php:182
+#: html/affiliate_cp_payment_details_form.php:184
 msgid "Country"
 msgstr "Ország"
 
-#: html/affiliate_cp_payment_details_form.php:192
+#: html/affiliate_cp_payment_details_form.php:194
 msgid "State"
 msgstr "Állam"
 
-#: html/affiliate_cp_payment_details_form.php:202
+#: html/affiliate_cp_payment_details_form.php:204
 msgid "Postal Code"
 msgstr "Irányítószám"
 
-#: html/affiliate_cp_payment_details_form.php:216
-#: html/affiliate_cp_payment_details_simple.php:99
+#: html/affiliate_cp_payment_details_form.php:218
+#: html/affiliate_cp_payment_details_simple.php:101
 msgid "Submit Payment Details"
 msgstr "Fizetési részletek bevitele"
 
@@ -1534,11 +1578,28 @@ msgstr "Csekk a következő címre lesz postázva:"
 msgid "Your Affiliate-Specific HTML snippet"
 msgstr "Partner-specifikus HTML-kód"
 
-#: html/affiliate_creative_list.php:62
+#: html/affiliate_creative_list.php:66
 msgid "Your Affiliate Link Using Affiliate ID"
 msgstr "A partner linked a partner-azonosítóddal"
 
-#: html/affiliate_creative_list.php:67
+#: html/affiliate_creative_list.php:70
+msgid "Referral URL Generator"
+msgstr ""
+
+#: html/affiliate_creative_list.php:72
+msgid ""
+"Enter any URL from this site in the form below to generate a referral link"
+msgstr ""
+
+#: html/affiliate_creative_list.php:77
+msgid "Below is your referral URL (You can copy it and share anywhere)"
+msgstr ""
+
+#: html/affiliate_creative_list.php:81
+msgid "Generate Referral URL"
+msgstr ""
+
+#: html/affiliate_creative_list.php:85
 msgid "The following creatives are available for publication."
 msgstr "A következő promók állnak rendelkezésre közzétételre."
 
@@ -1586,7 +1647,7 @@ msgstr ""
 "Úgy tűnik, neked már van partner fiókod, ezért nem kell újra regisztrálnod. "
 "Keresd fel a partnerprogram portált, és kezdj el küldeni felhasználókat."
 
-#: html/affiliate_register_form.php:25 html/contact_info.php:186
+#: html/affiliate_register_form.php:25 html/contact_info.php:206
 msgid "* Required fields"
 msgstr "* Szükséges mezők"
 
@@ -1626,7 +1687,7 @@ msgstr "Jelentkezés benyújtása"
 msgid "Contact Information"
 msgstr "Elérhetőség"
 
-#: html/contact_info.php:86
+#: html/contact_info.php:101
 #, php-format
 msgid ""
 "There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s"
@@ -1635,33 +1696,33 @@ msgstr ""
 "E-mail cím megváltoztatása folyamatban van erre:<code>%1$s</code>. <a href="
 "\"%2$s\">Töröl</a>"
 
-#: html/contact_info.php:94
+#: html/contact_info.php:109
 msgid "New Password"
 msgstr "Új jelszó"
 
-#: html/contact_info.php:103
+#: html/contact_info.php:118
 msgid "Repeat New Password"
 msgstr "Ismételd meg az új jelszót"
 
-#: html/contact_info.php:154
+#: html/contact_info.php:174
 msgid "Bounty Type *"
 msgstr "Jutalom típusa *"
 
-#: html/contact_info.php:171
+#: html/contact_info.php:191
 #, php-format
 msgid "Bounty Rate (%s per Sale) *"
 msgstr "Jutalom százalék (%s minden eladásra) *"
 
-#: html/contact_info.php:171
+#: html/contact_info.php:191
 #, php-format
 msgid "Bounty Rate (% of Sale) *"
 msgstr "Jutalom százaléka (% az eladásból) *"
 
-#: html/contact_info.php:188
+#: html/contact_info.php:208
 msgid "+ Custom fields"
 msgstr "+ Egyéni mezők"
 
-#: html/contact_info.php:192
+#: html/contact_info.php:212
 msgid "Save Changes"
 msgstr "Változtatások mentése"
 
@@ -1678,19 +1739,66 @@ msgstr "Küldő oldal"
 msgid "No records found for the date range selected."
 msgstr "A kijelölt dátumtartományhoz nem található feljegyzés."
 
-#: html/transaction_table.php:29
-msgid "From"
-msgstr "-tól"
-
 #: html/transaction_table.php:49 html/transaction_table.php:64
 msgid "Reference ID"
 msgstr "Referenciaazonosító"
 
-#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:632
+#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:653
 msgid "Affiliates Manager Add-ons"
 msgstr "Partnerkezelő bővítményei"
 
-#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:624
+#: source/Admin-menu/wpam-admin-functions-menu.php:8 source/Plugin.php:637
+msgid "Admin Functions"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:9
+msgid ""
+"The Admin Functions page lets you do various admin stuff from time to time."
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:23
+msgid "Start Date is not valid"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:34
+msgid "End Date is not valid"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:39
+msgid "Clicks data has been deleted!"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:45
+msgid "Reset Buttons"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:48
+msgid ""
+"Do you really want to delete the clicks data? This action cannot be undone."
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:49
+msgid "Start Date:"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:50
+msgid "End Date:"
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:51
+msgid ""
+"Select a Start Date and an End Date to delete all clicks data within this "
+"period. If you only select a Start Date all clicks data recorded on or after "
+"this date will be deleted. If you only select an End Date all clicks data "
+"recorded up to this date will be deleted. If no date is selected all clicks "
+"data will be deleted."
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:53
+msgid "Delete Clicks Data"
+msgstr ""
+
+#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:645
 msgid "Click Tracking"
 msgstr "Kattintáskövetés"
 
@@ -1779,6 +1887,247 @@ msgstr "Add meg a vevő e-mail címét (nem kötelező)."
 msgid "Enter the date in yyyy-mm-dd format. Example: "
 msgstr "Adja meg a dátumot éééé-hh-nn formátumban. Példa:"
 
+#: source/Admin-menu/wpam-manage-payouts-menu.php:8 source/Plugin.php:641
+msgid "Manage Payouts"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:14
+msgid "Payout Report Generated"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:26
+msgid "Affiliate Mass Payout by Outstanding Amount"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:29
+msgid "Step 1:"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:30
+msgid "Generate Report"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:31
+msgid ""
+"Hit \"Generate Report\" to get a list of all the affiliate earnings that "
+"need to be paid."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:36
+msgid "Step 2:"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:36
+msgid "Create Payment Report File"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:37
+#, php-format
+msgid ""
+"Use this to generate a PayPal payout file and a payment report CSV file. The "
+"PayPal payout file can be used in paypal to pay all your affiliates in one "
+"click. If you have never used PayPal Payouts check <a href=\"%s\" target="
+"\"_blank\">this documentation</a>."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:41
+msgid ""
+"Do you really want to mark all the outstanding payments as paid? This action "
+"cannot be undone."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:42
+msgid "Step 3:"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:42
+msgid "Mark as Paid"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:43
+msgid ""
+"After you have generated the payout report and paid all the affiliates their "
+"outstanding balance, use this button to mark all the payments as paid."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:60
+msgid "PayPal Email"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:61
+msgid "Pending Amount"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:109
+msgid "No Affiliates Found in the Database."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:112
+msgid "No Pending Payment Found."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:131
+msgid "There is no pending payment."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:146
+msgid "can't open file named 'paypal_payout.csv'"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:189
+msgid "can't open file named 'affiliate_payout_report.csv'"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:195
+msgid ""
+"Note: Please make sure that the PayPal email address field of the affiliates "
+"that are about to get paid via PayPal are not empty. PayPal payouts do not "
+"work without PayPal email address. You can ignore this warning if you are "
+"going to pay your affiliates via other means."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:198
+#, php-format
+msgid ""
+"PayPal payout file created. Download the <a href=\"%s\">PayPal Payout File</"
+"a> (Right click and choose \"Save Link As\"). You can use this file to make "
+"a PayPal mass payment and pay the commissions in one go."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:203
+#, php-format
+msgid ""
+"CSV file with outstanding affiliate commission details created. Download the "
+"<a href=\"%s\">Affiliate Payout Report File</a> (Right click and choose "
+"\"Save Link As\"). You can use this file to manually send money to your "
+"affiliates."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:215
+msgid "There is no pending payment to mark"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:230
+msgid "Marked payments as paid"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:238
+msgid "Displayed to user at logon if affiliate STATUS = APPROVED"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:239
+msgid ""
+"Congratulations, the administrator has <strong>approved</strong> your "
+"application. You have one more step to complete before you can begin "
+"publishing for this store and generating revenue! The store owner has "
+"specified the terms of your agreement, which you will need to review and "
+"agree to.<br /><br />"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:242
+msgid "Displayed to user at logon if affiliate STATUS = DECLINED"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:243 source/Data/DatabaseInstaller.php:271
+msgid "I'm sorry, your application was declined."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:246
+msgid "Displayed to user at logon if affiliate STATUS = PENDING"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:247
+msgid "Your application is still being reviewed. Please check back later!"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:250
+msgid ""
+"Displayed to user after successfully submitting the affiliate registration "
+"form"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:251
+msgid ""
+"Your application has been submitted. The store owner will be contacting you "
+"soon.<br /><br />Thank you!<br />"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:254
+msgid ""
+"Body of e-mail sent to the affiliate immediately after submitting their "
+"application."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:255
+msgid "Your application will be reviewed and you will be hearing from us soon!"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:274
+msgid ""
+"Body of e-mail sent to the affiliate immediately following their application "
+"being declined."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:280
+msgid ""
+"Thank you. Your registration is now complete. You can log into the affiliate "
+"area and begin promoting."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:283
+msgid ""
+"Displayed to a newly registered affiliate if automatic affiliate approval "
+"option is enabled."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:293
+msgid ""
+"Your affiliate account for {blogname} has been approved!. \n"
+"\n"
+"Username: {affusername} \n"
+"Password: {affpassword} \n"
+"Login URL: {affloginurl} \n"
+"\n"
+"Please log into your account to get referral code."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:296
+msgid ""
+"Body of e-mail sent to a newly registered affiliate immediately following "
+"their application being approved."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:305
+msgid ""
+"Great news, you have just earned a commission by sending a referral to our "
+"site! \n"
+"\n"
+"Please log into your affiliate account to view the details. \n"
+"\n"
+"Thank You"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:308
+msgid ""
+"Body of e-mail sent to the affiliate immediately after earning a commission."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:383
+#, php-format
+msgid ""
+"This is the affiliates section of this store. If you are an existing "
+"affiliate, please <a href=\"%s\">log in</a> to access your control panel."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:386
+#, php-format
+msgid ""
+"If you are not an affiliate, but wish to become one, you will need to apply. "
+"To apply, you must be a registered user on this blog. If you have an "
+"existing account on this blog, please <a href=\"%s\">log in</a>. If not, "
+"please <a href=\"%s\">register</a>."
+msgstr ""
+
 #: source/Data/GenericRepository.php:31 source/Data/GenericRepository.php:76
 #, php-format
 msgid "'model' must be of type '%s'"
@@ -1818,30 +2167,25 @@ msgid "All"
 msgstr "Összes"
 
 #: source/Pages/Admin/MyCreativesPage.php:111
-#: source/Pages/Admin/MyCreativesPage.php:264
-#: source/Pages/Admin/MyCreativesPage.php:271
-#: source/Pages/AffiliatesHome.php:185 source/Util/JsonHandler.php:228
+#: source/Pages/Admin/MyCreativesPage.php:233
+#: source/Pages/Admin/MyCreativesPage.php:240
+#: source/Pages/AffiliatesHome.php:185 source/Util/JsonHandler.php:212
 msgid "Invalid creative."
 msgstr "Nemlétező reklám."
 
-#: source/Pages/Admin/MyCreativesPage.php:160
-#, php-format
-msgid "Image Upload Error: %s"
-msgstr "Képfeltöltési hiba: %s"
-
-#: source/Pages/Admin/MyCreativesPage.php:225
+#: source/Pages/Admin/MyCreativesPage.php:194
 msgid "Insert failed: Bad creative type."
 msgstr "A beillesztés sikertelen: rossz hirdetési típus."
 
-#: source/Pages/Admin/MyCreativesPage.php:234
+#: source/Pages/Admin/MyCreativesPage.php:203
 msgid "Creative Updated."
 msgstr "Hirdetés frissítve."
 
-#: source/Pages/Admin/MyCreativesPage.php:241
+#: source/Pages/Admin/MyCreativesPage.php:210
 msgid "Creative ... created."
 msgstr "Hirdetés … létrehozva."
 
-#: source/Pages/Admin/MyCreativesPage.php:245
+#: source/Pages/Admin/MyCreativesPage.php:214
 msgid "Insert failed: invalid creative update mechanism."
 msgstr ""
 "A beillesztés sikertelen: érvénytelen hirdetési frissítési mechanizmus."
@@ -1919,14 +2263,14 @@ msgstr "Hirdetések"
 msgid "Edit Profile"
 msgstr "Profil szerkesztése"
 
-#: source/Pages/AffiliatesHome.php:43 source/Plugin.php:303
+#: source/Pages/AffiliatesHome.php:43 source/Plugin.php:316
 msgid "Log out"
 msgstr "Kilépés"
 
 #: source/Pages/AffiliatesHome.php:187 source/Util/JsonHandler.php:28
 #: source/Util/JsonHandler.php:52 source/Util/JsonHandler.php:83
 #: source/Util/JsonHandler.php:109 source/Util/JsonHandler.php:133
-#: source/Util/JsonHandler.php:207
+#: source/Util/JsonHandler.php:191
 msgid "Invalid affiliate"
 msgstr "Érvénytelen partner"
 
@@ -1952,7 +2296,7 @@ msgstr "%s eladásonként."
 msgid "%s%% of each completed sale, pre-tax"
 msgstr "%s%% minden eladásra, adó előtti"
 
-#: source/Pages/AffiliatesRegister.php:65 source/Util/UserHandler.php:143
+#: source/Pages/AffiliatesRegister.php:65 source/Util/UserHandler.php:158
 msgid ""
 "Error submitting your details to the database. This is a bug, and your "
 "application was not submitted."
@@ -1960,37 +2304,37 @@ msgstr ""
 "Hiba történt az adataidnak az adatbázisba történő elküldésével. Jelentkezés "
 "nem lett benyújtva."
 
-#: source/Pages/AffiliatesRegister.php:73 source/Util/UserHandler.php:152
+#: source/Pages/AffiliatesRegister.php:73 source/Util/UserHandler.php:167
 #, php-format
 msgid "New affiliate registration on your site %s:"
 msgstr "Új társult regisztráció a %s webhelyen:"
 
-#: source/Pages/AffiliatesRegister.php:74 source/Util/UserHandler.php:153
+#: source/Pages/AffiliatesRegister.php:74 source/Util/UserHandler.php:168
 #, php-format
 msgid "Name: %s %s"
 msgstr "Név: %s %s"
 
-#: source/Pages/AffiliatesRegister.php:75 source/Util/UserHandler.php:154
+#: source/Pages/AffiliatesRegister.php:75 source/Util/UserHandler.php:169
 #, php-format
 msgid "Email: %s"
 msgstr "Email: %s"
 
-#: source/Pages/AffiliatesRegister.php:76 source/Util/UserHandler.php:155
+#: source/Pages/AffiliatesRegister.php:76 source/Util/UserHandler.php:170
 #, php-format
 msgid "Company: %s"
 msgstr "Cég: %s"
 
-#: source/Pages/AffiliatesRegister.php:77 source/Util/UserHandler.php:156
+#: source/Pages/AffiliatesRegister.php:77 source/Util/UserHandler.php:171
 #, php-format
 msgid "Website: %s"
 msgstr "Honlap: %s"
 
-#: source/Pages/AffiliatesRegister.php:78 source/Util/UserHandler.php:157
+#: source/Pages/AffiliatesRegister.php:78 source/Util/UserHandler.php:172
 #, php-format
 msgid "View Application: %s"
 msgstr "Jelentkezés megtekintése: %s"
 
-#: source/Pages/AffiliatesRegister.php:79 source/Util/UserHandler.php:158
+#: source/Pages/AffiliatesRegister.php:79 source/Util/UserHandler.php:173
 msgid "New Affiliate Registration"
 msgstr "Új partner regisztrációja"
 
@@ -2003,7 +2347,7 @@ msgstr "Partner jelentkezés %s-ra"
 #: source/Util/JsonHandler.php:44 source/Util/JsonHandler.php:75
 #: source/Util/JsonHandler.php:101 source/Util/JsonHandler.php:125
 #: source/Util/JsonHandler.php:136 source/Util/JsonHandler.php:150
-#: source/Util/JsonHandler.php:196 source/Util/JsonHandler.php:224
+#: source/Util/JsonHandler.php:180 source/Util/JsonHandler.php:208
 msgid "Access denied."
 msgstr "Hozzáférés megtagadva."
 
@@ -2039,12 +2383,12 @@ msgstr ""
 msgid "Unknown response: %s"
 msgstr "Ismeretlen válasz: %s"
 
-#: source/Plugin.php:74 source/Plugin.php:595
+#: source/Plugin.php:74 source/Plugin.php:608
 msgid "Affiliate Management"
 msgstr "Partnermanagement"
 
-#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:576
-#: source/Plugin.php:590 source/Plugin.php:595
+#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:589
+#: source/Plugin.php:603 source/Plugin.php:608
 msgid "Affiliates"
 msgstr "Partnerek"
 
@@ -2060,71 +2404,79 @@ msgstr "Regisztráció"
 msgid "Affiliate Login"
 msgstr "Partner belépés"
 
-#: source/Plugin.php:299
+#: source/Plugin.php:312
 msgid "You are currently logged in"
 msgstr "Jelenleg be vagy jelentkezve"
 
-#: source/Plugin.php:301
+#: source/Plugin.php:314
 msgid "Username"
 msgstr "Felhasználónév"
 
-#: source/Plugin.php:311
+#: source/Plugin.php:324
 msgid "Email Address"
 msgstr "Email cím"
 
-#: source/Plugin.php:313
+#: source/Plugin.php:326
 msgid "Password Lost and Found"
 msgstr "Elveszett és talált jelszavak"
 
-#: source/Plugin.php:313
+#: source/Plugin.php:326
 msgid "Lost your password?"
 msgstr "Elfelejtetted a jelszavadat?"
 
-#: source/Plugin.php:358
+#: source/Plugin.php:371
 msgid "Become an affiliate"
 msgstr "Legyél partnerünk"
 
-#: source/Plugin.php:359
+#: source/Plugin.php:372
 msgid "Are you interested in earning money by directing visitors to our site?"
 msgstr "Szeretne pénzt keresni látogatóknak a webhelyünkre való küldésével?"
 
-#: source/Plugin.php:361
+#: source/Plugin.php:374
 msgid "Sign up"
 msgstr "Iratkozz fel"
 
-#: source/Plugin.php:361
+#: source/Plugin.php:374
 msgid " to become an affiliate today!"
 msgstr "és legyél partnerünk még ma!"
 
-#: source/Plugin.php:590
+#: source/Plugin.php:603
 msgid "Be An Affiliate"
 msgstr "Legyél partnerünk!"
 
-#: source/Plugin.php:620
+#: source/Plugin.php:633
 msgid "Settings"
 msgstr "Beállítások"
 
-#: source/Plugin.php:624
+#: source/Plugin.php:637
+msgid "Affiliates Manager Admin Functions"
+msgstr ""
+
+#: source/Plugin.php:641
+msgid "Affiliates Manager Manage Payouts"
+msgstr ""
+
+#: source/Plugin.php:645
 msgid "Affiliates Manager Click Tracking"
 msgstr "Partnerkezelő kattintáskövetés"
 
-#: source/Plugin.php:628
+#: source/Plugin.php:649
 msgid "Affiliates Manager Commission Data"
 msgstr "Partnerkezelő jutalék adatok"
 
-#: source/Plugin.php:628
+#: source/Plugin.php:649
 msgid "Commissions"
 msgstr "Jutalékok"
 
-#: source/Plugin.php:632
+#: source/Plugin.php:653
 msgid "Add-ons"
 msgstr "Bővítmények"
 
-#: source/Plugin.php:758
+#: source/Plugin.php:776
 msgid "Invalid JSON handler."
 msgstr "Érvénytelen JSON kezelő."
 
-#: source/Plugin.php:789
+#: source/Plugin.php:807
 msgid "Nonce check failed for export My Affiliates to CSV!"
 msgstr ""
 "A Nonce ellenőrzés nem sikerült a Partnereim CSV-be való exportálásakor."
@@ -2147,21 +2499,27 @@ msgstr "Érvénytelen refkey adatok:"
 msgid "invalid refkey format. (length=%s)"
 msgstr "Érvénytelen refkey formátum. (hossz=%s)"
 
-#: source/Util/AffiliateFormHelper.php:93
+#: source/Util/AffiliateFormHelper.php:95
 msgid "is a blocked e-mail "
 msgstr "egy tiltott email"
 
-#: source/Util/AffiliateFormHelper.php:95
+#: source/Util/AffiliateFormHelper.php:97
 msgid "is in use"
 msgstr "használatban van"
 
-#: source/Util/AffiliateFormHelper.php:154
+#: source/Util/AffiliateFormHelper.php:156
 msgid "PayPal Transfer"
 msgstr "PayPal átutalás"
 
-#: source/Util/AffiliateFormHelper.php:157
+#: source/Util/AffiliateFormHelper.php:159
 msgid "Manual Transfer"
 msgstr "Kézi átutalás"
+
+#: source/Util/EmailHandler.php:49 source/Util/JsonHandler.php:60
+#: source/Util/UserHandler.php:81 source/Util/UserHandler.php:177
+#, php-format
+msgid "Affiliate Application for %s"
+msgstr "Partnerjelentkezés %s-ra"
 
 #: source/Util/EmailHandler.php:70
 msgid "Your username and password"
@@ -2173,7 +2531,7 @@ msgid "[%s] Your username and password for Affiliate Manager"
 msgstr "[%s] A felhasználóneved és jelszavad a Partnerkezelőhöz"
 
 #: source/Util/EmailHandler.php:75 source/Util/UserHandler.php:22
-#: source/Util/UserHandler.php:92
+#: source/Util/UserHandler.php:99
 #, php-format
 msgid "New affiliate registration for %s: has been approved!"
 msgstr "A(z) %s új partnerregisztráció el lett fogadva!"
@@ -2192,12 +2550,6 @@ msgstr "Érvénytelen jutalomtípus."
 msgid "Invalid state transition."
 msgstr "Érvénytelen állapotátmenet."
 
-#: source/Util/JsonHandler.php:60 source/Util/UserHandler.php:74
-#: source/Util/UserHandler.php:162
-#, php-format
-msgid "Affiliate Application for %s"
-msgstr "Partnerjelentkezés %s-ra"
-
 #: source/Util/JsonHandler.php:153
 msgid "Invalid status."
 msgstr "Érvénytelen státusz."
@@ -2206,21 +2558,21 @@ msgstr "Érvénytelen státusz."
 msgid "Invalid creative"
 msgstr "Érvénytelen promó."
 
-#: source/Util/JsonHandler.php:199
+#: source/Util/JsonHandler.php:183
 msgid "Invalid transaction type."
 msgstr "Érvénytelen tranzakciótípus."
 
-#: source/Util/JsonHandler.php:202
+#: source/Util/JsonHandler.php:186
 msgid "Invalid value for amount."
 msgstr "Érvénytelen érték az összegre."
 
 #: source/Util/UserHandler.php:27 source/Util/UserHandler.php:36
-#: source/Util/UserHandler.php:97 source/Util/UserHandler.php:106
+#: source/Util/UserHandler.php:104 source/Util/UserHandler.php:113
 msgid "User already has an account and is already an affiliate"
 msgstr "A felhasználónak már van fiókja és már partner"
 
 #: source/Util/UserHandler.php:30 source/Util/UserHandler.php:39
-#: source/Util/UserHandler.php:100 source/Util/UserHandler.php:109
+#: source/Util/UserHandler.php:107 source/Util/UserHandler.php:116
 msgid "Log into the site with your existing account and get started."
 msgstr "Jelentkezz be a webhelyre meglévő fiókoddal, és láss neki."
 
@@ -2232,6 +2584,950 @@ msgstr "A \"visszahívás\" argumentumnak hívhatónak kell lennie"
 #: source/Validation/StringValidator.php:29
 msgid "is required"
 msgstr "kötelező"
+
+#: source/Validation/CountryCodes.php:14
+msgid "AFGHANISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:15
+msgid "ALAND ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:16
+msgid "ALBANIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:17
+msgid "ALGERIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:18
+msgid "AMERICAN SAMOA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:19
+msgid "ANDORRA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:20
+msgid "ANGOLA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:21
+msgid "ANGUILLA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:22
+msgid "ANTARCTICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:23
+msgid "ANTIGUA AND BARBUDA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:24
+msgid "ARGENTINA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:25
+msgid "ARMENIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:26
+msgid "ARUBA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:27
+msgid "AUSTRALIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:28
+msgid "AUSTRIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:29
+msgid "AZERBAIJAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:30
+msgid "BAHAMAS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:31
+msgid "BAHRAIN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:32
+msgid "BANGLADESH"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:33
+msgid "BARBADOS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:34
+msgid "BELARUS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:35
+msgid "BELGIUM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:36
+msgid "BELIZE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:37
+msgid "BENIN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:38
+msgid "BERMUDA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:39
+msgid "BHUTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:40
+msgid "BOLIVIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:41
+msgid "BOSNIA AND HERZEGOVINA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:42
+msgid "BOTSWANA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:43
+msgid "BOUVET ISLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:44
+msgid "BRAZIL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:45
+msgid "BRUNEI DARUSSALAM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:46
+msgid "BULGARIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:47
+msgid "BURKINA FASO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:48
+msgid "BURUNDI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:49
+msgid "CAMBODIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:50
+msgid "CAMEROON"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:51
+msgid "CANADA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:52
+msgid "CAPE VERDE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:53
+msgid "CAYMAN ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:54
+msgid "CENTRAL AFRICAN REPUBLIC"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:55
+msgid "CHAD"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:56
+msgid "CHILE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:57
+msgid "CHINA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:58
+msgid "CHRISTMAS ISLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:59
+msgid "COCOS (KEELING) ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:60
+msgid "COLOMBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:61
+msgid "COMOROS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:62
+msgid "CONGO (BRAZZAVILLE)"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:63
+msgid "CONGO (KINSHASA)"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:64
+msgid "COOK ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:65
+msgid "COSTA RICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:66
+msgid "CROATIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:67
+msgid "CUBA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:68
+msgid "CYPRUS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:69
+msgid "CZECH REPUBLIC"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:70
+msgid "DENMARK"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:71
+msgid "DJIBOUTI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:72
+msgid "DOMINICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:73
+msgid "DOMINICAN REPUBLIC"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:74
+msgid "ECUADOR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:75
+msgid "EGYPT"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:76
+msgid "EL SALVADOR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:77
+msgid "EQUATORIAL GUINEA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:78
+msgid "ERITREA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:79
+msgid "ESTONIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:80
+msgid "ETHIOPIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:81
+msgid "FALKLAND ISLANDS (MALVINAS)"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:82
+msgid "FAROE ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:83
+msgid "FIJI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:84
+msgid "FINLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:85
+msgid "FRANCE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:86
+msgid "FRENCH GUIANA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:87
+msgid "FRENCH POLYNESIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:88
+msgid "FRENCH SOUTHERN TERRITORIES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:89
+msgid "GABON"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:90
+msgid "GAMBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:91
+msgid "GEORGIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:92
+msgid "GERMANY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:93
+msgid "GHANA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:94
+msgid "GIBRALTAR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:95
+msgid "GREECE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:96
+msgid "GREENLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:97
+msgid "GRENADA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:98
+msgid "GUADELOUPE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:99
+msgid "GUAM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:100
+msgid "GUATEMALA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:101
+msgid "GUINEA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:102
+msgid "GUINEA-BISSAU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:103
+msgid "GUYANA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:104
+msgid "HAITI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:105
+msgid "HOLY SEE (VATICAN CITY STATE)"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:106
+msgid "HONDURAS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:107
+msgid "HONG KONG"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:108
+msgid "HUNGARY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:109
+msgid "ICELAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:110
+msgid "INDIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:111
+msgid "INDONESIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:112
+msgid "IRAN ISLAMIC REPUBLIC OF"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:113
+msgid "IRAQ"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:114
+msgid "IRELAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:115
+msgid "ISRAEL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:116
+msgid "ITALY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:117
+msgid "IVORY COAST"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:118
+msgid "JAMAICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:119
+msgid "JAPAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:120
+msgid "JORDAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:121
+msgid "KAZAKHSTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:122
+msgid "KENYA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:123
+msgid "KIRIBATI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:124
+msgid "KOREA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:125
+msgid "KOREA REPUBLIC OF"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:126
+msgid "KUWAIT"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:127
+msgid "KYRGYZSTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:128
+msgid "LAO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:129
+msgid "LATVIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:130
+msgid "LEBANON"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:131
+msgid "LESOTHO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:132
+msgid "LIBERIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:133
+msgid "LIBYAN ARAB JAMAHIRIYA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:134
+msgid "LIECHTENSTEIN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:135
+msgid "LITHUANIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:136
+msgid "LUXEMBOURG"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:137
+msgid "MACAO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:138
+msgid "MACEDONIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:139
+msgid "MADAGASCAR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:140
+msgid "MALAWI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:141
+msgid "MALAYSIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:142
+msgid "MALDIVES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:143
+msgid "MALI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:144
+msgid "MALTA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:145
+msgid "MARSHALL ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:146
+msgid "MARTINIQUE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:147
+msgid "MAURITANIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:148
+msgid "MAURITIUS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:149
+msgid "MAYOTTE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:150
+msgid "MEXICO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:151
+msgid "MICRONESIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:152
+msgid "MOLDOVA, REPUBLIC OF"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:153
+msgid "MONACO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:154
+msgid "MONGOLIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:155
+msgid "MONTENEGRO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:156
+msgid "MONTSERRAT"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:157
+msgid "MOROCCO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:158
+msgid "MOZAMBIQUE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:159
+msgid "MYANMAR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:160
+msgid "NAMIBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:161
+msgid "NAURU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:162
+msgid "NEPAL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:163
+msgid "NETHERLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:164
+msgid "NETHERLANDS ANTILLES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:165
+msgid "NEW CALEDONIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:166
+msgid "NEW ZEALAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:167
+msgid "NICARAGUA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:168
+msgid "NIGER"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:169
+msgid "NIGERIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:170
+msgid "NIUE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:171
+msgid "NORFOLK ISLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:172
+msgid "NORTHERN MARIANA ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:173
+msgid "NORWAY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:174
+msgid "OMAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:175
+msgid "PAKISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:176
+msgid "PALAU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:177
+msgid "PALESTINIAN TERRITORY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:178
+msgid "PANAMA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:179
+msgid "PAPUA NEW GUINEA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:180
+msgid "PARAGUAY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:181
+msgid "PERU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:182
+msgid "PHILIPPINES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:183
+msgid "PITCAIRN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:184
+msgid "POLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:185
+msgid "PORTUGAL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:186
+msgid "PUERTO RICO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:187
+msgid "QATAR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:188
+msgid "REUNION"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:189
+msgid "ROMANIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:190
+msgid "RUSSIAN FEDERATION"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:191
+msgid "RWANDA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:192
+msgid "SAINT HELENA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:193
+msgid "SAINT KITTS AND NEVIS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:194
+msgid "SAINT LUCIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:195
+msgid "SAINT PIERRE AND MIQUELON"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:196
+msgid "SAMOA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:197
+msgid "SAN MARINO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:198
+msgid "SAO TOME AND PRINCIPE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:199
+msgid "SAUDI ARABIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:200
+msgid "SENEGAL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:201
+msgid "SERBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:202
+msgid "SEYCHELLES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:203
+msgid "SIERRA LEONE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:204
+msgid "SINGAPORE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:205
+msgid "SLOVAKIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:206
+msgid "SLOVENIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:207
+msgid "SOLOMON ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:208
+msgid "SOMALIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:209
+msgid "SOUTH AFRICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:210
+msgid "SPAIN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:211
+msgid "SRI LANKA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:212
+msgid "SUDAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:213
+msgid "SURINAME"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:214
+msgid "SVALBARD AND JAN MAYEN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:215
+msgid "SWAZILAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:216
+msgid "SWEDEN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:217
+msgid "SWITZERLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:218
+msgid "SYRIAN ARAB REPUBLIC"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:219
+msgid "TAIWAN PROVINCE OF CHINA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:220
+msgid "TAJIKISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:221
+msgid "TANZANIA UNITED REPUBLIC OF"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:222
+msgid "THAILAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:223
+msgid "TIMOR-LESTE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:224
+msgid "TOGO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:225
+msgid "TOKELAU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:226
+msgid "TONGA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:227
+msgid "TRINIDAD AND TOBAGO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:228
+msgid "TUNISIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:229
+msgid "TURKEY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:230
+msgid "TURKMENISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:231
+msgid "TURKS AND CAICOS ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:232
+msgid "TUVALU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:233
+msgid "UGANDA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:234
+msgid "UKRAINE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:235
+msgid "UNITED ARAB EMIRATES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:236
+msgid "UNITED KINGDOM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:237
+msgid "UNITED STATES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:238
+msgid "URUGUAY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:239
+msgid "UZBEKISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:240
+msgid "VANUATU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:241
+msgid "VENEZUELA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:242
+msgid "VIETNAM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:243
+msgid "VIRGIN ISLANDS BRITISH"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:244
+msgid "VIRGIN ISLANDS U.S."
+msgstr ""
+
+#: source/Validation/CountryCodes.php:245
+msgid "WALLIS AND FUTUNA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:246
+msgid "WESTERN SAHARA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:247
+msgid "YEMEN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:248
+msgid "ZAMBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:249
+msgid "ZIMBABWE"
+msgstr ""
 
 #: source/Validation/EmailValidator.php:14
 msgid "must be a valid e-mail address"
@@ -2343,3 +3639,40 @@ msgstr "Cégnév"
 #: source/dynamic-translatable-strings.php:8
 msgid "Website URL"
 msgstr "Weboldal URL"
+
+#~ msgid "from"
+#~ msgstr "-tól"
+
+#~ msgid "to"
+#~ msgstr "-ig"
+
+#~ msgid "From"
+#~ msgstr "-tól"
+
+#~ msgid "New Image File"
+#~ msgstr "Új kép akta"
+
+#~ msgid "Image File from Media Library"
+#~ msgstr "Kép akta a Médiakönyvtárból"
+
+#~ msgid "Preview:"
+#~ msgstr "Előnézet:"
+
+#~ msgid ""
+#~ "<a href=\"%s\" target=\"_blank\">How to Setup PayPal Mass Pay</a> (PDF)"
+#~ msgstr ""
+#~ "<a href=\"%s\" target=\"_blank\">Hogyan állítsuk be a PayPal tömeges "
+#~ "kifizetést</a> (PDF)"
+
+#~ msgid "Your payment details have been submitted"
+#~ msgstr "Fizetési adataidat benyújtottuk"
+
+#~ msgid ""
+#~ "Now would be a great time to go pick <a href=\"%s\">some creative</a> and "
+#~ "get started."
+#~ msgstr ""
+#~ "Most ideje lenne a <a href=\"%s\"> egyes hirdetések </a> kiválasztása és "
+#~ "elindulni."
+
+#~ msgid "Image Upload Error: %s"
+#~ msgstr "Képfeltöltési hiba: %s"

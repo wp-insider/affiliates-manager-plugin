@@ -108,9 +108,9 @@ jQuery(function($) {
 	<form method="post" id="dateRange">
 		<div>
 <p><strong><?php _e( 'Date Range:', 'affiliates-manager' ) ?></strong> 
-<label for="from"><?php _e( 'from', 'affiliates-manager' ) ?></label>
+<label for="from"><?php _e( 'From Date', 'affiliates-manager' ) ?></label>
 <input type="text" id="from" name="from" value="<?php echo $this->viewData['from']; ?>"/>
-<label for="to"><?php _e( 'to', 'affiliates-manager' ) ?></label>
+<label for="to"><?php _e( 'To Date', 'affiliates-manager' ) ?></label>
 <input type="text" id="to" name="to" value="<?php echo $this->viewData['to']; ?>"/>
 			 <input type="submit" name="apply" value="<?php _e( 'Apply', 'affiliates-manager' ) ?>" />
 			 <input type="button" name="clear" value="<?php _e( 'Clear', 'affiliates-manager' ) ?>" id="reset" />
