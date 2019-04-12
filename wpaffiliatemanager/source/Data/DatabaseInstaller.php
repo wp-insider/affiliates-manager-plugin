@@ -385,6 +385,8 @@ class WPAM_Data_DatabaseInstaller {
         $affhomemsg .= '<br />';
         $affhomemsg .= sprintf( __( 'If you are not an affiliate, but wish to become one, you will need to apply. To apply, you must be a registered user on this blog. If you have an existing account on this blog, please <a href="%s">log in</a>. If not, please <a href="%s">register</a>.', 'affiliates-manager' ), $login_url, $register_page_url);
         add_option( WPAM_PluginConfig::$AffHomeMsg, $affhomemsg );
+        $affhomemsgnotregistered = sprintf( __( 'This is the affiliates section of this store. You are not currently an affiliate of this store. If you wish to become one, please <a href="%s"/>apply</a>.', 'affiliates-manager' ), $register_page_url );
+        add_option( WPAM_PluginConfig::$AffHomeMsgNotRegistered, $affhomemsgnotregistered );
         //
         $tnc_page = get_option( WPAM_PluginConfig::$AffTncPageURL );
         if (!isset($tnc_page) || empty($tnc_page)) {

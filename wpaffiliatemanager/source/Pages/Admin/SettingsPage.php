@@ -164,12 +164,20 @@ class WPAM_Pages_Admin_SettingsPage {
                     $login_url = get_option(WPAM_PluginConfig::$AffLoginPageURL);
                     $register_page_id = get_option(WPAM_PluginConfig::$RegPageId);
                     $register_page_url = get_permalink($register_page_id);
-                    $affhomemsg = 'This is the affiliates section of this store. If you are an existing affiliate, please <a href="'.$login_url.'">log in</a> to access your control panel.';
+                    $affhomemsg = sprintf( __( 'This is the affiliates section of this store. If you are an existing affiliate, please <a href="%s">log in</a> to access your control panel.', 'affiliates-manager' ), $login_url );
                     $affhomemsg .= '<br />';
                     $affhomemsg .= '<br />';
-                    $affhomemsg .= 'If you are not an affiliate, but wish to become one, you will need to apply. To apply, you must be a registered user on this blog. If you have an existing account on this blog, please <a href="'.$login_url.'">log in</a>. If not, please <a href="'.$register_page_url.'">register</a>.';
+                    $affhomemsg .= sprintf( __( 'If you are not an affiliate, but wish to become one, you will need to apply. To apply, you must be a registered user on this blog. If you have an existing account on this blog, please <a href="%s">log in</a>. If not, please <a href="%s">register</a>.', 'affiliates-manager' ), $login_url, $register_page_url);
                 }
                 update_option(WPAM_PluginConfig::$AffHomeMsg, $affhomemsg);
+                
+                $affhomemsgnotregistered = $request['affhomemsgnotregistered'];
+                if(empty($affhomemsgnotregistered)){  //save the default message if empty
+                    $register_page_id = get_option(WPAM_PluginConfig::$RegPageId);
+                    $register_page_url = get_permalink($register_page_id);
+                    $affhomemsgnotregistered = sprintf( __( 'This is the affiliates section of this store. You are not currently an affiliate of this store. If you wish to become one, please <a href="%s"/>apply</a>.', 'affiliates-manager' ), $register_page_url );
+                }
+                update_option(WPAM_PluginConfig::$AffHomeMsgNotRegistered, $affhomemsgnotregistered);
             }
 
             if (isset($request['AffPagesSettings'])) {    //Affiliate pages/forms options submitted
@@ -214,6 +222,7 @@ class WPAM_Pages_Admin_SettingsPage {
 
         if ($request !== NULL) {
             $response->viewData['request']['affhomemsg'] = isset($request['affhomemsg']) ? $request['affhomemsg'] : '';
+            $response->viewData['request']['affhomemsgnotregistered'] = isset($request['affhomemsgnotregistered']) ? $request['affhomemsgnotregistered'] : '';
             $response->viewData['request']['txtMinimumPayout'] = $request['txtMinimumPayout'];
             $response->viewData['request']['txtCookieExpire'] = $request['txtCookieExpire'];
             $response->viewData['request']['txtEmailName'] = $request['txtEmailName'];
@@ -244,6 +253,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['validationResult'] = $vr;
         } else {
             $response->viewData['request']['affhomemsg'] = get_option(WPAM_PluginConfig::$AffHomeMsg);
+            $response->viewData['request']['affhomemsgnotregistered'] = get_option(WPAM_PluginConfig::$AffHomeMsgNotRegistered);
             $response->viewData['request']['txtMinimumPayout'] = get_option(WPAM_PluginConfig::$MinPayoutAmountOption);
             $response->viewData['request']['txtCookieExpire'] = get_option(WPAM_PluginConfig::$CookieExpireOption);
             $response->viewData['request']['txtEmailName'] = get_option(WPAM_PluginConfig::$EmailNameOption);

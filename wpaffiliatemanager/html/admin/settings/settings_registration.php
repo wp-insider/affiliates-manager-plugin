@@ -432,7 +432,7 @@ jQuery(function($) {
 		</th>
 		<td>
 			<button id="btnAddCustomField" class="button-secondary" type="button" name="add"><?php _e( 'Add Custom Field', 'affiliates-manager' ) ?></button>
-			<table class="widefat" style="width: 950px" id="fields_table">
+			<table class="widefat" style="max-width: 950px;" id="fields_table">
 				<thead>
 				<tr>
 					<th style="width: 50px">&lt; - &gt;</th>
@@ -456,7 +456,17 @@ jQuery(function($) {
 			<label for="affhomemsg"><?php _e('Affiliates Homepage Message', 'affiliates-manager');?></label>
 		</th>
 		<td>
-			<textarea id="affhomemsg" name="affhomemsg" cols="60" rows="20"><?php echo $this->viewData['request']['affhomemsg']?></textarea>
+                        <?php wp_editor($this->viewData['request']['affhomemsg'], 'affhomemsg', array('textarea_name' => 'affhomemsg')); ?>
+                        <p class="description"><?php _e('This message is shown to a normal visitor who is not logged into WordPress', 'affiliates-manager')?></p>
+		</td>
+	</tr>
+        <tr>
+		<th width="200">
+			<label for="affhomemsgnotregistered"><?php _e('Affiliates Homepage Message (Logged in but not an affiliate)', 'affiliates-manager');?></label>
+		</th>
+		<td>
+                        <?php wp_editor($this->viewData['request']['affhomemsgnotregistered'], 'affhomemsgnotregistered', array('textarea_name' => 'affhomemsgnotregistered')); ?>
+                        <p class="description"><?php _e('This message is shown to a user who is logged into WordPress but not an affiliate', 'affiliates-manager')?></p>
 		</td>
 	</tr>
 </table>

@@ -33,6 +33,7 @@ class WPAM_PluginConfig
         public static $AffRegPageURL = 'wpam_aff_reg_page';
         public static $AffLoginPageURL = 'wpam_aff_login_page';
         public static $AffHomeMsg = 'wpam_aff_home_msg';
+        public static $AffHomeMsgNotRegistered = 'wpam_aff_home_msg_not_registered';
         public static $AffLandingPageURL = 'wpam_landing_page';
         public static $AffTncPageURL = 'wpam_aff_tnc_page';
         public static $DisableOwnReferrals = 'wpam_disable_own_referrals';
