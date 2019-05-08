@@ -3,7 +3,7 @@ Contributors: wp.insider, affmngr, ElementGreen
 Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal  
 Requires at least: 3.5
-Tested up to: 5.1
+Tested up to: 5.2
 Stable tag: 2.6.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
