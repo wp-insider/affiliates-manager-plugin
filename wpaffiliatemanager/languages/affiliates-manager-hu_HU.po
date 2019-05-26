@@ -1,26 +1,26 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2019-01-10 18:14+0600\n"
-"PO-Revision-Date: 2019-01-10 18:14+0600\n"
+"POT-Creation-Date: 2019-05-26 18:16+0600\n"
+"PO-Revision-Date: 2019-05-26 18:22+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hu_HU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.13\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: boot-strap.php:38
+#: boot-strap.php:39
 msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
 msgstr ""
 "WordPress Affiliate Manager PHP 5.1-et vagy magasabb verziót követel meg"
 
-#: boot-strap.php:42
+#: boot-strap.php:43
 msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
 msgstr ""
 "WordPress Affiliate Manager WordPress 3.5-öt vagy magasabb verziót követel "
@@ -514,7 +514,7 @@ msgstr "Promóciós eszközök"
 
 #: html/admin/affiliate_detail.php:626 html/admin/creative_update_form.php:132
 #: html/admin/creatives_detail.php:248 html/admin/manage_creatives.php:167
-#: html/admin/settings/settings_messaging.php:86
+#: html/admin/settings/settings_messaging.php:87
 #: html/admin/settings/settings_registration.php:440
 #: html/affiliate_creative_list.php:90 html/transaction_table.php:45
 #: html/transaction_table.php:60
@@ -649,7 +649,7 @@ msgstr "Új"
 
 #: html/admin/creative_update_form.php:115 html/admin/creatives_detail.php:244
 #: html/admin/manage_creatives.php:168
-#: html/admin/settings/settings_messaging.php:85
+#: html/admin/settings/settings_messaging.php:86
 #: html/affiliate_creative_list.php:91
 #: source/Admin-menu/wpam-manage-payouts-menu.php:59
 msgid "Name"
@@ -1039,6 +1039,10 @@ msgstr "Partner"
 msgid "Description"
 msgstr "Leírás"
 
+#: html/admin/settings/settings.php:22 source/Plugin.php:633
+msgid "Settings"
+msgstr "Beállítások"
+
 #: html/admin/settings/settings.php:47
 msgid "Affiliate Registration"
 msgstr "Partner regisztrációja"
@@ -1055,7 +1059,7 @@ msgstr "Oldalak"
 msgid "Advanced Settings"
 msgstr "Haladó beállítások"
 
-#: html/admin/settings/settings.php:122
+#: html/admin/settings/settings.php:129
 msgid "Save Settings"
 msgstr "Beállítások mentése"
 
@@ -1222,26 +1226,60 @@ msgstr "Használat:"
 msgid "Content:"
 msgstr "Tartalom:"
 
-#: html/admin/settings/settings_messaging.php:87
+#: html/admin/settings/settings_messaging.php:88
 msgid "Use"
 msgstr "Használat"
 
-#: html/admin/settings/settings_messaging.php:88
+#: html/admin/settings/settings_messaging.php:89
 msgid "Content"
 msgstr "Tartalom"
 
-#: html/admin/settings/settings_messaging.php:118
+#: html/admin/settings/settings_messaging.php:119
 #, php-format
 msgid "%s(More)"
 msgstr "%s(Tovább)"
 
-#: html/admin/settings/settings_messaging.php:125
+#: html/admin/settings/settings_messaging.php:127
 msgid ""
 "* Some messages have been modified. These will <strong>NOT</strong> be saved "
 "to the database until you click 'Save Settings' button below."
 msgstr ""
 "* Néhány üzenet módosult. Ezek <strong> NEM </strong> lesznek elmentve az "
 "adatbázisba, amíg az alábbi \"Beállítások mentése\" gombra nem kattintasz."
+
+#: html/admin/settings/settings_messaging.php:131
+msgid "Messaging Related Options"
+msgstr ""
+
+#: html/admin/settings/settings_messaging.php:139
+#, fuzzy
+#| msgid "Send Commission Notification"
+msgid "Send Registration Notification:"
+msgstr "Jutalékértesítés elküldése"
+
+#: html/admin/settings/settings_messaging.php:146
+#, fuzzy
+#| msgid "Send Commission Notification"
+msgid "Send Notification to Admin"
+msgstr "Jutalékértesítés elküldése"
+
+#: html/admin/settings/settings_messaging.php:147
+msgid ""
+"Check this box if you want the admin of this site to get notified via email "
+"after a new affiliate signup."
+msgstr ""
+
+#: html/admin/settings/settings_messaging.php:149
+#, fuzzy
+#| msgid "Email Address"
+msgid "Admin Email Address"
+msgstr "Email cím"
+
+#: html/admin/settings/settings_messaging.php:151
+msgid ""
+"The email address to which the admin will get notified after a new affiliate "
+"signup."
+msgstr ""
 
 #: html/admin/settings/settings_payment.php:16
 msgid ""
@@ -1420,6 +1458,23 @@ msgstr "Kötelező"
 msgid "Affiliates Homepage Message"
 msgstr "Partner kezdőlap üzenet"
 
+#: html/admin/settings/settings_registration.php:460
+msgid ""
+"This message is shown to a normal visitor who is not logged into WordPress"
+msgstr ""
+
+#: html/admin/settings/settings_registration.php:465
+#, fuzzy
+#| msgid "Affiliates Homepage Message"
+msgid "Affiliates Homepage Message (Logged in but not an affiliate)"
+msgstr "Partner kezdőlap üzenet"
+
+#: html/admin/settings/settings_registration.php:469
+msgid ""
+"This message is shown to a user who is logged into WordPress but not an "
+"affiliate"
+msgstr ""
+
 #: html/affiliate_approved.php:1
 #, php-format
 msgid ""
@@ -1503,8 +1558,12 @@ msgstr "Kérlek, add meg a fizetési adataidat."
 
 #: html/affiliate_cp_payment_details_form.php:71
 #: html/affiliate_cp_payment_details_simple.php:15
+#, fuzzy
+#| msgid ""
+#| "The following information will be used to disperse payments when your "
+#| "account reaches the minimum payout amount."
 msgid ""
-"The following information will be used to disperse payments when your "
+"The following information will be used to disburse payments when your "
 "account reaches the minimum payout amount."
 msgstr ""
 "A következő információk használhatók a kifizetések kiküldésére, amikor "
@@ -1616,24 +1675,26 @@ msgstr ""
 "Ez az üzlet partner-részlege. Ha már partner vagy, kérlek <a href=\"%s\"> "
 "jelentkezz be </a> a vezérlőpult eléréséhez."
 
-#: html/affiliate_not_logged_in.php:7
+#: html/affiliate_not_logged_in.php:7 source/Data/DatabaseInstaller.php:386
+#: source/Pages/Admin/SettingsPage.php:192
 #, php-format
 msgid ""
-"If you are not an affiliate, but wish to become one, you will need to "
-"apply.  To apply, you must be a registered user on this blog.  If you have "
-"an existing account on this blog, please <a href=\"%s\">log in</a>.  If not, "
+"If you are not an affiliate, but wish to become one, you will need to apply. "
+"To apply, you must be a registered user on this blog. If you have an "
+"existing account on this blog, please <a href=\"%s\">log in</a>. If not, "
 "please <a href=\"%s\">register</a>."
 msgstr ""
-"Ha nem vagy partner, de szeretnél az lenni, akkor jelentkezést kell beadnod. "
-"A jelentkezéshez regisztrált felhasználónak kell lenned ezen a blogon. Ha "
-"van fiókod ezen a blogon, kérlek <a href=\"%s\"> jelentkezz be </a>. Ha nem, "
-"kérlek <a href=\"%s\"> regisztrálj </a>."
 
-#: html/affiliate_not_registered.php:1
-#, php-format
+#: html/affiliate_not_registered.php:4 source/Data/DatabaseInstaller.php:388
+#: source/Pages/Admin/SettingsPage.php:200
+#, fuzzy, php-format
+#| msgid ""
+#| "This is the affiliates section of this store. You are not currently an "
+#| "affiliate of this store.  If you wish to become one, please <a href=\"%s"
+#| "\"/>apply</a>."
 msgid ""
 "This is the affiliates section of this store. You are not currently an "
-"affiliate of this store.  If you wish to become one, please <a href=\"%s\"/"
+"affiliate of this store. If you wish to become one, please <a href=\"%s\"/"
 ">apply</a>."
 msgstr ""
 "Ez az üzlet partnerprogram része. Nem vagy tagja a partnerprogramnak. Ha "
@@ -2113,19 +2174,11 @@ msgid ""
 msgstr ""
 
 #: source/Data/DatabaseInstaller.php:383
+#: source/Pages/Admin/SettingsPage.php:189
 #, php-format
 msgid ""
 "This is the affiliates section of this store. If you are an existing "
 "affiliate, please <a href=\"%s\">log in</a> to access your control panel."
-msgstr ""
-
-#: source/Data/DatabaseInstaller.php:386
-#, php-format
-msgid ""
-"If you are not an affiliate, but wish to become one, you will need to apply. "
-"To apply, you must be a registered user on this blog. If you have an "
-"existing account on this blog, please <a href=\"%s\">log in</a>. If not, "
-"please <a href=\"%s\">register</a>."
 msgstr ""
 
 #: source/Data/GenericRepository.php:31 source/Data/GenericRepository.php:76
@@ -2247,6 +2300,42 @@ msgstr "Az affiliate fizetési módja nem PayPal"
 msgid "Payout via PayPal Mass Pay"
 msgstr "Kifizetés PayPal tömeges kifizetésen keresztül"
 
+#: source/Pages/Admin/SettingsPage.php:57
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the General tab and Save "
+"Settings again."
+msgstr ""
+
+#: source/Pages/Admin/SettingsPage.php:97
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Payment tab and Save "
+"Settings again."
+msgstr ""
+
+#: source/Pages/Admin/SettingsPage.php:113
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Messaging tab and Save "
+"Settings again."
+msgstr ""
+
+#: source/Pages/Admin/SettingsPage.php:133
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Affiliate Registration "
+"tab and Save Settings again."
+msgstr ""
+
+#: source/Pages/Admin/SettingsPage.php:208
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Pages/Forms tab and Save "
+"Settings again."
+msgstr ""
+
+#: source/Pages/Admin/SettingsPage.php:227
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Advanced Settings tab and "
+"Save Settings again."
+msgstr ""
+
 #: source/Pages/AffiliatesHome.php:39
 msgid "Sales"
 msgstr "Összeladás"
@@ -2304,41 +2393,41 @@ msgstr ""
 "Hiba történt az adataidnak az adatbázisba történő elküldésével. Jelentkezés "
 "nem lett benyújtva."
 
-#: source/Pages/AffiliatesRegister.php:73 source/Util/UserHandler.php:167
+#: source/Pages/AffiliatesRegister.php:74 source/Util/UserHandler.php:168
 #, php-format
 msgid "New affiliate registration on your site %s:"
 msgstr "Új társult regisztráció a %s webhelyen:"
 
-#: source/Pages/AffiliatesRegister.php:74 source/Util/UserHandler.php:168
+#: source/Pages/AffiliatesRegister.php:75 source/Util/UserHandler.php:169
 #, php-format
 msgid "Name: %s %s"
 msgstr "Név: %s %s"
 
-#: source/Pages/AffiliatesRegister.php:75 source/Util/UserHandler.php:169
+#: source/Pages/AffiliatesRegister.php:76 source/Util/UserHandler.php:170
 #, php-format
 msgid "Email: %s"
 msgstr "Email: %s"
 
-#: source/Pages/AffiliatesRegister.php:76 source/Util/UserHandler.php:170
+#: source/Pages/AffiliatesRegister.php:77 source/Util/UserHandler.php:171
 #, php-format
 msgid "Company: %s"
 msgstr "Cég: %s"
 
-#: source/Pages/AffiliatesRegister.php:77 source/Util/UserHandler.php:171
+#: source/Pages/AffiliatesRegister.php:78 source/Util/UserHandler.php:172
 #, php-format
 msgid "Website: %s"
 msgstr "Honlap: %s"
 
-#: source/Pages/AffiliatesRegister.php:78 source/Util/UserHandler.php:172
+#: source/Pages/AffiliatesRegister.php:79 source/Util/UserHandler.php:173
 #, php-format
 msgid "View Application: %s"
 msgstr "Jelentkezés megtekintése: %s"
 
-#: source/Pages/AffiliatesRegister.php:79 source/Util/UserHandler.php:173
+#: source/Pages/AffiliatesRegister.php:84 source/Util/UserHandler.php:178
 msgid "New Affiliate Registration"
 msgstr "Új partner regisztrációja"
 
-#: source/Pages/AffiliatesRegister.php:82
+#: source/Pages/AffiliatesRegister.php:87
 #, php-format
 msgid "Affiliate application for %s"
 msgstr "Partner jelentkezés %s-ra"
@@ -2444,10 +2533,6 @@ msgstr "és legyél partnerünk még ma!"
 msgid "Be An Affiliate"
 msgstr "Legyél partnerünk!"
 
-#: source/Plugin.php:633
-msgid "Settings"
-msgstr "Beállítások"
-
 #: source/Plugin.php:637
 msgid "Affiliates Manager Admin Functions"
 msgstr ""
@@ -2516,7 +2601,7 @@ msgid "Manual Transfer"
 msgstr "Kézi átutalás"
 
 #: source/Util/EmailHandler.php:49 source/Util/JsonHandler.php:60
-#: source/Util/UserHandler.php:81 source/Util/UserHandler.php:177
+#: source/Util/UserHandler.php:81 source/Util/UserHandler.php:182
 #, php-format
 msgid "Affiliate Application for %s"
 msgstr "Partnerjelentkezés %s-ra"
@@ -3639,6 +3724,17 @@ msgstr "Cégnév"
 #: source/dynamic-translatable-strings.php:8
 msgid "Website URL"
 msgstr "Weboldal URL"
+
+#~ msgid ""
+#~ "If you are not an affiliate, but wish to become one, you will need to "
+#~ "apply.  To apply, you must be a registered user on this blog.  If you "
+#~ "have an existing account on this blog, please <a href=\"%s\">log in</a>.  "
+#~ "If not, please <a href=\"%s\">register</a>."
+#~ msgstr ""
+#~ "Ha nem vagy partner, de szeretnél az lenni, akkor jelentkezést kell "
+#~ "beadnod. A jelentkezéshez regisztrált felhasználónak kell lenned ezen a "
+#~ "blogon. Ha van fiókod ezen a blogon, kérlek <a href=\"%s\"> jelentkezz be "
+#~ "</a>. Ha nem, kérlek <a href=\"%s\"> regisztrálj </a>."
 
 #~ msgid "from"
 #~ msgstr "-tól"

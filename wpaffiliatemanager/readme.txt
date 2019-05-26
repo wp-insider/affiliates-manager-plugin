@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal  
 Requires at least: 3.5
 Tested up to: 5.2
-Stable tag: 2.6.5
+Stable tag: 2.6.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -134,6 +134,10 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 2.6.6 =
+- Affiliate Registration notification email can now be sent to a different email address.
+- Updated the security checks in the plugin settings.
 
 = 2.6.5 =
 - Added a new text area in the settings to customize the content of the affiliate homepage (shown to a user who is logged in but not an affiliate).

@@ -19,7 +19,7 @@
 
 <div class="wrap">
 
-	<h2>Settings</h2>
+	<h2><?php _e('Settings', 'affiliates-manager') ?></h2>
 	<?php if (isset($this->viewData['updateMessage'])) {?>
 		<div id="updated" class="updated">
 			<p><?php echo $this->viewData['updateMessage']?></p>
@@ -71,6 +71,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
                 $content .= '</h2>';
                 echo $content;
                 ?>
+                <div id="poststuff"><div id="post-body">
                 <form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
 		<input type="hidden" name="action" value="submitSettings" />
                 <?php
@@ -81,30 +82,35 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
                           case 'affiliate-registration':
                               ?>
                               <input type="hidden" name="AffRegSettings" value="1" />
+                              <?php wp_nonce_field('aff_reg_settings_save'); ?>
                               <?php
                               require_once "settings_registration.php";
                               break;
                           case 'messaging':
                               ?>
                               <input type="hidden" name="AffMsgSettings" value="1" />
+                              <?php wp_nonce_field('aff_msg_settings_save'); ?>
                               <?php
                               require_once "settings_messaging.php";
                               break;
                           case 'payment':
                               ?>
                               <input type="hidden" name="AffPaymentSettings" value="1" />
+                              <?php wp_nonce_field('aff_payment_settings_save'); ?>
                               <?php
                               require_once "settings_payment.php";
                               break;
                           case 'affiliate-pages':
                               ?>
                               <input type="hidden" name="AffPagesSettings" value="1" />
+                              <?php wp_nonce_field('aff_pages_settings_save'); ?>
                               <?php
                               require_once "settings_aff_pages.php";
                               break;
                           case 'advanced-settings':
                               ?>
                               <input type="hidden" name="AffAdvancedSettings" value="1" />
+                              <?php wp_nonce_field('aff_advanced_settings_save'); ?>
                               <?php
                               require_once "settings_advanced.php";
                               break;
@@ -114,6 +120,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
                 {
                     ?>
                     <input type="hidden" name="AffGeneralSettings" value="1" />
+                    <?php wp_nonce_field('aff_general_settings_save'); ?>
                     <?php
                     require_once "settings_general.php";
                 }
@@ -125,4 +132,5 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 
 
 	</form>
+        </div></div>
 </div>

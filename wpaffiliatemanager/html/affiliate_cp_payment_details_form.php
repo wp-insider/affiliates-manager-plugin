@@ -68,7 +68,7 @@
 
 	 <h2><?php _e( 'Payment Details', 'affiliates-manager' ) ?></h2>
 	<h3><?php _e( 'Please provide your payment details.', 'affiliates-manager' ) ?></h3>
-	<p><?php _e( 'The following information will be used to disperse payments when your account reaches the minimum payout amount.', 'affiliates-manager' ) ?></p>
+	<p><?php _e( 'The following information will be used to disburse payments when your account reaches the minimum payout amount.', 'affiliates-manager' ) ?></p>
 
 <?php
 require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors.php";

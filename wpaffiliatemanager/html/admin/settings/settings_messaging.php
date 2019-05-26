@@ -76,7 +76,8 @@ jQuery(function($) {
 	<textarea id="messageEditorTextArea" name="messageEditorTextArea" style="width: 100%; height: 225px"></textarea>
 
 </div>
-
+<div class="postbox">
+<div class="inside">
 <div>
 	<table class="widefat">
 		<thead>
@@ -121,6 +122,35 @@ jQuery(function($) {
 		<?php } ?>
 	</table>
 </div>
+</div></div>
 <div id="messageEditorModifiedWarning" style="display: none; padding: 20px;">
 	<span style="color: red"><?php _e( "* Some messages have been modified. These will <strong>NOT</strong> be saved to the database until you click 'Save Settings' button below.", 'affiliates-manager' ) ?></span>
 </div>
+
+<div class="postbox">
+<h3 class="hndle"><label for="title"><?php _e('Messaging Related Options', 'affiliates-manager' ) ?></label></h3>
+<div class="inside">
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="6">
+
+        <tbody>
+        <tr valign="top">
+            <td width="25%" align="left">
+            <strong><?php _e('Send Registration Notification:', 'affiliates-manager' ) ?></strong>
+            </td>
+            <td align="left">
+                <input type="checkbox" id="sendAdminRegNotification" name="sendAdminRegNotification" <?php
+			if ($this->viewData['request']['sendAdminRegNotification'])
+				echo 'checked="checked"';
+			?>/>
+                <?php _e('Send Notification to Admin', 'affiliates-manager' ) ?>
+                <br><i><?php _e('Check this box if you want the admin of this site to get notified via email after a new affiliate signup.', 'affiliates-manager' ) ?></i>
+                <br><br>
+                <?php _e('Admin Email Address', 'affiliates-manager' ) ?>
+                <input type="text" size="30" name="adminRegNotificationEmail" id="adminRegNotificationEmail" value="<?php echo $this->viewData['request']['adminRegNotificationEmail']?>" />
+                <br><i><?php _e('The email address to which the admin will get notified after a new affiliate signup.', 'affiliates-manager' ) ?></i><br>    
+            </td>
+        </tr>
+
+    </tbody></table>
+</div></div>

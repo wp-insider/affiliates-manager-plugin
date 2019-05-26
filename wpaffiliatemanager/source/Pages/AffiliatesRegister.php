@@ -68,16 +68,21 @@ class WPAM_Pages_AffiliatesRegister extends WPAM_Pages_PublicPage
 
 				
 				$mailer = new WPAM_Util_EmailHandler();
-				//Notify admin that affiliate has registered
-				$blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
-				$message  = sprintf( __( 'New affiliate registration on your site %s:', 'affiliates-manager' ), $blogname) . "\r\n\r\n";
-				$message .= sprintf( __( 'Name: %s %s', 'affiliates-manager' ), $request['_firstName'], $request['_lastName']) . "\r\n";
-				$message .= sprintf( __( 'Email: %s', 'affiliates-manager' ), $request['_email']) . "\r\n";
-				$message .= sprintf( __( 'Company: %s', 'affiliates-manager' ), $request['_companyName']) . "\r\n";
-				$message .= sprintf( __( 'Website: %s', 'affiliates-manager' ), $request['_websiteUrl']) . "\r\n\r\n";
-				$message .= sprintf( __( 'View Application: %s', 'affiliates-manager' ),  admin_url('admin.php?page=wpam-affiliates&viewDetail='.$id)) . "\r\n";
-				$mailer->mailAffiliate( get_option('admin_email'), __( 'New Affiliate Registration', 'affiliates-manager' ), $message );
-				
+                                if(get_option(WPAM_PluginConfig::$SendAdminRegNotification) == 1){
+                                    //Notify admin that affiliate has registered
+                                    $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
+                                    $message  = sprintf( __( 'New affiliate registration on your site %s:', 'affiliates-manager' ), $blogname) . "\r\n\r\n";
+                                    $message .= sprintf( __( 'Name: %s %s', 'affiliates-manager' ), $request['_firstName'], $request['_lastName']) . "\r\n";
+                                    $message .= sprintf( __( 'Email: %s', 'affiliates-manager' ), $request['_email']) . "\r\n";
+                                    $message .= sprintf( __( 'Company: %s', 'affiliates-manager' ), $request['_companyName']) . "\r\n";
+                                    $message .= sprintf( __( 'Website: %s', 'affiliates-manager' ), $request['_websiteUrl']) . "\r\n\r\n";
+                                    $message .= sprintf( __( 'View Application: %s', 'affiliates-manager' ),  admin_url('admin.php?page=wpam-affiliates&viewDetail='.$id)) . "\r\n";
+                                    $admin_email = get_option(WPAM_PluginConfig::$AdminRegNotificationEmail);
+                                    if(!isset($admin_email) || empty($admin_email)){
+                                        $admin_email = get_option('admin_email');
+                                    }
+                                    $mailer->mailAffiliate( $admin_email, __( 'New Affiliate Registration', 'affiliates-manager' ), $message );
+                                }
 				//Notify affiliate of their application
 				$affsubj  = sprintf(__('Affiliate application for %s', 'affiliates-manager' ), $blogname);
 				$affmessage = WPAM_MessageHelper::GetMessage('affiliate_application_submitted_email');

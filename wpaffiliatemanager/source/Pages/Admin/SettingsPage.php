@@ -52,6 +52,10 @@ class WPAM_Pages_Admin_SettingsPage {
         if ($vr->getIsValid()) {
             $db = new WPAM_Data_DataAccess();
             if (isset($request['AffGeneralSettings'])) {  //General settings options submitted
+                $nonce = $request['_wpnonce'];
+                if(!wp_verify_nonce($nonce, 'aff_general_settings_save')){
+                    wp_die(__('Error! Nonce Security Check Failed! Go back to the General tab and Save Settings again.', 'affiliates-manager'));
+                }
                 update_option(WPAM_PluginConfig::$MinPayoutAmountOption, $request['txtMinimumPayout']);
                 update_option(WPAM_PluginConfig::$CookieExpireOption, $request['txtCookieExpire']);
                 update_option(WPAM_PluginConfig::$EmailNameOption, $request['txtEmailName']);
@@ -88,6 +92,10 @@ class WPAM_Pages_Admin_SettingsPage {
             }
 
             if (isset($request['AffPaymentSettings'])) {   //Payment settings options submitted
+                $nonce = $request['_wpnonce'];
+                if(!wp_verify_nonce($nonce, 'aff_payment_settings_save')){
+                    wp_die(__('Error! Nonce Security Check Failed! Go back to the Payment tab and Save Settings again.', 'affiliates-manager'));
+                }
                 if (isset($request['chkEnablePaypalMassPay'])) {
                     update_option(WPAM_PluginConfig::$PaypalMassPayEnabledOption, 1);
                     update_option(WPAM_PluginConfig::$PaypalAPIUserOption, $request['txtPaypalAPIUser']);
@@ -100,6 +108,10 @@ class WPAM_Pages_Admin_SettingsPage {
             }
 
             if (isset($request['AffMsgSettings'])) {      //Messaging settings options submitted
+                $nonce = $request['_wpnonce'];
+                if(!wp_verify_nonce($nonce, 'aff_msg_settings_save')){
+                    wp_die(__('Error! Nonce Security Check Failed! Go back to the Messaging tab and Save Settings again.', 'affiliates-manager'));
+                }
                 foreach ($request['messages'] as $message) {
                     $messageModel = $db->getMessageRepository()->loadBy(array('name' => $message['name']));
                     if ($messageModel != NULL) {
@@ -107,9 +119,19 @@ class WPAM_Pages_Admin_SettingsPage {
                         $db->getMessageRepository()->update($messageModel);
                     }
                 }
+                if (isset($request['sendAdminRegNotification'])) {
+                    update_option(WPAM_PluginConfig::$SendAdminRegNotification, 1);
+                } else {
+                    update_option(WPAM_PluginConfig::$SendAdminRegNotification, 0);
+                }
+                update_option(WPAM_PluginConfig::$AdminRegNotificationEmail, $request['adminRegNotificationEmail']);
             }
 
             if (isset($request['AffRegSettings'])) {    //Registration settings options submitted
+                $nonce = $request['_wpnonce'];
+                if(!wp_verify_nonce($nonce, 'aff_reg_settings_save')){
+                    wp_die(__('Error! Nonce Security Check Failed! Go back to the Affiliate Registration tab and Save Settings again.', 'affiliates-manager'));
+                }
                 if (isset($request['chkPayoutMethodManual'])) {
                     update_option(WPAM_PluginConfig::$PayoutMethodManualIsEnabledOption, 1);
                 } else {
@@ -181,6 +203,10 @@ class WPAM_Pages_Admin_SettingsPage {
             }
 
             if (isset($request['AffPagesSettings'])) {    //Affiliate pages/forms options submitted
+                $nonce = $request['_wpnonce'];
+                if(!wp_verify_nonce($nonce, 'aff_pages_settings_save')){
+                    wp_die(__('Error! Nonce Security Check Failed! Go back to the Pages/Forms tab and Save Settings again.', 'affiliates-manager'));
+                }
                 update_option(WPAM_PluginConfig::$AffHomePageURL, $request['affHomePage']);
                 if(isset($request['affHomePage']) && !empty($request['affHomePage'])){
                     $home_page_id = url_to_postid($request['affHomePage']);
@@ -196,6 +222,10 @@ class WPAM_Pages_Admin_SettingsPage {
             }
             
             if (isset($request['AffAdvancedSettings'])) {    //Advanced Settings options submitted
+                $nonce = $request['_wpnonce'];
+                if(!wp_verify_nonce($nonce, 'aff_advanced_settings_save')){
+                    wp_die(__('Error! Nonce Security Check Failed! Go back to the Advanced Settings tab and Save Settings again.', 'affiliates-manager'));
+                }
                 update_option(WPAM_PluginConfig::$AffLandingPageURL, $request['affLandingPage']);
                 if (isset($request['disableOwnReferrals'])) {
                     update_option(WPAM_PluginConfig::$DisableOwnReferrals, 1);
@@ -239,6 +269,8 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['chkPayoutMethodCheck'] = isset($request['chkPayoutMethodCheck']) ? 1 : 0;
             $response->viewData['request']['chkPayoutMethodPaypal'] = isset($request['chkPayoutMethodPaypal']) ? 1 : 0;
             $response->viewData['request']['chkPayoutMethodManual'] = isset($request['chkPayoutMethodManual']) ? 1 : 0;
+            $response->viewData['request']['sendAdminRegNotification'] = isset($request['sendAdminRegNotification']) ? 1 : 0;
+            $response->viewData['request']['adminRegNotificationEmail'] = isset($request['adminRegNotificationEmail']) ? $request['adminRegNotificationEmail'] : '';
             $response->viewData['request']['chkEnablePaypalMassPay'] = isset($request['chkEnablePaypalMassPay']) ? 1 : 0;
             $response->viewData['request']['txtPaypalAPIUser'] = isset($request['txtPaypalAPIUser']) ? $request['txtPaypalAPIUser'] : '';
             $response->viewData['request']['txtPaypalAPIPassword'] = isset($request['txtPaypalAPIPassword']) ? $request['txtPaypalAPIPassword'] : '';
@@ -270,6 +302,8 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['chkPayoutMethodCheck'] = get_option(WPAM_PluginConfig::$PayoutMethodCheckIsEnabledOption);
             $response->viewData['request']['chkPayoutMethodPaypal'] = get_option(WPAM_PluginConfig::$PayoutMethodPaypalIsEnabledOption);
             $response->viewData['request']['chkPayoutMethodManual'] = get_option(WPAM_PluginConfig::$PayoutMethodManualIsEnabledOption);
+            $response->viewData['request']['sendAdminRegNotification'] = get_option(WPAM_PluginConfig::$SendAdminRegNotification);
+            $response->viewData['request']['adminRegNotificationEmail'] = get_option(WPAM_PluginConfig::$AdminRegNotificationEmail);
             $response->viewData['request']['chkEnablePaypalMassPay'] = get_option(WPAM_PluginConfig::$PaypalMassPayEnabledOption);
             $response->viewData['request']['txtPaypalAPIUser'] = get_option(WPAM_PluginConfig::$PaypalAPIUserOption);
             $response->viewData['request']['txtPaypalAPIPassword'] = get_option(WPAM_PluginConfig::$PaypalAPIPasswordOption);
