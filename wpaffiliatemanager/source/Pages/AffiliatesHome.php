@@ -319,6 +319,9 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 		
 		if (isset($request['action']) && $request['action'] == 'saveInfo')
 		{
+                        if(!isset($request['_wpnonce']) || !wp_verify_nonce($request['_wpnonce'], 'wpam_add_affiliate')){
+                            wp_die('Error! Nonce Security Check Failed! Go back to the page and submit again.');
+                        }
 			$validator = new WPAM_Validation_Validator();
 			$validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('check','paypal','manual')));
 				
@@ -463,13 +466,16 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 		}
 		else if ($request['step'] === 'submit_payment_details')
 		{
+                        if(!isset($request['_wpnonce']) || !wp_verify_nonce($request['_wpnonce'], 'affiliate_cp_submit_payment_details')){
+                            wp_die('Error! Nonce Security Check Failed! Please submit your payment details again.');
+                        }
 			$vr = $this->validateForm($request);
 			if ($vr->getIsValid())
 			{
 				$this->confirmAffiliate($affiliate, $request);
 
 				//Transition affiliate directly to activated without admin review
-		        $db = new WPAM_Data_DataAccess();
+                                $db = new WPAM_Data_DataAccess();
 				$affiliate->activate();
 				$db->getAffiliateRepository()->update($affiliate);
 

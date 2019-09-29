@@ -94,7 +94,7 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 ?>
 	
 <form method="post" action="admin.php?page=wpam-creatives" enctype="multipart/form-data">
-
+        <?php wp_nonce_field('wpam_save_creatives_nonce'); ?>
 	<input type="hidden" name="action" value="<?php echo $this->viewData['request']['action']?>" />
 	<input type="hidden" name="post" value="true"/>
 	<?php if ($this->viewData['request']['action'] === 'edit') { ?>

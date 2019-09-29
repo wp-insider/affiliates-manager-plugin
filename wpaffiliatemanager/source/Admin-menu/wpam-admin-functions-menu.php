@@ -10,6 +10,10 @@ function wpam_display_admin_functions_menu()
     <div id="poststuff"><div id="post-body">
     <?php
     if (isset($_POST['wpam_delete_clicks_data'])) {
+        $nonce = $_POST['_wpnonce'];
+        if(!wp_verify_nonce($nonce, 'wpam_delete_clicks_data_nonce')){
+            wp_die(__('Error! Nonce Security Check Failed! Go back to the Admin Functions menu to delete clicks data.', 'affiliates-manager'));
+        }
         $date_valid = true;
         $args = array();
         $args['start_date'] = '';
@@ -45,7 +49,8 @@ function wpam_display_admin_functions_menu()
         <h3 class="hndle"><label for="title"><?php _e('Reset Buttons', 'affiliates-manager');?></label></h3>
     <div class="inside">
         
-    <form method="post" action="" onSubmit="return confirm('<?php _e('Do you really want to delete the clicks data? This action cannot be undone.', 'affiliates-manager');?>');"> 
+    <form method="post" action="" onSubmit="return confirm('<?php _e('Do you really want to delete the clicks data? This action cannot be undone.', 'affiliates-manager');?>');">
+    <?php wp_nonce_field('wpam_delete_clicks_data_nonce'); ?>    
     <?php _e('Start Date:', 'affiliates-manager');?> <input class="wpam_date" name="clicks_start_date" type="text" id="clicks_start_date" value="" size="12" />
     <?php _e('End Date:', 'affiliates-manager');?> <input class="wpam_date" name="clicks_end_date" type="text" id="clicks_end_date" value="" size="12" />
     <p><?php _e('Select a Start Date and an End Date to delete all clicks data within this period. If you only select a Start Date all clicks data recorded on or after this date will be deleted. If you only select an End Date all clicks data recorded up to this date will be deleted. If no date is selected all clicks data will be deleted.', 'affiliates-manager');?></p>

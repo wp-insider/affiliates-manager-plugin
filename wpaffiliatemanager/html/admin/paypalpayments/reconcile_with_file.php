@@ -47,6 +47,7 @@ $affiliates = $this->viewData['affiliates'];
 	<?php } ?>
 
 	<form id="mainform" enctype="multipart/form-data" method="POST" action="<?php echo admin_url('admin.php?id='.$massPayment->paypalLogId.'&page=wpam-payments&step=reconcile_with_file&substep=confirm')?>">
+                <?php wp_nonce_field('wpam_payments_rwfc_nonce'); ?>
 		<table class="widefat" style="width: 600px">
 		<thead><tr><th colspan="2">&nbsp;</th></tr></thead>
 		<tbody><tr><th width="150"><label for="resultsFile">Results File: </label></th><td><input id="resultsFile" type="file" name="resultsFile" /></td></tr>

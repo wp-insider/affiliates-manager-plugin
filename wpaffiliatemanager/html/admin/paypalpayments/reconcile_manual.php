@@ -41,6 +41,7 @@ $affiliates = $this->viewData['affiliates'];
 	<h3>Please select the outcome for each transaction.</h3>
 
 <form id="mainform" method="post" action="<?php echo admin_url('admin.php?page=wpam-payments&step=reconcile_manual&substep=confirm&id='.$massPayment->paypalLogId)?>">
+        <?php wp_nonce_field('wpam_payments_reconcile_manual_nonce'); ?>
 	<table class="widefat" style="width: auto">
 		<thead>
 		<tr>

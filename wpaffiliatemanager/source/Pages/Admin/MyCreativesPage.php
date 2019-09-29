@@ -141,6 +141,10 @@ class WPAM_Pages_Admin_MyCreativesPage extends WPAM_Pages_Admin_AdminPage
 
 	protected function doCreativeSubmit($request)
 	{
+                $nonce = $request['_wpnonce'];
+                if(!wp_verify_nonce($nonce, 'wpam_save_creatives_nonce')){
+                    wp_die(__('Error! Nonce Security Check Failed! Go back to the My Creatives menu and add a creative again.', 'affiliates-manager'));
+                }
 		$validator = new WPAM_Validation_Validator();				
 		$db = new WPAM_Data_DataAccess();
 		$image_url = '';

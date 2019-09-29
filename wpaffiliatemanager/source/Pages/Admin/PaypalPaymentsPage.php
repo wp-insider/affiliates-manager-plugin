@@ -49,6 +49,10 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 
 		if ( isset( $request['substep'] ) && $request['substep'] ==='confirm')
 		{
+                        $nonce = $request['_wpnonce'];
+                        if(!wp_verify_nonce($nonce, 'wpam_payments_rwfc_nonce')){
+                            wp_die(__('Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu to reconcile using a result file.', 'affiliates-manager'));
+                        }
 			try
 			{
 				$resultFile = new WPAM_PayPal_MassPayResultFile($_FILES['resultsFile']['tmp_name']);
@@ -116,6 +120,10 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 		}
 		else if ( isset( $request['substep'] ) && $request['substep'] == 'confirm_ok' )
 		{
+                        $nonce = $request['_wpnonce'];
+                        if(!wp_verify_nonce($nonce, 'wpam_payments_rwfco_nonce')){
+                            wp_die(__('Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and confirm to reconcile using a result file.', 'affiliates-manager'));
+                        }
 			$pplog = $db->getPaypalLogRepository()->load($request['id']);
 
 			if ($pplog !== NULL && $pplog->status == 'pending')
@@ -145,6 +153,10 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 
 		if ($request['substep'] == 'confirm')
 		{
+                        $nonce = $request['_wpnonce'];
+                        if(!wp_verify_nonce($nonce, 'wpam_payments_reconcile_manual_nonce')){
+                            wp_die(__('Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu to manually reconcile payments.', 'affiliates-manager'));
+                        }
 			$pplog = $db->getPaypalLogRepository()->load((int)$request['id']);
 			if ($pplog === NULL)
 				throw new Exception( __( 'Invalid PayPal LogID', 'affiliates-manager' ) );
@@ -211,6 +223,10 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 
 	private function processSubmitToPaypalRequest($request)
 	{
+                $nonce = $request['_wpnonce'];
+                if(!wp_verify_nonce($nonce, 'wpam_payments_submit_to_paypal_nonce')){
+                    wp_die(__('Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu to continue with these affiliate payments.', 'affiliates-manager'));
+                }
 		$options = new WPAM_Options();
 		$db = new WPAM_Data_DataAccess();
 		$aff_db = $db->getAffiliateRepository();
@@ -303,6 +319,10 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 
 	private function processReviewAffiliatesRequest($request)
 	{
+                $nonce = $request['_wpnonce'];
+                if(!wp_verify_nonce($nonce, 'wpam_payments_review_affiliates_nonce')){
+                    wp_die(__('Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and selects affiliates to pay.', 'affiliates-manager'));
+                }
 		$db = new WPAM_Data_DataAccess();
 		$aff_db = $db->getAffiliateRepository();
 
@@ -331,6 +351,12 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 	}
 
 	private function processSelectAffiliatesRequest( $request ) {
+            
+                if(!empty($request['from']) || !empty($request['to'])){  /*date range selected */
+                    if(!isset($request['_wpnonce']) || !wp_verify_nonce($request['_wpnonce'], 'wpam_payments_select_aff_date_range_nonce')){
+                        wp_die(__('Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and select affiliates again.', 'affiliates-manager'));
+                    }
+                }
 		$db = new WPAM_Data_DataAccess();
 		$aff_db = $db->getAffiliateRepository();
 		

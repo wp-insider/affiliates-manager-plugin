@@ -18,6 +18,7 @@
 require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 ?>
 	<form method="post" action="<?php echo $this->viewData['nextStepUrl']?>">
+            <?php wp_nonce_field('affiliate_cp_submit_payment_details'); ?>
 		<table width="500">
 			<tr>
 				<td width="200"><label for="ddPaymentMethod"><?php _e( 'Method', 'affiliates-manager' ) ?></label> *</td>

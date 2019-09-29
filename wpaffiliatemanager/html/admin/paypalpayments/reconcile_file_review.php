@@ -27,6 +27,7 @@ $affiliates = $this->viewData['affiliates'];
 	<h3>Please confirm the results of the file</h3>
 
 <form id="mainform" method="post" action="<?php echo admin_url('admin.php?page=wpam-payments&step=reconcile_with_file&substep=confirm_ok&id='.$massPayment->paypalLogId)?>">
+        <?php wp_nonce_field('wpam_payments_rwfco_nonce'); ?>
 	<table class="widefat" style="width: auto">
 		<thead>
 		<tr>

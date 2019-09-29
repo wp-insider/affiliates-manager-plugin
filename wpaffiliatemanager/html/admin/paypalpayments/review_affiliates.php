@@ -47,6 +47,7 @@ jQuery(function($) {
 
 	<div style="width: 900px;">
 	<form id="main-form" method="POST" action="<?php echo admin_url("admin.php?page=wpam-payments&step=submit_to_paypal")?>">
+        <?php wp_nonce_field('wpam_payments_submit_to_paypal_nonce'); ?>    
 	<table class="widefat" style="width: 900px">
 		<thead>
 		<tr>

@@ -69,9 +69,13 @@
         }       
         $output = '<h3>'.__('Referral URL Generator', 'affiliates-manager').'</h3>';
         $output .= '<form id="wpam_link_generation_form" action="" method="post">';
+        $output .= wp_nonce_field('wpam_generate_referral_link', '_wpnonce', true, false);
         $output .= '<div class="wpam_link_gen_page_url_label">'.__('Enter any URL from this site in the form below to generate a referral link', 'affiliates-manager').'</div>';
         $output .= '<div class="wpam_link_generation_input"><input type="text" name="wpam_link_generation_url" value="'.$default_url.'" size="60" /></div>';    
         if (isset($_REQUEST['wpam_generate_referral_link']) && is_numeric($aff_id)) {
+            if(!isset($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'wpam_generate_referral_link')){
+                wp_die('Error! Nonce Security Check Failed! Please enter a URL to generate a referral link again.');
+            }
             $referral_url = add_query_arg( array( WPAM_PluginConfig::$wpam_id => $aff_id ), $default_url );
             $output .= '<br />';
             $output .= '<div class="wpam_referral_url_label">'.__('Below is your referral URL (You can copy it and share anywhere)', 'affiliates-manager').'</div>';

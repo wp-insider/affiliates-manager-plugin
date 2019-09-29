@@ -20,8 +20,7 @@ if(is_user_logged_in()){  //this block checks whether the user is logged in and 
 ?>
 
 <form action="" method="post" id="mainForm" class="pure-form">
-
-
+    <?php wp_nonce_field('wpam_reg_submit'); ?>
 		<?php _e( '* Required fields', 'affiliates-manager' ) ?><br /><br />
 		<table class="pure-table">
 			<?php foreach ($this->viewData['affiliateFields'] as $field) { ?>

@@ -7,6 +7,7 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
 ?>
 
 <form method="post" id="infoForm" class="pure-form">
+    <?php wp_nonce_field('wpam_add_affiliate'); ?>
     <table class="pure-table wpam-contact-info">
         <thead>
             <tr>
@@ -209,6 +210,6 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
 <?php } ?>
     <div class="wpam-save-profile">			
         <input type="hidden" name="action" value="saveInfo"/>
-        <input type="submit" id="saveInfoButton" class="pure-button pure-button-active" name="wpam-add-affiliate" value="<?php echo isset($this->viewData['saveLabel']) ? $this->viewData['saveLabel'] : __('Save Changes', 'affiliates-manager'); ?>" />
+        <input type="submit" id="saveInfoButton" class="pure-button pure-button-active" name="wpam_add_affiliate" value="<?php echo isset($this->viewData['saveLabel']) ? $this->viewData['saveLabel'] : __('Save Changes', 'affiliates-manager'); ?>" />
     </div>
 </form>

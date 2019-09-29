@@ -28,6 +28,9 @@ class WPAM_Pages_Admin_MyAffiliatesPage extends WPAM_Pages_Admin_AdminPage {
             }
 
             if (isset($request['action']) && $request['action'] == 'saveInfo') {
+                if(!isset($request['_wpnonce']) || !wp_verify_nonce($request['_wpnonce'], 'wpam_add_affiliate')){
+                    wp_die('Error! Nonce Security Check Failed! Go back to the page and submit again.');
+                }
                 $validator = new WPAM_Validation_Validator();
 
                 //validate bounty type & amount if they're in the appropriate status

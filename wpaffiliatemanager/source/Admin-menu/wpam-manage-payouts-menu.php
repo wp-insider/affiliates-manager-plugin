@@ -8,16 +8,25 @@ function wpam_display_manage_payouts_menu()
     <h2><?php _e('Manage Payouts', 'affiliates-manager');?></h2>
     <div id="poststuff"><div id="post-body">
     <?php
-    if (isset($_POST['wpam_generate_payout_report'])) {      
+    if (isset($_POST['wpam_generate_payout_report'])) {
+        if(!isset($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'wpam_generate_payout_report')){
+            wp_die('Error! Nonce Security Check Failed! Go back to the Manage Payouts menu and generate the report again.');
+        }
         echo wpam_generate_payout_report();
         echo "<br />";
         echo '<div id="message" class="updated fade"><p>'.__('Payout Report Generated', 'affiliates-manager').'</p></div>';
     }
     if (isset($_POST['wpam_generate_mass_pay_file'])) {
+        if(!isset($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'wpam_generate_mass_pay_file')){
+            wp_die('Error! Nonce Security Check Failed! Go back to the Manage Payouts menu and generate the payout file again.');
+        }
         echo wpam_create_mass_pay_file();
         echo "<br />";
     }
-    if (isset($_REQUEST['wpam_mark_as_paid'])) {
+    if (isset($_POST['wpam_mark_as_paid'])) {
+        if(!isset($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'wpam_mark_as_paid')){
+            wp_die('Error! Nonce Security Check Failed! Go back to the Manage Payouts menu and mark payments as paid again.');
+        }
         echo wpam_mark_payment_as_paid();
     }
     $paypal_payouts_doc = 'https://wpaffiliatemanager.com/paypal-payouts-setup/';
@@ -26,19 +35,22 @@ function wpam_display_manage_payouts_menu()
         <h3 class="hndle"><label for="title"><?php _e('Affiliate Mass Payout by Outstanding Amount', 'affiliates-manager');?></label></h3>
     <div class="inside">    
     <form method="post" action="">
+        <?php wp_nonce_field('wpam_generate_payout_report'); ?>    
         <strong><?php _e('Step 1:', 'affiliates-manager');?></strong>
         <input type="submit" class="button" name="wpam_generate_payout_report" value="<?php _e('Generate Report', 'affiliates-manager'); ?> &raquo;" />
         <br /><i><?php _e('Hit "Generate Report" to get a list of all the affiliate earnings that need to be paid.', 'affiliates-manager'); ?></i><br />
         <br />
     </form>
 
-    <form method="post" action="">  
+    <form method="post" action="">
+        <?php wp_nonce_field('wpam_generate_mass_pay_file'); ?>
         <strong><?php _e('Step 2:', 'affiliates-manager');?></strong> <input type="submit" class="button" name="wpam_generate_mass_pay_file" value="<?php _e('Create Payment Report File', 'affiliates-manager'); ?> &raquo;" />
         <br /><i><?php printf(__('Use this to generate a PayPal payout file and a payment report CSV file. The PayPal payout file can be used in paypal to pay all your affiliates in one click. If you have never used PayPal Payouts check <a href="%s" target="_blank">this documentation</a>.', 'affiliates-manager'), $paypal_payouts_doc); ?></i><br />
         <br />
     </form>
 
-    <form method="post" action="" onSubmit="return confirm('<?php _e('Do you really want to mark all the outstanding payments as paid? This action cannot be undone.', 'affiliates-manager');?>');">  
+    <form method="post" action="" onSubmit="return confirm('<?php _e('Do you really want to mark all the outstanding payments as paid? This action cannot be undone.', 'affiliates-manager');?>');">
+        <?php wp_nonce_field('wpam_mark_as_paid'); ?>
         <strong><?php _e('Step 3:', 'affiliates-manager');?></strong> <input type="submit" class="button" name="wpam_mark_as_paid" value="<?php _e('Mark as Paid', 'affiliates-manager'); ?> &raquo;" />
         <br /><i><?php _e('After you have generated the payout report and paid all the affiliates their outstanding balance, use this button to mark all the payments as paid.', 'affiliates-manager'); ?></i><br />
         <br />

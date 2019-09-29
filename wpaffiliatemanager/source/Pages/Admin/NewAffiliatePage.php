@@ -16,7 +16,9 @@ class WPAM_Pages_Admin_NewAffiliatePage extends WPAM_Pages_Admin_AdminPage {
 		);
 		
 		if ( isset( $request['action'] ) && $request['action'] == 'saveInfo' ) {
-                        
+                        if(!isset($request['_wpnonce']) || !wp_verify_nonce($request['_wpnonce'], 'wpam_add_affiliate')){
+                            wp_die('Error! Nonce Security Check Failed! Go back to the page and submit again.');
+                        }
                         if(is_array($request)){
                             $request = wpam_sanitize_array($request);
                         }
