@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Affiliate Manager\n"
-"POT-Creation-Date: 2019-05-26 18:25+0600\n"
-"PO-Revision-Date: 2019-05-26 18:26+0600\n"
+"POT-Creation-Date: 2019-10-24 11:26+0600\n"
+"PO-Revision-Date: 2019-10-24 11:31+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -44,7 +44,7 @@ msgstr "Weergave"
 #: classes/ListAffiliatesTable.php:61 classes/ListClicksTable.php:55
 #: classes/ListCommissionTable.php:62
 #: source/Admin-menu/wpam-commission-menu.php:175
-#: source/Admin-menu/wpam-manage-payouts-menu.php:58
+#: source/Admin-menu/wpam-manage-payouts-menu.php:70
 msgid "Affiliate ID"
 msgstr "Affiliate ID"
 
@@ -57,8 +57,8 @@ msgid "Status"
 msgstr "Status"
 
 #: classes/ListAffiliatesTable.php:63
-#: html/admin/paypalpayments/review_affiliates.php:58
-#: html/admin/paypalpayments/select_affiliates.php:129
+#: html/admin/paypalpayments/review_affiliates.php:59
+#: html/admin/paypalpayments/select_affiliates.php:131
 #: html/affiliate_cp_home.php:16 html/transaction_table.php:52
 #: html/transaction_table.php:67
 msgid "Balance"
@@ -69,14 +69,14 @@ msgid "Earnings"
 msgstr "Verdiensten"
 
 #: classes/ListAffiliatesTable.php:65
-#: html/admin/paypalpayments/review_affiliates.php:54
-#: html/admin/paypalpayments/select_affiliates.php:125
+#: html/admin/paypalpayments/review_affiliates.php:55
+#: html/admin/paypalpayments/select_affiliates.php:127
 msgid "First Name"
 msgstr "Voornaam"
 
 #: classes/ListAffiliatesTable.php:66
-#: html/admin/paypalpayments/review_affiliates.php:55
-#: html/admin/paypalpayments/select_affiliates.php:126
+#: html/admin/paypalpayments/review_affiliates.php:56
+#: html/admin/paypalpayments/select_affiliates.php:128
 msgid "Last Name"
 msgstr "Achternaam"
 
@@ -85,8 +85,8 @@ msgid "Email"
 msgstr "E-mail"
 
 #: classes/ListAffiliatesTable.php:68
-#: html/admin/paypalpayments/review_affiliates.php:56
-#: html/admin/paypalpayments/select_affiliates.php:127
+#: html/admin/paypalpayments/review_affiliates.php:57
+#: html/admin/paypalpayments/select_affiliates.php:129
 msgid "Company"
 msgstr "Bedrijf"
 
@@ -175,7 +175,7 @@ msgstr "Bulk Actie"
 
 #: classes/ListTable.php:153 html/admin/affiliate_detail.php:283
 #: html/admin/affiliate_detail.php:314
-#: html/admin/paypalpayments/select_affiliates.php:115
+#: html/admin/paypalpayments/select_affiliates.php:116
 #: html/transaction_table.php:35
 msgid "Apply"
 msgstr "Toepassen"
@@ -215,7 +215,7 @@ msgstr ""
 "laten aanmelden op een latere datum?"
 
 #: html/admin/affiliate_detail.php:188
-#: source/Admin-menu/wpam-manage-payouts-menu.php:225
+#: source/Admin-menu/wpam-manage-payouts-menu.php:237
 msgid "Payout"
 msgstr "Uitbetaling"
 
@@ -223,9 +223,9 @@ msgstr "Uitbetaling"
 #: html/admin/creative_update_form.php:35 html/admin/creatives_detail.php:114
 #: html/admin/creatives_detail.php:137 html/admin/manage_creatives.php:38
 #: html/affiliate_creative_detail.php:19
-#: source/Pages/Admin/MyAffiliatesPage.php:166
-#: source/Pages/Admin/NewAffiliatePage.php:93
-#: source/Pages/AffiliatesHome.php:569
+#: source/Pages/Admin/MyAffiliatesPage.php:169
+#: source/Pages/Admin/NewAffiliatePage.php:95
+#: source/Pages/AffiliatesHome.php:575
 msgid "OK"
 msgstr "OK"
 
@@ -313,19 +313,19 @@ msgid "Bounty Type"
 msgstr "Vergoedingstype"
 
 #: html/admin/affiliate_detail.php:427
-#: html/admin/settings/settings_general.php:161 html/contact_info.php:179
+#: html/admin/settings/settings_general.php:161 html/contact_info.php:180
 msgid "Percentage of Sales"
 msgstr "Percentage per verkoop"
 
 #: html/admin/affiliate_detail.php:428
-#: html/admin/settings/settings_general.php:162 html/contact_info.php:180
+#: html/admin/settings/settings_general.php:162 html/contact_info.php:181
 msgid "Fixed Amount per Sale"
 msgstr "Vast bedrag per verkoop"
 
 #: html/admin/affiliate_detail.php:434
-#: source/Pages/Admin/MyAffiliatesPage.php:165
-#: source/Pages/Admin/NewAffiliatePage.php:92
-#: source/Pages/AffiliatesHome.php:568
+#: source/Pages/Admin/MyAffiliatesPage.php:168
+#: source/Pages/Admin/NewAffiliatePage.php:94
+#: source/Pages/AffiliatesHome.php:574
 #, php-format
 msgid "Bounty Rate (% of Sale)"
 msgstr "Commissie (% per verkoop)"
@@ -448,7 +448,7 @@ msgstr "Openstaand saldo"
 
 #: html/admin/affiliate_detail.php:563
 #: html/affiliate_cp_payment_details_form.php:69
-#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:130
+#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:131
 msgid "Payment Details"
 msgstr "Betalingsgegevens"
 
@@ -513,7 +513,7 @@ msgstr "Advertentie"
 #: html/admin/creatives_detail.php:248 html/admin/manage_creatives.php:167
 #: html/admin/settings/settings_messaging.php:87
 #: html/admin/settings/settings_registration.php:440
-#: html/affiliate_creative_list.php:90 html/transaction_table.php:45
+#: html/affiliate_creative_list.php:94 html/transaction_table.php:45
 #: html/transaction_table.php:60
 msgid "Type"
 msgstr "Type"
@@ -648,8 +648,8 @@ msgstr "Nieuw"
 #: html/admin/creative_update_form.php:115 html/admin/creatives_detail.php:244
 #: html/admin/manage_creatives.php:168
 #: html/admin/settings/settings_messaging.php:86
-#: html/affiliate_creative_list.php:91
-#: source/Admin-menu/wpam-manage-payouts-menu.php:59
+#: html/affiliate_creative_list.php:95
+#: source/Admin-menu/wpam-manage-payouts-menu.php:71
 msgid "Name"
 msgstr "Naam"
 
@@ -857,12 +857,12 @@ msgstr "Totaal"
 msgid "(No Mass Payments on Record)"
 msgstr "(Geen geregistreerde bulkbetalingen)"
 
-#: html/admin/paypalpayments/reconcile_file_review.php:66
-#: html/admin/paypalpayments/reconcile_manual.php:81
+#: html/admin/paypalpayments/reconcile_file_review.php:67
+#: html/admin/paypalpayments/reconcile_manual.php:82
 msgid "Reconcile Mass Payment"
 msgstr "Combineer bulkbetaling"
 
-#: html/admin/paypalpayments/reconcile_with_file.php:54
+#: html/admin/paypalpayments/reconcile_with_file.php:55
 msgid "Reconcile with this file"
 msgstr "Combineer met deze file"
 
@@ -891,44 +891,44 @@ msgstr "Op uw PayPal account zal %s In rekening worden gebracht!"
 msgid "Review Your Mass Payment"
 msgstr "Beoordeel uw bulkbetaling"
 
-#: html/admin/paypalpayments/review_affiliates.php:53
-#: html/admin/paypalpayments/select_affiliates.php:124
+#: html/admin/paypalpayments/review_affiliates.php:54
+#: html/admin/paypalpayments/select_affiliates.php:126
 msgid "AID"
 msgstr "STEUN"
 
-#: html/admin/paypalpayments/review_affiliates.php:57
-#: html/admin/paypalpayments/select_affiliates.php:128
+#: html/admin/paypalpayments/review_affiliates.php:58
+#: html/admin/paypalpayments/select_affiliates.php:130
 #: html/admin/paypalpayments/view_payment_detail.php:60
 msgid "PayPal E-Mail"
 msgstr "PayPal e-mail"
 
-#: html/admin/paypalpayments/review_affiliates.php:60
+#: html/admin/paypalpayments/review_affiliates.php:61
 #: html/admin/settings/settings.php:49
 msgid "Payment"
 msgstr "Betaling"
 
-#: html/admin/paypalpayments/review_affiliates.php:62
+#: html/admin/paypalpayments/review_affiliates.php:63
 msgid "New Balance"
 msgstr "Nieuw saldo"
 
-#: html/admin/paypalpayments/review_affiliates.php:93
+#: html/admin/paypalpayments/review_affiliates.php:94
 msgid "Sub-Total"
 msgstr "Subtotaal"
 
-#: html/admin/paypalpayments/review_affiliates.php:97
-#: html/admin/paypalpayments/select_affiliates.php:175
+#: html/admin/paypalpayments/review_affiliates.php:98
+#: html/admin/paypalpayments/select_affiliates.php:177
 #, php-format
 msgid "PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>"
 msgstr ""
 "PayPal kosten <br /> <small>2 %% per betaling, maximaal %s1 per betaling</"
 "small>"
 
-#: html/admin/paypalpayments/review_affiliates.php:102
-#: html/admin/paypalpayments/select_affiliates.php:180
+#: html/admin/paypalpayments/review_affiliates.php:103
+#: html/admin/paypalpayments/select_affiliates.php:182
 msgid "Estimated Total"
 msgstr "Geschatte totaal"
 
-#: html/admin/paypalpayments/review_affiliates.php:106
+#: html/admin/paypalpayments/review_affiliates.php:107
 msgid "Submit Mass Payment to PayPal"
 msgstr "Verstuur bulkbetaling aan PayPal"
 
@@ -941,31 +941,31 @@ msgstr "Selecteer een affiliate om te betalen"
 msgid "Not showing %s affiliates that do not have a PayPal account on file."
 msgstr "%s affiliate zonder PayPal account worden niet weergegeven."
 
-#: html/admin/paypalpayments/select_affiliates.php:110
+#: html/admin/paypalpayments/select_affiliates.php:111
 #: html/transaction_table.php:27
 msgid "Date Range:"
 msgstr "Datumbereik:"
 
-#: html/admin/paypalpayments/select_affiliates.php:111
+#: html/admin/paypalpayments/select_affiliates.php:112
 #: html/transaction_table.php:29
 msgid "From Date"
 msgstr ""
 
-#: html/admin/paypalpayments/select_affiliates.php:113
+#: html/admin/paypalpayments/select_affiliates.php:114
 #: html/transaction_table.php:31
 msgid "To Date"
 msgstr ""
 
-#: html/admin/paypalpayments/select_affiliates.php:116
+#: html/admin/paypalpayments/select_affiliates.php:117
 #: html/transaction_table.php:36
 msgid "Clear"
 msgstr "Wissen"
 
-#: html/admin/paypalpayments/select_affiliates.php:130
+#: html/admin/paypalpayments/select_affiliates.php:132
 msgid "Payment Amount"
 msgstr "Totaalbedrag"
 
-#: html/admin/paypalpayments/select_affiliates.php:185
+#: html/admin/paypalpayments/select_affiliates.php:187
 msgid "Continue with these payments"
 msgstr "Doorgaan met deze betalingen"
 
@@ -1562,23 +1562,23 @@ msgstr ""
 "account het uitbetaal limiet heeft bereikt."
 
 #: html/affiliate_cp_payment_details_form.php:79
-#: html/affiliate_cp_payment_details_simple.php:23 html/contact_info.php:136
+#: html/affiliate_cp_payment_details_simple.php:24 html/contact_info.php:137
 msgid "Method"
 msgstr "Methode"
 
 #: html/affiliate_cp_payment_details_form.php:96
-#: html/affiliate_cp_payment_details_simple.php:40 html/contact_info.php:165
+#: html/affiliate_cp_payment_details_simple.php:41 html/contact_info.php:166
 msgid "PayPal E-Mail Address"
 msgstr "PayPal e-mailadres"
 
 #: html/affiliate_cp_payment_details_form.php:109
-#: html/affiliate_cp_payment_details_simple.php:53
+#: html/affiliate_cp_payment_details_simple.php:54
 #: source/Util/AffiliateFormHelper.php:153
 msgid "Paper Check"
 msgstr "Papier Check"
 
 #: html/affiliate_cp_payment_details_form.php:115
-#: html/affiliate_cp_payment_details_simple.php:59
+#: html/affiliate_cp_payment_details_simple.php:60
 msgid "Check Recipient"
 msgstr "Controleer ontvanger"
 
@@ -1588,7 +1588,7 @@ msgstr "Mail naar het opgeslagen record"
 
 #: html/affiliate_cp_payment_details_form.php:143
 #: html/affiliate_cp_payment_details_form.php:168
-#: html/affiliate_cp_payment_details_simple.php:76
+#: html/affiliate_cp_payment_details_simple.php:77
 msgid "Recipient"
 msgstr "Ontvanger"
 
@@ -1617,11 +1617,11 @@ msgid "Postal Code"
 msgstr "Postcode"
 
 #: html/affiliate_cp_payment_details_form.php:218
-#: html/affiliate_cp_payment_details_simple.php:101
+#: html/affiliate_cp_payment_details_simple.php:102
 msgid "Submit Payment Details"
 msgstr "Betaalgegevens verzenden"
 
-#: html/affiliate_cp_payment_details_simple.php:69
+#: html/affiliate_cp_payment_details_simple.php:70
 msgid "Check will be mailed to the following address:"
 msgstr "De check wordt verzonden aan de adressen:"
 
@@ -1637,20 +1637,20 @@ msgstr "Uw affiliate link met uw affiliate ID"
 msgid "Referral URL Generator"
 msgstr ""
 
-#: html/affiliate_creative_list.php:72
+#: html/affiliate_creative_list.php:73
 msgid ""
 "Enter any URL from this site in the form below to generate a referral link"
 msgstr ""
 
-#: html/affiliate_creative_list.php:77
+#: html/affiliate_creative_list.php:81
 msgid "Below is your referral URL (You can copy it and share anywhere)"
 msgstr ""
 
-#: html/affiliate_creative_list.php:81
+#: html/affiliate_creative_list.php:85
 msgid "Generate Referral URL"
 msgstr ""
 
-#: html/affiliate_creative_list.php:85
+#: html/affiliate_creative_list.php:89
 msgid "The following creatives are available for publication."
 msgstr "De volgende advertenties zijn beschikbaar voor publicatie."
 
@@ -1700,11 +1700,11 @@ msgid ""
 "register again. Simply go to the affiliate portal and start referring users."
 msgstr ""
 
-#: html/affiliate_register_form.php:25 html/contact_info.php:206
+#: html/affiliate_register_form.php:24 html/contact_info.php:207
 msgid "* Required fields"
 msgstr "* Verplichte velden"
 
-#: html/affiliate_register_form.php:39
+#: html/affiliate_register_form.php:37
 msgid ""
 "This is the email address associated with your currently logged in WordPress "
 "user account."
@@ -1712,7 +1712,7 @@ msgstr ""
 "Dit is het e-mailadres waarmee u ingelogd bent op uw huidige WordPress "
 "gebruikers account."
 
-#: html/affiliate_register_form.php:40
+#: html/affiliate_register_form.php:38
 msgid ""
 "If you want to use a different email address, log out of your WordPress "
 "account then try a new registration."
@@ -1720,27 +1720,27 @@ msgstr ""
 "Indien u een ander e-mailadres wilt gebruiken dient u uit te loggen en "
 "opnieuw te registeren met het gewenste e-mailadres."
 
-#: html/affiliate_register_form.php:80
+#: html/affiliate_register_form.php:74
 msgid "I have read and agree to the"
 msgstr "Ik heb de algemene voorwaarden gelezen en ga akkoord"
 
-#: html/affiliate_register_form.php:80
+#: html/affiliate_register_form.php:74
 msgid "Terms and Conditions"
 msgstr "Algemene Voorwaarden"
 
-#: html/affiliate_register_form.php:81
+#: html/affiliate_register_form.php:75
 msgid "You must agree to the terms."
 msgstr "U moet akkoord gaan met de algemene voorwaarden."
 
-#: html/affiliate_register_form.php:93
+#: html/affiliate_register_form.php:86
 msgid "Submit Application"
 msgstr "Aanvraag indienen"
 
-#: html/contact_info.php:13
+#: html/contact_info.php:14
 msgid "Contact Information"
 msgstr "Contact informatie"
 
-#: html/contact_info.php:101
+#: html/contact_info.php:102
 #, php-format
 msgid ""
 "There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s"
@@ -1749,33 +1749,33 @@ msgstr ""
 "Er is een wijziging van uw e-mailadres in behandeling naar <code>%1$ s</"
 "code>. <a href=\"%2$s\"> Annuleren</a>"
 
-#: html/contact_info.php:109
+#: html/contact_info.php:110
 msgid "New Password"
 msgstr ""
 
-#: html/contact_info.php:118
+#: html/contact_info.php:119
 msgid "Repeat New Password"
 msgstr ""
 
-#: html/contact_info.php:174
+#: html/contact_info.php:175
 msgid "Bounty Type *"
 msgstr "Verdiensten Type *"
 
-#: html/contact_info.php:191
+#: html/contact_info.php:192
 #, php-format
 msgid "Bounty Rate (%s per Sale) *"
 msgstr "Verdiensten tarief (%s per verkoop) *"
 
-#: html/contact_info.php:191
+#: html/contact_info.php:192
 #, php-format
 msgid "Bounty Rate (% of Sale) *"
 msgstr "Commissie percentage (% van verkoop) *"
 
-#: html/contact_info.php:208
+#: html/contact_info.php:209
 msgid "+ Custom fields"
 msgstr "+ Aangepaste velden"
 
-#: html/contact_info.php:212
+#: html/contact_info.php:213
 msgid "Save Changes"
 msgstr "Wijzigingen opslaan"
 
@@ -1809,36 +1809,42 @@ msgid ""
 "The Admin Functions page lets you do various admin stuff from time to time."
 msgstr ""
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:23
+#: source/Admin-menu/wpam-admin-functions-menu.php:15
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Admin Functions menu to "
+"delete clicks data."
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:27
 msgid "Start Date is not valid"
 msgstr ""
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:34
+#: source/Admin-menu/wpam-admin-functions-menu.php:38
 msgid "End Date is not valid"
 msgstr ""
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:39
+#: source/Admin-menu/wpam-admin-functions-menu.php:43
 msgid "Clicks data has been deleted!"
 msgstr ""
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:45
+#: source/Admin-menu/wpam-admin-functions-menu.php:49
 msgid "Reset Buttons"
 msgstr ""
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:48
+#: source/Admin-menu/wpam-admin-functions-menu.php:52
 msgid ""
 "Do you really want to delete the clicks data? This action cannot be undone."
 msgstr ""
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:49
+#: source/Admin-menu/wpam-admin-functions-menu.php:54
 msgid "Start Date:"
 msgstr ""
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:50
+#: source/Admin-menu/wpam-admin-functions-menu.php:55
 msgid "End Date:"
 msgstr ""
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:51
+#: source/Admin-menu/wpam-admin-functions-menu.php:56
 msgid ""
 "Select a Start Date and an End Date to delete all clicks data within this "
 "period. If you only select a Start Date all clicks data recorded on or after "
@@ -1847,7 +1853,7 @@ msgid ""
 "data will be deleted."
 msgstr ""
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:53
+#: source/Admin-menu/wpam-admin-functions-menu.php:58
 msgid "Delete Clicks Data"
 msgstr ""
 
@@ -1945,37 +1951,37 @@ msgstr "Geef de datum op in het formaat yyyy-mm-dd. Voorbeeld: "
 msgid "Manage Payouts"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:14
+#: source/Admin-menu/wpam-manage-payouts-menu.php:17
 msgid "Payout Report Generated"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:26
+#: source/Admin-menu/wpam-manage-payouts-menu.php:35
 msgid "Affiliate Mass Payout by Outstanding Amount"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:29
+#: source/Admin-menu/wpam-manage-payouts-menu.php:39
 msgid "Step 1:"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:30
+#: source/Admin-menu/wpam-manage-payouts-menu.php:40
 msgid "Generate Report"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:31
+#: source/Admin-menu/wpam-manage-payouts-menu.php:41
 msgid ""
 "Hit \"Generate Report\" to get a list of all the affiliate earnings that "
 "need to be paid."
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:36
+#: source/Admin-menu/wpam-manage-payouts-menu.php:47
 msgid "Step 2:"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:36
+#: source/Admin-menu/wpam-manage-payouts-menu.php:47
 msgid "Create Payment Report File"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:37
+#: source/Admin-menu/wpam-manage-payouts-menu.php:48
 #, php-format
 msgid ""
 "Use this to generate a PayPal payout file and a payment report CSV file. The "
@@ -1984,55 +1990,55 @@ msgid ""
 "\"_blank\">this documentation</a>."
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:41
+#: source/Admin-menu/wpam-manage-payouts-menu.php:52
 msgid ""
 "Do you really want to mark all the outstanding payments as paid? This action "
 "cannot be undone."
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:42
+#: source/Admin-menu/wpam-manage-payouts-menu.php:54
 msgid "Step 3:"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:42
+#: source/Admin-menu/wpam-manage-payouts-menu.php:54
 msgid "Mark as Paid"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:43
+#: source/Admin-menu/wpam-manage-payouts-menu.php:55
 msgid ""
 "After you have generated the payout report and paid all the affiliates their "
 "outstanding balance, use this button to mark all the payments as paid."
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:60
+#: source/Admin-menu/wpam-manage-payouts-menu.php:72
 msgid "PayPal Email"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:61
+#: source/Admin-menu/wpam-manage-payouts-menu.php:73
 msgid "Pending Amount"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:109
+#: source/Admin-menu/wpam-manage-payouts-menu.php:121
 msgid "No Affiliates Found in the Database."
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:112
+#: source/Admin-menu/wpam-manage-payouts-menu.php:124
 msgid "No Pending Payment Found."
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:131
+#: source/Admin-menu/wpam-manage-payouts-menu.php:143
 msgid "There is no pending payment."
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:146
+#: source/Admin-menu/wpam-manage-payouts-menu.php:158
 msgid "can't open file named 'paypal_payout.csv'"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:189
+#: source/Admin-menu/wpam-manage-payouts-menu.php:201
 msgid "can't open file named 'affiliate_payout_report.csv'"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:195
+#: source/Admin-menu/wpam-manage-payouts-menu.php:207
 msgid ""
 "Note: Please make sure that the PayPal email address field of the affiliates "
 "that are about to get paid via PayPal are not empty. PayPal payouts do not "
@@ -2040,7 +2046,7 @@ msgid ""
 "going to pay your affiliates via other means."
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:198
+#: source/Admin-menu/wpam-manage-payouts-menu.php:210
 #, php-format
 msgid ""
 "PayPal payout file created. Download the <a href=\"%s\">PayPal Payout File</"
@@ -2048,7 +2054,7 @@ msgid ""
 "a PayPal mass payment and pay the commissions in one go."
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:203
+#: source/Admin-menu/wpam-manage-payouts-menu.php:215
 #, php-format
 msgid ""
 "CSV file with outstanding affiliate commission details created. Download the "
@@ -2057,11 +2063,11 @@ msgid ""
 "affiliates."
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:215
+#: source/Admin-menu/wpam-manage-payouts-menu.php:227
 msgid "There is no pending payment to mark"
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:230
+#: source/Admin-menu/wpam-manage-payouts-menu.php:242
 msgid "Marked payments as paid"
 msgstr ""
 
@@ -2201,9 +2207,9 @@ msgstr "Poging om het ongeldige bericht in te laden met naam ‘%s’"
 msgid "Invalid PayPal API value"
 msgstr "Ongeldig PayPal API waarde"
 
-#: source/Pages/Admin/MyAffiliatesPage.php:164
-#: source/Pages/Admin/NewAffiliatePage.php:91
-#: source/Pages/AffiliatesHome.php:567
+#: source/Pages/Admin/MyAffiliatesPage.php:167
+#: source/Pages/Admin/NewAffiliatePage.php:93
+#: source/Pages/AffiliatesHome.php:573
 #, php-format
 msgid "Bounty Rate (%s per Sale)"
 msgstr "Commissie tarief (%s per verkoop)"
@@ -2213,37 +2219,49 @@ msgid "All"
 msgstr "Alle"
 
 #: source/Pages/Admin/MyCreativesPage.php:111
-#: source/Pages/Admin/MyCreativesPage.php:233
-#: source/Pages/Admin/MyCreativesPage.php:240
+#: source/Pages/Admin/MyCreativesPage.php:237
+#: source/Pages/Admin/MyCreativesPage.php:244
 #: source/Pages/AffiliatesHome.php:185 source/Util/JsonHandler.php:212
 msgid "Invalid creative."
 msgstr "Ongeldige advertentie."
 
-#: source/Pages/Admin/MyCreativesPage.php:194
+#: source/Pages/Admin/MyCreativesPage.php:146
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the My Creatives menu and add "
+"a creative again."
+msgstr ""
+
+#: source/Pages/Admin/MyCreativesPage.php:198
 msgid "Insert failed: Bad creative type."
 msgstr "Invoegen mislukt: foutief advertentie type."
 
-#: source/Pages/Admin/MyCreativesPage.php:203
+#: source/Pages/Admin/MyCreativesPage.php:207
 msgid "Creative Updated."
 msgstr "Advertentie bijgewerkt."
 
-#: source/Pages/Admin/MyCreativesPage.php:210
+#: source/Pages/Admin/MyCreativesPage.php:214
 msgid "Creative ... created."
 msgstr "Advertentie… gemaakt."
 
-#: source/Pages/Admin/MyCreativesPage.php:214
+#: source/Pages/Admin/MyCreativesPage.php:218
 msgid "Insert failed: invalid creative update mechanism."
 msgstr "Invoegen mislukt: foutief advertentie update mechanisme."
 
-#: source/Pages/Admin/NewAffiliatePage.php:80
+#: source/Pages/Admin/NewAffiliatePage.php:82
 msgid "Add Affiliate"
 msgstr "Affiliate toevoegen"
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:58
+#: source/Pages/Admin/PaypalPaymentsPage.php:54
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu to "
+"reconcile using a result file."
+msgstr ""
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:62
 msgid "This results file does not appear to match this payment."
 msgstr "Dit resultaat bestand hoort niet bij deze betaling."
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:92
+#: source/Pages/Admin/PaypalPaymentsPage.php:96
 #, php-format
 msgid ""
 "Matched a transaction in your results file, but the value was incorrect. "
@@ -2252,43 +2270,73 @@ msgstr ""
 "De transactie is gekoppeld in uw resultaten, maar de waarde was niet "
 "correct. Verwachte %s maar ‘%s’ gevonden"
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:100
+#: source/Pages/Admin/PaypalPaymentsPage.php:104
 msgid ""
 "Could not correlate a transaction from your results file with the "
 "transactions on record."
 msgstr "Kon geen transacties inden van uw resultaten pagina met de transactie."
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:106
+#: source/Pages/Admin/PaypalPaymentsPage.php:110
 msgid "Could not correlate all transactions"
 msgstr "Kon geen transactie koppelen"
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:150
+#: source/Pages/Admin/PaypalPaymentsPage.php:125
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and "
+"confirm to reconcile using a result file."
+msgstr ""
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:158
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu to "
+"manually reconcile payments."
+msgstr ""
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:162
 msgid "Invalid PayPal LogID"
 msgstr "Ongeldig PayPal LogID"
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:156
+#: source/Pages/Admin/PaypalPaymentsPage.php:168
 msgid "Transaction not found"
 msgstr "Transactie niet gevonden"
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:167
+#: source/Pages/Admin/PaypalPaymentsPage.php:179
 msgid "Invalid transaction status"
 msgstr "Ongeldige transactie status"
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:225
+#: source/Pages/Admin/PaypalPaymentsPage.php:228
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu to "
+"continue with these affiliate payments."
+msgstr ""
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:241
 msgid "Affiliate Payment"
 msgstr "Affiliate betaling"
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:237
+#: source/Pages/Admin/PaypalPaymentsPage.php:253
 msgid "Affiliate not found"
 msgstr "Affiliate niet gevonden"
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:240
+#: source/Pages/Admin/PaypalPaymentsPage.php:256
 msgid "Payment method for affiliate is not PayPal"
 msgstr "Betalingsmethode voor partner is niet PayPal"
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:247
+#: source/Pages/Admin/PaypalPaymentsPage.php:263
 msgid "Payout via PayPal Mass Pay"
 msgstr "Uitbetaling via PayPal Mass Pay"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:324
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and "
+"selects affiliates to pay."
+msgstr ""
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:357
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and "
+"select affiliates again."
+msgstr ""
 
 #: source/Pages/Admin/SettingsPage.php:57
 msgid ""
@@ -2357,25 +2405,25 @@ msgstr "Ongeldige affiliate"
 msgid "Inactive creative."
 msgstr "Inactieve advertentie."
 
-#: source/Pages/AffiliatesHome.php:341
+#: source/Pages/AffiliatesHome.php:344
 msgid ": Password may not contain slashes."
 msgstr ""
 
-#: source/Pages/AffiliatesHome.php:346
+#: source/Pages/AffiliatesHome.php:349
 msgid ": Please enter the same password in both password fields."
 msgstr ""
 
-#: source/Pages/AffiliatesHome.php:424
+#: source/Pages/AffiliatesHome.php:427
 #, php-format
 msgid "%s per sale."
 msgstr "%s per verkoop."
 
-#: source/Pages/AffiliatesHome.php:426
+#: source/Pages/AffiliatesHome.php:429
 #, php-format
 msgid "%s%% of each completed sale, pre-tax"
 msgstr "%s%% van elke voltooide verkoop, voor belastingen"
 
-#: source/Pages/AffiliatesRegister.php:65 source/Util/UserHandler.php:158
+#: source/Pages/AffiliatesRegister.php:68 source/Util/UserHandler.php:158
 msgid ""
 "Error submitting your details to the database. This is a bug, and your "
 "application was not submitted."
@@ -2383,41 +2431,41 @@ msgstr ""
 "Fout bij het verwerken van de details in de database. Dit is een bug, uw "
 "toevoeging is niet verwerkt."
 
-#: source/Pages/AffiliatesRegister.php:74 source/Util/UserHandler.php:168
+#: source/Pages/AffiliatesRegister.php:77 source/Util/UserHandler.php:168
 #, php-format
 msgid "New affiliate registration on your site %s:"
 msgstr "Er is een nieuwe affiliate geregisseerd op uw website %s:"
 
-#: source/Pages/AffiliatesRegister.php:75 source/Util/UserHandler.php:169
+#: source/Pages/AffiliatesRegister.php:78 source/Util/UserHandler.php:169
 #, php-format
 msgid "Name: %s %s"
 msgstr "Naam: %s %s"
 
-#: source/Pages/AffiliatesRegister.php:76 source/Util/UserHandler.php:170
+#: source/Pages/AffiliatesRegister.php:79 source/Util/UserHandler.php:170
 #, php-format
 msgid "Email: %s"
 msgstr "E-mail: %s"
 
-#: source/Pages/AffiliatesRegister.php:77 source/Util/UserHandler.php:171
+#: source/Pages/AffiliatesRegister.php:80 source/Util/UserHandler.php:171
 #, php-format
 msgid "Company: %s"
 msgstr "Bedrijf: %s"
 
-#: source/Pages/AffiliatesRegister.php:78 source/Util/UserHandler.php:172
+#: source/Pages/AffiliatesRegister.php:81 source/Util/UserHandler.php:172
 #, php-format
 msgid "Website: %s"
 msgstr "Website: %s"
 
-#: source/Pages/AffiliatesRegister.php:79 source/Util/UserHandler.php:173
+#: source/Pages/AffiliatesRegister.php:82 source/Util/UserHandler.php:173
 #, php-format
 msgid "View Application: %s"
 msgstr "Aanmeldingen bekijken: %s"
 
-#: source/Pages/AffiliatesRegister.php:84 source/Util/UserHandler.php:178
+#: source/Pages/AffiliatesRegister.php:87 source/Util/UserHandler.php:178
 msgid "New Affiliate Registration"
 msgstr "Nieuwe Affiliate Registratie"
 
-#: source/Pages/AffiliatesRegister.php:87
+#: source/Pages/AffiliatesRegister.php:90
 #, php-format
 msgid "Affiliate application for %s"
 msgstr "Affiliate registratie voor %s"
@@ -3694,6 +3742,10 @@ msgstr "%s per verkoop"
 #, php-format
 msgid "%s%% of pre-tax sales"
 msgstr "%s%% voor belasting"
+
+#: source/display_functions.php:30 source/display_functions.php:41
+msgid "Select an option"
+msgstr ""
 
 #: source/dynamic-translatable-strings.php:4
 msgid "Address Line 1"

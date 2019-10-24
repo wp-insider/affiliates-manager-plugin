@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal  
 Requires at least: 3.5
 Tested up to: 5.2
-Stable tag: 2.6.7
+Stable tag: 2.6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -134,6 +134,9 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 2.6.8 =
+- Made some improvements to the affiliate registration form.
 
 = 2.6.7 =
 - Made some improvements to form checks in the plugin.
