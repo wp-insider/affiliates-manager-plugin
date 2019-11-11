@@ -73,7 +73,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
                 ?>
                 <div id="poststuff"><div id="post-body">
                 <form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
-		<input type="hidden" name="action" value="submitSettings" />
+		<input type="hidden" name="wpam_submit_settings" value="1" />
                 <?php
                 if(isset($_GET['action']))
                 { 

@@ -820,6 +820,7 @@ class WPAM_Plugin {
                 'companyName' => 'Company',
                 'dateCreated' => 'Date Joined',
                 'websiteUrl' => 'Website',
+                'phoneNumber' => 'Phone',
             );
             $this->output_csv($affiliates->items, $export_keys, 'MyAffiliates.csv');
             die();

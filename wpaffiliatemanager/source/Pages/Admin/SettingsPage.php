@@ -17,7 +17,7 @@ class WPAM_Pages_Admin_SettingsPage {
             echo '<div class="updated fade"><p>Log file has been reset</p></div>';
         }
 
-        if (isset($request['action']) && $request['action'] === 'submitSettings') {
+        if (isset($request['wpam_submit_settings']) && $request['wpam_submit_settings'] === '1') {
             $this->doFormSubmit($request);
         } else {
             $this->getSettingsForm();
