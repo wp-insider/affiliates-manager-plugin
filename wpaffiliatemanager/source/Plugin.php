@@ -451,30 +451,25 @@ class WPAM_Plugin {
         }
         WPAM_Logger::log_debug('WooCommerce Integration - Checking if affiliate commission needs to be awarded.');
         $order = new WC_Order($order_id);
-
-        if (in_array('_subscription_switch_data', get_post_custom_keys($order_id))) {
-            WPAM_Logger::log_debug("WooCommerce Integration - This is a subscription payment order since the _subscription_switch_data meta is set.", 2);
+        
+        if(function_exists('wcs_order_contains_subscription') && wcs_order_contains_subscription($order, 'parent')){
+            WPAM_Logger::log_debug("WooCommerce Integration - This notification is for a new subscription payment");
             WPAM_Logger::log_debug("The commission will be calculated via the recurring payemnt api call.", 2);
             return;
         }
-        $recurring_payment_method = get_post_meta($order_id, '_recurring_payment_method', true);
-        if (!empty($recurring_payment_method)) {
-            WPAM_Logger::log_debug("WooCommerce Integration - This is a recurring payment order. Subscription payment method: " . $recurring_payment_method, 2);
+        if(function_exists('wcs_order_contains_subscription') && wcs_order_contains_subscription($order, 'renewal')){
+            WPAM_Logger::log_debug("WooCommerce Integration - This notification is for a recurring subscription payment");
             WPAM_Logger::log_debug("The commission will be calculated via the recurring payemnt api call.", 2);
             return;
         }
-        $subscription_renewal = get_post_meta($order_id, '_subscription_renewal', true);
-        if (!empty($subscription_renewal)) {
-            WPAM_Logger::log_debug("WooCommerce Integration - This is a subscription payment order since the subscription_renewal meta is set.", 2);
-            WPAM_Logger::log_debug("The commission will be calculated via the recurring payment api call.", 2);
+        if(function_exists('wcs_order_contains_subscription') && wcs_order_contains_subscription($order, 'resubscribe')){
+            WPAM_Logger::log_debug("WooCommerce Integration - This notification is for a resubscription payment");
+            WPAM_Logger::log_debug("The commission will be calculated via the recurring payemnt api call.", 2);
             return;
         }
-        $post = get_post($order_id);
-        $post_name = $post->post_name;
-        WPAM_Logger::log_debug("WooCommerce Integration - Order CPT name: " . $post_name);
-        if (stripos($post_name, 'subscription') !== false) {
-            //This is an order for subscription. The recurring payment api hook will handle it .
-            WPAM_Logger::log_debug("WooCommerce Integration - This is a recurring payment order. The commission will be calculated via the recurring payemnt api call.", 2);
+        if(function_exists('wcs_order_contains_subscription') && wcs_order_contains_subscription($order, 'switch')){
+            WPAM_Logger::log_debug("WooCommerce Integration - This notification is for a subscription switch");
+            WPAM_Logger::log_debug("The commission will be calculated via the recurring payemnt api call.", 2);
             return;
         }
 
