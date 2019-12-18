@@ -1,0 +1,3993 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Affiliates Manager\n"
+"POT-Creation-Date: 2019-12-14 17:51+0200\n"
+"PO-Revision-Date: 2019-12-14 18:23+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: lt_LT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && (n%100<11 || n%100>19) ? 0 : n"
+"%10>=2 && n%10<=9 && (n%100<11 || n%100>19) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: Afiiliate-man/affiliates-manager\n"
+"X-Poedit-SearchPath-2: Afiiliate-man/affiliates-manager/source\n"
+
+#: Afiiliate-man/affiliates-manager/boot-strap.php:39
+msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
+msgstr "WordPress Affiliate Manager reikalauja PHP 5.1 arba naujesnės."
+
+#: Afiiliate-man/affiliates-manager/boot-strap.php:43
+msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
+msgstr "WordPress Affiliate Manager reikalauja WordPress 3.5 arba naujesnės."
+
+#: Afiiliate-man/affiliates-manager/classes/CommissionTracking.php:83
+#, php-format
+msgid "Credit for sale of %s %s (PURCHASE LOG ID = %s)"
+msgstr "Kreditai pardavimui %s %s (PIRKIMO ŽURNALO ID = %s)"
+
+#: Afiiliate-man/affiliates-manager/classes/CommissionTracking.php:117
+msgid "You just earned a commission!"
+msgstr "Jūs ką tik uždirbote komisinių!"
+
+#: Afiiliate-man/affiliates-manager/classes/CommissionTracking.php:169
+#, php-format
+msgid "Refund of %s %s (PURCHASE LOG ID = %s)"
+msgstr "Grąžinta % s% s (PIRKIMO ŽURNALO ID =% s)"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:40
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:176
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/pending_payments.php:23
+msgid "View"
+msgstr "Peržiūrėti"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:61
+#: Afiiliate-man/affiliates-manager/classes/ListClicksTable.php:55
+#: Afiiliate-man/affiliates-manager/classes/ListCommissionTable.php:62
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:175
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:70
+msgid "Affiliate ID"
+msgstr "Partnerio ID"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:62
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:240
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:165
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/pending_payments.php:16
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:61
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:47
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:62
+msgid "Status"
+msgstr "Būsena"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:63
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:59
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:131
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:16
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:52
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:67
+msgid "Balance"
+msgstr "Balansas"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:64
+msgid "Earnings"
+msgstr "Uždarbiai"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:65
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:55
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:127
+msgid "First Name"
+msgstr "Vardas"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:66
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:56
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:128
+msgid "Last Name"
+msgstr "Pavardė"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:67
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:315
+msgid "Email"
+msgstr "El. paštas"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:68
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:57
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:129
+msgid "Company"
+msgstr "Įmonė"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:69
+msgid "Date Joined"
+msgstr "Prisijungė"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:70
+msgid "Website"
+msgstr "Svetainė"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:86
+#: Afiiliate-man/affiliates-manager/classes/ListClicksTable.php:73
+#: Afiiliate-man/affiliates-manager/classes/ListCommissionTable.php:80
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:177
+msgid "Delete"
+msgstr "Pašalinti"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:97
+#: Afiiliate-man/affiliates-manager/classes/ListClicksTable.php:84
+#: Afiiliate-man/affiliates-manager/classes/ListCommissionTable.php:91
+msgid "Error! You need to select multiple records to perform a bulk action!"
+msgstr "Klaida! Jums reikia pasirinkti kelis įrašus atlikti urminiam veiksmui!"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:115
+#: Afiiliate-man/affiliates-manager/classes/ListClicksTable.php:93
+#: Afiiliate-man/affiliates-manager/classes/ListCommissionTable.php:100
+msgid "Selected records deleted successfully!"
+msgstr "Pasirinkti įrašai ištrinti sėkmingai!"
+
+#: Afiiliate-man/affiliates-manager/classes/ListAffiliatesTable.php:139
+#: Afiiliate-man/affiliates-manager/classes/ListCommissionTable.php:116
+msgid "Selected record deleted successfully!"
+msgstr "Pasirinkti įrašas ištrintas sėkmingai!"
+
+#: Afiiliate-man/affiliates-manager/classes/ListClicksTable.php:39
+msgid "No Clicks Found!"
+msgstr "Jokių paspaudimų nerasta!"
+
+#: Afiiliate-man/affiliates-manager/classes/ListClicksTable.php:53
+#: Afiiliate-man/affiliates-manager/classes/ListCommissionTable.php:60
+msgid "Row ID"
+msgstr "Eilutės ID"
+
+#: Afiiliate-man/affiliates-manager/classes/ListClicksTable.php:54
+#: Afiiliate-man/affiliates-manager/classes/ListCommissionTable.php:61
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:205
+msgid "Date"
+msgstr "Data"
+
+#: Afiiliate-man/affiliates-manager/classes/ListClicksTable.php:56
+msgid "Tracking Key"
+msgstr "Sekimo kodas"
+
+#: Afiiliate-man/affiliates-manager/classes/ListClicksTable.php:57
+msgid "Referring URL"
+msgstr "Šaltinio URL"
+
+#: Afiiliate-man/affiliates-manager/classes/ListClicksTable.php:58
+msgid "IP Address"
+msgstr "IP adresas"
+
+#: Afiiliate-man/affiliates-manager/classes/ListCommissionTable.php:46
+msgid "No Commission Data Found!"
+msgstr "Nerasta jokių komisinių duomenų!"
+
+#: Afiiliate-man/affiliates-manager/classes/ListCommissionTable.php:63
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/pending_payments.php:13
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:20
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:63
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:50
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:65
+msgid "Amount"
+msgstr "Suma"
+
+#: Afiiliate-man/affiliates-manager/classes/ListCommissionTable.php:64
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:193
+msgid "Transaction ID"
+msgstr "Operacijos ID"
+
+#: Afiiliate-man/affiliates-manager/classes/ListCommissionTable.php:65
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:199
+msgid "Buyer Email"
+msgstr "Pirkėjo el. paštas"
+
+#: Afiiliate-man/affiliates-manager/classes/ListTable.php:79
+msgid "No items found."
+msgstr "Nieko nerasta."
+
+#: Afiiliate-man/affiliates-manager/classes/ListTable.php:143
+msgid "Bulk Actions"
+msgstr "Masiniai Veiksmai"
+
+#: Afiiliate-man/affiliates-manager/classes/ListTable.php:153
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:283
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:314
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:116
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:35
+msgid "Apply"
+msgstr "Pateikti"
+
+#: Afiiliate-man/affiliates-manager/classes/ListTable.php:203
+msgid "Show all dates"
+msgstr "Rodyti visas datas"
+
+#: Afiiliate-man/affiliates-manager/classes/ListTable.php:222
+msgid "List View"
+msgstr "Sąrašo rodinys"
+
+#: Afiiliate-man/affiliates-manager/classes/ListTable.php:223
+msgid "Excerpt View"
+msgstr "Ištraukos peržiūra"
+
+#: Afiiliate-man/affiliates-manager/classes/ListTable.php:239
+#, php-format
+msgid "%s pending"
+msgstr "%s laukiama"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:141
+#, php-format
+msgid "YES, Block all applications from %s"
+msgstr "Taip, blokuoti visas programas nuo %s"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:150
+msgid "NO, They may re-apply"
+msgstr "NE, jie gali vėl prašytis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:159
+msgid ""
+"Do you want to block all future applications from this email address, or "
+"allow them to sign up at a later date?"
+msgstr ""
+"Ar norite blokuoti visus būsimus prašymus iš šio el. pašto adreso ar leisti "
+"jiems prisijungti vėliau?"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:188
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:237
+msgid "Payout"
+msgstr "Išmokėjimas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:219
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:236
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:35
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:114
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:137
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:38
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_detail.php:19
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyAffiliatesPage.php:169
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/NewAffiliatePage.php:95
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:575
+msgid "OK"
+msgstr "Gerai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:236
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:279
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:310
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:83
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:92
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:90
+msgid "Cancel"
+msgstr "Atšaukti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:249
+msgid "Are you sure you wish to approve this affiliate?"
+msgstr "Ar tikrai norite patvirtinti šį partnerį?"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:250
+msgid "Yes, approve."
+msgstr "Taip, patvirtinti."
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:292
+msgid "Are you sure you wish to apply an adjustment of "
+msgstr "Ar tikrai norite atlikti koregavimą "
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:292
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:334
+msgid " to this account? The new balance will be "
+msgstr " į šią sąskaitą? Naujas likutis bus "
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:293
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:335
+msgid "Yes, apply it."
+msgstr "Taip, jį pritaikyti."
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:334
+msgid "Are you sure you wish to apply a payout of "
+msgstr "Ar tikrai norite atlikti išmokėjimą "
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:369
+msgid "Are you sure you wish to decline this affiliate?"
+msgstr "Ar tikrai norite atšaukti šį partnerį?"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:369
+msgid "Yes, DECLINE."
+msgstr "Taip, ATMESTI."
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:373
+msgid "Are you sure you wish to block this affiliate?"
+msgstr "Ar tikrai norite blokuoti šį partnerį?"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:373
+msgid "Yes, BLOCK."
+msgstr "Taip, BLOKUOTI."
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:383
+msgid ""
+"Are you sure you wish to unblock this affiliate?<br>User will become "
+"DECLINED."
+msgstr "Ar tikrai norite atblokuoti šį partnerį?<br>Vartotojas taps ATMESTAS."
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:383
+msgid "Yes, UNBLOCK."
+msgstr "Taip, ATBLOKUOTI."
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:394
+msgid "Are you sure you wish to activate this affiliate?"
+msgstr "Ar tikrai norite aktyvuoti šį partnerį?"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:394
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:86
+msgid "Yes, ACTIVATE."
+msgstr "Taip, AKTYVUOTI."
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:398
+msgid "Are you sure you wish to deactivate this affiliate?"
+msgstr "Ar tikrai norite deaktyvuoti šį partnerį?"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:398
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:95
+msgid "Yes, DEACTIVATE."
+msgstr "Taip, DEAKTYVUOTI."
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:417
+msgid "Approve Application"
+msgstr "Patvirtinti Paraišką"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:423
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:567
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:157
+msgid "Bounty Type"
+msgstr "Prizo Tipas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:427
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:161
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:180
+msgid "Percentage of Sales"
+msgstr "Procentais nuo Pardavimo"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:428
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:162
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:181
+msgid "Fixed Amount per Sale"
+msgstr "Fiksuota Suma už Pardavimą"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:434
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyAffiliatesPage.php:168
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/NewAffiliatePage.php:94
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:574
+#, php-format
+msgid "Bounty Rate (% of Sale)"
+msgstr "Prizo procentas (% nuo pardavimų)"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:446
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:161
+msgid "Updating, please wait ... "
+msgstr "Atnaujinama, prašome palaukti... "
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:451
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:166
+msgid "Are you sure?"
+msgstr "Ar tikrai?"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:452
+msgid "approve"
+msgstr "patvirtinti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:454
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:169
+msgid "Error"
+msgstr "Klaida"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:455
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:170
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:109
+msgid "ERROR:"
+msgstr "KLAIDA:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:458
+msgid "Apply Adjustment "
+msgstr "Atlikti koregavimą "
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:462
+msgid "Amount "
+msgstr "Suma "
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:468
+msgid "Description "
+msgstr "Aprašymas "
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:477
+msgid "Apply Payout "
+msgstr "Atlikti išmokėjimą "
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:481
+msgid "Payout Amount "
+msgstr "Išmokos suma "
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:484
+msgid "Current balance"
+msgstr "Dabartinis balansas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:487
+msgid "Other amount"
+msgstr "Kita suma"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:496
+msgid "Affiliate:"
+msgstr "Partneris:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:502
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:38
+msgid "Overview"
+msgstr "Apžvalga"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:503
+msgid "Account Finances"
+msgstr "Paskyros finansai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:504
+msgid "Information"
+msgstr "Informacija"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:505
+msgid "Affiliate Links"
+msgstr "Partnerių nuorodos"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:507
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:589
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:39
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:73
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:47
+msgid "Impressions"
+msgstr "Parodymai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:516
+msgid "Approve"
+msgstr "Patvirtinti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:517
+msgid "Decline"
+msgstr "Atmesti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:519
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:213
+msgid "Activate"
+msgstr "Aktyvuoti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:521
+msgid "Dectivate"
+msgstr "Deaktyvuoti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:523
+msgid "Unblock"
+msgstr "Atblokuoti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:525
+msgid "Block"
+msgstr "Blokas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:531
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:108
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:228
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings.php:46
+msgid "General"
+msgstr "Bendras"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:535
+msgid "Date Applied"
+msgstr "Pritaikymo data"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:536
+msgid "Affiliate Status"
+msgstr "Partnerio būsena"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:539
+msgid "Account Standing"
+msgstr "Sąskaitos būsena"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:563
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:69
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_simple.php:13
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:131
+msgid "Payment Details"
+msgstr "Mokėjimo informacija"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:568
+msgid "Bounty Amount"
+msgstr "Prizo suma"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:570
+msgid "Payment Method"
+msgstr "Mokėjimo būdas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:572
+msgid "Paypal E-Mail"
+msgstr "„Paypal“ el. paštas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:574
+msgid "Make Check Out To"
+msgstr "Atsiskaityti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:584
+msgid "Statistics"
+msgstr "Statistika"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:591
+msgid "Visits"
+msgstr "Apsilankymai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:592
+msgid "Purchases"
+msgstr "Pirkimai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:603
+msgid "Balance:"
+msgstr "Balansas:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:606
+msgid "Earnings:"
+msgstr "Uždarbis:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:607
+msgid "Payments:"
+msgstr "Mokėjimai:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:608
+msgid "Adjustments:"
+msgstr "Patikslinimai:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:612
+msgid "Apply Payout"
+msgstr "Atlikti išmokėjimą"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:613
+msgid "Apply Manual Adjustment"
+msgstr "Atlikti Rankinį Patikslinimą"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:625
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:85
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_success.php:4
+#: Afiiliate-man/affiliates-manager/html/impressions_table.php:8
+msgid "Creative"
+msgstr "Skelbimai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:626
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:132
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:248
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:167
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:87
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:440
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_list.php:94
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:45
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:60
+msgid "Type"
+msgstr "Tipas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_detail.php:627
+msgid "Link"
+msgstr "Nuoroda"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_management_home.php:2
+msgid "Affiliate Management Control Panel"
+msgstr "Partnerių Valdymo Skydelis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_new.php:3
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_new_success.php:2
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:79
+msgid "New Affiliate"
+msgstr "Naujas Partneris"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_new.php:6
+msgid ""
+"As an Affiliate Manager, if you want to create an affiliate account rather "
+"than directing someone to the normal registration form, you can do that "
+"here. Once you fill out the required contact information, your new affiliate "
+"will receive an email with their username and password.  They will "
+"automatically be approved, but will still have to log in to agree to the "
+"terms &amp; conditions and set their preferred payment method."
+msgstr ""
+"Kaip partnerių vadybininkas, jei norite sukurti partnerio paskyrą, o ne "
+"nukreipti žmogų į normalią registracijos formą, jūs galite tai padaryti čia. "
+"Kai jūs užpildysite reikalingą kontaktinę informaciją, jūsų naujas partneris "
+"gaus el. laišką su savo slapyvardžiu ir slaptažodžiu.  Jie bus automatiškai "
+"patvirtinti, bet vis dar turės prisijungti ir patvirtinti, kad sutinka su "
+"sąlygomis ir nustatyti jų pasirinktą mokėjimo būdą."
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliate_new_success.php:3
+msgid "New Affiliate has been created"
+msgstr "Naujas Partneris buvo sukurtas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:4
+msgid "Affiliate Details"
+msgstr "Partnerio Duomenys"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:5
+msgid "Export Data"
+msgstr "Eksportuoti Duomenis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:8
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:76
+msgid "My Affiliates"
+msgstr "Mano Partneriai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:51
+msgid "All Active"
+msgstr "Visi Aktyvūs"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:52
+msgid "All (Including Closed)"
+msgstr "Visi (ir uždaryti)"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:53
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyCreativesPage.php:61
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:166
+msgid "Active"
+msgstr "Aktyvūs"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:54
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:160
+msgid "Applied"
+msgstr "Pritaikyti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:55
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:164
+msgid "Approved"
+msgstr "Sankcionuoti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:56
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_confirmed.php:2
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:170
+msgid "Confirmed"
+msgstr "Patvirtinti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:57
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:162
+msgid "Declined"
+msgstr "Atmesti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:58
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:172
+msgid "Blocked"
+msgstr "Užblokuoti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:59
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyCreativesPage.php:62
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:168
+msgid "Inactive"
+msgstr "Neaktyvūs"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:120
+msgid "Export Affiliates Record"
+msgstr "Eksportuoti Partnerių Įrašus"
+
+#: Afiiliate-man/affiliates-manager/html/admin/affiliates_list.php:125
+msgid "Export to CSV"
+msgstr "Eksportuoti į CSV"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:54
+msgid "Upload a File or Select from Media Library"
+msgstr "Įkelti Failą arba Pasirinkti iš Laikmenų Bibliotekos"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:56
+msgid "Insert"
+msgstr "Įterpti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:80
+msgid ""
+"This list contains images from the media library. If you upload a new image "
+"it is added to the media library and you can reuse images on multiple "
+"creatives by selecting it from this list. If a new image file is added, it "
+"will be uploaded and will override the currently selected media library "
+"image for this creative link. However, the old image will still remain in "
+"the media library for future use."
+msgstr ""
+"Šiame sąraše pateikiami vaizdai iš laikmenų bibliotekos. Jei įkelsite naują "
+"paveikslėlį, jis bus pridėtas prie laikmenų bibliotekos ir galėsite "
+"pakartotinai naudoti paveikslėlius keliuose skelbimuose pasirinkdami juos iš "
+"šio sąrašo. Jei įkeliamas naujas paveikslėlis, ji bus įkeltas ir pakeis šiuo "
+"metu pasirinktą laikmenų bibliotekos paveikslėlį šio skelbimo nuorodoje. "
+"Tačiau senas paveikslėlis išliks laikmenų bibliotekoje panaudojimui ateityje."
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:85
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_success.php:4
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:217
+msgid "Edit"
+msgstr "Redaguoti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:85
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_success.php:4
+msgid "New"
+msgstr "Naujas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:115
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:244
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:168
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:86
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_list.php:95
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:71
+msgid "Name"
+msgstr "Vardas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:125
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:260
+msgid "Landing Page"
+msgstr "Nukreipimo Puslapis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:152
+msgid "Image Parameters"
+msgstr "Vaizdo Parametrai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:166
+msgid "Image URL"
+msgstr "Vaizdo URL"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:168
+msgid "Upload File"
+msgstr "Įkelti Failą"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:169
+msgid "The URL of the image to be used for the creative."
+msgstr "URL paveikslėlio, kuris bus naudojamas skelbime."
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:175
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:210
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:281
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:311
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_detail.php:65
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_detail.php:95
+msgid "Alt Text"
+msgstr "Alt Tekstas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:191
+msgid "Text Link Parameters"
+msgstr "Tekstinės Nuorodos Parametrai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:199
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:277
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_detail.php:61
+msgid "Link Text"
+msgstr "Nuorodos Tekstas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_form.php:223
+msgid "Save Creative"
+msgstr "Išsaugoti Skelbimą"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_success.php:9
+msgid "Creative updated."
+msgstr "Skelbimas atnaujintas."
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_success.php:11
+msgid "New creative created.  This creative is not yet active."
+msgstr "Naujas skelbimas sukurtas.  Šis skelbimas dar neaktyvus."
+
+#: Afiiliate-man/affiliates-manager/html/admin/creative_update_success.php:16
+msgid "Return to Creatives"
+msgstr "Grįžti į Skelbimus"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:8
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:298
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_detail.php:82
+msgid "Image"
+msgstr "Paveikslėlis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:9
+msgid "Text Link"
+msgstr "Tekstinė Nuoroda"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:10
+msgid "Unknown creative type."
+msgstr "Nežinomas skelbimo tipas."
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:143
+msgid "ACTIVATE"
+msgstr "Aktyvuoti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:148
+msgid "DEACTIVATE"
+msgstr "DEAKTYVUOTI"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:167
+msgid "Are you sure you wish to"
+msgstr "Ar tikrai norite"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:167
+msgid "this creative?"
+msgstr "šį skelbimą?"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:174
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:216
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_detail.php:32
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_detail.php:45
+msgid "Preview"
+msgstr "Peržiūrėti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:195
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_detail.php:43
+msgid "Creative:"
+msgstr "Skelbimas:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:207
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:163
+msgid "Actions"
+msgstr "Veiksmai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:211
+msgid "Deactivate"
+msgstr "Deaktyvuoti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:235
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:164
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/pending_payments.php:10
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:57
+#: Afiiliate-man/affiliates-manager/html/impressions_table.php:6
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:44
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:59
+msgid "ID"
+msgstr "ID"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:272
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_detail.php:56
+msgid "Text Link Properties"
+msgstr "Tekstinės Nuorodos Savybės"
+
+#: Afiiliate-man/affiliates-manager/html/admin/creatives_detail.php:293
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_detail.php:77
+msgid "Image Properties"
+msgstr "Paveikslėlio Savybės"
+
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:64
+msgid "Yes, delete this creative"
+msgstr "Taip, ištrinti šį skelbimą"
+
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:113
+msgid "Updating, please wait ..."
+msgstr "Atnaujinama, prašome palaukti..."
+
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:120
+msgid "Delete Creative?"
+msgstr "Ištrinti skelbimą?"
+
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:121
+msgid "This creative will be deleted. Are you sure?"
+msgstr "Šis skelbimas bus ištrintas. Ar esate tikras?"
+
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:126
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:82
+msgid "My Creatives"
+msgstr "Mano Skelbimai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:132
+msgid "Filter"
+msgstr "Filtras"
+
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:137
+msgid "Status:"
+msgstr "Būsena:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:155
+msgid "Create New"
+msgstr "Kurti Naują"
+
+#: Afiiliate-man/affiliates-manager/html/admin/manage_creatives.php:166
+msgid "Created"
+msgstr "Sukurta"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/home.php:17
+msgid "New Mass Payment"
+msgstr "Naujas Urminis Mokėjimas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/home.php:20
+msgid "View Previous Mass Payments"
+msgstr "Peržiūrėti Ankstesnius Urminius Mokėjimus"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/not_configured.php:2
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/pending_payments.php:3
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:45
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:102
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:7
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:85
+msgid "PayPal Mass Pay"
+msgstr "PayPal Urminis Mokėjimas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/not_configured.php:3
+msgid "Not configured"
+msgstr "Nesukonfigūruota"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/not_configured.php:5
+#, php-format
+msgid ""
+"You have not configured the Affiliate Manager with your PayPal account "
+"information. You can do so in the <a href=\"%s\">Payment Settings page</a>."
+msgstr ""
+"Jūs nesukonfigūravote Partnerių Vadybininko su savo PayPal paskyros "
+"informacija. Tai galite padaryti <a href=\"%s\">mokėjimų nustatymų "
+"puslapyje</a> ."
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/pending_payments.php:4
+msgid "View Existing Payments"
+msgstr "Peržiūrėkite esamus mokėjimus"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/pending_payments.php:11
+msgid "Date Posted"
+msgstr "Paskelbimo data"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/pending_payments.php:12
+msgid "PayPal ID"
+msgstr "„PayPal“ ID"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/pending_payments.php:14
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:21
+msgid "Fee"
+msgstr "Mokestis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/pending_payments.php:15
+msgid "Total"
+msgstr "Iš viso"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/pending_payments.php:36
+msgid "(No Mass Payments on Record)"
+msgstr "(Nėra įrašų apie urminius mokėjimus)"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/reconcile_file_review.php:67
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/reconcile_manual.php:82
+msgid "Reconcile Mass Payment"
+msgstr "Suderinkite urminius mokėjimus"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/reconcile_with_file.php:55
+msgid "Reconcile with this file"
+msgstr "Suderinkite su šiuo failu"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:10
+msgid "Yes, Submit to PayPal"
+msgstr "Taip, pateikite į „PayPal“"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:17
+msgid "No, Cancel"
+msgstr "Ne, atšaukti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:39
+msgid "Submit to PayPal?"
+msgstr "Pateikti į „PayPal“?"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:40
+msgid "Are you sure you wish to submit a mass payment to PayPal?"
+msgstr "Ar tikrai norite pateikti urminį mokėjimą per „PayPal“?"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:41
+#, php-format
+msgid "Your PayPal account will be charged %s!"
+msgstr "Iš jūsų „PayPal“ sąskaitos bus išskaičiuota %!"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:46
+msgid "Review Your Mass Payment"
+msgstr "Peržiūrėkite savo urminį mokėjimą"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:54
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:126
+msgid "AID"
+msgstr "PAGALBA"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:58
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:130
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:60
+msgid "PayPal E-Mail"
+msgstr "„Paypal“ el. paštas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:61
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings.php:49
+msgid "Payment"
+msgstr "Mokėjimai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:63
+msgid "New Balance"
+msgstr "Naujas Likutis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:94
+msgid "Sub-Total"
+msgstr "Tarpinė suma"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:98
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:177
+#, php-format
+msgid "PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>"
+msgstr ""
+"„PayPal“ mokestis <br /> <small>2 %% už mokėjimą, maks.%s1 už mokėjimą</"
+"small>"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:103
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:182
+msgid "Estimated Total"
+msgstr "Bendra apskaičiuota suma"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/review_affiliates.php:107
+msgid "Submit Mass Payment to PayPal"
+msgstr "Pateikti Urminį Mokėjimą per PayPal"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:103
+msgid "Select Affiliates to Pay"
+msgstr "Pasirinkite, kuriems Partneriams Mokėti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:106
+#, php-format
+msgid "Not showing %s affiliates that do not have a PayPal account on file."
+msgstr "Nerodomi %s partneriai, kurie neturi „PayPal“ paskyrų."
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:111
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:27
+msgid "Date Range:"
+msgstr "Datų intervalas:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:112
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:29
+msgid "From Date"
+msgstr "Nuo datos"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:114
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:31
+msgid "To Date"
+msgstr "Iki datos"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:117
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:36
+msgid "Clear"
+msgstr "Išvalyti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:132
+msgid "Payment Amount"
+msgstr "Mokėjimo suma"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/select_affiliates.php:187
+msgid "Continue with these payments"
+msgstr "Tęskite šiuos mokėjimus"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:8
+msgid "Payment Detail"
+msgstr "Mokėjimo informacija"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:16
+msgid "Database ID"
+msgstr "Duomenų Bazės ID"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:17
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:58
+#: Afiiliate-man/affiliates-manager/html/impressions_table.php:7
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:46
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:61
+msgid "Date Occurred"
+msgstr "Įvykio data"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:18
+msgid "PayPal Timestamp"
+msgstr "„PayPal“ laiko žyma"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:19
+msgid "PayPal Correlation ID"
+msgstr "„PayPal“ koreliacijos ID"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:22
+msgid "Total Amount"
+msgstr "Bendra Suma"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:26
+msgid "Reconciliation"
+msgstr "Derinimas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:29
+msgid "Manually reconcile payments ... "
+msgstr "Neautomatiškai suderinkite mokėjimus ... "
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:30
+msgid "Reconcile using PayPal Mass Payment results file ... "
+msgstr "Suderinkite naudodami „PayPal“ bendrojo mokėjimo rezultatų failą ... "
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:37
+msgid "Errors"
+msgstr "Klaidos"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:40
+msgid "Code:"
+msgstr "Kodas:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:41
+msgid "Message:"
+msgstr "Žinutė:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:42
+msgid "Severity:"
+msgstr "Sunkumas:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:52
+msgid "Associated Transactions"
+msgstr "Susijusios transakcijos"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:59
+msgid "Affiliate"
+msgstr "Partneris"
+
+#: Afiiliate-man/affiliates-manager/html/admin/paypalpayments/view_payment_detail.php:62
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:48
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:63
+msgid "Description"
+msgstr "Aprašymas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings.php:22
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:628
+msgid "Settings"
+msgstr "Nustatymai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings.php:47
+msgid "Affiliate Registration"
+msgstr "Partnerių registracija"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings.php:48
+msgid "Messaging"
+msgstr "Žinučių siuntimas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings.php:50
+msgid "Pages/Forms"
+msgstr "Puslapiai/Formos"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings.php:51
+msgid "Advanced Settings"
+msgstr "Išplėstiniai nustatymai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings.php:129
+msgid "Save Settings"
+msgstr "Išsaugoti Nustatymus"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_advanced.php:8
+msgid "Default Landing Page"
+msgstr "Numatytasis nukreipimo puslapis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_advanced.php:13
+#, php-format
+msgid ""
+"Your default landing page URL is <code>%s</code>. If you want to change to a "
+"different URL you can specify it here."
+msgstr ""
+"Numatytojo nukreipimo puslapio URL yra <code>%s</code> . Jei norite pakeisti "
+"į kitą URL, galite jį nurodyti čia."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_advanced.php:19
+msgid "Disable Own Referrals"
+msgstr "Deaktyvuoti Partneriams savo pirkinius"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_advanced.php:26
+msgid ""
+"If checked, your affiliates will not be able to earn a commission on their "
+"own purchases."
+msgstr ""
+"Jei pažymėsite, jūsų partneriai negalės uždirbti komisinių už savo pačių "
+"pirkinius."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_aff_pages.php:5
+msgid "Home Page"
+msgstr "Pagrindinis Puslapis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_aff_pages.php:10
+msgid "This is the URL of your Affiliate Home page"
+msgstr "Tai jūsų Partnerių Pagrindinio puslapio URL"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_aff_pages.php:16
+msgid "Registration Page"
+msgstr "Registracijos Puslapis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_aff_pages.php:21
+msgid "This is the URL of your Affiliate Registration page"
+msgstr "Tai jūsų Partnerių Registracijos puslapio URL"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_aff_pages.php:27
+msgid "Login Page"
+msgstr "Prisijungimo Puslapis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_aff_pages.php:32
+msgid "This is the URL of your Affiliate Login page"
+msgstr "Tai jūsų Partnerių Prisijungimo puslapio URL"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_aff_pages.php:38
+msgid "Terms and Conditions Page"
+msgstr "Taisyklių ir sąlygų puslapis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_aff_pages.php:43
+msgid "This is the URL of your Terms and Conditions page"
+msgstr "Tai Taisyklių ir Sąlygų puslapio URL"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:103
+msgid "Minimum Payout Amount"
+msgstr "Minimali Išmokėjimo Suma"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:112
+msgid "Cookie Duration (days)"
+msgstr "Slapukų Trukmė (dienomis)"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:117
+#, php-format
+msgid "<a target=\"_blank\" href=\"%s\">Read more on cookie duration here</a>"
+msgstr ""
+"<a target=\"_blank\" href=\"%s\">Daugiau apie slapukų trukmę skaitykite čia</"
+"a>"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:122
+msgid "Email name"
+msgstr "El. pašto pavadinimas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:127
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:137
+msgid "(Leave blank to use WordPress default)"
+msgstr "(Palikite tuščią, jei norite naudoti numatytąją „WordPress“)"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:132
+msgid "Email address"
+msgstr "El. pašto adresas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:144
+msgid "Automatically approve a new affiliate"
+msgstr "Automatiškai patvirtinti naują partnerį"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:169
+#, php-format
+msgid "Bounty Rate (% of Sale) / Amount"
+msgstr "Prizų dydis (% nuo pardavimų) / suma"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:178
+msgid "Currency Symbol"
+msgstr "Valiutos Simbolis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:187
+msgid "Currency Code"
+msgstr "Valiutos kodas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:197
+msgid "Do Not Record Zero Amount Commission"
+msgstr "Neįrašykite komisinio mokesčio jei jis lygus nuliui"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:211
+msgid "Send Commission Notification"
+msgstr "Siųsti pranešimą apie komisinius"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:218
+msgid ""
+"If checked, your affiliates will get notified via email when they receive a "
+"commission."
+msgstr ""
+"Jei pažymėsite, jūsų partneriai gaus pranešimus el. paštu, kai jie gaus "
+"komisinius."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:224
+msgid "Enable Impressions"
+msgstr "Įgalinti parodymus"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:233
+msgid "Enable Debug"
+msgstr "Įjungti klaidų derinimą"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:236
+msgid ""
+"If checked, debug output will be written to log files. This is useful for "
+"troubleshooting post payment failures."
+msgstr ""
+"Jei pažymėta, derinimo išvestis bus įrašyta į žurnalų failus. Tai naudinga "
+"norint išspręsti nesklandumus po mokėjimų."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:237
+msgid ""
+"You can check the debug log file by clicking on the link below (The log file "
+"can be viewed using any text editor):"
+msgstr ""
+"Galite patikrinti derinimo žurnalo failą spustelėdami žemiau esančią nuorodą "
+"(žurnalo failą galima peržiūrėti naudojant bet kurį teksto redaktorių):"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:241
+msgid "Reset Debug Log file"
+msgstr "Iš naujo nustatyti derinimo žurnalo failą"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_general.php:242
+msgid "Use it to reset the affiliate manager plugin's log file."
+msgstr ""
+"Naudokite jį norėdami iš naujo nustatyti partnerių valdytojo įskiepio "
+"žurnalo failą."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:66
+msgid ""
+"These settings allow you to control text that is displayed to affiliates at "
+"various points in the affiliate plug-in, as well as e-mails that are sent."
+msgstr ""
+"Šie nustatymai leidžia valdyti tekstą, rodomą partneriams įvairiuose "
+"partnerių plugino taškuose, taip pat siunčiamus el. laiškus."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:71
+msgid "Use:"
+msgstr "Naudojimas:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:75
+msgid "Content:"
+msgstr "Turinys:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:88
+msgid "Use"
+msgstr "Naudoti"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:89
+msgid "Content"
+msgstr "Turinys"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:119
+#, php-format
+msgid "%s(More)"
+msgstr "%s(daugiau)"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:127
+msgid ""
+"* Some messages have been modified. These will <strong>NOT</strong> be saved "
+"to the database until you click 'Save Settings' button below."
+msgstr ""
+"* Kai kurie pranešimai buvo modifikuoti. Tai <strong>nebus</strong> "
+"išsaugota į duomenų bazę, kol paspausite \"Išsaugoti nustatymus\" mygtuką "
+"apačioje."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:131
+msgid "Messaging Related Options"
+msgstr "Su pranešimais susijusios parinktys"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:139
+msgid "Send Registration Notification:"
+msgstr "Siųsti registracijos pranešimą:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:146
+msgid "Send Notification to Admin"
+msgstr "Siųsti pranešimą administratoriui"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:147
+msgid ""
+"Check this box if you want the admin of this site to get notified via email "
+"after a new affiliate signup."
+msgstr ""
+"Pažymėkite šį langelį, jei norite, kad šios svetainės administratorius gautų "
+"pranešimą el. paštu po naujo partnerio registracijos."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:149
+msgid "Admin Email Address"
+msgstr "Administratoriaus el. pašto adresas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_messaging.php:151
+msgid ""
+"The email address to which the admin will get notified after a new affiliate "
+"signup."
+msgstr ""
+"El. Pašto adresas, į kurį administratorius gaus pranešimą po naujo partnerio "
+"registracijos."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_payment.php:16
+msgid ""
+"Looking for help? Check out the bundled step-by-step guide for setting up "
+"PayPal Mass Pay:"
+msgstr ""
+"Ieškote pagalbos? Peržiūrėkite komplektuotą nuoseklų vadovą, kaip nustatyti "
+"„PayPal“ urminį mokėjimą:"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_payment.php:18
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">How to Setup PayPal Mass Pay</a>"
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">Kaip nustatyti „PayPal“ urminį mokėjimą</a>"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_payment.php:26
+msgid ""
+"Enable PayPal Mass Pay &#0153;<br /><small>NOTE: Requires a PayPal Premier "
+"or PayPal Business account</small>"
+msgstr ""
+"Įgalinti „PayPal urminį mokėjimą ™ <br /> <small>PASTABA: Būtina „PayPal "
+"Premier“ arba „PayPal Business“ paskyra</small>"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_payment.php:29
+msgid "PayPal API Configuration"
+msgstr "PayPal API Konfigūracija"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_payment.php:32
+msgid "API Username"
+msgstr "API vartotojo Vardas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_payment.php:36
+msgid "API Password"
+msgstr "API Slaptažodis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_payment.php:40
+msgid "Signature"
+msgstr "Parašas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_payment.php:44
+msgid "API End Point"
+msgstr "API Pabaigos Taškas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_payment.php:44
+msgid "WARNING: Set to LIVE if you don't know what this is for!"
+msgstr "ĮSPĖJIMAS: Nustatyti TIESIOGIAI, jei jūs nežinote, kas tai yra!"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_payment.php:47
+#, php-format
+msgid "Live (%s)"
+msgstr "Tiesiogiai (%s)"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_payment.php:48
+#, php-format
+msgid "Sandbox - TESTING (%s)"
+msgstr "Smėlio dėžė - TESTAVIMAS (%s)"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:218
+msgid "Display name is required."
+msgstr "Rodomas pavadinimas būtinas."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:225
+msgid "Field name is required."
+msgstr "Lauko pavadinimas būtinas."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:228
+msgid ""
+"Field name may only contains letters, numbers, underscores and hyphens, and "
+"must begin with a letter."
+msgstr ""
+"Lauko pavadinime gali būti tik raidės, skaičiai, apatinis brūkšnys ir "
+"brūkšneliai; jis turi prasidėti raide."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:235
+msgid "This field name is already in use."
+msgstr "Šis pavadinimas jau naudojamas."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:247
+msgid "Field length must be an non-0 positive number."
+msgstr "Lauko ilgis turi būti ne 0 teigiamas skaičius."
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:361
+msgid "Custom Field"
+msgstr "Tinkintas laukas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:368
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:442
+msgid "Display Name"
+msgstr "Rodomas vardas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:375
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:443
+msgid "Field Name"
+msgstr "Lauko pavadinimas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:382
+msgid "Field Type"
+msgstr "Lauko Tipas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:385
+msgid "Text"
+msgstr "Tekstas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:386
+msgid "Number"
+msgstr "Skaičius"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:387
+msgid "E-Mail Address"
+msgstr "El. pašto adresas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:388
+msgid "Phone Number"
+msgstr "Telefono numeris"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:389
+msgid "State Code (US)"
+msgstr "Valstijos kodas (JAV)"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:390
+msgid "Zip Code (US)"
+msgstr "Pašto kodas (JAV)"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:391
+msgid "Country Code"
+msgstr "Šalies kodas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:392
+msgid "Social Security Number (US)"
+msgstr "Socialinio draudimo numeris (JAV)"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:399
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:444
+msgid "Max Length"
+msgstr "Didžiausias ilgis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:412
+msgid "Available Payout Methods"
+msgstr "Galimi išmokėjimo būdai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:418
+#: Afiiliate-man/affiliates-manager/source/Data/Models/AffiliateModel.php:182
+msgid "Check"
+msgstr "Čekis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:422
+#: Afiiliate-man/affiliates-manager/source/Data/Models/AffiliateModel.php:176
+msgid "PayPal"
+msgstr "„PayPal“"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:426
+#: Afiiliate-man/affiliates-manager/source/Data/Models/AffiliateModel.php:179
+msgid "Manual"
+msgstr "Rankinis"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:431
+msgid "Affiliate Register Fields"
+msgstr "Partnerių registro laukai"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:434
+msgid "Add Custom Field"
+msgstr "Pridėti Tinkintą Laukelį"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:439
+msgid "Enabled"
+msgstr "Įjungta"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:441
+msgid "Field Format"
+msgstr "Lauko Formatas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:445
+msgid "Required"
+msgstr "Būtinas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:456
+msgid "Affiliates Homepage Message"
+msgstr "Partnerių Pradinio puslapio Pranešimas"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:460
+msgid ""
+"This message is shown to a normal visitor who is not logged into WordPress"
+msgstr ""
+"Šis pranešimas rodomas normaliems lankytojams, kurie nėra prisijungę prie "
+"WordPress"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:465
+msgid "Affiliates Homepage Message (Logged in but not an affiliate)"
+msgstr "Partnerių Pradinio Puslapio Pranešimas (Prisijungęs, bet ne partneris)"
+
+#: Afiiliate-man/affiliates-manager/html/admin/settings/settings_registration.php:469
+msgid ""
+"This message is shown to a user who is logged into WordPress but not an "
+"affiliate"
+msgstr ""
+"Šis pranešimas yra rodomas vartotojui, kuris yra prisijungęs prie WordPress, "
+"bet nėra partneris"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_approved.php:1
+#, php-format
+msgid ""
+"Your application was approved.  Please go to the <a href=\"%s\">affiliate "
+"control panel</a> to get started."
+msgstr ""
+"Jūsų prašymas buvo patvirtintas.  Norėdami pradėti, eikite į <a href=\"%s"
+"\">partnerio valdymo skydelį</a> ."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_agree_terms.php:3
+msgid "Affiliate Confirmation"
+msgstr "Partnerių patvirtinimas"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_agree_terms.php:5
+msgid "Contract Terms"
+msgstr "Sutarties sąlygos"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_agree_terms.php:12
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:20
+msgid "Commission Rate"
+msgstr "Komisinių tarifas"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_agree_terms.php:21
+msgid "Terms & Conditions"
+msgstr "Taisyklės ir sąlygos"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_agree_terms.php:27
+msgid "Agree to Terms"
+msgstr "Sutinku su sąlygomis"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_approved.php:3
+msgid "Affiliate Control Panel"
+msgstr "Partnerio valdymo pultas"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_approved.php:5
+msgid "Welcome!"
+msgstr "Sveiki atvykę!"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_approved.php:9
+msgid "Review Terms and Get Started!"
+msgstr "Peržiūrėkite sąlygas ir pradėkite!"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:11
+msgid "Account Summary"
+msgstr "Sąskaitos santrauka"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:29
+msgid "Today"
+msgstr "Šiandien"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:44
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:78
+msgid "Visitors"
+msgstr "Lankytojai"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:48
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:82
+msgid "Closed Transactions"
+msgstr "Uždaryti sandoriai"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:52
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:86
+msgid "Revenue"
+msgstr "Pajamos"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_home.php:63
+msgid "This Month"
+msgstr "Šį mėnesį"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_confirmed.php:3
+msgid "Your payment details have been submitted."
+msgstr "Jūsų mokėjimo informacija buvo pateikta."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_confirmed.php:5
+#, php-format
+msgid ""
+"Now would be a great time to go pick <a href=\"%s\">some creatives</a> and "
+"get started."
+msgstr ""
+"Dabar būtų puikus laikas pasirinkti <a href=\"%s\">keletą skelbimų</a> ir "
+"pradėti."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:70
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_simple.php:14
+msgid "Please provide your payment details."
+msgstr "Pateikite savo mokėjimo informaciją."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:71
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_simple.php:15
+msgid ""
+"The following information will be used to disburse payments when your "
+"account reaches the minimum payout amount."
+msgstr ""
+"Ši informacija bus naudojama mokėjimams atlikti, kai jūsų sąskaita pasieks "
+"minimalią išmokos sumą."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:79
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_simple.php:24
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:137
+msgid "Method"
+msgstr "Metodas"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:96
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_simple.php:41
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:166
+msgid "PayPal E-Mail Address"
+msgstr "„PayPal“ el. Pašto adresas"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:109
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_simple.php:54
+#: Afiiliate-man/affiliates-manager/source/Util/AffiliateFormHelper.php:153
+msgid "Paper Check"
+msgstr "Popierinis čekis"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:115
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_simple.php:60
+msgid "Check Recipient"
+msgstr "Čekio gavėjas"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:134
+msgid "Mail to Address On Record"
+msgstr "Siųsti nurodytu adresu"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:143
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:168
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_simple.php:77
+msgid "Recipient"
+msgstr "Gavėjas"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:172
+msgid "Address 1"
+msgstr "1 adresas"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:176
+msgid "Address 2"
+msgstr "2 adresas"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:180
+msgid "City"
+msgstr "Miestas"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:184
+msgid "Country"
+msgstr "Šalis"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:194
+msgid "State"
+msgstr "Valstija"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:204
+msgid "Postal Code"
+msgstr "Pašto Kodas"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_form.php:218
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_simple.php:102
+msgid "Submit Payment Details"
+msgstr "Pateikite išsamią mokėjimo informaciją"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_cp_payment_details_simple.php:70
+msgid "Check will be mailed to the following address:"
+msgstr "Čekis bus išsiųstas šiuo adresu:"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_detail.php:47
+msgid "Your Affiliate-Specific HTML snippet"
+msgstr "Jūsų partneriui-skirtas HTML fragmentas"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_list.php:66
+msgid "Your Affiliate Link Using Affiliate ID"
+msgstr "Jūsų partnerių nuoroda naudojant partnerio ID"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_list.php:70
+msgid "Referral URL Generator"
+msgstr "Partnerio adreso (URL) Generatorius"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_list.php:73
+msgid ""
+"Enter any URL from this site in the form below to generate a referral link"
+msgstr ""
+"Įveskite bet kokį šios svetainės URL į žemiau pateiktą formą, kad "
+"sukurtumėte partnerio nuorodą"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_list.php:81
+msgid "Below is your referral URL (You can copy it and share anywhere)"
+msgstr ""
+"Žemiau yra jūsų partnerio adresas (URL) (galite jį nukopijuoti ir visur "
+"dalytis)"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_list.php:85
+msgid "Generate Referral URL"
+msgstr "Generuoti Partnerio URL"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_creative_list.php:89
+msgid "The following creatives are available for publication."
+msgstr "Šie skelbimai yra prieinami publikavimui."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_home.php:1
+msgid "Welcome to the affiliate control panel."
+msgstr "Sveiki atvykę į partnerio valdymo skydą."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_not_logged_in.php:4
+#, php-format
+msgid ""
+"This is the affiliates section of this store.  If you are an existing "
+"affiliate, please <a href=\"%s\">log in</a> to access your control panel."
+msgstr ""
+"Tai partnerių skyrius šioje parduotuvėje.  Jei esate partneris, <a href=\"%s"
+"\">prisijunkite,</a> kad pasiektumėte savo valdymo pultą."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_not_logged_in.php:7
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:386
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/SettingsPage.php:192
+#, php-format
+msgid ""
+"If you are not an affiliate, but wish to become one, you will need to apply. "
+"To apply, you must be a registered user on this blog. If you have an "
+"existing account on this blog, please <a href=\"%s\">log in</a>. If not, "
+"please <a href=\"%s\">register</a>."
+msgstr ""
+"Jei nesate partneris, bet norite juo tapti, turite pateikti prašymą. "
+"Norėdami pateikti prašymą, turite būti registruotas vartotojas šioje "
+"svetainėje. Jei šioje svetainėje turite paskyrą, <a href=\"%s"
+"\">prisijunkite</a> . Jei ne, prašome <a href=\"%s\">registruotis</a> ."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_not_registered.php:4
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:388
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/SettingsPage.php:200
+#, php-format
+msgid ""
+"This is the affiliates section of this store. You are not currently an "
+"affiliate of this store. If you wish to become one, please <a href=\"%s\"/"
+">apply</a>."
+msgstr ""
+"Tai partnerių skyrius šioje parduotuvėje. Šiuo metu nesate šios parduotuvės "
+"partneris. Jei norite tapti tokiu, prašome <a href=\"%s\"/>kreiptis</a> ."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_register_form.php:16
+msgid ""
+"Looks like you already have an affiliate account. So you don't need to "
+"register again. Simply go to the affiliate portal and start referring users."
+msgstr ""
+"Panašu, kad jūs jau turite partnerio paskyrą. Taigi jums nereikia iš naujo "
+"registruotis. Tiesiog eikite į partnerių portalą ir pradėkite skelbti "
+"nuorodas."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_register_form.php:24
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:207
+msgid "* Required fields"
+msgstr "* Privalomi laukai"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_register_form.php:37
+msgid ""
+"This is the email address associated with your currently logged in WordPress "
+"user account."
+msgstr ""
+"Tai yra el. pašto adresas, susietas su jūsų šiuo metu prisijungusio "
+"„WordPress“ vartotojo paskyra."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_register_form.php:38
+msgid ""
+"If you want to use a different email address, log out of your WordPress "
+"account then try a new registration."
+msgstr ""
+"Jei norite naudoti kitą el. pašto adresą, atsijunkite nuo savo „WordPress“ "
+"paskyros ir bandykite registruotis iš naujo."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_register_form.php:74
+msgid "I have read and agree to the"
+msgstr "Aš perskaičiau ir sutinku"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_register_form.php:74
+msgid "Terms and Conditions"
+msgstr "Taisyklės ir sąlygos"
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_register_form.php:75
+msgid "You must agree to the terms."
+msgstr "Jūs turite sutikti su sąlygomis."
+
+#: Afiiliate-man/affiliates-manager/html/affiliate_register_form.php:86
+msgid "Submit Application"
+msgstr "Pateikti Paraišką"
+
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:14
+msgid "Contact Information"
+msgstr "Kontaktinė Informacija"
+
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:102
+#, php-format
+msgid ""
+"There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s"
+"\">Cancel</a>"
+msgstr ""
+"Laukiama jūsų el. pašto pakeitimo į „ <code>%1$s</code> . <a href=\"%2$s"
+"\">Atšaukti</a>"
+
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:110
+msgid "New Password"
+msgstr "Naujas slaptažodis"
+
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:119
+msgid "Repeat New Password"
+msgstr "Pakartokite naują slaptažodį"
+
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:175
+msgid "Bounty Type *"
+msgstr "Prizo Tipas *"
+
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:192
+#, php-format
+msgid "Bounty Rate (%s per Sale) *"
+msgstr "Prizo procentas (%s už pardavimą) *"
+
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:192
+#, php-format
+msgid "Bounty Rate (% of Sale) *"
+msgstr "Prizo dydis (% nuo pardavimų) *"
+
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:209
+msgid "+ Custom fields"
+msgstr "+ Tinkinti Laukai"
+
+#: Afiiliate-man/affiliates-manager/html/contact_info.php:213
+msgid "Save Changes"
+msgstr "Išsaugoti pakeitimus"
+
+#: Afiiliate-man/affiliates-manager/html/impressions_table.php:1
+#, php-format
+msgid "Displaying %1$d of %2$d impressions"
+msgstr "Parodomi %1$d iš %2$d parodymai"
+
+#: Afiiliate-man/affiliates-manager/html/impressions_table.php:9
+msgid "Referrer"
+msgstr "Nukreipėjas"
+
+#: Afiiliate-man/affiliates-manager/html/impressions_table.php:31
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:77
+msgid "No records found for the date range selected."
+msgstr "Nerasta įrašų pasirinktame datų intervale."
+
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:49
+#: Afiiliate-man/affiliates-manager/html/transaction_table.php:64
+msgid "Reference ID"
+msgstr "Nuorodos ID"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-addons-menu.php:6
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:648
+msgid "Affiliates Manager Add-ons"
+msgstr "Partnerių Vadovo Add-onai"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-admin-functions-menu.php:8
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:632
+msgid "Admin Functions"
+msgstr "Administratoriaus Funkcijos"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-admin-functions-menu.php:9
+msgid ""
+"The Admin Functions page lets you do various admin stuff from time to time."
+msgstr ""
+"Administratoriaus Funkcijų puslapis leidžia jums laikas nuo laiko atlikti "
+"įvairius administracinius veiksmus."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-admin-functions-menu.php:15
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Admin Functions menu to "
+"delete clicks data."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžkite į Admin Funkcijų meniu "
+"jei norite ištrinti paspaudimų duomenis."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-admin-functions-menu.php:27
+msgid "Start Date is not valid"
+msgstr "Pradžios data neleistina"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-admin-functions-menu.php:38
+msgid "End Date is not valid"
+msgstr "Pabaigos data neleistina"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-admin-functions-menu.php:43
+msgid "Clicks data has been deleted!"
+msgstr "Paspaudimų duomenys buvo ištrinti!"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-admin-functions-menu.php:49
+msgid "Reset Buttons"
+msgstr "Nustatymo iš naujo Mygtukai"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-admin-functions-menu.php:52
+msgid ""
+"Do you really want to delete the clicks data? This action cannot be undone."
+msgstr ""
+"Ar tikrai norite ištrinti paspaudimų duomenis? Šio veiksmo neįmanoma "
+"grąžinti."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-admin-functions-menu.php:54
+msgid "Start Date:"
+msgstr "Pradžios data:"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-admin-functions-menu.php:55
+msgid "End Date:"
+msgstr "Pabaigos data:"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-admin-functions-menu.php:56
+msgid ""
+"Select a Start Date and an End Date to delete all clicks data within this "
+"period. If you only select a Start Date all clicks data recorded on or after "
+"this date will be deleted. If you only select an End Date all clicks data "
+"recorded up to this date will be deleted. If no date is selected all clicks "
+"data will be deleted."
+msgstr ""
+"Pasirinkite Pradžios Datą ir Pabaigos Datą, jei norite ištrinti visus "
+"paspaudimų duomenis šiame laikotarpyje. Jei pasirinkote tik Pradžios Datą, "
+"visi paspaudimų duomenys šią ir po šios datos bus ištrinti. Jei pažymėsite "
+"tik Pabaigos Datą, visus paspaudimus įrašyti duomenys iki šios datos, bus "
+"ištrinti. Jei data nepasirinkta - visi paspaudimų duomenys bus ištrinti."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-admin-functions-menu.php:58
+msgid "Delete Clicks Data"
+msgstr "Ištrinti paspaudimų duomenis"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-clicks-menu.php:8
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:640
+msgid "Click Tracking"
+msgstr "Paspaudimų stebėjimo funkcija"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-clicks-menu.php:11
+msgid "Unique Click Tracking"
+msgstr "Unikalių Paspaudimų stebėjimas"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-clicks-menu.php:34
+msgid "This tab shows unique referrals to your website from your affiliates"
+msgstr "Ši lentelė rodo unikalias nuorodas į jūsų svetainę iš jūsų partnerių"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:8
+msgid "Affiliate Commissions"
+msgstr "Komisiniai"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:11
+msgid "Overall Commissions"
+msgstr "Bendri Komisiniai"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:12
+msgid "Manual Commission"
+msgstr "Rankiniai komisiniai"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:48
+msgid "This tab shows all affiliate commission data"
+msgstr "Ši lentelė rodo visų partnerių komisinių duomenis"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:104
+msgid "You need to enter an affiliate ID"
+msgstr "Jums reikia įvesti partnerio ID"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:108
+msgid "You need to enter a numeric commission amount"
+msgstr "Jums reikia įvesti komisinių sumos skaičių"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:112
+msgid "You need to enter a numeric purchase amount"
+msgstr "Jums reikia įvesti pirkimo sumos skaičių"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:139
+msgid "A commission with this transaction ID already exists"
+msgstr "Komisiniai su šiuo sandorio ID jau yra"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:157
+msgid "Commission added!"
+msgstr "Komisiniai pridėti!"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:167
+msgid "This tab allows you to manually award commission to an affiliate."
+msgstr "Ši lentelė leidžia jums rankiniu būdu paskirti komisinius partneriui."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:177
+msgid "Enter the affiliate ID. Example: "
+msgstr "Įveskite partnerio ID. Pvz.: "
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:181
+msgid "Commission Amount"
+msgstr "Komisinių suma"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:183
+msgid "Enter the commission amount. Example: "
+msgstr "Įveskite komisinių sumą. Pvz.: "
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:187
+msgid "Purchase Amount"
+msgstr "Pirkimo suma"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:189
+msgid "Enter the purchase amount. Example: "
+msgstr "Įveskite pirkinio sumą. Pvz.: "
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:195
+msgid ""
+"Enter the unique transaction ID (leave empty to generate a unique ID). "
+"Example: "
+msgstr ""
+"Įveskite unikalų operacijos ID (palikite tuščią, jei norite sukurti unikalų "
+"ID). Pvz.: "
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:201
+msgid "Enter the email address of the buyer (optional)."
+msgstr "Įveskite pirkėjo el. paštą (neprivaloma)."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-commission-menu.php:207
+msgid "Enter the date in yyyy-mm-dd format. Example: "
+msgstr "Įveskite data yyyy-mm-dd formatu. Pvz.: "
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:8
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:636
+msgid "Manage Payouts"
+msgstr "Tvarkyti Išmokas"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:17
+msgid "Payout Report Generated"
+msgstr "Išmokėjimo Ataskaitos Sugeneruotos"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:35
+msgid "Affiliate Mass Payout by Outstanding Amount"
+msgstr "Partnerių Urminis Išmokėjimas pagal Nesumokėtas Sumas"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:39
+msgid "Step 1:"
+msgstr "Žingsnis 1:"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:40
+msgid "Generate Report"
+msgstr "Sukurti Ataskaitą"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:41
+msgid ""
+"Hit \"Generate Report\" to get a list of all the affiliate earnings that "
+"need to be paid."
+msgstr ""
+"Paspauskite \"Sukurti Ataskaitą\" kad gautumėte sąrašą visų partnerių "
+"pajamų, kurias reikia išmokėti."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:47
+msgid "Step 2:"
+msgstr "Žingsnis 2:"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:47
+msgid "Create Payment Report File"
+msgstr "Sukurti Mokėjimo Ataskaitos Failą"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:48
+#, php-format
+msgid ""
+"Use this to generate a PayPal payout file and a payment report CSV file. The "
+"PayPal payout file can be used in paypal to pay all your affiliates in one "
+"click. If you have never used PayPal Payouts check <a href=\"%s\" target="
+"\"_blank\">this documentation</a>."
+msgstr ""
+"Naudokite, norėdami sukurti PayPal išmokėjimo failą ir mokėjimo ataskaitos "
+"CSV failą. PayPal išmokėjimo byla gali būti naudojama išmokėjimui visiems "
+"jūsų partneriams vienu paspaudimu. Jei niekada nenaudojote „PayPal“ išmokų, "
+"atverkite <a href=\"%s\" target=\"_blank\">šią dokumentaciją</a> ."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:52
+msgid ""
+"Do you really want to mark all the outstanding payments as paid? This action "
+"cannot be undone."
+msgstr ""
+"Ar tikrai norite pažymėti visus neapmokėtus mokėjimus kaip sumokėtus? Šio "
+"veiksmo neįmanoma grąžinti."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:54
+msgid "Step 3:"
+msgstr "Žingsnis 3:"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:54
+msgid "Mark as Paid"
+msgstr "Pažymėti kaip Apmokėtą"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:55
+msgid ""
+"After you have generated the payout report and paid all the affiliates their "
+"outstanding balance, use this button to mark all the payments as paid."
+msgstr ""
+"Sukūrę išmokėjimo ataskaitą ir sumokėję visiems partneriams neapmokėtą "
+"likutį, naudokite šį mygtuką norėdami pažymėti visus mokėjimus kaip "
+"sumokėtus."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:72
+msgid "PayPal Email"
+msgstr "PayPal el. paštas"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:73
+msgid "Pending Amount"
+msgstr "Laukiama Suma"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:121
+msgid "No Affiliates Found in the Database."
+msgstr "Duomenų bazėje nerasta partnerių."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:124
+msgid "No Pending Payment Found."
+msgstr "Nerastas laukiantis mokėjimas."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:143
+msgid "There is no pending payment."
+msgstr "Nėra laukiančio mokėjimo."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:158
+msgid "can't open file named 'paypal_payout.csv'"
+msgstr "negaliu atidaryti failo pavadinimu 'paypal_payout.csv'"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:201
+msgid "can't open file named 'affiliate_payout_report.csv'"
+msgstr "negaliu atidaryti failo pavadinimu 'affiliate_payout_report.csv'"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:207
+msgid ""
+"Note: Please make sure that the PayPal email address field of the affiliates "
+"that are about to get paid via PayPal are not empty. PayPal payouts do not "
+"work without PayPal email address. You can ignore this warning if you are "
+"going to pay your affiliates via other means."
+msgstr ""
+"Pastaba: Įsitikinkite, kad partnerių, kuriems ketinate daryti mokėjimus per "
+"„PayPal“, „PayPal“ el. pašto laukas nėra tuščias. „PayPal“ išmokos neveikia "
+"be „PayPal“ el. pašto adreso. Galite nekreipti dėmesio į šį įspėjimą, jei "
+"ketinate mokėti savo partneriams kitomis priemonėmis."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:210
+#, php-format
+msgid ""
+"PayPal payout file created. Download the <a href=\"%s\">PayPal Payout File</"
+"a> (Right click and choose \"Save Link As\"). You can use this file to make "
+"a PayPal mass payment and pay the commissions in one go."
+msgstr ""
+"Sukurtas „PayPal“ išmokėjimo failas. Atsisiųskite <a href=\"%s\">„PayPal“ "
+"išmokėjimo failą</a> (dešiniuoju pelės mygtuku spustelėkite ir pasirinkite "
+"„Išsaugoti nuorodą kaip“). Galite naudoti šį failą norėdami atlikti „PayPal“ "
+"urminį mokėjimą ir sumokėti komisinius vienu kartu."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:215
+#, php-format
+msgid ""
+"CSV file with outstanding affiliate commission details created. Download the "
+"<a href=\"%s\">Affiliate Payout Report File</a> (Right click and choose "
+"\"Save Link As\"). You can use this file to manually send money to your "
+"affiliates."
+msgstr ""
+"Sukurtas CSV failas su išsamiomis partnerių komisinių detalėmis. "
+"Atsisiųskite <a href=\"%s\">Partnerio išmokėjimų ataskaitos failą</a> "
+"(dešiniuoju pelės mygtuku spustelėkite ir pasirinkite „Išsaugoti nuorodą "
+"kaip“). Šį failą galite naudoti siuntimui pinigų savo partneriams rankiniu "
+"būdu."
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:227
+msgid "There is no pending payment to mark"
+msgstr "Nėra laukiančio mokėjimo, kurį galėtume pažymėti"
+
+#: Afiiliate-man/affiliates-manager/source/Admin-menu/wpam-manage-payouts-menu.php:242
+msgid "Marked payments as paid"
+msgstr "Mokėjimai pažymėti kaip sumokėti"
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:238
+msgid "Displayed to user at logon if affiliate STATUS = APPROVED"
+msgstr ""
+"Rodomas vartotojui prisijungiant, jei partnerio STATUSAS = PATVIRTINTAS"
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:239
+msgid ""
+"Congratulations, the administrator has <strong>approved</strong> your "
+"application. You have one more step to complete before you can begin "
+"publishing for this store and generating revenue! The store owner has "
+"specified the terms of your agreement, which you will need to review and "
+"agree to.<br /><br />"
+msgstr ""
+"Sveikiname, administratorius <strong>patvirtino</strong> jūsų paraišką. "
+"Turite atlikti dar vieną veiksmą, prieš paleisdami šią parduotuvę ir gaudami "
+"pajamų! Parduotuvės savininkas nustatė jūsų sutarties sąlygas, kurias "
+"turėsite peržiūrėti ir sutikti. <br /><br />"
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:242
+msgid "Displayed to user at logon if affiliate STATUS = DECLINED"
+msgstr "Rodomas vartotojui prisijungiant, jei partnerio STATUSAS = ATMESTAS"
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:243
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:271
+msgid "I'm sorry, your application was declined."
+msgstr "Apgailestaujame, jūsų prašymas buvo atmestas."
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:246
+msgid "Displayed to user at logon if affiliate STATUS = PENDING"
+msgstr "Rodomas vartotojui prisijungiant, jei partnerio STATUSAS = LAUKIAMA"
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:247
+msgid "Your application is still being reviewed. Please check back later!"
+msgstr "Jūsų paraiška yra vis dar peržiūrima. Apsilankykite vėliau!"
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:250
+msgid ""
+"Displayed to user after successfully submitting the affiliate registration "
+"form"
+msgstr ""
+"Naudotojui rodomas po partnerio registracijos formos sėkmingo pateikimo"
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:251
+msgid ""
+"Your application has been submitted. The store owner will be contacting you "
+"soon.<br /><br />Thank you!<br />"
+msgstr ""
+"Jūsų prašymas buvo pateiktas. Parduotuvės savininkas susisieks su jumis.<br /"
+"><br />Dėkojame!<br />"
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:254
+msgid ""
+"Body of e-mail sent to the affiliate immediately after submitting their "
+"application."
+msgstr ""
+"El.laiško tekstas, kuris bus išsiųstas partneriui iš karto po paraiškos "
+"pateikimo."
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:255
+msgid "Your application will be reviewed and you will be hearing from us soon!"
+msgstr "Jūsų paraiška bus peržiūrėta ir jums parašysime!"
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:274
+msgid ""
+"Body of e-mail sent to the affiliate immediately following their application "
+"being declined."
+msgstr ""
+"El.laiško tekstas, kuris bus išsiųstas partneriui iš karto po jų paraiškos "
+"atmetimo."
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:280
+msgid ""
+"Thank you. Your registration is now complete. You can log into the affiliate "
+"area and begin promoting."
+msgstr ""
+"Ačiū. Jūsų registracija dabar baigta. Galite prisijungti prie partnerio "
+"srities ir pradėti reklamuoti."
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:283
+msgid ""
+"Displayed to a newly registered affiliate if automatic affiliate approval "
+"option is enabled."
+msgstr ""
+"Rodoma naujai užregistruotam partneriui, jei automatinio partnerio "
+"patvirtinimo parinktis yra įjungta."
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:293
+msgid ""
+"Your affiliate account for {blogname} has been approved!. \n"
+"\n"
+"Username: {affusername} \n"
+"Password: {affpassword} \n"
+"Login URL: {affloginurl} \n"
+"\n"
+"Please log into your account to get referral code."
+msgstr ""
+"Jūsų {blogname} partnerio paskyra buvo patvirtinta!. Vartotojo vardas: "
+"{affusername} Slaptažodis: {affpassword} Prisijungimo URL: {affloginurl}, "
+"Prašome prisijungti prie savo paskyros ir gaukite nuorodos kodą."
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:296
+msgid ""
+"Body of e-mail sent to a newly registered affiliate immediately following "
+"their application being approved."
+msgstr ""
+"El.laiško tekstas, kuris bus išsiųstas naujai registruotam partneriui iš "
+"karto po jų paraiškos patvirtinimo."
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:305
+msgid ""
+"Great news, you have just earned a commission by sending a referral to our "
+"site! \n"
+"\n"
+"Please log into your affiliate account to view the details. \n"
+"\n"
+"Thank You"
+msgstr ""
+"Puiki naujiena, jūs ką tik pelnėte komisinius, nes atsiuntėte žmogų į mūsų "
+"svetainę! Prašome įeiti į savo partnerio paskyrą ir peržiūrėti duomenis. "
+"Ačiū Jums"
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:308
+msgid ""
+"Body of e-mail sent to the affiliate immediately after earning a commission."
+msgstr ""
+"El.laiško tekstas, kuris bus išsiųstas partneriui iš karto po uždirbtų "
+"komisinių."
+
+#: Afiiliate-man/affiliates-manager/source/Data/DatabaseInstaller.php:383
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/SettingsPage.php:189
+#, php-format
+msgid ""
+"This is the affiliates section of this store. If you are an existing "
+"affiliate, please <a href=\"%s\">log in</a> to access your control panel."
+msgstr ""
+"Tai partnerių skyrius šioje parduotuvėje. Jei esate partneris, <a href=\"%s"
+"\">prisijunkite,</a> kad pasiektumėte savo valdymo pultą."
+
+#: Afiiliate-man/affiliates-manager/source/Data/GenericRepository.php:31
+#: Afiiliate-man/affiliates-manager/source/Data/GenericRepository.php:76
+#, php-format
+msgid "'model' must be of type '%s'"
+msgstr "„modelis“ turi būti „%s“ tipo"
+
+#: Afiiliate-man/affiliates-manager/source/Data/Models/AffiliateModel.php:169
+msgid "Percent"
+msgstr "Procentas"
+
+#: Afiiliate-man/affiliates-manager/source/Data/Models/AffiliateModel.php:171
+msgid "Fixed"
+msgstr "Fiksuota"
+
+#: Afiiliate-man/affiliates-manager/source/Data/Models/ModelMapper.php:34
+#, php-format
+msgid "Model mapping error.  Could not map key %s."
+msgstr "Modelio žemėlapio klaida.  Nepavyko susieti rakto %s."
+
+#: Afiiliate-man/affiliates-manager/source/MessageHelper.php:29
+#, php-format
+msgid "Attempt to load invalid message of name '%s'"
+msgstr "Bandymas įkelti netinkamą vardo „%s“ pranešimą"
+
+#: Afiiliate-man/affiliates-manager/source/Options.php:27
+msgid "Invalid PayPal API value"
+msgstr "Neteisinga „PayPal“ API vertė"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyAffiliatesPage.php:167
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/NewAffiliatePage.php:93
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:573
+#, php-format
+msgid "Bounty Rate (%s per Sale)"
+msgstr "Prizo procentas (%s už pardavimą)"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyCreativesPage.php:60
+msgid "All"
+msgstr "Visi"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyCreativesPage.php:111
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyCreativesPage.php:237
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyCreativesPage.php:244
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:185
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:212
+msgid "Invalid creative."
+msgstr "Netinkamas skelbimas."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyCreativesPage.php:146
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the My Creatives menu and add "
+"a creative again."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžkite į meniu „Mano "
+"skelbimai“ ir vėl pridėkite skelbimą."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyCreativesPage.php:198
+msgid "Insert failed: Bad creative type."
+msgstr "Įterpti nepavyko: Netinkamas skelbimo tipas."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyCreativesPage.php:207
+msgid "Creative Updated."
+msgstr "Skelbimas atnaujintas."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyCreativesPage.php:214
+msgid "Creative ... created."
+msgstr "Naujas skelbimas sukurtas."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/MyCreativesPage.php:218
+msgid "Insert failed: invalid creative update mechanism."
+msgstr "Įterpti nepavyko: netinkamas skelbimo atnaujinimo mechanizmas."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/NewAffiliatePage.php:82
+msgid "Add Affiliate"
+msgstr "Pridėti Partnerį"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:54
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu to "
+"reconcile using a result file."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžkite į „PayPal“ urminio "
+"mokėjimo meniu, kad suderintumėte naudodami rezultatų failą."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:62
+msgid "This results file does not appear to match this payment."
+msgstr "Šis rezultatų failas neatitinka šio mokėjimo."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:96
+#, php-format
+msgid ""
+"Matched a transaction in your results file, but the value was incorrect. "
+"Expected %s but found '%s'"
+msgstr ""
+"Rezultatų faile atitiko operaciją, bet vertė buvo neteisinga. Laukiama %s, "
+"bet rasta „%s“"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:104
+msgid ""
+"Could not correlate a transaction from your results file with the "
+"transactions on record."
+msgstr ""
+"Nepavyko koreguoti operacijos iš jūsų rezultatų failo su įrašytomis "
+"operacijomis."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:110
+msgid "Could not correlate all transactions"
+msgstr "Nepavyko susieti visų operacijų"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:125
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and "
+"confirm to reconcile using a result file."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžkite į „PayPal“ urminio "
+"mokėjimo meniu ir suderinkite naudodami rezultatų failą."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:158
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu to "
+"manually reconcile payments."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžkite į „PayPal“ masinio "
+"mokėjimo meniu, kad rankiniu būdu suderintumėte mokėjimus."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:162
+msgid "Invalid PayPal LogID"
+msgstr "Neteisingas „PayPal“ prisijungimo vardas LogID"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:168
+msgid "Transaction not found"
+msgstr "Operacija nerasta"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:179
+msgid "Invalid transaction status"
+msgstr "Netinkama operacijos būsena"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:228
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu to "
+"continue with these affiliate payments."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžkite į „PayPal“ urminio "
+"mokėjimo meniu, kad galėtumėte tęsti šiuos mokėjimus partneriams."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:241
+msgid "Affiliate Payment"
+msgstr "Partnerių mokėjimas"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:253
+msgid "Affiliate not found"
+msgstr "Partneris nerastas"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:256
+msgid "Payment method for affiliate is not PayPal"
+msgstr "Mokėjimo būdas partneriui yra ne PayPal"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:263
+msgid "Payout via PayPal Mass Pay"
+msgstr "Išmokėjimo per PayPal Urminis Mokėjimas"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:324
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and "
+"selects affiliates to pay."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžkite į „PayPal“ urminio "
+"mokėjimo meniu ir pasirinkite partnerius mokėjimui."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/PaypalPaymentsPage.php:357
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and "
+"select affiliates again."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžkite į „PayPal“ urminio "
+"mokėjimo meniu ir vėl pasirinkite partnerius."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/SettingsPage.php:57
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the General tab and Save "
+"Settings again."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžti į Bendrą lentelę ir "
+"Išsaugoti Parametrus dar kartą."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/SettingsPage.php:97
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Payment tab and Save "
+"Settings again."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžkite į Mokėjimų lentelę ir "
+"Išsaugoti Parametrus dar kartą."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/SettingsPage.php:113
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Messaging tab and Save "
+"Settings again."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžkite į Pranešimų lentelę ir "
+"Išsaugokite Parametrus dar kartą."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/SettingsPage.php:133
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Affiliate Registration "
+"tab and Save Settings again."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžti į Partnerio "
+"Registracijos lentelę ir Įrašykite Parametrus dar kartą."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/SettingsPage.php:208
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Pages/Forms tab and Save "
+"Settings again."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžkite į Puslapių/Formų "
+"lentelę ir Išsaugokite Parametrus dar kartą."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/Admin/SettingsPage.php:227
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Advanced Settings tab and "
+"Save Settings again."
+msgstr ""
+"Klaida! Nonce Saugumo Patikrinimas Nepavyko! Grįžkite į Išplėstinių "
+"nustatymų lentelę ir Išsaugokite Parametrus dar kartą."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:39
+msgid "Sales"
+msgstr "Registracijos"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:40
+msgid "Payment History"
+msgstr "Mokėjimo Istorija"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:41
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:82
+msgid "Creatives"
+msgstr "Skelbimai"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:42
+msgid "Edit Profile"
+msgstr "Redaguoti paskyrą"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:43
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:316
+msgid "Log out"
+msgstr "Atsijungti"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:187
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:28
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:52
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:83
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:109
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:133
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:191
+msgid "Invalid affiliate"
+msgstr "Neteisingas partneris"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:189
+msgid "Inactive creative."
+msgstr "Neaktyvus skelbimas."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:344
+msgid ": Password may not contain slashes."
+msgstr ": Slaptažodyje negali būti brūkšniai."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:349
+msgid ": Please enter the same password in both password fields."
+msgstr ": Prašome įveskite tą patį slaptažodį abiejuose slaptažodžio laukuose."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:427
+#, php-format
+msgid "%s per sale."
+msgstr "%s už pardavimą."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesHome.php:429
+#, php-format
+msgid "%s%% of each completed sale, pre-tax"
+msgstr "%s%% nuo kiekvieno įvykdyto pardavimo, neatskaičius mokesčių"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesRegister.php:68
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:158
+msgid ""
+"Error submitting your details to the database. This is a bug, and your "
+"application was not submitted."
+msgstr ""
+"Pateikiant informaciją į duomenų bazę įvyko klaida. Tai yra klaida, todėl "
+"jūsų paraiška nebuvo pateikta."
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesRegister.php:77
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:168
+#, php-format
+msgid "New affiliate registration on your site %s:"
+msgstr "Nauja partnerių registracija jūsų svetainėje %s:"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesRegister.php:78
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:169
+#, php-format
+msgid "Name: %s %s"
+msgstr "Vardas: %s %s"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesRegister.php:79
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:170
+#, php-format
+msgid "Email: %s"
+msgstr "El. paštas: %s"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesRegister.php:80
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:171
+#, php-format
+msgid "Company: %s"
+msgstr "Įmonė: %s"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesRegister.php:81
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:172
+#, php-format
+msgid "Website: %s"
+msgstr "Tinklapis: %s"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesRegister.php:82
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:173
+#, php-format
+msgid "View Application: %s"
+msgstr "Peržiūrėti paraišką: %s"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesRegister.php:87
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:178
+msgid "New Affiliate Registration"
+msgstr "Naujų partnerių registracija"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/AffiliatesRegister.php:90
+#, php-format
+msgid "Affiliate application for %s"
+msgstr "Partnerių paraiška į %s"
+
+#: Afiiliate-man/affiliates-manager/source/Pages/PublicPage.php:95
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:14
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:44
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:75
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:101
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:125
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:136
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:150
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:180
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:208
+msgid "Access denied."
+msgstr "Prieiga uždrausta."
+
+#: Afiiliate-man/affiliates-manager/source/PayPal/MassPayRequest.php:24
+msgid "receiverType must be one of the RECEIVERTYPE_* constants"
+msgstr "gavėjo tipas turi būti viena iš RECEIVERTYPE_ * konstantų"
+
+#: Afiiliate-man/affiliates-manager/source/PayPal/MassPayRequest.php:33
+msgid "'amount' must be a valid monetary value"
+msgstr "„suma“ turi būti galiojanti piniginė vertė"
+
+#: Afiiliate-man/affiliates-manager/source/PayPal/MassPayResultFile.php:113
+#: Afiiliate-man/affiliates-manager/source/PayPal/MassPayResultFile.php:124
+#, php-format
+msgid "Failed to parse amounts from field: %s"
+msgstr "Nepavyko išanalizuoti sumų iš lauko: %s"
+
+#: Afiiliate-man/affiliates-manager/source/PayPal/Service.php:77
+#, php-format
+msgid ""
+"POST failed\n"
+"errors:\n"
+"%serrordata:\n"
+"%s"
+msgstr "POST klaidos: %serrordata: %s"
+
+#: Afiiliate-man/affiliates-manager/source/PayPal/Service.php:82
+#, php-format
+msgid "Unknown response: %s"
+msgstr "Nežinomas atsakymas: %s"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:74
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:603
+msgid "Affiliate Management"
+msgstr "Partnerių valdymas"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:74
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:76
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:584
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:598
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:603
+msgid "Affiliates"
+msgstr "Partneriai"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:91
+msgid "Store Affiliates"
+msgstr "Parduotuvės partneriai"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:92
+msgid "Register"
+msgstr "Registruotis"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:93
+msgid "Affiliate Login"
+msgstr "Partnerių Prisijungimas"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:312
+msgid "You are currently logged in"
+msgstr "Šiuo metu jūs prisijungęs"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:314
+msgid "Username"
+msgstr "Vartotojo vardas"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:324
+msgid "Email Address"
+msgstr "El. pašto adresas"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:326
+msgid "Password Lost and Found"
+msgstr "Slaptažodis Pamestas ir Surastas"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:326
+msgid "Lost your password?"
+msgstr "Pamiršote slaptažodį?"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:371
+msgid "Become an affiliate"
+msgstr "Tapkite partneriu"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:372
+msgid "Are you interested in earning money by directing visitors to our site?"
+msgstr "Ar jus domina uždirbti pinigus nukreipiant lankytojus į mūsų svetainę?"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:374
+msgid "Sign up"
+msgstr "Užsiregistruoti"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:374
+msgid " to become an affiliate today!"
+msgstr " tapti partneriu šiandien!"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:598
+msgid "Be An Affiliate"
+msgstr "Tapkite partneriu"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:632
+msgid "Affiliates Manager Admin Functions"
+msgstr "Partnerių Valdytojo Admin Funkcijos"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:636
+msgid "Affiliates Manager Manage Payouts"
+msgstr "Partnerių Valdytojui Tvarkyti Išmokas"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:640
+msgid "Affiliates Manager Click Tracking"
+msgstr "Partnerių Valdytojui Paspaudimų sekimas"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:644
+msgid "Affiliates Manager Commission Data"
+msgstr "Partnerių Valdytojui Komisinių Duomenys"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:644
+msgid "Commissions"
+msgstr "Komisiniai"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:648
+msgid "Add-ons"
+msgstr "Priedai"
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:771
+msgid "Invalid JSON handler."
+msgstr "Neteisingas JSON tvarkytojas."
+
+#: Afiiliate-man/affiliates-manager/source/Plugin.php:802
+msgid "Nonce check failed for export My Affiliates to CSV!"
+msgstr "Nonce patikrinti nepavyko eksportuojant Mano Partnerius į CSV!"
+
+#: Afiiliate-man/affiliates-manager/source/Tracking/RequestTracker.php:131
+#: Afiiliate-man/affiliates-manager/source/Tracking/RequestTracker.php:228
+msgid "no refkey in request."
+msgstr "užklausoje nėra refkey."
+
+#: Afiiliate-man/affiliates-manager/source/Tracking/RequestTracker.php:188
+msgid "invalid refkey data."
+msgstr "neteisingi refkey duomenys."
+
+#: Afiiliate-man/affiliates-manager/source/Tracking/RequestTracker.php:239
+msgid "invalid refkey data: "
+msgstr "neteisingas refkey duomenys: "
+
+#: Afiiliate-man/affiliates-manager/source/Tracking/TrackingKey.php:35
+#, php-format
+msgid "invalid refkey format. (length=%s)"
+msgstr "netinkamas refkey formatas. (ilgis =%s)"
+
+#: Afiiliate-man/affiliates-manager/source/Util/AffiliateFormHelper.php:95
+msgid "is a blocked e-mail "
+msgstr "yra užblokuotas el. paštas "
+
+#: Afiiliate-man/affiliates-manager/source/Util/AffiliateFormHelper.php:97
+msgid "is in use"
+msgstr "yra naudojamas"
+
+#: Afiiliate-man/affiliates-manager/source/Util/AffiliateFormHelper.php:156
+msgid "PayPal Transfer"
+msgstr "„PayPal“ pervedimas"
+
+#: Afiiliate-man/affiliates-manager/source/Util/AffiliateFormHelper.php:159
+msgid "Manual Transfer"
+msgstr "Rankinis pervedimas"
+
+#: Afiiliate-man/affiliates-manager/source/Util/EmailHandler.php:49
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:60
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:81
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:182
+#, php-format
+msgid "Affiliate Application for %s"
+msgstr "Partnerių paraiška į %s"
+
+#: Afiiliate-man/affiliates-manager/source/Util/EmailHandler.php:70
+msgid "Your username and password"
+msgstr "Jūsų naudotojo vardas ir slaptažodis"
+
+#: Afiiliate-man/affiliates-manager/source/Util/EmailHandler.php:74
+#, php-format
+msgid "[%s] Your username and password for Affiliate Manager"
+msgstr "[%s] Jūsų naudotojo vardas ir slaptažodis, skirtas Partnerių Valdymui"
+
+#: Afiiliate-man/affiliates-manager/source/Util/EmailHandler.php:75
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:22
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:99
+#, php-format
+msgid "New affiliate registration for %s: has been approved!"
+msgstr "Naujo partnerio registracija, skirta %s: patvirtinta!"
+
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:17
+msgid "Invalid bounty amount."
+msgstr "Neteisinga prizo suma."
+
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:20
+msgid "Invalid bounty type."
+msgstr "Neteisingas prizo tipas."
+
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:36
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:68
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:93
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:112
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:169
+msgid "Invalid state transition."
+msgstr "Netinkamas būsenos perėjimas."
+
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:153
+msgid "Invalid status."
+msgstr "Netinkama būsena."
+
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:166
+msgid "Invalid creative"
+msgstr "Netinkamas skelbimas"
+
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:183
+msgid "Invalid transaction type."
+msgstr "Neteisingas operacijos tipas."
+
+#: Afiiliate-man/affiliates-manager/source/Util/JsonHandler.php:186
+msgid "Invalid value for amount."
+msgstr "Neteisinga sumos vertė."
+
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:27
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:36
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:104
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:113
+msgid "User already has an account and is already an affiliate"
+msgstr "Vartotojas jau turi paskyrą ir jau yra partneris"
+
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:30
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:39
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:107
+#: Afiiliate-man/affiliates-manager/source/Util/UserHandler.php:116
+msgid "Log into the site with your existing account and get started."
+msgstr ""
+"Prisijunkite prie svetainės naudodamiesi su savo turima paskyra ir pradėkite."
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CallbackValidator.php:17
+msgid "Argument 'callback' must be callable"
+msgstr "Argumento „callback“ turi būti kviečiamas"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodeValidator.php:15
+#: Afiiliate-man/affiliates-manager/source/Validation/StringValidator.php:29
+msgid "is required"
+msgstr "yra būtinas"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:14
+msgid "AFGHANISTAN"
+msgstr "AFGANISTANAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:15
+msgid "ALAND ISLANDS"
+msgstr "ALANDŲ SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:16
+msgid "ALBANIA"
+msgstr "ALBANIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:17
+msgid "ALGERIA"
+msgstr "ALŽYRAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:18
+msgid "AMERICAN SAMOA"
+msgstr "AMERIKOS SAMOA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:19
+msgid "ANDORRA"
+msgstr "ANDORA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:20
+msgid "ANGOLA"
+msgstr "ANGOLA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:21
+msgid "ANGUILLA"
+msgstr "ANGILIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:22
+msgid "ANTARCTICA"
+msgstr "ANTARKTIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:23
+msgid "ANTIGUA AND BARBUDA"
+msgstr "ANTIGVA IR BARBUDA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:24
+msgid "ARGENTINA"
+msgstr "ARGENTINA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:25
+msgid "ARMENIA"
+msgstr "ARMĖNIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:26
+msgid "ARUBA"
+msgstr "ARUBA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:27
+msgid "AUSTRALIA"
+msgstr "AUSTRALIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:28
+msgid "AUSTRIA"
+msgstr "AUSTRIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:29
+msgid "AZERBAIJAN"
+msgstr "AZERBAIDŽANAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:30
+msgid "BAHAMAS"
+msgstr "BAHAMŲ SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:31
+msgid "BAHRAIN"
+msgstr "BAHREINAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:32
+msgid "BANGLADESH"
+msgstr "BANGLADEŠAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:33
+msgid "BARBADOS"
+msgstr "BARBADOSAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:34
+msgid "BELARUS"
+msgstr "BALTARUSIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:35
+msgid "BELGIUM"
+msgstr "BELGIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:36
+msgid "BELIZE"
+msgstr "BELIZAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:37
+msgid "BENIN"
+msgstr "BENINAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:38
+msgid "BERMUDA"
+msgstr "BERMUDŲ SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:39
+msgid "BHUTAN"
+msgstr "BUTANAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:40
+msgid "BOLIVIA"
+msgstr "BOLIVIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:41
+msgid "BOSNIA AND HERZEGOVINA"
+msgstr "BOSNIJA IR HERCEGOVINA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:42
+msgid "BOTSWANA"
+msgstr "BOTSVANA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:43
+msgid "BOUVET ISLAND"
+msgstr "BUVĖ SALA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:44
+msgid "BRAZIL"
+msgstr "BRAZILIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:45
+msgid "BRUNEI DARUSSALAM"
+msgstr "BRUNĖJAUS DARUSALAMAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:46
+msgid "BULGARIA"
+msgstr "BULGARIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:47
+msgid "BURKINA FASO"
+msgstr "BURKINA FASAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:48
+msgid "BURUNDI"
+msgstr "BURUNDIS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:49
+msgid "CAMBODIA"
+msgstr "KAMBODŽA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:50
+msgid "CAMEROON"
+msgstr "KAMERŪNAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:51
+msgid "CANADA"
+msgstr "KANADA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:52
+msgid "CAPE VERDE"
+msgstr "ŽALIOJO KYŠULIO SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:53
+msgid "CAYMAN ISLANDS"
+msgstr "KAIMANŲ SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:54
+msgid "CENTRAL AFRICAN REPUBLIC"
+msgstr "CENTRINĖS AFRIKOS RESPUBLIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:55
+msgid "CHAD"
+msgstr "ČADAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:56
+msgid "CHILE"
+msgstr "ČILĖ"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:57
+msgid "CHINA"
+msgstr "KINIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:58
+msgid "CHRISTMAS ISLAND"
+msgstr "KALĖDŲ SALA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:59
+msgid "COCOS (KEELING) ISLANDS"
+msgstr "KOKOSŲ (KILINGO) SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:60
+msgid "COLOMBIA"
+msgstr "KOLUMBIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:61
+msgid "COMOROS"
+msgstr "KOMORAI"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:62
+msgid "CONGO (BRAZZAVILLE)"
+msgstr "KONGAS (BRAZAVILIS)"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:63
+msgid "CONGO (KINSHASA)"
+msgstr "KONGAS (KINŠASA)"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:64
+msgid "COOK ISLANDS"
+msgstr "KUKO SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:65
+msgid "COSTA RICA"
+msgstr "KOSTA RIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:66
+msgid "CROATIA"
+msgstr "KROATIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:67
+msgid "CUBA"
+msgstr "KUBA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:68
+msgid "CYPRUS"
+msgstr "KIPRAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:69
+msgid "CZECH REPUBLIC"
+msgstr "ČEKIJOS RESPUBLIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:70
+msgid "DENMARK"
+msgstr "DANIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:71
+msgid "DJIBOUTI"
+msgstr "DŽIBUTIS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:72
+msgid "DOMINICA"
+msgstr "DOMINIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:73
+msgid "DOMINICAN REPUBLIC"
+msgstr "DOMINIKOS RESPUBLIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:74
+msgid "ECUADOR"
+msgstr "EKVADORAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:75
+msgid "EGYPT"
+msgstr "EGIPTAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:76
+msgid "EL SALVADOR"
+msgstr "EL SALVADORAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:77
+msgid "EQUATORIAL GUINEA"
+msgstr "PUSIAUJO GVINĖJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:78
+msgid "ERITREA"
+msgstr "ERITRĖJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:79
+msgid "ESTONIA"
+msgstr "ESTIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:80
+msgid "ETHIOPIA"
+msgstr "ETIOPIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:81
+msgid "FALKLAND ISLANDS (MALVINAS)"
+msgstr "FALKLANDO SALOS (MALVINŲ)"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:82
+msgid "FAROE ISLANDS"
+msgstr "FARERŲ SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:83
+msgid "FIJI"
+msgstr "FIDŽI"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:84
+msgid "FINLAND"
+msgstr "SUOMIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:85
+msgid "FRANCE"
+msgstr "PRANCŪZIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:86
+msgid "FRENCH GUIANA"
+msgstr "PRANCŪZIJOS GVIANA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:87
+msgid "FRENCH POLYNESIA"
+msgstr "PRANCŪZIJOS POLINEZIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:88
+msgid "FRENCH SOUTHERN TERRITORIES"
+msgstr "PRANCŪZIJOS PIETŲ SRITYS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:89
+msgid "GABON"
+msgstr "GABONAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:90
+msgid "GAMBIA"
+msgstr "GAMBIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:91
+msgid "GEORGIA"
+msgstr "GRUZIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:92
+msgid "GERMANY"
+msgstr "VOKIETIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:93
+msgid "GHANA"
+msgstr "GANA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:94
+msgid "GIBRALTAR"
+msgstr "GIBRALTARAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:95
+msgid "GREECE"
+msgstr "GRAIKIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:96
+msgid "GREENLAND"
+msgstr "GRENLANDIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:97
+msgid "GRENADA"
+msgstr "GRENADA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:98
+msgid "GUADELOUPE"
+msgstr "GVADELUPA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:99
+msgid "GUAM"
+msgstr "GUAMAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:100
+msgid "GUATEMALA"
+msgstr "GVATEMALA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:101
+msgid "GUINEA"
+msgstr "GVINĖJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:102
+msgid "GUINEA-BISSAU"
+msgstr "BISAU GVINĖJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:103
+msgid "GUYANA"
+msgstr "GAJANA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:104
+msgid "HAITI"
+msgstr "HAITIS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:105
+msgid "HOLY SEE (VATICAN CITY STATE)"
+msgstr "ŠVENTASIS SOSTAS (VATIKANO MIESTO VALSTYBĖ)"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:106
+msgid "HONDURAS"
+msgstr "HONDŪRAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:107
+msgid "HONG KONG"
+msgstr "HONG KONGAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:108
+msgid "HUNGARY"
+msgstr "VENGRIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:109
+msgid "ICELAND"
+msgstr "ISLANDIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:110
+msgid "INDIA"
+msgstr "INDIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:111
+msgid "INDONESIA"
+msgstr "INDONEZIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:112
+msgid "IRAN ISLAMIC REPUBLIC OF"
+msgstr "IRANO ISLAMO RESPUBLIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:113
+msgid "IRAQ"
+msgstr "IRAKAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:114
+msgid "IRELAND"
+msgstr "AIRIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:115
+msgid "ISRAEL"
+msgstr "IZRAELIS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:116
+msgid "ITALY"
+msgstr "ITALIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:117
+msgid "IVORY COAST"
+msgstr "DRAMBLIO KAULO KRANTAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:118
+msgid "JAMAICA"
+msgstr "JAMAIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:119
+msgid "JAPAN"
+msgstr "JAPONIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:120
+msgid "JORDAN"
+msgstr "JORDANIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:121
+msgid "KAZAKHSTAN"
+msgstr "KAZACHSTANAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:122
+msgid "KENYA"
+msgstr "KENIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:123
+msgid "KIRIBATI"
+msgstr "KIRIBATIS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:124
+msgid "KOREA"
+msgstr "KORĖJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:125
+msgid "KOREA REPUBLIC OF"
+msgstr "KORĖJOS RESPUBLIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:126
+msgid "KUWAIT"
+msgstr "KUVEITAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:127
+msgid "KYRGYZSTAN"
+msgstr "KIRGIZIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:128
+msgid "LAO"
+msgstr "LAOSAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:129
+msgid "LATVIA"
+msgstr "LATVIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:130
+msgid "LEBANON"
+msgstr "LIBANAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:131
+msgid "LESOTHO"
+msgstr "LESOTAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:132
+msgid "LIBERIA"
+msgstr "LIBERIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:133
+msgid "LIBYAN ARAB JAMAHIRIYA"
+msgstr "LIBIJOS ARABŲ DŽAMAHIRIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:134
+msgid "LIECHTENSTEIN"
+msgstr "LICHTENŠTEINAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:135
+msgid "LITHUANIA"
+msgstr "LIETUVA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:136
+msgid "LUXEMBOURG"
+msgstr "LIUKSEMBURGAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:137
+msgid "MACAO"
+msgstr "MAKAO"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:138
+msgid "MACEDONIA"
+msgstr "MAKEDONIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:139
+msgid "MADAGASCAR"
+msgstr "MADAGASKARAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:140
+msgid "MALAWI"
+msgstr "MALAVIS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:141
+msgid "MALAYSIA"
+msgstr "MALAIZIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:142
+msgid "MALDIVES"
+msgstr "MALDYVAI"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:143
+msgid "MALI"
+msgstr "MALIS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:144
+msgid "MALTA"
+msgstr "MALTA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:145
+msgid "MARSHALL ISLANDS"
+msgstr "MARŠALO SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:146
+msgid "MARTINIQUE"
+msgstr "MARTINIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:147
+msgid "MAURITANIA"
+msgstr "MAURITANIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:148
+msgid "MAURITIUS"
+msgstr "MAURICIJUS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:149
+msgid "MAYOTTE"
+msgstr "MAJOTAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:150
+msgid "MEXICO"
+msgstr "MEKSIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:151
+msgid "MICRONESIA"
+msgstr "MIKRONEZIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:152
+msgid "MOLDOVA, REPUBLIC OF"
+msgstr "MOLDOVOS RESPUBLIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:153
+msgid "MONACO"
+msgstr "MONAKAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:154
+msgid "MONGOLIA"
+msgstr "MONGOLIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:155
+msgid "MONTENEGRO"
+msgstr "JUODKALNIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:156
+msgid "MONTSERRAT"
+msgstr "MONTSERATAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:157
+msgid "MOROCCO"
+msgstr "MAROKAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:158
+msgid "MOZAMBIQUE"
+msgstr "MOZAMBIKAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:159
+msgid "MYANMAR"
+msgstr "MIANMARAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:160
+msgid "NAMIBIA"
+msgstr "NAMIBIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:161
+msgid "NAURU"
+msgstr "NAURU"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:162
+msgid "NEPAL"
+msgstr "NEPALAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:163
+msgid "NETHERLANDS"
+msgstr "NYDERLANDAI"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:164
+msgid "NETHERLANDS ANTILLES"
+msgstr "NYDERLANDŲ ANTILAI"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:165
+msgid "NEW CALEDONIA"
+msgstr "NAUJOJI KALEDONIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:166
+msgid "NEW ZEALAND"
+msgstr "NAUJOJI ZELANDIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:167
+msgid "NICARAGUA"
+msgstr "NIKARAGVA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:168
+msgid "NIGER"
+msgstr "NIGERIS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:169
+msgid "NIGERIA"
+msgstr "NIGERIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:170
+msgid "NIUE"
+msgstr "NIUJĖ"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:171
+msgid "NORFOLK ISLAND"
+msgstr "NORFOLKO SALA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:172
+msgid "NORTHERN MARIANA ISLANDS"
+msgstr "MARIANOS ŠIAURINĖS SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:173
+msgid "NORWAY"
+msgstr "NORVEGIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:174
+msgid "OMAN"
+msgstr "OMANAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:175
+msgid "PAKISTAN"
+msgstr "PAKISTANAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:176
+msgid "PALAU"
+msgstr "PALAU"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:177
+msgid "PALESTINIAN TERRITORY"
+msgstr "PALESTINOS TERITORIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:178
+msgid "PANAMA"
+msgstr "PANAMA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:179
+msgid "PAPUA NEW GUINEA"
+msgstr "PAPUA NAUJOJI GVINĖJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:180
+msgid "PARAGUAY"
+msgstr "PARAGVAJUS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:181
+msgid "PERU"
+msgstr "PERU"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:182
+msgid "PHILIPPINES"
+msgstr "FILIPINAI"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:183
+msgid "PITCAIRN"
+msgstr "PITKERNAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:184
+msgid "POLAND"
+msgstr "LENKIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:185
+msgid "PORTUGAL"
+msgstr "PORTUGALIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:186
+msgid "PUERTO RICO"
+msgstr "PUERTO RIKAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:187
+msgid "QATAR"
+msgstr "KATARAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:188
+msgid "REUNION"
+msgstr "REUNIONAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:189
+msgid "ROMANIA"
+msgstr "RUMUNIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:190
+msgid "RUSSIAN FEDERATION"
+msgstr "RUSIJOS FEDERACIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:191
+msgid "RWANDA"
+msgstr "RUANDA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:192
+msgid "SAINT HELENA"
+msgstr "ŠV. ELENOS SALA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:193
+msgid "SAINT KITTS AND NEVIS"
+msgstr "SENT KITSAS IR NEVIS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:194
+msgid "SAINT LUCIA"
+msgstr "SENT LUSIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:195
+msgid "SAINT PIERRE AND MIQUELON"
+msgstr "SEN PJERAS IR MIKELONAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:196
+msgid "SAMOA"
+msgstr "SAMOA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:197
+msgid "SAN MARINO"
+msgstr "SAN MARINAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:198
+msgid "SAO TOME AND PRINCIPE"
+msgstr "SAN TOMĖ IR PRINSIPĖ"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:199
+msgid "SAUDI ARABIA"
+msgstr "SAUDO ARABIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:200
+msgid "SENEGAL"
+msgstr "SENEGALAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:201
+msgid "SERBIA"
+msgstr "SERBIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:202
+msgid "SEYCHELLES"
+msgstr "SEIŠELIAI"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:203
+msgid "SIERRA LEONE"
+msgstr "SIERA LEONĖ"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:204
+msgid "SINGAPORE"
+msgstr "SINGAPŪRAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:205
+msgid "SLOVAKIA"
+msgstr "SLOVAKIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:206
+msgid "SLOVENIA"
+msgstr "SLOVĖNIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:207
+msgid "SOLOMON ISLANDS"
+msgstr "SALIAMONO SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:208
+msgid "SOMALIA"
+msgstr "SOMALIS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:209
+msgid "SOUTH AFRICA"
+msgstr "PIETŲ AFRIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:210
+msgid "SPAIN"
+msgstr "ISPANIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:211
+msgid "SRI LANKA"
+msgstr "ŠRI LANKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:212
+msgid "SUDAN"
+msgstr "SUDANAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:213
+msgid "SURINAME"
+msgstr "SURINAMAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:214
+msgid "SVALBARD AND JAN MAYEN"
+msgstr "SVALBARDO IR JAN MAJENO SALA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:215
+msgid "SWAZILAND"
+msgstr "SVAZILANDAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:216
+msgid "SWEDEN"
+msgstr "ŠVEDIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:217
+msgid "SWITZERLAND"
+msgstr "ŠVEICARIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:218
+msgid "SYRIAN ARAB REPUBLIC"
+msgstr "SIRIJOS ARABŲ RESPUBLIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:219
+msgid "TAIWAN PROVINCE OF CHINA"
+msgstr "TAIVANIS, KINIJOS PROVINCIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:220
+msgid "TAJIKISTAN"
+msgstr "TADŽIKISTANAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:221
+msgid "TANZANIA UNITED REPUBLIC OF"
+msgstr "TANZANIJOS JUNGTINĖ RESPUBLIKA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:222
+msgid "THAILAND"
+msgstr "TAILANDAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:223
+msgid "TIMOR-LESTE"
+msgstr "RYTŲ TIMORAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:224
+msgid "TOGO"
+msgstr "TOGAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:225
+msgid "TOKELAU"
+msgstr "TOKELAU"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:226
+msgid "TONGA"
+msgstr "TONGAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:227
+msgid "TRINIDAD AND TOBAGO"
+msgstr "TRINIDADAS IR TOBAGAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:228
+msgid "TUNISIA"
+msgstr "TUNISAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:229
+msgid "TURKEY"
+msgstr "TURKIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:230
+msgid "TURKMENISTAN"
+msgstr "TURKMĖNISTANAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:231
+msgid "TURKS AND CAICOS ISLANDS"
+msgstr "TERKSO IR KAIKOSO SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:232
+msgid "TUVALU"
+msgstr "TUVALU"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:233
+msgid "UGANDA"
+msgstr "UGANDA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:234
+msgid "UKRAINE"
+msgstr "UKRAINA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:235
+msgid "UNITED ARAB EMIRATES"
+msgstr "JUNGTINIAI ARABŲ EMYRATAI"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:236
+msgid "UNITED KINGDOM"
+msgstr "JUNGTINĖ KARALYSTĖ"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:237
+msgid "UNITED STATES"
+msgstr "JUNGTINĖS AMERIKOS VALSTIJOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:238
+msgid "URUGUAY"
+msgstr "URUGVAJUS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:239
+msgid "UZBEKISTAN"
+msgstr "UZBEKISTANAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:240
+msgid "VANUATU"
+msgstr "VANUATU"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:241
+msgid "VENEZUELA"
+msgstr "VENESUELA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:242
+msgid "VIETNAM"
+msgstr "VIETNAMAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:243
+msgid "VIRGIN ISLANDS BRITISH"
+msgstr "DIDŽIOSIOS BRITANIJOS MERGELIŲ SALOS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:244
+msgid "VIRGIN ISLANDS U.S."
+msgstr "MERGELIŲ SALOS, JAV"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:245
+msgid "WALLIS AND FUTUNA"
+msgstr "VOLISAS IR FUTŪNA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:246
+msgid "WESTERN SAHARA"
+msgstr "VAKARŲ SACHARA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:247
+msgid "YEMEN"
+msgstr "JEMENAS"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:248
+msgid "ZAMBIA"
+msgstr "ZAMBIJA"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/CountryCodes.php:249
+msgid "ZIMBABWE"
+msgstr "ZIMBABVĖ"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/EmailValidator.php:14
+msgid "must be a valid e-mail address"
+msgstr "turi būti galiojantis el. pašto adresas"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/MoneyValidator.php:12
+msgid "must be a valid monetary value"
+msgstr "turi būti galiojanti piniginė vertė"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/MultiPartPhoneNumberValidator.php:12
+msgid "must be a valid phone number"
+msgstr "turi būti galiojantis telefono numeris"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/MultiPartSocialSecurityNumberValidator.php:13
+msgid "must be a valid social security number"
+msgstr "turi būti galiojantis socialinio draudimo numeris"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/NumberValidator.php:14
+msgid "must be a number"
+msgstr "turi būti skaičius"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/PhoneNumberValidator.php:12
+msgid "must be a phone number"
+msgstr "turi būti telefono numeris"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/SetValidator.php:18
+#: Afiiliate-man/affiliates-manager/source/Validation/StateCodeValidator.php:14
+msgid "must be selected"
+msgstr "turi būti pasirinktas"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/StringValidator.php:24
+msgid "must be between % and %s characters"
+msgstr "turi būti nuo % iki %s simbolių"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/StringValidator.php:31
+#, php-format
+msgid "must be at least %s characters"
+msgstr "turi sudaryti ne mažiau kaip %s simboliai"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/StringValidator.php:35
+#, php-format
+msgid "must be no more than %s characters"
+msgstr "turi būti ne daugiau kaip %s simbolių"
+
+#: Afiiliate-man/affiliates-manager/source/Validation/ZipCodeValidator.php:16
+msgid "must be a valid zip code"
+msgstr "turi būti galiojantis pašto kodas"
+
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:11
+msgid "Affiliate has applied, but is waiting on your decision."
+msgstr "Partneris pateikė prašymą, tačiau laukia jūsų sprendimo."
+
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:12
+msgid "Affiliate has been approved, but has not accepted terms."
+msgstr "Partneris buvo patvirtintas, tačiau nepriėmė sąlygų."
+
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:13
+msgid "Affiliate is active, and will receive credit for leads."
+msgstr "Partneris yra aktyvus ir gaus kreditą už potencialius klientus."
+
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:14
+msgid ""
+"Affiliate has accepted terms and provided payment details.<br /> If the "
+"details look good, you should activate this affiliate so they can begin "
+"sending traffic."
+msgstr ""
+"Partneris sutiko su sąlygomis ir pateikė išsamią mokėjimo informaciją. <br /"
+"> Jei išsami informacija atrodo gera, turėtumėte suaktyvinti šį partnerį, "
+"kad jie galėtų pradėti siųsti lankytojus."
+
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:15
+msgid "Affiliate has been disabled."
+msgstr "Partneris buvo išjungtas."
+
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:16
+msgid "Affiliate was declined."
+msgstr "Partneris buvo atmestas."
+
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:17
+msgid "Affiliate was blocked and cannot re-apply."
+msgstr "Partneris buvo užblokuotas ir negali vėl kreiptis."
+
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:23
+#, php-format
+msgid "%s per sale"
+msgstr "%s už pardavimą"
+
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:25
+#, php-format
+msgid "%s%% of pre-tax sales"
+msgstr "%s%% pardavimų prieš apmokestinimą"
+
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:30
+#: Afiiliate-man/affiliates-manager/source/display_functions.php:41
+msgid "Select an option"
+msgstr "Pasirinkite variantą"
+
+#: Afiiliate-man/affiliates-manager/source/dynamic-translatable-strings.php:4
+msgid "Address Line 1"
+msgstr "Adreso 1 eilutė"
+
+#: Afiiliate-man/affiliates-manager/source/dynamic-translatable-strings.php:5
+msgid "Address Line 2"
+msgstr "Adreso 2 eilutė"
+
+#: Afiiliate-man/affiliates-manager/source/dynamic-translatable-strings.php:6
+msgid "Zip Code"
+msgstr "Pašto Kodas"
+
+#: Afiiliate-man/affiliates-manager/source/dynamic-translatable-strings.php:7
+msgid "Company Name"
+msgstr "Įmonės pavadinimas"
+
+#: Afiiliate-man/affiliates-manager/source/dynamic-translatable-strings.php:8
+msgid "Website URL"
+msgstr "Svetainės adresas / URL"
