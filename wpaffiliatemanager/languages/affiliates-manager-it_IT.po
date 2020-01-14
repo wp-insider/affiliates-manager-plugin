@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Affiliate Manager\n"
-"POT-Creation-Date: 2019-10-24 11:26+0600\n"
-"PO-Revision-Date: 2019-10-24 11:31+0600\n"
+"POT-Creation-Date: 2020-01-14 13:32+0600\n"
+"PO-Revision-Date: 2020-01-14 13:37+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -27,11 +27,17 @@ msgstr "Wordpress Affiliate manager richiede PHP 3.5 o superiore."
 msgid "Credit for sale of %s %s (PURCHASE LOG ID = %s)"
 msgstr ""
 
-#: classes/CommissionTracking.php:117
+#: classes/CommissionTracking.php:116
 msgid "You just earned a commission!"
 msgstr ""
 
-#: classes/CommissionTracking.php:169
+#: classes/CommissionTracking.php:145
+#, fuzzy
+#| msgid "Affiliate Commissions"
+msgid "Affiliate commission notification"
+msgstr "Commissioni affiliati"
+
+#: classes/CommissionTracking.php:197
 #, php-format
 msgid "Refund of %s %s (PURCHASE LOG ID = %s)"
 msgstr ""
@@ -1168,25 +1174,15 @@ msgstr "Codice valuta"
 msgid "Do Not Record Zero Amount Commission"
 msgstr "Non registrare commissione per quantità uguale a zero"
 
-#: html/admin/settings/settings_general.php:211
-msgid "Send Commission Notification"
-msgstr ""
-
-#: html/admin/settings/settings_general.php:218
-msgid ""
-"If checked, your affiliates will get notified via email when they receive a "
-"commission."
-msgstr ""
-
-#: html/admin/settings/settings_general.php:224
+#: html/admin/settings/settings_general.php:210
 msgid "Enable Impressions"
 msgstr "Attiva Impressions"
 
-#: html/admin/settings/settings_general.php:233
+#: html/admin/settings/settings_general.php:219
 msgid "Enable Debug"
 msgstr "Attiva Debug"
 
-#: html/admin/settings/settings_general.php:236
+#: html/admin/settings/settings_general.php:222
 msgid ""
 "If checked, debug output will be written to log files. This is useful for "
 "troubleshooting post payment failures."
@@ -1194,7 +1190,7 @@ msgstr ""
 "Se selezionato, l'output di debug verrà scritto sui file di registro. Questo "
 "è utile per la risoluzione dei problemi di pagamento post."
 
-#: html/admin/settings/settings_general.php:237
+#: html/admin/settings/settings_general.php:223
 msgid ""
 "You can check the debug log file by clicking on the link below (The log file "
 "can be viewed using any text editor):"
@@ -1203,11 +1199,11 @@ msgstr ""
 "collegamento sottostante (il file di registro può essere visualizzato "
 "utilizzando qualsiasi editor di testo):"
 
-#: html/admin/settings/settings_general.php:241
+#: html/admin/settings/settings_general.php:227
 msgid "Reset Debug Log file"
 msgstr "Reimposta il file di registro di debug"
 
-#: html/admin/settings/settings_general.php:242
+#: html/admin/settings/settings_general.php:228
 msgid "Use it to reset the affiliate manager plugin's log file."
 msgstr ""
 "Usalo per ripristinare il file di registro del plugin del gestore affiliato."
@@ -1260,6 +1256,7 @@ msgid "Send Registration Notification:"
 msgstr ""
 
 #: html/admin/settings/settings_messaging.php:146
+#: html/admin/settings/settings_messaging.php:170
 msgid "Send Notification to Admin"
 msgstr ""
 
@@ -1270,6 +1267,7 @@ msgid ""
 msgstr ""
 
 #: html/admin/settings/settings_messaging.php:149
+#: html/admin/settings/settings_messaging.php:173
 #, fuzzy
 #| msgid "Email address"
 msgid "Admin Email Address"
@@ -1279,6 +1277,32 @@ msgstr "Indirizzo Email"
 msgid ""
 "The email address to which the admin will get notified after a new affiliate "
 "signup."
+msgstr ""
+
+#: html/admin/settings/settings_messaging.php:156
+msgid "Send Commission Notification:"
+msgstr ""
+
+#: html/admin/settings/settings_messaging.php:163
+msgid "Send Notification to Affiliate"
+msgstr ""
+
+#: html/admin/settings/settings_messaging.php:164
+msgid ""
+"Check this box if you want your affiliates to get notified via email when "
+"they earn a commission."
+msgstr ""
+
+#: html/admin/settings/settings_messaging.php:171
+msgid ""
+"Check this box if you want the admin of this site to get notified via email "
+"when an affiliate earns a commission."
+msgstr ""
+
+#: html/admin/settings/settings_messaging.php:175
+msgid ""
+"The email address to which the admin will get notified when an affiliate "
+"earns a commission."
 msgstr ""
 
 #: html/admin/settings/settings_payment.php:16
@@ -1675,8 +1699,8 @@ msgstr ""
 "Questa è la sezione affiliati di questo negozio. Se sei già un affiliato, "
 "per favore <a href=\"%s\"> Accedi</a> al tuo pannello di controllo."
 
-#: html/affiliate_not_logged_in.php:7 source/Data/DatabaseInstaller.php:386
-#: source/Pages/Admin/SettingsPage.php:192
+#: html/affiliate_not_logged_in.php:7 source/Data/DatabaseInstaller.php:398
+#: source/Pages/Admin/SettingsPage.php:198
 #, php-format
 msgid ""
 "If you are not an affiliate, but wish to become one, you will need to apply. "
@@ -1685,8 +1709,8 @@ msgid ""
 "please <a href=\"%s\">register</a>."
 msgstr ""
 
-#: html/affiliate_not_registered.php:4 source/Data/DatabaseInstaller.php:388
-#: source/Pages/Admin/SettingsPage.php:200
+#: html/affiliate_not_registered.php:4 source/Data/DatabaseInstaller.php:400
+#: source/Pages/Admin/SettingsPage.php:206
 #, fuzzy, php-format
 #| msgid ""
 #| "This is the affiliates section of this store. You are not currently an "
@@ -2182,8 +2206,19 @@ msgid ""
 "Body of e-mail sent to the affiliate immediately after earning a commission."
 msgstr ""
 
-#: source/Data/DatabaseInstaller.php:383
-#: source/Pages/Admin/SettingsPage.php:189
+#: source/Data/DatabaseInstaller.php:317
+msgid ""
+"An affiliate just earned a commission by sending a referral to the site. \n"
+"\n"
+"Please log into your WordPress admin dashboard to view the details."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:320
+msgid "Body of e-mail sent to the admin when an affiliate earns a commission."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:395
+#: source/Pages/Admin/SettingsPage.php:195
 #, php-format
 msgid ""
 "This is the affiliates section of this store. If you are an existing "
@@ -2358,31 +2393,31 @@ msgid ""
 "Settings again."
 msgstr ""
 
-#: source/Pages/Admin/SettingsPage.php:97
+#: source/Pages/Admin/SettingsPage.php:92
 msgid ""
 "Error! Nonce Security Check Failed! Go back to the Payment tab and Save "
 "Settings again."
 msgstr ""
 
-#: source/Pages/Admin/SettingsPage.php:113
+#: source/Pages/Admin/SettingsPage.php:108
 msgid ""
 "Error! Nonce Security Check Failed! Go back to the Messaging tab and Save "
 "Settings again."
 msgstr ""
 
-#: source/Pages/Admin/SettingsPage.php:133
+#: source/Pages/Admin/SettingsPage.php:139
 msgid ""
 "Error! Nonce Security Check Failed! Go back to the Affiliate Registration "
 "tab and Save Settings again."
 msgstr ""
 
-#: source/Pages/Admin/SettingsPage.php:208
+#: source/Pages/Admin/SettingsPage.php:214
 msgid ""
 "Error! Nonce Security Check Failed! Go back to the Pages/Forms tab and Save "
 "Settings again."
 msgstr ""
 
-#: source/Pages/Admin/SettingsPage.php:227
+#: source/Pages/Admin/SettingsPage.php:233
 msgid ""
 "Error! Nonce Security Check Failed! Go back to the Advanced Settings tab and "
 "Save Settings again."

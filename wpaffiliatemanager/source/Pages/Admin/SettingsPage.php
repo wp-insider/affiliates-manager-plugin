@@ -74,11 +74,6 @@ class WPAM_Pages_Admin_SettingsPage {
                 } else {
                     update_option(WPAM_PluginConfig::$AffdoNotRecordZeroAmtCommission, 0);
                 }
-                if (isset($request['sendCommissionNotification'])) {
-                    update_option(WPAM_PluginConfig::$SendAffCommissionNotification, 1);
-                } else {
-                    update_option(WPAM_PluginConfig::$SendAffCommissionNotification, 0);
-                }
                 if (isset($request['chkImpressions'])) {
                     update_option(WPAM_PluginConfig::$AffEnableImpressions, 1);
                 } else {
@@ -125,6 +120,17 @@ class WPAM_Pages_Admin_SettingsPage {
                     update_option(WPAM_PluginConfig::$SendAdminRegNotification, 0);
                 }
                 update_option(WPAM_PluginConfig::$AdminRegNotificationEmail, $request['adminRegNotificationEmail']);
+                if (isset($request['sendAffCommissionNotification'])) {
+                    update_option(WPAM_PluginConfig::$SendAffCommissionNotification, 1);
+                } else {
+                    update_option(WPAM_PluginConfig::$SendAffCommissionNotification, 0);
+                }
+                if (isset($request['sendAdminAffCommissionNotification'])) {
+                    update_option(WPAM_PluginConfig::$SendAdminAffCommissionNotification, 1);
+                } else {
+                    update_option(WPAM_PluginConfig::$SendAdminAffCommissionNotification, 0);
+                }
+                update_option(WPAM_PluginConfig::$AdminAffCommissionNotificationEmail, $request['adminAffCommissionNotificationEmail']);
             }
 
             if (isset($request['AffRegSettings'])) {    //Registration settings options submitted
@@ -263,7 +269,6 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['affCurrencySymbol'] = $request['affCurrencySymbol'];
             $response->viewData['request']['affCurrencyCode'] = $request['affCurrencyCode'];
             $response->viewData['request']['doNotRecordZeroAmtCommission'] = isset($request['doNotRecordZeroAmtCommission']) ? 1 : 0;
-            $response->viewData['request']['sendCommissionNotification'] = isset($request['sendCommissionNotification']) ? 1 : 0;
             $response->viewData['request']['chkImpressions'] = isset($request['chkImpressions']) ? 1 : 0;
             $response->viewData['request']['enable_debug'] = isset($request['enable_debug']) ? 1 : 0;
             $response->viewData['request']['chkPayoutMethodCheck'] = isset($request['chkPayoutMethodCheck']) ? 1 : 0;
@@ -271,6 +276,9 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['chkPayoutMethodManual'] = isset($request['chkPayoutMethodManual']) ? 1 : 0;
             $response->viewData['request']['sendAdminRegNotification'] = isset($request['sendAdminRegNotification']) ? 1 : 0;
             $response->viewData['request']['adminRegNotificationEmail'] = isset($request['adminRegNotificationEmail']) ? $request['adminRegNotificationEmail'] : '';
+            $response->viewData['request']['sendAffCommissionNotification'] = isset($request['sendAffCommissionNotification']) ? 1 : 0;
+            $response->viewData['request']['sendAdminAffCommissionNotification'] = isset($request['sendAdminAffCommissionNotification']) ? 1 : 0;
+            $response->viewData['request']['adminAffCommissionNotificationEmail'] = isset($request['adminAffCommissionNotificationEmail']) ? $request['adminAffCommissionNotificationEmail'] : '';
             $response->viewData['request']['chkEnablePaypalMassPay'] = isset($request['chkEnablePaypalMassPay']) ? 1 : 0;
             $response->viewData['request']['txtPaypalAPIUser'] = isset($request['txtPaypalAPIUser']) ? $request['txtPaypalAPIUser'] : '';
             $response->viewData['request']['txtPaypalAPIPassword'] = isset($request['txtPaypalAPIPassword']) ? $request['txtPaypalAPIPassword'] : '';
@@ -296,7 +304,6 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['affCurrencySymbol'] = get_option(WPAM_PluginConfig::$AffCurrencySymbol);
             $response->viewData['request']['affCurrencyCode'] = get_option(WPAM_PluginConfig::$AffCurrencyCode);
             $response->viewData['request']['doNotRecordZeroAmtCommission'] = get_option(WPAM_PluginConfig::$AffdoNotRecordZeroAmtCommission);
-            $response->viewData['request']['sendCommissionNotification'] = get_option(WPAM_PluginConfig::$SendAffCommissionNotification);
             $response->viewData['request']['chkImpressions'] = get_option(WPAM_PluginConfig::$AffEnableImpressions);
             $response->viewData['request']['enable_debug'] = get_option(WPAM_PluginConfig::$AffEnableDebug);
             $response->viewData['request']['chkPayoutMethodCheck'] = get_option(WPAM_PluginConfig::$PayoutMethodCheckIsEnabledOption);
@@ -304,6 +311,9 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['chkPayoutMethodManual'] = get_option(WPAM_PluginConfig::$PayoutMethodManualIsEnabledOption);
             $response->viewData['request']['sendAdminRegNotification'] = get_option(WPAM_PluginConfig::$SendAdminRegNotification);
             $response->viewData['request']['adminRegNotificationEmail'] = get_option(WPAM_PluginConfig::$AdminRegNotificationEmail);
+            $response->viewData['request']['sendAffCommissionNotification'] = get_option(WPAM_PluginConfig::$SendAffCommissionNotification);
+            $response->viewData['request']['sendAdminAffCommissionNotification'] = get_option(WPAM_PluginConfig::$SendAdminAffCommissionNotification);
+            $response->viewData['request']['adminAffCommissionNotificationEmail'] = get_option(WPAM_PluginConfig::$AdminAffCommissionNotificationEmail);
             $response->viewData['request']['chkEnablePaypalMassPay'] = get_option(WPAM_PluginConfig::$PaypalMassPayEnabledOption);
             $response->viewData['request']['txtPaypalAPIUser'] = get_option(WPAM_PluginConfig::$PaypalAPIUserOption);
             $response->viewData['request']['txtPaypalAPIPassword'] = get_option(WPAM_PluginConfig::$PaypalAPIPasswordOption);

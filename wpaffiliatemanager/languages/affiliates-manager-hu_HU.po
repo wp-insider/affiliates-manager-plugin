@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2019-10-24 11:26+0600\n"
-"PO-Revision-Date: 2019-10-24 11:30+0600\n"
+"POT-Creation-Date: 2020-01-14 13:32+0600\n"
+"PO-Revision-Date: 2020-01-14 13:37+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hu_HU\n"
@@ -31,11 +31,17 @@ msgstr ""
 msgid "Credit for sale of %s %s (PURCHASE LOG ID = %s)"
 msgstr ""
 
-#: classes/CommissionTracking.php:117
+#: classes/CommissionTracking.php:116
 msgid "You just earned a commission!"
 msgstr ""
 
-#: classes/CommissionTracking.php:169
+#: classes/CommissionTracking.php:145
+#, fuzzy
+#| msgid "Send Commission Notification"
+msgid "Affiliate commission notification"
+msgstr "Jutalékértesítés elküldése"
+
+#: classes/CommissionTracking.php:197
 #, php-format
 msgid "Refund of %s %s (PURCHASE LOG ID = %s)"
 msgstr ""
@@ -1166,27 +1172,15 @@ msgstr "Pénznem kódja"
 msgid "Do Not Record Zero Amount Commission"
 msgstr "Nulla összegű jutalékot ne rögzíts"
 
-#: html/admin/settings/settings_general.php:211
-msgid "Send Commission Notification"
-msgstr "Jutalékértesítés elküldése"
-
-#: html/admin/settings/settings_general.php:218
-msgid ""
-"If checked, your affiliates will get notified via email when they receive a "
-"commission."
-msgstr ""
-"Ha be van jelölve, partnereid emailen keresztül értesítést kapnak amikor "
-"jutalékot kaptak."
-
-#: html/admin/settings/settings_general.php:224
+#: html/admin/settings/settings_general.php:210
 msgid "Enable Impressions"
 msgstr "Megtekintések számának bekapcsolása"
 
-#: html/admin/settings/settings_general.php:233
+#: html/admin/settings/settings_general.php:219
 msgid "Enable Debug"
 msgstr "Kibogozó mód bekapcsolása"
 
-#: html/admin/settings/settings_general.php:236
+#: html/admin/settings/settings_general.php:222
 msgid ""
 "If checked, debug output will be written to log files. This is useful for "
 "troubleshooting post payment failures."
@@ -1194,7 +1188,7 @@ msgstr ""
 "Ha be van jelölve, az eredmény a napló fájlba íródik. Ez hasznos annak a "
 "kibogozásában, amikor a fizetés működőképtelen."
 
-#: html/admin/settings/settings_general.php:237
+#: html/admin/settings/settings_general.php:223
 msgid ""
 "You can check the debug log file by clicking on the link below (The log file "
 "can be viewed using any text editor):"
@@ -1202,11 +1196,11 @@ msgstr ""
 "Megnézheted a kibogozási naplófájlt az alábbi linkre való kattintással (A "
 "log fájlt bármely szövegeditorral meg lehet tekinteni."
 
-#: html/admin/settings/settings_general.php:241
+#: html/admin/settings/settings_general.php:227
 msgid "Reset Debug Log file"
 msgstr "Kibogozó naplófájl visszaállítása."
 
-#: html/admin/settings/settings_general.php:242
+#: html/admin/settings/settings_general.php:228
 msgid "Use it to reset the affiliate manager plugin's log file."
 msgstr "Használja a partnermanager bővítmény naplófájljának visszaállításához."
 
@@ -1258,6 +1252,7 @@ msgid "Send Registration Notification:"
 msgstr "Jutalékértesítés elküldése"
 
 #: html/admin/settings/settings_messaging.php:146
+#: html/admin/settings/settings_messaging.php:170
 #, fuzzy
 #| msgid "Send Commission Notification"
 msgid "Send Notification to Admin"
@@ -1270,6 +1265,7 @@ msgid ""
 msgstr ""
 
 #: html/admin/settings/settings_messaging.php:149
+#: html/admin/settings/settings_messaging.php:173
 #, fuzzy
 #| msgid "Email Address"
 msgid "Admin Email Address"
@@ -1279,6 +1275,48 @@ msgstr "Email cím"
 msgid ""
 "The email address to which the admin will get notified after a new affiliate "
 "signup."
+msgstr ""
+
+#: html/admin/settings/settings_messaging.php:156
+#, fuzzy
+#| msgid "Send Commission Notification"
+msgid "Send Commission Notification:"
+msgstr "Jutalékértesítés elküldése"
+
+#: html/admin/settings/settings_messaging.php:163
+#, fuzzy
+#| msgid "Send Commission Notification"
+msgid "Send Notification to Affiliate"
+msgstr "Jutalékértesítés elküldése"
+
+#: html/admin/settings/settings_messaging.php:164
+#, fuzzy
+#| msgid ""
+#| "If checked, your affiliates will get notified via email when they receive "
+#| "a commission."
+msgid ""
+"Check this box if you want your affiliates to get notified via email when "
+"they earn a commission."
+msgstr ""
+"Ha be van jelölve, partnereid emailen keresztül értesítést kapnak amikor "
+"jutalékot kaptak."
+
+#: html/admin/settings/settings_messaging.php:171
+#, fuzzy
+#| msgid ""
+#| "If checked, your affiliates will get notified via email when they receive "
+#| "a commission."
+msgid ""
+"Check this box if you want the admin of this site to get notified via email "
+"when an affiliate earns a commission."
+msgstr ""
+"Ha be van jelölve, partnereid emailen keresztül értesítést kapnak amikor "
+"jutalékot kaptak."
+
+#: html/admin/settings/settings_messaging.php:175
+msgid ""
+"The email address to which the admin will get notified when an affiliate "
+"earns a commission."
 msgstr ""
 
 #: html/admin/settings/settings_payment.php:16
@@ -1675,8 +1713,8 @@ msgstr ""
 "Ez az üzlet partner-részlege. Ha már partner vagy, kérlek <a href=\"%s\"> "
 "jelentkezz be </a> a vezérlőpult eléréséhez."
 
-#: html/affiliate_not_logged_in.php:7 source/Data/DatabaseInstaller.php:386
-#: source/Pages/Admin/SettingsPage.php:192
+#: html/affiliate_not_logged_in.php:7 source/Data/DatabaseInstaller.php:398
+#: source/Pages/Admin/SettingsPage.php:198
 #, php-format
 msgid ""
 "If you are not an affiliate, but wish to become one, you will need to apply. "
@@ -1685,8 +1723,8 @@ msgid ""
 "please <a href=\"%s\">register</a>."
 msgstr ""
 
-#: html/affiliate_not_registered.php:4 source/Data/DatabaseInstaller.php:388
-#: source/Pages/Admin/SettingsPage.php:200
+#: html/affiliate_not_registered.php:4 source/Data/DatabaseInstaller.php:400
+#: source/Pages/Admin/SettingsPage.php:206
 #, fuzzy, php-format
 #| msgid ""
 #| "This is the affiliates section of this store. You are not currently an "
@@ -2179,8 +2217,19 @@ msgid ""
 "Body of e-mail sent to the affiliate immediately after earning a commission."
 msgstr ""
 
-#: source/Data/DatabaseInstaller.php:383
-#: source/Pages/Admin/SettingsPage.php:189
+#: source/Data/DatabaseInstaller.php:317
+msgid ""
+"An affiliate just earned a commission by sending a referral to the site. \n"
+"\n"
+"Please log into your WordPress admin dashboard to view the details."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:320
+msgid "Body of e-mail sent to the admin when an affiliate earns a commission."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:395
+#: source/Pages/Admin/SettingsPage.php:195
 #, php-format
 msgid ""
 "This is the affiliates section of this store. If you are an existing "
@@ -2354,31 +2403,31 @@ msgid ""
 "Settings again."
 msgstr ""
 
-#: source/Pages/Admin/SettingsPage.php:97
+#: source/Pages/Admin/SettingsPage.php:92
 msgid ""
 "Error! Nonce Security Check Failed! Go back to the Payment tab and Save "
 "Settings again."
 msgstr ""
 
-#: source/Pages/Admin/SettingsPage.php:113
+#: source/Pages/Admin/SettingsPage.php:108
 msgid ""
 "Error! Nonce Security Check Failed! Go back to the Messaging tab and Save "
 "Settings again."
 msgstr ""
 
-#: source/Pages/Admin/SettingsPage.php:133
+#: source/Pages/Admin/SettingsPage.php:139
 msgid ""
 "Error! Nonce Security Check Failed! Go back to the Affiliate Registration "
 "tab and Save Settings again."
 msgstr ""
 
-#: source/Pages/Admin/SettingsPage.php:208
+#: source/Pages/Admin/SettingsPage.php:214
 msgid ""
 "Error! Nonce Security Check Failed! Go back to the Pages/Forms tab and Save "
 "Settings again."
 msgstr ""
 
-#: source/Pages/Admin/SettingsPage.php:227
+#: source/Pages/Admin/SettingsPage.php:233
 msgid ""
 "Error! Nonce Security Check Failed! Go back to the Advanced Settings tab and "
 "Save Settings again."

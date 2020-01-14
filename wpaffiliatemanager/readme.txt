@@ -137,6 +137,8 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = 2.7.1 =
 - Added Lithuanian language translation to the plugin. The translation was submitted by Robertas Peteraitis.
+- Updated the simple cart integration so it works with smart checkout.
+- Added an option to notify the admin whenever an affiliate earns a commission.
 
 = 2.7.0 =
 - Updated the integration code to make it compatible with the latest version of WooCommerce Subscriptions.

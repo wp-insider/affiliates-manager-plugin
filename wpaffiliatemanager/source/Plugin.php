@@ -397,6 +397,11 @@ class WPAM_Plugin {
         WPAM_Logger::log_debug('Simple WP Cart Integration - IPN processed hook fired. Custom field value: ' . $custom_data);
         $custom_values = array();
         parse_str($custom_data, $custom_values);
+        if (!isset($custom_values['wpam_tracking']) || empty($custom_values['wpam_tracking'])) {
+            if (isset($_COOKIE['wpam_id']) && !empty($_COOKIE['wpam_id'])) {    //useful for onsite option such as smart checkout
+                $custom_values['wpam_tracking'] = $_COOKIE['wpam_id'];
+            }
+        }
         if (isset($custom_values['wpam_tracking']) && !empty($custom_values['wpam_tracking'])) {
             $tracking_value = $custom_values['wpam_tracking'];
             WPAM_Logger::log_debug('Simple WP Cart Integration - Tracking data present. Need to track affiliate commission. Tracking value: ' . $tracking_value);

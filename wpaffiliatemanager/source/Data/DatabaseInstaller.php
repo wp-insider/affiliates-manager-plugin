@@ -308,6 +308,18 @@ class WPAM_Data_DatabaseInstaller {
             $msg->use = __('Body of e-mail sent to the affiliate immediately after earning a commission.', 'affiliates-manager');
             $msgRepo->insert($msg);
         }
+        
+        $db = new WPAM_Data_DataAccess();
+        $msgRepo = $db->getMessageRepository();
+        $message = $msgRepo->loadBy(array('name' => 'admin_affiliate_commission_notification_email'));
+        if($message === NULL){
+            $msg = new WPAM_Data_Models_MessageModel();
+            $msg->content = __("An affiliate just earned a commission by sending a referral to the site. \n\nPlease log into your WordPress admin dashboard to view the details.", 'affiliates-manager');
+            $msg->name = 'admin_affiliate_commission_notification_email';
+            $msg->type = 'email';
+            $msg->use = __('Body of e-mail sent to the admin when an affiliate earns a commission.', 'affiliates-manager');
+            $msgRepo->insert($msg);
+        }
         //Add other options below
         
         

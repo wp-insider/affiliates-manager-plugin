@@ -107,12 +107,11 @@ class WPAM_Commission_Tracking {
                     $db->getEventRepository()->quickInsert( time(), $binConverter->stringToBin( $strRefKey ), 'purchase' );
                 }
                 */
-                //checking to see if "Send Commission Notification" option is enabled
+                //checking to see if Send Commission Notification to affiliate option is enabled
                 if(get_option(WPAM_PluginConfig::$SendAffCommissionNotification) == 1){
                     //override from email & name
                     add_filter('wp_mail_from', 'wpam_filter_from_email');
                     add_filter('wp_mail_from_name', 'wpam_filter_from_name');
-                    //send a commission notification email
                     $address = $affiliate->email;
                     $subject = __("You just earned a commission!", 'affiliates-manager');               
                     $message = WPAM_MessageHelper::GetMessage('affiliate_commission_notification_email');
@@ -123,7 +122,36 @@ class WPAM_Commission_Tracking {
                     $tags = array("{aff_id}","{aff_first_name}","{aff_last_name}","{aff_email}");
                     $vals = array($aff_id, $aff_first_name, $aff_last_name, $aff_email);
                     $body = str_replace($tags,$vals,$message);
-                    WPAM_Logger::log_debug("Sending a commission notification email to ".$address);
+                    WPAM_Logger::log_debug("Sending a commission notification to affiliate email ".$address);
+                    $mail_sent = wp_mail( $address, $subject, $body );
+                    if($mail_sent==true){
+                        WPAM_Logger::log_debug("Email was sent successfully by WordPress");
+                    }
+                    else{
+                        WPAM_Logger::log_debug("Email could not be sent by WordPress");
+                    }
+                    remove_filter('wp_mail_from', 'wpam_filter_from_email');
+                    remove_filter('wp_mail_from_name', 'wpam_filter_from_name');
+                }
+                //checking to see if Send Commission Notification to admin option is enabled
+                if(get_option(WPAM_PluginConfig::$SendAdminAffCommissionNotification) == 1){
+                    //override from email & name
+                    add_filter('wp_mail_from', 'wpam_filter_from_email');
+                    add_filter('wp_mail_from_name', 'wpam_filter_from_name');
+                    $address = get_option(WPAM_PluginConfig::$AdminAffCommissionNotificationEmail);
+                    if(!isset($address) || empty($address)){
+                        $address = get_option('admin_email');
+                    }
+                    $subject = __("Affiliate commission notification", 'affiliates-manager');               
+                    $message = WPAM_MessageHelper::GetMessage('admin_affiliate_commission_notification_email');
+                    $aff_id = $affiliate->affiliateId;
+                    $aff_first_name = $affiliate->firstName;
+                    $aff_last_name = $affiliate->lastName; 
+                    $aff_email = $affiliate->email;
+                    $tags = array("{aff_id}","{aff_first_name}","{aff_last_name}","{aff_email}");
+                    $vals = array($aff_id, $aff_first_name, $aff_last_name, $aff_email);
+                    $body = str_replace($tags,$vals,$message);
+                    WPAM_Logger::log_debug("Sending a commission notification to admin email ".$address);
                     $mail_sent = wp_mail( $address, $subject, $body );
                     if($mail_sent==true){
                         WPAM_Logger::log_debug("Email was sent successfully by WordPress");

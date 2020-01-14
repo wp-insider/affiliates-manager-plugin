@@ -203,21 +203,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
 				echo 'checked="checked"';
 			?>/>
 		</td>
-	</tr>
-        
-        <tr>
-		<th width="200">
-			<label for="sendCommissionNotification">
-				<?php _e('Send Commission Notification', 'affiliates-manager');?>
-			</label>
-		</th>
-		<td>
-			<input type="checkbox" id="sendCommissionNotification" name="sendCommissionNotification" <?php
-			if ($this->viewData['request']['sendCommissionNotification'])
-				echo 'checked="checked"';
-			?>/><p class="description"><?php _e('If checked, your affiliates will get notified via email when they receive a commission.', 'affiliates-manager');?></p>
-		</td>
-	</tr>
+	</tr>       
 
         <tr>
                 <th width="200">

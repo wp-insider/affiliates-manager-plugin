@@ -21,7 +21,6 @@ class WPAM_PluginConfig
         public static $AffCurrencySymbol = 'wpam_affcurrency_symbol';
         public static $AffCurrencyCode = 'wpam_affcurrency_code';
         public static $AffdoNotRecordZeroAmtCommission = 'wpam_donot_record_zero_amt_commission';
-        public static $SendAffCommissionNotification = 'wpam_send_aff_commission_notification';
         public static $AffEnableImpressions = 'wpam_enable_impressions';
         public static $AffEnableDebug = 'wpam_enable_debug';
 	public static $PayoutMethodCheckIsEnabledOption = 'wpam_payout_check_enabled';
@@ -39,6 +38,9 @@ class WPAM_PluginConfig
         public static $DisableOwnReferrals = 'wpam_disable_own_referrals';
         public static $SendAdminRegNotification = 'wpam_send_admin_reg_notification';
         public static $AdminRegNotificationEmail = 'wpam_admin_reg_notification_email';
+        public static $SendAffCommissionNotification = 'wpam_send_aff_commission_notification';
+        public static $SendAdminAffCommissionNotification = 'wpam_send_admin_aff_commission_notification';
+        public static $AdminAffCommissionNotificationEmail = 'wpam_admin_aff_commission_notification_email';
 	// paypal
 	public static $PaypalMassPayEnabledOption = 'wpam_paypal_mass_pay_enabled';
 	public static $PaypalAPIUserOption = 'wpam_paypal_api_user';

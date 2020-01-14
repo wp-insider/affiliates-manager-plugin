@@ -43,7 +43,7 @@ You may not issue any press release with respect to this Agreement or your parti
 You may not purchase products through your affiliate links for your own use. Such purchases may result (in our sole discretion) in the withholding of referral fees and/or the termination of this Agreement.
 
 <h2>Payment schedule</h2>
-As long as your current affiliate earning are over <strong>$[payout minimum]</strong>, you'll be paid each month. If you haven't earned <strong>$[payout minimum]</strong> since your last payment, we'll pay you the following monht after you've crossed the threshold.
+As long as your current affiliate earning are over <strong>$[payout minimum]</strong>, you'll be paid each month. If you haven't earned <strong>$[payout minimum]</strong> since your last payment, we'll pay you the following month after you've crossed the threshold.
 
 <h2>Customer definition</h2>
 Customers who buy products through this Program will be deemed to be our customers. Accordingly, all of our rules, policies, and operating procedures concerning customer orders, customer service, and product sales will apply to those customers. We may change our policies and operating procedures at any time. For example, we will determine the prices to be charged for products sold under this Program in accordance with our own pricing policies. Product prices and availability may vary from time to time. Because price changes may affect Products that you have listed on your site, you should not display product prices on your site. We will use commercially reasonable efforts to present accurate information, but we cannot guarantee the availability or price of any particular product.

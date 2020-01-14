@@ -151,6 +151,29 @@ jQuery(function($) {
                 <br><i><?php _e('The email address to which the admin will get notified after a new affiliate signup.', 'affiliates-manager' ) ?></i><br>    
             </td>
         </tr>
-
+        <tr valign="top">
+            <td width="25%" align="left">
+            <strong><?php _e('Send Commission Notification:', 'affiliates-manager' ) ?></strong>
+            </td>
+            <td align="left">
+                <input type="checkbox" id="sendAffCommissionNotification" name="sendAffCommissionNotification" <?php
+			if ($this->viewData['request']['sendAffCommissionNotification'])
+				echo 'checked="checked"';
+			?>/>
+                <?php _e('Send Notification to Affiliate', 'affiliates-manager' ) ?>
+                <br><i><?php _e('Check this box if you want your affiliates to get notified via email when they earn a commission.', 'affiliates-manager' ) ?></i>
+                <br><br>
+                <input type="checkbox" id="sendAdminAffCommissionNotification" name="sendAdminAffCommissionNotification" <?php
+			if ($this->viewData['request']['sendAdminAffCommissionNotification'])
+				echo 'checked="checked"';
+			?>/>
+                <?php _e('Send Notification to Admin', 'affiliates-manager' ) ?>
+                <br><i><?php _e('Check this box if you want the admin of this site to get notified via email when an affiliate earns a commission.', 'affiliates-manager' ) ?></i>
+                <br><br>
+                <?php _e('Admin Email Address', 'affiliates-manager' ) ?>
+                <input type="text" size="30" name="adminAffCommissionNotificationEmail" id="adminAffCommissionNotificationEmail" value="<?php echo $this->viewData['request']['adminAffCommissionNotificationEmail']?>" />
+                <br><i><?php _e('The email address to which the admin will get notified when an affiliate earns a commission.', 'affiliates-manager' ) ?></i><br>    
+            </td>
+        </tr>
     </tbody></table>
 </div></div>

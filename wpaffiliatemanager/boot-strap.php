@@ -18,7 +18,7 @@ global $wp_version;
 $uploadDirInfo = wp_upload_dir();
 
 define( 'WPAM_VERSION', '2.7.1' );
-define( 'WPAM_DB_VERSION', '1.6.2' );
+define( 'WPAM_DB_VERSION', '1.6.3' );
 define( 'WPAM_OPTIONS_VERSION', '1.0.1' );
 define( 'WPAM_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 define( 'WPAM_PLUGIN_FILE', __FILE__ );
