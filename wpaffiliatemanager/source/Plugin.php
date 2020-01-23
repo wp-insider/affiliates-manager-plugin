@@ -117,6 +117,7 @@ class WPAM_Plugin {
 
         add_filter('pre_user_email', array($this, 'filterUserEmail'));
 
+        add_action('profile_update', array($this, 'update_affiliate_email'), 10, 2);
         //set the locale for money format & paypal
         /*
           $this->locale = WPAM_LOCALE_OVERRIDE ? WPAM_LOCALE_OVERRIDE : get_locale();
@@ -712,7 +713,19 @@ class WPAM_Plugin {
         }
         return $email;
     }
-
+    
+    /* update the affiliate email when it's updated in WordPress */
+    public function update_affiliate_email($user_id, $old_user_data) {
+        global $wpdb;
+        $table = WPAM_AFFILIATES_TBL;
+        $user_data = get_user_by('id', $user_id);
+        //WPAM_Logger::log_debug('profile_update hook fired. current email: '.$user_data->user_email.', old email: '.$old_user_data->user_email);
+        if(isset($user_data->user_email) && !empty($user_data->user_email) && $user_data->user_email !== $old_user_data->user_email) {
+            $wpdb->update($table, array('email' => $user_data->user_email), array('userId' => $user_id));
+            //WPAM_Logger::log_debug('email updated');
+        }
+    }
+    
     public function onSavePage($page_id, $page) {
         if ($page->post_type == 'page') {
             if (strpos($page->post_content, WPAM_PluginConfig::$ShortCodeHome) !== false) {
