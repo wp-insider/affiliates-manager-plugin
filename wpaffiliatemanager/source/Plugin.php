@@ -490,10 +490,9 @@ class WPAM_Plugin {
         $total = $order->get_total();
         $shipping = $order->get_total_shipping();
         $tax = $order->get_total_tax();
-        $discount = $order->get_total_discount();
-        //$fees = wpam_get_total_woocommerce_order_fees($order);
-        WPAM_Logger::log_debug('WooCommerce Integration - Total amount: '.$total.', Total shipping: '.$shipping.', Total tax: '.$tax.', Total Discount: '.$discount);
-        $purchaseAmount = $order->get_subtotal();
+        $fees = wpam_get_total_woocommerce_order_fees($order);
+        WPAM_Logger::log_debug('WooCommerce Integration - Total amount: ' . $total . ', Total shipping: ' . $shipping . ', Total tax: ' . $tax . ', Fees: '. $fees);
+        $purchaseAmount = $total - $shipping - $tax - $fees;
         $buyer_email = $order->get_billing_email();
 
         $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
