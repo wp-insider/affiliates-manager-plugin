@@ -164,6 +164,9 @@ class WPAM_Commission_Tracking {
                 }
             }
         }
+        else{
+            WPAM_Logger::log_debug('Affiliate account is not active. This commission cannot be rewarded', 4);
+        }
     }
     
     public static function refund_commission($txn_id){
