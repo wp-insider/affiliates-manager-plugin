@@ -105,9 +105,7 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
                 $aff_email = $selectdb->email;
                 $user = get_user_by('email', $aff_email);
                 if ($user) {
-                    if (!in_array('administrator', $user->roles)) {
-                        wp_delete_user($user->ID);
-                    }
+                    $this->maybe_delete_user($user);
                 }
                 $updatedb = "DELETE FROM $record_table_name WHERE affiliateId='$row'";
                 $results = $wpdb->query($updatedb);
@@ -130,9 +128,7 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
                 $aff_email = $selectdb->email;
                 $user = get_user_by('email', $aff_email);
                 if ($user) {
-                    if (!in_array('administrator', $user->roles)) {
-                        wp_delete_user($user->ID);
-                    }
+                    $this->maybe_delete_user($user);
                 }
                 $updatedb = "DELETE FROM $record_table_name WHERE affiliateId='$aid'";
                 $result = $wpdb->query($updatedb);
@@ -223,6 +219,21 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
          */
         // Now we add our *sorted* data to the items property, where it can be used by the rest of the class.
         $this->items = $data;
+    }
+    
+    public function maybe_delete_user($user){
+      if ( in_array('affiliate', $user->roles) ){
+         if ( count($user->roles) === 1 ) {
+             wp_delete_user($user->ID);
+             return;
+         }
+         else {
+            $user->remove_role('affiliate');
+         }
+      }
+      if ( ! in_array('administrator', $user->roles) ) {
+         $user->remove_cap(WPAM_PluginConfig::$AffiliateCap);
+      }
     }
 
 }
