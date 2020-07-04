@@ -99,19 +99,19 @@ function wpam_display_manual_commission_tab()
                 wp_die('Error! Nonce Security Check Failed! Go back to the manual commission menu and add a commission again.');
         }
         $error_msg = '';
-        $aff_id = trim($_POST["wpam_aff_id"]);
+        $aff_id = sanitize_text_field($_POST["wpam_aff_id"]);
         if(empty($aff_id)){
             $error_msg .= '<p>'.__('You need to enter an affiliate ID', 'affiliates-manager').'</p>';;
         }
-        $commission_amt = trim($_POST["wpam_commission_amt"]);
+        $commission_amt = sanitize_text_field($_POST["wpam_commission_amt"]);
         if(!is_numeric($commission_amt)){
             $error_msg .= '<p>'.__('You need to enter a numeric commission amount', 'affiliates-manager').'</p>';;
         }
-        $purchase_amt = trim($_POST["wpam_purchase_amt"]);
+        $purchase_amt = sanitize_text_field($_POST["wpam_purchase_amt"]);
         if(!is_numeric($purchase_amt)){
             $error_msg .= '<p>'.__('You need to enter a numeric purchase amount', 'affiliates-manager').'</p>';;
         }
-        $txn_id = trim($_POST["wpam_txn_id"]);
+        $txn_id = sanitize_text_field($_POST["wpam_txn_id"]);
         if(empty($txn_id)){
             $txn_id = uniqid();
         }
@@ -140,19 +140,17 @@ function wpam_display_manual_commission_tab()
         }
         
         if(empty($error_msg)){ //no error in form submission
-            $currency = WPAM_MoneyHelper::getCurrencyCode();
-            $description = "Credit for sale of $purchase_amt $currency (PURCHASE LOG ID = $txn_id)";
-            $data = array();
-            $data['dateModified'] = $mysql_date_created;
-            $data['dateCreated'] = $mysql_date_created;
-            $data['referenceId'] = $txn_id;
-            $data['affiliateId'] = $aff_id;
-            $data['type'] = 'credit';        
-            $data['description'] = $description;
-            $data['amount'] = $commission_amt;
-            $data['email'] = $buyer_email;
-            $wpdb->insert( $table, $data);
-
+            $args = array();
+            $args['date_modified'] = $mysql_date_created;
+            $args['date_created'] = $mysql_date_created;
+            $args['txn_id'] = $txn_id;
+            $args['aff_id'] = $aff_id;
+            $args['amount'] = $purchase_amt;
+            $args['c_amount'] = $commission_amt;
+            if(isset($buyer_email) && !empty($buyer_email)){
+                $args['email'] = $buyer_email;
+            }
+            WPAM_Commission_Tracking::award_commission($args);
             echo '<div id="message" class="updated fade"><p><strong>';
             echo __('Commission added!', 'affiliates-manager');
             echo '</strong></p></div>';

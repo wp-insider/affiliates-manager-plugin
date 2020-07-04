@@ -79,6 +79,9 @@ class WPAM_Commission_Tracking {
                 }
             }
             $creditAmount = apply_filters( 'wpam_credit_amount', $creditAmount, $amount, $txn_id );
+            if(isset($args['c_amount']) && is_numeric($args['c_amount'])){
+                $creditAmount = round($args['c_amount'], 2);;  //override the commission amount if provided e.g. manual commission
+            }
             $currency = WPAM_MoneyHelper::getCurrencyCode();
             $description = sprintf(__('Credit for sale of %s %s (PURCHASE LOG ID = %s)', 'affiliates-manager'), $amount, $currency, $txn_id);
             $query = "
@@ -93,8 +96,8 @@ class WPAM_Commission_Tracking {
             else {
                 $table = WPAM_TRANSACTIONS_TBL;
                 $data = array();
-                $data['dateModified'] = date("Y-m-d H:i:s", time());
-                $data['dateCreated'] = date("Y-m-d H:i:s", time());
+                $data['dateModified'] = (isset($args['date_modified']) && !empty($args['date_modified'])) ? $args['date_modified'] : date("Y-m-d H:i:s", time());
+                $data['dateCreated'] = (isset($args['date_created']) && !empty($args['date_created'])) ? $args['date_created'] : date("Y-m-d H:i:s", time());
                 $data['referenceId'] = $txn_id;
                 $data['affiliateId'] = $affiliate->affiliateId;
                 $data['type'] = 'credit';

@@ -27,7 +27,7 @@ class WPAM_Util_BinConverter
 			{
 				if ($p < $q)
 				{
-					$w |= ord($bin{$p++}) << $have;
+					$w |= ord($bin[$p++]) << $have;
 					$have += 8;
 				}
 				else
@@ -38,7 +38,7 @@ class WPAM_Util_BinConverter
 				}
 			}
 
-			$out .= $bin_chars{($w & $mask)};
+			$out .= $bin_chars[($w & $mask)];
 
 			$w >>= 6;
 			$have -= 6;
@@ -60,7 +60,7 @@ class WPAM_Util_BinConverter
 
 		while (1)
 		{
-			$char_in = strcspn ($alpha, $str{$at++});
+			$char_in = strcspn ($alpha, $str[$at++]);
 			if ($rshift > 0)
 			{
 				$char_out |= chr ($char_in << 8 - $rshift);
