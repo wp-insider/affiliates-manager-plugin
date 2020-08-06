@@ -42,17 +42,40 @@ class WPAM_Click_Tracking {
         }
         //this will be the new affiliate link. A click will be tracked when wpam_id is present in the URL
         if (isset($_REQUEST[WPAM_PluginConfig::$wpam_id]) && !empty($_REQUEST[WPAM_PluginConfig::$wpam_id])) {
+            global $wpdb;
             $aff_id = trim(strip_tags($_REQUEST[WPAM_PluginConfig::$wpam_id]));
             $cookie_life_time = wpam_get_cookie_life_time();
             setcookie('wpam_id', $aff_id, $cookie_life_time, "/", COOKIE_DOMAIN);
+            //do not record multiple clicks within 5 seconds
+            $current_datetime = date("Y-m-d H:i:s", time());
+            $cd_datetime = date("Y-m-d H:i:s", strtotime($current_datetime) - 5);
+            $user_ip = WPAM_Click_Tracking::get_user_ip();
+            $table = WPAM_TRACKING_TOKENS_TBL;
+            $result = $wpdb->get_var( $wpdb->prepare( 
+            "
+                    SELECT *
+                    FROM $table 
+                    WHERE dateCreated
+                    BETWEEN %s
+                    AND %s
+                    AND ipAddress = %s
+
+            ",
+            $cd_datetime,        
+            $current_datetime,
+            $user_ip        
+            ) );
+            if($result != null){
+                return;
+            }
             $args = array();
-            $args['dateCreated'] = date("Y-m-d H:i:s", time());
+            $args['dateCreated'] = $current_datetime;
             $args['sourceAffiliateId'] = $aff_id;
             $args['trackingKey'] = uniqid(); //save a unique ID to avoid error
             $args['sourceCreativeId'] = '';  // remove this column from the click tracking menu in the settings
             $args['referer'] = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
             $args['affiliateSubCode'] = '';
-            $args['ipAddress'] = WPAM_Click_Tracking::get_user_ip();
+            $args['ipAddress'] = $user_ip;
             /*
             WPAM_Logger::log_debug('inserting click');
             WPAM_Logger::log_debug(print_r($args, true));
