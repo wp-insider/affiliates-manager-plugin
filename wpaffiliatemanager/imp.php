@@ -3,24 +3,16 @@
 /* Connection: close and Content-Length headers are sent, so that browsers disconnect
  * early on to minimize connection time */
 
-//The folloiwng outputs a 1x1 pixel gif. It is not really need for the functionality but nice to have.
+//The following outputs a 1x1 pixel gif. It is not really need for the functionality but nice to have.
 ignore_user_abort(true);
-ob_end_clean();
+// ob_end_clean();
+$gif = base64_decode('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
+$length = strlen( $gif );
 
 header('Content-type: image/gif');
 header('Connection: close');
-
-// Output a 1x1 pixel transparent gif
-ob_start();
-echo base64_decode('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
-$length = ob_get_length();
-
 header("Content-Length: $length");
-
-// Flush output - both calls required
-ob_end_flush();
-flush();
-//End of gif outupt.
+//End of gif output.
 
 require_once ("../../../wp-load.php");
 require_once ("config.php");
@@ -36,5 +28,7 @@ if (isset($_GET[WPAM_PluginConfig::$RefKey])
         wp_die("WPAM FAILED: " . $e->getMessage());
     }
 }
+
+echo $gif;
 
 exit;
