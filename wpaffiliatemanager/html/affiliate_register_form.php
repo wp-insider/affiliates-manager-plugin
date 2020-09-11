@@ -28,19 +28,19 @@ if(is_user_logged_in()){  //this block checks whether the user is logged in and 
 					
 						<?php switch ($field->fieldType) {
                                                         case 'email':
-                                                            $email = $request['_'.$field->databaseField];
+                                                            $email = (isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '';
                                                             if(is_user_logged_in()){
                                                                 $current_user = wp_get_current_user();
                                                                 $email = $current_user->user_email;
                                                                 ?>
-                                                                <input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo $email?>" readonly />
+                                                                <input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo esc_attr($email)?>" readonly />
                                                                 <p class="wpam_registration_input_help_text"><?php _e('This is the email address associated with your currently logged in WordPress user account.', 'affiliates-manager')?></p>
                                                                 <p class="wpam_registration_input_help_text"><?php _e('If you want to use a different email address, log out of your WordPress account then try a new registration.', 'affiliates-manager')?></p>
                                                                 <?php
                                                             }
                                                             else{
                                                             ?>
-                                                            <input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo $email?>" <?php echo $field->required ? 'required': '' ?> />
+                                                            <input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo esc_attr($email)?>" <?php echo $field->required ? 'required': '' ?> />
                                                             <?php
                                                             }
                                                              break;
@@ -48,24 +48,30 @@ if(is_user_logged_in()){  //this block checks whether the user is logged in and 
 							case 'number':
 							case 'zipCode':
 								?>
-							<input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo $request['_'.$field->databaseField]?>" <?php echo $field->required ? 'required': '' ?> />
+							<input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo esc_attr((isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '');?>" <?php echo $field->required ? 'required': '' ?> />
 							<?php break;
 							case 'phoneNumber':?>
-							<input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo $request['_'.$field->databaseField]?>" <?php echo $field->required ? 'required': '' ?> />
+							<input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo esc_attr((isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '');?>" <?php echo $field->required ? 'required': '' ?> />
 							<?php break;
 							case 'ssn':?>
-							<input type="password" size="3" maxlength="3" id="_<?php echo $field->databaseField?>[0]" name="_<?php echo $field->databaseField?>[0]" value="<?php echo $request['_'.$field->databaseField][0]?>" /> -
-							<input type="password" size="2" maxlength="2" id="_<?php echo $field->databaseField?>[1]" name="_<?php echo $field->databaseField?>[1]" value="<?php echo $request['_'.$field->databaseField][1]?>" /> -
-							<input type="password" size="4" maxlength="4" id="_<?php echo $field->databaseField?>[2]" name="_<?php echo $field->databaseField?>[2]" value="<?php echo $request['_'.$field->databaseField][2]?>" />
+							<input type="password" size="3" maxlength="3" id="_<?php echo $field->databaseField?>[0]" name="_<?php echo $field->databaseField?>[0]" value="<?php echo esc_attr((isset($request['_'.$field->databaseField][0]) && !empty($request['_'.$field->databaseField][0])) ? $request['_'.$field->databaseField][0] : '');?>" /> -
+							<input type="password" size="2" maxlength="2" id="_<?php echo $field->databaseField?>[1]" name="_<?php echo $field->databaseField?>[1]" value="<?php echo esc_attr((isset($request['_'.$field->databaseField][1]) && !empty($request['_'.$field->databaseField][1])) ? $request['_'.$field->databaseField][1] : '');?>" /> -
+							<input type="password" size="4" maxlength="4" id="_<?php echo $field->databaseField?>[2]" name="_<?php echo $field->databaseField?>[2]" value="<?php echo esc_attr((isset($request['_'.$field->databaseField][2]) && !empty($request['_'.$field->databaseField][2])) ? $request['_'.$field->databaseField][2] : '');?>" />
 							<?php break;
 							case 'stateCode':?>
 							<select id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" <?php echo $field->required ? 'required': '' ?>>
-								<?php wpam_html_state_code_options($request['_'.$field->databaseField]) ?>
+								<?php
+                                                                $state_code = (isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '';
+                                                                wpam_html_state_code_options($state_code); 
+                                                                ?>
 							</select>
 							<?php break;
 							case 'countryCode':?>
 							<select id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" <?php echo $field->required ? 'required': '' ?>>
-								<?php wpam_html_country_code_options($request['_'.$field->databaseField]) ?>
+								<?php
+                                                                $country_code = (isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '';
+                                                                wpam_html_country_code_options($country_code); 
+                                                                ?>
 							</select>
 							<?php break; default: break;
 						}?>

@@ -49,12 +49,12 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                             case 'number':
                             case 'zipCode':
                                 ?>
-                                <input type="text" size="20" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo $value; ?>" />
+                                <input type="text" size="20" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo esc_attr($value); ?>" />
                                 <?php
                                 break;
                             case 'email':
                                 ?>
-                                <input type="text" size="20" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo $value; ?>" <?php
+                                <input type="text" size="20" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo esc_attr($value); ?>" <?php
                                 if (isset($value) && !empty($value)) {
                                     echo ' readonly';
                                 }
@@ -63,7 +63,7 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                                        break;
                                    case 'phoneNumber':
                                        ?>							
-                                <input type="text" size="20" maxlength="14" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo $value; ?>" />
+                                <input type="text" size="20" maxlength="14" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo esc_attr($value); ?>" />
                                     <?php
                                     break;
                                 case 'stateCode':
@@ -88,9 +88,9 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                                     $ssn[2] = substr($value, 5);
                                 }
                                 ?>
-                                <input type="password" size="3" maxlength="3" id="_<?php echo $field->databaseField?>[0]" name="_<?php echo $field->databaseField?>[0]" value="<?php echo $ssn[0]?>" /> -
-				<input type="password" size="2" maxlength="2" id="_<?php echo $field->databaseField?>[1]" name="_<?php echo $field->databaseField?>[1]" value="<?php echo $ssn[1]?>" /> -
-				<input type="password" size="4" maxlength="4" id="_<?php echo $field->databaseField?>[2]" name="_<?php echo $field->databaseField?>[2]" value="<?php echo $ssn[2]?>" />
+                                <input type="password" size="3" maxlength="3" id="_<?php echo $field->databaseField?>[0]" name="_<?php echo $field->databaseField?>[0]" value="<?php echo esc_attr($ssn[0]);?>" /> -
+				<input type="password" size="2" maxlength="2" id="_<?php echo $field->databaseField?>[1]" name="_<?php echo $field->databaseField?>[1]" value="<?php echo esc_attr($ssn[1]);?>" /> -
+				<input type="password" size="4" maxlength="4" id="_<?php echo $field->databaseField?>[2]" name="_<?php echo $field->databaseField?>[2]" value="<?php echo esc_attr($ssn[2]);?>" />
                                 <?php
                                 break;
                     default: break;
@@ -165,7 +165,7 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                     <tr id="rowPaypalEmail" <?php echo $pp_email_field_style; ?>>
                         <td><label for="txtPaypalEmail"><?php _e('PayPal E-Mail Address', 'affiliates-manager') ?></label> *</td>
                         <td>
-                            <input id="txtPaypalEmail" type="text" name="txtPaypalEmail" size="30" value="<?php echo $this->viewData['paypalEmail'] ?>"/>
+                            <input id="txtPaypalEmail" type="text" name="txtPaypalEmail" size="30" value="<?php echo esc_attr($this->viewData['paypalEmail']); ?>"/>
                         </td>
                     </tr>
     <?php endif; ?>
@@ -198,7 +198,7 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                     </tr>
                     <tr>
                         <td><label id='lblBountyAmount' for='txtBountyAmount'><?php echo $label; ?></label></td>
-                        <td><input type='text' id='txtBountyAmount' name='txtBountyAmount' size='5' value='<?php echo $bountyAmount; ?>'/></td>
+                        <td><input type='text' id='txtBountyAmount' name='txtBountyAmount' size='5' value='<?php echo esc_attr($bountyAmount); ?>'/></td>
                     </tr>
         <?php endif; //is_admin   ?>
     <?php endif; //not pending, blocked or declined  ?>
@@ -210,6 +210,6 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
 <?php } ?>
     <div class="wpam-save-profile">			
         <input type="hidden" name="action" value="saveInfo"/>
-        <input type="submit" id="saveInfoButton" class="pure-button pure-button-active" name="wpam_add_affiliate" value="<?php echo isset($this->viewData['saveLabel']) ? $this->viewData['saveLabel'] : __('Save Changes', 'affiliates-manager'); ?>" />
+        <input type="submit" id="saveInfoButton" class="pure-button pure-button-active" name="wpam_add_affiliate" value="<?php echo isset($this->viewData['saveLabel']) ? esc_attr($this->viewData['saveLabel']) : __('Save Changes', 'affiliates-manager'); ?>" />
     </div>
 </form>
