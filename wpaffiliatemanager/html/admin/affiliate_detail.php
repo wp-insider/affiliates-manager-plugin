@@ -110,7 +110,8 @@ $user = $this->viewData['user'];
 		function showConfirmDialog(message, confirmText, confirmCallback)
 		{
 			var buttons = new Object;
-			buttons['Cancel'] = function() { jQuery(this).dialog('close'); };
+			var cancelText = "<?php _e( 'Cancel', 'affiliates-manager' ) ?>";
+			buttons[cancelText] = function() { jQuery(this).dialog('close'); };
 			buttons[confirmText] = function() {
 				jQuery(this).dialog('close');
 				confirmCallback();
