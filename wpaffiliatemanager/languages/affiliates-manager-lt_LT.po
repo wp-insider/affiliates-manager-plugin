@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2020-01-14 13:32+0600\n"
-"PO-Revision-Date: 2020-01-14 13:39+0600\n"
+"POT-Creation-Date: 2020-12-01 13:52+0600\n"
+"PO-Revision-Date: 2020-12-01 14:07+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: lt_LT\n"
@@ -26,22 +26,22 @@ msgstr "WordPress Affiliate Manager reikalauja PHP 5.1 arba naujesnės."
 msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
 msgstr "WordPress Affiliate Manager reikalauja WordPress 3.5 arba naujesnės."
 
-#: classes/CommissionTracking.php:83
+#: classes/CommissionTracking.php:86
 #, php-format
 msgid "Credit for sale of %s %s (PURCHASE LOG ID = %s)"
 msgstr "Kreditai pardavimui %s %s (PIRKIMO ŽURNALO ID = %s)"
 
-#: classes/CommissionTracking.php:116
+#: classes/CommissionTracking.php:119
 msgid "You just earned a commission!"
 msgstr "Jūs ką tik uždirbote komisinių!"
 
-#: classes/CommissionTracking.php:145
+#: classes/CommissionTracking.php:148
 #, fuzzy
 #| msgid "Send Commission Notification"
 msgid "Affiliate commission notification"
 msgstr "Siųsti pranešimą apie komisinius"
 
-#: classes/CommissionTracking.php:197
+#: classes/CommissionTracking.php:203
 #, php-format
 msgid "Refund of %s %s (PURCHASE LOG ID = %s)"
 msgstr "Grąžinta % s% s (PIRKIMO ŽURNALO ID =% s)"
@@ -53,7 +53,7 @@ msgstr "Peržiūrėti"
 
 #: classes/ListAffiliatesTable.php:61 classes/ListClicksTable.php:55
 #: classes/ListCommissionTable.php:62
-#: source/Admin-menu/wpam-commission-menu.php:175
+#: source/Admin-menu/wpam-commission-menu.php:173
 #: source/Admin-menu/wpam-manage-payouts-menu.php:70
 msgid "Affiliate ID"
 msgstr "Partnerio ID"
@@ -90,7 +90,7 @@ msgstr "Vardas"
 msgid "Last Name"
 msgstr "Pavardė"
 
-#: classes/ListAffiliatesTable.php:67 source/Plugin.php:315
+#: classes/ListAffiliatesTable.php:67 source/Plugin.php:316
 msgid "Email"
 msgstr "El. paštas"
 
@@ -136,7 +136,7 @@ msgid "Row ID"
 msgstr "Eilutės ID"
 
 #: classes/ListClicksTable.php:54 classes/ListCommissionTable.php:61
-#: source/Admin-menu/wpam-commission-menu.php:205
+#: source/Admin-menu/wpam-commission-menu.php:203
 msgid "Date"
 msgstr "Data"
 
@@ -165,12 +165,12 @@ msgid "Amount"
 msgstr "Suma"
 
 #: classes/ListCommissionTable.php:64
-#: source/Admin-menu/wpam-commission-menu.php:193
+#: source/Admin-menu/wpam-commission-menu.php:191
 msgid "Transaction ID"
 msgstr "Operacijos ID"
 
 #: classes/ListCommissionTable.php:65
-#: source/Admin-menu/wpam-commission-menu.php:199
+#: source/Admin-menu/wpam-commission-menu.php:197
 msgid "Buyer Email"
 msgstr "Pirkėjo el. paštas"
 
@@ -182,8 +182,8 @@ msgstr "Nieko nerasta."
 msgid "Bulk Actions"
 msgstr "Masiniai Veiksmai"
 
-#: classes/ListTable.php:153 html/admin/affiliate_detail.php:283
-#: html/admin/affiliate_detail.php:314
+#: classes/ListTable.php:153 html/admin/affiliate_detail.php:284
+#: html/admin/affiliate_detail.php:315
 #: html/admin/paypalpayments/select_affiliates.php:116
 #: html/transaction_table.php:35
 msgid "Apply"
@@ -206,16 +206,23 @@ msgstr "Ištraukos peržiūra"
 msgid "%s pending"
 msgstr "%s laukiama"
 
-#: html/admin/affiliate_detail.php:141
+#: html/admin/affiliate_detail.php:113 html/admin/affiliate_detail.php:237
+#: html/admin/affiliate_detail.php:280 html/admin/affiliate_detail.php:311
+#: html/admin/creatives_detail.php:83 html/admin/creatives_detail.php:92
+#: html/admin/manage_creatives.php:90
+msgid "Cancel"
+msgstr "Atšaukti"
+
+#: html/admin/affiliate_detail.php:142
 #, php-format
 msgid "YES, Block all applications from %s"
 msgstr "Taip, blokuoti visas programas nuo %s"
 
-#: html/admin/affiliate_detail.php:150
+#: html/admin/affiliate_detail.php:151
 msgid "NO, They may re-apply"
 msgstr "NE, jie gali vėl prašytis"
 
-#: html/admin/affiliate_detail.php:159
+#: html/admin/affiliate_detail.php:160
 msgid ""
 "Do you want to block all future applications from this email address, or "
 "allow them to sign up at a later date?"
@@ -223,12 +230,12 @@ msgstr ""
 "Ar norite blokuoti visus būsimus prašymus iš šio el. pašto adreso ar leisti "
 "jiems prisijungti vėliau?"
 
-#: html/admin/affiliate_detail.php:188
+#: html/admin/affiliate_detail.php:189
 #: source/Admin-menu/wpam-manage-payouts-menu.php:237
 msgid "Payout"
 msgstr "Išmokėjimas"
 
-#: html/admin/affiliate_detail.php:219 html/admin/affiliate_detail.php:236
+#: html/admin/affiliate_detail.php:220 html/admin/affiliate_detail.php:237
 #: html/admin/creative_update_form.php:35 html/admin/creatives_detail.php:114
 #: html/admin/creatives_detail.php:137 html/admin/manage_creatives.php:38
 #: html/affiliate_creative_detail.php:19
@@ -238,98 +245,92 @@ msgstr "Išmokėjimas"
 msgid "OK"
 msgstr "Gerai"
 
-#: html/admin/affiliate_detail.php:236 html/admin/affiliate_detail.php:279
-#: html/admin/affiliate_detail.php:310 html/admin/creatives_detail.php:83
-#: html/admin/creatives_detail.php:92 html/admin/manage_creatives.php:90
-msgid "Cancel"
-msgstr "Atšaukti"
-
-#: html/admin/affiliate_detail.php:249
+#: html/admin/affiliate_detail.php:250
 msgid "Are you sure you wish to approve this affiliate?"
 msgstr "Ar tikrai norite patvirtinti šį partnerį?"
 
-#: html/admin/affiliate_detail.php:250
+#: html/admin/affiliate_detail.php:251
 msgid "Yes, approve."
 msgstr "Taip, patvirtinti."
 
-#: html/admin/affiliate_detail.php:292
+#: html/admin/affiliate_detail.php:293
 msgid "Are you sure you wish to apply an adjustment of "
 msgstr "Ar tikrai norite atlikti koregavimą "
 
-#: html/admin/affiliate_detail.php:292 html/admin/affiliate_detail.php:334
+#: html/admin/affiliate_detail.php:293 html/admin/affiliate_detail.php:335
 msgid " to this account? The new balance will be "
 msgstr " į šią sąskaitą? Naujas likutis bus "
 
-#: html/admin/affiliate_detail.php:293 html/admin/affiliate_detail.php:335
+#: html/admin/affiliate_detail.php:294 html/admin/affiliate_detail.php:336
 msgid "Yes, apply it."
 msgstr "Taip, jį pritaikyti."
 
-#: html/admin/affiliate_detail.php:334
+#: html/admin/affiliate_detail.php:335
 msgid "Are you sure you wish to apply a payout of "
 msgstr "Ar tikrai norite atlikti išmokėjimą "
 
-#: html/admin/affiliate_detail.php:369
+#: html/admin/affiliate_detail.php:370
 msgid "Are you sure you wish to decline this affiliate?"
 msgstr "Ar tikrai norite atšaukti šį partnerį?"
 
-#: html/admin/affiliate_detail.php:369
+#: html/admin/affiliate_detail.php:370
 msgid "Yes, DECLINE."
 msgstr "Taip, ATMESTI."
 
-#: html/admin/affiliate_detail.php:373
+#: html/admin/affiliate_detail.php:374
 msgid "Are you sure you wish to block this affiliate?"
 msgstr "Ar tikrai norite blokuoti šį partnerį?"
 
-#: html/admin/affiliate_detail.php:373
+#: html/admin/affiliate_detail.php:374
 msgid "Yes, BLOCK."
 msgstr "Taip, BLOKUOTI."
 
-#: html/admin/affiliate_detail.php:383
+#: html/admin/affiliate_detail.php:384
 msgid ""
 "Are you sure you wish to unblock this affiliate?<br>User will become "
 "DECLINED."
 msgstr "Ar tikrai norite atblokuoti šį partnerį?<br>Vartotojas taps ATMESTAS."
 
-#: html/admin/affiliate_detail.php:383
+#: html/admin/affiliate_detail.php:384
 msgid "Yes, UNBLOCK."
 msgstr "Taip, ATBLOKUOTI."
 
-#: html/admin/affiliate_detail.php:394
+#: html/admin/affiliate_detail.php:395
 msgid "Are you sure you wish to activate this affiliate?"
 msgstr "Ar tikrai norite aktyvuoti šį partnerį?"
 
-#: html/admin/affiliate_detail.php:394 html/admin/creatives_detail.php:86
+#: html/admin/affiliate_detail.php:395 html/admin/creatives_detail.php:86
 msgid "Yes, ACTIVATE."
 msgstr "Taip, AKTYVUOTI."
 
-#: html/admin/affiliate_detail.php:398
+#: html/admin/affiliate_detail.php:399
 msgid "Are you sure you wish to deactivate this affiliate?"
 msgstr "Ar tikrai norite deaktyvuoti šį partnerį?"
 
-#: html/admin/affiliate_detail.php:398 html/admin/creatives_detail.php:95
+#: html/admin/affiliate_detail.php:399 html/admin/creatives_detail.php:95
 msgid "Yes, DEACTIVATE."
 msgstr "Taip, DEAKTYVUOTI."
 
-#: html/admin/affiliate_detail.php:417
+#: html/admin/affiliate_detail.php:418
 msgid "Approve Application"
 msgstr "Patvirtinti Paraišką"
 
-#: html/admin/affiliate_detail.php:423 html/admin/affiliate_detail.php:567
+#: html/admin/affiliate_detail.php:424 html/admin/affiliate_detail.php:568
 #: html/admin/settings/settings_general.php:157
 msgid "Bounty Type"
 msgstr "Prizo Tipas"
 
-#: html/admin/affiliate_detail.php:427
+#: html/admin/affiliate_detail.php:428
 #: html/admin/settings/settings_general.php:161 html/contact_info.php:180
 msgid "Percentage of Sales"
 msgstr "Procentais nuo Pardavimo"
 
-#: html/admin/affiliate_detail.php:428
+#: html/admin/affiliate_detail.php:429
 #: html/admin/settings/settings_general.php:162 html/contact_info.php:181
 msgid "Fixed Amount per Sale"
 msgstr "Fiksuota Suma už Pardavimą"
 
-#: html/admin/affiliate_detail.php:434
+#: html/admin/affiliate_detail.php:435
 #: source/Pages/Admin/MyAffiliatesPage.php:168
 #: source/Pages/Admin/NewAffiliatePage.php:94
 #: source/Pages/AffiliatesHome.php:574
@@ -337,186 +338,186 @@ msgstr "Fiksuota Suma už Pardavimą"
 msgid "Bounty Rate (% of Sale)"
 msgstr "Prizo procentas (% nuo pardavimų)"
 
-#: html/admin/affiliate_detail.php:446 html/admin/creatives_detail.php:161
+#: html/admin/affiliate_detail.php:447 html/admin/creatives_detail.php:161
 msgid "Updating, please wait ... "
 msgstr "Atnaujinama, prašome palaukti... "
 
-#: html/admin/affiliate_detail.php:451 html/admin/creatives_detail.php:166
+#: html/admin/affiliate_detail.php:452 html/admin/creatives_detail.php:166
 msgid "Are you sure?"
 msgstr "Ar tikrai?"
 
-#: html/admin/affiliate_detail.php:452
+#: html/admin/affiliate_detail.php:453
 msgid "approve"
 msgstr "patvirtinti"
 
-#: html/admin/affiliate_detail.php:454 html/admin/creatives_detail.php:169
+#: html/admin/affiliate_detail.php:455 html/admin/creatives_detail.php:169
 msgid "Error"
 msgstr "Klaida"
 
-#: html/admin/affiliate_detail.php:455 html/admin/creatives_detail.php:170
+#: html/admin/affiliate_detail.php:456 html/admin/creatives_detail.php:170
 #: html/admin/manage_creatives.php:109
 msgid "ERROR:"
 msgstr "KLAIDA:"
 
-#: html/admin/affiliate_detail.php:458
+#: html/admin/affiliate_detail.php:459
 msgid "Apply Adjustment "
 msgstr "Atlikti koregavimą "
 
-#: html/admin/affiliate_detail.php:462
+#: html/admin/affiliate_detail.php:463
 msgid "Amount "
 msgstr "Suma "
 
-#: html/admin/affiliate_detail.php:468
+#: html/admin/affiliate_detail.php:469
 msgid "Description "
 msgstr "Aprašymas "
 
-#: html/admin/affiliate_detail.php:477
+#: html/admin/affiliate_detail.php:478
 msgid "Apply Payout "
 msgstr "Atlikti išmokėjimą "
 
-#: html/admin/affiliate_detail.php:481
+#: html/admin/affiliate_detail.php:482
 msgid "Payout Amount "
 msgstr "Išmokos suma "
 
-#: html/admin/affiliate_detail.php:484
+#: html/admin/affiliate_detail.php:485
 msgid "Current balance"
 msgstr "Dabartinis balansas"
 
-#: html/admin/affiliate_detail.php:487
+#: html/admin/affiliate_detail.php:488
 msgid "Other amount"
 msgstr "Kita suma"
 
-#: html/admin/affiliate_detail.php:496
+#: html/admin/affiliate_detail.php:497
 msgid "Affiliate:"
 msgstr "Partneris:"
 
-#: html/admin/affiliate_detail.php:502 source/Pages/AffiliatesHome.php:38
+#: html/admin/affiliate_detail.php:503 source/Pages/AffiliatesHome.php:38
 msgid "Overview"
 msgstr "Apžvalga"
 
-#: html/admin/affiliate_detail.php:503
+#: html/admin/affiliate_detail.php:504
 msgid "Account Finances"
 msgstr "Paskyros finansai"
 
-#: html/admin/affiliate_detail.php:504
+#: html/admin/affiliate_detail.php:505
 msgid "Information"
 msgstr "Informacija"
 
-#: html/admin/affiliate_detail.php:505
+#: html/admin/affiliate_detail.php:506
 msgid "Affiliate Links"
 msgstr "Partnerių nuorodos"
 
-#: html/admin/affiliate_detail.php:507 html/admin/affiliate_detail.php:589
+#: html/admin/affiliate_detail.php:508 html/admin/affiliate_detail.php:590
 #: html/affiliate_cp_home.php:39 html/affiliate_cp_home.php:73
 #: source/Pages/AffiliatesHome.php:47
 msgid "Impressions"
 msgstr "Parodymai"
 
-#: html/admin/affiliate_detail.php:516
+#: html/admin/affiliate_detail.php:517
 msgid "Approve"
 msgstr "Patvirtinti"
 
-#: html/admin/affiliate_detail.php:517
+#: html/admin/affiliate_detail.php:518
 msgid "Decline"
 msgstr "Atmesti"
 
-#: html/admin/affiliate_detail.php:519 html/admin/creatives_detail.php:213
+#: html/admin/affiliate_detail.php:520 html/admin/creatives_detail.php:213
 msgid "Activate"
 msgstr "Aktyvuoti"
 
-#: html/admin/affiliate_detail.php:521
+#: html/admin/affiliate_detail.php:522
 msgid "Dectivate"
 msgstr "Deaktyvuoti"
 
-#: html/admin/affiliate_detail.php:523
+#: html/admin/affiliate_detail.php:524
 msgid "Unblock"
 msgstr "Atblokuoti"
 
-#: html/admin/affiliate_detail.php:525
+#: html/admin/affiliate_detail.php:526
 msgid "Block"
 msgstr "Blokas"
 
-#: html/admin/affiliate_detail.php:531 html/admin/creative_update_form.php:108
+#: html/admin/affiliate_detail.php:532 html/admin/creative_update_form.php:108
 #: html/admin/creatives_detail.php:228 html/admin/settings/settings.php:46
 msgid "General"
 msgstr "Bendras"
 
-#: html/admin/affiliate_detail.php:535
+#: html/admin/affiliate_detail.php:536
 msgid "Date Applied"
 msgstr "Pritaikymo data"
 
-#: html/admin/affiliate_detail.php:536
+#: html/admin/affiliate_detail.php:537
 msgid "Affiliate Status"
 msgstr "Partnerio būsena"
 
-#: html/admin/affiliate_detail.php:539
+#: html/admin/affiliate_detail.php:540
 msgid "Account Standing"
 msgstr "Sąskaitos būsena"
 
-#: html/admin/affiliate_detail.php:563
+#: html/admin/affiliate_detail.php:564
 #: html/affiliate_cp_payment_details_form.php:69
 #: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:131
 msgid "Payment Details"
 msgstr "Mokėjimo informacija"
 
-#: html/admin/affiliate_detail.php:568
+#: html/admin/affiliate_detail.php:569
 msgid "Bounty Amount"
 msgstr "Prizo suma"
 
-#: html/admin/affiliate_detail.php:570
+#: html/admin/affiliate_detail.php:571
 msgid "Payment Method"
 msgstr "Mokėjimo būdas"
 
-#: html/admin/affiliate_detail.php:572
+#: html/admin/affiliate_detail.php:573
 msgid "Paypal E-Mail"
 msgstr "„Paypal“ el. paštas"
 
-#: html/admin/affiliate_detail.php:574
+#: html/admin/affiliate_detail.php:575
 msgid "Make Check Out To"
 msgstr "Atsiskaityti"
 
-#: html/admin/affiliate_detail.php:584
+#: html/admin/affiliate_detail.php:585
 msgid "Statistics"
 msgstr "Statistika"
 
-#: html/admin/affiliate_detail.php:591
+#: html/admin/affiliate_detail.php:592
 msgid "Visits"
 msgstr "Apsilankymai"
 
-#: html/admin/affiliate_detail.php:592
+#: html/admin/affiliate_detail.php:593
 msgid "Purchases"
 msgstr "Pirkimai"
 
-#: html/admin/affiliate_detail.php:603
+#: html/admin/affiliate_detail.php:604
 msgid "Balance:"
 msgstr "Balansas:"
 
-#: html/admin/affiliate_detail.php:606
+#: html/admin/affiliate_detail.php:607
 msgid "Earnings:"
 msgstr "Uždarbis:"
 
-#: html/admin/affiliate_detail.php:607
+#: html/admin/affiliate_detail.php:608
 msgid "Payments:"
 msgstr "Mokėjimai:"
 
-#: html/admin/affiliate_detail.php:608
+#: html/admin/affiliate_detail.php:609
 msgid "Adjustments:"
 msgstr "Patikslinimai:"
 
-#: html/admin/affiliate_detail.php:612
+#: html/admin/affiliate_detail.php:613
 msgid "Apply Payout"
 msgstr "Atlikti išmokėjimą"
 
-#: html/admin/affiliate_detail.php:613
+#: html/admin/affiliate_detail.php:614
 msgid "Apply Manual Adjustment"
 msgstr "Atlikti Rankinį Patikslinimą"
 
-#: html/admin/affiliate_detail.php:625 html/admin/creative_update_form.php:85
+#: html/admin/affiliate_detail.php:626 html/admin/creative_update_form.php:85
 #: html/admin/creative_update_success.php:4 html/impressions_table.php:8
 msgid "Creative"
 msgstr "Skelbimai"
 
-#: html/admin/affiliate_detail.php:626 html/admin/creative_update_form.php:132
+#: html/admin/affiliate_detail.php:627 html/admin/creative_update_form.php:132
 #: html/admin/creatives_detail.php:248 html/admin/manage_creatives.php:167
 #: html/admin/settings/settings_messaging.php:87
 #: html/admin/settings/settings_registration.php:440
@@ -525,7 +526,7 @@ msgstr "Skelbimai"
 msgid "Type"
 msgstr "Tipas"
 
-#: html/admin/affiliate_detail.php:627
+#: html/admin/affiliate_detail.php:628
 msgid "Link"
 msgstr "Nuoroda"
 
@@ -1045,7 +1046,7 @@ msgstr "Partneris"
 msgid "Description"
 msgstr "Aprašymas"
 
-#: html/admin/settings/settings.php:22 source/Plugin.php:633
+#: html/admin/settings/settings.php:22 source/Plugin.php:634
 msgid "Settings"
 msgstr "Nustatymai"
 
@@ -1782,19 +1783,19 @@ msgstr ""
 "Jei norite naudoti kitą el. pašto adresą, atsijunkite nuo savo „WordPress“ "
 "paskyros ir bandykite registruotis iš naujo."
 
-#: html/affiliate_register_form.php:74
+#: html/affiliate_register_form.php:80
 msgid "I have read and agree to the"
 msgstr "Aš perskaičiau ir sutinku"
 
-#: html/affiliate_register_form.php:74
+#: html/affiliate_register_form.php:80
 msgid "Terms and Conditions"
 msgstr "Taisyklės ir sąlygos"
 
-#: html/affiliate_register_form.php:75
+#: html/affiliate_register_form.php:81
 msgid "You must agree to the terms."
 msgstr "Jūs turite sutikti su sąlygomis."
 
-#: html/affiliate_register_form.php:86
+#: html/affiliate_register_form.php:92
 msgid "Submit Application"
 msgstr "Pateikti Paraišką"
 
@@ -1858,11 +1859,11 @@ msgstr "Nerasta įrašų pasirinktame datų intervale."
 msgid "Reference ID"
 msgstr "Nuorodos ID"
 
-#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:653
+#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:654
 msgid "Affiliates Manager Add-ons"
 msgstr "Partnerių Vadovo Add-onai"
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:8 source/Plugin.php:637
+#: source/Admin-menu/wpam-admin-functions-menu.php:8 source/Plugin.php:638
 msgid "Admin Functions"
 msgstr "Administratoriaus Funkcijos"
 
@@ -1930,7 +1931,7 @@ msgstr ""
 msgid "Delete Clicks Data"
 msgstr "Ištrinti paspaudimų duomenis"
 
-#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:645
+#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:646
 msgid "Click Tracking"
 msgstr "Paspaudimų stebėjimo funkcija"
 
@@ -1974,35 +1975,35 @@ msgstr "Jums reikia įvesti pirkimo sumos skaičių"
 msgid "A commission with this transaction ID already exists"
 msgstr "Komisiniai su šiuo sandorio ID jau yra"
 
-#: source/Admin-menu/wpam-commission-menu.php:157
+#: source/Admin-menu/wpam-commission-menu.php:155
 msgid "Commission added!"
 msgstr "Komisiniai pridėti!"
 
-#: source/Admin-menu/wpam-commission-menu.php:167
+#: source/Admin-menu/wpam-commission-menu.php:165
 msgid "This tab allows you to manually award commission to an affiliate."
 msgstr "Ši lentelė leidžia jums rankiniu būdu paskirti komisinius partneriui."
 
-#: source/Admin-menu/wpam-commission-menu.php:177
+#: source/Admin-menu/wpam-commission-menu.php:175
 msgid "Enter the affiliate ID. Example: "
 msgstr "Įveskite partnerio ID. Pvz.: "
 
-#: source/Admin-menu/wpam-commission-menu.php:181
+#: source/Admin-menu/wpam-commission-menu.php:179
 msgid "Commission Amount"
 msgstr "Komisinių suma"
 
-#: source/Admin-menu/wpam-commission-menu.php:183
+#: source/Admin-menu/wpam-commission-menu.php:181
 msgid "Enter the commission amount. Example: "
 msgstr "Įveskite komisinių sumą. Pvz.: "
 
-#: source/Admin-menu/wpam-commission-menu.php:187
+#: source/Admin-menu/wpam-commission-menu.php:185
 msgid "Purchase Amount"
 msgstr "Pirkimo suma"
 
-#: source/Admin-menu/wpam-commission-menu.php:189
+#: source/Admin-menu/wpam-commission-menu.php:187
 msgid "Enter the purchase amount. Example: "
 msgstr "Įveskite pirkinio sumą. Pvz.: "
 
-#: source/Admin-menu/wpam-commission-menu.php:195
+#: source/Admin-menu/wpam-commission-menu.php:193
 msgid ""
 "Enter the unique transaction ID (leave empty to generate a unique ID). "
 "Example: "
@@ -2010,15 +2011,15 @@ msgstr ""
 "Įveskite unikalų operacijos ID (palikite tuščią, jei norite sukurti unikalų "
 "ID). Pvz.: "
 
-#: source/Admin-menu/wpam-commission-menu.php:201
+#: source/Admin-menu/wpam-commission-menu.php:199
 msgid "Enter the email address of the buyer (optional)."
 msgstr "Įveskite pirkėjo el. paštą (neprivaloma)."
 
-#: source/Admin-menu/wpam-commission-menu.php:207
+#: source/Admin-menu/wpam-commission-menu.php:205
 msgid "Enter the date in yyyy-mm-dd format. Example: "
 msgstr "Įveskite data yyyy-mm-dd formatu. Pvz.: "
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:8 source/Plugin.php:641
+#: source/Admin-menu/wpam-manage-payouts-menu.php:8 source/Plugin.php:642
 msgid "Manage Payouts"
 msgstr "Tvarkyti Išmokas"
 
@@ -2569,7 +2570,7 @@ msgstr "Skelbimai"
 msgid "Edit Profile"
 msgstr "Redaguoti paskyrą"
 
-#: source/Pages/AffiliatesHome.php:43 source/Plugin.php:316
+#: source/Pages/AffiliatesHome.php:43 source/Plugin.php:317
 msgid "Log out"
 msgstr "Atsijungti"
 
@@ -2685,12 +2686,12 @@ msgstr "POST klaidos: %serrordata: %s"
 msgid "Unknown response: %s"
 msgstr "Nežinomas atsakymas: %s"
 
-#: source/Plugin.php:74 source/Plugin.php:608
+#: source/Plugin.php:74 source/Plugin.php:609
 msgid "Affiliate Management"
 msgstr "Partnerių valdymas"
 
-#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:589
-#: source/Plugin.php:603 source/Plugin.php:608
+#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:590
+#: source/Plugin.php:604 source/Plugin.php:609
 msgid "Affiliates"
 msgstr "Partneriai"
 
@@ -2706,75 +2707,75 @@ msgstr "Registruotis"
 msgid "Affiliate Login"
 msgstr "Partnerių Prisijungimas"
 
-#: source/Plugin.php:312
+#: source/Plugin.php:313
 msgid "You are currently logged in"
 msgstr "Šiuo metu jūs prisijungęs"
 
-#: source/Plugin.php:314
+#: source/Plugin.php:315
 msgid "Username"
 msgstr "Vartotojo vardas"
 
-#: source/Plugin.php:324
+#: source/Plugin.php:325
 msgid "Email Address"
 msgstr "El. pašto adresas"
 
-#: source/Plugin.php:326
+#: source/Plugin.php:327
 msgid "Password Lost and Found"
 msgstr "Slaptažodis Pamestas ir Surastas"
 
-#: source/Plugin.php:326
+#: source/Plugin.php:327
 msgid "Lost your password?"
 msgstr "Pamiršote slaptažodį?"
 
-#: source/Plugin.php:371
+#: source/Plugin.php:372
 msgid "Become an affiliate"
 msgstr "Tapkite partneriu"
 
-#: source/Plugin.php:372
+#: source/Plugin.php:373
 msgid "Are you interested in earning money by directing visitors to our site?"
 msgstr "Ar jus domina uždirbti pinigus nukreipiant lankytojus į mūsų svetainę?"
 
-#: source/Plugin.php:374
+#: source/Plugin.php:375
 msgid "Sign up"
 msgstr "Užsiregistruoti"
 
-#: source/Plugin.php:374
+#: source/Plugin.php:375
 msgid " to become an affiliate today!"
 msgstr " tapti partneriu šiandien!"
 
-#: source/Plugin.php:603
+#: source/Plugin.php:604
 msgid "Be An Affiliate"
 msgstr "Tapkite partneriu"
 
-#: source/Plugin.php:637
+#: source/Plugin.php:638
 msgid "Affiliates Manager Admin Functions"
 msgstr "Partnerių Valdytojo Admin Funkcijos"
 
-#: source/Plugin.php:641
+#: source/Plugin.php:642
 msgid "Affiliates Manager Manage Payouts"
 msgstr "Partnerių Valdytojui Tvarkyti Išmokas"
 
-#: source/Plugin.php:645
+#: source/Plugin.php:646
 msgid "Affiliates Manager Click Tracking"
 msgstr "Partnerių Valdytojui Paspaudimų sekimas"
 
-#: source/Plugin.php:649
+#: source/Plugin.php:650
 msgid "Affiliates Manager Commission Data"
 msgstr "Partnerių Valdytojui Komisinių Duomenys"
 
-#: source/Plugin.php:649
+#: source/Plugin.php:650
 msgid "Commissions"
 msgstr "Komisiniai"
 
-#: source/Plugin.php:653
+#: source/Plugin.php:654
 msgid "Add-ons"
 msgstr "Priedai"
 
-#: source/Plugin.php:776
+#: source/Plugin.php:789
 msgid "Invalid JSON handler."
 msgstr "Neteisingas JSON tvarkytojas."
 
-#: source/Plugin.php:807
+#: source/Plugin.php:820
 msgid "Nonce check failed for export My Affiliates to CSV!"
 msgstr "Nonce patikrinti nepavyko eksportuojant Mano Partnerius į CSV!"
 
@@ -3704,8 +3705,8 @@ msgid "SYRIAN ARAB REPUBLIC"
 msgstr "SIRIJOS ARABŲ RESPUBLIKA"
 
 #: source/Validation/CountryCodes.php:219
-msgid "TAIWAN PROVINCE OF CHINA"
-msgstr "TAIVANIS, KINIJOS PROVINCIJA"
+msgid "TAIWAN"
+msgstr "TAIVANIS"
 
 #: source/Validation/CountryCodes.php:220
 msgid "TAJIKISTAN"

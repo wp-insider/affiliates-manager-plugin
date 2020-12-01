@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Affiliate Manager\n"
-"POT-Creation-Date: 2020-01-14 13:32+0600\n"
-"PO-Revision-Date: 2020-01-14 13:37+0600\n"
+"POT-Creation-Date: 2020-12-01 13:52+0600\n"
+"PO-Revision-Date: 2020-12-01 14:06+0600\n"
 "Last-Translator: Bjarni K Thors <bkjartansson@gmail.com>\n"
 "Language-Team: 9seeds <justin@9seeds.com>\n"
 "Language: en_US\n"
@@ -23,22 +23,22 @@ msgstr "Söluaðilastýring WordPress krefst PHP 5.1 eða hærra"
 msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
 msgstr "Söluaðilastýring WordPress krefst PHP 3.1 eða hærra"
 
-#: classes/CommissionTracking.php:83
+#: classes/CommissionTracking.php:86
 #, php-format
 msgid "Credit for sale of %s %s (PURCHASE LOG ID = %s)"
 msgstr ""
 
-#: classes/CommissionTracking.php:116
+#: classes/CommissionTracking.php:119
 msgid "You just earned a commission!"
 msgstr ""
 
-#: classes/CommissionTracking.php:145
+#: classes/CommissionTracking.php:148
 #, fuzzy
 #| msgid "Affiliate Confirmation"
 msgid "Affiliate commission notification"
 msgstr "Staðfesting söluaðila"
 
-#: classes/CommissionTracking.php:197
+#: classes/CommissionTracking.php:203
 #, php-format
 msgid "Refund of %s %s (PURCHASE LOG ID = %s)"
 msgstr ""
@@ -50,7 +50,7 @@ msgstr "Skoða"
 
 #: classes/ListAffiliatesTable.php:61 classes/ListClicksTable.php:55
 #: classes/ListCommissionTable.php:62
-#: source/Admin-menu/wpam-commission-menu.php:175
+#: source/Admin-menu/wpam-commission-menu.php:173
 #: source/Admin-menu/wpam-manage-payouts-menu.php:70
 msgid "Affiliate ID"
 msgstr ""
@@ -87,7 +87,7 @@ msgstr "Skírnarnafn"
 msgid "Last Name"
 msgstr "Föðurnafn"
 
-#: classes/ListAffiliatesTable.php:67 source/Plugin.php:315
+#: classes/ListAffiliatesTable.php:67 source/Plugin.php:316
 msgid "Email"
 msgstr "Tölvupóstur"
 
@@ -133,7 +133,7 @@ msgid "Row ID"
 msgstr ""
 
 #: classes/ListClicksTable.php:54 classes/ListCommissionTable.php:61
-#: source/Admin-menu/wpam-commission-menu.php:205
+#: source/Admin-menu/wpam-commission-menu.php:203
 msgid "Date"
 msgstr ""
 
@@ -162,12 +162,12 @@ msgid "Amount"
 msgstr "Upphæð"
 
 #: classes/ListCommissionTable.php:64
-#: source/Admin-menu/wpam-commission-menu.php:193
+#: source/Admin-menu/wpam-commission-menu.php:191
 msgid "Transaction ID"
 msgstr ""
 
 #: classes/ListCommissionTable.php:65
-#: source/Admin-menu/wpam-commission-menu.php:199
+#: source/Admin-menu/wpam-commission-menu.php:197
 msgid "Buyer Email"
 msgstr ""
 
@@ -179,8 +179,8 @@ msgstr ""
 msgid "Bulk Actions"
 msgstr ""
 
-#: classes/ListTable.php:153 html/admin/affiliate_detail.php:283
-#: html/admin/affiliate_detail.php:314
+#: classes/ListTable.php:153 html/admin/affiliate_detail.php:284
+#: html/admin/affiliate_detail.php:315
 #: html/admin/paypalpayments/select_affiliates.php:116
 #: html/transaction_table.php:35
 msgid "Apply"
@@ -203,16 +203,23 @@ msgstr ""
 msgid "%s pending"
 msgstr ""
 
-#: html/admin/affiliate_detail.php:141
+#: html/admin/affiliate_detail.php:113 html/admin/affiliate_detail.php:237
+#: html/admin/affiliate_detail.php:280 html/admin/affiliate_detail.php:311
+#: html/admin/creatives_detail.php:83 html/admin/creatives_detail.php:92
+#: html/admin/manage_creatives.php:90
+msgid "Cancel"
+msgstr "Hætta við"
+
+#: html/admin/affiliate_detail.php:142
 #, php-format
 msgid "YES, Block all applications from %s"
 msgstr "JÁ, hindra aðgang allra forrita frá %s"
 
-#: html/admin/affiliate_detail.php:150
+#: html/admin/affiliate_detail.php:151
 msgid "NO, They may re-apply"
 msgstr "NEI, Þau geta sótt um aftur"
 
-#: html/admin/affiliate_detail.php:159
+#: html/admin/affiliate_detail.php:160
 msgid ""
 "Do you want to block all future applications from this email address, or "
 "allow them to sign up at a later date?"
@@ -220,12 +227,12 @@ msgstr ""
 "Viltu hindra aðgang allra forrita í framtíðinni frá þessu netfangi, eða "
 "leyfa þeim að skrá sig seinna?"
 
-#: html/admin/affiliate_detail.php:188
+#: html/admin/affiliate_detail.php:189
 #: source/Admin-menu/wpam-manage-payouts-menu.php:237
 msgid "Payout"
 msgstr "Útborgun"
 
-#: html/admin/affiliate_detail.php:219 html/admin/affiliate_detail.php:236
+#: html/admin/affiliate_detail.php:220 html/admin/affiliate_detail.php:237
 #: html/admin/creative_update_form.php:35 html/admin/creatives_detail.php:114
 #: html/admin/creatives_detail.php:137 html/admin/manage_creatives.php:38
 #: html/affiliate_creative_detail.php:19
@@ -235,53 +242,47 @@ msgstr "Útborgun"
 msgid "OK"
 msgstr "OK"
 
-#: html/admin/affiliate_detail.php:236 html/admin/affiliate_detail.php:279
-#: html/admin/affiliate_detail.php:310 html/admin/creatives_detail.php:83
-#: html/admin/creatives_detail.php:92 html/admin/manage_creatives.php:90
-msgid "Cancel"
-msgstr "Hætta við"
-
-#: html/admin/affiliate_detail.php:249
+#: html/admin/affiliate_detail.php:250
 msgid "Are you sure you wish to approve this affiliate?"
 msgstr "Ertu viss um að þú vijir samþykkja þennan söluðaila?"
 
-#: html/admin/affiliate_detail.php:250
+#: html/admin/affiliate_detail.php:251
 msgid "Yes, approve."
 msgstr "Já, samþykkja."
 
-#: html/admin/affiliate_detail.php:292
+#: html/admin/affiliate_detail.php:293
 msgid "Are you sure you wish to apply an adjustment of "
 msgstr "Ertu viss um að þú viljir samþykkja aðlögun frá"
 
-#: html/admin/affiliate_detail.php:292 html/admin/affiliate_detail.php:334
+#: html/admin/affiliate_detail.php:293 html/admin/affiliate_detail.php:335
 msgid " to this account? The new balance will be "
 msgstr "frá þessum aðgangi? Nýja samtalan verður"
 
-#: html/admin/affiliate_detail.php:293 html/admin/affiliate_detail.php:335
+#: html/admin/affiliate_detail.php:294 html/admin/affiliate_detail.php:336
 msgid "Yes, apply it."
 msgstr "Já, sækja um það"
 
-#: html/admin/affiliate_detail.php:334
+#: html/admin/affiliate_detail.php:335
 msgid "Are you sure you wish to apply a payout of "
 msgstr "Ertu viss um að þú viljir sækja um útborgun af"
 
-#: html/admin/affiliate_detail.php:369
+#: html/admin/affiliate_detail.php:370
 msgid "Are you sure you wish to decline this affiliate?"
 msgstr "Ertu viss um að þú viljir hafna beiðni þessa söluðaila?"
 
-#: html/admin/affiliate_detail.php:369
+#: html/admin/affiliate_detail.php:370
 msgid "Yes, DECLINE."
 msgstr "Já, HAFNA"
 
-#: html/admin/affiliate_detail.php:373
+#: html/admin/affiliate_detail.php:374
 msgid "Are you sure you wish to block this affiliate?"
 msgstr "Ertu viss um að þú viljir hindra aðgang þessara söluaðila?"
 
-#: html/admin/affiliate_detail.php:373
+#: html/admin/affiliate_detail.php:374
 msgid "Yes, BLOCK."
 msgstr "Já, HINDRA"
 
-#: html/admin/affiliate_detail.php:383
+#: html/admin/affiliate_detail.php:384
 msgid ""
 "Are you sure you wish to unblock this affiliate?<br>User will become "
 "DECLINED."
@@ -289,46 +290,46 @@ msgstr ""
 "Ertu viss um að þú viljir af-hindra aðgang þessa söluaðila?<br>Notandi mun "
 "verða HAFNAÐ"
 
-#: html/admin/affiliate_detail.php:383
+#: html/admin/affiliate_detail.php:384
 msgid "Yes, UNBLOCK."
 msgstr "Já af-HINDRA"
 
-#: html/admin/affiliate_detail.php:394
+#: html/admin/affiliate_detail.php:395
 msgid "Are you sure you wish to activate this affiliate?"
 msgstr "Ertu viss um að þú vilijir virkja þenna söluaðila?"
 
-#: html/admin/affiliate_detail.php:394 html/admin/creatives_detail.php:86
+#: html/admin/affiliate_detail.php:395 html/admin/creatives_detail.php:86
 msgid "Yes, ACTIVATE."
 msgstr "Já, VIRKJA."
 
-#: html/admin/affiliate_detail.php:398
+#: html/admin/affiliate_detail.php:399
 msgid "Are you sure you wish to deactivate this affiliate?"
 msgstr "Ertu viss um að þú viljir aftengja þennan söluaðila?"
 
-#: html/admin/affiliate_detail.php:398 html/admin/creatives_detail.php:95
+#: html/admin/affiliate_detail.php:399 html/admin/creatives_detail.php:95
 msgid "Yes, DEACTIVATE."
 msgstr "Já, AFTENGJA."
 
-#: html/admin/affiliate_detail.php:417
+#: html/admin/affiliate_detail.php:418
 msgid "Approve Application"
 msgstr "Samþykkja umsókn"
 
-#: html/admin/affiliate_detail.php:423 html/admin/affiliate_detail.php:567
+#: html/admin/affiliate_detail.php:424 html/admin/affiliate_detail.php:568
 #: html/admin/settings/settings_general.php:157
 msgid "Bounty Type"
 msgstr "Tegund þóknunar"
 
-#: html/admin/affiliate_detail.php:427
+#: html/admin/affiliate_detail.php:428
 #: html/admin/settings/settings_general.php:161 html/contact_info.php:180
 msgid "Percentage of Sales"
 msgstr "Prósenta af sölu"
 
-#: html/admin/affiliate_detail.php:428
+#: html/admin/affiliate_detail.php:429
 #: html/admin/settings/settings_general.php:162 html/contact_info.php:181
 msgid "Fixed Amount per Sale"
 msgstr "Ákveðin upphæð af sölu"
 
-#: html/admin/affiliate_detail.php:434
+#: html/admin/affiliate_detail.php:435
 #: source/Pages/Admin/MyAffiliatesPage.php:168
 #: source/Pages/Admin/NewAffiliatePage.php:94
 #: source/Pages/AffiliatesHome.php:574
@@ -336,186 +337,186 @@ msgstr "Ákveðin upphæð af sölu"
 msgid "Bounty Rate (% of Sale)"
 msgstr "Hlutfall þóknunar (% of Sale)"
 
-#: html/admin/affiliate_detail.php:446 html/admin/creatives_detail.php:161
+#: html/admin/affiliate_detail.php:447 html/admin/creatives_detail.php:161
 msgid "Updating, please wait ... "
 msgstr "Uppfæri, vinsamlega bíðið ..."
 
-#: html/admin/affiliate_detail.php:451 html/admin/creatives_detail.php:166
+#: html/admin/affiliate_detail.php:452 html/admin/creatives_detail.php:166
 msgid "Are you sure?"
 msgstr "Ertu alveg viss?"
 
-#: html/admin/affiliate_detail.php:452
+#: html/admin/affiliate_detail.php:453
 msgid "approve"
 msgstr "samþykkja"
 
-#: html/admin/affiliate_detail.php:454 html/admin/creatives_detail.php:169
+#: html/admin/affiliate_detail.php:455 html/admin/creatives_detail.php:169
 msgid "Error"
 msgstr "Villa"
 
-#: html/admin/affiliate_detail.php:455 html/admin/creatives_detail.php:170
+#: html/admin/affiliate_detail.php:456 html/admin/creatives_detail.php:170
 #: html/admin/manage_creatives.php:109
 msgid "ERROR:"
 msgstr "VILLA:"
 
-#: html/admin/affiliate_detail.php:458
+#: html/admin/affiliate_detail.php:459
 msgid "Apply Adjustment "
 msgstr "Virkja aðlögun"
 
-#: html/admin/affiliate_detail.php:462
+#: html/admin/affiliate_detail.php:463
 msgid "Amount "
 msgstr "Upphæð"
 
-#: html/admin/affiliate_detail.php:468
+#: html/admin/affiliate_detail.php:469
 msgid "Description "
 msgstr "Lýsing"
 
-#: html/admin/affiliate_detail.php:477
+#: html/admin/affiliate_detail.php:478
 msgid "Apply Payout "
 msgstr "Virkja útborgun"
 
-#: html/admin/affiliate_detail.php:481
+#: html/admin/affiliate_detail.php:482
 msgid "Payout Amount "
 msgstr "Upphæð til útborgunar"
 
-#: html/admin/affiliate_detail.php:484
+#: html/admin/affiliate_detail.php:485
 msgid "Current balance"
 msgstr "Núverandi staða"
 
-#: html/admin/affiliate_detail.php:487
+#: html/admin/affiliate_detail.php:488
 msgid "Other amount"
 msgstr "Önnur upphæð"
 
-#: html/admin/affiliate_detail.php:496
+#: html/admin/affiliate_detail.php:497
 msgid "Affiliate:"
 msgstr "Söluaðili:"
 
-#: html/admin/affiliate_detail.php:502 source/Pages/AffiliatesHome.php:38
+#: html/admin/affiliate_detail.php:503 source/Pages/AffiliatesHome.php:38
 msgid "Overview"
 msgstr "Yfirlit"
 
-#: html/admin/affiliate_detail.php:503
+#: html/admin/affiliate_detail.php:504
 msgid "Account Finances"
 msgstr "Staða reiknings"
 
-#: html/admin/affiliate_detail.php:504
+#: html/admin/affiliate_detail.php:505
 msgid "Information"
 msgstr "Upplýsingar"
 
-#: html/admin/affiliate_detail.php:505
+#: html/admin/affiliate_detail.php:506
 msgid "Affiliate Links"
 msgstr "Hlekkur söluaðila"
 
-#: html/admin/affiliate_detail.php:507 html/admin/affiliate_detail.php:589
+#: html/admin/affiliate_detail.php:508 html/admin/affiliate_detail.php:590
 #: html/affiliate_cp_home.php:39 html/affiliate_cp_home.php:73
 #: source/Pages/AffiliatesHome.php:47
 msgid "Impressions"
 msgstr ""
 
-#: html/admin/affiliate_detail.php:516
+#: html/admin/affiliate_detail.php:517
 msgid "Approve"
 msgstr "Samþykkja"
 
-#: html/admin/affiliate_detail.php:517
+#: html/admin/affiliate_detail.php:518
 msgid "Decline"
 msgstr "Hafna"
 
-#: html/admin/affiliate_detail.php:519 html/admin/creatives_detail.php:213
+#: html/admin/affiliate_detail.php:520 html/admin/creatives_detail.php:213
 msgid "Activate"
 msgstr "Virkja"
 
-#: html/admin/affiliate_detail.php:521
+#: html/admin/affiliate_detail.php:522
 msgid "Dectivate"
 msgstr "Aftengja"
 
-#: html/admin/affiliate_detail.php:523
+#: html/admin/affiliate_detail.php:524
 msgid "Unblock"
 msgstr "Af-Hindra"
 
-#: html/admin/affiliate_detail.php:525
+#: html/admin/affiliate_detail.php:526
 msgid "Block"
 msgstr "Hindra"
 
-#: html/admin/affiliate_detail.php:531 html/admin/creative_update_form.php:108
+#: html/admin/affiliate_detail.php:532 html/admin/creative_update_form.php:108
 #: html/admin/creatives_detail.php:228 html/admin/settings/settings.php:46
 msgid "General"
 msgstr "Almennt"
 
-#: html/admin/affiliate_detail.php:535
+#: html/admin/affiliate_detail.php:536
 msgid "Date Applied"
 msgstr "Dagsetning aðgerðar"
 
-#: html/admin/affiliate_detail.php:536
+#: html/admin/affiliate_detail.php:537
 msgid "Affiliate Status"
 msgstr "Staða söluaðila"
 
-#: html/admin/affiliate_detail.php:539
+#: html/admin/affiliate_detail.php:540
 msgid "Account Standing"
 msgstr "Staða reiknings"
 
-#: html/admin/affiliate_detail.php:563
+#: html/admin/affiliate_detail.php:564
 #: html/affiliate_cp_payment_details_form.php:69
 #: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:131
 msgid "Payment Details"
 msgstr "Greiðslu upplýsingar"
 
-#: html/admin/affiliate_detail.php:568
+#: html/admin/affiliate_detail.php:569
 msgid "Bounty Amount"
 msgstr "Upphæð þóknunar"
 
-#: html/admin/affiliate_detail.php:570
+#: html/admin/affiliate_detail.php:571
 msgid "Payment Method"
 msgstr "Tegund Útborgunar "
 
-#: html/admin/affiliate_detail.php:572
+#: html/admin/affiliate_detail.php:573
 msgid "Paypal E-Mail"
 msgstr "PayPal netfangið þitt"
 
-#: html/admin/affiliate_detail.php:574
+#: html/admin/affiliate_detail.php:575
 msgid "Make Check Out To"
 msgstr "Senda upphæð á"
 
-#: html/admin/affiliate_detail.php:584
+#: html/admin/affiliate_detail.php:585
 msgid "Statistics"
 msgstr ""
 
-#: html/admin/affiliate_detail.php:591
+#: html/admin/affiliate_detail.php:592
 msgid "Visits"
 msgstr ""
 
-#: html/admin/affiliate_detail.php:592
+#: html/admin/affiliate_detail.php:593
 msgid "Purchases"
 msgstr ""
 
-#: html/admin/affiliate_detail.php:603
+#: html/admin/affiliate_detail.php:604
 msgid "Balance:"
 msgstr "Staða:"
 
-#: html/admin/affiliate_detail.php:606
+#: html/admin/affiliate_detail.php:607
 msgid "Earnings:"
 msgstr "Hagnaður:"
 
-#: html/admin/affiliate_detail.php:607
+#: html/admin/affiliate_detail.php:608
 msgid "Payments:"
 msgstr "Greiðslur:"
 
-#: html/admin/affiliate_detail.php:608
+#: html/admin/affiliate_detail.php:609
 msgid "Adjustments:"
 msgstr "Leiðéttingar:"
 
-#: html/admin/affiliate_detail.php:612
+#: html/admin/affiliate_detail.php:613
 msgid "Apply Payout"
 msgstr "Sækja um greiðslu"
 
-#: html/admin/affiliate_detail.php:613
+#: html/admin/affiliate_detail.php:614
 msgid "Apply Manual Adjustment"
 msgstr "Sækja um leiðréttingu handvirkt"
 
-#: html/admin/affiliate_detail.php:625 html/admin/creative_update_form.php:85
+#: html/admin/affiliate_detail.php:626 html/admin/creative_update_form.php:85
 #: html/admin/creative_update_success.php:4 html/impressions_table.php:8
 msgid "Creative"
 msgstr "Birtingarmynd"
 
-#: html/admin/affiliate_detail.php:626 html/admin/creative_update_form.php:132
+#: html/admin/affiliate_detail.php:627 html/admin/creative_update_form.php:132
 #: html/admin/creatives_detail.php:248 html/admin/manage_creatives.php:167
 #: html/admin/settings/settings_messaging.php:87
 #: html/admin/settings/settings_registration.php:440
@@ -524,7 +525,7 @@ msgstr "Birtingarmynd"
 msgid "Type"
 msgstr "Tegund"
 
-#: html/admin/affiliate_detail.php:627
+#: html/admin/affiliate_detail.php:628
 msgid "Link"
 msgstr "Hlekkur"
 
@@ -1040,7 +1041,7 @@ msgstr ""
 msgid "Description"
 msgstr "Lýsing"
 
-#: html/admin/settings/settings.php:22 source/Plugin.php:633
+#: html/admin/settings/settings.php:22 source/Plugin.php:634
 msgid "Settings"
 msgstr "Stillingar"
 
@@ -1731,19 +1732,19 @@ msgid ""
 "account then try a new registration."
 msgstr ""
 
-#: html/affiliate_register_form.php:74
+#: html/affiliate_register_form.php:80
 msgid "I have read and agree to the"
 msgstr ""
 
-#: html/affiliate_register_form.php:74
+#: html/affiliate_register_form.php:80
 msgid "Terms and Conditions"
 msgstr ""
 
-#: html/affiliate_register_form.php:75
+#: html/affiliate_register_form.php:81
 msgid "You must agree to the terms."
 msgstr "Þú verður að samþykkja skilmála."
 
-#: html/affiliate_register_form.php:86
+#: html/affiliate_register_form.php:92
 msgid "Submit Application"
 msgstr "Senda umsókn"
 
@@ -1807,11 +1808,11 @@ msgstr "Engar upplýsingar fundust fyrir valda dagsetningu"
 msgid "Reference ID"
 msgstr "Auðkenni tilvísunar"
 
-#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:653
+#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:654
 msgid "Affiliates Manager Add-ons"
 msgstr ""
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:8 source/Plugin.php:637
+#: source/Admin-menu/wpam-admin-functions-menu.php:8 source/Plugin.php:638
 msgid "Admin Functions"
 msgstr ""
 
@@ -1868,7 +1869,7 @@ msgstr ""
 msgid "Delete Clicks Data"
 msgstr ""
 
-#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:645
+#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:646
 msgid "Click Tracking"
 msgstr ""
 
@@ -1912,49 +1913,49 @@ msgstr ""
 msgid "A commission with this transaction ID already exists"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:157
+#: source/Admin-menu/wpam-commission-menu.php:155
 msgid "Commission added!"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:167
+#: source/Admin-menu/wpam-commission-menu.php:165
 msgid "This tab allows you to manually award commission to an affiliate."
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:177
+#: source/Admin-menu/wpam-commission-menu.php:175
 msgid "Enter the affiliate ID. Example: "
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:181
+#: source/Admin-menu/wpam-commission-menu.php:179
 msgid "Commission Amount"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:183
+#: source/Admin-menu/wpam-commission-menu.php:181
 msgid "Enter the commission amount. Example: "
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:187
+#: source/Admin-menu/wpam-commission-menu.php:185
 msgid "Purchase Amount"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:189
+#: source/Admin-menu/wpam-commission-menu.php:187
 msgid "Enter the purchase amount. Example: "
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:195
+#: source/Admin-menu/wpam-commission-menu.php:193
 msgid ""
 "Enter the unique transaction ID (leave empty to generate a unique ID). "
 "Example: "
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:201
+#: source/Admin-menu/wpam-commission-menu.php:199
 msgid "Enter the email address of the buyer (optional)."
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:207
+#: source/Admin-menu/wpam-commission-menu.php:205
 msgid "Enter the date in yyyy-mm-dd format. Example: "
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:8 source/Plugin.php:641
+#: source/Admin-menu/wpam-manage-payouts-menu.php:8 source/Plugin.php:642
 msgid "Manage Payouts"
 msgstr ""
 
@@ -2409,7 +2410,7 @@ msgstr "Birtingarmyndir"
 msgid "Edit Profile"
 msgstr "Breyta prófíl"
 
-#: source/Pages/AffiliatesHome.php:43 source/Plugin.php:316
+#: source/Pages/AffiliatesHome.php:43 source/Plugin.php:317
 msgid "Log out"
 msgstr ""
 
@@ -2525,12 +2526,12 @@ msgstr ""
 msgid "Unknown response: %s"
 msgstr "Óþekkt svörun: %s"
 
-#: source/Plugin.php:74 source/Plugin.php:608
+#: source/Plugin.php:74 source/Plugin.php:609
 msgid "Affiliate Management"
 msgstr "Stýring söluaðila"
 
-#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:589
-#: source/Plugin.php:603 source/Plugin.php:608
+#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:590
+#: source/Plugin.php:604 source/Plugin.php:609
 msgid "Affiliates"
 msgstr "Söluaðilar"
 
@@ -2546,78 +2547,78 @@ msgstr "Skrá inn"
 msgid "Affiliate Login"
 msgstr ""
 
-#: source/Plugin.php:312
+#: source/Plugin.php:313
 msgid "You are currently logged in"
 msgstr ""
 
-#: source/Plugin.php:314
+#: source/Plugin.php:315
 #, fuzzy
 msgid "Username"
 msgstr "API notendanafn"
 
-#: source/Plugin.php:324
+#: source/Plugin.php:325
 msgid "Email Address"
 msgstr ""
 
-#: source/Plugin.php:326
+#: source/Plugin.php:327
 msgid "Password Lost and Found"
 msgstr ""
 
-#: source/Plugin.php:326
+#: source/Plugin.php:327
 msgid "Lost your password?"
 msgstr ""
 
-#: source/Plugin.php:371
+#: source/Plugin.php:372
 msgid "Become an affiliate"
 msgstr "Gerast söluaðili"
 
-#: source/Plugin.php:372
+#: source/Plugin.php:373
 msgid "Are you interested in earning money by directing visitors to our site?"
 msgstr ""
 "Hefur þú áhuga á að vinna þér inn pening með því að stýra gestum á síðuna "
 "okkar?"
 
-#: source/Plugin.php:374
+#: source/Plugin.php:375
 msgid "Sign up"
 msgstr "Skrá mig inn"
 
-#: source/Plugin.php:374
+#: source/Plugin.php:375
 msgid " to become an affiliate today!"
 msgstr "til að gerast söluaðili í dag!"
 
-#: source/Plugin.php:603
+#: source/Plugin.php:604
 msgid "Be An Affiliate"
 msgstr "Vertu söluaðili"
 
-#: source/Plugin.php:637
+#: source/Plugin.php:638
 msgid "Affiliates Manager Admin Functions"
 msgstr ""
 
-#: source/Plugin.php:641
+#: source/Plugin.php:642
 msgid "Affiliates Manager Manage Payouts"
 msgstr ""
 
-#: source/Plugin.php:645
+#: source/Plugin.php:646
 msgid "Affiliates Manager Click Tracking"
 msgstr ""
 
-#: source/Plugin.php:649
+#: source/Plugin.php:650
 msgid "Affiliates Manager Commission Data"
 msgstr ""
 
-#: source/Plugin.php:649
+#: source/Plugin.php:650
 msgid "Commissions"
 msgstr ""
 
-#: source/Plugin.php:653
+#: source/Plugin.php:654
 msgid "Add-ons"
 msgstr ""
 
-#: source/Plugin.php:776
+#: source/Plugin.php:789
 msgid "Invalid JSON handler."
 msgstr ""
 
-#: source/Plugin.php:807
+#: source/Plugin.php:820
 msgid "Nonce check failed for export My Affiliates to CSV!"
 msgstr ""
 
@@ -3547,7 +3548,7 @@ msgid "SYRIAN ARAB REPUBLIC"
 msgstr ""
 
 #: source/Validation/CountryCodes.php:219
-msgid "TAIWAN PROVINCE OF CHINA"
+msgid "TAIWAN"
 msgstr ""
 
 #: source/Validation/CountryCodes.php:220

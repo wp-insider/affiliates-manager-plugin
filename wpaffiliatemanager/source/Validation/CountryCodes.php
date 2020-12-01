@@ -216,7 +216,7 @@ class WPAM_Validation_CountryCodes
 		"SE" => __("SWEDEN", "affiliates-manager"),
 		"CH" => __("SWITZERLAND", "affiliates-manager"),
 		"SY" => __("SYRIAN ARAB REPUBLIC", "affiliates-manager"),
-		"TW" => __("TAIWAN PROVINCE OF CHINA", "affiliates-manager"),
+		"TW" => __("TAIWAN", "affiliates-manager"),
 		"TJ" => __("TAJIKISTAN", "affiliates-manager"),
 		"TZ" => __("TANZANIA UNITED REPUBLIC OF", "affiliates-manager"),
 		"TH" => __("THAILAND", "affiliates-manager"),
