@@ -131,7 +131,7 @@ class WPAM_Data_DatabaseInstaller {
         $aff_fields_tbl_sql = "CREATE TABLE " . $affiliates_fields_table . " (
         `affiliateFieldId` int(11) NOT NULL AUTO_INCREMENT,
         `type` enum('base','custom') NOT NULL,
-        `name` varchar(60) NOT NULL,
+        `name` varchar(255) NOT NULL,
         `length` int(11) NOT NULL,
         `fieldType` varchar(45) NOT NULL,
         `required` tinyint(1) NOT NULL,

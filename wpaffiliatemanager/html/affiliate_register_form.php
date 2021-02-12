@@ -47,8 +47,12 @@ if(is_user_logged_in()){  //this block checks whether the user is logged in and 
 							case 'string':
 							case 'number':
 							case 'zipCode':
-								?>
+							?>
 							<input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo esc_attr((isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '');?>" <?php echo $field->required ? 'required': '' ?> />
+							<?php break;
+                                                        case 'textarea':
+							?>
+							<textarea id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>"<?php echo $field->required ? ' required': '' ?>><?php echo esc_textarea((isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '');?></textarea>
 							<?php break;
 							case 'phoneNumber':?>
 							<input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo esc_attr((isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '');?>" <?php echo $field->required ? 'required': '' ?> />

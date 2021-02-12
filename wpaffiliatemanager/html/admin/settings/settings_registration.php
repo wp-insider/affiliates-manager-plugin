@@ -383,6 +383,7 @@ jQuery(function($) {
 			<td>
 				<select id="ddFieldTypes">
 					<option value="string"><?php _e( 'Text', 'affiliates-manager' ) ?></option>
+                                        <option value="textarea"><?php _e( 'Textarea', 'affiliates-manager' ) ?></option>
 					<option value="number"><?php _e( 'Number', 'affiliates-manager' ) ?></option>
 					<option value="email"><?php _e( 'E-Mail Address', 'affiliates-manager' ) ?></option>
 					<option value="phoneNumber"><?php _e( 'Phone Number', 'affiliates-manager' ) ?></option>

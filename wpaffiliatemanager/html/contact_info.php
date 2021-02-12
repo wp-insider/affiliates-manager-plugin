@@ -52,6 +52,11 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                                 <input type="text" size="20" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo esc_attr($value); ?>" />
                                 <?php
                                 break;
+                            case 'textarea':
+                                ?>
+                                <textarea <?php echo (is_admin() ? 'class="large-text"' : '');?> id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>"><?php echo esc_textarea($value); ?></textarea>
+                                <?php
+                                break;
                             case 'email':
                                 ?>
                                 <input type="text" size="20" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo esc_attr($value); ?>" <?php

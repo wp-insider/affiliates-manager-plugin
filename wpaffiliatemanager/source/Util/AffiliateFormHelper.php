@@ -102,6 +102,9 @@ class WPAM_Util_AffiliateFormHelper {
 					case 'string':
 						$validator->addValidator($fieldName, new WPAM_Validation_StringValidator(1, $affiliateField->length));
 						break;
+                                        case 'textarea':
+						$validator->addValidator($fieldName, new WPAM_Validation_StringValidator(1));
+						break;    
 					case 'email':
 						$validator->addValidator($fieldName, new WPAM_Validation_EmailValidator());
 						break;
