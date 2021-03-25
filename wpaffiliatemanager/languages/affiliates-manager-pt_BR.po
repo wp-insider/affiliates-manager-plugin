@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Affiliate Manager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-01 13:52+0600\n"
-"PO-Revision-Date: 2020-12-01 14:08+0600\n"
+"POT-Creation-Date: 2021-03-25 10:26+0600\n"
+"PO-Revision-Date: 2021-03-25 10:33+0600\n"
 "Last-Translator: admin <admin@finavanguarda.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -120,7 +120,7 @@ msgstr "Erro! Você precisa selecionar multiplos items para uma Ação em Massa"
 msgid "Selected records deleted successfully!"
 msgstr "Itens Selecionados deletados com Sucesso!"
 
-#: classes/ListAffiliatesTable.php:139 classes/ListCommissionTable.php:116
+#: classes/ListAffiliatesTable.php:141 classes/ListCommissionTable.php:116
 msgid "Selected record deleted successfully!"
 msgstr "Item Selecionado deletado com Sucesso!"
 
@@ -320,12 +320,12 @@ msgid "Bounty Type"
 msgstr "Tipo de recompensas"
 
 #: html/admin/affiliate_detail.php:428
-#: html/admin/settings/settings_general.php:161 html/contact_info.php:180
+#: html/admin/settings/settings_general.php:161 html/contact_info.php:185
 msgid "Percentage of Sales"
 msgstr "Percentagem das vendas"
 
 #: html/admin/affiliate_detail.php:429
-#: html/admin/settings/settings_general.php:162 html/contact_info.php:181
+#: html/admin/settings/settings_general.php:162 html/contact_info.php:186
 msgid "Fixed Amount per Sale"
 msgstr "Montante fixo por venda"
 
@@ -455,7 +455,7 @@ msgstr "Situação da Conta"
 
 #: html/admin/affiliate_detail.php:564
 #: html/affiliate_cp_payment_details_form.php:69
-#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:131
+#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:136
 msgid "Payment Details"
 msgstr "Detalhes de pagamento"
 
@@ -519,7 +519,7 @@ msgstr "Criativos"
 #: html/admin/affiliate_detail.php:627 html/admin/creative_update_form.php:132
 #: html/admin/creatives_detail.php:248 html/admin/manage_creatives.php:167
 #: html/admin/settings/settings_messaging.php:87
-#: html/admin/settings/settings_registration.php:440
+#: html/admin/settings/settings_registration.php:441
 #: html/affiliate_creative_list.php:94 html/transaction_table.php:45
 #: html/transaction_table.php:60
 msgid "Type"
@@ -1093,6 +1093,16 @@ msgid ""
 "own purchases."
 msgstr ""
 
+#: html/admin/settings/settings_advanced.php:32
+msgid "Automatically Delete WordPress Account"
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:39
+msgid ""
+"If checked, when an affiliate account is deleted the WordPress user account "
+"for it will be automatically deleted."
+msgstr ""
+
 #: html/admin/settings/settings_aff_pages.php:5
 msgid "Home Page"
 msgstr "Página Principal"
@@ -1385,12 +1395,12 @@ msgid "Custom Field"
 msgstr "Campo personalizado"
 
 #: html/admin/settings/settings_registration.php:368
-#: html/admin/settings/settings_registration.php:442
+#: html/admin/settings/settings_registration.php:443
 msgid "Display Name"
 msgstr "Nome para exibição"
 
 #: html/admin/settings/settings_registration.php:375
-#: html/admin/settings/settings_registration.php:443
+#: html/admin/settings/settings_registration.php:444
 msgid "Field Name"
 msgstr "Nome do campo"
 
@@ -1403,93 +1413,99 @@ msgid "Text"
 msgstr "Texto"
 
 #: html/admin/settings/settings_registration.php:386
+#, fuzzy
+#| msgid "Text"
+msgid "Textarea"
+msgstr "Texto"
+
+#: html/admin/settings/settings_registration.php:387
 msgid "Number"
 msgstr "Número"
 
-#: html/admin/settings/settings_registration.php:387
+#: html/admin/settings/settings_registration.php:388
 msgid "E-Mail Address"
 msgstr "Endereço de email"
 
-#: html/admin/settings/settings_registration.php:388
+#: html/admin/settings/settings_registration.php:389
 msgid "Phone Number"
 msgstr "Número de telefone"
 
-#: html/admin/settings/settings_registration.php:389
+#: html/admin/settings/settings_registration.php:390
 msgid "State Code (US)"
 msgstr "Código de estado"
 
-#: html/admin/settings/settings_registration.php:390
+#: html/admin/settings/settings_registration.php:391
 msgid "Zip Code (US)"
 msgstr "CEP "
 
-#: html/admin/settings/settings_registration.php:391
+#: html/admin/settings/settings_registration.php:392
 msgid "Country Code"
 msgstr "Código do país"
 
-#: html/admin/settings/settings_registration.php:392
+#: html/admin/settings/settings_registration.php:393
 msgid "Social Security Number (US)"
 msgstr "CPF"
 
-#: html/admin/settings/settings_registration.php:399
-#: html/admin/settings/settings_registration.php:444
+#: html/admin/settings/settings_registration.php:400
+#: html/admin/settings/settings_registration.php:445
 msgid "Max Length"
 msgstr "Comprimento máximo"
 
-#: html/admin/settings/settings_registration.php:412
+#: html/admin/settings/settings_registration.php:413
 msgid "Available Payout Methods"
 msgstr "Métodos de pagamento disponíveis"
 
-#: html/admin/settings/settings_registration.php:418
+#: html/admin/settings/settings_registration.php:419
 #: source/Data/Models/AffiliateModel.php:182
 msgid "Check"
 msgstr "Verificar"
 
-#: html/admin/settings/settings_registration.php:422
+#: html/admin/settings/settings_registration.php:423
 #: source/Data/Models/AffiliateModel.php:176
 msgid "PayPal"
 msgstr "PayPal"
 
-#: html/admin/settings/settings_registration.php:426
+#: html/admin/settings/settings_registration.php:427
 #: source/Data/Models/AffiliateModel.php:179
 msgid "Manual"
 msgstr "Manual"
 
-#: html/admin/settings/settings_registration.php:431
+#: html/admin/settings/settings_registration.php:432
 msgid "Affiliate Register Fields"
 msgstr "Filial campos do registo"
 
-#: html/admin/settings/settings_registration.php:434
+#: html/admin/settings/settings_registration.php:435
 msgid "Add Custom Field"
 msgstr "Adicionar Campo Personalizado"
 
-#: html/admin/settings/settings_registration.php:439
+#: html/admin/settings/settings_registration.php:440
 msgid "Enabled"
 msgstr "Habilitado"
 
-#: html/admin/settings/settings_registration.php:441
+#: html/admin/settings/settings_registration.php:442
 msgid "Field Format"
 msgstr "Formato do campo"
 
-#: html/admin/settings/settings_registration.php:445
+#: html/admin/settings/settings_registration.php:446
 msgid "Required"
 msgstr "Necessário"
 
-#: html/admin/settings/settings_registration.php:456
+#: html/admin/settings/settings_registration.php:457
 msgid "Affiliates Homepage Message"
 msgstr "Mensagem Central dos Afiliados"
 
-#: html/admin/settings/settings_registration.php:460
+#: html/admin/settings/settings_registration.php:461
 msgid ""
 "This message is shown to a normal visitor who is not logged into WordPress"
 msgstr ""
 
-#: html/admin/settings/settings_registration.php:465
+#: html/admin/settings/settings_registration.php:466
 #, fuzzy
 #| msgid "Affiliates Homepage Message"
 msgid "Affiliates Homepage Message (Logged in but not an affiliate)"
 msgstr "Mensagem Central dos Afiliados"
 
-#: html/admin/settings/settings_registration.php:469
+#: html/admin/settings/settings_registration.php:470
 msgid ""
 "This message is shown to a user who is logged into WordPress but not an "
 "affiliate"
@@ -1590,18 +1606,18 @@ msgstr ""
 "conta atinge o montante mínimo de pagamento."
 
 #: html/affiliate_cp_payment_details_form.php:79
-#: html/affiliate_cp_payment_details_simple.php:24 html/contact_info.php:137
+#: html/affiliate_cp_payment_details_simple.php:24 html/contact_info.php:142
 msgid "Method"
 msgstr "Método"
 
 #: html/affiliate_cp_payment_details_form.php:96
-#: html/affiliate_cp_payment_details_simple.php:41 html/contact_info.php:166
+#: html/affiliate_cp_payment_details_simple.php:41 html/contact_info.php:171
 msgid "PayPal E-Mail Address"
 msgstr "Endereço de E-Mail de PayPal"
 
 #: html/affiliate_cp_payment_details_form.php:109
 #: html/affiliate_cp_payment_details_simple.php:54
-#: source/Util/AffiliateFormHelper.php:153
+#: source/Util/AffiliateFormHelper.php:156
 msgid "Paper Check"
 msgstr "Seleção de papel"
 
@@ -1726,7 +1742,7 @@ msgid ""
 "register again. Simply go to the affiliate portal and start referring users."
 msgstr ""
 
-#: html/affiliate_register_form.php:24 html/contact_info.php:207
+#: html/affiliate_register_form.php:24 html/contact_info.php:212
 msgid "* Required fields"
 msgstr "* Campos obrigatórios"
 
@@ -1742,19 +1758,19 @@ msgid ""
 "account then try a new registration."
 msgstr "Se você quer usar um Email diferente, logue em outra conta WordPress"
 
-#: html/affiliate_register_form.php:80
+#: html/affiliate_register_form.php:84
 msgid "I have read and agree to the"
 msgstr "Eu li e aceito ao"
 
-#: html/affiliate_register_form.php:80
+#: html/affiliate_register_form.php:84
 msgid "Terms and Conditions"
 msgstr "Termos e Condições"
 
-#: html/affiliate_register_form.php:81
+#: html/affiliate_register_form.php:85
 msgid "You must agree to the terms."
 msgstr "Você deve concordar com os termos."
 
-#: html/affiliate_register_form.php:92
+#: html/affiliate_register_form.php:96
 msgid "Submit Application"
 msgstr "Apresentar a candidatura"
 
@@ -1762,7 +1778,7 @@ msgstr "Apresentar a candidatura"
 msgid "Contact Information"
 msgstr "Informações de contato"
 
-#: html/contact_info.php:102
+#: html/contact_info.php:107
 #, php-format
 msgid ""
 "There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s"
@@ -1771,33 +1787,33 @@ msgstr ""
 "Existe uma alteração pendente de seu e-mail para <code>%1$ s</code>. <a href="
 "\"%2$s\"> Cancelar</a>"
 
-#: html/contact_info.php:110
+#: html/contact_info.php:115
 msgid "New Password"
 msgstr ""
 
-#: html/contact_info.php:119
+#: html/contact_info.php:124
 msgid "Repeat New Password"
 msgstr ""
 
-#: html/contact_info.php:175
+#: html/contact_info.php:180
 msgid "Bounty Type *"
 msgstr "Tipo de recompensas *"
 
-#: html/contact_info.php:192
+#: html/contact_info.php:197
 #, php-format
 msgid "Bounty Rate (%s per Sale) *"
 msgstr "Taxa de recompensa (%s por venda) *"
 
-#: html/contact_info.php:192
+#: html/contact_info.php:197
 #, php-format
 msgid "Bounty Rate (% of Sale) *"
 msgstr "Taxa de recompensa (% de venda) *"
 
-#: html/contact_info.php:209
+#: html/contact_info.php:214
 msgid "+ Custom fields"
 msgstr "+ Campos Personalizados"
 
-#: html/contact_info.php:213
+#: html/contact_info.php:218
 msgid "Save Changes"
 msgstr "Salvar as alterações"
 
@@ -2661,11 +2677,11 @@ msgstr "é um e-mail bloqueado"
 msgid "is in use"
 msgstr "está em uso"
 
-#: source/Util/AffiliateFormHelper.php:156
+#: source/Util/AffiliateFormHelper.php:159
 msgid "PayPal Transfer"
 msgstr "Transferência PayPal"
 
-#: source/Util/AffiliateFormHelper.php:159
+#: source/Util/AffiliateFormHelper.php:162
 msgid "Manual Transfer"
 msgstr "Transferência Manual"
 

@@ -26,4 +26,17 @@ $home_url = home_url('/');
 			?>/><p class="description"><?php _e('If checked, your affiliates will not be able to earn a commission on their own purchases.', 'affiliates-manager');?></p>
 		</td>
 	</tr>
+                <tr>
+		<th width="200">
+			<label for="autoDeleteWPUserAccount">
+				<?php _e('Automatically Delete WordPress Account', 'affiliates-manager');?>
+			</label>
+		</th>
+		<td>
+			<input type="checkbox" id="autoDeleteWPUserAccount" name="autoDeleteWPUserAccount" <?php
+			if ($this->viewData['request']['autoDeleteWPUserAccount'])
+				echo 'checked="checked"';
+			?>/><p class="description"><?php _e('If checked, when an affiliate account is deleted the WordPress user account for it will be automatically deleted.', 'affiliates-manager');?></p>
+		</td>
+	</tr>
 </table>

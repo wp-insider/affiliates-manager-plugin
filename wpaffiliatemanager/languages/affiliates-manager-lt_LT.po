@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2020-12-01 13:52+0600\n"
-"PO-Revision-Date: 2020-12-01 14:07+0600\n"
+"POT-Creation-Date: 2021-03-25 10:26+0600\n"
+"PO-Revision-Date: 2021-03-25 10:31+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: lt_LT\n"
@@ -123,7 +123,7 @@ msgstr "Klaida! Jums reikia pasirinkti kelis įrašus atlikti urminiam veiksmui!
 msgid "Selected records deleted successfully!"
 msgstr "Pasirinkti įrašai ištrinti sėkmingai!"
 
-#: classes/ListAffiliatesTable.php:139 classes/ListCommissionTable.php:116
+#: classes/ListAffiliatesTable.php:141 classes/ListCommissionTable.php:116
 msgid "Selected record deleted successfully!"
 msgstr "Pasirinkti įrašas ištrintas sėkmingai!"
 
@@ -321,12 +321,12 @@ msgid "Bounty Type"
 msgstr "Prizo Tipas"
 
 #: html/admin/affiliate_detail.php:428
-#: html/admin/settings/settings_general.php:161 html/contact_info.php:180
+#: html/admin/settings/settings_general.php:161 html/contact_info.php:185
 msgid "Percentage of Sales"
 msgstr "Procentais nuo Pardavimo"
 
 #: html/admin/affiliate_detail.php:429
-#: html/admin/settings/settings_general.php:162 html/contact_info.php:181
+#: html/admin/settings/settings_general.php:162 html/contact_info.php:186
 msgid "Fixed Amount per Sale"
 msgstr "Fiksuota Suma už Pardavimą"
 
@@ -456,7 +456,7 @@ msgstr "Sąskaitos būsena"
 
 #: html/admin/affiliate_detail.php:564
 #: html/affiliate_cp_payment_details_form.php:69
-#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:131
+#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:136
 msgid "Payment Details"
 msgstr "Mokėjimo informacija"
 
@@ -520,7 +520,7 @@ msgstr "Skelbimai"
 #: html/admin/affiliate_detail.php:627 html/admin/creative_update_form.php:132
 #: html/admin/creatives_detail.php:248 html/admin/manage_creatives.php:167
 #: html/admin/settings/settings_messaging.php:87
-#: html/admin/settings/settings_registration.php:440
+#: html/admin/settings/settings_registration.php:441
 #: html/affiliate_creative_list.php:94 html/transaction_table.php:45
 #: html/transaction_table.php:60
 msgid "Type"
@@ -1095,6 +1095,16 @@ msgstr ""
 "Jei pažymėsite, jūsų partneriai negalės uždirbti komisinių už savo pačių "
 "pirkinius."
 
+#: html/admin/settings/settings_advanced.php:32
+msgid "Automatically Delete WordPress Account"
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:39
+msgid ""
+"If checked, when an affiliate account is deleted the WordPress user account "
+"for it will be automatically deleted."
+msgstr ""
+
 #: html/admin/settings/settings_aff_pages.php:5
 msgid "Home Page"
 msgstr "Pagrindinis Puslapis"
@@ -1415,12 +1425,12 @@ msgid "Custom Field"
 msgstr "Tinkintas laukas"
 
 #: html/admin/settings/settings_registration.php:368
-#: html/admin/settings/settings_registration.php:442
+#: html/admin/settings/settings_registration.php:443
 msgid "Display Name"
 msgstr "Rodomas vardas"
 
 #: html/admin/settings/settings_registration.php:375
-#: html/admin/settings/settings_registration.php:443
+#: html/admin/settings/settings_registration.php:444
 msgid "Field Name"
 msgstr "Lauko pavadinimas"
 
@@ -1433,93 +1443,99 @@ msgid "Text"
 msgstr "Tekstas"
 
 #: html/admin/settings/settings_registration.php:386
+#, fuzzy
+#| msgid "Text"
+msgid "Textarea"
+msgstr "Tekstas"
+
+#: html/admin/settings/settings_registration.php:387
 msgid "Number"
 msgstr "Skaičius"
 
-#: html/admin/settings/settings_registration.php:387
+#: html/admin/settings/settings_registration.php:388
 msgid "E-Mail Address"
 msgstr "El. pašto adresas"
 
-#: html/admin/settings/settings_registration.php:388
+#: html/admin/settings/settings_registration.php:389
 msgid "Phone Number"
 msgstr "Telefono numeris"
 
-#: html/admin/settings/settings_registration.php:389
+#: html/admin/settings/settings_registration.php:390
 msgid "State Code (US)"
 msgstr "Valstijos kodas (JAV)"
 
-#: html/admin/settings/settings_registration.php:390
+#: html/admin/settings/settings_registration.php:391
 msgid "Zip Code (US)"
 msgstr "Pašto kodas (JAV)"
 
-#: html/admin/settings/settings_registration.php:391
+#: html/admin/settings/settings_registration.php:392
 msgid "Country Code"
 msgstr "Šalies kodas"
 
-#: html/admin/settings/settings_registration.php:392
+#: html/admin/settings/settings_registration.php:393
 msgid "Social Security Number (US)"
 msgstr "Socialinio draudimo numeris (JAV)"
 
-#: html/admin/settings/settings_registration.php:399
-#: html/admin/settings/settings_registration.php:444
+#: html/admin/settings/settings_registration.php:400
+#: html/admin/settings/settings_registration.php:445
 msgid "Max Length"
 msgstr "Didžiausias ilgis"
 
-#: html/admin/settings/settings_registration.php:412
+#: html/admin/settings/settings_registration.php:413
 msgid "Available Payout Methods"
 msgstr "Galimi išmokėjimo būdai"
 
-#: html/admin/settings/settings_registration.php:418
+#: html/admin/settings/settings_registration.php:419
 #: source/Data/Models/AffiliateModel.php:182
 msgid "Check"
 msgstr "Čekis"
 
-#: html/admin/settings/settings_registration.php:422
+#: html/admin/settings/settings_registration.php:423
 #: source/Data/Models/AffiliateModel.php:176
 msgid "PayPal"
 msgstr "„PayPal“"
 
-#: html/admin/settings/settings_registration.php:426
+#: html/admin/settings/settings_registration.php:427
 #: source/Data/Models/AffiliateModel.php:179
 msgid "Manual"
 msgstr "Rankinis"
 
-#: html/admin/settings/settings_registration.php:431
+#: html/admin/settings/settings_registration.php:432
 msgid "Affiliate Register Fields"
 msgstr "Partnerių registro laukai"
 
-#: html/admin/settings/settings_registration.php:434
+#: html/admin/settings/settings_registration.php:435
 msgid "Add Custom Field"
 msgstr "Pridėti Tinkintą Laukelį"
 
-#: html/admin/settings/settings_registration.php:439
+#: html/admin/settings/settings_registration.php:440
 msgid "Enabled"
 msgstr "Įjungta"
 
-#: html/admin/settings/settings_registration.php:441
+#: html/admin/settings/settings_registration.php:442
 msgid "Field Format"
 msgstr "Lauko Formatas"
 
-#: html/admin/settings/settings_registration.php:445
+#: html/admin/settings/settings_registration.php:446
 msgid "Required"
 msgstr "Būtinas"
 
-#: html/admin/settings/settings_registration.php:456
+#: html/admin/settings/settings_registration.php:457
 msgid "Affiliates Homepage Message"
 msgstr "Partnerių Pradinio puslapio Pranešimas"
 
-#: html/admin/settings/settings_registration.php:460
+#: html/admin/settings/settings_registration.php:461
 msgid ""
 "This message is shown to a normal visitor who is not logged into WordPress"
 msgstr ""
 "Šis pranešimas rodomas normaliems lankytojams, kurie nėra prisijungę prie "
 "WordPress"
 
-#: html/admin/settings/settings_registration.php:465
+#: html/admin/settings/settings_registration.php:466
 msgid "Affiliates Homepage Message (Logged in but not an affiliate)"
 msgstr "Partnerių Pradinio Puslapio Pranešimas (Prisijungęs, bet ne partneris)"
 
-#: html/admin/settings/settings_registration.php:469
+#: html/admin/settings/settings_registration.php:470
 msgid ""
 "This message is shown to a user who is logged into WordPress but not an "
 "affiliate"
@@ -1620,18 +1636,18 @@ msgstr ""
 "minimalią išmokos sumą."
 
 #: html/affiliate_cp_payment_details_form.php:79
-#: html/affiliate_cp_payment_details_simple.php:24 html/contact_info.php:137
+#: html/affiliate_cp_payment_details_simple.php:24 html/contact_info.php:142
 msgid "Method"
 msgstr "Metodas"
 
 #: html/affiliate_cp_payment_details_form.php:96
-#: html/affiliate_cp_payment_details_simple.php:41 html/contact_info.php:166
+#: html/affiliate_cp_payment_details_simple.php:41 html/contact_info.php:171
 msgid "PayPal E-Mail Address"
 msgstr "„PayPal“ el. Pašto adresas"
 
 #: html/affiliate_cp_payment_details_form.php:109
 #: html/affiliate_cp_payment_details_simple.php:54
-#: source/Util/AffiliateFormHelper.php:153
+#: source/Util/AffiliateFormHelper.php:156
 msgid "Paper Check"
 msgstr "Popierinis čekis"
 
@@ -1763,7 +1779,7 @@ msgstr ""
 "registruotis. Tiesiog eikite į partnerių portalą ir pradėkite skelbti "
 "nuorodas."
 
-#: html/affiliate_register_form.php:24 html/contact_info.php:207
+#: html/affiliate_register_form.php:24 html/contact_info.php:212
 msgid "* Required fields"
 msgstr "* Privalomi laukai"
 
@@ -1783,19 +1799,19 @@ msgstr ""
 "Jei norite naudoti kitą el. pašto adresą, atsijunkite nuo savo „WordPress“ "
 "paskyros ir bandykite registruotis iš naujo."
 
-#: html/affiliate_register_form.php:80
+#: html/affiliate_register_form.php:84
 msgid "I have read and agree to the"
 msgstr "Aš perskaičiau ir sutinku"
 
-#: html/affiliate_register_form.php:80
+#: html/affiliate_register_form.php:84
 msgid "Terms and Conditions"
 msgstr "Taisyklės ir sąlygos"
 
-#: html/affiliate_register_form.php:81
+#: html/affiliate_register_form.php:85
 msgid "You must agree to the terms."
 msgstr "Jūs turite sutikti su sąlygomis."
 
-#: html/affiliate_register_form.php:92
+#: html/affiliate_register_form.php:96
 msgid "Submit Application"
 msgstr "Pateikti Paraišką"
 
@@ -1803,7 +1819,7 @@ msgstr "Pateikti Paraišką"
 msgid "Contact Information"
 msgstr "Kontaktinė Informacija"
 
-#: html/contact_info.php:102
+#: html/contact_info.php:107
 #, php-format
 msgid ""
 "There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s"
@@ -1812,33 +1828,33 @@ msgstr ""
 "Laukiama jūsų el. pašto pakeitimo į „ <code>%1$s</code> . <a href=\"%2$s"
 "\">Atšaukti</a>"
 
-#: html/contact_info.php:110
+#: html/contact_info.php:115
 msgid "New Password"
 msgstr "Naujas slaptažodis"
 
-#: html/contact_info.php:119
+#: html/contact_info.php:124
 msgid "Repeat New Password"
 msgstr "Pakartokite naują slaptažodį"
 
-#: html/contact_info.php:175
+#: html/contact_info.php:180
 msgid "Bounty Type *"
 msgstr "Prizo Tipas *"
 
-#: html/contact_info.php:192
+#: html/contact_info.php:197
 #, php-format
 msgid "Bounty Rate (%s per Sale) *"
 msgstr "Prizo procentas (%s už pardavimą) *"
 
-#: html/contact_info.php:192
+#: html/contact_info.php:197
 #, php-format
 msgid "Bounty Rate (% of Sale) *"
 msgstr "Prizo dydis (% nuo pardavimų) *"
 
-#: html/contact_info.php:209
+#: html/contact_info.php:214
 msgid "+ Custom fields"
 msgstr "+ Tinkinti Laukai"
 
-#: html/contact_info.php:213
+#: html/contact_info.php:218
 msgid "Save Changes"
 msgstr "Išsaugoti pakeitimus"
 
@@ -2805,11 +2821,11 @@ msgstr "yra užblokuotas el. paštas "
 msgid "is in use"
 msgstr "yra naudojamas"
 
-#: source/Util/AffiliateFormHelper.php:156
+#: source/Util/AffiliateFormHelper.php:159
 msgid "PayPal Transfer"
 msgstr "„PayPal“ pervedimas"
 
-#: source/Util/AffiliateFormHelper.php:159
+#: source/Util/AffiliateFormHelper.php:162
 msgid "Manual Transfer"
 msgstr "Rankinis pervedimas"
 

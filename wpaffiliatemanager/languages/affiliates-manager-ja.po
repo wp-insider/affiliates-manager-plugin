@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2020-12-01 13:52+0600\n"
-"PO-Revision-Date: 2021-02-20 14:17-0300\n"
+"POT-Creation-Date: 2021-03-25 10:26+0600\n"
+"PO-Revision-Date: 2021-03-25 10:31+0600\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: ja\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: boot-strap.php:39
@@ -70,8 +70,10 @@ msgid "Balance"
 msgstr "集計"
 
 #: classes/ListAffiliatesTable.php:64
+#, fuzzy
+#| msgid "Earnings:"
 msgid "Earnings"
-msgstr 報酬額
+msgstr "報酬額"
 
 #: classes/ListAffiliatesTable.php:65
 #: html/admin/paypalpayments/review_affiliates.php:55
@@ -118,7 +120,7 @@ msgstr ""
 msgid "Selected records deleted successfully!"
 msgstr ""
 
-#: classes/ListAffiliatesTable.php:139 classes/ListCommissionTable.php:116
+#: classes/ListAffiliatesTable.php:141 classes/ListCommissionTable.php:116
 msgid "Selected record deleted successfully!"
 msgstr ""
 
@@ -314,12 +316,12 @@ msgid "Bounty Type"
 msgstr "成果タイプ"
 
 #: html/admin/affiliate_detail.php:428
-#: html/admin/settings/settings_general.php:161 html/contact_info.php:180
+#: html/admin/settings/settings_general.php:161 html/contact_info.php:185
 msgid "Percentage of Sales"
 msgstr "売り上げの％"
 
 #: html/admin/affiliate_detail.php:429
-#: html/admin/settings/settings_general.php:162 html/contact_info.php:181
+#: html/admin/settings/settings_general.php:162 html/contact_info.php:186
 msgid "Fixed Amount per Sale"
 msgstr "注文ごと"
 
@@ -449,7 +451,7 @@ msgstr "アカウントの報酬状況"
 
 #: html/admin/affiliate_detail.php:564
 #: html/affiliate_cp_payment_details_form.php:69
-#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:131
+#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:136
 msgid "Payment Details"
 msgstr "支払い情報"
 
@@ -513,7 +515,7 @@ msgstr "広告"
 #: html/admin/affiliate_detail.php:627 html/admin/creative_update_form.php:132
 #: html/admin/creatives_detail.php:248 html/admin/manage_creatives.php:167
 #: html/admin/settings/settings_messaging.php:87
-#: html/admin/settings/settings_registration.php:440
+#: html/admin/settings/settings_registration.php:441
 #: html/affiliate_creative_list.php:94 html/transaction_table.php:45
 #: html/transaction_table.php:60
 msgid "Type"
@@ -818,8 +820,8 @@ msgid ""
 "You have not configured the Affiliate Manager with your PayPal account "
 "information. You can do so in the <a href=\"%s\">Payment Settings page</a>."
 msgstr ""
-"まだペイパルアカウント設定が完了していません "
-"設定は<a href=\"%s\">支払い設定ページ</a>にてできます"
+"まだペイパルアカウント設定が完了していません 設定は<a href=\"%s\">支払い設定"
+"ページ</a>にてできます"
 
 #: html/admin/paypalpayments/pending_payments.php:4
 msgid "View Existing Payments"
@@ -1061,13 +1063,23 @@ msgstr ""
 
 #: html/admin/settings/settings_advanced.php:19
 msgid "Disable Own Referrals"
-msgstr 自己アフィリを無効にする
+msgstr ""
 
 #: html/admin/settings/settings_advanced.php:26
 msgid ""
 "If checked, your affiliates will not be able to earn a commission on their "
 "own purchases."
 msgstr "自己アフィリ"
+
+#: html/admin/settings/settings_advanced.php:32
+msgid "Automatically Delete WordPress Account"
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:39
+msgid ""
+"If checked, when an affiliate account is deleted the WordPress user account "
+"for it will be automatically deleted."
+msgstr ""
 
 #: html/admin/settings/settings_aff_pages.php:5
 msgid "Home Page"
@@ -1160,15 +1172,17 @@ msgstr "デバッグを有効にする"
 msgid ""
 "If checked, debug output will be written to log files. This is useful for "
 "troubleshooting post payment failures."
-msgstr "チェックを入れると、デバッグがログファイルに記録されます。トラブルシューティングのときに役立ちます"
+msgstr ""
+"チェックを入れると、デバッグがログファイルに記録されます。トラブルシューティ"
+"ングのときに役立ちます"
 
 #: html/admin/settings/settings_general.php:223
 msgid ""
 "You can check the debug log file by clicking on the link below (The log file "
 "can be viewed using any text editor):"
 msgstr ""
-"デバッグログファイルを見るには以下のリンクをクリックしてください"
-"テキストエディタにて表示することができます"
+"デバッグログファイルを見るには以下のリンクをクリックしてくださいテキストエ"
+"ディタにて表示することができます"
 
 #: html/admin/settings/settings_general.php:227
 msgid "Reset Debug Log file"
@@ -1210,8 +1224,8 @@ msgid ""
 "* Some messages have been modified. These will <strong>NOT</strong> be saved "
 "to the database until you click 'Save Settings' button below."
 msgstr ""
-"* メッセージが変更されましたが、下の保存ボタンを押さないと"
-"<strong>保存されません</strong>のでご注意ください。"
+"* メッセージが変更されましたが、下の保存ボタンを押さないと<strong>保存されま"
+"せん</strong>のでご注意ください。"
 
 #: html/admin/settings/settings_messaging.php:131
 msgid "Messaging Related Options"
@@ -1230,9 +1244,7 @@ msgstr "管理者のメールアドレス"
 msgid ""
 "Check this box if you want the admin of this site to get notified via email "
 "after a new affiliate signup."
-msgstr ""
-"パートナーの新規登録があったときに"
-"このメールにメッセージが送信されます"
+msgstr "パートナーの新規登録があったときにこのメールにメッセージが送信されます"
 
 #: html/admin/settings/settings_messaging.php:149
 #: html/admin/settings/settings_messaging.php:173
@@ -1243,9 +1255,7 @@ msgstr "管理者のメールアドレス"
 msgid ""
 "The email address to which the admin will get notified after a new affiliate "
 "signup."
-msgstr ""
-"パートナーの新規登録があったときに"
-"このメールにメッセージが送信されます"
+msgstr "パートナーの新規登録があったときにこのメールにメッセージが送信されます"
 
 #: html/admin/settings/settings_messaging.php:156
 msgid "Send Commission Notification:"
@@ -1259,25 +1269,19 @@ msgstr "パートナーにメールで知らせる"
 msgid ""
 "Check this box if you want your affiliates to get notified via email when "
 "they earn a commission."
-msgstr ""
-"チェックをいれると"
-"注文が発生したときにパートナーにメールを送信します"
+msgstr "チェックをいれると注文が発生したときにパートナーにメールを送信します"
 
 #: html/admin/settings/settings_messaging.php:171
 msgid ""
 "Check this box if you want the admin of this site to get notified via email "
 "when an affiliate earns a commission."
-msgstr ""
-"チェックをいれると "
-"注文が発生したときに管理者にメールを送信します"
+msgstr "チェックをいれると 注文が発生したときに管理者にメールを送信します"
 
 #: html/admin/settings/settings_messaging.php:175
 msgid ""
 "The email address to which the admin will get notified when an affiliate "
 "earns a commission."
-msgstr ""
-"パートナーに成果報酬が発生したときに管理者に送られる"
-"メールのアドレス"
+msgstr "パートナーに成果報酬が発生したときに管理者に送られるメールのアドレス"
 
 #: html/admin/settings/settings_payment.php:16
 msgid ""
@@ -1357,12 +1361,12 @@ msgid "Custom Field"
 msgstr "カスタムフィールド"
 
 #: html/admin/settings/settings_registration.php:368
-#: html/admin/settings/settings_registration.php:442
+#: html/admin/settings/settings_registration.php:443
 msgid "Display Name"
 msgstr "表示ネーム"
 
 #: html/admin/settings/settings_registration.php:375
-#: html/admin/settings/settings_registration.php:443
+#: html/admin/settings/settings_registration.php:444
 msgid "Field Name"
 msgstr "フィールドネーム"
 
@@ -1375,91 +1379,99 @@ msgid "Text"
 msgstr "テキスト"
 
 #: html/admin/settings/settings_registration.php:386
+#, fuzzy
+#| msgid "Text"
+msgid "Textarea"
+msgstr "テキスト"
+
+#: html/admin/settings/settings_registration.php:387
 msgid "Number"
 msgstr "数字"
 
-#: html/admin/settings/settings_registration.php:387
+#: html/admin/settings/settings_registration.php:388
 msgid "E-Mail Address"
 msgstr "メール"
 
-#: html/admin/settings/settings_registration.php:388
+#: html/admin/settings/settings_registration.php:389
 msgid "Phone Number"
 msgstr ""
 
-#: html/admin/settings/settings_registration.php:389
+#: html/admin/settings/settings_registration.php:390
 msgid "State Code (US)"
 msgstr ""
 
-#: html/admin/settings/settings_registration.php:390
+#: html/admin/settings/settings_registration.php:391
 msgid "Zip Code (US)"
 msgstr ""
 
-#: html/admin/settings/settings_registration.php:391
+#: html/admin/settings/settings_registration.php:392
 msgid "Country Code"
 msgstr "国コード"
 
-#: html/admin/settings/settings_registration.php:392
+#: html/admin/settings/settings_registration.php:393
 msgid "Social Security Number (US)"
 msgstr ""
 
-#: html/admin/settings/settings_registration.php:399
-#: html/admin/settings/settings_registration.php:444
+#: html/admin/settings/settings_registration.php:400
+#: html/admin/settings/settings_registration.php:445
 msgid "Max Length"
 msgstr ""
 
-#: html/admin/settings/settings_registration.php:412
+#: html/admin/settings/settings_registration.php:413
 msgid "Available Payout Methods"
 msgstr "利用可能な支払方法"
 
-#: html/admin/settings/settings_registration.php:418
+#: html/admin/settings/settings_registration.php:419
 #: source/Data/Models/AffiliateModel.php:182
 msgid "Check"
 msgstr "小切手"
 
-#: html/admin/settings/settings_registration.php:422
+#: html/admin/settings/settings_registration.php:423
 #: source/Data/Models/AffiliateModel.php:176
 msgid "PayPal"
 msgstr "ペイパル"
 
-#: html/admin/settings/settings_registration.php:426
+#: html/admin/settings/settings_registration.php:427
 #: source/Data/Models/AffiliateModel.php:179
 msgid "Manual"
 msgstr "銀行振込"
 
-#: html/admin/settings/settings_registration.php:431
+#: html/admin/settings/settings_registration.php:432
 msgid "Affiliate Register Fields"
 msgstr ""
 
-#: html/admin/settings/settings_registration.php:434
+#: html/admin/settings/settings_registration.php:435
 msgid "Add Custom Field"
 msgstr "カスタムフィールドを追加する"
 
-#: html/admin/settings/settings_registration.php:439
+#: html/admin/settings/settings_registration.php:440
 msgid "Enabled"
 msgstr "有効にする"
 
-#: html/admin/settings/settings_registration.php:441
+#: html/admin/settings/settings_registration.php:442
 msgid "Field Format"
 msgstr "フォーマット"
 
-#: html/admin/settings/settings_registration.php:445
+#: html/admin/settings/settings_registration.php:446
+#, fuzzy
+#| msgid "* Required fields"
 msgid "Required"
-msgstr 必須項目
+msgstr "必須項目"
 
-#: html/admin/settings/settings_registration.php:456
+#: html/admin/settings/settings_registration.php:457
 msgid "Affiliates Homepage Message"
 msgstr ""
 
-#: html/admin/settings/settings_registration.php:460
+#: html/admin/settings/settings_registration.php:461
 msgid ""
 "This message is shown to a normal visitor who is not logged into WordPress"
 msgstr ""
 
-#: html/admin/settings/settings_registration.php:465
+#: html/admin/settings/settings_registration.php:466
 msgid "Affiliates Homepage Message (Logged in but not an affiliate)"
 msgstr ""
 
-#: html/admin/settings/settings_registration.php:469
+#: html/admin/settings/settings_registration.php:470
 msgid ""
 "This message is shown to a user who is logged into WordPress but not an "
 "affiliate"
@@ -1537,7 +1549,9 @@ msgstr "支払い方法が送信されました"
 msgid ""
 "Now would be a great time to go pick <a href=\"%s\">some creatives</a> and "
 "get started."
-msgstr "それではさっそく<a href=\"%s\">広告</a>からアフィリエイトリンクを取得しましょう"
+msgstr ""
+"それではさっそく<a href=\"%s\">広告</a>からアフィリエイトリンクを取得しましょ"
+"う"
 
 #: html/affiliate_cp_payment_details_form.php:70
 #: html/affiliate_cp_payment_details_simple.php:14
@@ -1552,18 +1566,18 @@ msgid ""
 msgstr "最低支払額に達したときには次の支払い方法が適応されます"
 
 #: html/affiliate_cp_payment_details_form.php:79
-#: html/affiliate_cp_payment_details_simple.php:24 html/contact_info.php:137
+#: html/affiliate_cp_payment_details_simple.php:24 html/contact_info.php:142
 msgid "Method"
 msgstr "支払い方法"
 
 #: html/affiliate_cp_payment_details_form.php:96
-#: html/affiliate_cp_payment_details_simple.php:41 html/contact_info.php:166
+#: html/affiliate_cp_payment_details_simple.php:41 html/contact_info.php:171
 msgid "PayPal E-Mail Address"
 msgstr "ペイパルのメールアドレス"
 
 #: html/affiliate_cp_payment_details_form.php:109
 #: html/affiliate_cp_payment_details_simple.php:54
-#: source/Util/AffiliateFormHelper.php:153
+#: source/Util/AffiliateFormHelper.php:156
 msgid "Paper Check"
 msgstr ""
 
@@ -1631,8 +1645,6 @@ msgstr "任意のアフィリエイトリンクの作成"
 msgid ""
 "Enter any URL from this site in the form below to generate a referral link"
 msgstr ""
-"デフォルト以外のページにリンクを貼る場合、リンク先のURLをこちらボックスに
-"コピペしてください。"
 
 #: html/affiliate_creative_list.php:81
 msgid "Below is your referral URL (You can copy it and share anywhere)"
@@ -1683,7 +1695,7 @@ msgid ""
 "register again. Simply go to the affiliate portal and start referring users."
 msgstr ""
 
-#: html/affiliate_register_form.php:24 html/contact_info.php:207
+#: html/affiliate_register_form.php:24 html/contact_info.php:212
 msgid "* Required fields"
 msgstr "必須項目"
 
@@ -1691,31 +1703,29 @@ msgstr "必須項目"
 msgid ""
 "This is the email address associated with your currently logged in WordPress "
 "user account."
-msgstr ""
-"このメールアドレスはワードプレスのユーザーのログインに"
-"使用されています"
+msgstr "このメールアドレスはワードプレスのユーザーのログインに使用されています"
 
 #: html/affiliate_register_form.php:38
 msgid ""
 "If you want to use a different email address, log out of your WordPress "
 "account then try a new registration."
 msgstr ""
-"新規パートナーの登録を行う場合は、一度ログアウトしてから別のメールで"
-"登録してください"
+"新規パートナーの登録を行う場合は、一度ログアウトしてから別のメールで登録して"
+"ください"
 
-#: html/affiliate_register_form.php:80
+#: html/affiliate_register_form.php:84
 msgid "I have read and agree to the"
 msgstr "利用規約に同意する"
 
-#: html/affiliate_register_form.php:80
+#: html/affiliate_register_form.php:84
 msgid "Terms and Conditions"
 msgstr "利用規約"
 
-#: html/affiliate_register_form.php:81
+#: html/affiliate_register_form.php:85
 msgid "You must agree to the terms."
 msgstr ""
 
-#: html/affiliate_register_form.php:92
+#: html/affiliate_register_form.php:96
 msgid "Submit Application"
 msgstr "送信する"
 
@@ -1723,40 +1733,40 @@ msgstr "送信する"
 msgid "Contact Information"
 msgstr "登録情報"
 
-#: html/contact_info.php:102
+#: html/contact_info.php:107
 #, php-format
 msgid ""
 "There is a pending change of your e-mail to <code>%1$s</code>. <a href=\"%2$s"
 "\">Cancel</a>"
 msgstr "キャンセルする"
 
-#: html/contact_info.php:110
+#: html/contact_info.php:115
 msgid "New Password"
 msgstr "新しいパスワード"
 
-#: html/contact_info.php:119
+#: html/contact_info.php:124
 msgid "Repeat New Password"
 msgstr "新しいパスワードをもう一度入力してください"
 
-#: html/contact_info.php:175
+#: html/contact_info.php:180
 msgid "Bounty Type *"
 msgstr "報酬タイプ"
 
-#: html/contact_info.php:192
+#: html/contact_info.php:197
 #, php-format
 msgid "Bounty Rate (%s per Sale) *"
 msgstr "成果一件あたりの報酬"
 
-#: html/contact_info.php:192
+#: html/contact_info.php:197
 #, php-format
 msgid "Bounty Rate (% of Sale) *"
 msgstr "成果一件あたりの報酬"
 
-#: html/contact_info.php:209
+#: html/contact_info.php:214
 msgid "+ Custom fields"
 msgstr ""
 
-#: html/contact_info.php:213
+#: html/contact_info.php:218
 msgid "Save Changes"
 msgstr "変更を保存する"
 
@@ -1815,7 +1825,8 @@ msgstr "リセットボタン"
 #: source/Admin-menu/wpam-admin-functions-menu.php:52
 msgid ""
 "Do you really want to delete the clicks data? This action cannot be undone."
-msgstr "クリックデータを削除しますか？　元に戻すことはできませんので注意してください"
+msgstr ""
+"クリックデータを削除しますか？　元に戻すことはできませんので注意してください"
 
 #: source/Admin-menu/wpam-admin-functions-menu.php:54
 msgid "Start Date:"
@@ -2050,7 +2061,8 @@ msgstr ""
 
 #: source/Data/DatabaseInstaller.php:238
 msgid "Displayed to user at logon if affiliate STATUS = APPROVED"
-msgstr "パートナーのステータスが「承認済み」の場合、ログインユーザーに表示されます"
+msgstr ""
+"パートナーのステータスが「承認済み」の場合、ログインユーザーに表示されます"
 
 #: source/Data/DatabaseInstaller.php:239
 msgid ""
@@ -2060,15 +2072,15 @@ msgid ""
 "specified the terms of your agreement, which you will need to review and "
 "agree to.<br /><br />"
 msgstr ""
-"おめでとうございます。あなたのメディアが承認されました。"
-"アフィリエイトプログラムを始めるまえにもう一つだけ大事なステップがあります。"
-"自分のメディアにアフィリエイトリンクを掲載する前に"
-"必ず利用規約に目を通し"
-"合意してください。<br /><br />"
+"おめでとうございます。あなたのメディアが承認されました。アフィリエイトプログ"
+"ラムを始めるまえにもう一つだけ大事なステップがあります。自分のメディアにア"
+"フィリエイトリンクを掲載する前に必ず利用規約に目を通し合意してください。<br /"
+"><br />"
 
 #: source/Data/DatabaseInstaller.php:242
 msgid "Displayed to user at logon if affiliate STATUS = DECLINED"
-msgstr "パートナーのステータスが「否認済み」の場合、ログインユーザーに表示されます"
+msgstr ""
+"パートナーのステータスが「否認済み」の場合、ログインユーザーに表示されます"
 
 #: source/Data/DatabaseInstaller.php:243 source/Data/DatabaseInstaller.php:271
 msgid "I'm sorry, your application was declined."
@@ -2076,7 +2088,8 @@ msgstr ""
 
 #: source/Data/DatabaseInstaller.php:246
 msgid "Displayed to user at logon if affiliate STATUS = PENDING"
-msgstr "パートナーのステーターすが「保留」の場合、ログインユーザーに表示されます"
+msgstr ""
+"パートナーのステーターすが「保留」の場合、ログインユーザーに表示されます"
 
 #: source/Data/DatabaseInstaller.php:247
 msgid "Your application is still being reviewed. Please check back later!"
@@ -2093,28 +2106,26 @@ msgid ""
 "Your application has been submitted. The store owner will be contacting you "
 "soon.<br /><br />Thank you!<br />"
 msgstr ""
-"アフィリエイトパートナー登録の申し込みを受け付けました。"
-"審査完了までしばらくお待ちください。<br />"
+"アフィリエイトパートナー登録の申し込みを受け付けました。審査完了までしばらく"
+"お待ちください。<br />"
 
 #: source/Data/DatabaseInstaller.php:254
 msgid ""
 "Body of e-mail sent to the affiliate immediately after submitting their "
 "application."
-msgstr ""
-"パートナー登録完了後、メールで送信される"
-"メッセージです"
+msgstr "パートナー登録完了後、メールで送信されるメッセージです"
 
 #: source/Data/DatabaseInstaller.php:255
 msgid "Your application will be reviewed and you will be hearing from us soon!"
-msgstr "アフィリエイトパートナー登録の申し込みを受け付けました。審査完了までしばらくお待ちください。"
+msgstr ""
+"アフィリエイトパートナー登録の申し込みを受け付けました。審査完了までしばらく"
+"お待ちください。"
 
 #: source/Data/DatabaseInstaller.php:274
 msgid ""
 "Body of e-mail sent to the affiliate immediately following their application "
 "being declined."
-msgstr ""
-"パートナー登録が否認されたときにメールで送信される"
-"メッセージです"
+msgstr "パートナー登録が否認されたときにメールで送信されるメッセージです"
 
 #: source/Data/DatabaseInstaller.php:280
 msgid ""
@@ -2127,8 +2138,7 @@ msgid ""
 "Displayed to a newly registered affiliate if automatic affiliate approval "
 "option is enabled."
 msgstr ""
-"パートナー登録の新規登録が「自動承認」に設定してある場合"
-"ページに表示されます"
+"パートナー登録の新規登録が「自動承認」に設定してある場合ページに表示されます"
 
 #: source/Data/DatabaseInstaller.php:293
 msgid ""
@@ -2152,9 +2162,7 @@ msgstr ""
 msgid ""
 "Body of e-mail sent to a newly registered affiliate immediately following "
 "their application being approved."
-msgstr ""
-"パートナー登録が承認された後にメールで送信される"
-"メッセージです"
+msgstr "パートナー登録が承認された後にメールで送信されるメッセージです"
 
 #: source/Data/DatabaseInstaller.php:305
 msgid ""
@@ -2169,8 +2177,7 @@ msgstr ""
 #: source/Data/DatabaseInstaller.php:308
 msgid ""
 "Body of e-mail sent to the affiliate immediately after earning a commission."
-msgstr ""
-"成果報酬が発生したときにパートナーに送金されるメールのメッセージです"
+msgstr "成果報酬が発生したときにパートナーに送金されるメールのメッセージです"
 
 #: source/Data/DatabaseInstaller.php:317
 msgid ""
@@ -2632,11 +2639,11 @@ msgstr ""
 msgid "is in use"
 msgstr "がすでに使用されています"
 
-#: source/Util/AffiliateFormHelper.php:156
+#: source/Util/AffiliateFormHelper.php:159
 msgid "PayPal Transfer"
 msgstr "ペイパル"
 
-#: source/Util/AffiliateFormHelper.php:159
+#: source/Util/AffiliateFormHelper.php:162
 msgid "Manual Transfer"
 msgstr "銀行振込"
 

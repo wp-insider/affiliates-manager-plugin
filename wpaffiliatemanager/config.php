@@ -41,6 +41,7 @@ class WPAM_PluginConfig
         public static $SendAffCommissionNotification = 'wpam_send_aff_commission_notification';
         public static $SendAdminAffCommissionNotification = 'wpam_send_admin_aff_commission_notification';
         public static $AdminAffCommissionNotificationEmail = 'wpam_admin_aff_commission_notification_email';
+        public static $AutoDeleteWPUserAccount = 'wpam_auto_delete_wp_user_account';
 	// paypal
 	public static $PaypalMassPayEnabledOption = 'wpam_paypal_mass_pay_enabled';
 	public static $PaypalAPIUserOption = 'wpam_paypal_api_user';

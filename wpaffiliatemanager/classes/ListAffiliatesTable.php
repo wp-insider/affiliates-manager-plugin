@@ -126,12 +126,14 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
                 }
                 global $wpdb;
                 $record_table_name = WPAM_AFFILIATES_TBL; //The table name for the records
-                $selectdb = $wpdb->get_row("SELECT * FROM $record_table_name WHERE affiliateId='$aid'");
-                $aff_email = $selectdb->email;
-                $user = get_user_by('email', $aff_email);
-                if ($user) {
-                    if (!in_array('administrator', $user->roles)) {
-                        wp_delete_user($user->ID);
+                if(get_option(WPAM_PluginConfig::$AutoDeleteWPUserAccount) == 1){
+                    $selectdb = $wpdb->get_row("SELECT * FROM $record_table_name WHERE affiliateId='$aid'");
+                    $aff_email = $selectdb->email;
+                    $user = get_user_by('email', $aff_email);
+                    if ($user) {
+                        if (!in_array('administrator', $user->roles)) {
+                            wp_delete_user($user->ID);
+                        }
                     }
                 }
                 $updatedb = "DELETE FROM $record_table_name WHERE affiliateId='$aid'";

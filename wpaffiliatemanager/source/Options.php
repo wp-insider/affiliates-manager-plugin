@@ -48,6 +48,7 @@ class WPAM_Options
 		add_option( WPAM_PluginConfig::$PaypalAPIEndPointOption, 'dev' );
                 add_option( WPAM_PluginConfig::$SendAdminRegNotification, true );
                 add_option( WPAM_PluginConfig::$AdminRegNotificationEmail, get_option('admin_email') );
+                add_option( WPAM_PluginConfig::$AutoDeleteWPUserAccount, true );
                 update_option('wpam_options_version', WPAM_OPTIONS_VERSION);
 	}
 }
