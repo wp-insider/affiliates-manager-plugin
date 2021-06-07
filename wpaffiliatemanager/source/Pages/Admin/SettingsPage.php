@@ -114,6 +114,7 @@ class WPAM_Pages_Admin_SettingsPage {
                         $db->getMessageRepository()->update($messageModel);
                     }
                 }
+                update_option(WPAM_PluginConfig::$EmailType, $request['emailType']);
                 if (isset($request['sendAdminRegNotification'])) {
                     update_option(WPAM_PluginConfig::$SendAdminRegNotification, 1);
                 } else {
@@ -279,6 +280,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['chkPayoutMethodCheck'] = isset($request['chkPayoutMethodCheck']) ? 1 : 0;
             $response->viewData['request']['chkPayoutMethodPaypal'] = isset($request['chkPayoutMethodPaypal']) ? 1 : 0;
             $response->viewData['request']['chkPayoutMethodManual'] = isset($request['chkPayoutMethodManual']) ? 1 : 0;
+            $response->viewData['request']['emailType'] = $request['emailType'];
             $response->viewData['request']['sendAdminRegNotification'] = isset($request['sendAdminRegNotification']) ? 1 : 0;
             $response->viewData['request']['adminRegNotificationEmail'] = isset($request['adminRegNotificationEmail']) ? $request['adminRegNotificationEmail'] : '';
             $response->viewData['request']['sendAffCommissionNotification'] = isset($request['sendAffCommissionNotification']) ? 1 : 0;
@@ -315,6 +317,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['chkPayoutMethodCheck'] = get_option(WPAM_PluginConfig::$PayoutMethodCheckIsEnabledOption);
             $response->viewData['request']['chkPayoutMethodPaypal'] = get_option(WPAM_PluginConfig::$PayoutMethodPaypalIsEnabledOption);
             $response->viewData['request']['chkPayoutMethodManual'] = get_option(WPAM_PluginConfig::$PayoutMethodManualIsEnabledOption);
+            $response->viewData['request']['emailType'] = get_option(WPAM_PluginConfig::$EmailType);
             $response->viewData['request']['sendAdminRegNotification'] = get_option(WPAM_PluginConfig::$SendAdminRegNotification);
             $response->viewData['request']['adminRegNotificationEmail'] = get_option(WPAM_PluginConfig::$AdminRegNotificationEmail);
             $response->viewData['request']['sendAffCommissionNotification'] = get_option(WPAM_PluginConfig::$SendAffCommissionNotification);

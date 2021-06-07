@@ -36,6 +36,7 @@ class WPAM_PluginConfig
         public static $AffLandingPageURL = 'wpam_landing_page';
         public static $AffTncPageURL = 'wpam_aff_tnc_page';
         public static $DisableOwnReferrals = 'wpam_disable_own_referrals';
+        public static $EmailType = 'wpam_email_type';
         public static $SendAdminRegNotification = 'wpam_send_admin_reg_notification';
         public static $AdminRegNotificationEmail = 'wpam_admin_reg_notification_email';
         public static $SendAffCommissionNotification = 'wpam_send_aff_commission_notification';

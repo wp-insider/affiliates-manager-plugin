@@ -90,7 +90,11 @@ function wpam_filter_from_name($name) {
 }
 
 function wpam_filter_mail_content_type($content_type) {
-    return "text/html";
+    $email_type = get_option( WPAM_PluginConfig::$EmailType );
+    if(isset($email_type) && $email_type == 'html'){
+        $content_type = "text/html";
+    }
+    return $content_type;
 }
 
 function wpam_sanitize_array($arr) {

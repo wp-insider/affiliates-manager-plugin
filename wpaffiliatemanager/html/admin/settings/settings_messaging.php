@@ -136,6 +136,18 @@ jQuery(function($) {
         <tbody>
         <tr valign="top">
             <td width="25%" align="left">
+            <strong><?php _e('Email Type:', 'affiliates-manager' ) ?></strong>
+            </td>
+            <td align="left">
+                <select id="emailType" name="emailType">
+                        <option value="plain" <?php echo ($this->viewData['request']['emailType'] == 'plain' ? 'selected="selected"' : '')?>><?php _e( 'Plain Text', 'affiliates-manager' ) ?></option>
+                        <option value="html" <?php echo ($this->viewData['request']['emailType'] == 'html' ? 'selected="selected"' : '')?>><?php _e( 'HTML', 'affiliates-manager' ) ?></option>
+                </select>
+                <br><i><?php _e("The content type for email sent through the wp_mail() function. The default is 'text/plain' which does not allow using HTML.", 'affiliates-manager' ) ?></i><br>    
+            </td>
+        </tr>    
+        <tr valign="top">
+            <td width="25%" align="left">
             <strong><?php _e('Send Registration Notification:', 'affiliates-manager' ) ?></strong>
             </td>
             <td align="left">

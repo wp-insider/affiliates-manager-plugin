@@ -46,6 +46,7 @@ class WPAM_Options
 		add_option( WPAM_PluginConfig::$TNCOptionOption, file_get_contents( WPAM_RESOURCES_DIR . "default_tnc.txt" ) );
 		add_option( WPAM_PluginConfig::$MinPayoutAmountOption, 20 );
 		add_option( WPAM_PluginConfig::$PaypalAPIEndPointOption, 'dev' );
+                add_option( WPAM_PluginConfig::$EmailType, 'plain' );
                 add_option( WPAM_PluginConfig::$SendAdminRegNotification, true );
                 add_option( WPAM_PluginConfig::$AdminRegNotificationEmail, get_option('admin_email') );
                 add_option( WPAM_PluginConfig::$AutoDeleteWPUserAccount, true );

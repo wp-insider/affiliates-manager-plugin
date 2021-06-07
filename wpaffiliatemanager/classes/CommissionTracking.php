@@ -115,6 +115,7 @@ class WPAM_Commission_Tracking {
                     //override from email & name
                     add_filter('wp_mail_from', 'wpam_filter_from_email');
                     add_filter('wp_mail_from_name', 'wpam_filter_from_name');
+                    add_filter('wp_mail_content_type', 'wpam_filter_mail_content_type');
                     $address = $affiliate->email;
                     $subject = __("You just earned a commission!", 'affiliates-manager');               
                     $message = WPAM_MessageHelper::GetMessage('affiliate_commission_notification_email');
@@ -133,6 +134,7 @@ class WPAM_Commission_Tracking {
                     else{
                         WPAM_Logger::log_debug("Email could not be sent by WordPress");
                     }
+                    remove_filter('wp_mail_content_type', 'wpam_filter_mail_content_type');
                     remove_filter('wp_mail_from', 'wpam_filter_from_email');
                     remove_filter('wp_mail_from_name', 'wpam_filter_from_name');
                 }
@@ -141,6 +143,7 @@ class WPAM_Commission_Tracking {
                     //override from email & name
                     add_filter('wp_mail_from', 'wpam_filter_from_email');
                     add_filter('wp_mail_from_name', 'wpam_filter_from_name');
+                    add_filter('wp_mail_content_type', 'wpam_filter_mail_content_type');
                     $address = get_option(WPAM_PluginConfig::$AdminAffCommissionNotificationEmail);
                     if(!isset($address) || empty($address)){
                         $address = get_option('admin_email');
@@ -162,6 +165,7 @@ class WPAM_Commission_Tracking {
                     else{
                         WPAM_Logger::log_debug("Email could not be sent by WordPress");
                     }
+                    remove_filter('wp_mail_content_type', 'wpam_filter_mail_content_type');
                     remove_filter('wp_mail_from', 'wpam_filter_from_email');
                     remove_filter('wp_mail_from_name', 'wpam_filter_from_name');
                 }
