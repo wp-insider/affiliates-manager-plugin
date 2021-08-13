@@ -446,6 +446,15 @@ class WPAM_Plugin {
                 WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_refkey (" . $wpam_refkey . ") with order. Order ID: " . $order_id);
             }
         }
+        else{
+            $user_ip = WPAM_Click_Tracking::get_user_ip();
+            $aff_id = WPAM_Click_Tracking::get_referrer_id_from_ip_address($user_ip);
+            if (!empty($aff_id)){
+                update_post_meta($order_id, '_wpam_id', $aff_id);
+                $wpam_refkey = get_post_meta($order_id, '_wpam_id', true);
+                WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_id (" . $wpam_refkey . ") with order using an alternative method. Order ID: " . $order_id);
+            }
+        }
     }
 
     public function WooCommerceProcessTransaction($order_id) {
