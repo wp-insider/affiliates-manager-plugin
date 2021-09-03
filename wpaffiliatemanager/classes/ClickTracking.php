@@ -78,7 +78,7 @@ class WPAM_Click_Tracking {
             $args['ipAddress'] = $user_ip;
             /*
             WPAM_Logger::log_debug('inserting click');
-            WPAM_Logger::log_debug(print_r($args, true));
+            WPAM_Logger::log_debug_array($args);
             */
             WPAM_Click_Tracking::insert_click_data($args);
         }
@@ -198,6 +198,38 @@ class WPAM_Click_Tracking {
 	",
         $ip_address       
         ) );
+        if(null !== $result){
+            $aff_id = $result->sourceAffiliateId;
+        }
+        return $aff_id;
+    }
+    
+    public static function get_referrer_id_from_ip_address_by_cookie_duration($ip_address) {
+        if(!isset($ip_address) || empty($ip_address)){
+            return "";
+        }
+        $cookie_duration = get_option(WPAM_PluginConfig::$CookieExpireOption);
+        $current_datetime = date("Y-m-d H:i:s", time());
+        $cookie_days = strval($current_datetime.' -'.$cookie_duration.' days');
+        $old_datetime = date("Y-m-d H:i:s", strtotime($cookie_days));
+        global $wpdb;
+        $table = WPAM_TRACKING_TOKENS_TBL;
+        $aff_id = '';
+        
+        $result = $wpdb->get_row( $wpdb->prepare( 
+	"
+		SELECT * FROM $table 
+		WHERE ipAddress = %s
+                AND dateCreated >= %s
+	",
+        $ip_address,
+        $old_datetime        
+        ) );
+        /*
+        WPAM_Logger::log_debug("cookie time: ".$cookie_duration);
+        WPAM_Logger::log_debug("current time: ".$current_datetime);
+        WPAM_Logger::log_debug("old time: ".$old_datetime); 
+        */
         if(null !== $result){
             $aff_id = $result->sourceAffiliateId;
         }
