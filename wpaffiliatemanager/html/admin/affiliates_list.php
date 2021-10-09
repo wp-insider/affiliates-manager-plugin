@@ -9,8 +9,8 @@
     
     if(isset($_GET['page'])){
         $current = $_GET['page'];
-        if(isset($_GET['action'])){
-            $current .= "&action=".$_GET['action'];
+        if(isset($_GET['tab'])){
+            $current .= "&tab=".$_GET['tab'];
         }
     }
     $content = '';

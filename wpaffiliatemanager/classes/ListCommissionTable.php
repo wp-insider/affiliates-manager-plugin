@@ -132,11 +132,24 @@ class WPAM_List_Commission_Table extends WPAM_List_Table {
 
         // This checks for sorting input and sorts the data.
         $orderby_column = isset($_GET['orderby']) ? sanitize_text_field($_GET['orderby']) : '';
+        if("dateCreated" == $orderby_column){
+            $orderby_column = "dateCreated";
+        }
+        else{
+            $orderby_column = "transactionId";
+        }
         $sort_order = isset($_GET['order']) ? sanitize_text_field($_GET['order']) : '';
+        if("asc" == $sort_order){
+            $sort_order = "ASC";
+        }
+        else{
+            $sort_order = "DESC";
+        }
+        /*
         if (empty($orderby_column)) {
             $orderby_column = "transactionId";
             $sort_order = "DESC";
-        }
+        }*/
         global $wpdb;
         $records_table_name = WPAM_TRANSACTIONS_TBL; //The table to query
         

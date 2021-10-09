@@ -158,11 +158,24 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
 
         // This checks for sorting input and sorts the data.
         $orderby_column = isset($_GET['orderby']) ? sanitize_text_field($_GET['orderby']) : '';
+        if("dateCreated" == $orderby_column){
+            $orderby_column = "dateCreated";
+        }
+        else{
+            $orderby_column = "affiliateId";
+        }
         $sort_order = isset($_GET['order']) ? sanitize_text_field($_GET['order']) : '';
+        if("asc" == $sort_order){
+            $sort_order = "ASC";
+        }
+        else{
+            $sort_order = "DESC";
+        }
+        /*
         if (empty($orderby_column)) {
             $orderby_column = "affiliateId";
             $sort_order = "DESC";
-        }
+        }*/
         global $wpdb;
         $aff_table_name = WPAM_AFFILIATES_TBL;
         $trn_table_name = WPAM_TRANSACTIONS_TBL;
