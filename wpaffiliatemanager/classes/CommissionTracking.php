@@ -41,13 +41,15 @@ class WPAM_Commission_Tracking {
         } //TODO end - later affiliate ID can be tracked directly from the cookie instead of ref_key
         
         if($affiliate != null && $affiliate->status == "active") {
-            //Filter for overriding the commission from an addon/plugin
-            $override = "";
-            $override = apply_filters('wpam_commission_tracking_override', $override, $affiliate, $args);
-            if (!empty($override)) {
-                //commission has been overriden by another addon/plugin
-                WPAM_Logger::log_debug('*** Commission for this sale has been overriden by an addon/plugin via filter. ***'); 
-                return;
+            if(!isset($args['no_comm_override']) || empty($args['no_comm_override'])){
+                //Filter for overriding the commission from an addon/plugin
+                $override = "";
+                $override = apply_filters('wpam_commission_tracking_override', $override, $affiliate, $args);
+                if (!empty($override)) {
+                    //commission has been overriden by another addon/plugin
+                    WPAM_Logger::log_debug('*** Commission for this sale has been overriden by an addon/plugin via filter. ***'); 
+                    return;
+                }
             }
             $creditAmount = '';
             if ($affiliate->bountyType == 'percent')
