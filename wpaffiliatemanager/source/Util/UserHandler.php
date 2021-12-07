@@ -19,15 +19,17 @@ class WPAM_Util_UserHandler {
         $userEmail = apply_filters('user_registration_email', $userEmail);
 
         $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
-        $message = sprintf(__('New affiliate registration for %s: has been approved!', 'affiliates-manager'), $blogname) . "\r\n\r\n";
-
+        $message = WPAM_MessageHelper::GetMessage('aff_approved_email_existing_user_account');//sprintf(__('New affiliate registration for %s: has been approved!', 'affiliates-manager'), $blogname) . "\r\n\r\n";
+        $tags = array("{blogname}");
+        $vals = array($blogname);
+        $message = str_replace($tags,$vals,$message);
         if (username_exists($userLogin)) {
             $user = new WP_User(get_user_by('login', $userLogin)->ID);
-            if ($user->has_cap(WPAM_PluginConfig::$AffiliateCap)) {
+            if ($db->getAffiliateRepository()->existsBy(array('userId' => $user->ID))) {
                 throw new Exception(__('User already has an account and is already an affiliate', 'affiliates-manager'));
             } else {
                 $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
-                $message .= __('Log into the site with your existing account and get started.', 'affiliates-manager') . "\r\n";
+                //$message .= __('Log into the site with your existing account and get started.', 'affiliates-manager') . "\r\n";
                 $userId = $user->ID;
             }
         } elseif (email_exists($userEmail)) {
@@ -36,7 +38,7 @@ class WPAM_Util_UserHandler {
                 throw new Exception(__('User already has an account and is already an affiliate', 'affiliates-manager'));
             } else {
                 $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
-                $message .= __('Log into the site with your existing account and get started.', 'affiliates-manager') . "\r\n";
+                //$message .= __('Log into the site with your existing account and get started.', 'affiliates-manager') . "\r\n";
                 $userId = $user->ID;
             }
         } else {
@@ -96,15 +98,17 @@ class WPAM_Util_UserHandler {
         $userEmail = apply_filters('user_registration_email', $userEmail);
 
         $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
-        $message = sprintf(__('New affiliate registration for %s: has been approved!', 'affiliates-manager'), $blogname) . "\r\n\r\n";
-
+        $message = WPAM_MessageHelper::GetMessage('aff_approved_email_existing_user_account');//sprintf(__('New affiliate registration for %s: has been approved!', 'affiliates-manager'), $blogname) . "\r\n\r\n";
+        $tags = array("{blogname}");
+        $vals = array($blogname);
+        $message = str_replace($tags,$vals,$message);
         if (username_exists($userLogin)) {
             $user = new WP_User(get_user_by('login', $userLogin)->ID);
-            if ($user->has_cap(WPAM_PluginConfig::$AffiliateCap)) {
+            if ($db->getAffiliateRepository()->existsBy(array('userId' => $user->ID))) {
                 throw new Exception(__('User already has an account and is already an affiliate', 'affiliates-manager'));
             } else {
                 $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
-                $message .= __('Log into the site with your existing account and get started.', 'affiliates-manager') . "\r\n";
+                //$message .= __('Log into the site with your existing account and get started.', 'affiliates-manager') . "\r\n";
                 $userId = $user->ID;
             }
         } elseif (email_exists($userEmail)) {
@@ -113,7 +117,7 @@ class WPAM_Util_UserHandler {
                 throw new Exception(__('User already has an account and is already an affiliate', 'affiliates-manager'));
             } else {
                 $user->add_cap(WPAM_PluginConfig::$AffiliateCap);
-                $message .= __('Log into the site with your existing account and get started.', 'affiliates-manager') . "\r\n";
+                //$message .= __('Log into the site with your existing account and get started.', 'affiliates-manager') . "\r\n";
                 $userId = $user->ID;
             }
         } else {

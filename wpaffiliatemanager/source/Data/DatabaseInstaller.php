@@ -320,6 +320,18 @@ class WPAM_Data_DatabaseInstaller {
             $msg->use = __('Body of e-mail sent to the admin when an affiliate earns a commission.', 'affiliates-manager');
             $msgRepo->insert($msg);
         }
+        
+        $db = new WPAM_Data_DataAccess();
+        $msgRepo = $db->getMessageRepository();
+        $message = $msgRepo->loadBy(array('name' => 'aff_approved_email_existing_user_account'));
+        if($message === NULL){
+            $msg = new WPAM_Data_Models_MessageModel();
+            $msg->content = __("New affiliate registration for {blogname} has been approved! \n\nLog into the site with your existing account and get started.", 'affiliates-manager');
+            $msg->name = 'aff_approved_email_existing_user_account';
+            $msg->type = 'email';
+            $msg->use = __('Body of e-mail sent to a newly approved affiliate if they have an existing user account.', 'affiliates-manager');
+            $msgRepo->insert($msg);
+        }
         //Add other options below
         
         
