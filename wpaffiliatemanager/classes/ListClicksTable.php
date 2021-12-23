@@ -1,8 +1,11 @@
 <?php
 
-include_once('ListTable.php');
+//*****  Check WP_List_Table exists
+if ( ! class_exists( 'WP_List_Table' ) ) {
+	require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
+}
 
-class WPAM_List_Clicks_Table extends WPAM_List_Table {
+class WPAM_List_Clicks_Table extends WP_List_Table {
 
     function __construct() {
         global $status, $page;
@@ -17,12 +20,12 @@ class WPAM_List_Clicks_Table extends WPAM_List_Table {
 
     function column_default($item, $column_name) {
         //Just print the data for that column
-        return $item[$column_name];
+        return esc_attr($item[$column_name]);
     }
 
     function column_trackingTokenId($item) {
 
-        return $item['trackingTokenId'];       
+        return esc_attr($item['trackingTokenId']);       
     }
 
     /* Custom column output - only use if you have some columns that needs custom output */

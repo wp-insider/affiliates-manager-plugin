@@ -1,8 +1,11 @@
 <?php
 
-include_once('ListTable.php');
+//*****  Check WP_List_Table exists
+if ( ! class_exists( 'WP_List_Table' ) ) {
+	require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
+}
 
-class WPAM_List_Affiliates_Table extends WPAM_List_Table {
+class WPAM_List_Affiliates_Table extends WP_List_Table {
 
     function __construct() {
         global $status, $page;
@@ -17,27 +20,27 @@ class WPAM_List_Affiliates_Table extends WPAM_List_Table {
 
     function column_default($item, $column_name) {
         //Just print the data for that column
-        return $item[$column_name];
+        return esc_attr($item[$column_name]);
     }
 
     function column_affiliateId($item) {
         //Build row actions
         $actions = array(
-            'edit' => sprintf('<a href="admin.php?page=wpam-affiliates&viewDetail=%s">View</a>', $item['affiliateId']),
-            'delete' => sprintf('<a href="admin.php?page=wpam-affiliates&delete_aid=%s" onclick="return confirm(\'Are you sure you want to delete this entry?\')">Delete</a>', $item['affiliateId']),
+            'edit' => sprintf('<a href="admin.php?page=wpam-affiliates&viewDetail=%s">View</a>', esc_attr($item['affiliateId'])),
+            'delete' => sprintf('<a href="admin.php?page=wpam-affiliates&delete_aid=%s" onclick="return confirm(\'Are you sure you want to delete this entry?\')">Delete</a>', esc_attr($item['affiliateId'])),
         );
 
         //Return the id column contents
-        return $item['affiliateId'] . $this->row_actions($actions);
+        return esc_attr($item['affiliateId']) . $this->row_actions($actions);
     }
 
     function column_dateCreated($item) {
         $item['dateCreated'] = date("m/d/Y", strtotime($item['dateCreated']));
-        return $item['dateCreated'];
+        return esc_attr($item['dateCreated']);
     }
 
     function column_viewDetail($item) {
-        $item['viewDetail'] = '<a class="button-secondary" href="admin.php?page=wpam-affiliates&viewDetail=' . $item['affiliateId'] . '">' . __('View', 'affiliates-manager') . '</a>';
+        $item['viewDetail'] = '<a class="button-secondary" href="admin.php?page=wpam-affiliates&viewDetail=' . esc_attr($item['affiliateId']) . '">' . __('View', 'affiliates-manager') . '</a>';
         return $item['viewDetail'];
     }
 

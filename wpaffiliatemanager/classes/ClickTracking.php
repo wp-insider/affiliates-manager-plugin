@@ -73,7 +73,11 @@ class WPAM_Click_Tracking {
             $args['sourceAffiliateId'] = $aff_id;
             $args['trackingKey'] = uniqid(); //save a unique ID to avoid error
             $args['sourceCreativeId'] = '';  // remove this column from the click tracking menu in the settings
-            $args['referer'] = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+            $referer = '';
+            if(isset($_SERVER['HTTP_REFERER'])){
+                $referer = sanitize_text_field($_SERVER['HTTP_REFERER']);
+            }
+            $args['referer'] = $referer;
             $args['affiliateSubCode'] = '';
             $args['ipAddress'] = $user_ip;
             /*
@@ -171,9 +175,9 @@ class WPAM_Click_Tracking {
     public static function get_user_ip() {
         $user_ip = '';
         if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && !empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $user_ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            $user_ip = sanitize_text_field($_SERVER['HTTP_X_FORWARDED_FOR']);
         } else {
-            $user_ip = $_SERVER['REMOTE_ADDR'];
+            $user_ip = sanitize_text_field($_SERVER['REMOTE_ADDR']);
         }
 
         if (strstr($user_ip, ',')) {
