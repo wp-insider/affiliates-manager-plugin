@@ -192,6 +192,14 @@ function wpam_display_addons_menu()
     );
     array_push($addons_data, $addon_23);
     
+    $addon_24 = array(
+        'name' => 'Checkout Referrals',
+        'thumbnail' => WPAM_URL . '/images/addons/checkout-referrals-addon.png',
+        'description' => 'Allow Visitors to Set the Referrer or Affiliate ID.',
+        'page_url' => 'https://wpaffiliatemanager.com/allow-visitors-to-set-the-referrer-or-affiliate-id/',
+    );
+    array_push($addons_data, $addon_24);
+    
     //Display the list
     $output = '';
     foreach ($addons_data as $addon) {
