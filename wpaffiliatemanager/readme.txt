@@ -137,6 +137,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = 2.9.1 =
 - Added support for the Checkout Referrals addon which allows visitors to set the referrer or affiliate id.
+  https://wpaffiliatemanager.com/allow-visitors-to-set-the-referrer-or-affiliate-id/    
+- Integrated Affiliates Manager with the GiveWP plugin.
+  https://wpaffiliatemanager.com/affiliates-manager-givewp-integration/
 
 = 2.9.0 =
 - Added Portuguese(Portugal) language translation to the plugin. The translation was submitted by Rúben Fernandes.

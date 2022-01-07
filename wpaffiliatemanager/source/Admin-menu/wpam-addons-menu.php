@@ -200,6 +200,14 @@ function wpam_display_addons_menu()
     );
     array_push($addons_data, $addon_24);
     
+    $addon_25 = array(
+        'name' => 'GiveWP Integration',
+        'thumbnail' => WPAM_URL . '/images/addons/givewp-integration.png',
+        'description' => 'Integrates with GiveWP plugin so you can reward affiliates for sending customers.',
+        'page_url' => 'https://wpaffiliatemanager.com/affiliates-manager-givewp-integration/',
+    );
+    array_push($addons_data, $addon_25);
+    
     //Display the list
     $output = '';
     foreach ($addons_data as $addon) {
