@@ -197,12 +197,13 @@ class WPAM_Util_UserHandler {
             WPAM_Logger::log_debug("create_wpam_affiliate_record() - Error, email address is missing. Cannot create affiliate record!", 4);
             return;
         }
-        
-        if(!isset($fields['userId']) || empty($fields['userId'])){
-            WPAM_Logger::log_debug("create_wpam_affiliate_record() - Error, userId value is missing. Cannot create affiliate record!", 4);
-            return;
-        }        
-                
+        if(get_option(WPAM_PluginConfig::$AutoAffiliateApproveIsEnabledOption) == 1){
+            //only check for user id when auto approval is enabled. Otherwise auto WooCommerce account creation addon will not be able to create a new affiliate with the applied status.
+            if(!isset($fields['userId']) || empty($fields['userId'])){
+                WPAM_Logger::log_debug("create_wpam_affiliate_record() - Error, userId value is missing. Cannot create affiliate record!", 4);
+                return;
+            }        
+        }       
         //Check and set the default status values
         if(!isset($fields['status']) || empty($fields['status'])){
             if(get_option(WPAM_PluginConfig::$AutoAffiliateApproveIsEnabledOption) == 1){

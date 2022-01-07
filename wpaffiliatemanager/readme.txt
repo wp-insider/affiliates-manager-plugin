@@ -136,6 +136,7 @@ https://wpaffiliatemanager.com/screen-shots/
 == Changelog ==
 
 = 2.9.1 =
+- Fixed an issue where new affiliates could not be approved when Auto WooCommerce Affiliate Account Creation addon was active.
 - Added support for the Checkout Referrals addon which allows visitors to set the referrer or affiliate id.
   https://wpaffiliatemanager.com/allow-visitors-to-set-the-referrer-or-affiliate-id/    
 - Integrated Affiliates Manager with the GiveWP plugin.
