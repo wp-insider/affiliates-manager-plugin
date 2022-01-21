@@ -3,8 +3,8 @@ Contributors: wp.insider, affmngr, ElementGreen
 Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates manager, affiliate marketing, affiliate plugin, affiliates, referral, affiliate program, ads, advertising, affiliate tool, digital downloads, e-commerce, tracking, track affiliates, leads, affiliate software, woocommerce, affiliate campaign, paypal  
 Requires at least: 3.5
-Tested up to: 5.8
-Stable tag: 2.9.1
+Tested up to: 5.9
+Stable tag: 2.9.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,6 +23,7 @@ It will also track the referrals your affiliates send to your site and give comm
 Affiliates Manager integrates with some popular e-commerce solutions. It integrates with:
 
 * WooCommerce
+* WooCommerce Subscriptions
 * Simple Shopping Cart
 * WP eCommerce
 * JigoShop
@@ -34,49 +35,64 @@ Affiliates Manager integrates with some popular e-commerce solutions. It integra
 * S2Member
 * Simple Membership
 * Stripe Payments
+* Gravity Forms PayPal
+* Gravity Forms Stripe
+* WP Express Checkout
+* OptimizeMember
+* MemberMouse
+* AppThemes
+* LifterLMS
+* WP Courseware
+* MemberPress
+* GiveWP
 
-= Real-Time Reporting =
+=== Real-Time Reporting ===
 
 Your affiliate's traffic and sales are recorded and ready for display as soon as they happen.
 
-= Unlimited Affiliates =
+=== Unlimited Affiliates ===
 
 No matter if you have 1 or 1,000 affiliates, you can track them all.
 
-= Flat Rate or Percentage Based Payouts =
+=== Flat Rate or Percentage Based Payouts ===
 
 You decide how you want to reward your affiliates. You can choose to pay your affiliates a flat rate per order, or choose to pay them a percentage of every order they initiate.
 
-= Set Payout Rates Per Affiliate =
+=== Set Payout Rates Per Affiliate ===
 
 Each of your affiliates can be set to their own payout amount.
 
-= Manual Adjustments and Payouts =
+=== Manual Adjustments and Payouts ===
 
 There may be a time when you need to credit an affiliate for something other than a sale. For example, a bonus for reaching a sales goal. Manual adjustments are treated as a line item for easy tracking.
 
-= Pay Your Affiliates Using PayPal =
+=== Pay Your Affiliates Using PayPal ===
 
 Ability to easily pay your affiliates their commission using PayPal.
 
-= Unlimited Creatives and Ads for your Affiliates = 
+=== Unlimited Creatives and Ads for your Affiliates === 
 
 You can add as many banners or text link ads as you wish. Plus, you can easily activate or deactivate creatives as needed.
 
-= Customizable Affiliate Registration =
+=== Customizable Affiliate Registration ===
 
 You can decide how much or how little data to collect from your affiliates when they sign up. You can mark each field as optional or required.
 
-= Autoresponder Integration =
+=== Autoresponder Integration ===
 
 * Sign up affiliates to your Mailchimp list.
 * Sign up affiliates to MailPoet newsletter list.
+* Sign up affiliates to your AWeber list.
+* Sign up affiliates to your Mad Mimi list.
+* Sign up affiliates to your Infusionsoft account.
+* Sign up affiliates to your GetResponse list.
+* Sign up affiliates to your ActiveCampaign list.
 
-= Affiliate Ad Impression Tracking = 
+=== Affiliate Ad Impression Tracking === 
 
 Track how many times a particular affiliate ad is getting viewed.
 
-= Customize Messages for Affiliates = 
+=== Customize Messages for Affiliates === 
 
 You can customize the email messages that gets sent to your affiliate when they register for an account. The following messages are customizable:
 
@@ -88,7 +104,7 @@ You can customize the email messages that gets sent to your affiliate when they 
 * Body of the e-mail sent to a newly registered affiliate immediately following their application being approved.
 * Body of e-mail sent to the affiliate immediately following their application being declined.
 
-= Translation Ready = 
+=== Translation Ready === 
 
 This plugin can be translated to your language. The following language translations are already available in the plugin:
 
@@ -107,7 +123,7 @@ This plugin can be translated to your language. The following language translati
 
 You can translate the plugin using [this documentation](https://wpaffiliatemanager.com/affiliate-manager-plugin-translation/).
 
-= Support =
+=== Support ===
 
 View the [Plugin Documentation](https://wpaffiliatemanager.com/documentation/) to get started.
 
@@ -115,7 +131,7 @@ If you have a question, you can ask it on our support forum.
 
 Visit the [affiliate manager plugin](https://wpaffiliatemanager.com) site for more details.
 
-= Developers =
+=== Developers ===
 * If you are a developer and you need some extra hooks or filters for this plugin then let us know.
 * Github repository - https://github.com/wp-insider/affiliates-manager-plugin
 
@@ -134,6 +150,9 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 2.9.2 =
+- Added more email tags for the affiliate_application_submitted_email template.
 
 = 2.9.1 =
 - Fixed an issue where new affiliates could not be approved when Auto WooCommerce Affiliate Account Creation addon was active.

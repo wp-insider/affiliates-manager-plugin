@@ -86,10 +86,17 @@ class WPAM_Pages_AffiliatesRegister extends WPAM_Pages_PublicPage
                                     }
                                     $mailer->mailAffiliate( $admin_email, __( 'New Affiliate Registration', 'affiliates-manager' ), $message );
                                 }
+                                $aff_first_name = $model->firstName;
+                                $aff_last_name = $model->lastName; 
+                                $aff_email = $model->email;
+                                $login_url = get_option(WPAM_PluginConfig::$AffLoginPageURL);
 				//Notify affiliate of their application
 				$affsubj  = sprintf(__('Affiliate application for %s', 'affiliates-manager' ), $blogname);
 				$affmessage = WPAM_MessageHelper::GetMessage('affiliate_application_submitted_email');
-				$mailer->mailAffiliate( $request['_email'], $affsubj, $affmessage );
+                                $tags = array("{blogname}","{affloginurl}","{aff_first_name}","{aff_last_name}","{aff_email}");
+                                $vals = array($blogname, $login_url, $aff_first_name, $aff_last_name, $aff_email);
+                                $body = str_replace($tags, $vals, $affmessage);
+				$mailer->mailAffiliate($request['_email'], $affsubj, $body);
 
 				return new WPAM_Pages_TemplateResponse('affiliate_application_submitted');
 			} 
