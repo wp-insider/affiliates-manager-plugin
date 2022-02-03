@@ -192,6 +192,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 			$response->viewData['creative'] = $creative;
 
 			$linkBuilder = new WPAM_Tracking_TrackingLinkBuilder($affiliate, $creative);
+                        $response->viewData['sharelink'] = $linkBuilder->getUrl();
 			$response->viewData['htmlPreview'] = $linkBuilder->getHtmlSnippet();
 			$response->viewData['htmlSnippet'] = $linkBuilder->getImpressionHtmlSnippet();
 

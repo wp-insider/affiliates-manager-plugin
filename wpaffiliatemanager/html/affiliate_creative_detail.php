@@ -43,7 +43,10 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 	 <h2><?php _e( 'Creative:', 'affiliates-manager' ) ?> <?php echo $model->name?></h2>
 
 	 <p align="center"><button type="button" name="preview" id="previewButton" class="button-secondary"><?php _e( 'Preview', 'affiliates-manager' ) ?></button></p>
-
+         
+         <h2><?php _e( 'Share Link', 'affiliates-manager' ) ?></h2>
+         <textarea class="wpam-creative-code" rows="2"><?php echo esc_textarea($this->viewData['sharelink']); ?></textarea>
+         
 	 <h2><?php _e( 'Your Affiliate-Specific HTML snippet', 'affiliates-manager' ) ?></h2>
          <textarea rows="5" class="wpam-creative-code"><?php echo htmlspecialchars($this->viewData['htmlSnippet']); ?></textarea>
 
