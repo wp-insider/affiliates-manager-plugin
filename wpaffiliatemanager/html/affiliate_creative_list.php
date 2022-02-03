@@ -84,6 +84,12 @@
         $output .= '<br />';
         $output .= '<div class="wpam_link_generation_submit"><input type="submit" class="button" name="wpam_generate_referral_link" value="'.__('Generate Referral URL', 'affiliates-manager').'" /></div>';
         $output .= '</form>';
+      
+        $custom_content = '';
+        $custom_content = apply_filters('wpam_after_referral_url_generator', $custom_content, $aff_id);  //show custom content
+        if (!empty($custom_content)) {
+            $output .= $custom_content;
+        }
         echo $output;
         ?>
         <h3><?php _e('The following creatives are available for publication.', 'affiliates-manager') ?></h3>

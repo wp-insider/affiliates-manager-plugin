@@ -107,6 +107,10 @@ class WPAM_Commission_Tracking {
                 $data['amount'] = $creditAmount;
                 $data['email'] = $buyer_email;
                 $wpdb->insert( $table, $data);
+                
+                //
+                $data['sale_amount'] = $amount;
+                do_action('wpam_affiliate_commission_added', $data);
                 /*
                 if($strRefKey){
                     $db->getEventRepository()->quickInsert( time(), $binConverter->stringToBin( $strRefKey ), 'purchase' );

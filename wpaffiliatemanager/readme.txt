@@ -153,6 +153,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = 2.9.3 =
 - A shareable link is now displayed for each creative.
+- Added action hooks for affiliate specific events.
 
 = 2.9.2 =
 - Added more email tags for the affiliate_application_submitted_email template.

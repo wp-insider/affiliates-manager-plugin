@@ -30,7 +30,7 @@ class WPAM_Util_JsonHandler
 		if ( $affiliate->isPending() ) {
 			$userHandler = new WPAM_Util_UserHandler();
 			$userHandler->approveAffiliate( $affiliate, $bountyType, $bountyAmount );
-
+                        do_action('wpam_affiliate_application_approved', $affiliateId);
 			return new JsonResponse( JsonResponse::STATUS_OK );
 		} else {
 			throw new Exception( __( 'Invalid state transition.', 'affiliates-manager' ) );
@@ -61,6 +61,7 @@ class WPAM_Util_JsonHandler
 			}
 			$affiliate->decline();
 			$db->getAffiliateRepository()->update($affiliate);
+                        do_action('wpam_affiliate_application_declined', $affiliateId);
 			return new JsonResponse(JsonResponse::STATUS_OK);
 		}
 		else
@@ -86,6 +87,7 @@ class WPAM_Util_JsonHandler
 		{
 			$affiliate->block();
 			$db->getAffiliateRepository()->update($affiliate);
+                        do_action('wpam_affiliate_application_blocked', $affiliateId);
 			return new JsonResponse(JsonResponse::STATUS_OK);
 		}
 		else
@@ -116,7 +118,7 @@ class WPAM_Util_JsonHandler
 
 		$user = new WP_User($affiliate->userId);
 		$user->add_cap(WPAM_PluginConfig::$AffiliateActiveCap);		
-
+                do_action('wpam_affiliate_application_activated', $affiliateId);
 		return new JsonResponse(JsonResponse::STATUS_OK);
 	}
 	
@@ -140,7 +142,7 @@ class WPAM_Util_JsonHandler
 
 		$user = new WP_User( $affiliate->userId );
 		$user->remove_cap( WPAM_PluginConfig::$AffiliateActiveCap );
-
+                do_action('wpam_affiliate_application_deactivated', $affiliateId);
 		return new JsonResponse(JsonResponse::STATUS_OK);
 	}
 
