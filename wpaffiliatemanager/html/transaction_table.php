@@ -1,6 +1,7 @@
 <script>
     jQuery(function($) {
         var dates = $("#from, #to").datepicker({
+            dateFormat: "mm/dd/yy",
             numberOfMonths: 1,
             onSelect: function(selectedDate) {
                 var option = this.id == "from" ? "minDate" : "maxDate",
