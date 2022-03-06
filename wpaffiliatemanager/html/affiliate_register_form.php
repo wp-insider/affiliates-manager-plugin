@@ -17,9 +17,13 @@ if(is_user_logged_in()){  //this block checks whether the user is logged in and 
         return;
     }
 }
+$form_action = '';
+if(get_option(WPAM_PluginConfig::$EnableRegFormAnchor) == 1){
+    $form_action = '#wpam-reg-form';
+}
 ?>
-
-<form action="" method="post" id="mainForm" class="pure-form pure-form-stacked">
+<div id="wpam-reg-form">
+<form action="<?php echo $form_action; ?>" method="post" id="mainForm" class="pure-form pure-form-stacked">
     <?php wp_nonce_field('wpam_reg_submit'); ?>
 		<?php _e( '* Required fields', 'affiliates-manager' ) ?><br /><br />
 		<fieldset>
@@ -97,7 +101,7 @@ if(is_user_logged_in()){  //this block checks whether the user is logged in and 
                 <!--</div>-->  
                 </fieldset>
 </form>
-
+</div>
 <div id="tncDialog" style="display: none">
 	<div id="termsBox" style="padding: 20px; width: auto; height: 380px; overflow: scroll; background-color: white; color: black; border: 1px solid black; white-space: pre-wrap;"><?php echo $this->viewData['tnc']?></div>
 </div>

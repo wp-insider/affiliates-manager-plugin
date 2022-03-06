@@ -244,6 +244,11 @@ class WPAM_Pages_Admin_SettingsPage {
                 } else {
                     update_option(WPAM_PluginConfig::$AutoDeleteWPUserAccount, 0);
                 }
+                if (isset($request['enableRegFormAnchor'])) {
+                    update_option(WPAM_PluginConfig::$EnableRegFormAnchor, 1);
+                } else {
+                    update_option(WPAM_PluginConfig::$EnableRegFormAnchor, 0);
+                }
             }
 
             return $this->getSettingsForm(NULL, "Settings updated.");
@@ -298,6 +303,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['affLandingPage'] = isset($request['affLandingPage']) ? $request['affLandingPage'] : '';
             $response->viewData['request']['disableOwnReferrals'] = isset($request['disableOwnReferrals']) ? 1 : 0;
             $response->viewData['request']['autoDeleteWPUserAccount'] = isset($request['autoDeleteWPUserAccount']) ? 1 : 0;
+            $response->viewData['request']['enableRegFormAnchor'] = isset($request['enableRegFormAnchor']) ? 1 : 0;
             $response->viewData['validationResult'] = $vr;
         } else {
             $response->viewData['request']['affhomemsg'] = get_option(WPAM_PluginConfig::$AffHomeMsg);
@@ -335,6 +341,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['affLandingPage'] = get_option(WPAM_PluginConfig::$AffLandingPageURL);
             $response->viewData['request']['disableOwnReferrals'] = get_option(WPAM_PluginConfig::$DisableOwnReferrals);
             $response->viewData['request']['autoDeleteWPUserAccount'] = get_option(WPAM_PluginConfig::$AutoDeleteWPUserAccount);
+            $response->viewData['request']['enableRegFormAnchor'] = get_option(WPAM_PluginConfig::$EnableRegFormAnchor);
         }
 
         if ($message !== NULL)

@@ -16,7 +16,7 @@ Running your WordPress site with an e-Commerce plugin or solution? WP Affiliate 
 
 Affiliate Marketing is the fastest growing advertising method and it is very cost effective.
 
-This plugin facilitates the affiliates recruitment, registration, login, management process. 
+This wp affiliate plugin facilitates the affiliates recruitment, registration, login, management process. 
 
 It will also track the referrals your affiliates send to your site and give commissions appropriately.
 
@@ -54,6 +54,14 @@ Your affiliate's traffic and sales are recorded and ready for display as soon as
 
 No matter if you have 1 or 1,000 affiliates, you can track them all.
 
+=== Automatic Affiliate Approval ===
+
+Automatically approve newly registered affiliates so they can start promoting your products.
+
+=== Manual Affiliate Approval ===
+
+Do you want to work with selected affiliates? With the manual approval option you can approve/decline each affiliate application.
+
 === Flat Rate or Percentage Based Payouts ===
 
 You decide how you want to reward your affiliates. You can choose to pay your affiliates a flat rate per order, or choose to pay them a percentage of every order they initiate.
@@ -70,6 +78,10 @@ There may be a time when you need to credit an affiliate for something other tha
 
 Ability to easily pay your affiliates their commission using PayPal.
 
+=== Manual Payout ===
+
+Pay affiliates with your preferred method and mark them as paid in the plugin.
+
 === Unlimited Creatives and Ads for your Affiliates === 
 
 You can add as many banners or text link ads as you wish. Plus, you can easily activate or deactivate creatives as needed.
@@ -77,6 +89,34 @@ You can add as many banners or text link ads as you wish. Plus, you can easily a
 === Customizable Affiliate Registration ===
 
 You can decide how much or how little data to collect from your affiliates when they sign up. You can mark each field as optional or required.
+
+=== Disable Own Referrals ===
+
+Prevent affiliates from earning commissions on their own purchases.
+
+=== Affiliate Registration Form Customization ===
+
+Customize the affiliate registration form with custom affiliate fields.
+
+=== Affiliate Coupon Tracking ===
+
+Link affiliate accounts to WooCommerce coupon codes and track them to reward commissions.
+
+=== Manual Referral Tracking ===
+
+Manually track a purchase and create a commission/referral record for it.
+
+=== Referral Link Generator ===
+
+Affiliates can generate their own referral links from the affiliate dashboard.
+
+=== Social Sharing Links ===
+
+Affiliates can generate links for your products that can be shared on social media.
+
+=== Set Cookie Duration ===
+
+Specify how long the referral cookie should be valid for (30 days by default).
 
 === Autoresponder Integration ===
 
@@ -92,17 +132,20 @@ You can decide how much or how little data to collect from your affiliates when 
 
 Track how many times a particular affiliate ad is getting viewed.
 
-=== Customize Messages for Affiliates === 
+=== Customize Email for Affiliates === 
 
-You can customize the email messages that gets sent to your affiliate when they register for an account. The following messages are customizable:
+You can customize the email that is sent to an affiliate after they register for an account. The following messages are customizable:
 
 * HTML message displayed to user at logon if affiliate STATUS = APPROVED 
 * HTML message displayed to user at logon if affiliate STATUS = DECLINED
 * HTML message displayed to user at logon if affiliate STATUS = PENDING
 * HTML message displayed to user after successfully submitting the affiliate registration form
 * Body of the e-mail sent to the affiliate immediately after submitting their application.
-* Body of the e-mail sent to a newly registered affiliate immediately following their application being approved.
 * Body of e-mail sent to the affiliate immediately following their application being declined.
+* Body of e-mail sent to a newly registered affiliate immediately following their application being approved.
+* Body of e-mail sent to the affiliate immediately after earning a commission.
+* Body of e-mail sent to the admin when an affiliate earns a commission.
+* Body of e-mail sent to a newly approved affiliate if they have an existing user account.
 
 === Translation Ready === 
 
@@ -153,6 +196,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = 2.9.4 =
 - Fixed an issue in the affiliate sales interface where dates were not correctly filtered for the German language.
+- Added the affiliate registration form anchor option. When enabled, the affiliate will be taken to the registration form anchor within the page after the form is submitted.
 
 = 2.9.3 =
 - A shareable link is now displayed for each creative.

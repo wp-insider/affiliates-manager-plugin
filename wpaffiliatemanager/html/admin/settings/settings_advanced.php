@@ -26,7 +26,7 @@ $home_url = home_url('/');
 			?>/><p class="description"><?php _e('If checked, your affiliates will not be able to earn a commission on their own purchases.', 'affiliates-manager');?></p>
 		</td>
 	</tr>
-                <tr>
+        <tr>
 		<th width="200">
 			<label for="autoDeleteWPUserAccount">
 				<?php _e('Automatically Delete WordPress Account', 'affiliates-manager');?>
@@ -37,6 +37,19 @@ $home_url = home_url('/');
 			if ($this->viewData['request']['autoDeleteWPUserAccount'])
 				echo 'checked="checked"';
 			?>/><p class="description"><?php _e('If checked, when an affiliate account is deleted the WordPress user account for it will be automatically deleted.', 'affiliates-manager');?></p>
+		</td>
+	</tr>
+        <tr>
+		<th width="200">
+			<label for="enableRegFormAnchor">
+				<?php _e('Enable Registration Form Anchor', 'affiliates-manager');?>
+			</label>
+		</th>
+		<td>
+			<input type="checkbox" id="enableRegFormAnchor" name="enableRegFormAnchor" <?php
+			if ($this->viewData['request']['enableRegFormAnchor'])
+				echo 'checked="checked"';
+			?>/><p class="description"><?php _e('If checked, the affiliate will be taken to the registration form anchor within the page after the form is submitted.', 'affiliates-manager');?></p>
 		</td>
 	</tr>
 </table>

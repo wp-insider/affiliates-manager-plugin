@@ -1,1 +1,1 @@
-<?php echo WPAM_MessageHelper::GetMessage('affiliate_application_submitted')?>
+<?php echo '<div id="wpam-reg-form">'.WPAM_MessageHelper::GetMessage('affiliate_application_submitted').'</div>'?>
