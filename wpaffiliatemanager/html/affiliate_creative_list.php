@@ -105,7 +105,27 @@
                 <?php foreach ($this->viewData['creatives'] as $creative) { ?>
                     <tr>
                         <td class="wpam-creative-type"><?php echo $creative->type ?></td>
+                        <?php
+                        if($creative->type == 'image'){
+                            ?>
+                            <td><a href="?page_id=<?php echo the_ID() ?>&sub=creatives&action=detail&creativeId=<?php echo $creative->creativeId ?>"><img src="<?php
+                            $img_url = '';
+                            if(isset($creative->image) && !empty($creative->image)){  //new way of retrieving an image URL
+                                $img_url = $creative->image;
+                            }
+                            else if(isset($creative->imagePostId) && !empty($creative->imagePostId)){  //old way for backwards compatiblity
+                                $img_url = wp_get_attachment_url($creative->imagePostId);
+                            }
+                            //$url = wp_get_attachment_image_src($model->imagePostId);
+                            echo $img_url;?>" style="max-width: 200px; max-height: 200px;"/></a></td>
+                        <?php
+                        }
+                        else{
+                        ?>
                         <td class="wpam-creative-name"><a href="?page_id=<?php echo the_ID() ?>&sub=creatives&action=detail&creativeId=<?php echo $creative->creativeId ?>"><?php echo $creative->name ?></a></td>
+                        <?php
+                        }
+                        ?>
                     </tr>
                 <?php } ?>
             </tbody>

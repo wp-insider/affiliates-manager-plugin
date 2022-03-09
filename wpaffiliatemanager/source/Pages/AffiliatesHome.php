@@ -39,12 +39,12 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 						array( __( 'Sales', 'affiliates-manager' ), $this->getLink(array('sub' => 'sales'))),
 						array( __( 'Payment History', 'affiliates-manager' ), $this->getLink(array('sub' => 'payments'))),
 						array( __( 'Creatives', 'affiliates-manager' ), $this->getLink(array('sub' => 'creatives'))),
-						array( __( 'Edit Profile', 'affiliates-manager' ), $this->getLink(array('sub' => 'profile'))),
-                                                array( __( 'Log out', 'affiliates-manager' ), $logout_url),
+						array( __( 'Edit Profile', 'affiliates-manager' ), $this->getLink(array('sub' => 'profile')))                                           
 					);
-
-					if (get_option (WPAM_PluginConfig::$AffEnableImpressions))
+					if (get_option (WPAM_PluginConfig::$AffEnableImpressions)){
 						$response->viewData['navigation'][] = array( __( 'Impressions', 'affiliates-manager' ), $this->getLink(array('sub' => 'impressions')));
+                                        }
+                                        $response->viewData['navigation'][] = array( __( 'Log out', 'affiliates-manager' ), $logout_url);
 				}
 				else if ($affiliate->isDeclined())
 				{
