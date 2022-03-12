@@ -52,4 +52,17 @@ $home_url = home_url('/');
 			?>/><p class="description"><?php _e('If checked, the affiliate will be taken to the registration form anchor within the page after the form is submitted.', 'affiliates-manager');?></p>
 		</td>
 	</tr>
+        <tr>
+		<th width="200">
+			<label for="disableFrontEndAffRegistration">
+				<?php _e('Disable Front-end Affiliate Registration', 'affiliates-manager');?>
+			</label>
+		</th>
+		<td>
+			<input type="checkbox" id="disableFrontEndAffRegistration" name="disableFrontEndAffRegistration" <?php
+			if ($this->viewData['request']['disableFrontEndAffRegistration'])
+				echo 'checked="checked"';
+			?>/><p class="description"><?php _e('If checked, visitors will not be able to sign up on the affiliate registration page. This allows you to selectively create affiliate accounts from the admin dashboard.', 'affiliates-manager');?></p>
+		</td>
+	</tr>
 </table>

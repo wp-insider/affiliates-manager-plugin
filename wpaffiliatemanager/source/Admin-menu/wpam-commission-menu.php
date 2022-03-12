@@ -146,11 +146,10 @@ function wpam_display_manual_commission_tab()
             $args['txn_id'] = $txn_id;
             $args['aff_id'] = $aff_id;
             $args['amount'] = $purchase_amt;
-            $args['c_amount'] = $commission_amt;
+            $args['manual_comm_amount'] = $commission_amt;
             if(isset($buyer_email) && !empty($buyer_email)){
                 $args['email'] = $buyer_email;
             }
-            $args['no_comm_override'] = '1';
             WPAM_Commission_Tracking::award_commission($args);
             echo '<div id="message" class="updated fade"><p><strong>';
             echo __('Commission added!', 'affiliates-manager');

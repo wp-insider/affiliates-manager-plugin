@@ -503,7 +503,7 @@ class WPAM_Plugin {
         WPAM_Logger::log_debug('WooCommerce Integration - Total amount: ' . $total . ', Total shipping: ' . $shipping . ', Total tax: ' . $tax . ', Fees: '. $fees);
         $purchaseAmount = $total - $shipping - $tax - $fees;
         $buyer_email = $order->get_billing_email();
-
+        $currency = $order->get_currency();
         $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
         $wpam_id = get_post_meta($order_id, '_wpam_id', true);
         if (!empty($wpam_id)) {
@@ -517,7 +517,18 @@ class WPAM_Plugin {
 
         $requestTracker = new WPAM_Tracking_RequestTracker();
         WPAM_Logger::log_debug('WooCommerce Integration - awarding commission for order ID: ' . $order_id . ', Purchase amount: ' . $purchaseAmount . ', Affiliate ID: ' . $wpam_refkey . ', Buyer Email: ' . $buyer_email);
-        $requestTracker->handleCheckoutWithRefKey($order_id, $purchaseAmount, $wpam_refkey, $buyer_email);
+        $args = array();
+        $args['txn_id'] = $order_id;
+        $args['amount'] = $purchaseAmount;
+        $args['aff_id'] = $wpam_refkey;
+        if(isset($buyer_email) && !empty($buyer_email)){
+            $args['email'] = $buyer_email;
+        }
+        $args['currency']= $currency;
+        $args['integration'] = 'woocommerce';
+        $args['comm_override'] = '1';
+        WPAM_Commission_Tracking::award_commission($args);
+        //$requestTracker->handleCheckoutWithRefKey($order_id, $purchaseAmount, $wpam_refkey, $buyer_email);
     }
 
     public function WooCommerceRefundTransaction($order_id) {

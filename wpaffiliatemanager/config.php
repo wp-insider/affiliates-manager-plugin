@@ -44,6 +44,7 @@ class WPAM_PluginConfig
         public static $AdminAffCommissionNotificationEmail = 'wpam_admin_aff_commission_notification_email';
         public static $AutoDeleteWPUserAccount = 'wpam_auto_delete_wp_user_account';
         public static $EnableRegFormAnchor = 'wpam_enable_reg_form_anchor';
+        public static $DisableFrontEndAffRegistration = 'wpam_disable_front_end_aff_registration';
 	// paypal
 	public static $PaypalMassPayEnabledOption = 'wpam_paypal_mass_pay_enabled';
 	public static $PaypalAPIUserOption = 'wpam_paypal_api_user';

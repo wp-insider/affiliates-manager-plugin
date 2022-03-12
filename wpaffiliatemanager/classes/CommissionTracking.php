@@ -41,7 +41,7 @@ class WPAM_Commission_Tracking {
         } //TODO end - later affiliate ID can be tracked directly from the cookie instead of ref_key
         
         if($affiliate != null && $affiliate->status == "active") {
-            if(!isset($args['no_comm_override']) || empty($args['no_comm_override'])){
+            if(isset($args['comm_override']) && !empty($args['comm_override'])){
                 //Filter for overriding the commission from an addon/plugin
                 $override = "";
                 $override = apply_filters('wpam_commission_tracking_override', $override, $affiliate, $args);
@@ -80,9 +80,9 @@ class WPAM_Commission_Tracking {
                     return;
                 }
             }
-            $creditAmount = apply_filters( 'wpam_credit_amount', $creditAmount, $amount, $txn_id );
-            if(isset($args['c_amount']) && is_numeric($args['c_amount'])){
-                $creditAmount = round($args['c_amount'], 2);;  //override the commission amount if provided e.g. manual commission
+            $creditAmount = apply_filters('wpam_credit_amount', $creditAmount, $args);
+            if(isset($args['manual_comm_amount']) && is_numeric($args['manual_comm_amount'])){
+                $creditAmount = round($args['manual_comm_amount'], 2);;  //override the commission amount if provided e.g. manual commission
             }
             $currency = WPAM_MoneyHelper::getCurrencyCode();
             $description = sprintf(__('Credit for sale of %s %s (PURCHASE LOG ID = %s)', 'affiliates-manager'), $amount, $currency, $txn_id);

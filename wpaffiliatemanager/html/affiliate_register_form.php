@@ -5,6 +5,11 @@
 // -jgh
 require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 
+if(get_option(WPAM_PluginConfig::$DisableFrontEndAffRegistration) == 1){
+    echo '<div class="wpam-aff-reg-disabled">'.__("Affiliate registration is disabled. Please contact the administrator.", 'affiliates-manager').'</div>';
+    return;
+}
+
 $request = @$this->viewData['request'];
 if(is_user_logged_in()){  //this block checks whether the user is logged in and already has an affiliate account
     global $wpdb;
