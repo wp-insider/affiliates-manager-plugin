@@ -379,27 +379,25 @@ class WPAM_Data_DatabaseInstaller {
         if (!isset($home_page_id) || empty($home_page_id)) {
             //Could not find a ID for the affiliate homepage. Lets create this page
             $home_page_id = $new_pages[WPAM_Plugin::PAGE_NAME_HOME]->install();
+            update_option(WPAM_PluginConfig::$HomePageId, $home_page_id); //Save the ID of our affiliate area home page
+            $home_page = get_permalink($home_page_id);
+            update_option(WPAM_PluginConfig::$AffHomePageURL, $home_page); //Save the URL of the affiliate home page
         }
-        update_option(WPAM_PluginConfig::$HomePageId, $home_page_id); //Save the ID of our affiliate area home page
-        $home_page = get_permalink($home_page_id);
-        update_option(WPAM_PluginConfig::$AffHomePageURL, $home_page); //Save the URL of the affiliate home page
-
         $reg_page_id = get_option( WPAM_PluginConfig::$RegPageId );
         if (!isset($reg_page_id) || empty($reg_page_id)) {
             //Could not find the ID of the affiliate registration page. Lets create this page
             $reg_page_id = $new_pages[WPAM_Plugin::PAGE_NAME_REGISTER]->install();
-        }
-        update_option(WPAM_PluginConfig::$RegPageId, $reg_page_id); //Save the ID of the registration page.
-        $reg_page = get_permalink($reg_page_id);
-        update_option(WPAM_PluginConfig::$AffRegPageURL, $reg_page); //Save the URL of the affiliate registration page       
-        
+            update_option(WPAM_PluginConfig::$RegPageId, $reg_page_id); //Save the ID of the registration page.
+            $reg_page = get_permalink($reg_page_id);
+            update_option(WPAM_PluginConfig::$AffRegPageURL, $reg_page); //Save the URL of the affiliate registration page 
+        }            
         $login_page = get_option( WPAM_PluginConfig::$AffLoginPageURL );
         if (!isset($login_page) || empty($login_page)) {
             //Could not find the URL of the affiliate login page. Lets create this page
             $login_page_id = $new_pages[WPAM_Plugin::PAGE_NAME_LOGIN]->install();
-            $login_page = get_permalink($login_page_id);          
-        }
-        update_option(WPAM_PluginConfig::$AffLoginPageURL, $login_page); //Save the URL of the login page      
+            $login_page = get_permalink($login_page_id); 
+            update_option(WPAM_PluginConfig::$AffLoginPageURL, $login_page); //Save the URL of the login page
+        }      
         // save default messages for the pages
         $login_url = get_option(WPAM_PluginConfig::$AffLoginPageURL);
         $register_page_id = get_option(WPAM_PluginConfig::$RegPageId);
@@ -426,9 +424,9 @@ class WPAM_Data_DatabaseInstaller {
                 'post_type' => 'page'
             );
             $tnc_page_id = wp_insert_post($tnc_post);
-            $tnc_page = get_permalink($tnc_page_id);          
+            $tnc_page = get_permalink($tnc_page_id);
+            update_option(WPAM_PluginConfig::$AffTncPageURL, $tnc_page); //Save the URL of the terms and conditions page
         }
-        update_option(WPAM_PluginConfig::$AffTncPageURL, $tnc_page); //Save the URL of the terms and conditions page
         //Add code for any new page needed for this plugin.
     }
     

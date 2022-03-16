@@ -215,15 +215,17 @@ class WPAM_Pages_Admin_SettingsPage {
                     wp_die(__('Error! Nonce Security Check Failed! Go back to the Pages/Forms tab and Save Settings again.', 'affiliates-manager'));
                 }
                 update_option(WPAM_PluginConfig::$AffHomePageURL, $request['affHomePage']);
+                $home_page_id = '';
                 if(isset($request['affHomePage']) && !empty($request['affHomePage'])){
                     $home_page_id = url_to_postid($request['affHomePage']);
-                    update_option(WPAM_PluginConfig::$HomePageId, $home_page_id);
                 }
+                update_option(WPAM_PluginConfig::$HomePageId, $home_page_id);
                 update_option(WPAM_PluginConfig::$AffRegPageURL, $request['affRegPage']);
+                $reg_page_id = '';
                 if(isset($request['affRegPage']) && !empty($request['affRegPage'])){
                     $reg_page_id = url_to_postid($request['affRegPage']);
-                    update_option(WPAM_PluginConfig::$RegPageId, $reg_page_id);
                 }
+                update_option(WPAM_PluginConfig::$RegPageId, $reg_page_id);
                 update_option(WPAM_PluginConfig::$AffLoginPageURL, $request['affLoginPage']);
                 update_option(WPAM_PluginConfig::$AffTncPageURL, $request['affTncPage']);
             }

@@ -198,6 +198,7 @@ https://wpaffiliatemanager.com/screen-shots/
 - Creative list now shows a preview of the image banner instead of the name.
 - Moved the Log out button to the right.
 - Added an option to disable affiliate registration on the front end.
+- Affiliate pages are not automatically created when the init action hook is triggered.
 
 = 2.9.4 =
 - Fixed an issue in the affiliate sales interface where dates were not correctly filtered for the German language.

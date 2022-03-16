@@ -249,19 +249,7 @@ class WPAM_Plugin {
     public function onInit() {
         
         $this->do_init_task();
-        $this->do_page_upgrade_task();
-        /*
-          try	{
-          if ( isset( $_GET[WPAM_PluginConfig::$RefKey] ) ) {
-          $requestTracker = new WPAM_Tracking_RequestTracker();
-          $query_args = $_GET;
-          $requestTracker->handleIncomingReferral($query_args);
-          }
-          } catch (Exception $e) {
-          wp_die("WPAM FAILED: " . $e->getMessage());
-          }
-         */
-        //new affiliate tracking code
+        //$this->do_page_upgrade_task();
         WPAM_Click_Tracking::record_click();
     }
     
