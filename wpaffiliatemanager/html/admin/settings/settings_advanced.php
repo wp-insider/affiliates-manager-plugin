@@ -65,4 +65,17 @@ $home_url = home_url('/');
 			?>/><p class="description"><?php _e('If checked, visitors will not be able to sign up on the affiliate registration page. This allows you to selectively create affiliate accounts from the admin dashboard.', 'affiliates-manager');?></p>
 		</td>
 	</tr>
+        <tr>
+		<th width="200">
+			<label for="showRegTncChk">
+				<?php _e('Show Terms and Conditions', 'affiliates-manager');?>
+			</label>
+		</th>
+		<td>
+			<input type="checkbox" id="showRegTncChk" name="showRegTncChk" <?php
+			if ($this->viewData['request']['showRegTncChk'])
+				echo 'checked="checked"';
+			?>/><p class="description"><?php _e('If checked, a terms and conditions checkbox will be shown on the affiliate registration page.', 'affiliates-manager');?></p>
+		</td>
+	</tr>
 </table>

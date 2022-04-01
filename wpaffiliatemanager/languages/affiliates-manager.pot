@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2022-03-19 16:09+0600\n"
+"POT-Creation-Date: 2022-04-01 12:17+0600\n"
 "PO-Revision-Date: 2018-05-28 13:21+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1098,6 +1098,16 @@ msgid ""
 "from the admin dashboard."
 msgstr ""
 
+#: html/admin/settings/settings_advanced.php:71
+msgid "Show Terms and Conditions"
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:78
+msgid ""
+"If checked, a terms and conditions checkbox will be shown on the affiliate "
+"registration page."
+msgstr ""
+
 #: html/admin/settings/settings_aff_pages.php:5
 msgid "Home Page"
 msgstr ""
@@ -1741,19 +1751,19 @@ msgid ""
 "account then try a new registration."
 msgstr ""
 
-#: html/affiliate_register_form.php:93
+#: html/affiliate_register_form.php:94
 msgid "I have read and agree to the"
 msgstr ""
 
-#: html/affiliate_register_form.php:93
+#: html/affiliate_register_form.php:94
 msgid "Terms and Conditions"
 msgstr ""
 
-#: html/affiliate_register_form.php:94
+#: html/affiliate_register_form.php:95
 msgid "You must agree to the terms."
 msgstr ""
 
-#: html/affiliate_register_form.php:105
+#: html/affiliate_register_form.php:109
 msgid "Submit Application"
 msgstr ""
 

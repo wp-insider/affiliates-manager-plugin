@@ -1,5 +1,6 @@
 jQuery(function($) {
 	$("#mainForm").submit(function() {
+            /*
 		if ($("#chkAgreeTerms").is(':checked'))
 		{
 			return true;
@@ -8,7 +9,7 @@ jQuery(function($) {
 		{
 			$("#termsAgreeWarning").show();
 			return false;
-		}
+		}*/
 	});
 
 	$("#tncDialog").dialog({

@@ -88,18 +88,22 @@ if(get_option(WPAM_PluginConfig::$EnableRegFormAnchor) == 1){
 							</select>
 							<?php break; default: break;
 						}?>
-			<?php } //end foreach ?>
-
-                        <label for="chkAgreeTerms" id="agreeTermsLabel" class="pure-checkbox"><input type="checkbox" id="chkAgreeTerms" name="chkAgreeTerms" <?php echo (isset($request['chkAgreeTerms']) ? 'checked="checked"':'')?> />&nbsp;<?php _e('I have read and agree to the', 'affiliates-manager' ) ?> <a target="_blank" href="<?php echo get_option( WPAM_PluginConfig::$AffTncPageURL );?>"><?php _e('Terms and Conditions', 'affiliates-manager' ) ?></a></label>
-                        <div id="termsAgreeWarning" style="color: red; display: none"><?php _e( 'You must agree to the terms.', 'affiliates-manager' ) ?></div>
-			
-               
-                <?php 
+			<?php } //end foreach 
+                        if(get_option(WPAM_PluginConfig::$ShowRegTncChk) == 1){
+                        ?>    
+                            <label for="chkAgreeTerms" id="agreeTermsLabel" class="pure-checkbox"><input type="checkbox" id="chkAgreeTerms" name="chkAgreeTerms" <?php echo (isset($request['chkAgreeTerms']) ? 'checked="checked"':'')?> required />&nbsp;<?php _e('I have read and agree to the', 'affiliates-manager' ) ?> <a target="_blank" href="<?php echo get_option( WPAM_PluginConfig::$AffTncPageURL );?>"><?php _e('Terms and Conditions', 'affiliates-manager' ) ?></a></label>
+                            <div id="termsAgreeWarning" style="color: red; display: none"><?php _e( 'You must agree to the terms.', 'affiliates-manager' ) ?></div>
+			<?php
+                        }else{
+                            ?>
+                            <div style="margin: 0.5em 0;"></div>
+                            <?php    
+                        }      
                 $output = apply_filters( 'wpam_before_registration_submit_button', '');
                 if(!empty($output)){
                     echo $output;
                 }
-                ?> 
+                ?>    
                 <!--<div class="wpam-registration-form">-->
                 <input type="hidden" name="wpam_reg_submit" value="1" />
                 <input type="submit" name="submit" value="<?php _e( 'Submit Application', 'affiliates-manager' ) ?>" class="wpam-registration-form-submit pure-button pure-button-active" />
