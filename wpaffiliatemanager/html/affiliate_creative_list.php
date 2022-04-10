@@ -117,7 +117,7 @@
                                 $img_url = wp_get_attachment_url($creative->imagePostId);
                             }
                             //$url = wp_get_attachment_image_src($model->imagePostId);
-                            echo $img_url;?>" style="max-width: 200px; max-height: 200px;"/></a></td>
+                            echo esc_url($img_url);?>"></a></td>
                         <?php
                         }
                         else{

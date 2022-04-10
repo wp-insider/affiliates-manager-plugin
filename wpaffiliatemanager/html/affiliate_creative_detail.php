@@ -3,14 +3,11 @@ $model = $this->viewData['creative'];
 
 ?>
 
-
 <script type="text/javascript">
 
 	jQuery(document).ready(function() {
 		jQuery("#dialog-preview").dialog({
 			resizable: true,
-			width: 640,
-			height: 480,
 			closeOnEscape: true,
 			modal: true,
 			draggable: true,
@@ -92,11 +89,11 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
                                     $img_url = wp_get_attachment_url($model->imagePostId);
                                 }
 				//$url = wp_get_attachment_image_src($model->imagePostId);
-				echo $img_url;?>" style="max-width: 200px; max-height: 200px;"/></td>
+				echo esc_url($img_url);?>"></td>
 		</tr>
 		<tr>
 			<td><?php _e( 'Alt Text', 'affiliates-manager' ) ?></td>
-			<td><?php echo $model->altText?></td>
+			<td><?php echo esc_html($model->altText);?></td>
 		</tr>
 		</tbody>
 	</table>

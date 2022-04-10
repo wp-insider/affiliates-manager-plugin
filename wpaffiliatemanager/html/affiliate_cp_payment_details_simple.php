@@ -4,7 +4,6 @@
 	{
 		border: 1px solid #ddd;
 		display: none;
-		width: 500px;
 		padding: 10px;
 	}
 </style>
@@ -17,12 +16,12 @@
 <?php
 require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 ?>
-	<form method="post" action="<?php echo $this->viewData['nextStepUrl']?>">
+	<form method="post" action="<?php echo $this->viewData['nextStepUrl']?>" class="pure-form">
             <?php wp_nonce_field('affiliate_cp_submit_payment_details'); ?>
-		<table width="500">
+		<table class="pure-table">
 			<tr>
-				<td width="200"><label for="ddPaymentMethod"><?php _e( 'Method', 'affiliates-manager' ) ?></label> *</td>
-				<td><select id="ddPaymentMethod" name="ddPaymentMethod" style="width: 150px;">
+				<td><label for="ddPaymentMethod"><?php _e( 'Method', 'affiliates-manager' ) ?></label> *</td>
+				<td><select id="ddPaymentMethod" name="ddPaymentMethod">
 					<?php foreach ($this->viewData['paymentMethods'] as $key => $val) {
 						echo '<option value="'.$key.'"';
 						if ( isset( $this->viewData['request']['ddPaymentMethod'] ) && $this->viewData['request']['ddPaymentMethod'] == $key)
@@ -36,9 +35,9 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 		<br/>
 		<div id="paypalDetails" class="detailsBlock">
 			<img src="<?php echo WPAM_URL . "/images/icon_paypal.png"?>" />
-			<table width="500">
+			<table class="pure-table">
 				<tr>
-					<td width="200"><label for="txtPaypalEmail"><?php _e( 'PayPal E-Mail Address', 'affiliates-manager' ) ?></label> *</td>
+					<td><label for="txtPaypalEmail"><?php _e( 'PayPal E-Mail Address', 'affiliates-manager' ) ?></label> *</td>
 					<td>
 						<input id="txtPaypalEmail" type="text" name="txtPaypalEmail" size="30" value="<?php echo isset( $this->viewData['request']['txtPaypalEmail'] ) ? $this->viewData['request']['txtPaypalEmail'] : '' ?>"/>
 					</td>
@@ -46,17 +45,17 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 			</table>
 		</div>
 
-		<div id="checkDetails" class="detailsBlock">
+                <div id="checkDetails" class="detailsBlock">
 			<div style="float: left; width: 75px; height: 35px;">
 				<img src="<?php echo WPAM_URL . "/images/bank-check.png"?>" />
 			</div>
-			<div style="width: 400px; height: 35px; padding-left: 10px; text-align: left; vertical-align: bottom;">
+			<div style="padding-left: 10px; text-align: left; vertical-align: bottom;">
 				<strong><?php _e( 'Paper Check', 'affiliates-manager' ) ?></strong>
 			</div>
 
-			<table width="500">
+			<table class="pure-table">
 				<tr>
-					<td width="200">
+					<td>
 						<label for="txtCheckTo"><?php _e( 'Check Recipient', 'affiliates-manager' ) ?></label> *
 					</td>
 					<td>
@@ -64,7 +63,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 					</td>
 				</tr>
 				<tr>
-					<td width="200">
+					<td>
 					</td>
 					<td>
 						<?php _e( 'Check will be mailed to the following address:', 'affiliates-manager' ) ?>
@@ -72,9 +71,9 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 				</tr>
 			</table>
 
-			<table class="widefat">
+			<table class="pure-table">
 				<tbody>
-					<tr><td width="100"><?php _e( 'Recipient', 'affiliates-manager' ) ?></td>
+					<tr><td><?php _e( 'Recipient', 'affiliates-manager' ) ?></td>
 					<td>
 						<?php echo $model->firstName?> <?php echo $model->lastName?><br/>
 						<?php echo $model->addressLine1?><br />
@@ -98,7 +97,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 		</div>
 
 		<br />
-		<div id="buttons" style="width:500px; text-align: center;">
+		<div id="buttons" style="text-align: center;">
 			<input type="submit" class="button-primary" name="submitButton" value="<?php _e( 'Submit Payment Details', 'affiliates-manager' ) ?>"/>
 		</div>
 	</form>
