@@ -34,6 +34,7 @@ jQuery(function($) {
 	});
 
 	var dates = $( "#from, #to" ).datepicker({
+                dateFormat: "mm/dd/yy",
 		numberOfMonths: 2,
 		onSelect: function( selectedDate ) {
 			var option = this.id == "from" ? "minDate" : "maxDate",
@@ -106,7 +107,7 @@ jQuery(function($) {
 	<p><?php echo sprintf( __( 'Not showing %s affiliates that do not have a PayPal account on file.', 'affiliates-manager' ), $this->viewData['notShownCount'] ) ?></p>
 	<div style="width: 800px;">
 	<form method="post" id="dateRange">
-        <?php wp_nonce_field('wpam_payments_select_aff_date_range_nonce'); ?>
+        <?php wp_nonce_field('wpam_payments_select_aff_date_range_action', 'wpam_payments_select_aff_date_range_nonce'); ?>
 		<div>
 <p><strong><?php _e( 'Date Range:', 'affiliates-manager' ) ?></strong> 
 <label for="from"><?php _e( 'From Date', 'affiliates-manager' ) ?></label>
@@ -119,7 +120,7 @@ jQuery(function($) {
 		</div>
 	</form>
 	    <form method="POST" action="<?php echo admin_url('admin.php?page=wpam-payments&step=review_affiliates')?>">
-                <?php wp_nonce_field('wpam_payments_review_affiliates_nonce'); ?>
+                <?php wp_nonce_field('wpam_payments_review_affiliates_action', 'wpam_payments_review_affiliates_nonce'); ?>
 		<table class="widefat" style="width: 800px">
 			<thead><tr>
 				<th width="10" style="padding: 0"><input type="checkbox" id="checkall" checked="checked" /></th>

@@ -319,8 +319,7 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 
 	private function processReviewAffiliatesRequest($request)
 	{
-                $nonce = $request['_wpnonce'];
-                if(!wp_verify_nonce($nonce, 'wpam_payments_review_affiliates_nonce')){
+                if(!isset($request['wpam_payments_review_affiliates_nonce']) || !wp_verify_nonce($request['wpam_payments_review_affiliates_nonce'], 'wpam_payments_review_affiliates_action')){
                     wp_die(__('Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and selects affiliates to pay.', 'affiliates-manager'));
                 }
 		$db = new WPAM_Data_DataAccess();
@@ -351,9 +350,9 @@ class WPAM_Pages_Admin_PaypalPaymentsPage extends WPAM_Pages_Admin_AdminPage
 	}
 
 	private function processSelectAffiliatesRequest( $request ) {
-            
-                if(!empty($request['from']) || !empty($request['to'])){  /*date range selected */
-                    if(!isset($request['_wpnonce']) || !wp_verify_nonce($request['_wpnonce'], 'wpam_payments_select_aff_date_range_nonce')){
+                
+                if(!empty($request['from']) || !empty($request['to'])){  /* date range selected */
+                    if(!isset($request['wpam_payments_select_aff_date_range_nonce']) || !wp_verify_nonce($request['wpam_payments_select_aff_date_range_nonce'], 'wpam_payments_select_aff_date_range_action')){
                         wp_die(__('Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and select affiliates again.', 'affiliates-manager'));
                     }
                 }
