@@ -197,7 +197,11 @@ class WPAM_List_Affiliates_Table extends WP_List_Table {
                 $where = " where status = '$status'";
             }
         }
-
+        //affiliate search
+        if (isset($_REQUEST['wpam_affiliate_search']) && !empty($_REQUEST['wpam_affiliate_search'])) {
+            $search_term = esc_sql($_REQUEST['wpam_affiliate_search']);
+            $where = " where affiliateId like '%" . $search_term . "%' OR firstName like '%" . $search_term . "%' OR lastName like '%" . $search_term . "%' OR email like '%" . $search_term . "%' OR paypalEmail like '%" . $search_term . "%'";
+        }
         //count the total number of items
         $query = "select count(*) from $aff_table_name" . $where;
 

@@ -46,7 +46,18 @@
 
     function wpam_my_affiliates_list()
     {
-        
+        ?>
+        <div class="postbox">
+        <h3 class="hndle"><label for="title"><?php _e('Affiliate Search', 'affiliates-manager')?></label></h3>
+        <div class="inside">
+            <p><?php _e('Search for an affiliate by entering the affiliate ID, first name, last name or email address', 'affiliates-manager')?></p>
+
+            <form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
+                <input name="wpam_affiliate_search" type="text" size="35" value=""/>
+                <input type="submit" name="submit" class="button" value="<?php _e('Search', 'affiliates-manager')?>" />
+            </form> 
+        </div></div>
+        <?php
         $status_array = array(
             'all_active' => __('All Active', 'affiliates-manager'),
             'all' => __('All (Including Closed)', 'affiliates-manager'),
