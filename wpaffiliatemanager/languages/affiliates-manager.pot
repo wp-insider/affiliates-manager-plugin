@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2022-04-01 12:17+0600\n"
+"POT-Creation-Date: 2022-04-23 11:38+0600\n"
 "PO-Revision-Date: 2018-05-28 13:21+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -63,7 +63,7 @@ msgstr ""
 
 #: classes/ListAffiliatesTable.php:66
 #: html/admin/paypalpayments/review_affiliates.php:59
-#: html/admin/paypalpayments/select_affiliates.php:131
+#: html/admin/paypalpayments/select_affiliates.php:132
 #: html/affiliate_cp_home.php:16 html/transaction_table.php:53
 #: html/transaction_table.php:68
 msgid "Balance"
@@ -75,13 +75,13 @@ msgstr ""
 
 #: classes/ListAffiliatesTable.php:68
 #: html/admin/paypalpayments/review_affiliates.php:55
-#: html/admin/paypalpayments/select_affiliates.php:127
+#: html/admin/paypalpayments/select_affiliates.php:128
 msgid "First Name"
 msgstr ""
 
 #: classes/ListAffiliatesTable.php:69
 #: html/admin/paypalpayments/review_affiliates.php:56
-#: html/admin/paypalpayments/select_affiliates.php:128
+#: html/admin/paypalpayments/select_affiliates.php:129
 msgid "Last Name"
 msgstr ""
 
@@ -91,7 +91,7 @@ msgstr ""
 
 #: classes/ListAffiliatesTable.php:71
 #: html/admin/paypalpayments/review_affiliates.php:57
-#: html/admin/paypalpayments/select_affiliates.php:129
+#: html/admin/paypalpayments/select_affiliates.php:130
 msgid "Company"
 msgstr ""
 
@@ -179,7 +179,7 @@ msgstr ""
 
 #: classes/ListTable.php:153 html/admin/affiliate_detail.php:284
 #: html/admin/affiliate_detail.php:315
-#: html/admin/paypalpayments/select_affiliates.php:116
+#: html/admin/paypalpayments/select_affiliates.php:117
 #: html/transaction_table.php:36
 msgid "Apply"
 msgstr ""
@@ -231,7 +231,7 @@ msgstr ""
 #: html/admin/affiliate_detail.php:220 html/admin/affiliate_detail.php:237
 #: html/admin/creative_update_form.php:35 html/admin/creatives_detail.php:114
 #: html/admin/creatives_detail.php:137 html/admin/manage_creatives.php:38
-#: html/affiliate_creative_detail.php:19
+#: html/affiliate_creative_detail.php:16
 #: source/Pages/Admin/MyAffiliatesPage.php:169
 #: source/Pages/Admin/NewAffiliatePage.php:95
 #: source/Pages/AffiliatesHome.php:576
@@ -449,7 +449,7 @@ msgstr ""
 
 #: html/admin/affiliate_detail.php:564
 #: html/affiliate_cp_payment_details_form.php:69
-#: html/affiliate_cp_payment_details_simple.php:13 html/contact_info.php:136
+#: html/affiliate_cp_payment_details_simple.php:12 html/contact_info.php:136
 msgid "Payment Details"
 msgstr ""
 
@@ -559,50 +559,64 @@ msgid "My Affiliates"
 msgstr ""
 
 #: html/admin/affiliates_list.php:51
+msgid "Affiliate Search"
+msgstr ""
+
+#: html/admin/affiliates_list.php:53
+msgid ""
+"Search for an affiliate by entering the affiliate ID, first name, last name "
+"or email address"
+msgstr ""
+
+#: html/admin/affiliates_list.php:57
+msgid "Search"
+msgstr ""
+
+#: html/admin/affiliates_list.php:62
 msgid "All Active"
 msgstr ""
 
-#: html/admin/affiliates_list.php:52
+#: html/admin/affiliates_list.php:63
 msgid "All (Including Closed)"
 msgstr ""
 
-#: html/admin/affiliates_list.php:53 source/Pages/Admin/MyCreativesPage.php:61
+#: html/admin/affiliates_list.php:64 source/Pages/Admin/MyCreativesPage.php:61
 #: source/display_functions.php:166
 msgid "Active"
 msgstr ""
 
-#: html/admin/affiliates_list.php:54 source/display_functions.php:160
+#: html/admin/affiliates_list.php:65 source/display_functions.php:160
 msgid "Applied"
 msgstr ""
 
-#: html/admin/affiliates_list.php:55 source/display_functions.php:164
+#: html/admin/affiliates_list.php:66 source/display_functions.php:164
 msgid "Approved"
 msgstr ""
 
-#: html/admin/affiliates_list.php:56
+#: html/admin/affiliates_list.php:67
 #: html/affiliate_cp_payment_details_confirmed.php:2
 #: source/display_functions.php:170
 msgid "Confirmed"
 msgstr ""
 
-#: html/admin/affiliates_list.php:57 source/display_functions.php:162
+#: html/admin/affiliates_list.php:68 source/display_functions.php:162
 msgid "Declined"
 msgstr ""
 
-#: html/admin/affiliates_list.php:58 source/display_functions.php:172
+#: html/admin/affiliates_list.php:69 source/display_functions.php:172
 msgid "Blocked"
 msgstr ""
 
-#: html/admin/affiliates_list.php:59 source/Pages/Admin/MyCreativesPage.php:62
+#: html/admin/affiliates_list.php:70 source/Pages/Admin/MyCreativesPage.php:62
 #: source/display_functions.php:168
 msgid "Inactive"
 msgstr ""
 
-#: html/admin/affiliates_list.php:120
+#: html/admin/affiliates_list.php:131
 msgid "Export Affiliates Record"
 msgstr ""
 
-#: html/admin/affiliates_list.php:125
+#: html/admin/affiliates_list.php:136
 msgid "Export to CSV"
 msgstr ""
 
@@ -664,8 +678,8 @@ msgstr ""
 
 #: html/admin/creative_update_form.php:175
 #: html/admin/creative_update_form.php:210 html/admin/creatives_detail.php:281
-#: html/admin/creatives_detail.php:311 html/affiliate_creative_detail.php:68
-#: html/affiliate_creative_detail.php:98
+#: html/admin/creatives_detail.php:311 html/affiliate_creative_detail.php:65
+#: html/affiliate_creative_detail.php:95
 msgid "Alt Text"
 msgstr ""
 
@@ -674,7 +688,7 @@ msgid "Text Link Parameters"
 msgstr ""
 
 #: html/admin/creative_update_form.php:199 html/admin/creatives_detail.php:277
-#: html/affiliate_creative_detail.php:64
+#: html/affiliate_creative_detail.php:61
 msgid "Link Text"
 msgstr ""
 
@@ -695,7 +709,7 @@ msgid "Return to Creatives"
 msgstr ""
 
 #: html/admin/creatives_detail.php:8 html/admin/creatives_detail.php:298
-#: html/affiliate_creative_detail.php:85
+#: html/affiliate_creative_detail.php:82
 msgid "Image"
 msgstr ""
 
@@ -724,11 +738,11 @@ msgid "this creative?"
 msgstr ""
 
 #: html/admin/creatives_detail.php:174 html/admin/creatives_detail.php:216
-#: html/affiliate_creative_detail.php:32 html/affiliate_creative_detail.php:45
+#: html/affiliate_creative_detail.php:29 html/affiliate_creative_detail.php:42
 msgid "Preview"
 msgstr ""
 
-#: html/admin/creatives_detail.php:195 html/affiliate_creative_detail.php:43
+#: html/admin/creatives_detail.php:195 html/affiliate_creative_detail.php:40
 msgid "Creative:"
 msgstr ""
 
@@ -748,11 +762,11 @@ msgstr ""
 msgid "ID"
 msgstr ""
 
-#: html/admin/creatives_detail.php:272 html/affiliate_creative_detail.php:59
+#: html/admin/creatives_detail.php:272 html/affiliate_creative_detail.php:56
 msgid "Text Link Properties"
 msgstr ""
 
-#: html/admin/creatives_detail.php:293 html/affiliate_creative_detail.php:80
+#: html/admin/creatives_detail.php:293 html/affiliate_creative_detail.php:77
 msgid "Image Properties"
 msgstr ""
 
@@ -803,7 +817,7 @@ msgstr ""
 #: html/admin/paypalpayments/not_configured.php:2
 #: html/admin/paypalpayments/pending_payments.php:3
 #: html/admin/paypalpayments/review_affiliates.php:45
-#: html/admin/paypalpayments/select_affiliates.php:102
+#: html/admin/paypalpayments/select_affiliates.php:103
 #: html/admin/paypalpayments/view_payment_detail.php:7 source/Plugin.php:85
 msgid "PayPal Mass Pay"
 msgstr ""
@@ -879,12 +893,12 @@ msgid "Review Your Mass Payment"
 msgstr ""
 
 #: html/admin/paypalpayments/review_affiliates.php:54
-#: html/admin/paypalpayments/select_affiliates.php:126
+#: html/admin/paypalpayments/select_affiliates.php:127
 msgid "AID"
 msgstr ""
 
 #: html/admin/paypalpayments/review_affiliates.php:58
-#: html/admin/paypalpayments/select_affiliates.php:130
+#: html/admin/paypalpayments/select_affiliates.php:131
 #: html/admin/paypalpayments/view_payment_detail.php:60
 msgid "PayPal E-Mail"
 msgstr ""
@@ -903,13 +917,13 @@ msgid "Sub-Total"
 msgstr ""
 
 #: html/admin/paypalpayments/review_affiliates.php:98
-#: html/admin/paypalpayments/select_affiliates.php:177
+#: html/admin/paypalpayments/select_affiliates.php:178
 #, php-format
 msgid "PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>"
 msgstr ""
 
 #: html/admin/paypalpayments/review_affiliates.php:103
-#: html/admin/paypalpayments/select_affiliates.php:182
+#: html/admin/paypalpayments/select_affiliates.php:183
 msgid "Estimated Total"
 msgstr ""
 
@@ -917,40 +931,40 @@ msgstr ""
 msgid "Submit Mass Payment to PayPal"
 msgstr ""
 
-#: html/admin/paypalpayments/select_affiliates.php:103
+#: html/admin/paypalpayments/select_affiliates.php:104
 msgid "Select Affiliates to Pay"
 msgstr ""
 
-#: html/admin/paypalpayments/select_affiliates.php:106
+#: html/admin/paypalpayments/select_affiliates.php:107
 #, php-format
 msgid "Not showing %s affiliates that do not have a PayPal account on file."
 msgstr ""
 
-#: html/admin/paypalpayments/select_affiliates.php:111
+#: html/admin/paypalpayments/select_affiliates.php:112
 #: html/transaction_table.php:28
 msgid "Date Range:"
 msgstr ""
 
-#: html/admin/paypalpayments/select_affiliates.php:112
+#: html/admin/paypalpayments/select_affiliates.php:113
 #: html/transaction_table.php:30
 msgid "From Date"
 msgstr ""
 
-#: html/admin/paypalpayments/select_affiliates.php:114
+#: html/admin/paypalpayments/select_affiliates.php:115
 #: html/transaction_table.php:32
 msgid "To Date"
 msgstr ""
 
-#: html/admin/paypalpayments/select_affiliates.php:117
+#: html/admin/paypalpayments/select_affiliates.php:118
 #: html/transaction_table.php:37
 msgid "Clear"
 msgstr ""
 
-#: html/admin/paypalpayments/select_affiliates.php:132
+#: html/admin/paypalpayments/select_affiliates.php:133
 msgid "Payment Amount"
 msgstr ""
 
-#: html/admin/paypalpayments/select_affiliates.php:187
+#: html/admin/paypalpayments/select_affiliates.php:188
 msgid "Continue with these payments"
 msgstr ""
 
@@ -1587,35 +1601,35 @@ msgid ""
 msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:70
-#: html/affiliate_cp_payment_details_simple.php:14
+#: html/affiliate_cp_payment_details_simple.php:13
 msgid "Please provide your payment details."
 msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:71
-#: html/affiliate_cp_payment_details_simple.php:15
+#: html/affiliate_cp_payment_details_simple.php:14
 msgid ""
 "The following information will be used to disburse payments when your "
 "account reaches the minimum payout amount."
 msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:79
-#: html/affiliate_cp_payment_details_simple.php:24 html/contact_info.php:142
+#: html/affiliate_cp_payment_details_simple.php:23 html/contact_info.php:142
 msgid "Method"
 msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:96
-#: html/affiliate_cp_payment_details_simple.php:41 html/contact_info.php:171
+#: html/affiliate_cp_payment_details_simple.php:40 html/contact_info.php:171
 msgid "PayPal E-Mail Address"
 msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:109
-#: html/affiliate_cp_payment_details_simple.php:54
+#: html/affiliate_cp_payment_details_simple.php:53
 #: source/Util/AffiliateFormHelper.php:156
 msgid "Paper Check"
 msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:115
-#: html/affiliate_cp_payment_details_simple.php:60
+#: html/affiliate_cp_payment_details_simple.php:59
 msgid "Check Recipient"
 msgstr ""
 
@@ -1625,7 +1639,7 @@ msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:143
 #: html/affiliate_cp_payment_details_form.php:168
-#: html/affiliate_cp_payment_details_simple.php:77
+#: html/affiliate_cp_payment_details_simple.php:76
 msgid "Recipient"
 msgstr ""
 
@@ -1654,19 +1668,19 @@ msgid "Postal Code"
 msgstr ""
 
 #: html/affiliate_cp_payment_details_form.php:218
-#: html/affiliate_cp_payment_details_simple.php:102
+#: html/affiliate_cp_payment_details_simple.php:101
 msgid "Submit Payment Details"
 msgstr ""
 
-#: html/affiliate_cp_payment_details_simple.php:70
+#: html/affiliate_cp_payment_details_simple.php:69
 msgid "Check will be mailed to the following address:"
 msgstr ""
 
-#: html/affiliate_creative_detail.php:47
+#: html/affiliate_creative_detail.php:44
 msgid "Share Link"
 msgstr ""
 
-#: html/affiliate_creative_detail.php:50
+#: html/affiliate_creative_detail.php:47
 msgid "Your Affiliate-Specific HTML snippet"
 msgstr ""
 
@@ -2373,13 +2387,13 @@ msgstr ""
 msgid "Payout via PayPal Mass Pay"
 msgstr ""
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:324
+#: source/Pages/Admin/PaypalPaymentsPage.php:323
 msgid ""
 "Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and "
 "selects affiliates to pay."
 msgstr ""
 
-#: source/Pages/Admin/PaypalPaymentsPage.php:357
+#: source/Pages/Admin/PaypalPaymentsPage.php:356
 msgid ""
 "Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and "
 "select affiliates again."
