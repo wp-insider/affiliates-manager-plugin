@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Affiliates Manager\n"
-"POT-Creation-Date: 2022-04-23 11:38+0600\n"
+"POT-Creation-Date: 2022-05-21 15:52+0600\n"
 "PO-Revision-Date: 2018-05-28 13:21+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -47,8 +47,9 @@ msgid "View"
 msgstr ""
 
 #: classes/ListAffiliatesTable.php:64 classes/ListClicksTable.php:58
-#: classes/ListCommissionTable.php:65
-#: source/Admin-menu/wpam-commission-menu.php:173
+#: classes/ListCommissionTable.php:66
+#: source/Admin-menu/wpam-commission-menu.php:176
+#: source/Admin-menu/wpam-commission-menu.php:339
 #: source/Admin-menu/wpam-manage-payouts-menu.php:70
 msgid "Affiliate ID"
 msgstr ""
@@ -104,21 +105,21 @@ msgid "Website"
 msgstr ""
 
 #: classes/ListAffiliatesTable.php:89 classes/ListClicksTable.php:76
-#: classes/ListCommissionTable.php:83 html/admin/manage_creatives.php:177
+#: classes/ListCommissionTable.php:84 html/admin/manage_creatives.php:177
 msgid "Delete"
 msgstr ""
 
 #: classes/ListAffiliatesTable.php:100 classes/ListClicksTable.php:87
-#: classes/ListCommissionTable.php:94
+#: classes/ListCommissionTable.php:95
 msgid "Error! You need to select multiple records to perform a bulk action!"
 msgstr ""
 
 #: classes/ListAffiliatesTable.php:118 classes/ListClicksTable.php:96
-#: classes/ListCommissionTable.php:103
+#: classes/ListCommissionTable.php:104
 msgid "Selected records deleted successfully!"
 msgstr ""
 
-#: classes/ListAffiliatesTable.php:144 classes/ListCommissionTable.php:119
+#: classes/ListAffiliatesTable.php:144 classes/ListCommissionTable.php:120
 msgid "Selected record deleted successfully!"
 msgstr ""
 
@@ -126,12 +127,13 @@ msgstr ""
 msgid "No Clicks Found!"
 msgstr ""
 
-#: classes/ListClicksTable.php:56 classes/ListCommissionTable.php:63
+#: classes/ListClicksTable.php:56 classes/ListCommissionTable.php:64
 msgid "Row ID"
 msgstr ""
 
-#: classes/ListClicksTable.php:57 classes/ListCommissionTable.php:64
-#: source/Admin-menu/wpam-commission-menu.php:203
+#: classes/ListClicksTable.php:57 classes/ListCommissionTable.php:65
+#: source/Admin-menu/wpam-commission-menu.php:206
+#: source/Admin-menu/wpam-commission-menu.php:363
 msgid "Date"
 msgstr ""
 
@@ -147,11 +149,11 @@ msgstr ""
 msgid "IP Address"
 msgstr ""
 
-#: classes/ListCommissionTable.php:49
+#: classes/ListCommissionTable.php:50
 msgid "No Commission Data Found!"
 msgstr ""
 
-#: classes/ListCommissionTable.php:66
+#: classes/ListCommissionTable.php:67
 #: html/admin/paypalpayments/pending_payments.php:13
 #: html/admin/paypalpayments/view_payment_detail.php:20
 #: html/admin/paypalpayments/view_payment_detail.php:63
@@ -159,13 +161,15 @@ msgstr ""
 msgid "Amount"
 msgstr ""
 
-#: classes/ListCommissionTable.php:67
-#: source/Admin-menu/wpam-commission-menu.php:191
+#: classes/ListCommissionTable.php:68
+#: source/Admin-menu/wpam-commission-menu.php:194
+#: source/Admin-menu/wpam-commission-menu.php:351
 msgid "Transaction ID"
 msgstr ""
 
-#: classes/ListCommissionTable.php:68
-#: source/Admin-menu/wpam-commission-menu.php:197
+#: classes/ListCommissionTable.php:69
+#: source/Admin-menu/wpam-commission-menu.php:200
+#: source/Admin-menu/wpam-commission-menu.php:357
 msgid "Buyer Email"
 msgstr ""
 
@@ -1036,7 +1040,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: html/admin/settings/settings.php:22 source/Plugin.php:642
+#: html/admin/settings/settings.php:22 source/Plugin.php:667
 msgid "Settings"
 msgstr ""
 
@@ -1120,6 +1124,16 @@ msgstr ""
 msgid ""
 "If checked, a terms and conditions checkbox will be shown on the affiliate "
 "registration page."
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:84
+msgid "Use IP Address for Referral Tracking"
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:91
+msgid ""
+"If checked, a fallback method will be used to track referrals with IP "
+"addresses. This can be useful if the default cookie-based tracking fails."
 msgstr ""
 
 #: html/admin/settings/settings_aff_pages.php:5
@@ -1839,11 +1853,11 @@ msgstr ""
 msgid "Reference ID"
 msgstr ""
 
-#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:662
+#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:687
 msgid "Affiliates Manager Add-ons"
 msgstr ""
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:8 source/Plugin.php:646
+#: source/Admin-menu/wpam-admin-functions-menu.php:8 source/Plugin.php:671
 msgid "Admin Functions"
 msgstr ""
 
@@ -1900,7 +1914,7 @@ msgstr ""
 msgid "Delete Clicks Data"
 msgstr ""
 
-#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:654
+#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:679
 msgid "Click Tracking"
 msgstr ""
 
@@ -1924,69 +1938,122 @@ msgstr ""
 msgid "Manual Commission"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:48
+#: source/Admin-menu/wpam-commission-menu.php:51
 msgid "This tab shows all affiliate commission data"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:104
+#: source/Admin-menu/wpam-commission-menu.php:107
+#: source/Admin-menu/wpam-commission-menu.php:270
 msgid "You need to enter an affiliate ID"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:108
+#: source/Admin-menu/wpam-commission-menu.php:111
+#: source/Admin-menu/wpam-commission-menu.php:278
 msgid "You need to enter a numeric commission amount"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:112
+#: source/Admin-menu/wpam-commission-menu.php:115
 msgid "You need to enter a numeric purchase amount"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:139
+#: source/Admin-menu/wpam-commission-menu.php:142
 msgid "A commission with this transaction ID already exists"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:155
+#: source/Admin-menu/wpam-commission-menu.php:158
 msgid "Commission added!"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:165
+#: source/Admin-menu/wpam-commission-menu.php:168
 msgid "This tab allows you to manually award commission to an affiliate."
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:175
+#: source/Admin-menu/wpam-commission-menu.php:178
 msgid "Enter the affiliate ID. Example: "
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:179
+#: source/Admin-menu/wpam-commission-menu.php:182
+#: source/Admin-menu/wpam-commission-menu.php:345
 msgid "Commission Amount"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:181
+#: source/Admin-menu/wpam-commission-menu.php:184
 msgid "Enter the commission amount. Example: "
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:185
+#: source/Admin-menu/wpam-commission-menu.php:188
 msgid "Purchase Amount"
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:187
+#: source/Admin-menu/wpam-commission-menu.php:190
 msgid "Enter the purchase amount. Example: "
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:193
+#: source/Admin-menu/wpam-commission-menu.php:196
 msgid ""
 "Enter the unique transaction ID (leave empty to generate a unique ID). "
 "Example: "
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:199
+#: source/Admin-menu/wpam-commission-menu.php:202
 msgid "Enter the email address of the buyer (optional)."
 msgstr ""
 
-#: source/Admin-menu/wpam-commission-menu.php:205
+#: source/Admin-menu/wpam-commission-menu.php:208
 msgid "Enter the date in yyyy-mm-dd format. Example: "
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:8 source/Plugin.php:650
+#: source/Admin-menu/wpam-commission-menu.php:262
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Commissions menu and edit "
+"the commission again."
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:286
+msgid "You need to enter a unique transaction ID"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:300
+msgid "You need to enter a valid date"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:308
+msgid "Commission could not be updated"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:313
+msgid "Commission updated!"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:326
+msgid "Commission could not be found"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:331
+msgid "This tab allows you to edit a commission record."
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:341
+msgid "The affiliate ID. Example: "
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:347
+msgid "The commission amount. Example: "
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:353
+msgid "The unique transaction ID. Example: "
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:359
+msgid "The email address of the buyer (optional)."
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:365
+msgid "The date in Y-m-d H:i:s format. Example: "
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:8 source/Plugin.php:675
 msgid "Manage Payouts"
 msgstr ""
 
@@ -2565,12 +2632,12 @@ msgstr ""
 msgid "Unknown response: %s"
 msgstr ""
 
-#: source/Plugin.php:74 source/Plugin.php:617
+#: source/Plugin.php:74 source/Plugin.php:642
 msgid "Affiliate Management"
 msgstr ""
 
-#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:598
-#: source/Plugin.php:612 source/Plugin.php:617
+#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:623
+#: source/Plugin.php:637 source/Plugin.php:642
 msgid "Affiliates"
 msgstr ""
 
@@ -2622,39 +2689,39 @@ msgstr ""
 msgid " to become an affiliate today!"
 msgstr ""
 
-#: source/Plugin.php:612
+#: source/Plugin.php:637
 msgid "Be An Affiliate"
 msgstr ""
 
-#: source/Plugin.php:646
+#: source/Plugin.php:671
 msgid "Affiliates Manager Admin Functions"
 msgstr ""
 
-#: source/Plugin.php:650
+#: source/Plugin.php:675
 msgid "Affiliates Manager Manage Payouts"
 msgstr ""
 
-#: source/Plugin.php:654
+#: source/Plugin.php:679
 msgid "Affiliates Manager Click Tracking"
 msgstr ""
 
-#: source/Plugin.php:658
+#: source/Plugin.php:683
 msgid "Affiliates Manager Commission Data"
 msgstr ""
 
-#: source/Plugin.php:658
+#: source/Plugin.php:683
 msgid "Commissions"
 msgstr ""
 
-#: source/Plugin.php:662
+#: source/Plugin.php:687
 msgid "Add-ons"
 msgstr ""
 
-#: source/Plugin.php:797
+#: source/Plugin.php:822
 msgid "Invalid JSON handler."
 msgstr ""
 
-#: source/Plugin.php:828
+#: source/Plugin.php:853
 msgid "Nonce check failed for export My Affiliates to CSV!"
 msgstr ""
 

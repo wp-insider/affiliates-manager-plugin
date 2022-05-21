@@ -378,6 +378,19 @@ class WPAM_Plugin {
             $custom_field_val = $custom_field_val . '&' . $new_val;
             WPAM_Logger::log_debug('Simple WP Cart Integration - Adding custom field value. New value: ' . $custom_field_val);
         }
+        else{
+            if(get_option(WPAM_PluginConfig::$UseIPReferralTrack) == 1){
+                $user_ip = WPAM_Click_Tracking::get_user_ip();
+                $aff_id = WPAM_Click_Tracking::get_referrer_id_from_ip_address_by_cookie_duration($user_ip);
+                if (!empty($aff_id)){
+                    $name = 'wpam_tracking';
+                    $value = $aff_id;
+                    $new_val = $name . '=' . $value;
+                    $custom_field_val = $custom_field_val . '&' . $new_val;
+                    WPAM_Logger::log_debug('Simple WP Cart Integration - Adding custom field value using a fallback method. New value: ' . $custom_field_val);
+                }
+            }
+        }
         return $custom_field_val;
     }
 
@@ -435,12 +448,14 @@ class WPAM_Plugin {
             }
         }
         else{
-            $user_ip = WPAM_Click_Tracking::get_user_ip();
-            $aff_id = WPAM_Click_Tracking::get_referrer_id_from_ip_address_by_cookie_duration($user_ip);
-            if (!empty($aff_id)){
-                update_post_meta($order_id, '_wpam_id', $aff_id);
-                $wpam_refkey = get_post_meta($order_id, '_wpam_id', true);
-                WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_id (" . $wpam_refkey . ") with order using an alternative method. Order ID: " . $order_id);
+            if(get_option(WPAM_PluginConfig::$UseIPReferralTrack) == 1){
+                $user_ip = WPAM_Click_Tracking::get_user_ip();
+                $aff_id = WPAM_Click_Tracking::get_referrer_id_from_ip_address_by_cookie_duration($user_ip);
+                if (!empty($aff_id)){
+                    update_post_meta($order_id, '_wpam_id', $aff_id);
+                    $wpam_refkey = get_post_meta($order_id, '_wpam_id', true);
+                    WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_id (" . $wpam_refkey . ") with order using a fallback method. Order ID: " . $order_id);
+                }
             }
         }
     }
@@ -553,6 +568,16 @@ class WPAM_Plugin {
             $strRefKey = $_COOKIE[WPAM_PluginConfig::$RefKey];
             $payment_meta['wpam_refkey'] = $strRefKey;
             WPAM_Logger::log_debug('Easy Digital Downlaods Integration - refkey: ' . $strRefKey);
+        }
+        else{
+            if(get_option(WPAM_PluginConfig::$UseIPReferralTrack) == 1){
+                $user_ip = WPAM_Click_Tracking::get_user_ip();
+                $aff_id = WPAM_Click_Tracking::get_referrer_id_from_ip_address_by_cookie_duration($user_ip);
+                if (!empty($aff_id)){
+                    $payment_meta['wpam_refkey'] = $aff_id;
+                    WPAM_Logger::log_debug('Easy Digital Downlaods Integration - adding refkey: ' . $strRefKey.' using a fallback method');
+                }
+            }
         }
         return $payment_meta;
     }

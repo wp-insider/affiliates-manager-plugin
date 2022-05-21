@@ -27,6 +27,7 @@ class WPAM_List_Commission_Table extends WP_List_Table {
         
         //Build row actions
         $actions = array(
+            'edit' => sprintf('<a href="admin.php?page=wpam-commission&action=edit-commission&edit_rowid=%s">Edit</a>', esc_attr($item['transactionId'])),
             'delete' => sprintf('<a href="admin.php?page=wpam-commission&delete_rowid=%s" onclick="return confirm(\'Are you sure you want to delete this entry?\')">Delete</a>', esc_attr($item['transactionId'])),
         );
 

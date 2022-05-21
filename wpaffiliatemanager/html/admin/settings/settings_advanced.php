@@ -78,4 +78,17 @@ $home_url = home_url('/');
 			?>/><p class="description"><?php _e('If checked, a terms and conditions checkbox will be shown on the affiliate registration page.', 'affiliates-manager');?></p>
 		</td>
 	</tr>
+        <tr>
+		<th width="200">
+			<label for="useIPReferralTrack">
+				<?php _e('Use IP Address for Referral Tracking', 'affiliates-manager');?>
+			</label>
+		</th>
+		<td>
+			<input type="checkbox" id="useIPReferralTrack" name="useIPReferralTrack" <?php
+			if ($this->viewData['request']['useIPReferralTrack'])
+				echo 'checked="checked"';
+			?>/><p class="description"><?php _e('If checked, a fallback method will be used to track referrals with IP addresses. This can be useful if the default cookie-based tracking fails.', 'affiliates-manager');?></p>
+		</td>
+	</tr>
 </table>
