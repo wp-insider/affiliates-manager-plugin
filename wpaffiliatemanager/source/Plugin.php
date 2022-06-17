@@ -868,6 +868,7 @@ class WPAM_Plugin {
                 'websiteUrl' => 'Website',
                 'phoneNumber' => 'Phone',
             );
+            $export_keys = apply_filters('wpam_export_columns', $export_keys);
             $this->output_csv($affiliates->items, $export_keys, 'MyAffiliates.csv');
             die();
         }
