@@ -69,11 +69,10 @@ class WPAM_Pages_AffiliatesRegister extends WPAM_Pages_PublicPage
 				}
 				
 
-				
+				$blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
 				$mailer = new WPAM_Util_EmailHandler();
                                 if(get_option(WPAM_PluginConfig::$SendAdminRegNotification) == 1){
                                     //Notify admin that affiliate has registered
-                                    $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
                                     $message  = sprintf( __( 'New affiliate registration on your site %s:', 'affiliates-manager' ), $blogname) . "\r\n\r\n";
                                     $message .= sprintf( __( 'Name: %s %s', 'affiliates-manager' ), $request['_firstName'], $request['_lastName']) . "\r\n";
                                     $message .= sprintf( __( 'Email: %s', 'affiliates-manager' ), $request['_email']) . "\r\n";
