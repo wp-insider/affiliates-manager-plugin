@@ -196,6 +196,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 = 2.9.12 =
 - Fixed an issue where the blogname tag was not available in the affiliate email if Send Notification to Admin is disabled.
+- Fixed a PHP 8 warning in the MessageHelper.php file.
 
 = 2.9.11 =
 - Added a filter for the Export to CSV option.

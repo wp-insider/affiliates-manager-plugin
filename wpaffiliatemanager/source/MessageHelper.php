@@ -15,7 +15,7 @@ class WPAM_MessageHelper
 	 */
 	private static $db;
 	
-	public static function __StaticConstructor()
+	public static function StaticConstructor()
 	{
 		if (self::$db === NULL)
 			self::$db = new WPAM_Data_DataAccess();
@@ -31,4 +31,4 @@ class WPAM_MessageHelper
 	}
 }
 
-WPAM_MessageHelper::__StaticConstructor();
+WPAM_MessageHelper::StaticConstructor();
