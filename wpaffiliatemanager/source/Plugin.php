@@ -589,9 +589,28 @@ class WPAM_Plugin {
         if (isset($payment_meta['wpam_refkey']) && !empty($payment_meta['wpam_refkey'])) {
             $strRefKey = $payment_meta['wpam_refkey'];
             WPAM_Logger::log_debug('Easy Digital Downlaods Integration - This purchase was referred by an affiliate, refkey: ' . $strRefKey);
-        } else {
-            WPAM_Logger::log_debug('Easy Digital Downlaods Integration - refkey not found in the payment_meta. This purchase was not referred by an affiliate');
-            return;
+        } else { //checking referral cookie since edd_payment_meta filter seems to be triggering after edd_complete_purchase hook as of version 3.0
+            if (isset($_COOKIE['wpam_id'])) {
+                $strRefKey = $_COOKIE['wpam_id'];
+                WPAM_Logger::log_debug('Easy Digital Downlaods Integration - found refkey: ' . $strRefKey);
+            } else if (isset($_COOKIE[WPAM_PluginConfig::$RefKey])) {
+                $strRefKey = $_COOKIE[WPAM_PluginConfig::$RefKey];
+                WPAM_Logger::log_debug('Easy Digital Downlaods Integration - found refkey: ' . $strRefKey);
+            }
+            else {
+                if(get_option(WPAM_PluginConfig::$UseIPReferralTrack) == 1){
+                    $user_ip = WPAM_Click_Tracking::get_user_ip();
+                    $aff_id = WPAM_Click_Tracking::get_referrer_id_from_ip_address_by_cookie_duration($user_ip);
+                    if (!empty($aff_id)){
+                        $strRefKey = $aff_id;
+                        WPAM_Logger::log_debug('Easy Digital Downlaods Integration - found refkey: ' . $strRefKey.' using a fallback method');
+                    }
+                }
+            }
+            if(empty($strRefKey)){
+                WPAM_Logger::log_debug('Easy Digital Downlaods Integration - refkey not found in the payment_meta. This purchase was not referred by an affiliate');
+                return;
+            }
         }
         $purchaseAmount = edd_get_payment_amount($payment_id);
         $buyer_email = $payment_meta['email'];
