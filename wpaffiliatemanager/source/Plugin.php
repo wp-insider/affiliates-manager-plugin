@@ -811,32 +811,32 @@ class WPAM_Plugin {
     public function onAjaxRequest() {
         //die(print_r($_REQUEST, true));
         $jsonHandler = new WPAM_Util_JsonHandler();
-        $_REQUEST = wpam_sanitize_array($_REQUEST);
+        $request = wpam_sanitize_array($_REQUEST);
         try {
-            switch ($_REQUEST['handler']) {
+            switch ($request['handler']) {
                 case 'approveApplication':
-                    $response = $jsonHandler->approveApplication($_REQUEST['affiliateId'], $_REQUEST['bountyType'], $_REQUEST['bountyAmount']);
+                    $response = $jsonHandler->approveApplication($request['affiliateId'], $request['bountyType'], $request['bountyAmount']);
                     break;
                 case 'declineApplication':
-                    $response = $jsonHandler->declineApplication($_REQUEST['affiliateId']);
+                    $response = $jsonHandler->declineApplication($request['affiliateId']);
                     break;
                 case 'blockApplication':
-                    $response = $jsonHandler->blockApplication($_REQUEST['affiliateId']);
+                    $response = $jsonHandler->blockApplication($request['affiliateId']);
                     break;
                 case 'activateAffiliate':
-                    $response = $jsonHandler->activateApplication($_REQUEST['affiliateId']);
+                    $response = $jsonHandler->activateApplication($request['affiliateId']);
                     break;
                 case 'deactivateAffiliate':
-                    $response = $jsonHandler->deactivateApplication($_REQUEST['affiliateId']);
+                    $response = $jsonHandler->deactivateApplication($request['affiliateId']);
                     break;
                 case 'setCreativeStatus':
-                    $response = $jsonHandler->setCreativeStatus($_REQUEST['creativeId'], $_REQUEST['status']);
+                    $response = $jsonHandler->setCreativeStatus($request['creativeId'], $request['status']);
                     break;
                 case 'addTransaction':
-                    $response = $jsonHandler->addTransaction($_REQUEST['affiliateId'], $_REQUEST['type'], $_REQUEST['amount'], $_REQUEST['description']);
+                    $response = $jsonHandler->addTransaction($request['affiliateId'], $request['type'], $request['amount'], $request['description']);
                     break;
                 case 'deleteCreative':
-                    $response = $jsonHandler->deleteCreative($_REQUEST['creativeId']);
+                    $response = $jsonHandler->deleteCreative($request);
                     break;
                 default: throw new Exception(__('Invalid JSON handler.', 'affiliates-manager'));
             }

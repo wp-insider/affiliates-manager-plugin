@@ -14,7 +14,7 @@
             <tbody>
                 <tr>
                     <td><?php _e('Balance', 'affiliates-manager') ?></td>
-                    <td><?php echo esc_html(wpam_format_money($this->viewData['accountStanding'])) ?></td>
+                    <td><?php echo wpam_format_money($this->viewData['accountStanding']) ?></td>
                 </tr>
                 <tr>
                     <td><?php _e('Commission Rate', 'affiliates-manager') ?></td>

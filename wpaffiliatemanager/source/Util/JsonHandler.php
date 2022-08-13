@@ -204,8 +204,13 @@ class WPAM_Util_JsonHandler
 		return new JsonResponse(JsonResponse::STATUS_OK);
 	}
 
-	public function deleteCreative($creativeId)
+	public function deleteCreative($request)
 	{
+                $nonce = isset($request['nonce']) ? sanitize_text_field($request['nonce']) : '';
+                if(!wp_verify_nonce($nonce, 'wpam-delete-creative')){
+                    wp_die(__('Error! Nonce Security Check Failed! Go to the My Creatives page to delete the creative.', 'affiliates-manager'));
+                }
+                $creativeId = sanitize_text_field($request['creativeId']);
 		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
 			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
 		$db = new WPAM_Data_DataAccess();

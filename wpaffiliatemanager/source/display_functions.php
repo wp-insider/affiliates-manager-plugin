@@ -144,13 +144,13 @@ endif;
 function wpam_format_money( $money, $add_span = true ) {
 	if ( $add_span ) {
 		if ( $money > 0 )
-			return '<span class="positiveMoney">' . wpam_money_format( '%n', $money ) . "</span>";
+			return '<span class="positiveMoney">' . esc_html(wpam_money_format( '%n', $money )) . "</span>";
 		else if ( $money < 0 )
-			return '<span class="negativeMoney">' . wpam_money_format( '%n', $money ) . "</span>";
+			return '<span class="negativeMoney">' . esc_html(wpam_money_format( '%n', $money )) . "</span>";
 		else
-			return '<span>' . wpam_money_format( '%n', $money ) . "</span>";
+			return '<span>' . esc_html(wpam_money_format( '%n', $money )) . "</span>";
 	} else {
-		return wpam_money_format( '%n', $money );
+		return esc_html(wpam_money_format( '%n', $money ));
 	}		
 }
 

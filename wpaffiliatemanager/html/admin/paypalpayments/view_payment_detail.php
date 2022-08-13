@@ -74,7 +74,7 @@ $affiliates = $this->viewData['affiliates'];
 			<td><?php echo esc_html($transaction->status)?></td>
 			<td><?php echo esc_html($transaction->description)?></td>
 
-			<td style="text-align: right"><?php echo esc_html(wpam_format_money($transaction->amount))?></td>
+			<td style="text-align: right"><?php echo wpam_format_money($transaction->amount)?></td>
 		</tr>
 		<?php } ?>
 

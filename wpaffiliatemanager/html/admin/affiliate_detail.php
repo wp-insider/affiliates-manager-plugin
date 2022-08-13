@@ -541,7 +541,7 @@ if ($model->isPending())
 					</td>
 					<td>
 						<div style="margin: 5px; font-size: 2.0em;">
-							<?php echo esc_html(wpam_format_money($this->viewData['accountStanding']))?>
+							<?php echo wpam_format_money($this->viewData['accountStanding'])?>
 						</div>
 					</td>
 				</tr>
@@ -601,12 +601,12 @@ if ($model->isPending())
 	<div id="fragment-2">
 		<div class="accountSummaryBox">
 			<div style="font-size: 1.5em">
-				<?php _e( 'Balance:', 'affiliates-manager' ) ?> <?php echo esc_html(wpam_format_money($this->viewData['accountStanding']))?>
+				<?php _e( 'Balance:', 'affiliates-manager' ) ?> <?php echo wpam_format_money($this->viewData['accountStanding'])?>
 			</div>
 			<div style="margin-left: 5px; margin-top: 20px; padding: 5px; border: 1px solid gray; width: 300px;">
-				<?php _e( 'Earnings:', 'affiliates-manager' ) ?> <?php echo esc_html(wpam_format_money($this->viewData['accountCredits']))?><br/>
-				<?php _e( 'Payments:', 'affiliates-manager' ) ?> <?php echo esc_html(wpam_format_money($this->viewData['accountDebits']))?><br/>
-				<?php _e( 'Adjustments:', 'affiliates-manager' ) ?> <?php echo esc_html(wpam_format_money($this->viewData['accountAdjustments']))?><br/>
+				<?php _e( 'Earnings:', 'affiliates-manager' ) ?> <?php echo wpam_format_money($this->viewData['accountCredits'])?><br/>
+				<?php _e( 'Payments:', 'affiliates-manager' ) ?> <?php echo wpam_format_money($this->viewData['accountDebits'])?><br/>
+				<?php _e( 'Adjustments:', 'affiliates-manager' ) ?> <?php echo wpam_format_money($this->viewData['accountAdjustments'])?><br/>
 			</div>
 		</div>
 		<div class="buttonsBar">

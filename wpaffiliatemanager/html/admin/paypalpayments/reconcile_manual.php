@@ -66,7 +66,7 @@ $affiliates = $this->viewData['affiliates'];
 			<td><?php echo esc_html($affiliate->paypalEmail)?></td>
 			<td><?php echo esc_html($transaction->status)?></td>
 			<td><?php echo esc_html($transaction->description)?></td>
-			<td style="text-align: right"><?php echo esc_html(wpam_format_money($transaction->amount))?></td>
+			<td style="text-align: right"><?php echo wpam_format_money($transaction->amount)?></td>
 			<td>
 				<select name="transactionStatus[<?php echo esc_attr($transaction->transactionId)?>]" style="width: 100px;">
 					<option value="unset"></option>

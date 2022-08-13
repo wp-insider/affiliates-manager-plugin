@@ -158,7 +158,7 @@ jQuery(function($) {
 					<td><?php echo esc_html($affiliate->lastName)?></td>
 					<td><?php echo esc_html($affiliate->companyName)?></td>
 					<td style="font-weight: bold"><?php echo esc_html($affiliate->paypalEmail)?></td>
-					<td style="text-align: right"><?php echo esc_html(wpam_format_money($affiliate->balance))?></td>
+					<td style="text-align: right"><?php echo wpam_format_money($affiliate->balance)?></td>
 					<td><input type="text" name="txtAffiliatePaymentAmount[<?php echo esc_attr($affiliate->affiliateId)?>]" value="<?php echo esc_attr($affiliate->balance)?>" <?php
 						if ($affiliate->balance <= 0) {
 							echo 'disabled="disabled"';
@@ -172,16 +172,16 @@ jQuery(function($) {
 			<table class="totalsTable" style="position: relative; width: 400px; left: 400px; border: 1px solid #aaa;">
 				<tr>
 					<td style="width: 250px;">Sub-Total</td>
-					<td style="width: 150px;" class="moneyCell" id="subTotalCell"><?php echo esc_html(wpam_format_money(0, false)); ?></td>
+					<td style="width: 150px;" class="moneyCell" id="subTotalCell"><?php echo wpam_format_money(0, false); ?></td>
 				</tr>
 				<tr>
 					<td><?php echo sprintf( __( 'PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>', 'affiliates-manager' ), esc_html($currency) ) ?></td>
-					<td class="moneyCell" id="paypalFeeCell"><?php echo esc_html(wpam_format_money(0, false)); ?></td>
+					<td class="moneyCell" id="paypalFeeCell"><?php echo wpam_format_money(0, false); ?></td>
 				</tr>
 				<tr class="totalSeparatorRow"><td colspan="2"></td> </tr>
 				<tr class="totalRow">
 					<th><?php _e( 'Estimated Total', 'affiliates-manager' ) ?></th>
-					<th class="moneyCell" id="totalCell"><?php echo esc_html(wpam_format_money(0, false)); ?></th>
+					<th class="moneyCell" id="totalCell"><?php echo wpam_format_money(0, false); ?></th>
 				</tr>
 			</table>
 			<div style="float: right; margin: 10px;">

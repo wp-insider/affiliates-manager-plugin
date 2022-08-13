@@ -56,7 +56,7 @@ $affiliates = $this->viewData['affiliates'];
 			<td><?php echo esc_html($affiliate->paypalEmail)?></td>
 			<td><?php echo esc_html($transaction->status)?></td>
 			<td><?php echo esc_html($transaction->description)?></td>
-			<td style="text-align: right"><?php echo esc_html(wpam_format_money($transaction->amount))?></td>
+			<td style="text-align: right"><?php echo wpam_format_money($transaction->amount)?></td>
 			<td><?php echo esc_html($transaction->status)?></td>
 			<td><img src="<?php echo WPAM_URL . "/images/icon_arrow_next.png"?>" /></td>
 			<td><?php echo esc_html($transaction->newStatus)?></td>

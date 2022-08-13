@@ -63,9 +63,9 @@
                 <td data-column="<?php _e('Status', 'affiliates-manager') ?>"><?php echo esc_html($transaction->status) ?></td>
                 <td data-column="<?php _e('Description', 'affiliates-manager') ?>"><?php echo esc_html($transaction->description) ?></td>
                 <td data-column="<?php _e('Reference ID', 'affiliates-manager') ?>"><?php echo esc_html(empty($transaction->referenceId) ? '&nbsp;' : $transaction->referenceId) ?></td>
-                <td data-column="<?php _e('Amount', 'affiliates-manager') ?>"><?php echo esc_html(wpam_format_money($transaction->amount)) ?></td>
+                <td data-column="<?php _e('Amount', 'affiliates-manager') ?>"><?php echo wpam_format_money($transaction->amount) ?></td>
                 <?php if (isset($this->viewData['showBalance']) && $this->viewData['showBalance']): ?>
-                    <td data-column="<?php _e('Balance', 'affiliates-manager') ?>"><?php echo esc_html(wpam_format_money($transaction->balance)) ?></td>
+                    <td data-column="<?php _e('Balance', 'affiliates-manager') ?>"><?php echo wpam_format_money($transaction->balance) ?></td>
                 <?php endif; ?>
             </tr>
         <?php } ?>

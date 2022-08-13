@@ -70,7 +70,8 @@
 
 					doJsonRequest({
 						handler: 'deleteCreative',
-						creativeId: deleteIdClicked
+						creativeId: deleteIdClicked,
+                                                nonce: '<?php echo wp_create_nonce('wpam-delete-creative'); ?>'
 						},
 						function(data) {
 							if (data['status'] == 'OK')
