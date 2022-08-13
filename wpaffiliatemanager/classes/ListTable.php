@@ -91,8 +91,8 @@ class WPAM_List_Table {
             echo '<input type="hidden" name="order" value="' . esc_attr($_REQUEST['order']) . '" />';
         ?>
         <p class="search-box">
-            <label class="screen-reader-text" for="<?php echo $input_id ?>"><?php echo $text; ?>:</label>
-            <input type="text" id="<?php echo $input_id ?>" name="s" value="<?php _admin_search_query(); ?>" />
+            <label class="screen-reader-text" for="<?php echo esc_attr($input_id) ?>"><?php echo esc_html($text); ?>:</label>
+            <input type="text" id="<?php echo esc_attr($input_id) ?>" name="s" value="<?php esc_attr(_admin_search_query()); ?>" />
             <?php submit_button($text, 'button', false, false, array('id' => 'search-submit')); ?>
         </p>
         <?php

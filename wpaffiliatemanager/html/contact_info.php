@@ -11,7 +11,7 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
     <table class="pure-table wpam-contact-info">
         <thead>
             <tr>
-                <th colspan="2"><?php echo isset($this->viewData['infoLabel']) ? $this->viewData['infoLabel'] : __('Contact Information', 'affiliates-manager'); ?></th>
+                <th colspan="2"><?php echo isset($this->viewData['infoLabel']) ? esc_html($this->viewData['infoLabel']) : __('Contact Information', 'affiliates-manager'); ?></th>
             </tr>
         </thead>
         <tbody>
@@ -31,7 +31,7 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                 }
                 ?>
                 <tr>
-                    <td><label for="_<?php echo $field->databaseField; ?>">
+                    <td><label for="_<?php echo esc_attr($field->databaseField); ?>">
                             <?php _e($field->name, 'affiliates-manager'); ?>
 
                             <?php
@@ -49,17 +49,17 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                             case 'number':
                             case 'zipCode':
                                 ?>
-                                <input type="text" size="20" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo esc_attr($value); ?>" />
+                                <input type="text" size="20" id="_<?php echo esc_attr($field->databaseField); ?>" name="_<?php echo esc_attr($field->databaseField); ?>" value="<?php echo esc_attr($value); ?>" />
                                 <?php
                                 break;
                             case 'textarea':
                                 ?>
-                                <textarea <?php echo (is_admin() ? 'class="large-text"' : '');?> id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>"><?php echo esc_textarea($value); ?></textarea>
+                                <textarea <?php echo (is_admin() ? 'class="large-text"' : '');?> id="_<?php echo esc_attr($field->databaseField); ?>" name="_<?php echo esc_attr($field->databaseField); ?>"><?php echo esc_textarea($value); ?></textarea>
                                 <?php
                                 break;
                             case 'email':
                                 ?>
-                                <input type="text" size="20" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo esc_attr($value); ?>" <?php
+                                <input type="text" size="20" id="_<?php echo esc_attr($field->databaseField); ?>" name="_<?php echo esc_attr($field->databaseField); ?>" value="<?php echo esc_attr($value); ?>" <?php
                                 if (isset($value) && !empty($value)) {
                                     echo ' readonly';
                                 }
@@ -68,19 +68,19 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                                        break;
                                    case 'phoneNumber':
                                        ?>							
-                                <input type="text" size="20" maxlength="14" id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>" value="<?php echo esc_attr($value); ?>" />
+                                <input type="text" size="20" maxlength="14" id="_<?php echo esc_attr($field->databaseField); ?>" name="_<?php echo esc_attr($field->databaseField); ?>" value="<?php echo esc_attr($value); ?>" />
                                     <?php
                                     break;
                                 case 'stateCode':
                                     ?>
-                                <select id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>">
+                                <select id="_<?php echo esc_attr($field->databaseField); ?>" name="_<?php echo esc_attr($field->databaseField); ?>">
                                 <?php wpam_html_state_code_options($value); ?>
                                 </select>
                                     <?php
                                     break;
                                 case 'countryCode':
                                     ?>
-                                <select id="_<?php echo $field->databaseField; ?>" name="_<?php echo $field->databaseField; ?>">
+                                <select id="_<?php echo esc_attr($field->databaseField); ?>" name="_<?php echo esc_attr($field->databaseField); ?>">
                                 <?php wpam_html_country_code_options($value); ?>
                                 </select>
                                 <?php
@@ -93,9 +93,9 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                                     $ssn[2] = substr($value, 5);
                                 }
                                 ?>
-                                <input type="password" size="3" maxlength="3" id="_<?php echo $field->databaseField?>[0]" name="_<?php echo $field->databaseField?>[0]" value="<?php echo esc_attr($ssn[0]);?>" /> -
-				<input type="password" size="2" maxlength="2" id="_<?php echo $field->databaseField?>[1]" name="_<?php echo $field->databaseField?>[1]" value="<?php echo esc_attr($ssn[1]);?>" /> -
-				<input type="password" size="4" maxlength="4" id="_<?php echo $field->databaseField?>[2]" name="_<?php echo $field->databaseField?>[2]" value="<?php echo esc_attr($ssn[2]);?>" />
+                                <input type="password" size="3" maxlength="3" id="_<?php echo esc_attr($field->databaseField)?>[0]" name="_<?php echo esc_attr($field->databaseField)?>[0]" value="<?php echo esc_attr($ssn[0]);?>" /> -
+				<input type="password" size="2" maxlength="2" id="_<?php echo esc_attr($field->databaseField)?>[1]" name="_<?php echo esc_attr($field->databaseField)?>[1]" value="<?php echo esc_attr($ssn[1]);?>" /> -
+				<input type="password" size="4" maxlength="4" id="_<?php echo esc_attr($field->databaseField)?>[2]" name="_<?php echo esc_attr($field->databaseField)?>[2]" value="<?php echo esc_attr($ssn[2]);?>" />
                                 <?php
                                 break;
                     default: break;
@@ -144,7 +144,7 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
         <?php
         foreach ($this->viewData['paymentMethods'] as $key => $val) {
             $selected_html = $this->viewData['paymentMethod'] == $key ? ' selected="selected"' : '';
-            echo "<option value='{$key}'{$selected_html}>{$val}</option>";
+            echo "<option value='".esc_attr($key)."'{$selected_html}>".esc_html($val)."</option>";
         }
         ?>
                             </select></td>
@@ -188,7 +188,7 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                                 $selected = isset($this->viewData['bountyType']) ? $this->viewData['bountyType'] : NULL;
                                 foreach ($select as $value => $name) {
                                     $selected_html = $value == $selected ? ' selected="selected"' : '';
-                                    echo "<option value='{$value}'{$selected_html}>{$name}</option>\n";
+                                    echo "<option value='".esc_attr($value)."'{$selected_html}>".esc_html($name)."</option>\n";
                                 }
 
                                 $currency = WPAM_MoneyHelper::getDollarSign();
@@ -202,7 +202,7 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                         </td>
                     </tr>
                     <tr>
-                        <td><label id='lblBountyAmount' for='txtBountyAmount'><?php echo $label; ?></label></td>
+                        <td><label id='lblBountyAmount' for='txtBountyAmount'><?php echo esc_html($label); ?></label></td>
                         <td><input type='text' id='txtBountyAmount' name='txtBountyAmount' size='5' value='<?php echo esc_attr($bountyAmount); ?>'/></td>
                     </tr>
         <?php endif; //is_admin   ?>

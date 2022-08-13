@@ -33,7 +33,7 @@ if(get_option(WPAM_PluginConfig::$EnableRegFormAnchor) == 1){
 		<?php _e( '* Required fields', 'affiliates-manager' ) ?><br /><br />
 		<fieldset>
 			<?php foreach ($this->viewData['affiliateFields'] as $field) { ?>
-					<label for="_<?php echo $field->databaseField?>"><?php _e( $field->name, 'affiliates-manager' ) ?><?php echo $field->required ? '&nbsp;*': '' ?></label>
+					<label for="_<?php echo esc_attr($field->databaseField)?>"><?php _e( $field->name, 'affiliates-manager' ) ?><?php echo $field->required ? '&nbsp;*': '' ?></label>
 					
 						<?php switch ($field->fieldType) {
                                                         case 'email':
@@ -42,14 +42,14 @@ if(get_option(WPAM_PluginConfig::$EnableRegFormAnchor) == 1){
                                                                 $current_user = wp_get_current_user();
                                                                 $email = $current_user->user_email;
                                                                 ?>
-                                                                <input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo esc_attr($email)?>" readonly />
+                                                                <input type="text" id="_<?php echo esc_attr($field->databaseField)?>" name="_<?php echo esc_attr($field->databaseField)?>" value="<?php echo esc_attr($email)?>" readonly />
                                                                 <p class="wpam_registration_input_help_text"><?php _e('This is the email address associated with your currently logged in WordPress user account.', 'affiliates-manager')?></p>
                                                                 <p class="wpam_registration_input_help_text"><?php _e('If you want to use a different email address, log out of your WordPress account then try a new registration.', 'affiliates-manager')?></p>
                                                                 <?php
                                                             }
                                                             else{
                                                             ?>
-                                                            <input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo esc_attr($email)?>" <?php echo $field->required ? 'required': '' ?> />
+                                                            <input type="text" id="_<?php echo esc_attr($field->databaseField)?>" name="_<?php echo esc_attr($field->databaseField)?>" value="<?php echo esc_attr($email)?>" <?php echo $field->required ? 'required': '' ?> />
                                                             <?php
                                                             }
                                                              break;
@@ -57,22 +57,22 @@ if(get_option(WPAM_PluginConfig::$EnableRegFormAnchor) == 1){
 							case 'number':
 							case 'zipCode':
 							?>
-							<input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo esc_attr((isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '');?>" <?php echo $field->required ? 'required': '' ?> />
+							<input type="text" id="_<?php echo esc_attr($field->databaseField)?>" name="_<?php echo esc_attr($field->databaseField)?>" value="<?php echo esc_attr((isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '');?>" <?php echo $field->required ? 'required': '' ?> />
 							<?php break;
                                                         case 'textarea':
 							?>
-							<textarea id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>"<?php echo $field->required ? ' required': '' ?>><?php echo esc_textarea((isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '');?></textarea>
+							<textarea id="_<?php echo esc_attr($field->databaseField)?>" name="_<?php echo esc_attr($field->databaseField)?>"<?php echo $field->required ? ' required': '' ?>><?php echo esc_textarea((isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '');?></textarea>
 							<?php break;
 							case 'phoneNumber':?>
-							<input type="text" id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" value="<?php echo esc_attr((isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '');?>" <?php echo $field->required ? 'required': '' ?> />
+							<input type="text" id="_<?php echo esc_attr($field->databaseField)?>" name="_<?php echo esc_attr($field->databaseField)?>" value="<?php echo esc_attr((isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '');?>" <?php echo $field->required ? 'required': '' ?> />
 							<?php break;
 							case 'ssn':?>
-							<input type="password" size="3" maxlength="3" id="_<?php echo $field->databaseField?>[0]" name="_<?php echo $field->databaseField?>[0]" value="<?php echo esc_attr((isset($request['_'.$field->databaseField][0]) && !empty($request['_'.$field->databaseField][0])) ? $request['_'.$field->databaseField][0] : '');?>" /> -
-							<input type="password" size="2" maxlength="2" id="_<?php echo $field->databaseField?>[1]" name="_<?php echo $field->databaseField?>[1]" value="<?php echo esc_attr((isset($request['_'.$field->databaseField][1]) && !empty($request['_'.$field->databaseField][1])) ? $request['_'.$field->databaseField][1] : '');?>" /> -
-							<input type="password" size="4" maxlength="4" id="_<?php echo $field->databaseField?>[2]" name="_<?php echo $field->databaseField?>[2]" value="<?php echo esc_attr((isset($request['_'.$field->databaseField][2]) && !empty($request['_'.$field->databaseField][2])) ? $request['_'.$field->databaseField][2] : '');?>" />
+							<input type="password" size="3" maxlength="3" id="_<?php echo esc_attr($field->databaseField)?>[0]" name="_<?php echo esc_attr($field->databaseField)?>[0]" value="<?php echo esc_attr((isset($request['_'.$field->databaseField][0]) && !empty($request['_'.$field->databaseField][0])) ? $request['_'.$field->databaseField][0] : '');?>" /> -
+							<input type="password" size="2" maxlength="2" id="_<?php echo esc_attr($field->databaseField)?>[1]" name="_<?php echo esc_attr($field->databaseField)?>[1]" value="<?php echo esc_attr((isset($request['_'.$field->databaseField][1]) && !empty($request['_'.$field->databaseField][1])) ? $request['_'.$field->databaseField][1] : '');?>" /> -
+							<input type="password" size="4" maxlength="4" id="_<?php echo esc_attr($field->databaseField)?>[2]" name="_<?php echo esc_attr($field->databaseField)?>[2]" value="<?php echo esc_attr((isset($request['_'.$field->databaseField][2]) && !empty($request['_'.$field->databaseField][2])) ? $request['_'.$field->databaseField][2] : '');?>" />
 							<?php break;
 							case 'stateCode':?>
-							<select id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" <?php echo $field->required ? 'required': '' ?>>
+							<select id="_<?php echo esc_attr($field->databaseField)?>" name="_<?php echo esc_attr($field->databaseField)?>" <?php echo $field->required ? 'required': '' ?>>
 								<?php
                                                                 $state_code = (isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '';
                                                                 wpam_html_state_code_options($state_code); 
@@ -80,7 +80,7 @@ if(get_option(WPAM_PluginConfig::$EnableRegFormAnchor) == 1){
 							</select>
 							<?php break;
 							case 'countryCode':?>
-							<select id="_<?php echo $field->databaseField?>" name="_<?php echo $field->databaseField?>" <?php echo $field->required ? 'required': '' ?>>
+							<select id="_<?php echo esc_attr($field->databaseField)?>" name="_<?php echo esc_attr($field->databaseField)?>" <?php echo $field->required ? 'required': '' ?>>
 								<?php
                                                                 $country_code = (isset($request['_'.$field->databaseField]) && !empty($request['_'.$field->databaseField])) ? $request['_'.$field->databaseField] : '';
                                                                 wpam_html_country_code_options($country_code); 
@@ -91,7 +91,7 @@ if(get_option(WPAM_PluginConfig::$EnableRegFormAnchor) == 1){
 			<?php } //end foreach 
                         if(get_option(WPAM_PluginConfig::$ShowRegTncChk) == 1){
                         ?>    
-                            <label for="chkAgreeTerms" id="agreeTermsLabel" class="pure-checkbox"><input type="checkbox" id="chkAgreeTerms" name="chkAgreeTerms" <?php echo (isset($request['chkAgreeTerms']) ? 'checked="checked"':'')?> required />&nbsp;<?php _e('I have read and agree to the', 'affiliates-manager' ) ?> <a target="_blank" href="<?php echo get_option( WPAM_PluginConfig::$AffTncPageURL );?>"><?php _e('Terms and Conditions', 'affiliates-manager' ) ?></a></label>
+                            <label for="chkAgreeTerms" id="agreeTermsLabel" class="pure-checkbox"><input type="checkbox" id="chkAgreeTerms" name="chkAgreeTerms" <?php echo (isset($request['chkAgreeTerms']) ? 'checked="checked"':'')?> required />&nbsp;<?php _e('I have read and agree to the', 'affiliates-manager' ) ?> <a target="_blank" href="<?php echo esc_url(get_option(WPAM_PluginConfig::$AffTncPageURL));?>"><?php _e('Terms and Conditions', 'affiliates-manager' ) ?></a></label>
                             <div id="termsAgreeWarning" style="color: red; display: none"><?php _e( 'You must agree to the terms.', 'affiliates-manager' ) ?></div>
 			<?php
                         }else{

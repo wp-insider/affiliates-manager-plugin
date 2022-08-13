@@ -95,10 +95,10 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 	
 <form method="post" action="admin.php?page=wpam-creatives" enctype="multipart/form-data">
         <?php wp_nonce_field('wpam_save_creatives_nonce'); ?>
-	<input type="hidden" name="action" value="<?php echo $this->viewData['request']['action']?>" />
+	<input type="hidden" name="action" value="<?php echo esc_attr($this->viewData['request']['action'])?>" />
 	<input type="hidden" name="post" value="true"/>
 	<?php if ($this->viewData['request']['action'] === 'edit') { ?>
-		<input type="hidden" name="creativeId" value="<?php echo $this->viewData['request']['creativeId']?>" />
+		<input type="hidden" name="creativeId" value="<?php echo esc_attr($this->viewData['request']['creativeId'])?>" />
 	<?php } ?>
 
 	<div id="mainForm">
@@ -116,7 +116,7 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 					</label>
 				</td>
 				<td>
-					<input type="text" id="txtName" name="txtName" size="30" value="<?php echo isset($this->viewData['request']['txtName']) ? $this->viewData['request']['txtName'] : ''; ?>" />
+					<input type="text" id="txtName" name="txtName" size="30" value="<?php echo isset($this->viewData['request']['txtName']) ? esc_attr($this->viewData['request']['txtName']) : ''; ?>" />
 				</td>
 			</tr>
 
@@ -125,7 +125,7 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 					<label for="txtSlug"><?php _e( 'Landing Page', 'affiliates-manager' ) ?></label>
 				</td>
 				<td id="landing-page-slug">
-					<?php echo esc_url($home_url) ?><input type="text" id="txtSlug" name="txtSlug" size="30" value="<?php echo isset($this->viewData['request']['txtSlug']) ? $this->viewData['request']['txtSlug'] : ''; ?>" />
+					<?php echo esc_html($home_url) ?><input type="text" id="txtSlug" name="txtSlug" size="30" value="<?php echo isset($this->viewData['request']['txtSlug']) ? esc_attr($this->viewData['request']['txtSlug']) : ''; ?>" />
 				</td>
 			</tr>			
 			<tr>
@@ -133,7 +133,7 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 				<td>
 					<select id="ddType" name="ddType" style="width:150px">
 						<?php foreach ($this->viewData['creativeTypes'] as $value => $name) { ?>
-				<option value="<?php echo $value?>" <?php echo isset($this->viewData['request']['ddType']) && $this->viewData['request']['ddType'] === $value ? 'selected="selected"' : ''; ?>><?php echo $name?></option>
+				<option value="<?php echo esc_attr($value)?>" <?php echo isset($this->viewData['request']['ddType']) && $this->viewData['request']['ddType'] === $value ? 'selected="selected"' : ''; ?>><?php echo esc_html($name)?></option>
 						<?php } ?>
 					</select>
 				</td>
@@ -164,7 +164,7 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
                         ?>
                         <tr valign="top">
                             <th scope="row"><label for="image_url"><?php _e( 'Image URL', 'affiliates-manager' ) ?></label></th>
-                            <td><input name="image_url" type="text" id="image_url" value="<?php echo $img_url?>" size="100" />
+                            <td><input name="image_url" type="text" id="image_url" value="<?php echo esc_url($img_url)?>" size="100" />
                                 <input type="button" id="image_url_button" name="image_url_button" class="button rbutton" value="<?php _e( 'Upload File', 'affiliates-manager' ) ?>" />
                                 <p class="description"><?php _e( 'The URL of the image to be used for the creative.', 'affiliates-manager' ) ?></p>
                             </td>
@@ -176,7 +176,7 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 					</label>
 				</td>
 				<td>
-					<input id="txtImageAltText" name="txtImageAltText" type="text" size="40" value="<?php echo isset($this->viewData['request']['txtImageAltText']) ? $this->viewData['request']['txtImageAltText'] : ''; ?>" />
+					<input id="txtImageAltText" name="txtImageAltText" type="text" size="40" value="<?php echo isset($this->viewData['request']['txtImageAltText']) ? esc_attr($this->viewData['request']['txtImageAltText']) : ''; ?>" />
 				</td>
 			</tr>
 			</tbody>
@@ -200,7 +200,7 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 					</label>
 				</td>
 				<td>
-					<input id="txtLinkText" name="txtLinkText" type="text" size="30" value="<?php echo isset($this->viewData['request']['txtLinkText']) ? $this->viewData['request']['txtLinkText'] : ''; ?>"/>
+					<input id="txtLinkText" name="txtLinkText" type="text" size="30" value="<?php echo isset($this->viewData['request']['txtLinkText']) ? esc_attr($this->viewData['request']['txtLinkText']) : ''; ?>"/>
 				</td>
 			</tr>
 
@@ -211,7 +211,7 @@ if(isset($aff_landing_page) && !empty($aff_landing_page)){
 					</label>
 				</td>
 				<td>
-					<input id="txtAltText" name="txtAltText" type="text" size="40" value="<?php echo isset($this->viewData['request']['txtAltText']) ? $this->viewData['request']['txtAltText'] : ''; ?>"/>
+					<input id="txtAltText" name="txtAltText" type="text" size="40" value="<?php echo isset($this->viewData['request']['txtAltText']) ? esc_attr($this->viewData['request']['txtAltText']) : ''; ?>"/>
 				</td>
 			</tr>
 			</tbody>

@@ -29,11 +29,11 @@ function wpam_format_bounty( $bountyType, $bountyAmount ) {
 function wpam_html_state_code_options( $fieldValue ) {
 	echo '<option value="">'.__('Select an option', 'affiliates-manager').'</option>';
 	foreach ( WPAM_Validation_StateCodes::$stateCodes as $code => $name ) {
-		echo '<option value="'.$code.'"';
+		echo '<option value="'.esc_attr($code).'"';
 		if ( $fieldValue == $code ) {
 			echo ' selected="selected"';
 		}
-		echo '>' . $name . '</option>';
+		echo '>' . esc_html($name) . '</option>';
 	}
 }
 
@@ -41,10 +41,10 @@ function wpam_html_country_code_options( $fieldValue ) {
 	echo '<option value="">'.__('Select an option', 'affiliates-manager').'</option>';
 
 	foreach ( WPAM_Validation_CountryCodes::get_countries() as $code => $name ) {
-		echo '<option value="'.$code.'"';
+		echo '<option value="'.esc_attr($code).'"';
 		if ( $fieldValue == $code )
 			echo ' selected="selected"';
-		echo '>'.$name.'</option>';
+		echo '>'.esc_html($name).'</option>';
 	}
 }
 

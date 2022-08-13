@@ -37,7 +37,7 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 
 <div class="wrap">
 
-	 <h2><?php _e( 'Creative:', 'affiliates-manager' ) ?> <?php echo $model->name?></h2>
+	 <h2><?php _e( 'Creative:', 'affiliates-manager' ) ?> <?php echo esc_html($model->name)?></h2>
 
 	 <p align="center"><button type="button" name="preview" id="previewButton" class="button-secondary"><?php _e( 'Preview', 'affiliates-manager' ) ?></button></p>
          
@@ -59,12 +59,12 @@ include WPAM_BASE_DIRECTORY . "/html/affiliate_cp_nav.php";
 		<tbody>
 		<tr>
 			<td width="150"><?php _e( 'Link Text', 'affiliates-manager' ) ?></td>
-			<td><?php echo $model->linkText?></td>
+			<td><?php echo esc_html($model->linkText)?></td>
 		</tr>
 		<tr>
 			<td><?php _e( 'Alt Text', 'affiliates-manager' ) ?></td>
 			<td>
-				<?php echo $model->altText?>
+				<?php echo esc_html($model->altText)?>
 			</td>
 		</tr>
 		</tbody>

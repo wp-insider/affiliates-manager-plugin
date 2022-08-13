@@ -173,7 +173,7 @@ function formatType($type)
 
 <div id="dialog-preview" title="<?php _e( 'Preview', 'affiliates-manager' ) ?>" style="display: none">
 <?php if ($model->type === 'image') { ?>
-<a href="" title="<?php echo $model->altText?>"><img src="<?php
+<a href="" title="<?php echo esc_attr($model->altText)?>"><img src="<?php
                                 $img_url = '';
                                 if(isset($model->image) && !empty($model->image)){  //new way of retrieving an image URL
                                     $img_url = $model->image;
@@ -182,17 +182,17 @@ function formatType($type)
                                     $img_url = wp_get_attachment_url($model->imagePostId);
                                 }
 				//$url = wp_get_attachment_image_src($model->imagePostId);
-				echo $img_url;
+				echo esc_url($img_url);
 ?>" /></a>
 <?php } else if ($model->type === 'text') { ?>
-	<a href="" title="<?php echo $model->altText?>"><?php echo $model->linkText?></a>
+	<a href="" title="<?php echo esc_attr($model->altText)?>"><?php echo esc_html($model->linkText)?></a>
 <?php } ?>
 </div>
 
 
 <div class="wrap">
 
-	<h2><?php _e( 'Creative:', 'affiliates-manager' ) ?> <?php echo $model->name?></h2>
+	<h2><?php _e( 'Creative:', 'affiliates-manager' ) ?> <?php echo esc_html($model->name)?></h2>
 	<?php if (isset($this->viewData['updateMessage'])) {?>
 		<div class="updated">
 			<p><?php echo $this->viewData['updateMessage']?></p>
@@ -214,7 +214,7 @@ function formatType($type)
 				<?php } ?>
 
 	  &nbsp;&nbsp;&nbsp;<a id="previewButton" class="button-secondary"><?php _e( 'Preview', 'affiliates-manager' ) ?></a>
-	  &nbsp;&nbsp;&nbsp;<a id="editButton" class="button-secondary" href="<?php echo admin_url( "admin.php?page=wpam-creatives&action=edit&creativeId={$model->creativeId}" ) ?>"><?php _e( 'Edit', 'affiliates-manager' ) ?></a>
+	  &nbsp;&nbsp;&nbsp;<a id="editButton" class="button-secondary" href="<?php echo esc_url(admin_url( "admin.php?page=wpam-creatives&action=edit&creativeId={$model->creativeId}" )) ?>"><?php _e( 'Edit', 'affiliates-manager' ) ?></a>
 			</th>
 		</tr>
 		</thead>
@@ -234,19 +234,19 @@ function formatType($type)
 				<td width="150">
 					<?php _e( 'ID', 'affiliates-manager' ) ?>
 				</td>
-				<td><?php echo $model->creativeId?></td>
+				<td><?php echo esc_html($model->creativeId)?></td>
 			</tr>
 			<tr>
 				<td><?php _e( 'Status', 'affiliates-manager' ) ?></td>
-				<td><?php echo $model->status?></td>
+				<td><?php echo esc_html($model->status)?></td>
 			</tr>			
 			<tr>
 				<td><?php _e( 'Name', 'affiliates-manager' ) ?></td>
-				<td><?php echo $model->name?></td>
+				<td><?php echo esc_html($model->name)?></td>
 			</tr>
 			<tr>
 				<td><?php _e( 'Type', 'affiliates-manager' ) ?></td>
-				<td><?php echo formatType($model->type)?></td>
+				<td><?php echo esc_html(formatType($model->type))?></td>
 			</tr>
                         <?php
                         $home_url = home_url($model->slug);
@@ -258,7 +258,7 @@ function formatType($type)
                         ?>
 			<tr>
 				<td><?php _e( 'Landing Page', 'affiliates-manager' ) ?></td>
-				<td><?php echo esc_url($home_url) ?></td>
+				<td><?php echo esc_html($home_url) ?></td>
 			</tr>
 
 		</tbody>
@@ -275,12 +275,12 @@ function formatType($type)
 		<tbody>
 		<tr>
 			<td width="150"><?php _e( 'Link Text', 'affiliates-manager' ) ?></td>
-			<td><?php echo $model->linkText?></td>
+			<td><?php echo esc_html($model->linkText)?></td>
 		</tr>
 		<tr>
 			<td><?php _e( 'Alt Text', 'affiliates-manager' ) ?></td>
 			<td>
-				<?php echo $model->altText?>
+				<?php echo esc_html($model->altText)?>
 			</td>
 		</tr>
 		</tbody>
@@ -305,11 +305,11 @@ function formatType($type)
                                     $img_url = wp_get_attachment_url($model->imagePostId);
                                 }
 				//$url = wp_get_attachment_image_src($model->imagePostId);
-				echo $img_url;?>" style="max-width: 200px; max-height: 200px;"/></td>
+				echo esc_url($img_url);?>" style="max-width: 200px; max-height: 200px;"/></td>
 		</tr>
 		<tr>
 			<td><?php _e( 'Alt Text', 'affiliates-manager' ) ?></td>
-			<td><?php echo $model->altText?></td>
+			<td><?php echo esc_html($model->altText)?></td>
 		</tr>
 		</tbody>
 	</table>

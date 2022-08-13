@@ -139,7 +139,7 @@
 
 				<?php foreach ($this->viewData['statusFilters'] as $key => $val) { ?>
 
-			<option value="<?php echo $key?>" <?php echo (isset($this->viewData['request']['statusFilter']) && $this->viewData['request']['statusFilter'] === $key ? 'selected="selected"' : '')?>><?php echo $val?></option>
+			<option value="<?php echo esc_attr($key)?>" <?php echo (isset($this->viewData['request']['statusFilter']) && $this->viewData['request']['statusFilter'] === $key ? 'selected="selected"' : '')?>><?php echo esc_html($val)?></option>
 
 				<?php } ?>
 
@@ -152,7 +152,7 @@
 
 
 	<div id="buttonsDiv" style="margin-bottom: 10px; margin-top: 10px;">
-		<a href="<?php echo admin_url( 'admin.php?page=wpam-creatives&action=new' ) ?>" class="button-primary"><?php _e( 'Create New', 'affiliates-manager' ) ?></a>
+		<a href="<?php echo esc_url(admin_url( 'admin.php?page=wpam-creatives&action=new' )) ?>" class="button-primary"><?php _e( 'Create New', 'affiliates-manager' ) ?></a>
 	</div>
 
 	<br/>
@@ -173,14 +173,14 @@
 		<?php foreach ($this->viewData['creatives'] as $creative) {?>
 			<tr>
 				<td style="white-space: nowrap;">
-					<a class="button-secondary" href="<?php echo admin_url( "admin.php?page=wpam-creatives&action=viewDetail&creativeId={$creative->creativeId}" ) ?>"><?php _e( 'View', 'affiliates-manager' ) ?></a>
-					&nbsp; <a id="delete-button-<?php echo $creative->creativeId?>" class="button-secondary delete-button"><?php _e( 'Delete', 'affiliates-manager' ) ?></a>
+					<a class="button-secondary" href="<?php echo esc_url(admin_url( "admin.php?page=wpam-creatives&action=viewDetail&creativeId={$creative->creativeId}" )) ?>"><?php _e( 'View', 'affiliates-manager' ) ?></a>
+					&nbsp; <a id="delete-button-<?php echo esc_attr($creative->creativeId)?>" class="button-secondary delete-button"><?php _e( 'Delete', 'affiliates-manager' ) ?></a>
 				</td>
-				<td><?php echo $creative->creativeId?></td>
-				<td><?php echo $creative->status?></td>
-				<td><?php echo date("m/d/Y", $creative->dateCreated)?></td>
-				<td><?php echo $creative->type?></td>
-				<td><?php echo $creative->name?></td>
+				<td><?php echo esc_html($creative->creativeId)?></td>
+				<td><?php echo esc_html($creative->status)?></td>
+				<td><?php echo esc_html(date("m/d/Y", $creative->dateCreated))?></td>
+				<td><?php echo esc_html($creative->type)?></td>
+				<td><?php echo esc_html($creative->name)?></td>
 			</tr>
 		<?php } ?>
 		</tbody>

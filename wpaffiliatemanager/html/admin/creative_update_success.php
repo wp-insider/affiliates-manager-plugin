@@ -13,6 +13,6 @@
 		?>
 	</h3>
 
-	<a href="<?php echo admin_url( 'admin.php?page=wpam-creatives' ) ?>"><?php _e( 'Return to Creatives', 'affiliates-manager' ) ?></a>
+	<a href="<?php echo esc_url(admin_url( 'admin.php?page=wpam-creatives' )) ?>"><?php _e( 'Return to Creatives', 'affiliates-manager' ) ?></a>
 
 </div>

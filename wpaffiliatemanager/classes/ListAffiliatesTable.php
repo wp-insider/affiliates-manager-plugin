@@ -27,7 +27,8 @@ class WPAM_List_Affiliates_Table extends WP_List_Table {
         //Build row actions
         $actions = array(
             'edit' => sprintf('<a href="admin.php?page=wpam-affiliates&viewDetail=%s">View</a>', esc_attr($item['affiliateId'])),
-            'delete' => sprintf('<a href="admin.php?page=wpam-affiliates&delete_aid=%s" onclick="return confirm(\'Are you sure you want to delete this entry?\')">Delete</a>', esc_attr($item['affiliateId'])),
+            //'delete' => sprintf('<a href="admin.php?page=wpam-affiliates&delete_aid=%s" onclick="return confirm(\'Are you sure you want to delete this entry?\')">Delete</a>', esc_attr($item['affiliateId'])),
+            'delete' => sprintf('<a href="%s" onclick="return confirm(\'Are you sure you want to delete this entry?\')">Delete</a>', esc_url(admin_url(wp_nonce_url('admin.php?page=wpam-affiliates&delete_aid='.$item['affiliateId'], 'wpam-delete-affiliate')))),
         );
 
         //Return the id column contents
@@ -123,6 +124,10 @@ class WPAM_List_Affiliates_Table extends WP_List_Table {
 
         if (isset($_REQUEST['page']) && 'wpam-affiliates' == $_REQUEST['page']) {
             if (isset($_REQUEST['delete_aid'])) { //delete an affiliate record
+                $nonce = isset($_REQUEST['_wpnonce']) ? sanitize_text_field($_REQUEST['_wpnonce']) : '';
+                if(!wp_verify_nonce($nonce, 'wpam-delete-affiliate')){
+                    wp_die(__('Error! Nonce Security Check Failed! Go to the My Affiliates page to delete the affiliate account.', 'affiliates-manager'));
+                }
                 $aid = esc_sql($_REQUEST['delete_aid']);
                 if (!is_numeric($aid)) {
                     return;

@@ -12,7 +12,7 @@
 						<?php _e( 'Commission Rate', 'affiliates-manager' ) ?>
 					</td>
 					<td>
-						<?php echo wpam_format_bounty($this->viewData['affiliate']->bountyType, $this->viewData['affiliate']->bountyAmount)?>
+						<?php echo esc_html(wpam_format_bounty($this->viewData['affiliate']->bountyType, $this->viewData['affiliate']->bountyAmount))?>
 					</td>
 				</tr>
 				<tr>
@@ -24,7 +24,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2" style="text-align: center"><a class="button-primary" href="<?php echo $this->viewData['nextStepUrl']?>"><?php _e( 'Agree to Terms', 'affiliates-manager' ) ?></a></td>
+					<td colspan="2" style="text-align: center"><a class="button-primary" href="<?php echo esc_url($this->viewData['nextStepUrl'])?>"><?php _e( 'Agree to Terms', 'affiliates-manager' ) ?></a></td>
 				</tr>
 			</table>
 	</div>

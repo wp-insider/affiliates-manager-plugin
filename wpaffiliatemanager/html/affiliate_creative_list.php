@@ -55,7 +55,7 @@
     $aff_id = $affiliate->affiliateId;
     $alink_id = add_query_arg( array( WPAM_PluginConfig::$wpam_id => $aff_id ), $default_url );
     if(isset($_REQUEST['wpam_link_generation_url'])) {
-        $default_url = strip_tags($_REQUEST['wpam_link_generation_url']);
+        $default_url = esc_url_raw($_REQUEST['wpam_link_generation_url']);
     }
     ?>
 
@@ -64,14 +64,14 @@
         if(!empty($alink_id)){
         ?>
         <h3><?php _e('Your Affiliate Link Using Affiliate ID', 'affiliates-manager') ?></h3>
-        <textarea class="wpam-creative-code" rows="1"><?php echo $alink_id; ?></textarea>
+        <textarea class="wpam-creative-code" rows="1"><?php echo esc_textarea($alink_id); ?></textarea>
         <?php
         }       
         $output = '<h3>'.__('Referral URL Generator', 'affiliates-manager').'</h3>';
         $output .= '<form id="wpam_link_generation_form" action="" method="post">';
         $output .= wp_nonce_field('wpam_generate_referral_link', '_wpnonce', true, false);
         $output .= '<div class="wpam_link_gen_page_url_label">'.__('Enter any URL from this site in the form below to generate a referral link', 'affiliates-manager').'</div>';
-        $output .= '<div class="wpam_link_generation_input"><input type="text" name="wpam_link_generation_url" value="'.$default_url.'" size="60" /></div>';    
+        $output .= '<div class="wpam_link_generation_input"><input type="text" name="wpam_link_generation_url" value="'.esc_url($default_url).'" size="60" /></div>';    
         if (isset($_REQUEST['wpam_generate_referral_link']) && is_numeric($aff_id)) {
             if(!isset($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'wpam_generate_referral_link')){
                 wp_die('Error! Nonce Security Check Failed! Please enter a URL to generate a referral link again.');
@@ -79,7 +79,7 @@
             $referral_url = add_query_arg( array( WPAM_PluginConfig::$wpam_id => $aff_id ), $default_url );
             $output .= '<br />';
             $output .= '<div class="wpam_referral_url_label">'.__('Below is your referral URL (You can copy it and share anywhere)', 'affiliates-manager').'</div>';
-            $output .= '<div class="wpam_referral_url_input"><input type="text" name="wpam_referral_url_input" value="'.$referral_url.'" size="60" /></div>';
+            $output .= '<div class="wpam_referral_url_input"><input type="text" name="wpam_referral_url_input" value="'.esc_url($referral_url).'" size="60" /></div>';
         } 
         $output .= '<br />';
         $output .= '<div class="wpam_link_generation_submit"><input type="submit" class="button" name="wpam_generate_referral_link" value="'.__('Generate Referral URL', 'affiliates-manager').'" /></div>';
@@ -107,8 +107,9 @@
                         <td class="wpam-creative-type"><?php echo $creative->type ?></td>
                         <?php
                         if($creative->type == 'image'){
+                            $creative_url = '?page_id='.get_the_ID().'&sub=creatives&action=detail&creativeId='.$creative->creativeId;
                             ?>
-                            <td><a href="?page_id=<?php echo the_ID() ?>&sub=creatives&action=detail&creativeId=<?php echo $creative->creativeId ?>"><img src="<?php
+                            <td><a href="<?php echo esc_url($creative_url) ?>"><img src="<?php
                             $img_url = '';
                             if(isset($creative->image) && !empty($creative->image)){  //new way of retrieving an image URL
                                 $img_url = $creative->image;
@@ -121,8 +122,9 @@
                         <?php
                         }
                         else{
+                            $creative_url = '?page_id='.get_the_ID().'&sub=creatives&action=detail&creativeId='.$creative->creativeId;
                         ?>
-                        <td class="wpam-creative-name"><a href="?page_id=<?php echo the_ID() ?>&sub=creatives&action=detail&creativeId=<?php echo $creative->creativeId ?>"><?php echo $creative->name ?></a></td>
+                        <td class="wpam-creative-name"><a href="<?php echo esc_url($creative_url) ?>"><?php echo esc_html($creative->name) ?></a></td>
                         <?php
                         }
                         ?>

@@ -12,21 +12,21 @@ $affiliates = $this->viewData['affiliates'];
 		<tr><th width="150">&nbsp;</th><th width="500">&nbsp;</th></tr>
 		</thead>
 
-		<tr><th>Database ID</th><td><?php echo $massPayment->paypalLogId?></td></tr>
-		<tr><th>Date Occurred</th><td><?php echo date("m/d/Y H:i:s",$massPayment->dateOccurred)?></td></tr>
-		<tr><th>PayPal Timestamp</th><td><?php echo date("m/d/Y H:i:s", $massPayment->responseTimestamp)?></td></tr>
-		<tr><th>PayPal Correlation ID</th> <td><?php echo $massPayment->correlationId?></td></tr>
-		<tr><th>Amount</th><td><?php echo ($massPayment->amount)?></td></tr>
-		<tr><th>Fee</th><td><?php echo ($massPayment->fee)?></td></tr>
-		<tr><th>Total Amount</th><td><?php echo ($massPayment->totalAmount)?></td></tr>
-		<tr class="transaction-<?php echo $massPayment->status?>"><th>Status</th><td><?php echo $massPayment->status?></td></tr>
+		<tr><th>Database ID</th><td><?php echo esc_html($massPayment->paypalLogId)?></td></tr>
+		<tr><th>Date Occurred</th><td><?php echo esc_html(date("m/d/Y H:i:s",$massPayment->dateOccurred))?></td></tr>
+		<tr><th>PayPal Timestamp</th><td><?php echo esc_html(date("m/d/Y H:i:s", $massPayment->responseTimestamp))?></td></tr>
+		<tr><th>PayPal Correlation ID</th> <td><?php echo esc_html($massPayment->correlationId)?></td></tr>
+		<tr><th>Amount</th><td><?php echo esc_html($massPayment->amount)?></td></tr>
+		<tr><th>Fee</th><td><?php echo esc_html($massPayment->fee)?></td></tr>
+		<tr><th>Total Amount</th><td><?php echo esc_html($massPayment->totalAmount)?></td></tr>
+		<tr class="transaction-<?php echo esc_attr($massPayment->status)?>"><th>Status</th><td><?php echo esc_html($massPayment->status)?></td></tr>
 		
 	</table>
 
 
 	<h3>Please confirm the results of the file</h3>
 
-<form id="mainform" method="post" action="<?php echo admin_url('admin.php?page=wpam-payments&step=reconcile_with_file&substep=confirm_ok&id='.$massPayment->paypalLogId)?>">
+<form id="mainform" method="post" action="<?php echo esc_url(admin_url('admin.php?page=wpam-payments&step=reconcile_with_file&substep=confirm_ok&id='.$massPayment->paypalLogId))?>">
         <?php wp_nonce_field('wpam_payments_rwfco_nonce'); ?>
 	<table class="widefat" style="width: auto">
 		<thead>
@@ -45,21 +45,21 @@ $affiliates = $this->viewData['affiliates'];
 		<tbody>
 		<?php foreach ($this->viewData['transactions_modified'] as $transaction) {?>
 		<?php $affiliate = $affiliates[$transaction->affiliateId]; ?>
-		<tr class="transaction-<?php echo $transaction->newStatus?>">
+		<tr class="transaction-<?php echo esc_attr($transaction->newStatus)?>">
 			<td>
-				<input type="hidden" name="transactions[<?php echo $transaction->transactionId?>][transactionId]" value="<?php echo $transaction->transactionId?>" />
-				<input type="hidden" name="transactions[<?php echo $transaction->transactionId?>][newStatus]" value="<?php echo $transaction->newStatus?>" />
-				<?php echo $transaction->transactionId?>
+				<input type="hidden" name="transactions[<?php echo esc_attr($transaction->transactionId)?>][transactionId]" value="<?php echo esc_attr($transaction->transactionId)?>" />
+				<input type="hidden" name="transactions[<?php echo esc_attr($transaction->transactionId)?>][newStatus]" value="<?php echo esc_attr($transaction->newStatus)?>" />
+				<?php echo esc_html($transaction->transactionId)?>
 			</td>
-			<td><?php echo date("m/d/Y", $transaction->dateCreated)?></td>
-			<td><?php echo $affiliate->firstName?> <?php echo $affiliate->lastName?></td>
-			<td><?php echo $affiliate->paypalEmail?></td>
-			<td><?php echo $transaction->status?></td>
-			<td><?php echo $transaction->description?></td>
-			<td style="text-align: right"><?php echo wpam_format_money($transaction->amount)?></td>
-			<td><?php echo $transaction->status?></td>
+			<td><?php echo esc_html(date("m/d/Y", $transaction->dateCreated))?></td>
+			<td><?php echo esc_html($affiliate->firstName)?> <?php echo esc_html($affiliate->lastName)?></td>
+			<td><?php echo esc_html($affiliate->paypalEmail)?></td>
+			<td><?php echo esc_html($transaction->status)?></td>
+			<td><?php echo esc_html($transaction->description)?></td>
+			<td style="text-align: right"><?php echo esc_html(wpam_format_money($transaction->amount))?></td>
+			<td><?php echo esc_html($transaction->status)?></td>
 			<td><img src="<?php echo WPAM_URL . "/images/icon_arrow_next.png"?>" /></td>
-			<td><?php echo $transaction->newStatus?></td>
+			<td><?php echo esc_html($transaction->newStatus)?></td>
 		</tr>
 		<?php } ?>
 		<tr>

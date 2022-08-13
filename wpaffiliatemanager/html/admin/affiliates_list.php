@@ -52,7 +52,7 @@
         <div class="inside">
             <p><?php _e('Search for an affiliate by entering the affiliate ID, first name, last name or email address', 'affiliates-manager')?></p>
 
-            <form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
+            <form method="post" action="">
                 <input name="wpam_affiliate_search" type="text" size="35" value=""/>
                 <input type="submit" name="submit" class="button" value="<?php _e('Search', 'affiliates-manager')?>" />
             </form> 

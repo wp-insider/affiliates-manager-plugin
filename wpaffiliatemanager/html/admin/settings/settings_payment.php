@@ -30,15 +30,15 @@ jQuery(function($) {
 	<table class="wpam-form-table">
 		<tr>
 			<th><label for="txtPaypalAPIUser"><?php _e( 'API Username', 'affiliates-manager' ) ?></label></th>
-			<td><input type="text" id="txtPaypalAPIUser" name="txtPaypalAPIUser" value="<?php echo $this->viewData['request']['txtPaypalAPIUser']?>"/></td>
+			<td><input type="text" id="txtPaypalAPIUser" name="txtPaypalAPIUser" value="<?php echo esc_attr($this->viewData['request']['txtPaypalAPIUser'])?>"/></td>
 		</tr>
 		<tr>
 			<th><label for="txtPaypalAPIPassword"><?php _e( 'API Password', 'affiliates-manager' ) ?></label></th>
-			<td><input type="password" id="txtPaypalAPIPassword" name="txtPaypalAPIPassword"  value="<?php echo $this->viewData['request']['txtPaypalAPIPassword']?>"/></td>
+			<td><input type="password" id="txtPaypalAPIPassword" name="txtPaypalAPIPassword"  value="<?php echo esc_attr($this->viewData['request']['txtPaypalAPIPassword'])?>"/></td>
 		</tr>
 		<tr>
 			<th><label for="txtPaypalAPISignature"><?php _e( 'Signature', 'affiliates-manager' ) ?></label></th>
-			<td><input type="text" id="txtPaypalAPISignature" name="txtPaypalAPISignature" value="<?php echo $this->viewData['request']['txtPaypalAPISignature']?>"/></td>
+			<td><input type="text" id="txtPaypalAPISignature" name="txtPaypalAPISignature" value="<?php echo esc_attr($this->viewData['request']['txtPaypalAPISignature'])?>"/></td>
 		</tr>
 		<tr>
 			<th><label for="ddPaypalAPIEndPoint"><?php _e( 'API End Point', 'affiliates-manager' ) ?></label><br/><span style="font-size:0.8em"><?php _e( "WARNING: Set to LIVE if you don't know what this is for!", 'affiliates-manager' ) ?></span></th>

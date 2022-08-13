@@ -92,13 +92,13 @@ jQuery(function($) {
 		<?php foreach ($this->viewData['messages'] as $message) { ?>
 		<tr>
 			<td>
-				<img class="wpam-js-edit-message wpam-action-icon wpam-edit-icon" src="<?php echo $ICON_EDIT?>" />
-				<input type="hidden" name="messages[<?php echo $message->name?>][content]" value="<?php echo htmlentities($message->content, ENT_COMPAT, 'UTF-8')?>" />
-				<input type="hidden" name="messages[<?php echo $message->name?>][name]" value="<?php echo $message->name?>" />
-				<input type="hidden" name="messages[<?php echo $message->name?>][modified]" value="0" />
-				<input type="hidden" name="messages[<?php echo $message->name?>][use]" value="<?php echo $message->use?>" />
+				<img class="wpam-js-edit-message wpam-action-icon wpam-edit-icon" src="<?php echo esc_url($ICON_EDIT)?>" />
+				<input type="hidden" name="messages[<?php echo esc_attr($message->name)?>][content]" value="<?php echo htmlentities($message->content, ENT_COMPAT, 'UTF-8')?>" />
+				<input type="hidden" name="messages[<?php echo esc_attr($message->name)?>][name]" value="<?php echo esc_attr($message->name)?>" />
+				<input type="hidden" name="messages[<?php echo esc_attr($message->name)?>][modified]" value="0" />
+				<input type="hidden" name="messages[<?php echo esc_attr($message->name)?>][use]" value="<?php echo esc_attr($message->use)?>" />
 			</td>
-			<td style="white-space: nowrap"><?php echo $message->name?><span style="display: none"> *</span>
+			<td style="white-space: nowrap"><?php echo esc_html($message->name)?><span style="display: none"> *</span>
 			</td>
 			<td style="white-space: nowrap;">
 				<img src="<?php
@@ -107,9 +107,9 @@ jQuery(function($) {
 					else if ($message->type == 'email')
 						echo WPAM_URL . "/images/icon_mail.gif";
 				?>" style="float:left; margin-right: 4px;" />
-				<?php echo strtoupper($message->type)?>
+				<?php echo esc_html(strtoupper($message->type))?>
 			</td>
-			<td><?php echo $message->use?></td>
+			<td><?php echo esc_html($message->use)?></td>
 
 			<td><em><?php
 				$encodedContent = htmlentities($message->content, ENT_COMPAT, 'UTF-8');
@@ -159,7 +159,7 @@ jQuery(function($) {
                 <br><i><?php _e('Check this box if you want the admin of this site to get notified via email after a new affiliate signup.', 'affiliates-manager' ) ?></i>
                 <br><br>
                 <?php _e('Admin Email Address', 'affiliates-manager' ) ?>
-                <input type="text" size="30" name="adminRegNotificationEmail" id="adminRegNotificationEmail" value="<?php echo $this->viewData['request']['adminRegNotificationEmail']?>" />
+                <input type="text" size="30" name="adminRegNotificationEmail" id="adminRegNotificationEmail" value="<?php echo esc_attr($this->viewData['request']['adminRegNotificationEmail'])?>" />
                 <br><i><?php _e('The email address to which the admin will get notified after a new affiliate signup.', 'affiliates-manager' ) ?></i><br>    
             </td>
         </tr>
@@ -183,7 +183,7 @@ jQuery(function($) {
                 <br><i><?php _e('Check this box if you want the admin of this site to get notified via email when an affiliate earns a commission.', 'affiliates-manager' ) ?></i>
                 <br><br>
                 <?php _e('Admin Email Address', 'affiliates-manager' ) ?>
-                <input type="text" size="30" name="adminAffCommissionNotificationEmail" id="adminAffCommissionNotificationEmail" value="<?php echo $this->viewData['request']['adminAffCommissionNotificationEmail']?>" />
+                <input type="text" size="30" name="adminAffCommissionNotificationEmail" id="adminAffCommissionNotificationEmail" value="<?php echo esc_attr($this->viewData['request']['adminAffCommissionNotificationEmail'])?>" />
                 <br><i><?php _e('The email address to which the admin will get notified when an affiliate earns a commission.', 'affiliates-manager' ) ?></i><br>    
             </td>
         </tr>

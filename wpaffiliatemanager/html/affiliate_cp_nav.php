@@ -13,7 +13,7 @@ if(isset($_GET['sub'])){
             $active_class = ' pure-menu-selected';
         }
         ?>
-        <li class="pure-menu-item<?php echo $active_class;?>"><a class="pure-menu-link" href="<?php echo $linkHref?>"><?php echo $linkText?></a></li>
+        <li class="pure-menu-item<?php echo $active_class;?>"><a class="pure-menu-link" href="<?php echo esc_url($linkHref)?>"><?php echo esc_html($linkText)?></a></li>
 <?php } ?>
 </ul>
 </div>

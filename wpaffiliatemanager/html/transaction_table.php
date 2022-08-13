@@ -28,9 +28,9 @@
         <p class="wpam-daterange-heading"><?php _e('Date Range:', 'affiliates-manager') ?></p>
         <div class="wpam-daterange-selection">
         <label for="from"><?php _e('From Date', 'affiliates-manager') ?></label>
-        <input type="text" id="from" name="from" value="<?php echo $this->viewData['from']; ?>"/>
+        <input type="text" id="from" name="from" value="<?php echo esc_attr($this->viewData['from']); ?>"/>
         <label for="to"><?php _e('To Date', 'affiliates-manager') ?></label>
-        <input type="text" id="to" name="to" value="<?php echo $this->viewData['to']; ?>"/>
+        <input type="text" id="to" name="to" value="<?php echo esc_attr($this->viewData['to']); ?>"/>
         </div>
         <div class="wpam-daterange-action-buttons">
         <input type="submit" name="apply" value="<?php _e('Apply', 'affiliates-manager') ?>" class="pure-button pure-button-primary" />
@@ -56,16 +56,16 @@
     </thead>
     <tbody>
         <?php foreach ($this->viewData['transactions'] as $transaction) { ?>
-            <tr class="transaction-<?php echo $transaction->status ?>">
-                <td data-column="<?php _e('ID', 'affiliates-manager') ?>"><?php echo $transaction->transactionId ?></td>
-                <td data-column="<?php _e('Type', 'affiliates-manager') ?>"><?php echo $transaction->type ?></td>
-                <td data-column="<?php _e('Date Occurred', 'affiliates-manager') ?>"><?php echo date("m/d/Y", $transaction->dateCreated) ?></td>
-                <td data-column="<?php _e('Status', 'affiliates-manager') ?>"><?php echo $transaction->status ?></td>
-                <td data-column="<?php _e('Description', 'affiliates-manager') ?>"><?php echo $transaction->description ?></td>
-                <td data-column="<?php _e('Reference ID', 'affiliates-manager') ?>"><?php echo (empty($transaction->referenceId) ? '&nbsp;' : $transaction->referenceId) ?></td>
-                <td data-column="<?php _e('Amount', 'affiliates-manager') ?>"><?php echo wpam_format_money($transaction->amount) ?></td>
+            <tr class="transaction-<?php echo esc_attr($transaction->status) ?>">
+                <td data-column="<?php _e('ID', 'affiliates-manager') ?>"><?php echo esc_html($transaction->transactionId) ?></td>
+                <td data-column="<?php _e('Type', 'affiliates-manager') ?>"><?php echo esc_html($transaction->type) ?></td>
+                <td data-column="<?php _e('Date Occurred', 'affiliates-manager') ?>"><?php echo esc_html(date("m/d/Y", $transaction->dateCreated)) ?></td>
+                <td data-column="<?php _e('Status', 'affiliates-manager') ?>"><?php echo esc_html($transaction->status) ?></td>
+                <td data-column="<?php _e('Description', 'affiliates-manager') ?>"><?php echo esc_html($transaction->description) ?></td>
+                <td data-column="<?php _e('Reference ID', 'affiliates-manager') ?>"><?php echo esc_html(empty($transaction->referenceId) ? '&nbsp;' : $transaction->referenceId) ?></td>
+                <td data-column="<?php _e('Amount', 'affiliates-manager') ?>"><?php echo esc_html(wpam_format_money($transaction->amount)) ?></td>
                 <?php if (isset($this->viewData['showBalance']) && $this->viewData['showBalance']): ?>
-                    <td data-column="<?php _e('Balance', 'affiliates-manager') ?>"><?php echo wpam_format_money($transaction->balance) ?></td>
+                    <td data-column="<?php _e('Balance', 'affiliates-manager') ?>"><?php echo esc_html(wpam_format_money($transaction->balance)) ?></td>
                 <?php endif; ?>
             </tr>
         <?php } ?>

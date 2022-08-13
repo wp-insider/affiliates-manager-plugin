@@ -6,9 +6,9 @@
 	<div class="wpam-error-tip">
 		PayPal rejected your mass payment. Error details:<br/>
 		<?php foreach ($this->viewData['response']->getErrors() as $error) { ?>
-			<br /><strong>Code:</strong> <?php echo $error->getCode()?><br/>
-			<strong>Message:</strong> <?php echo $error->getLongMessage()?><br/>
-			<strong>Severity:</strong> <?php echo $error->getSeverityCode()?><br/>
+			<br /><strong>Code:</strong> <?php echo esc_html($error->getCode())?><br/>
+			<strong>Message:</strong> <?php echo esc_html($error->getLongMessage())?><br/>
+			<strong>Severity:</strong> <?php echo esc_html($error->getSeverityCode())?><br/>
 		<?php } ?>
 	</div>
 

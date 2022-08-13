@@ -19,15 +19,15 @@
 		<tbody>
 		<?php if (count($this->viewData['logs']) > 0) { ?>
 			<?php foreach ($this->viewData['logs'] as $massPayment) { ?>
-					<tr class="transaction-<?php echo $massPayment->status?>">
-						<td><a class="button-secondary" href="<?php echo admin_url('admin.php?page=wpam-payments&step=view_payment_detail&id='.$massPayment->paypalLogId)?>"><?php _e('View', 'affiliates-manager');?></a></td>
-						<td><?php echo $massPayment->paypalLogId?></td>
-						<td><?php echo date("m/d/Y H:i:s",$massPayment->dateOccurred)?></td>
-						<td><?php echo $massPayment->correlationId?></td>
-						<td><?php echo $massPayment->amount?></td>
-						<td><?php echo $massPayment->fee?></td>
-						<td><?php echo $massPayment->totalAmount?></td>
-						<td><?php echo $massPayment->status?></td>
+					<tr class="transaction-<?php echo esc_attr($massPayment->status)?>">
+						<td><a class="button-secondary" href="<?php echo esc_url(admin_url('admin.php?page=wpam-payments&step=view_payment_detail&id='.$massPayment->paypalLogId))?>"><?php _e('View', 'affiliates-manager');?></a></td>
+						<td><?php echo esc_html($massPayment->paypalLogId)?></td>
+						<td><?php echo esc_html(date("m/d/Y H:i:s",$massPayment->dateOccurred))?></td>
+						<td><?php echo esc_html($massPayment->correlationId)?></td>
+						<td><?php echo esc_html($massPayment->amount)?></td>
+						<td><?php echo esc_html($massPayment->fee)?></td>
+						<td><?php echo esc_html($massPayment->totalAmount)?></td>
+						<td><?php echo esc_html($massPayment->status)?></td>
 					</tr>
 			<?php } ?>
 		<?php } else { ?>

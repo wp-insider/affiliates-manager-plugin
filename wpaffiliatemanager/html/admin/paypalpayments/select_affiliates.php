@@ -104,22 +104,22 @@ jQuery(function($) {
 	<h3><?php _e( 'Select Affiliates to Pay', 'affiliates-manager' ) ?></h3>
 
 
-	<p><?php echo sprintf( __( 'Not showing %s affiliates that do not have a PayPal account on file.', 'affiliates-manager' ), $this->viewData['notShownCount'] ) ?></p>
+	<p><?php echo sprintf( __( 'Not showing %s affiliates that do not have a PayPal account on file.', 'affiliates-manager' ), esc_html($this->viewData['notShownCount']) ) ?></p>
 	<div style="width: 800px;">
 	<form method="post" id="dateRange">
         <?php wp_nonce_field('wpam_payments_select_aff_date_range_action', 'wpam_payments_select_aff_date_range_nonce'); ?>
 		<div>
 <p><strong><?php _e( 'Date Range:', 'affiliates-manager' ) ?></strong> 
 <label for="from"><?php _e( 'From Date', 'affiliates-manager' ) ?></label>
-<input type="text" id="from" name="from" value="<?php echo $this->viewData['from']; ?>"/>
+<input type="text" id="from" name="from" value="<?php echo esc_attr($this->viewData['from']); ?>"/>
 <label for="to"><?php _e( 'To Date', 'affiliates-manager' ) ?></label>
-<input type="text" id="to" name="to" value="<?php echo $this->viewData['to']; ?>"/>
+<input type="text" id="to" name="to" value="<?php echo esc_attr($this->viewData['to']); ?>"/>
 			 <input type="submit" name="apply" value="<?php _e( 'Apply', 'affiliates-manager' ) ?>" />
 			 <input type="button" name="clear" value="<?php _e( 'Clear', 'affiliates-manager' ) ?>" id="reset" />
 			 </p>
 		</div>
 	</form>
-	    <form method="POST" action="<?php echo admin_url('admin.php?page=wpam-payments&step=review_affiliates')?>">
+	    <form method="POST" action="<?php echo esc_url(admin_url('admin.php?page=wpam-payments&step=review_affiliates'))?>">
                 <?php wp_nonce_field('wpam_payments_review_affiliates_action', 'wpam_payments_review_affiliates_nonce'); ?>
 		<table class="widefat" style="width: 800px">
 			<thead><tr>
@@ -145,7 +145,7 @@ jQuery(function($) {
 				else		
 					echo 'class="row_selected"'; ?>>
 				
-					<td><input type="checkbox" name="chkAffiliate[<?php echo $affiliate->affiliateId?>]" <?php
+					<td><input type="checkbox" name="chkAffiliate[<?php echo esc_attr($affiliate->affiliateId)?>]" <?php
 						if ( $affiliate->balance >= $this->viewData['minPayout'] ) {
 							echo 'checked="checked"';
 						} elseif( $affiliate->balance <= 0 ) {
@@ -153,13 +153,13 @@ jQuery(function($) {
 						}
 					 ?>>
 					 </td>
-					<td><?php echo $affiliate->affiliateId?></td>
-					<td><?php echo $affiliate->firstName?></td>
-					<td><?php echo $affiliate->lastName?></td>
-					<td><?php echo $affiliate->companyName?></td>
-					<td style="font-weight: bold"><?php echo $affiliate->paypalEmail?></td>
-					<td style="text-align: right"><?php echo wpam_format_money($affiliate->balance)?></td>
-					<td><input type="text" name="txtAffiliatePaymentAmount[<?php echo $affiliate->affiliateId?>]" value="<?php echo $affiliate->balance?>" <?php
+					<td><?php echo esc_html($affiliate->affiliateId)?></td>
+					<td><?php echo esc_html($affiliate->firstName)?></td>
+					<td><?php echo esc_html($affiliate->lastName)?></td>
+					<td><?php echo esc_html($affiliate->companyName)?></td>
+					<td style="font-weight: bold"><?php echo esc_html($affiliate->paypalEmail)?></td>
+					<td style="text-align: right"><?php echo esc_html(wpam_format_money($affiliate->balance))?></td>
+					<td><input type="text" name="txtAffiliatePaymentAmount[<?php echo esc_attr($affiliate->affiliateId)?>]" value="<?php echo esc_attr($affiliate->balance)?>" <?php
 						if ($affiliate->balance <= 0) {
 							echo 'disabled="disabled"';
 						}
@@ -172,16 +172,16 @@ jQuery(function($) {
 			<table class="totalsTable" style="position: relative; width: 400px; left: 400px; border: 1px solid #aaa;">
 				<tr>
 					<td style="width: 250px;">Sub-Total</td>
-					<td style="width: 150px;" class="moneyCell" id="subTotalCell"><?php echo wpam_format_money(0, false); ?></td>
+					<td style="width: 150px;" class="moneyCell" id="subTotalCell"><?php echo esc_html(wpam_format_money(0, false)); ?></td>
 				</tr>
 				<tr>
-					<td><?php echo sprintf( __( 'PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>', 'affiliates-manager' ), $currency ) ?></td>
-					<td class="moneyCell" id="paypalFeeCell"><?php echo wpam_format_money(0, false); ?></td>
+					<td><?php echo sprintf( __( 'PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>', 'affiliates-manager' ), esc_html($currency) ) ?></td>
+					<td class="moneyCell" id="paypalFeeCell"><?php echo esc_html(wpam_format_money(0, false)); ?></td>
 				</tr>
 				<tr class="totalSeparatorRow"><td colspan="2"></td> </tr>
 				<tr class="totalRow">
 					<th><?php _e( 'Estimated Total', 'affiliates-manager' ) ?></th>
-					<th class="moneyCell" id="totalCell"><?php echo wpam_format_money(0, false); ?></th>
+					<th class="moneyCell" id="totalCell"><?php echo esc_html(wpam_format_money(0, false)); ?></th>
 				</tr>
 			</table>
 			<div style="float: right; margin: 10px;">

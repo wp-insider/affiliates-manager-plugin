@@ -425,9 +425,9 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 
 	protected function getCommissionRateString( WPAM_Data_Models_AffiliateModel $affiliate ) {
 		if ($affiliate->bountyType === 'fixed') {
-			return sprintf( __('%s per sale.', 'affiliates-manager' ), wpam_format_money( $affiliate->bountyAmount, false ) );
+			return sprintf( __('%s per sale.', 'affiliates-manager' ), esc_html(wpam_format_money( $affiliate->bountyAmount, false )) );
 		} else {
-			return sprintf( __( '%s%% of each completed sale, pre-tax', 'affiliates-manager' ), $affiliate->bountyAmount );
+			return sprintf( __( '%s%% of each completed sale, pre-tax', 'affiliates-manager' ), esc_html($affiliate->bountyAmount) );
 		}
 	}
 

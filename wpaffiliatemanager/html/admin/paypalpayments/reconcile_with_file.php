@@ -27,14 +27,14 @@ $affiliates = $this->viewData['affiliates'];
 		<tr><th width="150">&nbsp;</th><th width="500">&nbsp;</th></tr>
 		</thead>
 
-		<tr><th>Database ID</th><td><?php echo $massPayment->paypalLogId?></td></tr>
-		<tr><th>Date Occurred</th><td><?php echo date("m/d/Y H:i:s",$massPayment->dateOccurred)?></td></tr>
-		<tr><th>PayPal Timestamp</th><td><?php echo date("m/d/Y H:i:s", $massPayment->responseTimestamp)?></td></tr>
-		<tr><th>PayPal Correlation ID</th> <td><?php echo $massPayment->correlationId?></td></tr>
-		<tr><th>Amount</th><td><?php echo ($massPayment->amount)?></td></tr>
-		<tr><th>Fee</th><td><?php echo ($massPayment->fee)?></td></tr>
-		<tr><th>Total Amount</th><td><?php echo ($massPayment->totalAmount)?></td></tr>
-		<tr class="transaction-<?php echo $massPayment->status?>"><th>Status</th><td><?php echo $massPayment->status?></td></tr>
+		<tr><th>Database ID</th><td><?php echo esc_html($massPayment->paypalLogId)?></td></tr>
+		<tr><th>Date Occurred</th><td><?php echo esc_html(date("m/d/Y H:i:s",$massPayment->dateOccurred))?></td></tr>
+		<tr><th>PayPal Timestamp</th><td><?php echo esc_html(date("m/d/Y H:i:s", $massPayment->responseTimestamp))?></td></tr>
+		<tr><th>PayPal Correlation ID</th> <td><?php echo esc_html($massPayment->correlationId)?></td></tr>
+		<tr><th>Amount</th><td><?php echo esc_html($massPayment->amount)?></td></tr>
+		<tr><th>Fee</th><td><?php echo esc_html($massPayment->fee)?></td></tr>
+		<tr><th>Total Amount</th><td><?php echo esc_html($massPayment->totalAmount)?></td></tr>
+		<tr class="transaction-<?php echo esc_attr($massPayment->status)?>"><th>Status</th><td><?php echo esc_html($massPayment->status)?></td></tr>
 
 	</table>
 
@@ -46,7 +46,7 @@ $affiliates = $this->viewData['affiliates'];
 	</div>
 	<?php } ?>
 
-	<form id="mainform" enctype="multipart/form-data" method="POST" action="<?php echo admin_url('admin.php?id='.$massPayment->paypalLogId.'&page=wpam-payments&step=reconcile_with_file&substep=confirm')?>">
+	<form id="mainform" enctype="multipart/form-data" method="POST" action="<?php echo esc_url(admin_url('admin.php?id='.$massPayment->paypalLogId.'&page=wpam-payments&step=reconcile_with_file&substep=confirm'))?>">
                 <?php wp_nonce_field('wpam_payments_rwfc_nonce'); ?>
 		<table class="widefat" style="width: 600px">
 		<thead><tr><th colspan="2">&nbsp;</th></tr></thead>

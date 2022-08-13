@@ -16,10 +16,10 @@
 			foreach ( $this->viewData['impressions'] as $impression ) {
 			?>
 			<tr class="impression">
-				<td><?php echo $impression->impressionId?></td>
-				<td><?php echo date("m/d/Y H:i:s", $impression->dateCreated)?></td>
-				<td><?php echo $creativeNames[$impression->sourceCreativeId]?></td>
-				<td><?php echo $impression->referer?></td>
+				<td><?php echo esc_html($impression->impressionId)?></td>
+				<td><?php echo esc_html(date("m/d/Y H:i:s", $impression->dateCreated))?></td>
+				<td><?php echo esc_html($creativeNames[$impression->sourceCreativeId])?></td>
+				<td><?php echo esc_html($impression->referer)?></td>
 			</tr>
 			<?php } ?>
 

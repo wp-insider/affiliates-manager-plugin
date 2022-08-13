@@ -360,7 +360,7 @@ class WPAM_Plugin {
         echo '<div id="icon-users" class="icon32"></div><h2>' . __('Become an affiliate', 'affiliates-manager') . '</h2>';
         echo '<p>' . __('Are you interested in earning money by directing visitors to our site?', 'affiliates-manager') . '</p>';
         //@TODO check the rules on spaces for l10n
-        echo '<p><a href="' . $this->affiliateRegisterPage->getLink() . '">' . __('Sign up', 'affiliates-manager') . '</a>' . __(' to become an affiliate today!', 'affiliates-manager');
+        echo '<p><a href="' . esc_url($this->affiliateRegisterPage->getLink()) . '">' . __('Sign up', 'affiliates-manager') . '</a>' . __(' to become an affiliate today!', 'affiliates-manager');
         echo '</p></div></div>';
     }
 
@@ -853,6 +853,7 @@ class WPAM_Plugin {
         header("Pragma: no-cache");
         header("Expires: 0");
         $output = fopen('php://output', 'w'); //open output stream
+        $export_keys = $this->escape_csv_data_array($export_keys);
         fputcsv($output, $export_keys); //let's put column names first
         foreach ($items as $item) {
             unset($csv_line);
@@ -861,8 +862,20 @@ class WPAM_Plugin {
                     $csv_line[] = $item[$key];
                 }
             }
+            $csv_line = $this->escape_csv_data_array($csv_line);
             fputcsv($output, $csv_line);
         }
+    }
+    
+    public function escape_csv_data_array($data_array) {
+        $esc_data_arr = array('=', '+', '-', '@');
+        foreach($data_array as $index => $data){
+            if (in_array(mb_substr($data, 0, 1), $esc_data_arr, true)) {
+                $data = "'" . $data;
+                $data_array[$index] = $data;
+            }
+        }
+        return $data_array;
     }
 
     public function handle_csv_download() {

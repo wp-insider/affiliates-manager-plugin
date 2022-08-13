@@ -104,7 +104,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
 			</label>
 		</th>
 		<td>
-			<input type="text" size="30" name="txtMinimumPayout" id="txtMinimumPayout" value="<?php echo $this->viewData['request']['txtMinimumPayout']?>" />
+			<input type="text" size="30" name="txtMinimumPayout" id="txtMinimumPayout" value="<?php echo esc_attr($this->viewData['request']['txtMinimumPayout'])?>" />
 		</td>
 	</tr>
 	<tr>
@@ -113,7 +113,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
 			<img id="cookieInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
         </th>
         <td>
-        	<input type="text" size="30" name="txtCookieExpire" id="txtCookieExpire" value="<?php echo $this->viewData['request']['txtCookieExpire']?>" />
+        	<input type="text" size="30" name="txtCookieExpire" id="txtCookieExpire" value="<?php echo esc_attr($this->viewData['request']['txtCookieExpire'])?>" />
                 <span><?php printf(__('<a target="_blank" href="%s">Read more on cookie duration here</a>', 'affiliates-manager'), esc_url($cookie_duration_documentation));?></span>
         </td>
 	</tr>
@@ -123,7 +123,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
 			<img class="emailInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
         </th>
         <td>
-        	<input type="text" size="30" name="txtEmailName" id="txtEmailName" value="<?php echo $this->viewData['request']['txtEmailName']?>" />
+        	<input type="text" size="30" name="txtEmailName" id="txtEmailName" value="<?php echo esc_attr($this->viewData['request']['txtEmailName'])?>" />
 			<span><?php _e('(Leave blank to use WordPress default)', 'affiliates-manager');?></span>
         </td>
 	</tr>
@@ -133,7 +133,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
 			<img class="emailInfo" style="cursor: pointer;" src="<?php echo WPAM_URL . "/images/info_icon.png"?>" />
         </th>
         <td>
-        	<input type="text" size="30" name="txtEmailAddress" id="txtEmailAddress" value="<?php echo $this->viewData['request']['txtEmailAddress']?>" />
+        	<input type="text" size="30" name="txtEmailAddress" id="txtEmailAddress" value="<?php echo esc_attr($this->viewData['request']['txtEmailAddress'])?>" />
 			<span><?php _e('(Leave blank to use WordPress default)', 'affiliates-manager');?></span>
         </td>
 	</tr>
@@ -169,7 +169,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
                         <label id="lblaffBountyAmount" for="affBountyAmount"><?php _e( 'Bounty Rate (% of Sale) / Amount', 'affiliates-manager' ) ?></label>
                 </th>
                 <td>
-                        <input type="text" id="affBountyAmount" name="affBountyAmount" size="5" value="<?php echo $this->viewData['request']['affBountyAmount']?>" />
+                        <input type="text" id="affBountyAmount" name="affBountyAmount" size="5" value="<?php echo esc_attr($this->viewData['request']['affBountyAmount'])?>" />
                 </td>
         </tr>
         
@@ -178,7 +178,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
                         <label id="lblaffCurSymbol" for="affCurrencySymbol"><?php _e( 'Currency Symbol', 'affiliates-manager' ) ?></label>
                 </th>
                 <td>
-                        <input type="text" id="affCurrencySymbol" name="affCurrencySymbol" size="5" value="<?php echo $this->viewData['request']['affCurrencySymbol']?>" />
+                        <input type="text" id="affCurrencySymbol" name="affCurrencySymbol" size="5" value="<?php echo esc_attr($this->viewData['request']['affCurrencySymbol'])?>" />
                 </td>
         </tr>
         
@@ -187,7 +187,7 @@ frequency of creative views), which in turn may slow down page loads where a cre
                         <label id="lblaffCurCode" for="affCurrencyCode"><?php _e( 'Currency Code', 'affiliates-manager' ) ?></label>
                 </th>
                 <td>
-                        <input type="text" id="affCurrencyCode" name="affCurrencyCode" size="5" value="<?php echo $this->viewData['request']['affCurrencyCode']?>" />
+                        <input type="text" id="affCurrencyCode" name="affCurrencyCode" size="5" value="<?php echo esc_attr($this->viewData['request']['affCurrencyCode'])?>" />
                 </td>
         </tr>
         

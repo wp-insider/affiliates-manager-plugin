@@ -16,17 +16,17 @@
 <?php
 require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 ?>
-	<form method="post" action="<?php echo $this->viewData['nextStepUrl']?>" class="pure-form">
+	<form method="post" action="<?php echo esc_url($this->viewData['nextStepUrl'])?>" class="pure-form">
             <?php wp_nonce_field('affiliate_cp_submit_payment_details'); ?>
 		<table class="pure-table">
 			<tr>
 				<td><label for="ddPaymentMethod"><?php _e( 'Method', 'affiliates-manager' ) ?></label> *</td>
 				<td><select id="ddPaymentMethod" name="ddPaymentMethod">
 					<?php foreach ($this->viewData['paymentMethods'] as $key => $val) {
-						echo '<option value="'.$key.'"';
+						echo '<option value="'.esc_attr($key).'"';
 						if ( isset( $this->viewData['request']['ddPaymentMethod'] ) && $this->viewData['request']['ddPaymentMethod'] == $key)
 							echo ' selected="selected"';
-						echo '>' . $val . '</option>';
+						echo '>' . esc_html($val) . '</option>';
 					}?>
 				</select></td>
 			</tr>
@@ -39,7 +39,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 				<tr>
 					<td><label for="txtPaypalEmail"><?php _e( 'PayPal E-Mail Address', 'affiliates-manager' ) ?></label> *</td>
 					<td>
-						<input id="txtPaypalEmail" type="text" name="txtPaypalEmail" size="30" value="<?php echo isset( $this->viewData['request']['txtPaypalEmail'] ) ? $this->viewData['request']['txtPaypalEmail'] : '' ?>"/>
+						<input id="txtPaypalEmail" type="text" name="txtPaypalEmail" size="30" value="<?php echo isset( $this->viewData['request']['txtPaypalEmail'] ) ? esc_attr($this->viewData['request']['txtPaypalEmail']) : '' ?>"/>
 					</td>
 				</tr>
 			</table>
@@ -59,7 +59,7 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 						<label for="txtCheckTo"><?php _e( 'Check Recipient', 'affiliates-manager' ) ?></label> *
 					</td>
 					<td>
-						<input id="txtCheckTo" type="text" size="30" name="txtCheckTo" value="<?php echo isset( $this->viewData['request']['txtCheckTo'] ) ? $this->viewData['request']['txtCheckTo'] : '' ?>" />
+						<input id="txtCheckTo" type="text" size="30" name="txtCheckTo" value="<?php echo isset( $this->viewData['request']['txtCheckTo'] ) ? esc_attr($this->viewData['request']['txtCheckTo']) : '' ?>" />
 					</td>
 				</tr>
 				<tr>
@@ -75,19 +75,19 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
 				<tbody>
 					<tr><td><?php _e( 'Recipient', 'affiliates-manager' ) ?></td>
 					<td>
-						<?php echo $model->firstName?> <?php echo $model->lastName?><br/>
-						<?php echo $model->addressLine1?><br />
+						<?php echo esc_html($model->firstName)?> <?php echo esc_html($model->lastName)?><br/>
+						<?php echo esc_html($model->addressLine1)?><br />
 						<?php if(strlen(trim($model->addressLine2)) > 0)
 						{
-							echo $model->addressLine2 . "<br />";
+							echo esc_html($model->addressLine2) . "<br />";
 						}?>
-						<?php echo $model->addressCity?><?php if ($model->addressCountry == 'US')
+						<?php echo esc_html($model->addressCity)?><?php if ($model->addressCountry == 'US')
 						{
-							echo ", " .$model->addressState;
-						}?> <?php echo $model->addressZipCode?><br/>
+							echo ", " .esc_html($model->addressState);
+						}?> <?php echo esc_html($model->addressZipCode)?><br/>
 						<?php
                                                 $countries = WPAM_Validation_CountryCodes::get_countries();
-                                                echo  $countries[$model->addressCountry]?>
+                                                echo  esc_html($countries[$model->addressCountry])?>
 					</td>
 					</tr>
 				</tbody>
