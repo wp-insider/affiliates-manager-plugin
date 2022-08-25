@@ -29,10 +29,36 @@ function wpam_display_manage_payouts_menu()
         }
         echo wpam_mark_payment_as_paid();
     }
+    
+    if (isset($_POST['wpam_generate_payout_report_by_date_range'])) {
+        if(!isset($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'wpam_generate_payout_report_by_date_range')){
+            wp_die('Error! Nonce Security Check Failed! Go back to the Manage Payouts menu and generate the report again.');
+        }
+        //echo wpam_generate_payout_report_by_date_range();
+        $payout_report = wpam_generate_payout_report_by_date_range();
+        echo $payout_report;
+        echo "<br />";
+        if(isset($payout_report) && !empty($payout_report)){
+            echo '<div id="message" class="updated fade"><p>'.__('Payout Report Generated', 'affiliates-manager').'</p></div>';
+        }
+    }
+    if (isset($_POST['wpam_generate_mass_pay_file_by_date_range'])) {
+        if(!isset($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'wpam_generate_mass_pay_file_by_date_range')){
+            wp_die('Error! Nonce Security Check Failed! Go back to the Manage Payouts menu and generate the payout file again.');
+        }
+        echo wpam_create_mass_pay_file();
+        echo "<br />";
+    }
+    if (isset($_POST['wpam_mark_as_paid_by_date_range'])) {
+        if(!isset($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'wpam_mark_as_paid_by_date_range')){
+            wp_die('Error! Nonce Security Check Failed! Go back to the Manage Payouts menu and mark payments as paid again.');
+        }
+        echo wpam_mark_payment_as_paid();
+    }
     $paypal_payouts_doc = 'https://wpaffiliatemanager.com/paypal-payouts-setup/';
     ?>
     <div class="postbox">
-        <h3 class="hndle"><label for="title"><?php _e('Affiliate Mass Payout by Outstanding Amount', 'affiliates-manager');?></label></h3>
+        <h3 class="hndle"><label for="title"><?php _e('Option A) Affiliate Mass Payout by Outstanding Amount', 'affiliates-manager');?></label></h3>
     <div class="inside">    
     <form method="post" action="">
         <?php wp_nonce_field('wpam_generate_payout_report'); ?>    
@@ -56,10 +82,47 @@ function wpam_display_manage_payouts_menu()
         <br />
 
     </form>
-   </div></div> 
+    </div></div>
             
-   </div></div>         
+    <div class="postbox">
+    <h3 class="hndle"><label for="title"><?php _e('Option B) Affiliate Mass Payout by Date Range', 'affiliates-manager');?></label></h3>
+    <div class="inside">    
+    <form method="post" action="">
+        <?php wp_nonce_field('wpam_generate_payout_report_by_date_range'); ?>
+        <strong><?php _e('Step 1:', 'affiliates-manager');?></strong><?php _e(' Select a date range (yyyy-mm-dd).', 'affiliates-manager'); ?><br />
+        <?php _e('Start Date:', 'affiliates-manager');?> <input class="wpam_date" name="earnings_start_date" type="text" id="earnings_start_date" value="" size="12" />
+        <?php _e('End Date:', 'affiliates-manager');?> <input class="wpam_date" name="earnings_end_date" type="text" id="earnings_end_date" value="" size="12" /><br /><br />
+        <strong><?php _e('Step 2:', 'affiliates-manager');?></strong>
+        <input type="submit" class="button" name="wpam_generate_payout_report_by_date_range" value="<?php _e('Generate Report', 'affiliates-manager'); ?> &raquo;" />
+        <br /><i><?php _e('Hit "Generate Report" to get a list of all the affiliate earnings in this period that need to be paid.', 'affiliates-manager'); ?></i><br />
+        <br />
+    </form>
+
+    <form method="post" action="">
+        <?php wp_nonce_field('wpam_generate_mass_pay_file_by_date_range'); ?>
+        <strong><?php _e('Step 3:', 'affiliates-manager');?></strong> <input type="submit" class="button" name="wpam_generate_mass_pay_file_by_date_range" value="<?php _e('Create Payment Report File', 'affiliates-manager'); ?> &raquo;" />
+        <br /><i><?php printf(__('Use this to generate a PayPal payout file and a payment report CSV file. The PayPal payout file can be used in paypal to pay all your affiliates in one click. If you have never used PayPal Payouts check <a href="%s" target="_blank">this documentation</a>.', 'affiliates-manager'), $paypal_payouts_doc); ?></i><br />
+        <br />
+    </form>
+
+    <form method="post" action="" onSubmit="return confirm('<?php _e('Do you really want to mark all the outstanding payments as paid? This action cannot be undone.', 'affiliates-manager');?>');">
+        <?php wp_nonce_field('wpam_mark_as_paid_by_date_range'); ?>
+        <strong><?php _e('Step 4:', 'affiliates-manager');?></strong> <input type="submit" class="button" name="wpam_mark_as_paid_by_date_range" value="<?php _e('Mark as Paid', 'affiliates-manager'); ?> &raquo;" />
+        <br /><i><?php _e('After you have generated the payout report and paid all the affiliates their outstanding balance, use this button to mark all the payments as paid.', 'affiliates-manager'); ?></i><br />
+        <br />
+
+    </form>
+    </div></div>
+            
+    </div></div>         
     </div>
+    <script>
+    jQuery(function($) {
+        $( ".wpam_date" ).datepicker({
+            dateFormat: 'yy-mm-dd'
+        });
+    });
+    </script>
     <?php
 }
 
@@ -84,7 +147,7 @@ function wpam_generate_payout_report() {
     $db = new WPAM_Data_DataAccess();
     $aff_db = $db->getAffiliateRepository();
 
-    //Load and process affiliate records using the paging concept (so we are not trying to laod thousands of recoreds at once).  
+    //Load and process affiliate records using the paging concept (so we are not trying to load thousands of recoreds at once).  
     $page = 1;
     $query_limit = 500;//Load 500 rows per query    
     $total_rows = wpam_get_total_affiliates_count();
@@ -241,4 +304,141 @@ function wpam_mark_payment_as_paid() {
     
     $output = '<div id="message" class="updated fade"><p>'.__('Marked payments as paid', 'affiliates-manager').'</p></div>';
     return $output;
+}
+
+function wpam_generate_payout_report_by_date_range() {
+
+    $args = array();
+    $args['start_date'] = '';
+    $current_datetime = date("Y-m-d H:i:s", time());
+    if(!isset($_POST['earnings_start_date']) || empty($_POST['earnings_start_date'])){
+        echo '<div id="message" class="error fade"><p>'.__('Start Date is not specified', 'affiliates-manager').'</p></div>';
+        return '';
+    }
+    $start_date = sanitize_text_field($_POST['earnings_start_date']);
+    if(date("Y-m-d", strtotime($start_date)) === $start_date){ //valid date
+        $args['start_date'] = date("Y-m-d H:i:s", strtotime($start_date));
+    }
+    else{
+        echo '<div id="message" class="error fade"><p>'.__('Start Date is not valid', 'affiliates-manager').'</p></div>';
+        return '';
+    }
+    $args['end_date'] = '';
+    if(!isset($_POST['earnings_end_date']) || empty($_POST['earnings_end_date'])){
+        echo '<div id="message" class="error fade"><p>'.__('End Date is not specified', 'affiliates-manager').'</p></div>';
+        return '';
+    }
+    $end_date = sanitize_text_field($_POST['earnings_end_date']);
+    if(date("Y-m-d", strtotime($end_date)) === $end_date){ //valid date
+        $args['end_date'] = date("Y-m-d H:i:s", strtotime($end_date." +1 day") - 1);
+        if($args['end_date'] > $current_datetime){
+            $args['end_date'] = $current_datetime;
+        }
+    }
+    else{
+        echo '<div id="message" class="error fade"><p>'.__('End Date is not valid', 'affiliates-manager').'</p></div>';
+        return '';
+    }
+    /*
+    echo "<p>current ".date("Y-m-d H:i:s", time())."</p>";
+    echo "<p>start ".$args['start_date']."</p>";
+    echo "<p>end ".$args['end_date']."</p>";
+    */
+    $output = '
+    <table class="widefat">
+    <thead><tr>
+    <th scope="col">' . __('Affiliate ID', 'affiliates-manager') . '</th>
+    <th scope="col">' . __('Name', 'affiliates-manager') . '</th>   
+    <th scope="col">' . __('PayPal Email', 'affiliates-manager') . '</th>
+    <th scope="col">' . __('Pending Amount', 'affiliates-manager') . '</th>
+    </tr></thead>
+    <tbody>';
+    $min_payout = get_option(WPAM_PluginConfig::$MinPayoutAmountOption);
+    $no_pending_payment = true;
+    $counter = 0;
+    global $referrers;
+    global $payouts;
+
+    global $wpdb;
+    $affiliates_table = WPAM_AFFILIATES_TBL;
+    //Load and process affiliate records using the paging concept (so we are not trying to laod thousands of recoreds at once).  
+    $page = 1;
+    $query_limit = 500;//Load 500 rows per query    
+    $total_rows = wpam_get_total_affiliates_count();
+    $total_pages = ceil($total_rows/$query_limit);
+    //$resultset = $wpdb->get_results("SELECT * FROM $affiliates_table ORDER BY date", OBJECT);
+    if ($total_rows >= 1) {//There are more than 1 affiliates in this site
+        while ($page <= $total_pages){
+            $query_start = ($page - 1) * $query_limit;//Calculate the query start position for this iteration
+            $query = "SELECT * FROM $affiliates_table LIMIT ".$query_start.", ".$query_limit;//Load affiliates in batches
+            $resultset = $wpdb->get_results($query, OBJECT);
+
+            foreach ($resultset as $wpam_aff_db) {
+                $args['aff_id'] = $wpam_aff_db->affiliateId;
+                $affiliate = wpam_load_payout_summary_by_date_range($args);
+                //$affiliate = $aff_db->loadAffiliateSummary(array('affiliateId' => $wpam_aff_db->affiliateId));
+                $affiliate = $affiliate[0];
+                $balance = number_format($affiliate->balance, 2, '.', '');
+                $pending_payment = number_format($affiliate->earnings, 2, '.', '');
+                if($pending_payment >= $min_payout && $pending_payment <= $balance) {
+                    $affiliates_name = $wpam_aff_db->firstName . " " . $wpam_aff_db->lastName;
+                    $paypal_email = isset($wpam_aff_db->paypalEmail) && !empty($wpam_aff_db->paypalEmail) ? $wpam_aff_db->paypalEmail : '';
+                    $output .= '<tr>';
+                    $output .= '<td>' . $wpam_aff_db->affiliateId . '</td>';
+                    $output .= '<td><strong>'.$affiliates_name.'</strong></td>';
+                    $output .= '<td><strong>'.$paypal_email.'</strong></td>';
+                    $output .= '<td><strong>'.$pending_payment.'</strong></td>';
+                    $output .= '</tr>';
+                    $no_pending_payment = false;
+                    $referrers[$counter] = $wpam_aff_db->affiliateId;
+                    $payouts[$counter] = $pending_payment;
+                    $counter++;
+                }      
+            }//End of foreach loop
+            $page++;//Increment the page count for the next iteration           
+        }//End of while loop
+    } else {
+        $output .= '<tr> <td colspan="4">' . __('No Affiliates Found in the Database.', 'affiliates-manager') . '</td> </tr>';
+    }
+    if ($no_pending_payment) {
+        $output .= '<tr> <td colspan="4">' . __('No Pending Payment Found.', 'affiliates-manager') . '</td> </tr>';
+    }
+    $output .= '</tbody></table>';
+    
+    update_option('wpam_payout_report_generated', true);
+    update_option('wp_affiliates_manager_referrers', $referrers);
+    update_option('wp_affiliates_manager_payouts', $payouts);
+
+    return $output;
+}
+
+function wpam_load_payout_summary_by_date_range($args)
+{
+    global $wpdb;
+    $affiliates_table = WPAM_AFFILIATES_TBL;
+    $transactions_table = WPAM_TRANSACTIONS_TBL;
+    $start_date = $args['start_date'];
+    $end_date = $args['end_date'];
+    $aff_id = $args['aff_id'];
+    $query = "
+            select
+                    {$affiliates_table}.*,
+                    (
+                            select coalesce(sum(tr.amount),0)
+                            from {$transactions_table} tr
+                            where
+                                    tr.affiliateId = {$affiliates_table}.affiliateId
+                                    and tr.status != 'failed'
+                    ) balance,
+                    (
+                            select coalesce(sum(IF(tr.type = 'credit', amount, 0)),0)
+                            from {$transactions_table} tr
+                            where
+                                    tr.affiliateId = {$affiliates_table}.affiliateId
+                                    and tr.status != 'failed'
+                                    and tr.dateCreated >= '{$start_date}' and tr.dateCreated <= '{$end_date}'
+                    ) earnings
+            from {$affiliates_table} where affiliateId = {$aff_id}";
+    $results = $wpdb->get_results($query);        
+    return $results;
 }
