@@ -167,6 +167,8 @@ class WPAM_Plugin {
 
         //Jigoshop integration
         add_action('jigoshop_new_order', array($this, 'jigoshopNewOrder'));
+        //Simple Membership registration integration
+        add_action('swpm_front_end_registration_complete_user_data', array($this, 'wpam_swpm_after_registration_callback'));
         /*         * * End integration hooks ** */
     }
 
@@ -626,6 +628,63 @@ class WPAM_Plugin {
         $requestTracker->handleCheckout($transaction_id, $purchaseAmount, $buyer_email);
 
         return $transaction_id;
+    }
+    
+    public function wpam_swpm_after_registration_callback($member_info) {
+        $create_aff_account = get_option(WPAM_PluginConfig::$AutoAffAccountSWPM);
+        if(!isset($create_aff_account) || empty($create_aff_account)){
+            return;
+        }
+        WPAM_Logger::log_debug('Simple Membership Auto Affiliate Creation - swpm_front_end_registration_complete_user_data action hook triggered');
+        WPAM_Logger::log_debug_array($member_info);
+        if(!isset($member_info['email']) || empty($member_info['email'])){
+            WPAM_Logger::log_debug("Simple Membership Auto Affiliate Creation - Error, email address is missing. Cannot create affiliate record!", 4);
+            return;
+        }
+        $member_email = sanitize_email($member_info['email']);
+        $user_info = get_user_by('email', $member_email); //get_userdata($user_id);
+        if(!$user_info){
+            WPAM_Logger::log_debug("Simple Membership Auto Affiliate Creation - user could not be found for email: ".$member_email.". Cannot create affiliate record!", 4);
+            return;
+        }
+        $fields = array();
+        if(get_option(WPAM_PluginConfig::$AutoAffiliateApproveIsEnabledOption) == 1){
+            $fields['userId'] = $user_info->ID; //only set the user id when auto approval is enabled. Otherwise admin will not be able to approve and the plugin will show ERROR: User already has an account and is already an affiliate
+        }
+        $fields['firstName'] = sanitize_text_field($user_info->first_name);
+        $fields['lastName'] = sanitize_text_field($user_info->last_name);    
+        $fields['email'] = sanitize_email($user_info->user_email);
+
+        $country = sanitize_text_field($member_info['country']);
+        if(isset($country) && !empty($country)){
+            $fields['addressCountry'] = $country; 
+        }
+        $address = sanitize_text_field($member_info['address_street']);
+        if(isset($address) && !empty($address)){
+            $fields['addressLine1'] = $address; 
+        }
+        $city = sanitize_text_field($member_info['address_city']);
+        if(isset($city) && !empty($city)){
+            $fields['addressCity'] = $city; 
+        }
+        $state = sanitize_text_field($member_info['address_state']);
+        if(isset($state) && !empty($state)){
+            if(isset($country) && $country != "US"){
+                $state = "OU";
+            }
+            $fields['addressState'] = $state; 
+        }
+        $zipcode = sanitize_text_field($member_info['address_zipcode']);
+        if(isset($zipcode) && !empty($zipcode)){
+            $fields['addressZipCode'] = $zipcode; 
+        }
+        $phone = sanitize_text_field($member_info['phone']);
+        if(isset($phone) && !empty($phone)){
+            $fields['phoneNumber'] = $phone; 
+        }
+        $userhandler = new WPAM_Util_UserHandler();
+        $userhandler->create_wpam_affiliate_record($fields);
+        WPAM_Logger::log_debug("Simple Membership Auto Affiliate Creation - affiliate record creation complete.");
     }
 
     public function onAdminMenu() {

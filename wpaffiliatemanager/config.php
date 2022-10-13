@@ -47,6 +47,7 @@ class WPAM_PluginConfig
         public static $DisableFrontEndAffRegistration = 'wpam_disable_front_end_aff_registration';
         public static $ShowRegTncChk = 'wpam_show_reg_tnc_chk';
         public static $UseIPReferralTrack = 'wpam_use_ip_referral_track';
+        public static $AutoAffAccountSWPM = 'wpam_auto_aff_account_swpm';
 	// paypal
 	public static $PaypalMassPayEnabledOption = 'wpam_paypal_mass_pay_enabled';
 	public static $PaypalAPIUserOption = 'wpam_paypal_api_user';

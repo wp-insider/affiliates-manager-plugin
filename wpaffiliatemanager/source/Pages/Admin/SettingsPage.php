@@ -268,6 +268,11 @@ class WPAM_Pages_Admin_SettingsPage {
                 } else {
                     update_option(WPAM_PluginConfig::$UseIPReferralTrack, 0);
                 }
+                if (isset($request['autoAffAccountSWPM'])) {
+                    update_option(WPAM_PluginConfig::$AutoAffAccountSWPM, 1);
+                } else {
+                    update_option(WPAM_PluginConfig::$AutoAffAccountSWPM, 0);
+                }
             }
 
             return $this->getSettingsForm(NULL, "Settings updated.");
@@ -326,6 +331,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['disableFrontEndAffRegistration'] = isset($request['disableFrontEndAffRegistration']) ? 1 : 0;
             $response->viewData['request']['showRegTncChk'] = isset($request['showRegTncChk']) ? 1 : 0;
             $response->viewData['request']['useIPReferralTrack'] = isset($request['useIPReferralTrack']) ? 1 : 0;
+            $response->viewData['request']['autoAffAccountSWPM'] = isset($request['autoAffAccountSWPM']) ? 1 : 0;
             $response->viewData['validationResult'] = $vr;
         } else {
             $response->viewData['request']['affhomemsg'] = get_option(WPAM_PluginConfig::$AffHomeMsg);
@@ -367,6 +373,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['disableFrontEndAffRegistration'] = get_option(WPAM_PluginConfig::$DisableFrontEndAffRegistration);
             $response->viewData['request']['showRegTncChk'] = get_option(WPAM_PluginConfig::$ShowRegTncChk);
             $response->viewData['request']['useIPReferralTrack'] = get_option(WPAM_PluginConfig::$UseIPReferralTrack);
+            $response->viewData['request']['autoAffAccountSWPM'] = get_option(WPAM_PluginConfig::$AutoAffAccountSWPM);
         }
 
         if ($message !== NULL)
