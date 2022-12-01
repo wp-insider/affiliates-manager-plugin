@@ -111,7 +111,7 @@ function wpam_check_if_buyer_is_referrer($aff_id, $buyer_email) {
     $query = "SELECT * FROM ".WPAM_AFFILIATES_TBL." WHERE affiliateId = %d";        
     $affiliate = $wpdb->get_row($wpdb->prepare($query, $aff_id));
     if($affiliate != null) {
-        if($affiliate->email == $buyer_email || $affiliate->paypalEmail == $buyer_email) {
+        if(strtolower($affiliate->email) == strtolower($buyer_email) || strtolower($affiliate->paypalEmail) == strtolower($buyer_email)) {
             return true;
         }
     }
