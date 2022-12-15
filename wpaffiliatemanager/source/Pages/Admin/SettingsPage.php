@@ -273,6 +273,11 @@ class WPAM_Pages_Admin_SettingsPage {
                 } else {
                     update_option(WPAM_PluginConfig::$AutoAffAccountSWPM, 0);
                 }
+                if (isset($request['enableRegNonceChk'])) {
+                    update_option(WPAM_PluginConfig::$EnableRegNonceChk, 1);
+                } else {
+                    update_option(WPAM_PluginConfig::$EnableRegNonceChk, 0);
+                }
             }
 
             return $this->getSettingsForm(NULL, "Settings updated.");
@@ -332,6 +337,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['showRegTncChk'] = isset($request['showRegTncChk']) ? 1 : 0;
             $response->viewData['request']['useIPReferralTrack'] = isset($request['useIPReferralTrack']) ? 1 : 0;
             $response->viewData['request']['autoAffAccountSWPM'] = isset($request['autoAffAccountSWPM']) ? 1 : 0;
+            $response->viewData['request']['enableRegNonceChk'] = isset($request['enableRegNonceChk']) ? 1 : 0;
             $response->viewData['validationResult'] = $vr;
         } else {
             $response->viewData['request']['affhomemsg'] = get_option(WPAM_PluginConfig::$AffHomeMsg);
@@ -374,6 +380,7 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['showRegTncChk'] = get_option(WPAM_PluginConfig::$ShowRegTncChk);
             $response->viewData['request']['useIPReferralTrack'] = get_option(WPAM_PluginConfig::$UseIPReferralTrack);
             $response->viewData['request']['autoAffAccountSWPM'] = get_option(WPAM_PluginConfig::$AutoAffAccountSWPM);
+            $response->viewData['request']['enableRegNonceChk'] = get_option(WPAM_PluginConfig::$EnableRegNonceChk);
         }
 
         if ($message !== NULL)

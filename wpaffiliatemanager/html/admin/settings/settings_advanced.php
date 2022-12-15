@@ -91,7 +91,7 @@ $home_url = home_url('/');
 			?>/><p class="description"><?php _e('If checked, a fallback method will be used to track referrals with IP addresses. This can be useful if the default cookie-based tracking fails.', 'affiliates-manager');?></p>
 		</td>
 	</tr>
-                <tr>
+        <tr>
 		<th width="200">
 			<label for="autoAffAccountSWPM">
 				<?php _e('Automatically Create Affiliate Account for Simple Membership', 'affiliates-manager');?>
@@ -102,6 +102,19 @@ $home_url = home_url('/');
 			if ($this->viewData['request']['autoAffAccountSWPM'])
 				echo 'checked="checked"';
 			?>/><p class="description"><?php _e('If checked, an affiliate account will be automatically created when a new member is registered in the Simple Membership plugin.', 'affiliates-manager');?></p>
+		</td>
+	</tr>
+        <tr>
+		<th width="200">
+			<label for="enableRegNonceChk">
+				<?php _e('Enable Nonce Check During Affiliate Registration', 'affiliates-manager');?>
+			</label>
+		</th>
+		<td>
+			<input type="checkbox" id="enableRegNonceChk" name="enableRegNonceChk" <?php
+			if ($this->viewData['request']['enableRegNonceChk'])
+				echo 'checked="checked"';
+			?>/><p class="description"><?php _e('If checked, WordPress nonces will be validated during affiliate registration to protect the form from misuse.', 'affiliates-manager');?></p>
 		</td>
 	</tr>
 </table>

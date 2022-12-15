@@ -30,8 +30,11 @@ class WPAM_Pages_AffiliatesRegister extends WPAM_Pages_PublicPage
 		);
 
 		if ( isset( $request['wpam_reg_submit'] ) && $request['wpam_reg_submit'] == '1' ) {
-                        if(!isset($request['_wpnonce']) || !wp_verify_nonce($request['_wpnonce'], 'wpam_reg_submit')){
-                            wp_die('Error! Nonce Security Check Failed! Go back to the registration page and submit again.');
+                    
+                        if(get_option(WPAM_PluginConfig::$EnableRegNonceChk) == 1){
+                            if(!isset($request['_wpnonce']) || !wp_verify_nonce($request['_wpnonce'], 'wpam_reg_submit')){
+                                wp_die('Error! Nonce Security Check Failed! Go back to the registration page and submit again.');
+                            }
                         }
                         $form_validated = false;
 			$affiliateHelper = new WPAM_Util_AffiliateFormHelper();

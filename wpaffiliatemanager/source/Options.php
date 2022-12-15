@@ -52,6 +52,7 @@ class WPAM_Options
                 add_option( WPAM_PluginConfig::$AutoDeleteWPUserAccount, true );
                 add_option( WPAM_PluginConfig::$ShowRegTncChk, true );
                 add_option( WPAM_PluginConfig::$UseIPReferralTrack, true );
+                add_option( WPAM_PluginConfig::$EnableRegNonceChk, true );
                 update_option('wpam_options_version', WPAM_OPTIONS_VERSION);
 	}
 }
