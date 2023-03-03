@@ -32,6 +32,7 @@ class WPAM_Data_Models_AffiliateModel implements WPAM_Data_Models_IDataModel
 
 	public $nameOnCheck;
 	public $paypalEmail;
+        public $bankDetails;
 
 	public $paymentMethod;
 	public $bountyType;
@@ -138,6 +139,12 @@ class WPAM_Data_Models_AffiliateModel implements WPAM_Data_Models_IDataModel
 		$this->paymentMethod = 'paypal';
 		$this->paypalEmail = $address;
 	}
+        
+        public function setBankPaymentMethod($details)
+	{
+		$this->paymentMethod = 'bank';
+		$this->bankDetails = $details;
+	}
 
 	public function setCheckPaymentMethod($recipient)
 	{
@@ -180,6 +187,9 @@ class WPAM_Data_Models_AffiliateModel implements WPAM_Data_Models_IDataModel
                 }
                 elseif ( $this->paymentMethod == 'check' ){
                     return __( 'Check', 'affiliates-manager' );
+                }
+                elseif ( $this->paymentMethod == 'bank' ){
+                    return __( 'Bank', 'affiliates-manager' );
                 }
                 else{
                     return '';

@@ -40,6 +40,10 @@ class WPAM_Util_AffiliateFormHelper {
 		if( isset( $request['txtPaypalEmail'] ) ) {
 			$model->paypalEmail = $request['txtPaypalEmail'];
 		}
+                
+                if( isset( $request['txtBankDetails'] ) ) {
+			$model->bankDetails = $request['txtBankDetails'];
+		}
 
 		if( isset( $request['ddBountyType'] ) ) {
 			$model->bountyType = $request['ddBountyType'];
@@ -160,6 +164,8 @@ class WPAM_Util_AffiliateFormHelper {
 
                 if (get_option(WPAM_PluginConfig::$PayoutMethodManualIsEnabledOption) == 1)
 			$payments['manual'] = __( 'Manual Transfer', 'affiliates-manager' );
+                if (get_option(WPAM_PluginConfig::$PayoutMethodBankIsEnabledOption) == 1)
+			$payments['bank'] = __( 'Bank Transfer', 'affiliates-manager' );
 
 		return $payments;
 	}

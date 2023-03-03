@@ -15,17 +15,26 @@
 			if (jQuery("#ddPaymentMethod").val() == 'paypal')
 			{
 				jQuery("#paypalDetails").show();
+                                jQuery("#bankDetails").hide();
+				jQuery("#checkDetails").hide();
+			}
+                        if (jQuery("#ddPaymentMethod").val() == 'bank')
+			{
+				jQuery("#bankDetails").show();
+                                jQuery("#paypalDetails").hide();
 				jQuery("#checkDetails").hide();
 			}
 			else if (jQuery("#ddPaymentMethod").val() == 'check')
 			{
 				jQuery("#paypalDetails").hide();
+                                jQuery("#bankDetails").hide();
 				jQuery("#checkDetails").show();
 			}
 			else
 			{
 				jQuery("#paypalDetails").hide();
 				jQuery("#checkDetails").hide();
+                                jQuery("#bankDetails").hide();
 			}
 		}
 
@@ -96,6 +105,17 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors.php";
 					<td width="200"><label for="txtPaypalEmail"><?php _e( 'PayPal E-Mail Address', 'affiliates-manager' ) ?></label> *</td>
 					<td>
 						<input id="txtPaypalEmail" type="text" name="txtPaypalEmail" size="30" value="<?php echo esc_attr($this->viewData['request']['txtPaypalEmail'])?>"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+                
+                <div id="bankDetails" class="detailsBlock">
+			<table width="500">
+				<tr>
+					<td width="200"><label for="txtBankDetails"><?php echo esc_html($this->viewData['request']['bankTransferInstructions']) ?></label> *</td>
+					<td>
+						<textarea id="txtBankDetails" name="txtBankDetails" class="large-text"><?php echo esc_html($this->viewData['request']['txtBankDetails'])?></textarea>
 					</td>
 				</tr>
 			</table>

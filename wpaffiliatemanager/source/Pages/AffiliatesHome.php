@@ -315,6 +315,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 		$response->viewData['paymentMethods'] = $affiliateHelper->getPaymentMethods();
 		$response->viewData['paymentMethod'] = isset( $request['ddPaymentMethod'] ) ? $request['ddPaymentMethod'] : $affiliate->paymentMethod;
 		$response->viewData['paypalEmail'] = isset( $request['txtPaypalEmail'] ) ? $request['txtPaypalEmail'] : $affiliate->paypalEmail;
+                $response->viewData['bankDetails'] = isset( $request['txtBankDetails'] ) ? $request['txtBankDetails'] : $affiliate->bankDetails;
 
 		$user = wp_get_current_user();
 		
@@ -324,10 +325,13 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
                             wp_die('Error! Nonce Security Check Failed! Go back to the page and submit again.');
                         }
 			$validator = new WPAM_Validation_Validator();
-			$validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('check','paypal','manual')));
+			$validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('check','paypal','manual','bank')));
 				
 			if ($request['ddPaymentMethod'] === 'paypal') {
 				$validator->addValidator('txtPaypalEmail', new WPAM_Validation_EmailValidator());
+			}
+                        if ($request['ddPaymentMethod'] === 'bank') {
+				$validator->addValidator('txtBankDetails', new WPAM_Validation_StringValidator(1));
 			}
 			
 			$vr = $affiliateHelper->validateForm($validator, $request, $affiliateFields, TRUE);
@@ -504,6 +508,10 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 		{
 			$affiliate->setPaypalPaymentMethod($request['txtPaypalEmail']);
 		}
+                else if ($request['ddPaymentMethod'] === 'bank')
+		{
+			$affiliate->setBankPaymentMethod($request['txtBankDetails']);
+		}
 		else if ($request['ddPaymentMethod'] === 'check')
 		{
 			$affiliate->setCheckPaymentMethod($request['txtCheckTo']);
@@ -544,7 +552,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 	{
 		$validator = new WPAM_Validation_Validator();
 
-		$validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('paypal','check','manual')));
+		$validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('paypal','check','manual','bank')));
 
 		if ($request['ddPaymentMethod'] === 'check')
 		{
@@ -553,6 +561,10 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 		else if ($request['ddPaymentMethod'] === 'paypal')
 		{
 			$validator->addValidator('txtPaypalEmail', new WPAM_Validation_EmailValidator());
+		}
+                else if ($request['ddPaymentMethod'] === 'bank')
+		{
+			$validator->addValidator('txtBankDetails', new WPAM_Validation_StringValidator(1));
 		}
 
 		return $validator->validate($request);

@@ -425,6 +425,21 @@ jQuery(function($) {
 			if ($this->viewData['request']['chkPayoutMethodManual'])
 				echo 'checked="checked"';
 			?>/>&nbsp;&nbsp;<label for="chkPayoutMethodManual"><?php _e( 'Manual', 'affiliates-manager' ) ?></label>
+                        <br><input type="checkbox" id="chkPayoutMethodBank" name="chkPayoutMethodBank" <?php
+			if ($this->viewData['request']['chkPayoutMethodBank'])
+				echo 'checked="checked"';
+			?>/>&nbsp;&nbsp;<label for="chkPayoutMethodBank"><?php _e( 'Bank Transfer', 'affiliates-manager' ) ?></label>
+		</td>
+	</tr>
+        	<tr>
+		<th width="200">
+			<label for="bankTransferInstructions">
+				<?php _e('Bank Transfer Instructions', 'affiliates-manager');?>
+			</label>
+		</th>
+		<td>
+                    <textarea id="bankTransferInstructions" name="bankTransferInstructions" class="large-text"><?php echo esc_html($this->viewData['request']['bankTransferInstructions'])?></textarea>
+                        <p class="description"><?php echo __( 'Instructions for affiliates when the bank transfer options is selected.', 'affiliates-manager' );?></p>
 		</td>
 	</tr>
 	<tr>

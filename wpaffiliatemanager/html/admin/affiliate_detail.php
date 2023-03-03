@@ -573,7 +573,9 @@ if ($model->isPending())
 					<tr><td><?php _e( 'Paypal E-Mail', 'affiliates-manager' ) ?></td><td><?php echo esc_html($model->paypalEmail)?></td></tr>
 				<?php } else if ($model->paymentMethod === 'check') { ?>
 					<tr><td><?php _e( 'Make Check Out To', 'affiliates-manager' ) ?></td><td><?php echo esc_html($model->nameOnCheck)?></td></tr>
-				<?php } ?>
+				<?php } else if ($model->paymentMethod === 'bank') { ?>
+					<tr><td><?php _e( 'Bank Account Details', 'affiliates-manager' ) ?></td><td><?php echo esc_html($model->bankDetails)?></td></tr>
+                                <?php }?>
 			<?php } ?>
 			</tbody>
 		</table>

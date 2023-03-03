@@ -40,5 +40,10 @@ jQuery(document).ready(function($) {
 		} else {
 			$('#rowPaypalEmail').hide();
 		}
+                if (type == 'bank') {
+			$('#rowBankDetails').show();
+		} else {
+			$('#rowBankDetails').hide();
+		}
 	});
 });

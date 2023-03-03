@@ -154,6 +154,7 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                     if ($this->viewData['paymentMethod'] == 'paypal') {
                         $pp_email_field_style = '';
                     }
+                    
                     if (count($this->viewData['paymentMethods']) == 1) {//Admin supports only one available payment method
                         if (array_key_exists('paypal', $this->viewData['paymentMethods'])) {//Supports paypal only
                             $pp_email_field_style = '';
@@ -161,9 +162,18 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                             $pp_email_field_style = ' style="display: none;"';
                         }
                     }
+                    /*
                     if (count($this->viewData['paymentMethods']) == 2) {//Admin supports two available payment methods
                         if (array_key_exists('paypal', $this->viewData['paymentMethods']) && array_key_exists('manual', $this->viewData['paymentMethods']) && empty($this->viewData['paymentMethod'])) {//Supports both paypal and manual options
                             $pp_email_field_style = '';
+                        }
+                    }
+                    */
+                    if (count($this->viewData['paymentMethods']) > 1) {//Admin supports multiple payment methods
+                        if (array_key_exists('paypal', $this->viewData['paymentMethods']) && !array_key_exists('check', $this->viewData['paymentMethods'])) {
+                            if(empty($this->viewData['paymentMethod']) || $this->viewData['paymentMethod'] == 'check'){
+                                $pp_email_field_style = '';
+                            }
                         }
                     }
                     ?>
@@ -173,8 +183,28 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                             <input id="txtPaypalEmail" type="text" name="txtPaypalEmail" size="30" value="<?php echo esc_attr($this->viewData['paypalEmail']); ?>"/>
                         </td>
                     </tr>
+                    <?php
+                    $bank_details_field_style = ' style="display: none;"';
+                    if ($this->viewData['paymentMethod'] == 'bank') {
+                        $bank_details_field_style = '';
+                    }
+                    
+                    if (count($this->viewData['paymentMethods']) == 1) {//Admin supports only one available payment method
+                        if (array_key_exists('bank', $this->viewData['paymentMethods'])) {//Supports bank only
+                            $bank_details_field_style = '';
+                        } else {//Supports a non-bank method so don't show the field
+                            $bank_details_field_style = ' style="display: none;"';
+                        }
+                    }
+                    ?>
+                    <tr id="rowBankDetails" <?php echo $bank_details_field_style; ?>>
+                        <td><label for="txtBankDetails"><?php echo esc_html(get_option(WPAM_PluginConfig::$BankTransferInstructions)) ?></label> *</td>
+                        <td>
+                            <textarea id="txtBankDetails" name="txtBankDetails" class="large-text"><?php echo esc_html($this->viewData['bankDetails'])?></textarea>
+                        </td>
+                    </tr>
     <?php endif; ?>
-                            <?php if (is_admin()): ?>					  
+                    <?php if (is_admin()): ?>					  
                     <tr>
                         <td>
                             <label for="ddBountyType"><?php _e('Bounty Type *', 'affiliates-manager') ?></label>

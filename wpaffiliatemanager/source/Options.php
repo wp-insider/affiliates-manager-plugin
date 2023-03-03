@@ -43,6 +43,7 @@ class WPAM_Options
                 add_option( WPAM_PluginConfig::$AffEnableImpressions, 0, NULL, 'no' );
 		add_option( WPAM_PluginConfig::$PayoutMethodCheckIsEnabledOption,  true, NULL, 'no' );
 		add_option( WPAM_PluginConfig::$PayoutMethodPaypalIsEnabledOption, true, NULL, 'no' );
+                add_option( WPAM_PluginConfig::$BankTransferInstructions, 'Your Bank Account Details (Account Name, Account Number, Bank name, Routing Number, IBAN, BIC / Swift)' );
 		add_option( WPAM_PluginConfig::$TNCOptionOption, file_get_contents( WPAM_RESOURCES_DIR . "default_tnc.txt" ) );
 		add_option( WPAM_PluginConfig::$MinPayoutAmountOption, 20 );
 		add_option( WPAM_PluginConfig::$PaypalAPIEndPointOption, 'dev' );

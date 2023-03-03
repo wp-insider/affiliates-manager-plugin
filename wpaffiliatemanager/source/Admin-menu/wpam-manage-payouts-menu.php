@@ -238,6 +238,7 @@ function wpam_create_mass_pay_file() {
     $csv_output.= "Country" . $separator;
     $csv_output.= "Phone" . $separator;
     $csv_output.= "PayPal Email Address" . $separator;
+    $csv_output.= "Bank Account Details" . $separator;
     $csv_output.= "Payment Method" . $separator;
     $csv_output.= "\n";
     for ($i = 0; $i < sizeof($referrers); $i++) {
@@ -256,6 +257,7 @@ function wpam_create_mass_pay_file() {
         $csv_output.= wpam_escape_csv_value(stripslashes($row->addressCountry)) . $separator;
         $csv_output.= wpam_escape_csv_value(stripslashes($row->phoneNumber)) . $separator;
         $csv_output.= wpam_escape_csv_value(stripslashes($row->paypalEmail)) . $separator;
+        $csv_output.= wpam_escape_csv_value(stripslashes($row->bankDetails)) . $separator;
         $csv_output.= wpam_escape_csv_value(stripslashes($row->paymentMethod)) . $separator;
         $csv_output.= "\n";
     }

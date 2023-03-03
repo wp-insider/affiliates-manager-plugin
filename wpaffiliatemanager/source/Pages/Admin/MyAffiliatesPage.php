@@ -43,10 +43,13 @@ class WPAM_Pages_Admin_MyAffiliatesPage extends WPAM_Pages_Admin_AdminPage {
                         $validator->addValidator('txtBountyAmount', new WPAM_Validation_NumberValidator());
                     }
 
-                    $validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('check', 'paypal', 'manual')));
+                    $validator->addValidator('ddPaymentMethod', new WPAM_Validation_SetValidator(array('check', 'paypal', 'manual', 'bank')));
 
                     if ($request['ddPaymentMethod'] === 'paypal') {
                         $validator->addValidator('txtPaypalEmail', new WPAM_Validation_EmailValidator());
+                    }
+                    if ($request['ddPaymentMethod'] === 'bank') {
+                        $validator->addValidator('txtBankDetails', new WPAM_Validation_StringValidator(1));
                     }
                 }
 
@@ -91,6 +94,7 @@ class WPAM_Pages_Admin_MyAffiliatesPage extends WPAM_Pages_Admin_AdminPage {
         $response->viewData['paymentMethods'] = $affiliateHelper->getPaymentMethods();
         $response->viewData['paymentMethod'] = isset($request['ddPaymentMethod']) ? $request['ddPaymentMethod'] : $model->paymentMethod;
         $response->viewData['paypalEmail'] = isset($request['txtPaypalEmail']) ? $request['txtPaypalEmail'] : $model->paypalEmail;
+        $response->viewData['bankDetails'] = isset($request['txtBankDetails']) ? $request['txtBankDetails'] : $model->bankDetails;
         $response->viewData['bountyType'] = isset($request['ddBountyType']) ? $request['ddBountyType'] : $model->bountyType;
         $response->viewData['bountyAmount'] = isset($request['txtBountyAmount']) ? $request['txtBountyAmount'] : $model->bountyAmount;
 
