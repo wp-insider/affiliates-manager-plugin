@@ -48,9 +48,9 @@ require_once WPAM_BASE_DIRECTORY . "/html/widget_form_errors_panel.php";
                 <div id="bankDetails" class="detailsBlock">
 			<table width="500">
 				<tr>
-					<td width="200"><label for="txtBankDetails"><?php echo esc_html($this->viewData['request']['bankTransferInstructions']) ?></label> *</td>
+					<td width="200"><label for="txtBankDetails"><?php echo esc_html(get_option(WPAM_PluginConfig::$BankTransferInstructions)) ?></label> *</td>
 					<td>
-						<textarea id="txtBankDetails" name="txtBankDetails" class="large-text"><?php echo esc_html($this->viewData['request']['txtBankDetails'])?></textarea>
+						<textarea id="txtBankDetails" name="txtBankDetails" class="large-text"><?php echo isset( $this->viewData['request']['txtBankDetails'] ) ? esc_textarea($this->viewData['request']['txtBankDetails']) : '' ?></textarea>
 					</td>
 				</tr>
 			</table>

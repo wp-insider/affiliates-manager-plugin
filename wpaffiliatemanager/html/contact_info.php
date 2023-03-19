@@ -200,7 +200,7 @@ if (!isset($model) && isset($this->viewData['affiliate'])) {
                     <tr id="rowBankDetails" <?php echo $bank_details_field_style; ?>>
                         <td><label for="txtBankDetails"><?php echo esc_html(get_option(WPAM_PluginConfig::$BankTransferInstructions)) ?></label> *</td>
                         <td>
-                            <textarea id="txtBankDetails" name="txtBankDetails" class="large-text"><?php echo esc_html($this->viewData['bankDetails'])?></textarea>
+                            <textarea id="txtBankDetails" name="txtBankDetails" class="large-text"><?php echo esc_textarea($this->viewData['bankDetails'])?></textarea>
                         </td>
                     </tr>
     <?php endif; ?>
