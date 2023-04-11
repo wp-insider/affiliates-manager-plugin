@@ -12,6 +12,7 @@ require_once WPAM_BASE_DIRECTORY . "/source/Validation/ValidatorResult.php";
 class WPAM_Validation_Validator
 {
 	private $validators = array();
+        private $result;
 
 	public function __construct() {
 		$this->result = new WPAM_Validation_ValidatorResult();

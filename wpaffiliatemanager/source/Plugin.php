@@ -281,7 +281,7 @@ class WPAM_Plugin {
 
     public function handle_wp_head_hook() {
         $debug_marker = "<!-- Affiliates Manager plugin v" . WPAM_VERSION . " - https://wpaffiliatemanager.com/ -->";
-        echo "\n${debug_marker}\n";
+        echo "\n{$debug_marker}\n";
     }
 
     public function do_page_upgrade_task() { //doing page upgrade task on init since get_permalink() doesn't work on plugins_loaded

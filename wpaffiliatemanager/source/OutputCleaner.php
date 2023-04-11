@@ -14,7 +14,7 @@ class WPAM_OutputCleaner {
             if (is_array($request[$ck])) {
                 $requestClean[$ck] = $this->cleanRequest($cv);
             } else {
-                $requestClean[$ck] = stripslashes($cv);
+                $requestClean[$ck] = isset($cv) ? stripslashes($cv) : '';
             }
         }
         return $requestClean;

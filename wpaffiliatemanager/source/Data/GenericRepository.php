@@ -10,19 +10,19 @@ class WPAM_Data_GenericRepository
 {
     protected $db;
     protected $tableName;
-	protected $modelType;
-	protected $primaryKey;
-	protected $pkeyIsAuto;
-	protected $indexMultBy;
+    protected $modelType;
+    protected $primaryKey;
+    protected $pkeyIsAuto;
+    protected $indexMultiBy;
 
     public function __construct(wpdb $db, $tableName, $modelType, $primaryKey, $pkeyIsAuto = true, $indexMultiBy = null)
     {
         $this->db = $db;
         $this->tableName = $tableName;
-		$this->modelType = $modelType;
-		$this->primaryKey = $primaryKey;
-		$this->pkeyIsAuto = $pkeyIsAuto;
-		$this->indexMultiBy = $indexMultiBy;
+        $this->modelType = $modelType;
+        $this->primaryKey = $primaryKey;
+        $this->pkeyIsAuto = $pkeyIsAuto;
+        $this->indexMultiBy = $indexMultiBy;
     }
 
 	public function update($model)
