@@ -35,6 +35,9 @@ class WPAM_List_Commission_Table extends WP_List_Table {
         return esc_attr($item['transactionId']) . $this->row_actions($actions);
     }
 
+    function column_affiliateId($item) {
+        return sprintf('<a href="admin.php?page=wpam-affiliates&viewDetail=%1$s">%2$s</a>', esc_attr($item['affiliateId']), esc_html($item['affiliateId']));
+    }
 
     /* Custom column output - only use if you have some columns that needs custom output */
 //    function column_<name_of_column>($item) {//Outputs the thubmnail image the way we want it
