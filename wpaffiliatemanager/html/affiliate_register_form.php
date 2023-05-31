@@ -18,7 +18,7 @@ if(is_user_logged_in()){  //this block checks whether the user is logged in and 
     $query = "SELECT * FROM ".WPAM_AFFILIATES_TBL." WHERE userId = %d";        
     $affiliate = $wpdb->get_row($wpdb->prepare($query, $user_id));
     if($affiliate != null) { //The affiliate has an account already
-        _e("Looks like you already have an affiliate account. So you don't need to register again. Simply go to the affiliate portal and start referring users.", 'affiliates-manager');
+        echo '<div class="wpam-reg-aff-exists">'.__("Looks like you already have an affiliate account. So you don't need to register again. Simply go to the affiliate portal and start referring users.", 'affiliates-manager').'</div>';
         return;
     }
 }
