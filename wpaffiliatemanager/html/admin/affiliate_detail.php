@@ -482,7 +482,7 @@ $user = $this->viewData['user'];
 			<td width="150" style="vertical-align:top"><label for="txtAdjustmentAmount"><?php _e( 'Payout Amount ', 'affiliates-manager' ) ?></label></td>
 			<td>
 				<input name="payoutAmountType" type="radio" id="rbPayoutCurrentBalance" value="currentBalance" checked="checked" />
-				<label for="rbPayoutCurrentBalance"><?php _e( 'Current balance', 'affiliates-manager' ) ?> (<?php echo esc_html(WPAM_MoneyHelper::getDollarSign()), esc_html($this->viewData['accountStanding'])?>)</label><br />
+				<label for="rbPayoutCurrentBalance"><?php _e( 'Current balance', 'affiliates-manager' ) ?> (<?php echo esc_html(wpam_format_money($this->viewData['accountStanding'], false))?>)</label><br />
 
 				<input name="payoutAmountType" type="radio" id="rbPayoutOtherAmount" value="otherAmount">
 				<label for="rbPayoutOtherAmount"><?php _e( 'Other amount', 'affiliates-manager' ) ?></label><br>
