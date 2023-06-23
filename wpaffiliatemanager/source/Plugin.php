@@ -440,12 +440,16 @@ class WPAM_Plugin {
 
         if (!empty($wpam_refkey)) {//Save the wpam_refkey in the order meta
             if (is_numeric($wpam_refkey)) {  //wpam_id cookie is found and contains affiliate ID.
-                update_post_meta($order_id, '_wpam_id', $wpam_refkey);
-                $wpam_refkey = get_post_meta($order_id, '_wpam_id', true);
+                $order = wc_get_order($order_id);
+                $order->update_meta_data('_wpam_id', $wpam_refkey);
+                $order->save();
+                $wpam_refkey = $order->get_meta('_wpam_id');
                 WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_id (" . $wpam_refkey . ") with order. Order ID: " . $order_id);
             } else { //remove this block when we don't expect wpam_refkey cookie anymore 
-                update_post_meta($order_id, '_wpam_refkey', $wpam_refkey);
-                $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
+                $order = wc_get_order($order_id);
+                $order->update_meta_data('_wpam_refkey', $wpam_refkey);
+                $order->save();
+                $wpam_refkey = $order->get_meta('_wpam_refkey');
                 WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_refkey (" . $wpam_refkey . ") with order. Order ID: " . $order_id);
             }
         }
@@ -454,8 +458,10 @@ class WPAM_Plugin {
                 $user_ip = WPAM_Click_Tracking::get_user_ip();
                 $aff_id = WPAM_Click_Tracking::get_referrer_id_from_ip_address_by_cookie_duration($user_ip);
                 if (!empty($aff_id)){
-                    update_post_meta($order_id, '_wpam_id', $aff_id);
-                    $wpam_refkey = get_post_meta($order_id, '_wpam_id', true);
+                    $order = wc_get_order($order_id);
+                    $order->update_meta_data('_wpam_id', $aff_id);
+                    $order->save();
+                    $wpam_refkey = $order->get_meta('_wpam_id');
                     WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_id (" . $wpam_refkey . ") with order using a fallback method. Order ID: " . $order_id);
                 }
             }
@@ -470,7 +476,7 @@ class WPAM_Plugin {
             return;
         }
         WPAM_Logger::log_debug('WooCommerce Integration - Checking if affiliate commission needs to be awarded.');
-        $order = new WC_Order($order_id);
+        $order = wc_get_order($order_id);
         
         if(function_exists('wcs_order_contains_subscription') && wcs_order_contains_subscription($order, 'parent')){
             WPAM_Logger::log_debug("WooCommerce Integration - This notification is for a new subscription payment");
@@ -509,8 +515,8 @@ class WPAM_Plugin {
         $purchaseAmount = $total - $shipping - $tax - $fees;
         $buyer_email = $order->get_billing_email();
         $currency = $order->get_currency();
-        $wpam_refkey = get_post_meta($order_id, '_wpam_refkey', true);
-        $wpam_id = get_post_meta($order_id, '_wpam_id', true);
+        $wpam_refkey = $order->get_meta('_wpam_refkey');
+        $wpam_id = $order->get_meta('_wpam_id');
         if (!empty($wpam_id)) {
             $wpam_refkey = $wpam_id;
         }
