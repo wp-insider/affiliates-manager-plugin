@@ -20,9 +20,6 @@ class WPAM_Util_UserHandler {
 
         $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
         $message = WPAM_MessageHelper::GetMessage('aff_approved_email_existing_user_account');//sprintf(__('New affiliate registration for %s: has been approved!', 'affiliates-manager'), $blogname) . "\r\n\r\n";
-        $tags = array("{blogname}");
-        $vals = array($blogname);
-        $message = str_replace($tags,$vals,$message);
         if (username_exists($userLogin)) {
             $user = new WP_User(get_user_by('login', $userLogin)->ID);
             if ($db->getAffiliateRepository()->existsBy(array('userId' => $user->ID))) {
@@ -80,6 +77,16 @@ class WPAM_Util_UserHandler {
         }
         //Send user email indicating they're approved
         if (!$new_user) {
+            $user = get_user_by('id', $userId);
+            $username = $user->user_login;
+            $aff_id = $affiliate->affiliateId;
+            $aff_first_name = $affiliate->firstName;
+            $aff_last_name = $affiliate->lastName; 
+            $aff_email = $affiliate->email;
+            $login_url = get_option(WPAM_PluginConfig::$AffLoginPageURL); //wp_login_url();
+            $tags = array("{blogname}","{affusername}","{affloginurl}","{aff_id}","{aff_first_name}","{aff_last_name}","{aff_email}");
+            $vals = array($blogname, $username, $login_url, $aff_id, $aff_first_name, $aff_last_name, $aff_email);
+            $message = str_replace($tags, $vals, $message);
             $mailer->mailAffiliate($userEmail, sprintf(__('Affiliate Application for %s', 'affiliates-manager'), $blogname), $message);
         }
     }
@@ -99,9 +106,6 @@ class WPAM_Util_UserHandler {
 
         $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
         $message = WPAM_MessageHelper::GetMessage('aff_approved_email_existing_user_account');//sprintf(__('New affiliate registration for %s: has been approved!', 'affiliates-manager'), $blogname) . "\r\n\r\n";
-        $tags = array("{blogname}");
-        $vals = array($blogname);
-        $message = str_replace($tags,$vals,$message);
         if (username_exists($userLogin)) {
             $user = new WP_User(get_user_by('login', $userLogin)->ID);
             if ($db->getAffiliateRepository()->existsBy(array('userId' => $user->ID))) {
@@ -183,6 +187,16 @@ class WPAM_Util_UserHandler {
         }
         //Send user email indicating they're approved
         if (!$new_user) {
+            $user = get_user_by('id', $userId);
+            $username = $user->user_login;
+            $aff_id = $id;
+            $aff_first_name = $affiliate->firstName;
+            $aff_last_name = $affiliate->lastName; 
+            $aff_email = $affiliate->email;
+            $login_url = get_option(WPAM_PluginConfig::$AffLoginPageURL); //wp_login_url();
+            $tags = array("{blogname}","{affusername}","{affloginurl}","{aff_id}","{aff_first_name}","{aff_last_name}","{aff_email}");
+            $vals = array($blogname, $username, $login_url, $aff_id, $aff_first_name, $aff_last_name, $aff_email);
+            $message = str_replace($tags, $vals, $message);
             $mailer->mailAffiliate($userEmail, sprintf(__('Affiliate Application for %s', 'affiliates-manager'), $blogname), $message);
         }
     }
