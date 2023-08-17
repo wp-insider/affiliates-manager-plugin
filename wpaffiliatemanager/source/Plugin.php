@@ -314,7 +314,7 @@ class WPAM_Plugin {
                 'remember' => true,
                 'label_username' => __('Email Address', 'affiliates-manager')
             );
-            $lost_password_link = '<a href="' . wp_lostpassword_url() . '" title="' . __('Password Lost and Found', 'affiliates-manager') . '">' . __('Lost your password?', 'affiliates-manager') . '</a>';
+            $lost_password_link = '<div class="wpam-lost-password"><a href="' . wp_lostpassword_url() . '" title="' . __('Password Lost and Found', 'affiliates-manager') . '">' . __('Lost your password?', 'affiliates-manager') . '</a></div>';
             $form_output = '<div class="wpam-login-form">';
             $form_output .= wp_login_form($args);
             $form_output .= $lost_password_link;
