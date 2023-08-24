@@ -471,8 +471,10 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 		}
 		else if ($request['step'] === 'submit_payment_details')
 		{
-                        if(!isset($request['_wpnonce']) || !wp_verify_nonce($request['_wpnonce'], 'affiliate_cp_submit_payment_details')){
-                            wp_die('Error! Nonce Security Check Failed! Please submit your payment details again.');
+                        if(get_option(WPAM_PluginConfig::$EnableRegNonceChk) == 1){
+                            if(!isset($request['_wpnonce']) || !wp_verify_nonce($request['_wpnonce'], 'affiliate_cp_submit_payment_details')){
+                                wp_die('Error! Nonce Security Check Failed! Please submit your payment details again.');
+                            }
                         }
 			$vr = $this->validateForm($request);
 			if ($vr->getIsValid())
