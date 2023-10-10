@@ -47,13 +47,33 @@ class WPAM_Logger
         return "";
     }
     
+    public static function get_log_file()
+    {
+        $debug_log_file = WPAM_PATH.'/logs/'.WPAM_Logger::get_log_file_name();
+        return $debug_log_file;
+    }
+    
+    public static function get_log_file_url()
+    {
+        $debug_log_url = WPAM_URL.'/logs/'.WPAM_Logger::get_log_file_name();
+        return $debug_log_url;
+    }
+    
     public static function get_log_file_name()
     {
-        $file_name = 'wpam-log';
-        $site_url = get_site_url();
-        $hash = wp_hash($site_url);
-        $file_name = $file_name.'-'.$hash.'.txt';
+        $file_name = 'wpam-log-'.WPAM_Logger::get_log_file_suffix().'.txt';
         return $file_name;
+    }
+    
+    public static function get_log_file_suffix() 
+    {
+        $suffix = get_option('wpam_logfile_suffix');
+        if(isset($suffix) && !empty($suffix)) {
+            return $suffix;
+        }
+        $suffix = uniqid();
+        update_option('wpam_logfile_suffix', $suffix);
+        return $suffix;
     }
     
     public static function append_to_file($content,$file_name)
