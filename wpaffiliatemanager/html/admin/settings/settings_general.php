@@ -220,9 +220,17 @@ frequency of creative views), which in turn may slow down page loads where a cre
         <td>
         <input name="enable_debug" type="checkbox"<?php if($this->viewData['request']['enable_debug']=='1') echo ' checked="checked"'; ?> value="1"/>
         <p class="description"><?php _e('If checked, debug output will be written to log files. This is useful for troubleshooting post payment failures.', 'affiliates-manager');?></p>
-        <p class="description"><?php _e('You can check the debug log file by clicking on the link below (The log file can be viewed using any text editor):', 'affiliates-manager');?></p>
-        
-        <p><a href="<?php echo WPAM_URL.'/logs/wpam-log.txt'; ?>" target="_blank">wpam-log.txt</a></p>    
+        <p class="description"><?php _e('The debug log file will appear if there is content in it. You can check the debug log file by clicking on the link below (The log file can be viewed using any text editor):', 'affiliates-manager');?></p>
+        <?php
+        $debug_file_name = WPAM_Logger::get_log_file_name();
+        $debug_log_file = WPAM_PATH . '/logs/'.$debug_file_name;
+        if(file_exists($debug_log_file))
+        {
+        ?>
+        <p><a href="<?php echo esc_url(WPAM_URL.'/logs/'.$debug_file_name); ?>" target="_blank">wpam-log.txt</a></p>   
+        <?php
+        }
+        ?>
         <div class="submit">
             <input type="submit" name="wpam_reset_logfile" class="button" style="color:red" value="<?php _e('Reset Debug Log file', 'affiliates-manager');?>"/> 
             <p class="descripiton"><?php _e("Use it to reset the affiliate manager plugin's log file.", 'affiliates-manager');?></p>

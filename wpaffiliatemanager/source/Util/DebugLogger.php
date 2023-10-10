@@ -47,11 +47,21 @@ class WPAM_Logger
         return "";
     }
     
+    public static function get_log_file_name()
+    {
+        $file_name = 'wpam-log';
+        $site_url = get_site_url();
+        $hash = wp_hash($site_url);
+        $file_name = $file_name.'-'.$hash.'.txt';
+        return $file_name;
+    }
+    
     public static function append_to_file($content,$file_name)
     {
         //Check the file
         if(empty($file_name)){
-            $file_name = 'wpam-log.txt';
+            //$file_name = 'wpam-log.txt';
+            $file_name = WPAM_Logger::get_log_file_name();
         }
         
         $debug_log_file = WPAM_PATH . '/logs/'.$file_name;
@@ -62,8 +72,8 @@ class WPAM_Logger
     
     public static function reset_log_file($file_name='')
     {
-        if(empty($file_name)){$file_name = 'wpam-log.txt';}
-        
+        //if(empty($file_name)){$file_name = 'wpam-log.txt';}
+        if(empty($file_name)){$file_name = WPAM_Logger::get_log_file_name();}
         $debug_log_file = WPAM_PATH . '/logs/'.$file_name;
         $content = WPAM_Logger::get_debug_timestamp().WPAM_Logger::$log_reset_marker;
         $fp=fopen($debug_log_file,'w');
