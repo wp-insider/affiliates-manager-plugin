@@ -42,7 +42,6 @@
 
 		function doJsonRequest(args, successCallback)
 		{
-			args.action = 'wpam-ajax_request';
 			jQuery.getJSON( ajaxurl, args, successCallback);
 			showLoad();
 		}
@@ -69,6 +68,7 @@
 					jQuery("#progressbar").show();
 
 					doJsonRequest({
+                                                action : 'wpam_ajax_delete_creative',
 						handler: 'deleteCreative',
 						creativeId: deleteIdClicked,
                                                 nonce: '<?php echo wp_create_nonce('wpam-delete-creative'); ?>'

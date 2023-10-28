@@ -113,7 +113,14 @@ class WPAM_Plugin {
         add_action('admin_menu', array($this, 'onAdminMenu'));
         add_action('current_screen', array($this, 'onCurrentScreen'));
 
-        add_action('wp_ajax_wpam-ajax_request', array($this, 'onAjaxRequest'));
+        add_action('wp_ajax_wpam_ajax_approve_application', array($this, 'approveApplication'));
+        add_action('wp_ajax_wpam_ajax_decline_application', array($this, 'declineApplication'));
+        add_action('wp_ajax_wpam_ajax_block_application', array($this, 'blockApplication'));
+        add_action('wp_ajax_wpam_ajax_activate_affiliate', array($this, 'activateAffiliate'));
+        add_action('wp_ajax_wpam_ajax_deactivate_affiliate', array($this, 'deactivateAffiliate'));
+        add_action('wp_ajax_wpam_ajax_set_creative_status', array($this, 'setCreativeStatus'));
+        add_action('wp_ajax_wpam_ajax_add_transaction', array($this, 'addTransaction'));
+        add_action('wp_ajax_wpam_ajax_delete_creative', array($this, 'deleteCreative'));
 
         add_filter('pre_user_email', array($this, 'filterUserEmail'));
 
@@ -872,34 +879,131 @@ class WPAM_Plugin {
           }
          */
     }
-
-    public function onAjaxRequest() {
-        //die(print_r($_REQUEST, true));
+    
+    public function approveApplication() {
         $jsonHandler = new WPAM_Util_JsonHandler();
         $request = wpam_sanitize_array($_REQUEST);
         try {
             switch ($request['handler']) {
                 case 'approveApplication':
-                    $response = $jsonHandler->approveApplication($request['affiliateId'], $request['bountyType'], $request['bountyAmount']);
+                    $response = $jsonHandler->approveApplication($request);
                     break;
+                default: throw new Exception(__('Invalid JSON handler.', 'affiliates-manager'));
+            }
+        } catch (Exception $e) {
+            $response = new JsonResponse(JsonResponse::STATUS_ERROR, $e->getMessage());
+        }
+
+        wp_die(json_encode($response)); //required to return a proper result		
+    }
+    
+    public function declineApplication() {
+        $jsonHandler = new WPAM_Util_JsonHandler();
+        $request = wpam_sanitize_array($_REQUEST);
+        try {
+            switch ($request['handler']) {
                 case 'declineApplication':
-                    $response = $jsonHandler->declineApplication($request['affiliateId']);
+                    $response = $jsonHandler->declineApplication($request);
                     break;
+                default: throw new Exception(__('Invalid JSON handler.', 'affiliates-manager'));
+            }
+        } catch (Exception $e) {
+            $response = new JsonResponse(JsonResponse::STATUS_ERROR, $e->getMessage());
+        }
+
+        wp_die(json_encode($response)); //required to return a proper result		
+    }
+    
+    public function blockApplication() {
+        $jsonHandler = new WPAM_Util_JsonHandler();
+        $request = wpam_sanitize_array($_REQUEST);
+        try {
+            switch ($request['handler']) {
                 case 'blockApplication':
-                    $response = $jsonHandler->blockApplication($request['affiliateId']);
+                    $response = $jsonHandler->blockApplication($request);
                     break;
+                default: throw new Exception(__('Invalid JSON handler.', 'affiliates-manager'));
+            }
+        } catch (Exception $e) {
+            $response = new JsonResponse(JsonResponse::STATUS_ERROR, $e->getMessage());
+        }
+
+        wp_die(json_encode($response)); //required to return a proper result		
+    }
+    
+    public function activateAffiliate() {
+        $jsonHandler = new WPAM_Util_JsonHandler();
+        $request = wpam_sanitize_array($_REQUEST);
+        try {
+            switch ($request['handler']) {
                 case 'activateAffiliate':
-                    $response = $jsonHandler->activateApplication($request['affiliateId']);
+                    $response = $jsonHandler->activateApplication($request);
                     break;
+                default: throw new Exception(__('Invalid JSON handler.', 'affiliates-manager'));
+            }
+        } catch (Exception $e) {
+            $response = new JsonResponse(JsonResponse::STATUS_ERROR, $e->getMessage());
+        }
+
+        wp_die(json_encode($response)); //required to return a proper result		
+    }
+    
+    public function deactivateAffiliate() {
+        $jsonHandler = new WPAM_Util_JsonHandler();
+        $request = wpam_sanitize_array($_REQUEST);
+        try {
+            switch ($request['handler']) {
                 case 'deactivateAffiliate':
-                    $response = $jsonHandler->deactivateApplication($request['affiliateId']);
+                    $response = $jsonHandler->deactivateApplication($request);
                     break;
+                default: throw new Exception(__('Invalid JSON handler.', 'affiliates-manager'));
+            }
+        } catch (Exception $e) {
+            $response = new JsonResponse(JsonResponse::STATUS_ERROR, $e->getMessage());
+        }
+
+        wp_die(json_encode($response)); //required to return a proper result		
+    }
+    
+    public function setCreativeStatus() {
+        $jsonHandler = new WPAM_Util_JsonHandler();
+        $request = wpam_sanitize_array($_REQUEST);
+        try {
+            switch ($request['handler']) {
                 case 'setCreativeStatus':
-                    $response = $jsonHandler->setCreativeStatus($request['creativeId'], $request['status']);
+                    $response = $jsonHandler->setCreativeStatus($request);
                     break;
+                default: throw new Exception(__('Invalid JSON handler.', 'affiliates-manager'));
+            }
+        } catch (Exception $e) {
+            $response = new JsonResponse(JsonResponse::STATUS_ERROR, $e->getMessage());
+        }
+
+        wp_die(json_encode($response)); //required to return a proper result		
+    }
+    
+    public function addTransaction() {
+        $jsonHandler = new WPAM_Util_JsonHandler();
+        $request = wpam_sanitize_array($_REQUEST);
+        try {
+            switch ($request['handler']) {
                 case 'addTransaction':
-                    $response = $jsonHandler->addTransaction($request['affiliateId'], $request['type'], $request['amount'], $request['description']);
+                    $response = $jsonHandler->addTransaction($request);
                     break;
+                default: throw new Exception(__('Invalid JSON handler.', 'affiliates-manager'));
+            }
+        } catch (Exception $e) {
+            $response = new JsonResponse(JsonResponse::STATUS_ERROR, $e->getMessage());
+        }
+
+        wp_die(json_encode($response)); //required to return a proper result		
+    }
+    
+    public function deleteCreative() {
+        $jsonHandler = new WPAM_Util_JsonHandler();
+        $request = wpam_sanitize_array($_REQUEST);
+        try {
+            switch ($request['handler']) {
                 case 'deleteCreative':
                     $response = $jsonHandler->deleteCreative($request);
                     break;
@@ -909,7 +1013,7 @@ class WPAM_Plugin {
             $response = new JsonResponse(JsonResponse::STATUS_ERROR, $e->getMessage());
         }
 
-        die(json_encode($response)); //required to return a proper result		
+        wp_die(json_encode($response)); //required to return a proper result		
     }
 
     private function output_csv($items, $export_keys, $filename = 'data.csv') {

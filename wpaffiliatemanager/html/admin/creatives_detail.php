@@ -55,10 +55,11 @@ function formatType($type)
 			jQuery.getJSON(
 				ajaxurl,
 				{
-					'action' : 'wpam-ajax_request',
+					'action' : 'wpam_ajax_set_creative_status',
 					'handler' : 'setCreativeStatus',
 					'creativeId' : <?php echo $model->creativeId?>,
-					'status' : 'active'
+					'status' : 'active',
+                                        'nonce' : '<?php echo wp_create_nonce('wpam-ajax-set-creative-status')?>'
 				},
 				jsonFinished
 			);
@@ -69,10 +70,11 @@ function formatType($type)
 			jQuery.getJSON(
 				ajaxurl,
 				{
-					'action' : 'wpam-ajax_request',
+					'action' : 'wpam_ajax_set_creative_status',
 					'handler' : 'setCreativeStatus',
 					'creativeId' : <?php echo $model->creativeId?>,
-					'status' : 'inactive'
+					'status' : 'inactive',
+                                        'nonce' : '<?php echo wp_create_nonce('wpam-ajax-set-creative-status')?>'
 				},
 				jsonFinished
 			);

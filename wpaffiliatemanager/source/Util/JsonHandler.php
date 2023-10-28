@@ -8,25 +8,31 @@
 
 class WPAM_Util_JsonHandler
 {
-	public function approveApplication($affiliateId, $bountyType, $bountyAmount)
+	public function approveApplication($request)
 	{
-		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
+		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap)){
 			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
-
-		if (!is_numeric($bountyAmount))
+                }
+                if(!wp_verify_nonce($request['nonce'], 'wpam-ajax-approve-application')){
+                        throw new Exception( __('Invalid nonce', 'affiliates-manager' ) );
+                }
+                $bountyAmount = $request['bountyAmount'];
+		if (!is_numeric($bountyAmount)){
 			throw new Exception( __( 'Invalid bounty amount.', 'affiliates-manager' ) );
-
-		if (!in_array($bountyType, array("fixed", "percent")))
+                }
+                $bountyType = $request['bountyType'];
+		if (!in_array($bountyType, array("fixed", "percent"))){
 			throw new Exception( __('Invalid bounty type.', 'affiliates-manager' ) );
-
+                }
+                $affiliateId = $request['affiliateId'];
 		$affiliateId = (int)$affiliateId;
 
 		$db = new WPAM_Data_DataAccess();
 		$affiliate = $db->getAffiliateRepository()->load($affiliateId);
 
-		if ($affiliate === null)
+		if ($affiliate === null){
 			throw new Exception( __('Invalid affiliate', 'affiliates-manager' ) );
-
+                }
 		if ( $affiliate->isPending() ) {
 			$userHandler = new WPAM_Util_UserHandler();
 			$userHandler->approveAffiliate( $affiliate, $bountyType, $bountyAmount );
@@ -38,19 +44,23 @@ class WPAM_Util_JsonHandler
 	}
 
 	
-	public function declineApplication($affiliateId)
+	public function declineApplication($request)
 	{
-		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
+		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap)){
 			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
-
+                }
+                if(!wp_verify_nonce($request['nonce'], 'wpam-ajax-decline-application')){
+                        throw new Exception( __('Invalid nonce', 'affiliates-manager' ) );
+                }
+                $affiliateId = $request['affiliateId'];
 		$affiliateId = (int)$affiliateId;
 
 		$db = new WPAM_Data_DataAccess();
 		$affiliate = $db->getAffiliateRepository()->load($affiliateId);
 
-		if ($affiliate === null)
+		if ($affiliate === null){
 			throw new Exception( __( 'Invalid affiliate', 'affiliates-manager' ) );
-
+                }
 		if ($affiliate->isPending() || $affiliate->isBlocked())
 		{
 			$blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
@@ -70,19 +80,23 @@ class WPAM_Util_JsonHandler
 		}
 	}
 
-	public function blockApplication($affiliateId)
+	public function blockApplication($request)
 	{
-		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
+		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap)){
 			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
-
+                }
+                if(!wp_verify_nonce($request['nonce'], 'wpam-ajax-block-application')){
+                        throw new Exception( __('Invalid nonce', 'affiliates-manager' ) );
+                }
+                $affiliateId = $request['affiliateId'];
 		$affiliateId = (int)$affiliateId;
 
 		$db = new WPAM_Data_DataAccess();
 		$affiliate = $db->getAffiliateRepository()->load($affiliateId);
 
-		if ($affiliate === null)
+		if ($affiliate === null){
 			throw new Exception( __( 'Invalid affiliate', 'affiliates-manager' ) );
-
+                }
 		if ($affiliate->isPending() || $affiliate->isDeclined())
 		{
 			$affiliate->block();
@@ -97,22 +111,26 @@ class WPAM_Util_JsonHandler
 
 	}
 
-	public function activateApplication($affiliateId)
+	public function activateApplication($request)
 	{
-		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
+		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap)){
 			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
-
+                }
+                if(!wp_verify_nonce($request['nonce'], 'wpam-ajax-activate-affiliate')){
+                    throw new Exception( __('Invalid nonce', 'affiliates-manager' ) );
+                }
+                $affiliateId = $request['affiliateId'];
 		$affiliateId = (int)$affiliateId;
 
 		$db = new WPAM_Data_DataAccess();
 		$affiliate = $db->getAffiliateRepository()->load($affiliateId);
 
-		if ($affiliate === NULL)
+		if ($affiliate === NULL){
 			throw new Exception( __( 'Invalid affiliate', 'affiliates-manager' ) );
-
-		if ( !$affiliate->isConfirmed() && !$affiliate->isInactive() )
+                }
+		if ( !$affiliate->isConfirmed() && !$affiliate->isInactive() ){
 			throw new Exception( __( 'Invalid state transition.', 'affiliates-manager' ) );
-
+                }
 		$affiliate->activate();
 		$db->getAffiliateRepository()->update($affiliate);
 
@@ -122,21 +140,25 @@ class WPAM_Util_JsonHandler
 		return new JsonResponse(JsonResponse::STATUS_OK);
 	}
 	
-	public function deactivateApplication( $affiliateId ) {
-		if ( !wp_get_current_user()->has_cap( WPAM_PluginConfig::$AdminCap ) )
+	public function deactivateApplication($request) {
+		if ( !wp_get_current_user()->has_cap( WPAM_PluginConfig::$AdminCap ) ){
 			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
-
+                }
+                if(!wp_verify_nonce($request['nonce'], 'wpam-ajax-deactivate-affiliate')){
+                    throw new Exception( __('Invalid nonce', 'affiliates-manager' ) );
+                }
+                $affiliateId = $request['affiliateId'];
 		$affiliateId = (int)$affiliateId;
 
 		$db = new WPAM_Data_DataAccess();
 		$affiliate = $db->getAffiliateRepository()->load( $affiliateId );
 
-		if ( $affiliate === NULL )
+		if ( $affiliate === NULL ){
 			throw new Exception( __( 'Invalid affiliate', 'affiliates-manager' ) );
-
-		if ( !$affiliate->isActive() )
+                }
+		if ( !$affiliate->isActive() ){
 			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
-
+                }
 		$affiliate->deactivate();
 		$db->getAffiliateRepository()->update( $affiliate );
 
@@ -146,52 +168,67 @@ class WPAM_Util_JsonHandler
 		return new JsonResponse(JsonResponse::STATUS_OK);
 	}
 
-	public function setCreativeStatus($creativeId, $status)
+	public function setCreativeStatus($request)
 	{
-		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
+		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap)){
 			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
-
-		if (!in_array($status, array('inactive', 'active')))
+                }
+                if(!wp_verify_nonce($request['nonce'], 'wpam-ajax-set-creative-status')){
+                        throw new Exception( __('Invalid nonce', 'affiliates-manager' ) );
+                }
+                $status = $request['status'];
+		if (!in_array($status, array('inactive', 'active'))){
 			throw new Exception( __( 'Invalid status.', 'affiliates-manager' ) );
-
+                }
 		$validTransitions = array(
 			'active' => array('inactive'),
 			'inactive' => array('active')
 		);
-
+                $creativeId = $request['creativeId'];
 		$creativeId = (int)$creativeId;
 
 		$db = new WPAM_Data_DataAccess();
 		$creative = $db->getCreativesRepository()->load($creativeId);
 
-		if ($creative === NULL)
+		if ($creative === NULL){
 			throw new Exception(  __( 'Invalid creative', 'affiliates-manager' ) );
-
-		if (!in_array($status, $validTransitions[$creative->status]))
+                }
+		if (!in_array($status, $validTransitions[$creative->status])){
 			throw new Exception( __( 'Invalid state transition.', 'affiliates-manager' ) );
-
+                }
 		$creative->status = $status;
 		$db->getCreativesRepository()->update($creative);
 
 		return new JsonResponse(JsonResponse::STATUS_OK);
 	}
 
-	public function addTransaction($affiliateId, $type, $amount, $description = NULL)
+	public function addTransaction($request)
 	{
-		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
+		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap)){
 			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
-
-		if (!in_array($type, array('credit', 'payout', 'adjustment')))
+                }
+                if(!wp_verify_nonce($request['nonce'], 'wpam-ajax-add-transaction')){
+                        throw new Exception( __('Invalid nonce', 'affiliates-manager' ) );
+                }
+                $type = $request['type'];
+		if (!in_array($type, array('credit', 'payout', 'adjustment'))){
 			throw new Exception( __( 'Invalid transaction type.', 'affiliates-manager' ) );
-
-		if (!is_numeric($amount))
+                }
+                $amount = $request['amount'];
+		if (!is_numeric($amount)){
 			throw new Exception( __( 'Invalid value for amount.', 'affiliates-manager' ) );
-
+                }
+                $affiliateId = $request['affiliateId'];
+		$affiliateId = (int)$affiliateId;
+                $description = NULL;
+                if(isset($request['description']) && !empty($request['description'])){
+                    $description = $request['description'];
+                }
 		$db = new WPAM_Data_DataAccess();
 
-		if (!$db->getAffiliateRepository()->exists($affiliateId))
+		if (!$db->getAffiliateRepository()->exists($affiliateId)){
 			throw new Exception( __( 'Invalid affiliate', 'affiliates-manager' ) );
-
+                }
 		$transaction = new WPAM_Data_Models_TransactionModel();
 		$transaction->type = $type;
 		$transaction->affiliateId = $affiliateId;
@@ -206,18 +243,19 @@ class WPAM_Util_JsonHandler
 
 	public function deleteCreative($request)
 	{
+                if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap)){
+			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
+                }
                 $nonce = isset($request['nonce']) ? sanitize_text_field($request['nonce']) : '';
                 if(!wp_verify_nonce($nonce, 'wpam-delete-creative')){
                     wp_die(__('Error! Nonce Security Check Failed! Go to the My Creatives page to delete the creative.', 'affiliates-manager'));
                 }
                 $creativeId = sanitize_text_field($request['creativeId']);
-		if (!wp_get_current_user()->has_cap(WPAM_PluginConfig::$AdminCap))
-			throw new Exception( __('Access denied.', 'affiliates-manager' ) );
 		$db = new WPAM_Data_DataAccess();
 
-		if (!$db->getCreativesRepository()->exists($creativeId))
+		if (!$db->getCreativesRepository()->exists($creativeId)){
 			throw new Exception( __( 'Invalid creative.', 'affiliates-manager' ) );
-
+                }
 		$creative = $db->getCreativesRepository()->load($creativeId);
 		$creative->status = 'deleted';
 		$db->getCreativesRepository()->update($creative);
