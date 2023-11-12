@@ -1,0 +1,3921 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Affiliates Manager\n"
+"POT-Creation-Date: 2022-05-21 15:52+0600\n"
+"PO-Revision-Date: 2022-11-27 21:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: 香港中文\n"
+"Language: zh_HK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"Report-Msgid-Bugs-To: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Loco-Version: 2.6.3; wp-6.1.1"
+
+#: boot-strap.php:39
+msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
+msgstr "Affiliate Manager 需要 PHP 5.1 或更高版本。"
+
+#: boot-strap.php:43
+msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
+msgstr "Affiliate Manager 需要 WordPress 3.5 或更高版本。"
+
+#: classes/CommissionTracking.php:88
+#, php-format
+msgid "Credit for sale of %s %s (PURCHASE LOG ID = %s)"
+msgstr "%s %s 的銷售信用（購買日誌 ID = %s）"
+
+#: classes/CommissionTracking.php:126
+msgid "You just earned a commission!"
+msgstr "您剛剛賺取了佣金！"
+
+#: classes/CommissionTracking.php:157
+msgid "Affiliate commission notification"
+msgstr "加盟商佣金通知"
+
+#: classes/CommissionTracking.php:213
+#, php-format
+msgid "Refund of %s %s (PURCHASE LOG ID = %s)"
+msgstr "退款 %s %s（購買日誌 ID = %s）"
+
+#: classes/ListAffiliatesTable.php:43 html/admin/manage_creatives.php:176
+#: html/admin/paypalpayments/pending_payments.php:23
+msgid "View"
+msgstr "查看"
+
+#: classes/ListAffiliatesTable.php:64 classes/ListClicksTable.php:58
+#: classes/ListCommissionTable.php:66
+#: source/Admin-menu/wpam-commission-menu.php:176
+#: source/Admin-menu/wpam-commission-menu.php:339
+#: source/Admin-menu/wpam-manage-payouts-menu.php:70
+msgid "Affiliate ID"
+msgstr "加盟商識別碼"
+
+#: classes/ListAffiliatesTable.php:65 html/admin/creatives_detail.php:240
+#: html/admin/manage_creatives.php:165
+#: html/admin/paypalpayments/pending_payments.php:16
+#: html/admin/paypalpayments/view_payment_detail.php:61
+#: html/transaction_table.php:48 html/transaction_table.php:63
+msgid "Status"
+msgstr "狀態"
+
+#: classes/ListAffiliatesTable.php:66
+#: html/admin/paypalpayments/review_affiliates.php:59
+#: html/admin/paypalpayments/select_affiliates.php:132
+#: html/affiliate_cp_home.php:16 html/transaction_table.php:53
+#: html/transaction_table.php:68
+msgid "Balance"
+msgstr "結餘"
+
+#: classes/ListAffiliatesTable.php:67
+msgid "Earnings"
+msgstr ""
+
+#: classes/ListAffiliatesTable.php:68
+#: html/admin/paypalpayments/review_affiliates.php:55
+#: html/admin/paypalpayments/select_affiliates.php:128
+msgid "First Name"
+msgstr "名字"
+
+#: classes/ListAffiliatesTable.php:69
+#: html/admin/paypalpayments/review_affiliates.php:56
+#: html/admin/paypalpayments/select_affiliates.php:129
+msgid "Last Name"
+msgstr "姓"
+
+#: classes/ListAffiliatesTable.php:70 source/Plugin.php:304
+msgid "Email"
+msgstr "電郵"
+
+#: classes/ListAffiliatesTable.php:71
+#: html/admin/paypalpayments/review_affiliates.php:57
+#: html/admin/paypalpayments/select_affiliates.php:130
+msgid "Company"
+msgstr "公司"
+
+#: classes/ListAffiliatesTable.php:72
+msgid "Date Joined"
+msgstr ""
+
+#: classes/ListAffiliatesTable.php:73
+msgid "Website"
+msgstr "網站"
+
+#: classes/ListAffiliatesTable.php:89 classes/ListClicksTable.php:76
+#: classes/ListCommissionTable.php:84 html/admin/manage_creatives.php:177
+msgid "Delete"
+msgstr ""
+
+#: classes/ListAffiliatesTable.php:100 classes/ListClicksTable.php:87
+#: classes/ListCommissionTable.php:95
+msgid "Error! You need to select multiple records to perform a bulk action!"
+msgstr "錯誤！ 您需要選擇多條記錄才能執行批量操作！"
+
+#: classes/ListAffiliatesTable.php:118 classes/ListClicksTable.php:96
+#: classes/ListCommissionTable.php:104
+msgid "Selected records deleted successfully!"
+msgstr "所選記錄刪除成功！"
+
+#: classes/ListAffiliatesTable.php:144 classes/ListCommissionTable.php:120
+msgid "Selected record deleted successfully!"
+msgstr "所選記錄刪除成功！"
+
+#: classes/ListClicksTable.php:42
+msgid "No Clicks Found!"
+msgstr ""
+
+#: classes/ListClicksTable.php:56 classes/ListCommissionTable.php:64
+msgid "Row ID"
+msgstr "行號"
+
+#: classes/ListClicksTable.php:57 classes/ListCommissionTable.php:65
+#: source/Admin-menu/wpam-commission-menu.php:206
+#: source/Admin-menu/wpam-commission-menu.php:363
+msgid "Date"
+msgstr ""
+
+#: classes/ListClicksTable.php:59
+msgid "Tracking Key"
+msgstr "追踪鑰匙"
+
+#: classes/ListClicksTable.php:60
+msgid "Referring URL"
+msgstr "參考網址"
+
+#: classes/ListClicksTable.php:61
+msgid "IP Address"
+msgstr "IP 地址"
+
+#: classes/ListCommissionTable.php:50
+msgid "No Commission Data Found!"
+msgstr ""
+
+#: classes/ListCommissionTable.php:67
+#: html/admin/paypalpayments/pending_payments.php:13
+#: html/admin/paypalpayments/view_payment_detail.php:20
+#: html/admin/paypalpayments/view_payment_detail.php:63
+#: html/transaction_table.php:51 html/transaction_table.php:66
+msgid "Amount"
+msgstr "數量"
+
+#: classes/ListCommissionTable.php:68
+#: source/Admin-menu/wpam-commission-menu.php:194
+#: source/Admin-menu/wpam-commission-menu.php:351
+msgid "Transaction ID"
+msgstr "交易編號"
+
+#: classes/ListCommissionTable.php:69
+#: source/Admin-menu/wpam-commission-menu.php:200
+#: source/Admin-menu/wpam-commission-menu.php:357
+msgid "Buyer Email"
+msgstr "買家郵箱"
+
+#: classes/ListTable.php:79
+msgid "No items found."
+msgstr ""
+
+#: classes/ListTable.php:143
+msgid "Bulk Actions"
+msgstr "批量操作"
+
+#: classes/ListTable.php:153 html/admin/affiliate_detail.php:284
+#: html/admin/affiliate_detail.php:315
+#: html/admin/paypalpayments/select_affiliates.php:117
+#: html/transaction_table.php:36
+msgid "Apply"
+msgstr "采用"
+
+#: classes/ListTable.php:203
+msgid "Show all dates"
+msgstr "顯示所有日期"
+
+#: classes/ListTable.php:222
+msgid "List View"
+msgstr "列表顯示"
+
+#: classes/ListTable.php:223
+msgid "Excerpt View"
+msgstr "摘錄視圖"
+
+#: classes/ListTable.php:239
+#, php-format
+msgid "%s pending"
+msgstr "%s 待處理"
+
+#: html/admin/affiliate_detail.php:113 html/admin/affiliate_detail.php:237
+#: html/admin/affiliate_detail.php:280 html/admin/affiliate_detail.php:311
+#: html/admin/creatives_detail.php:83 html/admin/creatives_detail.php:92
+#: html/admin/manage_creatives.php:90
+msgid "Cancel"
+msgstr "取消"
+
+#: html/admin/affiliate_detail.php:142
+#, php-format
+msgid "YES, Block all applications from %s"
+msgstr "是，封鎖來自 %s 的所有應用程序"
+
+#: html/admin/affiliate_detail.php:151
+msgid "NO, They may re-apply"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:160
+msgid ""
+"Do you want to block all future applications from this email address, or "
+"allow them to sign up at a later date?"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:189
+#: source/Admin-menu/wpam-manage-payouts-menu.php:237
+msgid "Payout"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:220 html/admin/affiliate_detail.php:237
+#: html/admin/creative_update_form.php:35 html/admin/creatives_detail.php:114
+#: html/admin/creatives_detail.php:137 html/admin/manage_creatives.php:38
+#: html/affiliate_creative_detail.php:16
+#: source/Pages/Admin/MyAffiliatesPage.php:169
+#: source/Pages/Admin/NewAffiliatePage.php:95
+#: source/Pages/AffiliatesHome.php:576
+msgid "OK"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:250
+msgid "Are you sure you wish to approve this affiliate?"
+msgstr "您確定要批准此加盟商會員嗎？"
+
+#: html/admin/affiliate_detail.php:251
+msgid "Yes, approve."
+msgstr "是的，批准。"
+
+#: html/admin/affiliate_detail.php:293
+msgid "Are you sure you wish to apply an adjustment of "
+msgstr "您確定要申請一個調整從"
+
+#: html/admin/affiliate_detail.php:293 html/admin/affiliate_detail.php:335
+msgid " to this account? The new balance will be "
+msgstr "到這個帳戶？ 新的餘額將是"
+
+#: html/admin/affiliate_detail.php:294 html/admin/affiliate_detail.php:336
+msgid "Yes, apply it."
+msgstr "是的，執行它。"
+
+#: html/admin/affiliate_detail.php:335
+msgid "Are you sure you wish to apply a payout of "
+msgstr "您確定要申請支付從"
+
+#: html/admin/affiliate_detail.php:370
+msgid "Are you sure you wish to decline this affiliate?"
+msgstr "您確定要拒絕此加盟商會員嗎？"
+
+#: html/admin/affiliate_detail.php:370
+msgid "Yes, DECLINE."
+msgstr "是的，拒絕。"
+
+#: html/admin/affiliate_detail.php:374
+msgid "Are you sure you wish to block this affiliate?"
+msgstr "您確定要屏蔽此加盟商會員嗎？"
+
+#: html/admin/affiliate_detail.php:374
+msgid "Yes, BLOCK."
+msgstr "是的，封鎖。"
+
+#: html/admin/affiliate_detail.php:384
+msgid ""
+"Are you sure you wish to unblock this affiliate?<br>User will become "
+"DECLINED."
+msgstr "您確定要取消屏蔽此加盟商會員嗎？<br>用戶將被拒絕。"
+
+#: html/admin/affiliate_detail.php:384
+msgid "Yes, UNBLOCK."
+msgstr "是的，解鎖。"
+
+#: html/admin/affiliate_detail.php:395
+msgid "Are you sure you wish to activate this affiliate?"
+msgstr "您確定要激活此加盟商會員嗎？"
+
+#: html/admin/affiliate_detail.php:395 html/admin/creatives_detail.php:86
+msgid "Yes, ACTIVATE."
+msgstr "是的，激活。"
+
+#: html/admin/affiliate_detail.php:399
+msgid "Are you sure you wish to deactivate this affiliate?"
+msgstr "您確定要停用此加盟商會員嗎？"
+
+#: html/admin/affiliate_detail.php:399 html/admin/creatives_detail.php:95
+msgid "Yes, DEACTIVATE."
+msgstr "是的，停用。"
+
+#: html/admin/affiliate_detail.php:418
+msgid "Approve Application"
+msgstr "批准申請"
+
+#: html/admin/affiliate_detail.php:424 html/admin/affiliate_detail.php:568
+#: html/admin/settings/settings_general.php:157
+msgid "Bounty Type"
+msgstr "賞金類型"
+
+#: html/admin/affiliate_detail.php:428
+#: html/admin/settings/settings_general.php:161 html/contact_info.php:185
+msgid "Percentage of Sales"
+msgstr "銷售額百分比"
+
+#: html/admin/affiliate_detail.php:429
+#: html/admin/settings/settings_general.php:162 html/contact_info.php:186
+msgid "Fixed Amount per Sale"
+msgstr "每次銷售的固定金額"
+
+#: html/admin/affiliate_detail.php:435
+#: source/Pages/Admin/MyAffiliatesPage.php:168
+#: source/Pages/Admin/NewAffiliatePage.php:94
+#: source/Pages/AffiliatesHome.php:575
+#, php-format
+msgid "Bounty Rate (% of Sale)"
+msgstr "賞金率（% of 銷售額）"
+
+#: html/admin/affiliate_detail.php:447 html/admin/creatives_detail.php:161
+msgid "Updating, please wait ... "
+msgstr "正在更新，請稍候..."
+
+#: html/admin/affiliate_detail.php:452 html/admin/creatives_detail.php:166
+msgid "Are you sure?"
+msgstr "你確定嗎？"
+
+#: html/admin/affiliate_detail.php:453
+msgid "approve"
+msgstr "批准"
+
+#: html/admin/affiliate_detail.php:455 html/admin/creatives_detail.php:169
+msgid "Error"
+msgstr "錯誤"
+
+#: html/admin/affiliate_detail.php:456 html/admin/creatives_detail.php:170
+#: html/admin/manage_creatives.php:109
+msgid "ERROR:"
+msgstr "錯誤："
+
+#: html/admin/affiliate_detail.php:459
+msgid "Apply Adjustment "
+msgstr "應用調整"
+
+#: html/admin/affiliate_detail.php:463
+msgid "Amount "
+msgstr "數量"
+
+#: html/admin/affiliate_detail.php:469
+msgid "Description "
+msgstr ""
+
+#: html/admin/affiliate_detail.php:478
+msgid "Apply Payout "
+msgstr "申請付款"
+
+#: html/admin/affiliate_detail.php:482
+msgid "Payout Amount "
+msgstr ""
+
+#: html/admin/affiliate_detail.php:485
+msgid "Current balance"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:488
+msgid "Other amount"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:497
+msgid "Affiliate:"
+msgstr "加盟商："
+
+#: html/admin/affiliate_detail.php:503 source/Pages/AffiliatesHome.php:38
+msgid "Overview"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:504
+msgid "Account Finances"
+msgstr "賬戶財務"
+
+#: html/admin/affiliate_detail.php:505
+msgid "Information"
+msgstr "信息"
+
+#: html/admin/affiliate_detail.php:506
+msgid "Affiliate Links"
+msgstr "加盟商鏈接"
+
+#: html/admin/affiliate_detail.php:508 html/admin/affiliate_detail.php:590
+#: html/affiliate_cp_home.php:39 html/affiliate_cp_home.php:73
+#: source/Pages/AffiliatesHome.php:45
+msgid "Impressions"
+msgstr "印象"
+
+#: html/admin/affiliate_detail.php:517
+msgid "Approve"
+msgstr "批准"
+
+#: html/admin/affiliate_detail.php:518
+msgid "Decline"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:520 html/admin/creatives_detail.php:213
+msgid "Activate"
+msgstr "啟用"
+
+#: html/admin/affiliate_detail.php:522
+msgid "Dectivate"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:524
+msgid "Unblock"
+msgstr "解鎖"
+
+#: html/admin/affiliate_detail.php:526
+msgid "Block"
+msgstr "攔阻"
+
+#: html/admin/affiliate_detail.php:532 html/admin/creative_update_form.php:108
+#: html/admin/creatives_detail.php:228 html/admin/settings/settings.php:46
+msgid "General"
+msgstr "一般的"
+
+#: html/admin/affiliate_detail.php:536
+msgid "Date Applied"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:537
+msgid "Affiliate Status"
+msgstr "加盟商狀態"
+
+#: html/admin/affiliate_detail.php:540
+msgid "Account Standing"
+msgstr "賬戶地位"
+
+#: html/admin/affiliate_detail.php:564
+#: html/affiliate_cp_payment_details_form.php:69
+#: html/affiliate_cp_payment_details_simple.php:12 html/contact_info.php:136
+msgid "Payment Details"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:569
+msgid "Bounty Amount"
+msgstr "賞金金額"
+
+#: html/admin/affiliate_detail.php:571
+msgid "Payment Method"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:573
+msgid "Paypal E-Mail"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:575
+msgid "Make Check Out To"
+msgstr "簽出至"
+
+#: html/admin/affiliate_detail.php:585
+msgid "Statistics"
+msgstr "統計數據"
+
+#: html/admin/affiliate_detail.php:592
+msgid "Visits"
+msgstr "訪問量"
+
+#: html/admin/affiliate_detail.php:593
+msgid "Purchases"
+msgstr "採購"
+
+#: html/admin/affiliate_detail.php:604
+msgid "Balance:"
+msgstr "結餘:"
+
+#: html/admin/affiliate_detail.php:607
+msgid "Earnings:"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:608
+msgid "Payments:"
+msgstr ""
+
+#: html/admin/affiliate_detail.php:609
+msgid "Adjustments:"
+msgstr "調整："
+
+#: html/admin/affiliate_detail.php:613
+msgid "Apply Payout"
+msgstr "申請付款"
+
+#: html/admin/affiliate_detail.php:614
+msgid "Apply Manual Adjustment"
+msgstr "應用手動調整"
+
+#: html/admin/affiliate_detail.php:626 html/admin/creative_update_form.php:85
+#: html/admin/creative_update_success.php:4 html/impressions_table.php:8
+msgid "Creative"
+msgstr "創作者"
+
+#: html/admin/affiliate_detail.php:627 html/admin/creative_update_form.php:132
+#: html/admin/creatives_detail.php:248 html/admin/manage_creatives.php:167
+#: html/admin/settings/settings_messaging.php:87
+#: html/admin/settings/settings_registration.php:441
+#: html/affiliate_creative_list.php:100 html/transaction_table.php:46
+#: html/transaction_table.php:61
+msgid "Type"
+msgstr "類型"
+
+#: html/admin/affiliate_detail.php:628
+msgid "Link"
+msgstr "鏈接"
+
+#: html/admin/affiliate_management_home.php:2
+msgid "Affiliate Management Control Panel"
+msgstr "加盟商管理控制面板"
+
+#: html/admin/affiliate_new.php:3 html/admin/affiliate_new_success.php:2
+#: source/Plugin.php:79
+msgid "New Affiliate"
+msgstr "新的加盟商會員"
+
+#: html/admin/affiliate_new.php:6
+msgid ""
+"As an Affiliate Manager, if you want to create an affiliate account rather "
+"than directing someone to the normal registration form, you can do that here."
+" Once you fill out the required contact information, your new affiliate will "
+"receive an email with their username and password.  They will automatically "
+"be approved, but will still have to log in to agree to the terms &amp; "
+"conditions and set their preferred payment method."
+msgstr ""
+"作為加盟商管理器，如果您想創建會員帳戶而不是將某人引導至正常的註冊表單，您可以在此處進行操作。 "
+"填寫完所需的聯繫信息後，您的新會員將收到一封包含其用戶名和密碼的電子郵件。 他們將自動獲得批准，但仍需登錄才能同意條款和條件。 "
+"條件並設置他們首選的付款方式。\n"
+
+#: html/admin/affiliate_new_success.php:3
+msgid "New Affiliate has been created"
+msgstr "新的加盟商會員已經被建立"
+
+#: html/admin/affiliates_list.php:4
+msgid "Affiliate Details"
+msgstr "加盟商詳細資料"
+
+#: html/admin/affiliates_list.php:5
+msgid "Export Data"
+msgstr "導出資料"
+
+#: html/admin/affiliates_list.php:8 source/Plugin.php:76
+msgid "My Affiliates"
+msgstr "我的加盟商"
+
+#: html/admin/affiliates_list.php:51
+msgid "Affiliate Search"
+msgstr "搜索加盟商"
+
+#: html/admin/affiliates_list.php:53
+msgid ""
+"Search for an affiliate by entering the affiliate ID, first name, last name "
+"or email address"
+msgstr "通過輸入加盟商會員 ID、名字、姓氏或電郵地址來搜索加盟商會員"
+
+#: html/admin/affiliates_list.php:57
+msgid "Search"
+msgstr "搜索"
+
+#: html/admin/affiliates_list.php:62
+msgid "All Active"
+msgstr "全部活躍的"
+
+#: html/admin/affiliates_list.php:63
+msgid "All (Including Closed)"
+msgstr "全部（包括已關閉）"
+
+#: html/admin/affiliates_list.php:64 source/Pages/Admin/MyCreativesPage.php:61
+#: source/display_functions.php:166
+msgid "Active"
+msgstr "活躍的"
+
+#: html/admin/affiliates_list.php:65 source/display_functions.php:160
+msgid "Applied"
+msgstr "應用"
+
+#: html/admin/affiliates_list.php:66 source/display_functions.php:164
+msgid "Approved"
+msgstr ""
+"被認可\n"
+
+#: html/admin/affiliates_list.php:67
+#: html/affiliate_cp_payment_details_confirmed.php:2
+#: source/display_functions.php:170
+msgid "Confirmed"
+msgstr "被確認的"
+
+#: html/admin/affiliates_list.php:68 source/display_functions.php:162
+msgid "Declined"
+msgstr ""
+
+#: html/admin/affiliates_list.php:69 source/display_functions.php:172
+msgid "Blocked"
+msgstr "被封鎖"
+
+#: html/admin/affiliates_list.php:70 source/Pages/Admin/MyCreativesPage.php:62
+#: source/display_functions.php:168
+msgid "Inactive"
+msgstr "無效的"
+
+#: html/admin/affiliates_list.php:131
+msgid "Export Affiliates Record"
+msgstr "導出加盟商記錄"
+
+#: html/admin/affiliates_list.php:136
+msgid "Export to CSV"
+msgstr "導出 CSV"
+
+#: html/admin/creative_update_form.php:54
+msgid "Upload a File or Select from Media Library"
+msgstr "上傳文件或從媒體庫中選擇"
+
+#: html/admin/creative_update_form.php:56
+msgid "Insert"
+msgstr "插入"
+
+#: html/admin/creative_update_form.php:80
+msgid ""
+"This list contains images from the media library. If you upload a new image "
+"it is added to the media library and you can reuse images on multiple "
+"creatives by selecting it from this list. If a new image file is added, it "
+"will be uploaded and will override the currently selected media library "
+"image for this creative link. However, the old image will still remain in "
+"the media library for future use."
+msgstr ""
+"此列表包含來自媒體庫的圖像。 如果您上傳一張新圖片，它會被添加到媒體庫中，並且您可以通過從此列表中選擇它來在多個廣告素材上重複使用這些圖片。 "
+"如果添加了新的圖像文件，它將被上傳並覆蓋當前為此廣告素材鏈接選擇的媒體庫圖像。 但是，舊圖像仍將保留在媒體庫中以備將來使用。"
+
+#: html/admin/creative_update_form.php:85
+#: html/admin/creative_update_success.php:4 html/admin/creatives_detail.php:217
+msgid "Edit"
+msgstr ""
+
+#: html/admin/creative_update_form.php:85
+#: html/admin/creative_update_success.php:4
+msgid "New"
+msgstr "新的"
+
+#: html/admin/creative_update_form.php:115 html/admin/creatives_detail.php:244
+#: html/admin/manage_creatives.php:168
+#: html/admin/settings/settings_messaging.php:86
+#: html/affiliate_creative_list.php:101
+#: source/Admin-menu/wpam-manage-payouts-menu.php:71
+msgid "Name"
+msgstr "名稱"
+
+#: html/admin/creative_update_form.php:125 html/admin/creatives_detail.php:260
+msgid "Landing Page"
+msgstr ""
+
+#: html/admin/creative_update_form.php:152
+msgid "Image Parameters"
+msgstr "圖像參數"
+
+#: html/admin/creative_update_form.php:166
+msgid "Image URL"
+msgstr "圖像 URL"
+
+#: html/admin/creative_update_form.php:168
+msgid "Upload File"
+msgstr "上傳文件"
+
+#: html/admin/creative_update_form.php:169
+msgid "The URL of the image to be used for the creative."
+msgstr "用於廣告素材的圖像的 URL。"
+
+#: html/admin/creative_update_form.php:175
+#: html/admin/creative_update_form.php:210 html/admin/creatives_detail.php:281
+#: html/admin/creatives_detail.php:311 html/affiliate_creative_detail.php:65
+#: html/affiliate_creative_detail.php:95
+msgid "Alt Text"
+msgstr "替代文字"
+
+#: html/admin/creative_update_form.php:191
+msgid "Text Link Parameters"
+msgstr "文字鏈接參數"
+
+#: html/admin/creative_update_form.php:199 html/admin/creatives_detail.php:277
+#: html/affiliate_creative_detail.php:61
+msgid "Link Text"
+msgstr "鏈接文字"
+
+#: html/admin/creative_update_form.php:223
+msgid "Save Creative"
+msgstr "保存廣告素材"
+
+#: html/admin/creative_update_success.php:9
+msgid "Creative updated."
+msgstr "創作者已更新。"
+
+#: html/admin/creative_update_success.php:11
+msgid "New creative created.  This creative is not yet active."
+msgstr ""
+
+#: html/admin/creative_update_success.php:16
+msgid "Return to Creatives"
+msgstr "返回到廣告素材"
+
+#: html/admin/creatives_detail.php:8 html/admin/creatives_detail.php:298
+#: html/affiliate_creative_detail.php:82
+msgid "Image"
+msgstr "圖像"
+
+#: html/admin/creatives_detail.php:9
+msgid "Text Link"
+msgstr "文字鏈接"
+
+#: html/admin/creatives_detail.php:10
+msgid "Unknown creative type."
+msgstr "未知的廣告素材類型。"
+
+#: html/admin/creatives_detail.php:143
+msgid "ACTIVATE"
+msgstr "啟用"
+
+#: html/admin/creatives_detail.php:148
+msgid "DEACTIVATE"
+msgstr ""
+
+#: html/admin/creatives_detail.php:167
+msgid "Are you sure you wish to"
+msgstr "您確定您想"
+
+#: html/admin/creatives_detail.php:167
+msgid "this creative?"
+msgstr "這個廣告素材？"
+
+#: html/admin/creatives_detail.php:174 html/admin/creatives_detail.php:216
+#: html/affiliate_creative_detail.php:29 html/affiliate_creative_detail.php:42
+msgid "Preview"
+msgstr "預覽"
+
+#: html/admin/creatives_detail.php:195 html/affiliate_creative_detail.php:40
+msgid "Creative:"
+msgstr "創作者："
+
+#: html/admin/creatives_detail.php:207 html/admin/manage_creatives.php:163
+msgid "Actions"
+msgstr "行動"
+
+#: html/admin/creatives_detail.php:211
+msgid "Deactivate"
+msgstr ""
+
+#: html/admin/creatives_detail.php:235 html/admin/manage_creatives.php:164
+#: html/admin/paypalpayments/pending_payments.php:10
+#: html/admin/paypalpayments/view_payment_detail.php:57
+#: html/impressions_table.php:6 html/transaction_table.php:45
+#: html/transaction_table.php:60
+msgid "ID"
+msgstr ""
+
+#: html/admin/creatives_detail.php:272 html/affiliate_creative_detail.php:56
+msgid "Text Link Properties"
+msgstr "文字鏈接屬性"
+
+#: html/admin/creatives_detail.php:293 html/affiliate_creative_detail.php:77
+msgid "Image Properties"
+msgstr "圖像屬性"
+
+#: html/admin/manage_creatives.php:64
+msgid "Yes, delete this creative"
+msgstr "是，刪除此廣告素材"
+
+#: html/admin/manage_creatives.php:113
+msgid "Updating, please wait ..."
+msgstr "正在更新，請稍候..."
+
+#: html/admin/manage_creatives.php:120
+msgid "Delete Creative?"
+msgstr ""
+
+#: html/admin/manage_creatives.php:121
+msgid "This creative will be deleted. Are you sure?"
+msgstr "該廣告素材將被刪除。 你確定嗎？"
+
+#: html/admin/manage_creatives.php:126 source/Plugin.php:82
+msgid "My Creatives"
+msgstr ""
+
+#: html/admin/manage_creatives.php:132
+msgid "Filter"
+msgstr "篩選"
+
+#: html/admin/manage_creatives.php:137
+msgid "Status:"
+msgstr "狀態："
+
+#: html/admin/manage_creatives.php:155
+msgid "Create New"
+msgstr "建立新的"
+
+#: html/admin/manage_creatives.php:166
+msgid "Created"
+msgstr "已建立"
+
+#: html/admin/paypalpayments/home.php:17
+msgid "New Mass Payment"
+msgstr ""
+
+#: html/admin/paypalpayments/home.php:20
+msgid "View Previous Mass Payments"
+msgstr "查看 以前的批量付款"
+
+#: html/admin/paypalpayments/not_configured.php:2
+#: html/admin/paypalpayments/pending_payments.php:3
+#: html/admin/paypalpayments/review_affiliates.php:45
+#: html/admin/paypalpayments/select_affiliates.php:103
+#: html/admin/paypalpayments/view_payment_detail.php:7 source/Plugin.php:85
+msgid "PayPal Mass Pay"
+msgstr ""
+
+#: html/admin/paypalpayments/not_configured.php:3
+msgid "Not configured"
+msgstr ""
+
+#: html/admin/paypalpayments/not_configured.php:5
+#, php-format
+msgid ""
+"You have not configured the Affiliate Manager with your PayPal account "
+"information. You can do so in the <a href=\"%s\">Payment Settings page</a>."
+msgstr ""
+"您尚未在 Affiliate Manager 配置 您的 PayPal 帳戶資訊  。 您可以在<a href=\"%s\">付款設置頁面</a>"
+"中執行此操作。"
+
+#: html/admin/paypalpayments/pending_payments.php:4
+msgid "View Existing Payments"
+msgstr "查看 現有付款"
+
+#: html/admin/paypalpayments/pending_payments.php:11
+msgid "Date Posted"
+msgstr ""
+
+#: html/admin/paypalpayments/pending_payments.php:12
+msgid "PayPal ID"
+msgstr ""
+
+#: html/admin/paypalpayments/pending_payments.php:14
+#: html/admin/paypalpayments/view_payment_detail.php:21
+msgid "Fee"
+msgstr "費用"
+
+#: html/admin/paypalpayments/pending_payments.php:15
+msgid "Total"
+msgstr "總"
+
+#: html/admin/paypalpayments/pending_payments.php:36
+msgid "(No Mass Payments on Record)"
+msgstr "（沒有記錄在案的大規模付款）"
+
+#: html/admin/paypalpayments/reconcile_file_review.php:67
+#: html/admin/paypalpayments/reconcile_manual.php:82
+msgid "Reconcile Mass Payment"
+msgstr "核對批量付款"
+
+#: html/admin/paypalpayments/reconcile_with_file.php:55
+msgid "Reconcile with this file"
+msgstr "與此文件核對"
+
+#: html/admin/paypalpayments/review_affiliates.php:10
+msgid "Yes, Submit to PayPal"
+msgstr "是的，提交到 PayPal"
+
+#: html/admin/paypalpayments/review_affiliates.php:17
+msgid "No, Cancel"
+msgstr ""
+
+#: html/admin/paypalpayments/review_affiliates.php:39
+msgid "Submit to PayPal?"
+msgstr "提交給 PayPal？"
+
+#: html/admin/paypalpayments/review_affiliates.php:40
+msgid "Are you sure you wish to submit a mass payment to PayPal?"
+msgstr "您確定要向 PayPal 提交大量付款嗎？"
+
+#: html/admin/paypalpayments/review_affiliates.php:41
+#, php-format
+msgid "Your PayPal account will be charged %s!"
+msgstr "您的 PayPal 帳戶將被收取 %s！"
+
+#: html/admin/paypalpayments/review_affiliates.php:46
+msgid "Review Your Mass Payment"
+msgstr "查看您的批量付款"
+
+#: html/admin/paypalpayments/review_affiliates.php:54
+#: html/admin/paypalpayments/select_affiliates.php:127
+msgid "AID"
+msgstr ""
+
+#: html/admin/paypalpayments/review_affiliates.php:58
+#: html/admin/paypalpayments/select_affiliates.php:131
+#: html/admin/paypalpayments/view_payment_detail.php:60
+msgid "PayPal E-Mail"
+msgstr ""
+
+#: html/admin/paypalpayments/review_affiliates.php:61
+#: html/admin/settings/settings.php:49
+msgid "Payment"
+msgstr ""
+
+#: html/admin/paypalpayments/review_affiliates.php:63
+msgid "New Balance"
+msgstr "新結餘"
+
+#: html/admin/paypalpayments/review_affiliates.php:94
+msgid "Sub-Total"
+msgstr "小計"
+
+#: html/admin/paypalpayments/review_affiliates.php:98
+#: html/admin/paypalpayments/select_affiliates.php:178
+#, php-format
+msgid "PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>"
+msgstr ""
+
+#: html/admin/paypalpayments/review_affiliates.php:103
+#: html/admin/paypalpayments/select_affiliates.php:183
+msgid "Estimated Total"
+msgstr "估計總數"
+
+#: html/admin/paypalpayments/review_affiliates.php:107
+msgid "Submit Mass Payment to PayPal"
+msgstr "向 PayPal 提交批量付款"
+
+#: html/admin/paypalpayments/select_affiliates.php:104
+msgid "Select Affiliates to Pay"
+msgstr "選擇要支付的加盟商"
+
+#: html/admin/paypalpayments/select_affiliates.php:107
+#, php-format
+msgid "Not showing %s affiliates that do not have a PayPal account on file."
+msgstr ""
+
+#: html/admin/paypalpayments/select_affiliates.php:112
+#: html/transaction_table.php:28
+msgid "Date Range:"
+msgstr ""
+
+#: html/admin/paypalpayments/select_affiliates.php:113
+#: html/transaction_table.php:30
+msgid "From Date"
+msgstr "從日期"
+
+#: html/admin/paypalpayments/select_affiliates.php:115
+#: html/transaction_table.php:32
+msgid "To Date"
+msgstr "截至日期"
+
+#: html/admin/paypalpayments/select_affiliates.php:118
+#: html/transaction_table.php:37
+msgid "Clear"
+msgstr "清除"
+
+#: html/admin/paypalpayments/select_affiliates.php:133
+msgid "Payment Amount"
+msgstr ""
+
+#: html/admin/paypalpayments/select_affiliates.php:188
+msgid "Continue with these payments"
+msgstr "繼續這些付款"
+
+#: html/admin/paypalpayments/view_payment_detail.php:8
+msgid "Payment Detail"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:16
+msgid "Database ID"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:17
+#: html/admin/paypalpayments/view_payment_detail.php:58
+#: html/impressions_table.php:7 html/transaction_table.php:47
+#: html/transaction_table.php:62
+msgid "Date Occurred"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:18
+msgid "PayPal Timestamp"
+msgstr "PayPal 時間戳"
+
+#: html/admin/paypalpayments/view_payment_detail.php:19
+msgid "PayPal Correlation ID"
+msgstr ""
+
+#: html/admin/paypalpayments/view_payment_detail.php:22
+msgid "Total Amount"
+msgstr "總金額"
+
+#: html/admin/paypalpayments/view_payment_detail.php:26
+msgid "Reconciliation"
+msgstr "核對"
+
+#: html/admin/paypalpayments/view_payment_detail.php:29
+msgid "Manually reconcile payments ... "
+msgstr "手動核對付款..."
+
+#: html/admin/paypalpayments/view_payment_detail.php:30
+msgid "Reconcile using PayPal Mass Payment results file ... "
+msgstr "使用 PayPal Mass Payment 結果文件 做核對..."
+
+#: html/admin/paypalpayments/view_payment_detail.php:37
+msgid "Errors"
+msgstr "錯誤"
+
+#: html/admin/paypalpayments/view_payment_detail.php:40
+msgid "Code:"
+msgstr "代碼："
+
+#: html/admin/paypalpayments/view_payment_detail.php:41
+msgid "Message:"
+msgstr "訊息："
+
+#: html/admin/paypalpayments/view_payment_detail.php:42
+msgid "Severity:"
+msgstr "嚴重性："
+
+#: html/admin/paypalpayments/view_payment_detail.php:52
+msgid "Associated Transactions"
+msgstr "有關聯的交易"
+
+#: html/admin/paypalpayments/view_payment_detail.php:59
+msgid "Affiliate"
+msgstr "加盟商"
+
+#: html/admin/paypalpayments/view_payment_detail.php:62
+#: html/transaction_table.php:49 html/transaction_table.php:64
+msgid "Description"
+msgstr ""
+
+#: html/admin/settings/settings.php:22 source/Plugin.php:667
+msgid "Settings"
+msgstr "設置"
+
+#: html/admin/settings/settings.php:47
+msgid "Affiliate Registration"
+msgstr "加盟商注冊"
+
+#: html/admin/settings/settings.php:48
+msgid "Messaging"
+msgstr "訊息"
+
+#: html/admin/settings/settings.php:50
+msgid "Pages/Forms"
+msgstr ""
+
+#: html/admin/settings/settings.php:51
+msgid "Advanced Settings"
+msgstr "高級設置"
+
+#: html/admin/settings/settings.php:129
+msgid "Save Settings"
+msgstr "保存設置"
+
+#: html/admin/settings/settings_advanced.php:8
+msgid "Default Landing Page"
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:13
+#, php-format
+msgid ""
+"Your default landing page URL is <code>%s</code>. If you want to change to a "
+"different URL you can specify it here."
+msgstr "您的默認登陸頁面 URL 是 <code>%s</code>。 如果您想更改為不同的 URL，您可以在此處指定。"
+
+#: html/admin/settings/settings_advanced.php:19
+msgid "Disable Own Referrals"
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:26
+msgid ""
+"If checked, your affiliates will not be able to earn a commission on their "
+"own purchases."
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:32
+msgid "Automatically Delete WordPress Account"
+msgstr "自動刪除 智能商城的帳戶"
+
+#: html/admin/settings/settings_advanced.php:39
+msgid ""
+"If checked, when an affiliate account is deleted the WordPress user account "
+"for it will be automatically deleted."
+msgstr "如果選取，當刪除 加盟商帳戶 時，它的 智能商城帳戶 將被自動刪除。"
+
+#: html/admin/settings/settings_advanced.php:45
+msgid "Enable Registration Form Anchor"
+msgstr "啟用註冊表單錨點"
+
+#: html/admin/settings/settings_advanced.php:52
+msgid ""
+"If checked, the affiliate will be taken to the registration form anchor "
+"within the page after the form is submitted."
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:58
+msgid "Disable Front-end Affiliate Registration"
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:65
+msgid ""
+"If checked, visitors will not be able to sign up on the affiliate "
+"registration page. This allows you to selectively create affiliate accounts "
+"from the admin dashboard."
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:71
+msgid "Show Terms and Conditions"
+msgstr "顯示條款和條件"
+
+#: html/admin/settings/settings_advanced.php:78
+msgid ""
+"If checked, a terms and conditions checkbox will be shown on the affiliate "
+"registration page."
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:84
+msgid "Use IP Address for Referral Tracking"
+msgstr "使用 IP 地址進行推薦跟踪"
+
+#: html/admin/settings/settings_advanced.php:91
+msgid ""
+"If checked, a fallback method will be used to track referrals with IP "
+"addresses. This can be useful if the default cookie-based tracking fails."
+msgstr ""
+
+#: html/admin/settings/settings_aff_pages.php:5
+msgid "Home Page"
+msgstr "主頁"
+
+#: html/admin/settings/settings_aff_pages.php:10
+msgid "This is the URL of your Affiliate Home page"
+msgstr "這是您的加盟商會員主頁的 URL"
+
+#: html/admin/settings/settings_aff_pages.php:16
+msgid "Registration Page"
+msgstr "註冊頁面"
+
+#: html/admin/settings/settings_aff_pages.php:21
+msgid "This is the URL of your Affiliate Registration page"
+msgstr "這是您的加盟商會員註冊頁面的 URL"
+
+#: html/admin/settings/settings_aff_pages.php:27
+msgid "Login Page"
+msgstr "登錄頁面"
+
+#: html/admin/settings/settings_aff_pages.php:32
+msgid "This is the URL of your Affiliate Login page"
+msgstr "這是您的加盟商會員登錄頁面的 URL"
+
+#: html/admin/settings/settings_aff_pages.php:38
+msgid "Terms and Conditions Page"
+msgstr "條款和條件頁面"
+
+#: html/admin/settings/settings_aff_pages.php:43
+msgid "This is the URL of your Terms and Conditions page"
+msgstr "這是您的條款和條件頁面的 URL"
+
+#: html/admin/settings/settings_general.php:103
+msgid "Minimum Payout Amount"
+msgstr "最低支付金額"
+
+#: html/admin/settings/settings_general.php:112
+msgid "Cookie Duration (days)"
+msgstr "Cookie 持續時間（天）"
+
+#: html/admin/settings/settings_general.php:117
+#, php-format
+msgid "<a target=\"_blank\" href=\"%s\">Read more on cookie duration here</a>"
+msgstr "<a target=\"_blank\" href=\"%s\">在此處閱讀有關 cookie 持續時間的更多信息</a>"
+
+#: html/admin/settings/settings_general.php:122
+msgid "Email name"
+msgstr "電郵名稱"
+
+#: html/admin/settings/settings_general.php:127
+#: html/admin/settings/settings_general.php:137
+msgid "(Leave blank to use WordPress default)"
+msgstr "（留空以使用系統的默認）"
+
+#: html/admin/settings/settings_general.php:132
+msgid "Email address"
+msgstr "電郵地址"
+
+#: html/admin/settings/settings_general.php:144
+msgid "Automatically approve a new affiliate"
+msgstr "自動批准新的加盟商會員"
+
+#: html/admin/settings/settings_general.php:169
+#, php-format
+msgid "Bounty Rate (% of Sale) / Amount"
+msgstr "賞金率（% of 銷售額）/ 數量"
+
+#: html/admin/settings/settings_general.php:178
+msgid "Currency Symbol"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:187
+msgid "Currency Code"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:197
+msgid "Do Not Record Zero Amount Commission"
+msgstr ""
+
+#: html/admin/settings/settings_general.php:210
+msgid "Enable Impressions"
+msgstr "啟用印象"
+
+#: html/admin/settings/settings_general.php:219
+msgid "Enable Debug"
+msgstr "啟用 Debug"
+
+#: html/admin/settings/settings_general.php:222
+msgid ""
+"If checked, debug output will be written to log files. This is useful for "
+"troubleshooting post payment failures."
+msgstr ""
+
+#: html/admin/settings/settings_general.php:223
+msgid ""
+"You can check the debug log file by clicking on the link below (The log file "
+"can be viewed using any text editor):"
+msgstr "您可以通過單擊以下鏈接查看 Debug Log（可以使用任何文本編輯器查看 Debug Log）："
+
+#: html/admin/settings/settings_general.php:227
+msgid "Reset Debug Log file"
+msgstr "重置 Debug Log file"
+
+#: html/admin/settings/settings_general.php:228
+msgid "Use it to reset the affiliate manager plugin's log file."
+msgstr "用它來重置 Affiliate Manager 插件的 Log File。"
+
+#: html/admin/settings/settings_messaging.php:66
+msgid ""
+"These settings allow you to control text that is displayed to affiliates at "
+"various points in the affiliate plug-in, as well as e-mails that are sent."
+msgstr "這些設置允許您控制在 Affiliate 插件中的不同位置向加盟商機構顯示的文本，以及發送的電郵。"
+
+#: html/admin/settings/settings_messaging.php:71
+msgid "Use:"
+msgstr "用："
+
+#: html/admin/settings/settings_messaging.php:75
+msgid "Content:"
+msgstr "內容："
+
+#: html/admin/settings/settings_messaging.php:88
+msgid "Use"
+msgstr "用"
+
+#: html/admin/settings/settings_messaging.php:89
+msgid "Content"
+msgstr "內容"
+
+#: html/admin/settings/settings_messaging.php:119
+#, php-format
+msgid "%s(More)"
+msgstr "%s(更多)"
+
+#: html/admin/settings/settings_messaging.php:127
+msgid ""
+"* Some messages have been modified. These will <strong>NOT</strong> be saved "
+"to the database until you click 'Save Settings' button below."
+msgstr "* 一些信息已被修改。但這些修改將<strong>不會</strong>被保存到數據庫中，直至 您㸃擊 下面的 “保存設置” 按鈕。"
+
+#: html/admin/settings/settings_messaging.php:131
+msgid "Messaging Related Options"
+msgstr "訊息相關選項"
+
+#: html/admin/settings/settings_messaging.php:139
+msgid "Email Type:"
+msgstr "電郵類型："
+
+#: html/admin/settings/settings_messaging.php:143
+msgid "Plain Text"
+msgstr "純文本"
+
+#: html/admin/settings/settings_messaging.php:144
+msgid "HTML"
+msgstr ""
+
+#: html/admin/settings/settings_messaging.php:146
+msgid ""
+"The content type for email sent through the wp_mail() function. The default "
+"is 'text/plain' which does not allow using HTML."
+msgstr "通過 wp_mail() 函數發送的電郵的內容類型。 默認值為“text/plain”，不允許使用 HTML。"
+
+#: html/admin/settings/settings_messaging.php:151
+msgid "Send Registration Notification:"
+msgstr "發送註冊通知："
+
+#: html/admin/settings/settings_messaging.php:158
+#: html/admin/settings/settings_messaging.php:182
+msgid "Send Notification to Admin"
+msgstr "向管理員發送通知"
+
+#: html/admin/settings/settings_messaging.php:159
+msgid ""
+"Check this box if you want the admin of this site to get notified via email "
+"after a new affiliate signup."
+msgstr "如果您希望此網站的管理員在新的會員註冊後通過電郵收到通知，請勾選此項。"
+
+#: html/admin/settings/settings_messaging.php:161
+#: html/admin/settings/settings_messaging.php:185
+msgid "Admin Email Address"
+msgstr "管理員電郵地址"
+
+#: html/admin/settings/settings_messaging.php:163
+msgid ""
+"The email address to which the admin will get notified after a new affiliate "
+"signup."
+msgstr "新加盟商會員註冊後管理員將收到通知的電郵地址。"
+
+#: html/admin/settings/settings_messaging.php:168
+msgid "Send Commission Notification:"
+msgstr "發送佣金通知："
+
+#: html/admin/settings/settings_messaging.php:175
+msgid "Send Notification to Affiliate"
+msgstr "向加盟商會員發送通知"
+
+#: html/admin/settings/settings_messaging.php:176
+msgid ""
+"Check this box if you want your affiliates to get notified via email when "
+"they earn a commission."
+msgstr "如果您希望加盟商會員當他們賺取佣金時通過電郵收到通知，請勾選此項。"
+
+#: html/admin/settings/settings_messaging.php:183
+msgid ""
+"Check this box if you want the admin of this site to get notified via email "
+"when an affiliate earns a commission."
+msgstr "如果您希望此網站的管理員當加盟商會員賺取佣金時通過電郵收到通知，請勾選此項。"
+
+#: html/admin/settings/settings_messaging.php:187
+msgid ""
+"The email address to which the admin will get notified when an affiliate "
+"earns a commission."
+msgstr "當加盟商會員賺取佣金時，管理員將收到通知的電郵地址。"
+
+#: html/admin/settings/settings_payment.php:16
+msgid ""
+"Looking for help? Check out the bundled step-by-step guide for setting up "
+"PayPal Mass Pay:"
+msgstr "尋求幫助？ 查看捆綁的分步指南以設置 PayPal Mass Pay："
+
+#: html/admin/settings/settings_payment.php:18
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">How to Setup PayPal Mass Pay</a>"
+msgstr "<a href=\"%s\" target=\"_blank\">如何設置 PayPal Mass Pay</a>"
+
+#: html/admin/settings/settings_payment.php:26
+msgid ""
+"Enable PayPal Mass Pay &#0153;<br /><small>NOTE: Requires a PayPal Premier "
+"or PayPal Business account</small>"
+msgstr ""
+"啟用 PayPal Mass Pay &#0153;<br /><small>注意：需要 PayPal Premier 或 PayPal "
+"Business 帳戶</small>"
+
+#: html/admin/settings/settings_payment.php:29
+msgid "PayPal API Configuration"
+msgstr ""
+
+#: html/admin/settings/settings_payment.php:32
+msgid "API Username"
+msgstr "API 用戶名"
+
+#: html/admin/settings/settings_payment.php:36
+msgid "API Password"
+msgstr "API 密碼"
+
+#: html/admin/settings/settings_payment.php:40
+msgid "Signature"
+msgstr "簽名"
+
+#: html/admin/settings/settings_payment.php:44
+msgid "API End Point"
+msgstr "API 端點"
+
+#: html/admin/settings/settings_payment.php:44
+msgid "WARNING: Set to LIVE if you don't know what this is for!"
+msgstr "警告：如果您不知道這是乾什麼的，請設置為 LIVE！"
+
+#: html/admin/settings/settings_payment.php:47
+#, php-format
+msgid "Live (%s)"
+msgstr "直播（%s）"
+
+#: html/admin/settings/settings_payment.php:48
+#, php-format
+msgid "Sandbox - TESTING (%s)"
+msgstr "沙盒 - 測試（%s）"
+
+#: html/admin/settings/settings_registration.php:218
+msgid "Display name is required."
+msgstr "顯示名稱是必需的。"
+
+#: html/admin/settings/settings_registration.php:225
+msgid "Field name is required."
+msgstr "欄位名稱是必需的。"
+
+#: html/admin/settings/settings_registration.php:228
+msgid ""
+"Field name may only contains letters, numbers, underscores and hyphens, and "
+"must begin with a letter."
+msgstr "欄位名稱只能包含字母、數字、下劃線和連字符，並且必須以字母開頭。"
+
+#: html/admin/settings/settings_registration.php:235
+msgid "This field name is already in use."
+msgstr "此欄位名稱已被使用。"
+
+#: html/admin/settings/settings_registration.php:247
+msgid "Field length must be an non-0 positive number."
+msgstr "欄位長度必須是非 0 正數。"
+
+#: html/admin/settings/settings_registration.php:361
+msgid "Custom Field"
+msgstr ""
+
+#: html/admin/settings/settings_registration.php:368
+#: html/admin/settings/settings_registration.php:443
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#: html/admin/settings/settings_registration.php:375
+#: html/admin/settings/settings_registration.php:444
+msgid "Field Name"
+msgstr "欄位名稱"
+
+#: html/admin/settings/settings_registration.php:382
+msgid "Field Type"
+msgstr "欄位類型"
+
+#: html/admin/settings/settings_registration.php:385
+msgid "Text"
+msgstr "文字"
+
+#: html/admin/settings/settings_registration.php:386
+msgid "Textarea"
+msgstr "文本區域"
+
+#: html/admin/settings/settings_registration.php:387
+msgid "Number"
+msgstr ""
+
+#: html/admin/settings/settings_registration.php:388
+msgid "E-Mail Address"
+msgstr "電郵地址"
+
+#: html/admin/settings/settings_registration.php:389
+msgid "Phone Number"
+msgstr "電話號碼"
+
+#: html/admin/settings/settings_registration.php:390
+msgid "State Code (US)"
+msgstr "州代碼（US）"
+
+#: html/admin/settings/settings_registration.php:391
+msgid "Zip Code (US)"
+msgstr "郵政編碼（US）"
+
+#: html/admin/settings/settings_registration.php:392
+msgid "Country Code"
+msgstr "國家代碼"
+
+#: html/admin/settings/settings_registration.php:393
+msgid "Social Security Number (US)"
+msgstr "社會安全號碼（US）"
+
+#: html/admin/settings/settings_registration.php:400
+#: html/admin/settings/settings_registration.php:445
+msgid "Max Length"
+msgstr "最長長度"
+
+#: html/admin/settings/settings_registration.php:413
+msgid "Available Payout Methods"
+msgstr "可用的付款方式"
+
+#: html/admin/settings/settings_registration.php:419
+#: source/Data/Models/AffiliateModel.php:182
+msgid "Check"
+msgstr "檢查"
+
+#: html/admin/settings/settings_registration.php:423
+#: source/Data/Models/AffiliateModel.php:176
+msgid "PayPal"
+msgstr ""
+
+#: html/admin/settings/settings_registration.php:427
+#: source/Data/Models/AffiliateModel.php:179
+msgid "Manual"
+msgstr "手動"
+
+#: html/admin/settings/settings_registration.php:432
+msgid "Affiliate Register Fields"
+msgstr "加盟商注冊欄"
+
+#: html/admin/settings/settings_registration.php:435
+msgid "Add Custom Field"
+msgstr "添加自定義資料欄"
+
+#: html/admin/settings/settings_registration.php:440
+msgid "Enabled"
+msgstr "啟用"
+
+#: html/admin/settings/settings_registration.php:442
+msgid "Field Format"
+msgstr "欄位格式"
+
+#: html/admin/settings/settings_registration.php:446
+msgid "Required"
+msgstr "必要的"
+
+#: html/admin/settings/settings_registration.php:457
+msgid "Affiliates Homepage Message"
+msgstr "加盟商 主頁信息"
+
+#: html/admin/settings/settings_registration.php:461
+msgid ""
+"This message is shown to a normal visitor who is not logged into WordPress"
+msgstr "此信息顯示給 未登錄 智能商城 的 普通訪問者"
+
+#: html/admin/settings/settings_registration.php:466
+msgid "Affiliates Homepage Message (Logged in but not an affiliate)"
+msgstr "加盟商 主頁信息（登錄但不是加盟商會員)"
+
+#: html/admin/settings/settings_registration.php:470
+msgid ""
+"This message is shown to a user who is logged into WordPress but not an "
+"affiliate"
+msgstr "此信息是顯示給登錄 智能商城平台 的用戶 (不是 加盟商 的用戶)"
+
+#: html/affiliate_approved.php:1
+#, php-format
+msgid ""
+"Your application was approved.  Please go to the <a href=\"%s\">affiliate "
+"control panel</a> to get started."
+msgstr "您的申請已獲批准。 請轉到<a href=\"%s\">加盟商控制面板</a>開始。"
+
+#: html/affiliate_cp_agree_terms.php:3
+msgid "Affiliate Confirmation"
+msgstr "加盟商確認"
+
+#: html/affiliate_cp_agree_terms.php:5
+msgid "Contract Terms"
+msgstr "合約條款"
+
+#: html/affiliate_cp_agree_terms.php:12 html/affiliate_cp_home.php:20
+msgid "Commission Rate"
+msgstr "佣金率"
+
+#: html/affiliate_cp_agree_terms.php:21
+msgid "Terms & Conditions"
+msgstr "條款和條件"
+
+#: html/affiliate_cp_agree_terms.php:27
+msgid "Agree to Terms"
+msgstr "同意條款"
+
+#: html/affiliate_cp_approved.php:3
+msgid "Affiliate Control Panel"
+msgstr "加盟商控制面板"
+
+#: html/affiliate_cp_approved.php:5
+msgid "Welcome!"
+msgstr ""
+
+#: html/affiliate_cp_approved.php:9
+msgid "Review Terms and Get Started!"
+msgstr "查看條款並開始使用！"
+
+#: html/affiliate_cp_home.php:11
+msgid "Account Summary"
+msgstr "帳戶概括"
+
+#: html/affiliate_cp_home.php:29
+msgid "Today"
+msgstr "今天"
+
+#: html/affiliate_cp_home.php:44 html/affiliate_cp_home.php:78
+msgid "Visitors"
+msgstr "訪客"
+
+#: html/affiliate_cp_home.php:48 html/affiliate_cp_home.php:82
+msgid "Closed Transactions"
+msgstr "已關閉的交易"
+
+#: html/affiliate_cp_home.php:52 html/affiliate_cp_home.php:86
+msgid "Revenue"
+msgstr "財政收入"
+
+#: html/affiliate_cp_home.php:63
+msgid "This Month"
+msgstr "這個月"
+
+#: html/affiliate_cp_payment_details_confirmed.php:3
+msgid "Your payment details have been submitted."
+msgstr "您的付款詳情已提交。"
+
+#: html/affiliate_cp_payment_details_confirmed.php:5
+#, php-format
+msgid ""
+"Now would be a great time to go pick <a href=\"%s\">some creatives</a> and "
+"get started."
+msgstr ""
+
+#: html/affiliate_cp_payment_details_form.php:70
+#: html/affiliate_cp_payment_details_simple.php:13
+msgid "Please provide your payment details."
+msgstr "請提供您的付款詳情。"
+
+#: html/affiliate_cp_payment_details_form.php:71
+#: html/affiliate_cp_payment_details_simple.php:14
+msgid ""
+"The following information will be used to disburse payments when your "
+"account reaches the minimum payout amount."
+msgstr "當您的賬戶達到最低支付金額時，以下信息將用於支付款項。"
+
+#: html/affiliate_cp_payment_details_form.php:79
+#: html/affiliate_cp_payment_details_simple.php:23 html/contact_info.php:142
+msgid "Method"
+msgstr "方法"
+
+#: html/affiliate_cp_payment_details_form.php:96
+#: html/affiliate_cp_payment_details_simple.php:40 html/contact_info.php:171
+msgid "PayPal E-Mail Address"
+msgstr "PayPal 電郵地址"
+
+#: html/affiliate_cp_payment_details_form.php:109
+#: html/affiliate_cp_payment_details_simple.php:53
+#: source/Util/AffiliateFormHelper.php:156
+msgid "Paper Check"
+msgstr ""
+
+#: html/affiliate_cp_payment_details_form.php:115
+#: html/affiliate_cp_payment_details_simple.php:59
+msgid "Check Recipient"
+msgstr "檢查收件人"
+
+#: html/affiliate_cp_payment_details_form.php:134
+msgid "Mail to Address On Record"
+msgstr "郵寄到記錄在案的地址"
+
+#: html/affiliate_cp_payment_details_form.php:143
+#: html/affiliate_cp_payment_details_form.php:168
+#: html/affiliate_cp_payment_details_simple.php:76
+msgid "Recipient"
+msgstr "接受者"
+
+#: html/affiliate_cp_payment_details_form.php:172
+msgid "Address 1"
+msgstr "地址1"
+
+#: html/affiliate_cp_payment_details_form.php:176
+msgid "Address 2"
+msgstr "地址2"
+
+#: html/affiliate_cp_payment_details_form.php:180
+msgid "City"
+msgstr "城市"
+
+#: html/affiliate_cp_payment_details_form.php:184
+msgid "Country"
+msgstr "國家"
+
+#: html/affiliate_cp_payment_details_form.php:194
+msgid "State"
+msgstr "州 (在非美國地區, 請選擇 \"Outside US\")"
+
+#: html/affiliate_cp_payment_details_form.php:204
+msgid "Postal Code"
+msgstr "郵政編碼"
+
+#: html/affiliate_cp_payment_details_form.php:218
+#: html/affiliate_cp_payment_details_simple.php:101
+msgid "Submit Payment Details"
+msgstr "提交付款詳情"
+
+#: html/affiliate_cp_payment_details_simple.php:69
+msgid "Check will be mailed to the following address:"
+msgstr "支票將郵寄至以下地址："
+
+#: html/affiliate_creative_detail.php:44
+msgid "Share Link"
+msgstr "分享鏈接"
+
+#: html/affiliate_creative_detail.php:47
+msgid "Your Affiliate-Specific HTML snippet"
+msgstr "您的加盟商特定的 HTML Snippet"
+
+#: html/affiliate_creative_list.php:66
+msgid "Your Affiliate Link Using Affiliate ID"
+msgstr "您使用加盟商會員 ID 的加盟商會員鏈接"
+
+#: html/affiliate_creative_list.php:70
+msgid "Referral URL Generator"
+msgstr "推薦 URL 生成器"
+
+#: html/affiliate_creative_list.php:73
+msgid ""
+"Enter any URL from this site in the form below to generate a referral link"
+msgstr "在下面的表格中輸入來自該網站的任何 URL 以生成推薦鏈接"
+
+#: html/affiliate_creative_list.php:81
+msgid "Below is your referral URL (You can copy it and share anywhere)"
+msgstr "以下是您的推薦網址（您可以復制並在任何地方分享）"
+
+#: html/affiliate_creative_list.php:85
+msgid "Generate Referral URL"
+msgstr "生成推薦 URL"
+
+#: html/affiliate_creative_list.php:95
+msgid "The following creatives are available for publication."
+msgstr "以下廣告素材可供發布。"
+
+#: html/affiliate_home.php:1
+msgid "Welcome to the affiliate control panel."
+msgstr "歡迎來到 加盟商聯盟 控制面板。"
+
+#: html/affiliate_not_logged_in.php:4
+#, php-format
+msgid ""
+"This is the affiliates section of this store.  If you are an existing "
+"affiliate, please <a href=\"%s\">log in</a> to access your control panel."
+msgstr "這是這家商城的加盟商會員部分。 如果您是現有加盟商會員，請<a href=\"%s\">登錄</a>以進入您的控制面板。"
+
+#: html/affiliate_not_logged_in.php:7 source/Data/DatabaseInstaller.php:408
+#: source/Pages/Admin/SettingsPage.php:199
+#, php-format
+msgid ""
+"If you are not an affiliate, but wish to become one, you will need to apply. "
+"To apply, you must be a registered user on this blog. If you have an "
+"existing account on this blog, please <a href=\"%s\">log in</a>. If not, "
+"please <a href=\"%s\">register</a>."
+msgstr ""
+"如果您不是加盟商會員，但希望成為加盟商會員，則需要申請。 要申請，您必須是此商城的註冊用戶。 如果您在此商城上已有帳戶，請<a href=\"%s\">"
+"登錄</a>。 如果沒有，請<a href=\"%s\">註冊</a>。"
+
+#: html/affiliate_not_registered.php:4 source/Data/DatabaseInstaller.php:410
+#: source/Pages/Admin/SettingsPage.php:207
+#, php-format
+msgid ""
+"This is the affiliates section of this store. You are not currently an "
+"affiliate of this store. If you wish to become one, please <a href=\"%s\"/>"
+"apply</a>."
+msgstr "這是這家商城的加盟商會員部分。 您目前不是這家商城的加盟商會員。 如果您想成為其中一員，請<a href=\"%s\"/>申請</a>。"
+
+#: html/affiliate_register_form.php:9
+msgid "Affiliate registration is disabled. Please contact the administrator."
+msgstr "加盟商"
+
+#: html/affiliate_register_form.php:21
+msgid ""
+"Looks like you already have an affiliate account. So you don't need to "
+"register again. Simply go to the affiliate portal and start referring users."
+msgstr "看起來您已經有一個加盟商會員帳戶。 所以你不需要重新註冊。 只需轉到加盟商入口網站並開始推薦用戶。"
+
+#: html/affiliate_register_form.php:33 html/contact_info.php:212
+msgid "* Required fields"
+msgstr "* 必填字段"
+
+#: html/affiliate_register_form.php:46
+msgid ""
+"This is the email address associated with your currently logged in WordPress "
+"user account."
+msgstr "這是與您當前登錄的 智能商城 用戶帳戶關聯的電郵地址。"
+
+#: html/affiliate_register_form.php:47
+msgid ""
+"If you want to use a different email address, log out of your WordPress "
+"account then try a new registration."
+msgstr "如果您想使用不同的電郵地址，請退出您的 智能商城 帳戶，然後嘗試重新註冊。"
+
+#: html/affiliate_register_form.php:94
+msgid "I have read and agree to the"
+msgstr "我已經閱讀並同意"
+
+#: html/affiliate_register_form.php:94
+msgid "Terms and Conditions"
+msgstr "條款和條件"
+
+#: html/affiliate_register_form.php:95
+msgid "You must agree to the terms."
+msgstr "你必須同意這些條件。"
+
+#: html/affiliate_register_form.php:109
+msgid "Submit Application"
+msgstr "提交申請表"
+
+#: html/contact_info.php:14
+msgid "Contact Information"
+msgstr "聯絡資料"
+
+#: html/contact_info.php:107
+#, php-format
+msgid ""
+"There is a pending change of your e-mail to <code>%1$s</code>. <a "
+"href=\"%2$s\">Cancel</a>"
+msgstr "您的電郵有待更改為 <code>%1$s</code>。 <a href=\"%2$s\">取消</a>"
+
+#: html/contact_info.php:115
+msgid "New Password"
+msgstr ""
+
+#: html/contact_info.php:124
+msgid "Repeat New Password"
+msgstr "重複新密碼"
+
+#: html/contact_info.php:180
+msgid "Bounty Type *"
+msgstr "賞金類型 *"
+
+#: html/contact_info.php:197
+#, php-format
+msgid "Bounty Rate (%s per Sale) *"
+msgstr "賞金率（每次銷售的 %s）*"
+
+#: html/contact_info.php:197
+#, php-format
+msgid "Bounty Rate (% of Sale) *"
+msgstr "賞金率（% of 銷售額）*"
+
+#: html/contact_info.php:214
+msgid "+ Custom fields"
+msgstr "+ 自定義資料欄"
+
+#: html/contact_info.php:218
+msgid "Save Changes"
+msgstr "保存更改"
+
+#: html/impressions_table.php:1
+#, php-format
+msgid "Displaying %1$d of %2$d impressions"
+msgstr ""
+
+#: html/impressions_table.php:9
+msgid "Referrer"
+msgstr "推薦人"
+
+#: html/impressions_table.php:31 html/transaction_table.php:78
+msgid "No records found for the date range selected."
+msgstr ""
+
+#: html/transaction_table.php:50 html/transaction_table.php:65
+msgid "Reference ID"
+msgstr "參考編號"
+
+#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:687
+msgid "Affiliates Manager Add-ons"
+msgstr "加盟商管理器 插件"
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:8 source/Plugin.php:671
+msgid "Admin Functions"
+msgstr "管理功能"
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:9
+msgid ""
+"The Admin Functions page lets you do various admin stuff from time to time."
+msgstr "Admin Functions 頁面允許您不時執行各種管理操作。"
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:15
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Admin Functions menu to "
+"delete clicks data."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回管理功能菜單以刪除點擊數據。"
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:27
+msgid "Start Date is not valid"
+msgstr "開始日期無效"
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:38
+msgid "End Date is not valid"
+msgstr "結束日期無效"
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:43
+msgid "Clicks data has been deleted!"
+msgstr "點擊數據已被刪除！"
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:49
+msgid "Reset Buttons"
+msgstr "重置按鈕"
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:52
+msgid ""
+"Do you really want to delete the clicks data? This action cannot be undone."
+msgstr ""
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:54
+msgid "Start Date:"
+msgstr "開始日期："
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:55
+msgid "End Date:"
+msgstr "結束日期："
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:56
+msgid ""
+"Select a Start Date and an End Date to delete all clicks data within this "
+"period. If you only select a Start Date all clicks data recorded on or after "
+"this date will be deleted. If you only select an End Date all clicks data "
+"recorded up to this date will be deleted. If no date is selected all clicks "
+"data will be deleted."
+msgstr ""
+"選擇開始日期和結束日期以刪除此期間內的所有點擊數據。 如果您只選擇一個開始日期，所有在該日期或之後記錄的點擊數據都將被刪除。 "
+"如果您只選擇一個結束日期，則到該日期為止記錄的所有點擊數據都將被刪除。 如果沒有選擇日期，所有點擊數據都將被刪除。"
+
+#: source/Admin-menu/wpam-admin-functions-menu.php:58
+msgid "Delete Clicks Data"
+msgstr ""
+
+#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:679
+msgid "Click Tracking"
+msgstr "點擊跟踪"
+
+#: source/Admin-menu/wpam-clicks-menu.php:11
+msgid "Unique Click Tracking"
+msgstr "獨一無二的點擊跟踪"
+
+#: source/Admin-menu/wpam-clicks-menu.php:34
+msgid "This tab shows unique referrals to your website from your affiliates"
+msgstr "此選項標籤 顯示您的 加盟商 對您網站的獨一無二推薦"
+
+#: source/Admin-menu/wpam-commission-menu.php:8
+msgid "Affiliate Commissions"
+msgstr "加盟商佣金"
+
+#: source/Admin-menu/wpam-commission-menu.php:11
+msgid "Overall Commissions"
+msgstr ""
+
+#: source/Admin-menu/wpam-commission-menu.php:12
+msgid "Manual Commission"
+msgstr "手動的佣金"
+
+#: source/Admin-menu/wpam-commission-menu.php:51
+msgid "This tab shows all affiliate commission data"
+msgstr "此選項標籤顯示所有加盟商會員佣金數據"
+
+#: source/Admin-menu/wpam-commission-menu.php:107
+#: source/Admin-menu/wpam-commission-menu.php:270
+msgid "You need to enter an affiliate ID"
+msgstr "您需要輸入 加盟商會員 ID"
+
+#: source/Admin-menu/wpam-commission-menu.php:111
+#: source/Admin-menu/wpam-commission-menu.php:278
+msgid "You need to enter a numeric commission amount"
+msgstr "您需要輸入一個數字佣金金額"
+
+#: source/Admin-menu/wpam-commission-menu.php:115
+msgid "You need to enter a numeric purchase amount"
+msgstr "您需要輸入一個數字購買金額"
+
+#: source/Admin-menu/wpam-commission-menu.php:142
+msgid "A commission with this transaction ID already exists"
+msgstr "具有此交易 ID 的佣金已存在"
+
+#: source/Admin-menu/wpam-commission-menu.php:158
+msgid "Commission added!"
+msgstr "已增加佣金！"
+
+#: source/Admin-menu/wpam-commission-menu.php:168
+msgid "This tab allows you to manually award commission to an affiliate."
+msgstr "此選項標籤允許您手動將佣金獎勵給加盟商。"
+
+#: source/Admin-menu/wpam-commission-menu.php:178
+msgid "Enter the affiliate ID. Example: "
+msgstr "輸入加盟商會員 ID。 例子："
+
+#: source/Admin-menu/wpam-commission-menu.php:182
+#: source/Admin-menu/wpam-commission-menu.php:345
+msgid "Commission Amount"
+msgstr "佣金金額"
+
+#: source/Admin-menu/wpam-commission-menu.php:184
+msgid "Enter the commission amount. Example: "
+msgstr "輸入佣金金額。 例子："
+
+#: source/Admin-menu/wpam-commission-menu.php:188
+msgid "Purchase Amount"
+msgstr "採購量"
+
+#: source/Admin-menu/wpam-commission-menu.php:190
+msgid "Enter the purchase amount. Example: "
+msgstr "輸入購買金額。 例子："
+
+#: source/Admin-menu/wpam-commission-menu.php:196
+msgid ""
+"Enter the unique transaction ID (leave empty to generate a unique ID). "
+"Example: "
+msgstr "輸入獨一無二的交易 ID（留空以生成獨一無二的 ID）。 例子："
+
+#: source/Admin-menu/wpam-commission-menu.php:202
+msgid "Enter the email address of the buyer (optional)."
+msgstr "輸入買家的電郵地址（可選）。"
+
+#: source/Admin-menu/wpam-commission-menu.php:208
+msgid "Enter the date in yyyy-mm-dd format. Example: "
+msgstr "以 yyyy-mm-dd 格式輸入日期。 例子："
+
+#: source/Admin-menu/wpam-commission-menu.php:262
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Commissions menu and edit "
+"the commission again."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回佣金菜單並再次編輯佣金。"
+
+#: source/Admin-menu/wpam-commission-menu.php:286
+msgid "You need to enter a unique transaction ID"
+msgstr "您需要輸入 獨一無二的 交易ID"
+
+#: source/Admin-menu/wpam-commission-menu.php:300
+msgid "You need to enter a valid date"
+msgstr "您需要輸入有效日期"
+
+#: source/Admin-menu/wpam-commission-menu.php:308
+msgid "Commission could not be updated"
+msgstr "無法更新佣金"
+
+#: source/Admin-menu/wpam-commission-menu.php:313
+msgid "Commission updated!"
+msgstr "佣金已被更新！"
+
+#: source/Admin-menu/wpam-commission-menu.php:326
+msgid "Commission could not be found"
+msgstr "找不到佣金"
+
+#: source/Admin-menu/wpam-commission-menu.php:331
+msgid "This tab allows you to edit a commission record."
+msgstr "此選項標籤允許您編輯佣金記錄。"
+
+#: source/Admin-menu/wpam-commission-menu.php:341
+msgid "The affiliate ID. Example: "
+msgstr "加盟商會員 ID。 例子："
+
+#: source/Admin-menu/wpam-commission-menu.php:347
+msgid "The commission amount. Example: "
+msgstr "佣金金額。 例子："
+
+#: source/Admin-menu/wpam-commission-menu.php:353
+msgid "The unique transaction ID. Example: "
+msgstr "獨一無二的交易 ID。 例子："
+
+#: source/Admin-menu/wpam-commission-menu.php:359
+msgid "The email address of the buyer (optional)."
+msgstr "買家的電郵地址（可選）。"
+
+#: source/Admin-menu/wpam-commission-menu.php:365
+msgid "The date in Y-m-d H:i:s format. Example: "
+msgstr "Y-m-d H:i:s 格式的日期。 例子："
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:8 source/Plugin.php:675
+msgid "Manage Payouts"
+msgstr "管理支出"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:17
+msgid "Payout Report Generated"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:35
+msgid "Affiliate Mass Payout by Outstanding Amount"
+msgstr "加盟商按未償金額的大規模支付"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:39
+msgid "Step 1:"
+msgstr "步驟1："
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:40
+msgid "Generate Report"
+msgstr "生成報告"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:41
+msgid ""
+"Hit \"Generate Report\" to get a list of all the affiliate earnings that "
+"need to be paid."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:47
+msgid "Step 2:"
+msgstr "步驟2："
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:47
+msgid "Create Payment Report File"
+msgstr "建立付款報告文件"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:48
+#, php-format
+msgid ""
+"Use this to generate a PayPal payout file and a payment report CSV file. The "
+"PayPal payout file can be used in paypal to pay all your affiliates in one "
+"click. If you have never used PayPal Payouts check <a href=\"%s\" "
+"target=\"_blank\">this documentation</a>."
+msgstr ""
+"使用它來生成 PayPal 付款文件和付款報告 CSV 文件。 PayPal 支付文件可以在 PayPal 中使用，一鍵支付給您的所有 加盟商公司。 "
+"如果您從未使用過 PayPal 支付，請查看<a href=\"%s\" target=\"_blank\">此文檔</a>。"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:52
+msgid ""
+"Do you really want to mark all the outstanding payments as paid? This action "
+"cannot be undone."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:54
+msgid "Step 3:"
+msgstr "步驟3："
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:54
+msgid "Mark as Paid"
+msgstr "標記為已付款"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:55
+msgid ""
+"After you have generated the payout report and paid all the affiliates their "
+"outstanding balance, use this button to mark all the payments as paid."
+msgstr "在您生成付款報告並向所有加盟商支付其未結餘額後，使用此按鈕將所有付款標記為已付款。"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:72
+msgid "PayPal Email"
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:73
+msgid "Pending Amount"
+msgstr "待辦的金額"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:121
+msgid "No Affiliates Found in the Database."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:124
+msgid "No Pending Payment Found."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:143
+msgid "There is no pending payment."
+msgstr "沒有待辦的付款。"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:158
+msgid "can't open file named 'paypal_payout.csv'"
+msgstr "無法打開名為 “paypal_payout.csv” 的文件"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:201
+msgid "can't open file named 'affiliate_payout_report.csv'"
+msgstr "無法打開名為 “affiliate_payout_report.csv” 的文件"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:207
+msgid ""
+"Note: Please make sure that the PayPal email address field of the affiliates "
+"that are about to get paid via PayPal are not empty. PayPal payouts do not "
+"work without PayPal email address. You can ignore this warning if you are "
+"going to pay your affiliates via other means."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:210
+#, php-format
+msgid ""
+"PayPal payout file created. Download the <a href=\"%s\">PayPal Payout "
+"File</a> (Right click and choose \"Save Link As\"). You can use this file to "
+"make a PayPal mass payment and pay the commissions in one go."
+msgstr ""
+"PayPal 付款文件已創建。 下載 <a href=\"%s\">PayPal 付款文件</a>（右鍵單擊並選擇“鏈接另存為”）。 "
+"您可以使用此文件進行 PayPal 批量付款並一次性支付佣金。"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:215
+#, php-format
+msgid ""
+"CSV file with outstanding affiliate commission details created. Download the "
+"<a href=\"%s\">Affiliate Payout Report File</a> (Right click and choose "
+"\"Save Link As\"). You can use this file to manually send money to your "
+"affiliates."
+msgstr ""
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:227
+msgid "There is no pending payment to mark"
+msgstr "沒有待標記的待辦付款"
+
+#: source/Admin-menu/wpam-manage-payouts-menu.php:242
+msgid "Marked payments as paid"
+msgstr "將付款標記為已付款"
+
+#: source/Data/DatabaseInstaller.php:238
+msgid "Displayed to user at logon if affiliate STATUS = APPROVED"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:239
+msgid ""
+"Congratulations, the administrator has <strong>approved</strong> your "
+"application. You have one more step to complete before you can begin "
+"publishing for this store and generating revenue! The store owner has "
+"specified the terms of your agreement, which you will need to review and "
+"agree to.<br /><br />"
+msgstr ""
+"恭喜，管理員已<strong>批准</strong>您的申請。 在開始為本商城發佈內容並產生收入之前，您還需要完成一個步驟！ "
+"店主已指定您的協議條款，您需要查看並同意。<br /><br />"
+
+#: source/Data/DatabaseInstaller.php:242
+msgid "Displayed to user at logon if affiliate STATUS = DECLINED"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:243 source/Data/DatabaseInstaller.php:271
+msgid "I'm sorry, your application was declined."
+msgstr "很抱歉，您的申請被拒絕了。"
+
+#: source/Data/DatabaseInstaller.php:246
+msgid "Displayed to user at logon if affiliate STATUS = PENDING"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:247
+msgid "Your application is still being reviewed. Please check back later!"
+msgstr "您的申請仍在審核中。 請稍後再回來查看！"
+
+#: source/Data/DatabaseInstaller.php:250
+msgid ""
+"Displayed to user after successfully submitting the affiliate registration "
+"form"
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:251
+msgid ""
+"Your application has been submitted. The store owner will be contacting you "
+"soon.<br /><br />Thank you!<br />"
+msgstr "您的申請已提交。 城主會盡快與您聯繫。<br /><br />謝謝！<br />"
+
+#: source/Data/DatabaseInstaller.php:254
+msgid ""
+"Body of e-mail sent to the affiliate immediately after submitting their "
+"application."
+msgstr "提交申請後立即發送電郵正文給加盟商。"
+
+#: source/Data/DatabaseInstaller.php:255
+msgid "Your application will be reviewed and you will be hearing from us soon!"
+msgstr "您的申請將被審核，您很快就會收到我們的通知！"
+
+#: source/Data/DatabaseInstaller.php:274
+msgid ""
+"Body of e-mail sent to the affiliate immediately following their application "
+"being declined."
+msgstr "申請被拒絕後立即發送電郵正文給加盟商。"
+
+#: source/Data/DatabaseInstaller.php:280
+msgid ""
+"Thank you. Your registration is now complete. You can log into the affiliate "
+"area and begin promoting."
+msgstr "謝謝您。 您的註冊現已完成。 您可以登錄加盟商會員區並開始推廣。"
+
+#: source/Data/DatabaseInstaller.php:283
+msgid ""
+"Displayed to a newly registered affiliate if automatic affiliate approval "
+"option is enabled."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:293
+msgid ""
+"Your affiliate account for {blogname} has been approved!. \n"
+"\n"
+"Username: {affusername} \n"
+"Password: {affpassword} \n"
+"Login URL: {affloginurl} \n"
+"\n"
+"Please log into your account to get referral code."
+msgstr ""
+"您的 {blogname} 加盟商會員帳戶已獲批准！。\n"
+"\n"
+"用戶名：{affusername}\n"
+"密碼：{affpassword}\n"
+"登錄網址：{affloginurl}\n"
+"\n"
+"請登錄您的加盟商帳戶以獲取推薦代碼。"
+
+#: source/Data/DatabaseInstaller.php:296
+msgid ""
+"Body of e-mail sent to a newly registered affiliate immediately following "
+"their application being approved."
+msgstr "申請獲得批准後立即發送電郵正文給新註冊的加盟商。"
+
+#: source/Data/DatabaseInstaller.php:305
+msgid ""
+"Great news, you have just earned a commission by sending a referral to our "
+"site! \n"
+"\n"
+"Please log into your affiliate account to view the details. \n"
+"\n"
+"Thank You"
+msgstr ""
+"好消息，您剛剛通過向我們的網站發送推薦而賺取了佣金！\n"
+"\n"
+"請登錄您的加盟商會員帳戶以查看詳細資料。\n"
+"\n"
+"謝謝您"
+
+#: source/Data/DatabaseInstaller.php:308
+msgid ""
+"Body of e-mail sent to the affiliate immediately after earning a commission."
+msgstr "獲得佣金後立即發送電郵正文給加盟商。"
+
+#: source/Data/DatabaseInstaller.php:317
+msgid ""
+"An affiliate just earned a commission by sending a referral to the site. \n"
+"\n"
+"Please log into your WordPress admin dashboard to view the details."
+msgstr ""
+"一個加盟商剛剛通過向該網站發送推薦來賺取佣金。\n"
+"\n"
+"請登錄您的 智能商城 管理儀表板以查看詳細信息。"
+
+#: source/Data/DatabaseInstaller.php:320
+msgid "Body of e-mail sent to the admin when an affiliate earns a commission."
+msgstr "當加盟商會員賺取佣金時發送電郵正文給管理員。"
+
+#: source/Data/DatabaseInstaller.php:329
+msgid ""
+"New affiliate registration for {blogname} has been approved! \n"
+"\n"
+"Log into the site with your existing account and get started."
+msgstr ""
+
+#: source/Data/DatabaseInstaller.php:332
+msgid ""
+"Body of e-mail sent to a newly approved affiliate if they have an existing "
+"user account."
+msgstr "如果他們有一個現有的用戶帳戶，則發送新批准的電郵正文給加盟商會員。"
+
+#: source/Data/DatabaseInstaller.php:405
+#: source/Pages/Admin/SettingsPage.php:196
+#, php-format
+msgid ""
+"This is the affiliates section of this store. If you are an existing "
+"affiliate, please <a href=\"%s\">log in</a> to access your control panel."
+msgstr "這是這家商城的加盟商會員部分。 如果您是現有加盟商會員，請<a href=\"%s\">登錄</a>以進入您的控制面板。"
+
+#: source/Data/GenericRepository.php:31 source/Data/GenericRepository.php:76
+#, php-format
+msgid "'model' must be of type '%s'"
+msgstr "“模型”必須是“%s”類型"
+
+#: source/Data/Models/AffiliateModel.php:169
+msgid "Percent"
+msgstr "百分率"
+
+#: source/Data/Models/AffiliateModel.php:171
+msgid "Fixed"
+msgstr "固定的"
+
+#: source/Data/Models/ModelMapper.php:34
+#, php-format
+msgid "Model mapping error.  Could not map key %s."
+msgstr "模型映射錯誤。 無法映射鍵 %s。"
+
+#: source/MessageHelper.php:29
+#, php-format
+msgid "Attempt to load invalid message of name '%s'"
+msgstr "嘗試加載名稱為 '%s' 的無效信息"
+
+#: source/Options.php:27
+msgid "Invalid PayPal API value"
+msgstr "無效的 PayPal API 值"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:167
+#: source/Pages/Admin/NewAffiliatePage.php:93
+#: source/Pages/AffiliatesHome.php:574
+#, php-format
+msgid "Bounty Rate (%s per Sale)"
+msgstr "賞金率（每次銷售的 %s）"
+
+#: source/Pages/Admin/MyCreativesPage.php:60
+msgid "All"
+msgstr "全部"
+
+#: source/Pages/Admin/MyCreativesPage.php:111
+#: source/Pages/Admin/MyCreativesPage.php:237
+#: source/Pages/Admin/MyCreativesPage.php:244
+#: source/Pages/AffiliatesHome.php:185 source/Util/JsonHandler.php:214
+msgid "Invalid creative."
+msgstr "廣告素材無效。"
+
+#: source/Pages/Admin/MyCreativesPage.php:146
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the My Creatives menu and add "
+"a creative again."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回我的廣告素材菜單並再次添加廣告素材。"
+
+#: source/Pages/Admin/MyCreativesPage.php:198
+msgid "Insert failed: Bad creative type."
+msgstr "插入失敗：錯誤的廣告素材類型。"
+
+#: source/Pages/Admin/MyCreativesPage.php:207
+msgid "Creative Updated."
+msgstr "創作者已更新。"
+
+#: source/Pages/Admin/MyCreativesPage.php:214
+msgid "Creative ... created."
+msgstr "創作者 … 被建立。"
+
+#: source/Pages/Admin/MyCreativesPage.php:218
+msgid "Insert failed: invalid creative update mechanism."
+msgstr "插入失敗：無效的廣告素材更新機制。"
+
+#: source/Pages/Admin/NewAffiliatePage.php:82
+msgid "Add Affiliate"
+msgstr "添加加盟商"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:54
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu to "
+"reconcile using a result file."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回 PayPal Mass Pay 菜單以使用結果文件進行核對。"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:62
+msgid "This results file does not appear to match this payment."
+msgstr "此結果文件似乎與此付款不匹配。"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:96
+#, php-format
+msgid ""
+"Matched a transaction in your results file, but the value was incorrect. "
+"Expected %s but found '%s'"
+msgstr "匹配結果文件中的交易，但值不正確。 需要 %s 但找到了'%s'"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:104
+msgid ""
+"Could not correlate a transaction from your results file with the "
+"transactions on record."
+msgstr "無法將您文件中的交易結果與記錄的交易相關聯。"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:110
+msgid "Could not correlate all transactions"
+msgstr "無法關聯所有交易"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:125
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and "
+"confirm to reconcile using a result file."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回 PayPal Mass Pay 菜單並確認使用結果文件進行核對。"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:158
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu to "
+"manually reconcile payments."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回 PayPal Mass Pay 菜單以手動核對付款。"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:162
+msgid "Invalid PayPal LogID"
+msgstr "無效的 PayPal LogID"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:168
+msgid "Transaction not found"
+msgstr "找不到交易"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:179
+msgid "Invalid transaction status"
+msgstr "交易狀態無效"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:228
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu to "
+"continue with these affiliate payments."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回 PayPal Mass Pay 菜單以繼續這些加盟商付款。"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:241
+msgid "Affiliate Payment"
+msgstr "加盟商支付"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:253
+msgid "Affiliate not found"
+msgstr "加盟商未找到"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:256
+msgid "Payment method for affiliate is not PayPal"
+msgstr ""
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:263
+msgid "Payout via PayPal Mass Pay"
+msgstr ""
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:323
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and "
+"selects affiliates to pay."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回到 PayPal Mass Pay 菜單並選擇加盟商進行支付。"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:356
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the PayPal Mass Pay menu and "
+"select affiliates again."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回 PayPal Mass Pay 菜單並再次選擇 加盟商。"
+
+#: source/Pages/Admin/SettingsPage.php:57
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the General tab and Save "
+"Settings again."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回常規選項卡並再次保存設置。"
+
+#: source/Pages/Admin/SettingsPage.php:92
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Payment tab and Save "
+"Settings again."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回付款標籤並再次保存設置。"
+
+#: source/Pages/Admin/SettingsPage.php:108
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Messaging tab and Save "
+"Settings again."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回訊息標籤並再次保存設置。"
+
+#: source/Pages/Admin/SettingsPage.php:140
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Affiliate Registration "
+"tab and Save Settings again."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回會員註冊選項卡並再次保存設置。"
+
+#: source/Pages/Admin/SettingsPage.php:215
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Pages/Forms tab and Save "
+"Settings again."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回頁面/表單標籤並再次保存設置。"
+
+#: source/Pages/Admin/SettingsPage.php:236
+msgid ""
+"Error! Nonce Security Check Failed! Go back to the Advanced Settings tab and "
+"Save Settings again."
+msgstr "錯誤！ Nonce 安全檢查失敗！ 返回高級設置選項卡並再次保存設置。"
+
+#: source/Pages/AffiliatesHome.php:39
+msgid "Sales"
+msgstr "銷售量"
+
+#: source/Pages/AffiliatesHome.php:40
+msgid "Payment History"
+msgstr ""
+
+#: source/Pages/AffiliatesHome.php:41 source/Plugin.php:82
+msgid "Creatives"
+msgstr "廣告素材"
+
+#: source/Pages/AffiliatesHome.php:42
+msgid "Edit Profile"
+msgstr ""
+
+#: source/Pages/AffiliatesHome.php:47 source/Plugin.php:305
+msgid "Log out"
+msgstr "登出"
+
+#: source/Pages/AffiliatesHome.php:187 source/Util/JsonHandler.php:28
+#: source/Util/JsonHandler.php:52 source/Util/JsonHandler.php:84
+#: source/Util/JsonHandler.php:111 source/Util/JsonHandler.php:135
+#: source/Util/JsonHandler.php:193
+msgid "Invalid affiliate"
+msgstr "無效的加盟商會員"
+
+#: source/Pages/AffiliatesHome.php:189
+msgid "Inactive creative."
+msgstr "無效的廣告素材。"
+
+#: source/Pages/AffiliatesHome.php:345
+msgid ": Password may not contain slashes."
+msgstr ": 密碼不能包含斜線。"
+
+#: source/Pages/AffiliatesHome.php:350
+msgid ": Please enter the same password in both password fields."
+msgstr "：請在兩個密碼字段中輸入相同的密碼。"
+
+#: source/Pages/AffiliatesHome.php:428
+#, php-format
+msgid "%s per sale."
+msgstr "每筆銷售 %s。"
+
+#: source/Pages/AffiliatesHome.php:430
+#, php-format
+msgid "%s%% of each completed sale, pre-tax"
+msgstr "每筆已完成銷售額的 %s%%，稅前"
+
+#: source/Pages/AffiliatesRegister.php:68 source/Util/UserHandler.php:162
+msgid ""
+"Error submitting your details to the database. This is a bug, and your "
+"application was not submitted."
+msgstr "將您的詳細資料提交到數據庫時出錯。 這是一個錯誤，您的申請未提交。"
+
+#: source/Pages/AffiliatesRegister.php:77 source/Util/UserHandler.php:172
+#, php-format
+msgid "New affiliate registration on your site %s:"
+msgstr ""
+
+#: source/Pages/AffiliatesRegister.php:78 source/Util/UserHandler.php:173
+#, php-format
+msgid "Name: %s %s"
+msgstr "名稱: %s %s"
+
+#: source/Pages/AffiliatesRegister.php:79 source/Util/UserHandler.php:174
+#, php-format
+msgid "Email: %s"
+msgstr "電郵：%s"
+
+#: source/Pages/AffiliatesRegister.php:80 source/Util/UserHandler.php:175
+#, php-format
+msgid "Company: %s"
+msgstr "公司：%s"
+
+#: source/Pages/AffiliatesRegister.php:81 source/Util/UserHandler.php:176
+#, php-format
+msgid "Website: %s"
+msgstr "網站：%s"
+
+#: source/Pages/AffiliatesRegister.php:82 source/Util/UserHandler.php:177
+#, php-format
+msgid "View Application: %s"
+msgstr "查看應用程序：%s"
+
+#: source/Pages/AffiliatesRegister.php:87 source/Util/UserHandler.php:182
+msgid "New Affiliate Registration"
+msgstr "新的加盟商會員註冊"
+
+#: source/Pages/AffiliatesRegister.php:94
+#, php-format
+msgid "Affiliate application for %s"
+msgstr "%s 的加盟商申請"
+
+#: source/Pages/PublicPage.php:95 source/Util/JsonHandler.php:14
+#: source/Util/JsonHandler.php:44 source/Util/JsonHandler.php:76
+#: source/Util/JsonHandler.php:103 source/Util/JsonHandler.php:127
+#: source/Util/JsonHandler.php:138 source/Util/JsonHandler.php:152
+#: source/Util/JsonHandler.php:182 source/Util/JsonHandler.php:210
+msgid "Access denied."
+msgstr "拒絕訪問。"
+
+#: source/PayPal/MassPayRequest.php:24
+msgid "receiverType must be one of the RECEIVERTYPE_* constants"
+msgstr "receiverType 必須是 RECEIVERTYPE_* 常數之一"
+
+#: source/PayPal/MassPayRequest.php:33
+msgid "'amount' must be a valid monetary value"
+msgstr "“金額”必須是有效的貨幣價值"
+
+#: source/PayPal/MassPayResultFile.php:113
+#: source/PayPal/MassPayResultFile.php:124
+#, php-format
+msgid "Failed to parse amounts from field: %s"
+msgstr "無法解析欄位中的金額：%s"
+
+#: source/PayPal/Service.php:77
+#, php-format
+msgid ""
+"POST failed\n"
+"errors:\n"
+"%serrordata:\n"
+"%s"
+msgstr ""
+"POST 失敗\n"
+"錯誤：\n"
+"%serrordata：\n"
+"%s"
+
+#: source/PayPal/Service.php:82
+#, php-format
+msgid "Unknown response: %s"
+msgstr "未知的回應：%s"
+
+#: source/Plugin.php:74 source/Plugin.php:642
+msgid "Affiliate Management"
+msgstr "加盟商管理"
+
+#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:623
+#: source/Plugin.php:637 source/Plugin.php:642
+msgid "Affiliates"
+msgstr "加盟商"
+
+#: source/Plugin.php:91
+msgid "Store Affiliates"
+msgstr "儲存加盟商"
+
+#: source/Plugin.php:92
+msgid "Register"
+msgstr "注冊"
+
+#: source/Plugin.php:93
+msgid "Affiliate Login"
+msgstr "加盟商登錄"
+
+#: source/Plugin.php:301
+msgid "You are currently logged in"
+msgstr "您目前已登錄"
+
+#: source/Plugin.php:303
+msgid "Username"
+msgstr "用戶名"
+
+#: source/Plugin.php:313
+msgid "Email Address"
+msgstr "電郵地址"
+
+#: source/Plugin.php:315
+msgid "Password Lost and Found"
+msgstr ""
+
+#: source/Plugin.php:315
+msgid "Lost your password?"
+msgstr "忘記密碼？"
+
+#: source/Plugin.php:360
+msgid "Become an affiliate"
+msgstr "成為加盟商會員"
+
+#: source/Plugin.php:361
+msgid "Are you interested in earning money by directing visitors to our site?"
+msgstr "您是否有興趣通過 引導訪問者到訪我們的網站 來賺錢？"
+
+#: source/Plugin.php:363
+msgid "Sign up"
+msgstr "註冊"
+
+#: source/Plugin.php:363
+msgid " to become an affiliate today!"
+msgstr "今天就成為會員！"
+
+#: source/Plugin.php:637
+msgid "Be An Affiliate"
+msgstr "成為加盟商會員"
+
+#: source/Plugin.php:671
+msgid "Affiliates Manager Admin Functions"
+msgstr "加盟商管理器 管理功能"
+
+#: source/Plugin.php:675
+msgid "Affiliates Manager Manage Payouts"
+msgstr "加盟商管理器 管理支出"
+
+#: source/Plugin.php:679
+msgid "Affiliates Manager Click Tracking"
+msgstr "加盟商管理器 點擊跟踪"
+
+#: source/Plugin.php:683
+msgid "Affiliates Manager Commission Data"
+msgstr "加盟商管理器 佣金數據"
+
+#: source/Plugin.php:683
+msgid "Commissions"
+msgstr "佣金"
+
+#: source/Plugin.php:687
+msgid "Add-ons"
+msgstr "附加組件"
+
+#: source/Plugin.php:822
+msgid "Invalid JSON handler."
+msgstr "無效的 JSON 處理程序。"
+
+#: source/Plugin.php:853
+msgid "Nonce check failed for export My Affiliates to CSV!"
+msgstr ""
+
+#: source/Tracking/RequestTracker.php:131
+#: source/Tracking/RequestTracker.php:228
+msgid "no refkey in request."
+msgstr ""
+
+#: source/Tracking/RequestTracker.php:188
+msgid "invalid refkey data."
+msgstr "無效的 refkey 數據。"
+
+#: source/Tracking/RequestTracker.php:239
+msgid "invalid refkey data: "
+msgstr "無效的 refkey 數據："
+
+#: source/Tracking/TrackingKey.php:35
+#, php-format
+msgid "invalid refkey format. (length=%s)"
+msgstr "無效的 refkey 格式。 （長度=%s）"
+
+#: source/Util/AffiliateFormHelper.php:95
+msgid "is a blocked e-mail "
+msgstr "是被封鎖的電郵"
+
+#: source/Util/AffiliateFormHelper.php:97
+msgid "is in use"
+msgstr "正在使用中"
+
+#: source/Util/AffiliateFormHelper.php:159
+msgid "PayPal Transfer"
+msgstr "PayPal 轉賬"
+
+#: source/Util/AffiliateFormHelper.php:162
+msgid "Manual Transfer"
+msgstr "手動轉賬"
+
+#: source/Util/EmailHandler.php:52 source/Util/JsonHandler.php:60
+#: source/Util/UserHandler.php:83 source/Util/UserHandler.php:186
+#, php-format
+msgid "Affiliate Application for %s"
+msgstr "%s 的加盟商申請"
+
+#: source/Util/EmailHandler.php:74
+msgid "Your username and password"
+msgstr "您的用戶名和密碼"
+
+#: source/Util/EmailHandler.php:78
+#, php-format
+msgid "[%s] Your username and password for Affiliate Manager"
+msgstr "[%s] 您的會員用戶名和密碼"
+
+#: source/Util/EmailHandler.php:79
+#, php-format
+msgid "New affiliate registration for %s: has been approved!"
+msgstr ""
+
+#: source/Util/JsonHandler.php:17
+msgid "Invalid bounty amount."
+msgstr "賞金金額無效。"
+
+#: source/Util/JsonHandler.php:20
+msgid "Invalid bounty type."
+msgstr "賞金類型無效。"
+
+#: source/Util/JsonHandler.php:36 source/Util/JsonHandler.php:69
+#: source/Util/JsonHandler.php:95 source/Util/JsonHandler.php:114
+#: source/Util/JsonHandler.php:171
+msgid "Invalid state transition."
+msgstr "無效的狀態轉換。"
+
+#: source/Util/JsonHandler.php:155
+msgid "Invalid status."
+msgstr "無效狀態。"
+
+#: source/Util/JsonHandler.php:168
+msgid "Invalid creative"
+msgstr "廣告素材無效"
+
+#: source/Util/JsonHandler.php:185
+msgid "Invalid transaction type."
+msgstr "交易類型無效。"
+
+#: source/Util/JsonHandler.php:188
+msgid "Invalid value for amount."
+msgstr "數量值無效。"
+
+#: source/Util/UserHandler.php:29 source/Util/UserHandler.php:38
+#: source/Util/UserHandler.php:108 source/Util/UserHandler.php:117
+msgid "User already has an account and is already an affiliate"
+msgstr "用戶已經有一個帳戶 並且已經是 加盟商會員"
+
+#: source/Validation/CallbackValidator.php:17
+msgid "Argument 'callback' must be callable"
+msgstr "參數“打回來”必須是可調用的"
+
+#: source/Validation/CountryCodeValidator.php:15
+#: source/Validation/StringValidator.php:29
+msgid "is required"
+msgstr "是必須的"
+
+#: source/Validation/CountryCodes.php:14
+msgid "AFGHANISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:15
+msgid "ALAND ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:16
+msgid "ALBANIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:17
+msgid "ALGERIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:18
+msgid "AMERICAN SAMOA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:19
+msgid "ANDORRA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:20
+msgid "ANGOLA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:21
+msgid "ANGUILLA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:22
+msgid "ANTARCTICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:23
+msgid "ANTIGUA AND BARBUDA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:24
+msgid "ARGENTINA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:25
+msgid "ARMENIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:26
+msgid "ARUBA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:27
+msgid "AUSTRALIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:28
+msgid "AUSTRIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:29
+msgid "AZERBAIJAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:30
+msgid "BAHAMAS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:31
+msgid "BAHRAIN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:32
+msgid "BANGLADESH"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:33
+msgid "BARBADOS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:34
+msgid "BELARUS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:35
+msgid "BELGIUM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:36
+msgid "BELIZE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:37
+msgid "BENIN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:38
+msgid "BERMUDA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:39
+msgid "BHUTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:40
+msgid "BOLIVIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:41
+msgid "BOSNIA AND HERZEGOVINA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:42
+msgid "BOTSWANA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:43
+msgid "BOUVET ISLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:44
+msgid "BRAZIL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:45
+msgid "BRUNEI DARUSSALAM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:46
+msgid "BULGARIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:47
+msgid "BURKINA FASO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:48
+msgid "BURUNDI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:49
+msgid "CAMBODIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:50
+msgid "CAMEROON"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:51
+msgid "CANADA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:52
+msgid "CAPE VERDE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:53
+msgid "CAYMAN ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:54
+msgid "CENTRAL AFRICAN REPUBLIC"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:55
+msgid "CHAD"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:56
+msgid "CHILE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:57
+msgid "CHINA"
+msgstr "中國"
+
+#: source/Validation/CountryCodes.php:58
+msgid "CHRISTMAS ISLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:59
+msgid "COCOS (KEELING) ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:60
+msgid "COLOMBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:61
+msgid "COMOROS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:62
+msgid "CONGO (BRAZZAVILLE)"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:63
+msgid "CONGO (KINSHASA)"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:64
+msgid "COOK ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:65
+msgid "COSTA RICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:66
+msgid "CROATIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:67
+msgid "CUBA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:68
+msgid "CYPRUS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:69
+msgid "CZECH REPUBLIC"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:70
+msgid "DENMARK"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:71
+msgid "DJIBOUTI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:72
+msgid "DOMINICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:73
+msgid "DOMINICAN REPUBLIC"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:74
+msgid "ECUADOR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:75
+msgid "EGYPT"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:76
+msgid "EL SALVADOR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:77
+msgid "EQUATORIAL GUINEA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:78
+msgid "ERITREA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:79
+msgid "ESTONIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:80
+msgid "ETHIOPIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:81
+msgid "FALKLAND ISLANDS (MALVINAS)"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:82
+msgid "FAROE ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:83
+msgid "FIJI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:84
+msgid "FINLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:85
+msgid "FRANCE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:86
+msgid "FRENCH GUIANA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:87
+msgid "FRENCH POLYNESIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:88
+msgid "FRENCH SOUTHERN TERRITORIES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:89
+msgid "GABON"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:90
+msgid "GAMBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:91
+msgid "GEORGIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:92
+msgid "GERMANY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:93
+msgid "GHANA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:94
+msgid "GIBRALTAR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:95
+msgid "GREECE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:96
+msgid "GREENLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:97
+msgid "GRENADA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:98
+msgid "GUADELOUPE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:99
+msgid "GUAM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:100
+msgid "GUATEMALA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:101
+msgid "GUINEA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:102
+msgid "GUINEA-BISSAU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:103
+msgid "GUYANA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:104
+msgid "HAITI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:105
+msgid "HOLY SEE (VATICAN CITY STATE)"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:106
+msgid "HONDURAS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:107
+msgid "HONG KONG"
+msgstr "香港"
+
+#: source/Validation/CountryCodes.php:108
+msgid "HUNGARY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:109
+msgid "ICELAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:110
+msgid "INDIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:111
+msgid "INDONESIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:112
+msgid "IRAN ISLAMIC REPUBLIC OF"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:113
+msgid "IRAQ"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:114
+msgid "IRELAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:115
+msgid "ISRAEL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:116
+msgid "ITALY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:117
+msgid "IVORY COAST"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:118
+msgid "JAMAICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:119
+msgid "JAPAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:120
+msgid "JORDAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:121
+msgid "KAZAKHSTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:122
+msgid "KENYA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:123
+msgid "KIRIBATI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:124
+msgid "KOREA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:125
+msgid "KOREA REPUBLIC OF"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:126
+msgid "KUWAIT"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:127
+msgid "KYRGYZSTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:128
+msgid "LAO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:129
+msgid "LATVIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:130
+msgid "LEBANON"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:131
+msgid "LESOTHO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:132
+msgid "LIBERIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:133
+msgid "LIBYAN ARAB JAMAHIRIYA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:134
+msgid "LIECHTENSTEIN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:135
+msgid "LITHUANIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:136
+msgid "LUXEMBOURG"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:137
+msgid "MACAO"
+msgstr "澳門"
+
+#: source/Validation/CountryCodes.php:138
+msgid "MACEDONIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:139
+msgid "MADAGASCAR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:140
+msgid "MALAWI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:141
+msgid "MALAYSIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:142
+msgid "MALDIVES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:143
+msgid "MALI"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:144
+msgid "MALTA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:145
+msgid "MARSHALL ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:146
+msgid "MARTINIQUE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:147
+msgid "MAURITANIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:148
+msgid "MAURITIUS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:149
+msgid "MAYOTTE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:150
+msgid "MEXICO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:151
+msgid "MICRONESIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:152
+msgid "MOLDOVA, REPUBLIC OF"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:153
+msgid "MONACO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:154
+msgid "MONGOLIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:155
+msgid "MONTENEGRO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:156
+msgid "MONTSERRAT"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:157
+msgid "MOROCCO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:158
+msgid "MOZAMBIQUE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:159
+msgid "MYANMAR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:160
+msgid "NAMIBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:161
+msgid "NAURU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:162
+msgid "NEPAL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:163
+msgid "NETHERLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:164
+msgid "NETHERLANDS ANTILLES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:165
+msgid "NEW CALEDONIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:166
+msgid "NEW ZEALAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:167
+msgid "NICARAGUA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:168
+msgid "NIGER"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:169
+msgid "NIGERIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:170
+msgid "NIUE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:171
+msgid "NORFOLK ISLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:172
+msgid "NORTHERN MARIANA ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:173
+msgid "NORWAY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:174
+msgid "OMAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:175
+msgid "PAKISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:176
+msgid "PALAU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:177
+msgid "PALESTINIAN TERRITORY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:178
+msgid "PANAMA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:179
+msgid "PAPUA NEW GUINEA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:180
+msgid "PARAGUAY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:181
+msgid "PERU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:182
+msgid "PHILIPPINES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:183
+msgid "PITCAIRN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:184
+msgid "POLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:185
+msgid "PORTUGAL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:186
+msgid "PUERTO RICO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:187
+msgid "QATAR"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:188
+msgid "REUNION"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:189
+msgid "ROMANIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:190
+msgid "RUSSIAN FEDERATION"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:191
+msgid "RWANDA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:192
+msgid "SAINT HELENA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:193
+msgid "SAINT KITTS AND NEVIS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:194
+msgid "SAINT LUCIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:195
+msgid "SAINT PIERRE AND MIQUELON"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:196
+msgid "SAMOA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:197
+msgid "SAN MARINO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:198
+msgid "SAO TOME AND PRINCIPE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:199
+msgid "SAUDI ARABIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:200
+msgid "SENEGAL"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:201
+msgid "SERBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:202
+msgid "SEYCHELLES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:203
+msgid "SIERRA LEONE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:204
+msgid "SINGAPORE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:205
+msgid "SLOVAKIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:206
+msgid "SLOVENIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:207
+msgid "SOLOMON ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:208
+msgid "SOMALIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:209
+msgid "SOUTH AFRICA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:210
+msgid "SPAIN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:211
+msgid "SRI LANKA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:212
+msgid "SUDAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:213
+msgid "SURINAME"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:214
+msgid "SVALBARD AND JAN MAYEN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:215
+msgid "SWAZILAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:216
+msgid "SWEDEN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:217
+msgid "SWITZERLAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:218
+msgid "SYRIAN ARAB REPUBLIC"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:219
+msgid "TAIWAN"
+msgstr "台灣"
+
+#: source/Validation/CountryCodes.php:220
+msgid "TAJIKISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:221
+msgid "TANZANIA UNITED REPUBLIC OF"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:222
+msgid "THAILAND"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:223
+msgid "TIMOR-LESTE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:224
+msgid "TOGO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:225
+msgid "TOKELAU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:226
+msgid "TONGA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:227
+msgid "TRINIDAD AND TOBAGO"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:228
+msgid "TUNISIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:229
+msgid "TURKEY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:230
+msgid "TURKMENISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:231
+msgid "TURKS AND CAICOS ISLANDS"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:232
+msgid "TUVALU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:233
+msgid "UGANDA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:234
+msgid "UKRAINE"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:235
+msgid "UNITED ARAB EMIRATES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:236
+msgid "UNITED KINGDOM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:237
+msgid "UNITED STATES"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:238
+msgid "URUGUAY"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:239
+msgid "UZBEKISTAN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:240
+msgid "VANUATU"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:241
+msgid "VENEZUELA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:242
+msgid "VIETNAM"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:243
+msgid "VIRGIN ISLANDS BRITISH"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:244
+msgid "VIRGIN ISLANDS U.S."
+msgstr ""
+
+#: source/Validation/CountryCodes.php:245
+msgid "WALLIS AND FUTUNA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:246
+msgid "WESTERN SAHARA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:247
+msgid "YEMEN"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:248
+msgid "ZAMBIA"
+msgstr ""
+
+#: source/Validation/CountryCodes.php:249
+msgid "ZIMBABWE"
+msgstr ""
+
+#: source/Validation/EmailValidator.php:14
+msgid "must be a valid e-mail address"
+msgstr "必須是一個有效的電郵地址"
+
+#: source/Validation/MoneyValidator.php:12
+msgid "must be a valid monetary value"
+msgstr ""
+
+#: source/Validation/MultiPartPhoneNumberValidator.php:12
+msgid "must be a valid phone number"
+msgstr ""
+
+#: source/Validation/MultiPartSocialSecurityNumberValidator.php:13
+msgid "must be a valid social security number"
+msgstr ""
+
+#: source/Validation/NumberValidator.php:14
+msgid "must be a number"
+msgstr ""
+
+#: source/Validation/PhoneNumberValidator.php:12
+msgid "must be a phone number"
+msgstr ""
+
+#: source/Validation/SetValidator.php:18
+#: source/Validation/StateCodeValidator.php:14
+msgid "must be selected"
+msgstr ""
+
+#: source/Validation/StringValidator.php:24
+msgid "must be between % and %s characters"
+msgstr ""
+
+#: source/Validation/StringValidator.php:31
+#, php-format
+msgid "must be at least %s characters"
+msgstr ""
+
+#: source/Validation/StringValidator.php:35
+#, php-format
+msgid "must be no more than %s characters"
+msgstr ""
+
+#: source/Validation/ZipCodeValidator.php:16
+msgid "must be a valid zip code"
+msgstr ""
+
+#: source/display_functions.php:11
+msgid "Affiliate has applied, but is waiting on your decision."
+msgstr "加盟商已申請，但正在等待您的決定。"
+
+#: source/display_functions.php:12
+msgid "Affiliate has been approved, but has not accepted terms."
+msgstr "加盟商已獲批准，但尚未接受條款。"
+
+#: source/display_functions.php:13
+msgid "Affiliate is active, and will receive credit for leads."
+msgstr "加盟商是活躍的，並且將獲得潛在客戶的信用。"
+
+#: source/display_functions.php:14
+msgid ""
+"Affiliate has accepted terms and provided payment details.<br /> If the "
+"details look good, you should activate this affiliate so they can begin "
+"sending traffic."
+msgstr "加盟商已接受條款並提供了付款詳情。<br /> 如果詳細信息看起來不錯，您應該激活此加盟商會員，以便他們可以開始發送流量。"
+
+#: source/display_functions.php:15
+msgid "Affiliate has been disabled."
+msgstr "加盟商已被禁用。"
+
+#: source/display_functions.php:16
+msgid "Affiliate was declined."
+msgstr "加盟商被拒絕。"
+
+#: source/display_functions.php:17
+msgid "Affiliate was blocked and cannot re-apply."
+msgstr "加盟商被屏蔽，無法重新申請。"
+
+#: source/display_functions.php:23
+#, php-format
+msgid "%s per sale"
+msgstr "每筆銷售 %s"
+
+#: source/display_functions.php:25
+#, php-format
+msgid "%s%% of pre-tax sales"
+msgstr "%s%% 稅前銷售額"
+
+#: source/display_functions.php:30 source/display_functions.php:41
+msgid "Select an option"
+msgstr "選擇一個選項"
+
+#: source/dynamic-translatable-strings.php:4
+msgid "Address Line 1"
+msgstr "地址 (第一行)"
+
+#: source/dynamic-translatable-strings.php:5
+msgid "Address Line 2"
+msgstr "地址 (第二行)"
+
+#: source/dynamic-translatable-strings.php:6
+msgid "Zip Code"
+msgstr "郵政編碼 (在沒有郵政編碼的地區, 請輸入 \"000000\")"
+
+#: source/dynamic-translatable-strings.php:7
+msgid "Company Name"
+msgstr "公司名稱"
+
+#: source/dynamic-translatable-strings.php:8
+msgid "Website URL"
+msgstr "網站 URL"
