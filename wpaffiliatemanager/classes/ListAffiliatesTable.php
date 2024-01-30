@@ -95,6 +95,16 @@ class WPAM_List_Affiliates_Table extends WP_List_Table {
     function process_bulk_action() {
         //Detect when a bulk action is being triggered... //print_r($_GET);
         if ('delete' === $this->current_action()) {
+            $nonce = '';
+            if(isset($_REQUEST['_wpnonce'])){
+                $nonce = sanitize_text_field($_REQUEST['_wpnonce']);
+            }
+            else{
+                wp_die(__('Error! Nonce is not present! Go to the My Affiliates page to delete the affiliate.', 'affiliates-manager'));
+            }
+            if(!wp_verify_nonce($nonce, 'bulk-'.$this->_args['plural'])){
+                wp_die(__('Error! Nonce Security Check Failed! Go to the My Affiliates page to delete the affiliate.', 'affiliates-manager'));
+            }
             $nvp_key = $this->_args['singular'];
             $records_to_delete = $_GET[$nvp_key];
             if (empty($records_to_delete)) {
