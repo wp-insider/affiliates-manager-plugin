@@ -306,12 +306,17 @@ class WPAM_Plugin {
             global $current_user;
             wp_get_current_user();
             $logout_url = wp_logout_url($home_page_url);
+            $gravatar_src = '//www.gravatar.com/avatar/' . md5(trim(strtolower($current_user->user_email))) . '?s=64';
+            $gravatar_output = '<div class="wpam-logged-in-gravatar"><img src="'.esc_url($gravatar_src).'" /></div>';
+            if(get_option(WPAM_PluginConfig::$DisableAffGravatar) == 1){
+                $gravatar_output = '';
+            }
             $output = '<div class="wpam-logged-in">';
             $output .= '<p>' . __('You are currently logged in', 'affiliates-manager') . '</p>';
-            $output .= '<div class="wpam-logged-in-gravatar"><img src="//www.gravatar.com/avatar/' . md5(trim(strtolower($current_user->user_email))) . '?s=64" /></div>';
-            $output .= '<div class="wpam-logged-in-username">' . __('Username', 'affiliates-manager') . ': ' . $current_user->user_login . "</div>";
-            $output .= '<div class="wpam-logged-in-email">' . __('Email', 'affiliates-manager') . ': ' . $current_user->user_email . "</div>";
-            $output .= '<div class="wpam-logged-in-logout-link"><a href="' . $logout_url . '">' . __('Log out', 'affiliates-manager') . '</a></div>';
+            $output .= $gravatar_output;
+            $output .= '<div class="wpam-logged-in-username">' . __('Username', 'affiliates-manager') . ': ' . esc_html($current_user->user_login) . "</div>";
+            $output .= '<div class="wpam-logged-in-email">' . __('Email', 'affiliates-manager') . ': ' . esc_html($current_user->user_email) . "</div>";
+            $output .= '<div class="wpam-logged-in-logout-link"><a href="' . esc_url($logout_url) . '">' . __('Log out', 'affiliates-manager') . '</a></div>';
             $output .= '</div>';
             return $output;
         } else {
@@ -321,7 +326,7 @@ class WPAM_Plugin {
                 'remember' => true,
                 'label_username' => __('Email Address', 'affiliates-manager')
             );
-            $lost_password_link = '<div class="wpam-lost-password"><a href="' . wp_lostpassword_url() . '" title="' . __('Password Lost and Found', 'affiliates-manager') . '">' . __('Lost your password?', 'affiliates-manager') . '</a></div>';
+            $lost_password_link = '<div class="wpam-lost-password"><a href="' . esc_url(wp_lostpassword_url()) . '" title="' . __('Password Lost and Found', 'affiliates-manager') . '">' . __('Lost your password?', 'affiliates-manager') . '</a></div>';
             $form_output = '<div class="wpam-login-form">';
             $form_output .= wp_login_form($args);
             $form_output .= $lost_password_link;
@@ -389,6 +394,9 @@ class WPAM_Plugin {
         }
         else{
             if(get_option(WPAM_PluginConfig::$UseIPReferralTrack) == 1){
+                if(get_option(WPAM_PluginConfig::$AnonymizeIPClickTrack) == 1){
+                    return $custom_field_val;
+                }
                 $user_ip = WPAM_Click_Tracking::get_user_ip();
                 $aff_id = WPAM_Click_Tracking::get_referrer_id_from_ip_address_by_cookie_duration($user_ip);
                 if (!empty($aff_id)){
@@ -462,6 +470,9 @@ class WPAM_Plugin {
         }
         else{
             if(get_option(WPAM_PluginConfig::$UseIPReferralTrack) == 1){
+                if(get_option(WPAM_PluginConfig::$AnonymizeIPClickTrack) == 1){
+                    return;
+                }
                 $user_ip = WPAM_Click_Tracking::get_user_ip();
                 $aff_id = WPAM_Click_Tracking::get_referrer_id_from_ip_address_by_cookie_duration($user_ip);
                 if (!empty($aff_id)){
@@ -586,6 +597,9 @@ class WPAM_Plugin {
         }
         else{
             if(get_option(WPAM_PluginConfig::$UseIPReferralTrack) == 1){
+                if(get_option(WPAM_PluginConfig::$AnonymizeIPClickTrack) == 1){
+                    return $payment_meta;
+                }
                 $user_ip = WPAM_Click_Tracking::get_user_ip();
                 $aff_id = WPAM_Click_Tracking::get_referrer_id_from_ip_address_by_cookie_duration($user_ip);
                 if (!empty($aff_id)){
@@ -614,6 +628,9 @@ class WPAM_Plugin {
             }
             else {
                 if(get_option(WPAM_PluginConfig::$UseIPReferralTrack) == 1){
+                    if(get_option(WPAM_PluginConfig::$AnonymizeIPClickTrack) == 1){
+                        return;
+                    }
                     $user_ip = WPAM_Click_Tracking::get_user_ip();
                     $aff_id = WPAM_Click_Tracking::get_referrer_id_from_ip_address_by_cookie_duration($user_ip);
                     if (!empty($aff_id)){

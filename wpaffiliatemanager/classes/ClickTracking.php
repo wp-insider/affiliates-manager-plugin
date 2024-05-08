@@ -48,8 +48,11 @@ class WPAM_Click_Tracking {
             setcookie('wpam_id', $aff_id, $cookie_life_time, "/", COOKIE_DOMAIN);
             //do not record multiple clicks within 5 seconds
             $current_datetime = date("Y-m-d H:i:s", time());
-            $cd_datetime = date("Y-m-d H:i:s", strtotime($current_datetime) - 5);
+            $cd_datetime = date("Y-m-d H:i:s", strtotime($current_datetime) - 5);         
             $user_ip = WPAM_Click_Tracking::get_user_ip();
+            if(get_option(WPAM_PluginConfig::$AnonymizeIPClickTrack) == 1){
+                $user_ip = wp_privacy_anonymize_ip($user_ip);
+            }
             $table = WPAM_TRACKING_TOKENS_TBL;
             $result = $wpdb->get_var( $wpdb->prepare( 
             "

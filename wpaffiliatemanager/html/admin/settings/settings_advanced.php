@@ -117,4 +117,30 @@ $home_url = home_url('/');
 			?>/><p class="description"><?php _e('If checked, WordPress nonces will be validated during affiliate registration to protect the form from misuse.', 'affiliates-manager');?></p>
 		</td>
 	</tr>
+        <tr>
+		<th width="200">
+			<label for="anonymizeIPClickTrack">
+				<?php _e('Anonymize IP Address for Click Tracking', 'affiliates-manager');?>
+			</label>
+		</th>
+		<td>
+			<input type="checkbox" id="anonymizeIPClickTrack" name="anonymizeIPClickTrack" <?php
+			if ($this->viewData['request']['anonymizeIPClickTrack'])
+				echo 'checked="checked"';
+			?>/><p class="description"><?php _e('If checked, the ip address of the user will be anonymized when tracking clicks. This can be useful for GDPR compliance. Please note that when this feature is enabled, the fallback method of referral tracking with ip addresses will not work.', 'affiliates-manager');?></p>
+		</td>
+	</tr>
+        <tr>
+		<th width="200">
+			<label for="disableAffGravatar">
+				<?php _e('Disable Affiliate Gravatar', 'affiliates-manager');?>
+			</label>
+		</th>
+		<td>
+			<input type="checkbox" id="disableAffGravatar" name="disableAffGravatar" <?php
+			if ($this->viewData['request']['disableAffGravatar'])
+				echo 'checked="checked"';
+			?>/><p class="description"><?php _e('If checked, no gravatar will be shown on the affiliate login page when logged in.', 'affiliates-manager');?></p>
+		</td>
+	</tr>
 </table>

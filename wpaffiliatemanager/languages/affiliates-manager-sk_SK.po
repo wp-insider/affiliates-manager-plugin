@@ -1,0 +1,2215 @@
+# Translation of Plugins - Affiliates Manager - Development (trunk) in Czech
+# This file is distributed under the same license as the Plugins - Affiliates Manager - Development (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Affiliates Manager - Development (trunk)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-02 10:10+0000\n"
+"PO-Revision-Date: 2024-05-03 12:24+0200\n"
+"Last-Translator: ZEOZOE\n"
+"Language-Team: Slovenčina\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : "
+"2;\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Loco-Version: 2.6.7; wp-6.5.2\n"
+
+#: source/Plugin.php:322
+msgid "Email Address"
+msgstr "E-mailová adresa"
+
+#: html/admin/settings/settings_aff_pages.php:38
+msgid "Terms and Conditions Page"
+msgstr "Stránka obchodných podmienok"
+
+#: html/admin/settings/settings_aff_pages.php:16
+msgid "Registration Page"
+msgstr "Registračná stránka"
+
+#: html/admin/settings/settings_aff_pages.php:5
+msgid "Home Page"
+msgstr "Úvodná stránka"
+
+#: classes/ListCommissionTable.php:72
+#: source/Admin-menu/wpam-commission-menu.php:200
+#: source/Admin-menu/wpam-commission-menu.php:357
+msgid "Buyer Email"
+msgstr "E-mail kupujúceho"
+
+#: classes/ListClicksTable.php:61
+msgid "IP Address"
+msgstr "IP adresa"
+
+#: html/admin/settings/settings_payment.php:18
+msgid "<a href=\"%s\" target=\"_blank\">How to Setup PayPal Mass Pay</a>"
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">Ako nastaviť PayPal hromadnú platbu</a>"
+
+#: source/Util/AffiliateFormHelper.php:166
+msgid "Manual Transfer"
+msgstr "Ručný prevod"
+
+#: html/admin/settings/settings_registration.php:427
+#: source/Data/Models/AffiliateModel.php:186
+msgid "Manual"
+msgstr "Manuálne"
+
+#: source/display_functions.php:25
+msgid "%s%% of pre-tax sales"
+msgstr "%s%% nezdanených predajov"
+
+#: html/admin/settings/settings_advanced.php:8
+msgid "Default Landing Page"
+msgstr "Predvolená cieľová stránka"
+
+#: html/admin/settings/settings_aff_pages.php:27
+msgid "Login Page"
+msgstr "Prihlasovacia stránka"
+
+#: html/admin/settings/settings_advanced.php:13
+msgid ""
+"Your default landing page URL is <code>%s</code>. If you want to change to a "
+"different URL you can specify it here."
+msgstr ""
+"URL vašej východiskovej cieľovej stránky je <code>%s</code>. Ak chcete "
+"stránku zmeniť na inú URL, uveďte ju tu."
+
+#: html/admin/settings/settings_aff_pages.php:32
+msgid "This is the URL of your Affiliate Login page"
+msgstr "Toto je adresa URL vašej pridruženej prihlasovacej stránky"
+
+#: html/admin/settings/settings.php:51
+msgid "Advanced Settings"
+msgstr "Pokročilé nastavenie"
+
+#: html/admin/settings/settings_general.php:117
+msgid "<a target=\"_blank\" href=\"%s\">Read more on cookie duration here</a>"
+msgstr "<a target=\"_blank\" href=\"%s\">Čítajte viac o trvaní cookies</a>"
+
+#: source/dynamic-translatable-strings.php:6
+msgid "Zip Code"
+msgstr "PSČ"
+
+#: source/dynamic-translatable-strings.php:5
+msgid "Address Line 2"
+msgstr "Adresa: riadok 2"
+
+#: source/dynamic-translatable-strings.php:7
+msgid "Company Name"
+msgstr "Názov spoločnosti"
+
+#: source/dynamic-translatable-strings.php:8
+msgid "Website URL"
+msgstr "URL webu"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://wpaffiliatemanager.com"
+msgstr "https://wpaffiliatemanager.com"
+
+#. Description of the plugin
+msgid "Plugin to recruit, manage, track and pay your affiliates."
+msgstr "Plugin pre nábor, správu, sledovanie a vyplácanie vašich partnerov."
+
+#. Plugin Name of the plugin
+msgid "WP Affiliate Manager"
+msgstr "WP Affiliate Manager"
+
+#. Author of the plugin
+msgid "wp.insider, wpaffiliatemgr"
+msgstr "wp.insider, wpaffiliatemgr"
+
+#: source/display_functions.php:23
+msgid "%s per sale"
+msgstr "%s z jednotlivých predajov"
+
+#: source/Plugin.php:778
+msgid "Add-ons"
+msgstr "Rozšírenie"
+
+#: source/dynamic-translatable-strings.php:4
+msgid "Address Line 1"
+msgstr "Adresa: riadok 1"
+
+#: source/Util/EmailHandler.php:52 source/Util/JsonHandler.php:70
+#: source/Util/UserHandler.php:90 source/Util/UserHandler.php:200
+msgid "Affiliate Application for %s"
+msgstr "Žiadosť partnera %s"
+
+#: source/display_functions.php:14
+msgid ""
+"Affiliate has accepted terms and provided payment details.<br /> If the "
+"details look good, you should activate this affiliate so they can begin "
+"sending traffic."
+msgstr ""
+"Partner prijal zmluvné podmienky a poskytol platobné údaje.<br /> Ak je "
+"všetko v poriadku, aktivujte partnera, aby mohol na vaše stránky začať "
+"posielať návštevníkov."
+
+#: source/display_functions.php:11
+msgid "Affiliate has applied, but is waiting on your decision."
+msgstr "Partner si zažiadal, ale čaká na vaše rozhodnutie."
+
+#: source/display_functions.php:12
+msgid "Affiliate has been approved, but has not accepted terms."
+msgstr "Partner bol schválený, ale neprijal zmluvné podmienky."
+
+#: source/display_functions.php:15
+msgid "Affiliate has been disabled."
+msgstr "Partner bol stornovaný."
+
+#: source/display_functions.php:13
+msgid "Affiliate is active, and will receive credit for leads."
+msgstr "Partner je aktívny a dostane kredit za leads."
+
+#: source/display_functions.php:17
+msgid "Affiliate was blocked and cannot re-apply."
+msgstr "Partner bol zablokovaný a nemôže podať novú žiadosť."
+
+#: source/display_functions.php:16
+msgid "Affiliate was declined."
+msgstr "Partner bol odmietnutý."
+
+#: source/Plugin.php:770
+msgid "Affiliates Manager Click Tracking"
+msgstr "Sledovanie kliknutí Affiliates Managera"
+
+#: source/Plugin.php:774
+msgid "Affiliates Manager Commission Data"
+msgstr "Údaje Affiliate Managera o províziách"
+
+#: source/Validation/CallbackValidator.php:17
+msgid "Argument 'callback' must be callable"
+msgstr "Argument 'callback' musí byť \"callable\""
+
+#: source/Plugin.php:774
+msgid "Commissions"
+msgstr "Provízia"
+
+#: source/Plugin.php:891 source/Plugin.php:908 source/Plugin.php:925
+#: source/Plugin.php:942 source/Plugin.php:959 source/Plugin.php:976
+#: source/Plugin.php:993 source/Plugin.php:1010
+msgid "Invalid JSON handler."
+msgstr "Neplatný JSON handler."
+
+#: source/Util/JsonHandler.php:21
+msgid "Invalid bounty amount."
+msgstr "Neplatná čiastka provízie."
+
+#: source/Util/JsonHandler.php:25
+msgid "Invalid bounty type."
+msgstr "Neplatný typ provízie."
+
+#: source/Util/JsonHandler.php:194
+msgid "Invalid creative"
+msgstr "Neplatná propagácia"
+
+#: source/Util/JsonHandler.php:42 source/Util/JsonHandler.php:79
+#: source/Util/JsonHandler.php:109 source/Util/JsonHandler.php:132
+#: source/Util/JsonHandler.php:197
+msgid "Invalid state transition."
+msgstr "Neplatný transition status."
+
+#: source/Util/JsonHandler.php:181
+msgid "Invalid status."
+msgstr "Neplatný stav."
+
+#: source/Util/JsonHandler.php:215
+msgid "Invalid transaction type."
+msgstr "Neplatný typ transakcie."
+
+#: source/Util/JsonHandler.php:219
+msgid "Invalid value for amount."
+msgstr "Neplatná hodnota čiastky."
+
+#: source/Util/EmailHandler.php:79
+msgid "New affiliate registration for %s: has been approved!"
+msgstr "Nová registrácia partnera %s: bola schválená!"
+
+#: source/Util/AffiliateFormHelper.php:163
+msgid "PayPal Transfer"
+msgstr "Prevod PayPal"
+
+#: source/Util/UserHandler.php:26 source/Util/UserHandler.php:35
+#: source/Util/UserHandler.php:112 source/Util/UserHandler.php:121
+msgid "User already has an account and is already an affiliate"
+msgstr "Užívateľ už má účet a je už partnerom"
+
+#: source/Util/EmailHandler.php:74
+msgid "Your username and password"
+msgstr "Vaše uživatelské jméno a heslo"
+
+#: source/Util/EmailHandler.php:78
+msgid "[%s] Your username and password for Affiliate Manager"
+msgstr "[%s] Vaše uživateľské meno a heslo pre Affiliate program"
+
+#: source/Tracking/RequestTracker.php:188
+msgid "invalid refkey data."
+msgstr "neplatné dáta refkey."
+
+#: source/Tracking/RequestTracker.php:239
+msgid "invalid refkey data: "
+msgstr "neplatné dáta refkey: "
+
+#: source/Tracking/TrackingKey.php:35
+msgid "invalid refkey format. (length=%s)"
+msgstr "neplatný formát refkey. (length=%s)"
+
+#: source/Util/AffiliateFormHelper.php:101
+msgid "is in use"
+msgstr "je už používaný"
+
+#: source/Validation/CountryCodeValidator.php:15
+#: source/Validation/StringValidator.php:29
+msgid "is required"
+msgstr "je vyžadované"
+
+#: source/Validation/NumberValidator.php:14
+msgid "must be a number"
+msgstr "musí byť číslo"
+
+#: source/Validation/PhoneNumberValidator.php:12
+msgid "must be a phone number"
+msgstr "musí byť telefónne číslo"
+
+#: source/Validation/MoneyValidator.php:12
+msgid "must be a valid monetary value"
+msgstr "musí byť platná peňažná hodnota"
+
+#: source/Validation/MultiPartPhoneNumberValidator.php:12
+msgid "must be a valid phone number"
+msgstr "musí byť platné telefónne číslo"
+
+#: source/Validation/MultiPartSocialSecurityNumberValidator.php:13
+msgid "must be a valid social security number"
+msgstr "musí byť platné číslo Social Security Number (USA)"
+
+#: source/Validation/ZipCodeValidator.php:16
+msgid "must be a valid zip code"
+msgstr "musí byť platné PSČ"
+
+#: source/Validation/StringValidator.php:31
+msgid "must be at least %s characters"
+msgstr "musí byť aspoň %s znakov"
+
+#: source/Validation/StringValidator.php:24
+msgid "must be between % and %s characters"
+msgstr "musí byť medzi % a %s znakmi"
+
+#: source/Validation/StringValidator.php:35
+msgid "must be no more than %s characters"
+msgstr "nesmie byť viac ako %s znakov"
+
+#: source/Validation/SetValidator.php:18
+#: source/Validation/StateCodeValidator.php:14
+msgid "must be selected"
+msgstr "musí byť vybraté"
+
+#: source/Tracking/RequestTracker.php:131
+#: source/Tracking/RequestTracker.php:228
+msgid "no refkey in request."
+msgstr "v požiadavke chýba refkey."
+
+#: source/Util/AffiliateFormHelper.php:99
+msgid "is a blocked e-mail "
+msgstr "je zablokovaný e-mail "
+
+#: source/Validation/EmailValidator.php:14
+msgid "must be a valid e-mail address"
+msgstr "musí byť platná e-mailová adresa"
+
+#: source/Plugin.php:372
+msgid " to become an affiliate today!"
+msgstr " a staňte se partnerom už dnes!"
+
+#: source/Plugin.php:370
+msgid "Are you interested in earning money by directing visitors to our site?"
+msgstr "Chcete zarábať tým, že na naše stránky budete posielať návštevníkov?"
+
+#: source/Plugin.php:728
+msgid "Be An Affiliate"
+msgstr "Staňte sa partnerom"
+
+#: source/Plugin.php:369
+msgid "Become an affiliate"
+msgstr "Staňte sa partnerom"
+
+#: html/admin/settings/settings.php:22 source/Plugin.php:758
+msgid "Settings"
+msgstr "Nastavenie"
+
+#: source/Plugin.php:372
+msgid "Sign up"
+msgstr "Zaregistrujte sa"
+
+#: source/Plugin.php:324
+msgid "Lost your password?"
+msgstr "Zabudli ste heslo?"
+
+#: source/Plugin.php:324
+msgid "Password Lost and Found"
+msgstr "Zabudnuté a nájdené heslo"
+
+#: source/Pages/AffiliatesHome.php:47 source/Plugin.php:314
+msgid "Log out"
+msgstr "Odhlásiť sa"
+
+#: source/Plugin.php:93
+msgid "Affiliate Login"
+msgstr "Prihlásenie partnera"
+
+#: source/Plugin.php:312
+msgid "Username"
+msgstr "Užívateľské meno"
+
+#: source/Plugin.php:310
+msgid "You are currently logged in"
+msgstr "Teraz ste prihlásený na"
+
+#: source/Plugin.php:92
+msgid "Register"
+msgstr "Registrácia"
+
+#: source/Plugin.php:91
+msgid "Store Affiliates"
+msgstr "Partneri obchodu"
+
+#: source/Pages/AffiliatesHome.php:40
+msgid "Payment History"
+msgstr "História platieb"
+
+#: source/Pages/AffiliatesHome.php:42
+msgid "Edit Profile"
+msgstr "Upraviť profil"
+
+#: source/Pages/AffiliatesHome.php:432
+msgid "%s per sale."
+msgstr "%s z jednotlivých predajov."
+
+#: source/Pages/AffiliatesHome.php:434
+msgid "%s%% of each completed sale, pre-tax"
+msgstr "%s%% z každého dokončeného a nezdaneného predaja"
+
+#: source/PayPal/MassPayRequest.php:33
+msgid "'amount' must be a valid monetary value"
+msgstr "'čiastka' musí mať platnú peňažnu hodnotu"
+
+#: source/Pages/PublicPage.php:95 source/Util/JsonHandler.php:14
+#: source/Util/JsonHandler.php:50 source/Util/JsonHandler.php:86
+#: source/Util/JsonHandler.php:117 source/Util/JsonHandler.php:145
+#: source/Util/JsonHandler.php:160 source/Util/JsonHandler.php:174
+#: source/Util/JsonHandler.php:208 source/Util/JsonHandler.php:247
+msgid "Access denied."
+msgstr "Prístup nepovolený."
+
+#: source/Plugin.php:74 source/Plugin.php:733
+msgid "Affiliate Management"
+msgstr "Správa partnerov"
+
+#: source/Pages/AffiliatesRegister.php:96
+msgid "Affiliate application for %s"
+msgstr "Žiadosť partnera %s"
+
+#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:714
+#: source/Plugin.php:728 source/Plugin.php:733
+msgid "Affiliates"
+msgstr "Partneri"
+
+#: source/Pages/AffiliatesRegister.php:82 source/Util/UserHandler.php:179
+msgid "Company: %s"
+msgstr "Spoločnosť: %s"
+
+#: source/Pages/AffiliatesHome.php:41 source/Plugin.php:82
+msgid "Creatives"
+msgstr "Propagácia"
+
+#: source/Pages/AffiliatesRegister.php:71 source/Util/UserHandler.php:166
+msgid ""
+"Error submitting your details to the database. This is a bug, and your "
+"application was not submitted."
+msgstr ""
+"Chyba v zadávaní vašich údajov do databázy. Toto je chyba a vaša žiadosť "
+"nebola odoslaná."
+
+#: source/PayPal/MassPayResultFile.php:113
+#: source/PayPal/MassPayResultFile.php:124
+msgid "Failed to parse amounts from field: %s"
+msgstr "Zlyhalo rozčlenenie čiastok v položke: %s"
+
+#: source/Pages/AffiliatesHome.php:189
+msgid "Inactive creative."
+msgstr "Neplatná propagácia."
+
+#: source/Pages/AffiliatesHome.php:187 source/Util/JsonHandler.php:34
+#: source/Util/JsonHandler.php:62 source/Util/JsonHandler.php:98
+#: source/Util/JsonHandler.php:129 source/Util/JsonHandler.php:157
+#: source/Util/JsonHandler.php:230
+msgid "Invalid affiliate"
+msgstr "Neplatný partner"
+
+#: source/Pages/AffiliatesRegister.php:80 source/Util/UserHandler.php:177
+msgid "Name: %s %s"
+msgstr "Meno a priezvisko: %s %s"
+
+#: source/Pages/AffiliatesRegister.php:89 source/Util/UserHandler.php:186
+msgid "New Affiliate Registration"
+msgstr "Registrácia nového partnera"
+
+#: source/Pages/AffiliatesRegister.php:79 source/Util/UserHandler.php:176
+msgid "New affiliate registration on your site %s:"
+msgstr "Registrácia nových partnerov na vašom webe %s:"
+
+#: source/PayPal/Service.php:77
+msgid ""
+"POST failed\n"
+"errors:\n"
+"%serrordata:\n"
+"%s"
+msgstr ""
+"POST selhal\n"
+"errors:\n"
+"%serrordata:\n"
+"%s"
+
+#: source/PayPal/Service.php:82
+msgid "Unknown response: %s"
+msgstr "Neznáma odpoveď: %s"
+
+#: source/Pages/AffiliatesRegister.php:84 source/Util/UserHandler.php:181
+msgid "View Application: %s"
+msgstr "Pozri žiadosť partnera: %s"
+
+#: source/Pages/AffiliatesRegister.php:83 source/Util/UserHandler.php:180
+msgid "Website: %s"
+msgstr "Webové stránky: %s"
+
+#: source/PayPal/MassPayRequest.php:24
+msgid "receiverType must be one of the RECEIVERTYPE_* constants"
+msgstr "typ príjemcu musí byť jedným z RECEIVERTYPE_* constants"
+
+#: source/Pages/AffiliatesRegister.php:81 source/Util/UserHandler.php:178
+msgid "Email: %s"
+msgstr "E-mail: %s"
+
+#: source/Pages/Admin/NewAffiliatePage.php:82
+msgid "Add Affiliate"
+msgstr "Pridat partnera"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:241
+msgid "Affiliate Payment"
+msgstr "Platba partnerovi"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:253
+msgid "Affiliate not found"
+msgstr "Partner nebol nájdený"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:104
+msgid ""
+"Could not correlate a transaction from your results file with the "
+"transactions on record."
+msgstr ""
+"Nebola nájdená súvislosť medzi transakciou vo výslednom súbore a "
+"transakciami v záznamoch."
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:110
+msgid "Could not correlate all transactions"
+msgstr "Nebola nájdená súvislosť medzi žiadnymi transakciami"
+
+#: source/Pages/Admin/MyCreativesPage.php:214
+msgid "Creative ... created."
+msgstr "Propagácia bola vytvorená."
+
+#: source/Pages/Admin/MyCreativesPage.php:207
+msgid "Creative Updated."
+msgstr "Propagácia bola aktualizovaná."
+
+#: source/Pages/Admin/MyCreativesPage.php:198
+msgid "Insert failed: Bad creative type."
+msgstr "Vloženie zlyhalo: zlý typ propagácie."
+
+#: source/Pages/Admin/MyCreativesPage.php:218
+msgid "Insert failed: invalid creative update mechanism."
+msgstr "Vloženie zlyhalo: neplatný mechanizmus aktualizácie propagácie."
+
+#: source/Pages/Admin/MyCreativesPage.php:111
+#: source/Pages/Admin/MyCreativesPage.php:237
+#: source/Pages/Admin/MyCreativesPage.php:244
+#: source/Pages/AffiliatesHome.php:185 source/Util/JsonHandler.php:257
+msgid "Invalid creative."
+msgstr "Neplatná propagácia."
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:179
+msgid "Invalid transaction status"
+msgstr "Neplatný stav transakcie"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:96
+msgid ""
+"Matched a transaction in your results file, but the value was incorrect. "
+"Expected %s but found '%s'"
+msgstr ""
+"Transakcia bola nájdená vo výslednom súbore, ale s nesprávnymi údajmi. "
+"Očakávané %s ale bolo nájdené '%s'"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:256
+msgid "Payment method for affiliate is not PayPal"
+msgstr "Platobná metóda partneraa nie je PayPal"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:263
+msgid "Payout via PayPal Mass Pay"
+msgstr "Výplata hromadnou platbou PayPal"
+
+#: source/Pages/AffiliatesHome.php:39
+msgid "Sales"
+msgstr "Predaj"
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:62
+msgid "This results file does not appear to match this payment."
+msgstr "Výsledný súbor nesúhlasí s touto platbou."
+
+#: source/Pages/Admin/PaypalPaymentsPage.php:168
+msgid "Transaction not found"
+msgstr "Transakcia nebola nájdenáTransakcia nebola nájdená"
+
+#: html/admin/settings/settings_registration.php:419
+#: source/Data/Models/AffiliateModel.php:189
+msgid "Check"
+msgstr "Skontrolovať"
+
+#: source/Pages/Admin/MyCreativesPage.php:60
+msgid "All"
+msgstr "Všetci"
+
+#: source/MessageHelper.php:29
+msgid "Attempt to load invalid message of name '%s'"
+msgstr "Pokus o nahranie neplatnej správy od '%s'"
+
+#: source/Pages/Admin/MyAffiliatesPage.php:171
+#: source/Pages/Admin/NewAffiliatePage.php:93
+#: source/Pages/AffiliatesHome.php:588
+msgid "Bounty Rate (%s per Sale)"
+msgstr "Miera provízie (%s z jednotlivých predajov)"
+
+#: source/Data/Models/ModelMapper.php:34
+msgid "Model mapping error.  Could not map key %s."
+msgstr "Chyba v modeli mappingu. Nebolo možné zmapovať kľúč %s."
+
+#: source/Data/GenericRepository.php:31 source/Data/GenericRepository.php:76
+msgid "'model' must be of type '%s'"
+msgstr "'model' musí byť typu '%s'"
+
+#: source/Admin-menu/wpam-commission-menu.php:142
+msgid "A commission with this transaction ID already exists"
+msgstr "Provízia s týmto ID transakcie už existuje"
+
+#: source/Admin-menu/wpam-commission-menu.php:8
+msgid "Affiliate Commissions"
+msgstr "Provízia partnera"
+
+#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:778
+msgid "Affiliates Manager Add-ons"
+msgstr "Rozšírenie Affiliate Managera"
+
+#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:770
+msgid "Click Tracking"
+msgstr "Click Tracking"
+
+#: source/Admin-menu/wpam-commission-menu.php:182
+#: source/Admin-menu/wpam-commission-menu.php:345
+msgid "Commission Amount"
+msgstr "Čiastka provízie"
+
+#: source/Admin-menu/wpam-commission-menu.php:158
+msgid "Commission added!"
+msgstr "Provízia bola pridaná!"
+
+#: source/Admin-menu/wpam-commission-menu.php:178
+msgid "Enter the affiliate ID. Example: "
+msgstr "Zadajte ID partnera. Príklad: "
+
+#: source/Admin-menu/wpam-commission-menu.php:184
+msgid "Enter the commission amount. Example: "
+msgstr "Zadejte částku provize. Příklad: "
+
+#: source/Admin-menu/wpam-commission-menu.php:208
+msgid "Enter the date in yyyy-mm-dd format. Example: "
+msgstr "Zadajte dátum vo formáte rrrr-mm-dd. Príklad: "
+
+#: source/Admin-menu/wpam-commission-menu.php:190
+msgid "Enter the purchase amount. Example: "
+msgstr "Zadajte čiastku nákupu. Príklad: "
+
+#: source/Admin-menu/wpam-commission-menu.php:196
+msgid ""
+"Enter the unique transaction ID (leave empty to generate a unique ID). "
+"Example: "
+msgstr ""
+"Zadajte vlastné ID transakcie (alebo ponechajte nevyplnené a ID "
+"vygenerujte). Príklad: "
+
+#: source/Data/Models/AffiliateModel.php:178
+msgid "Fixed"
+msgstr "Pevne stanovené"
+
+#: source/Admin-menu/wpam-commission-menu.php:12
+msgid "Manual Commission"
+msgstr "Manuálna provízia"
+
+#: source/Admin-menu/wpam-commission-menu.php:11
+msgid "Overall Commissions"
+msgstr "Celkové provízie"
+
+#: source/Data/Models/AffiliateModel.php:176
+msgid "Percent"
+msgstr "Percento"
+
+#: source/Admin-menu/wpam-commission-menu.php:188
+msgid "Purchase Amount"
+msgstr "Čiastka nákupu"
+
+#: html/transaction_table.php:50 html/transaction_table.php:65
+msgid "Reference ID"
+msgstr "Referenčné ID"
+
+#: source/Admin-menu/wpam-commission-menu.php:168
+msgid "This tab allows you to manually award commission to an affiliate."
+msgstr "Tento štítok vám umožní manuálnu platbu provízie partnerovi."
+
+#: source/Admin-menu/wpam-commission-menu.php:51
+msgid "This tab shows all affiliate commission data"
+msgstr "Tento štítok ukazuje všetky údaje o províziách partnera"
+
+#: source/Admin-menu/wpam-clicks-menu.php:34
+msgid "This tab shows unique referrals to your website from your affiliates"
+msgstr "Tento štítok ukazuje individuálne referencie partnerov na vaše stránky"
+
+#: source/Admin-menu/wpam-clicks-menu.php:11
+msgid "Unique Click Tracking"
+msgstr "Individuálne sledovanie kliknutí"
+
+#: source/Admin-menu/wpam-commission-menu.php:111
+#: source/Admin-menu/wpam-commission-menu.php:278
+msgid "You need to enter a numeric commission amount"
+msgstr "Zadajte číselnú čiastku provízie"
+
+#: source/Admin-menu/wpam-commission-menu.php:115
+msgid "You need to enter a numeric purchase amount"
+msgstr "Zadajte číselnú čiastku nákupu"
+
+#: source/Admin-menu/wpam-commission-menu.php:107
+#: source/Admin-menu/wpam-commission-menu.php:270
+msgid "You need to enter an affiliate ID"
+msgstr "Zadajte svoje partnerské ID"
+
+#: html/impressions_table.php:1
+msgid "Displaying %1$d of %2$d impressions"
+msgstr "Zobrazuje sa %1$d z %2$d impresií"
+
+#: html/impressions_table.php:31 html/transaction_table.php:78
+msgid "No records found for the date range selected."
+msgstr "Pre zadané časové obdobie neboli nájdené žiadne záznamy."
+
+#: html/impressions_table.php:9
+msgid "Referrer"
+msgstr "Poskytovateľ referencie"
+
+#: html/contact_info.php:244
+msgid "+ Custom fields"
+msgstr "+ vlastné položky"
+
+#: html/contact_info.php:210
+msgid "Bounty Type *"
+msgstr "Typ provízie *"
+
+#: html/contact_info.php:248
+msgid "Save Changes"
+msgstr "Uložiť zmeny"
+
+#: html/contact_info.php:227
+msgid "Bounty Rate (% of Sale) *"
+msgstr "Miera provízie (% z predaja) *"
+
+#: html/contact_info.php:227
+msgid "Bounty Rate (%s per Sale) *"
+msgstr "Miera provízie (%s z jednotlivých predajov) *"
+
+#: html/affiliate_register_form.php:33 html/contact_info.php:242
+msgid "* Required fields"
+msgstr "* Povinné polia"
+
+#: html/affiliate_cp_payment_details_simple.php:80
+msgid "Check will be mailed to the following address:"
+msgstr "Šek bude zaslaný na nasledujúcu adresu:"
+
+#: html/contact_info.php:14
+msgid "Contact Information"
+msgstr "Kontaktné údaje"
+
+#: html/affiliate_register_form.php:94
+msgid "I have read and agree to the"
+msgstr "Prečítal som a súhlasím sa"
+
+#: html/affiliate_register_form.php:109
+msgid "Submit Application"
+msgstr "Odoslať žiadosť"
+
+#: html/affiliate_cp_payment_details_form.php:238
+#: html/affiliate_cp_payment_details_simple.php:112
+msgid "Submit Payment Details"
+msgstr "Zadajte platobné údaje"
+
+#: html/affiliate_creative_list.php:95
+msgid "The following creatives are available for publication."
+msgstr "Nasledujúce propagácie sú dostupné na publikáciu."
+
+#: html/affiliate_not_logged_in.php:4
+msgid ""
+"This is the affiliates section of this store.  If you are an existing "
+"affiliate, please <a href=\"%s\">log in</a> to access your control panel."
+msgstr ""
+"Toto je časť obchodu určená pre partnerov. Ak ste partnerom, pre prístup ku "
+"kontrolnému panelu sa <a href=\"%s\">prihláste</a>."
+
+#: html/affiliate_not_registered.php:4 source/Data/DatabaseInstaller.php:411
+#: source/Pages/Admin/SettingsPage.php:213
+msgid ""
+"This is the affiliates section of this store. You are not currently an "
+"affiliate of this store. If you wish to become one, please <a href=\"%s\"/"
+">apply</a>."
+msgstr ""
+"Toto je časť obchodu určená pre partnerov. V súčasnej dobe nie ste "
+"partnerom. Ak sa ním chcete stať, kliknite <a href=\"%s\"/>tu</a>."
+
+#: html/affiliate_home.php:1
+msgid "Welcome to the affiliate control panel."
+msgstr "Vitajte v partnerskom kontrolnom paneli."
+
+#: html/affiliate_register_form.php:95
+msgid "You must agree to the terms."
+msgstr "Musíte súhlasiť so zmluvnými podmienkami."
+
+#: html/affiliate_creative_list.php:66
+msgid "Your Affiliate Link Using Affiliate ID"
+msgstr "Váš partnerský odkaz s partnerským ID"
+
+#: html/affiliate_creative_detail.php:47
+msgid "Your Affiliate-Specific HTML snippet"
+msgstr "Váš špecifický afiliátny HTML snippet"
+
+#: html/affiliate_register_form.php:46
+msgid ""
+"This is the email address associated with your currently logged in WordPress "
+"user account."
+msgstr ""
+"Táto e-mailová adresa je adresou, ktorú teraz používate vo svojom WordPress "
+"užívateľskom účte."
+
+#: html/contact_info.php:107
+msgid ""
+"There is a pending change of your e-mail to <code>%1$s</code>. <a "
+"href=\"%2$s\">Cancel</a>"
+msgstr ""
+"Spracováva sa zmena vášho e-mailu na <code>%1$s</code>. <a "
+"href=\"%2$s\">Storno</a>"
+
+#: html/affiliate_register_form.php:47
+msgid ""
+"If you want to use a different email address, log out of your WordPress "
+"account then try a new registration."
+msgstr ""
+"Ak chcete použiť inú e-mailovú adresu, odhláste sa zo svojho WordPress účtu "
+"a potom skúste novú registráciu."
+
+#: html/affiliate_cp_payment_details_form.php:204
+msgid "Country"
+msgstr "Krajina"
+
+#: html/affiliate_cp_payment_details_form.php:224
+msgid "Postal Code"
+msgstr "PSČ"
+
+#: html/affiliate_cp_payment_details_form.php:214
+msgid "State"
+msgstr "Štát"
+
+#: html/affiliate_cp_payment_details_form.php:196
+msgid "Address 2"
+msgstr "Adresa: riadok 2"
+
+#: html/affiliate_cp_payment_details_form.php:200
+msgid "City"
+msgstr "Mesto"
+
+#: html/affiliate_cp_home.php:44 html/affiliate_cp_home.php:78
+msgid "Visitors"
+msgstr "Návštevníci"
+
+#: html/affiliate_cp_home.php:52 html/affiliate_cp_home.php:86
+msgid "Revenue"
+msgstr "Príjmy"
+
+#: html/affiliate_cp_home.php:63
+msgid "This Month"
+msgstr "Tento mesiac"
+
+#: html/affiliate_cp_payment_details_form.php:88
+#: html/affiliate_cp_payment_details_simple.php:23 html/contact_info.php:142
+msgid "Method"
+msgstr "Metóda"
+
+#: html/affiliate_cp_payment_details_form.php:192
+msgid "Address 1"
+msgstr "Adresa: riadok 1"
+
+#: html/affiliate_cp_payment_details_form.php:135
+#: html/affiliate_cp_payment_details_simple.php:70
+msgid "Check Recipient"
+msgstr "Príjemca šeku"
+
+#: html/affiliate_cp_home.php:48 html/affiliate_cp_home.php:82
+msgid "Closed Transactions"
+msgstr "Uzavreté transakcie"
+
+#: html/affiliate_cp_payment_details_form.php:154
+msgid "Mail to Address On Record"
+msgstr "Pošlite na adresu v zázname"
+
+#: html/affiliate_cp_payment_details_confirmed.php:5
+msgid ""
+"Now would be a great time to go pick <a href=\"%s\">some creatives</a> and "
+"get started."
+msgstr "Teraz si môžete vybrať <a href=\"%s\">nejakú propagáciu</a> a začať."
+
+#: html/affiliate_cp_payment_details_form.php:129
+#: html/affiliate_cp_payment_details_simple.php:64
+#: source/Util/AffiliateFormHelper.php:160
+msgid "Paper Check"
+msgstr "Papierový šek"
+
+#: html/affiliate_cp_payment_details_form.php:79
+#: html/affiliate_cp_payment_details_simple.php:13
+msgid "Please provide your payment details."
+msgstr "Prosím, zadajte svoje platobné údaje."
+
+#: html/affiliate_cp_payment_details_form.php:163
+#: html/affiliate_cp_payment_details_form.php:188
+#: html/affiliate_cp_payment_details_simple.php:87
+msgid "Recipient"
+msgstr "Príjemca"
+
+#: html/affiliate_cp_payment_details_form.php:80
+#: html/affiliate_cp_payment_details_simple.php:14
+msgid ""
+"The following information will be used to disburse payments when your "
+"account reaches the minimum payout amount."
+msgstr ""
+"Nasledujúce údaje budú použité na vykonanie platieb v prípade, že váš účet "
+"dosiahne minimálnu čiastku pre platby."
+
+#: html/affiliate_cp_payment_details_confirmed.php:3
+msgid "Your payment details have been submitted."
+msgstr "Vaše platobné údaje boli odoslané."
+
+#: html/affiliate_cp_payment_details_form.php:105
+#: html/affiliate_cp_payment_details_simple.php:40 html/contact_info.php:181
+msgid "PayPal E-Mail Address"
+msgstr "Vaše e-mailová adresa Paypalu"
+
+#: html/affiliate_cp_home.php:11
+msgid "Account Summary"
+msgstr "Súhrn účtu"
+
+#: html/affiliate_cp_home.php:29
+msgid "Today"
+msgstr "Dnes"
+
+#: html/affiliate_cp_approved.php:5
+msgid "Welcome!"
+msgstr "Vitajte!"
+
+#: html/affiliate_cp_agree_terms.php:3
+msgid "Affiliate Confirmation"
+msgstr "Potvrdenie partnera"
+
+#: html/affiliate_cp_approved.php:3
+msgid "Affiliate Control Panel"
+msgstr "Kontrolný panel partnera"
+
+#: html/admin/settings/settings_registration.php:472
+msgid "Affiliates Homepage Message"
+msgstr "Správa domácej stránky pre partnerov"
+
+#: html/affiliate_cp_agree_terms.php:27
+msgid "Agree to Terms"
+msgstr "Súhlasiť so zmluvnými podmienkami"
+
+#: html/affiliate_cp_agree_terms.php:12 html/affiliate_cp_home.php:20
+msgid "Commission Rate"
+msgstr "Výška provízie partnera"
+
+#: html/affiliate_cp_agree_terms.php:5
+msgid "Contract Terms"
+msgstr "Zmluvné podmienky"
+
+#: html/affiliate_cp_approved.php:9
+msgid "Review Terms and Get Started!"
+msgstr "Prečítajte si zmluvné podmienky a začnite!"
+
+#: html/affiliate_cp_agree_terms.php:21
+msgid "Terms & Conditions"
+msgstr "Zmluvné podmienky"
+
+#: html/affiliate_register_form.php:94
+msgid "Terms and Conditions"
+msgstr "Zmluvné podmienky"
+
+#: html/affiliate_approved.php:1
+msgid ""
+"Your application was approved.  Please go to the <a href=\"%s\">affiliate "
+"control panel</a> to get started."
+msgstr ""
+"Vaša žiadosť bola schválená. Začnite a prejdite na <a href=\"%s\">partnerský "
+"kontrolný panel</a>."
+
+#: html/admin/settings/settings_registration.php:457
+msgid "Field Format"
+msgstr "Formát položky"
+
+#: html/admin/settings/settings_registration.php:461
+msgid "Required"
+msgstr "Vyžadované"
+
+#: html/admin/settings/settings_registration.php:455
+msgid "Enabled"
+msgstr "Povolené"
+
+#: html/admin/settings/settings_registration.php:392
+msgid "Country Code"
+msgstr "Kód krajiny"
+
+#: html/admin/settings/settings_registration.php:423
+#: source/Data/Models/AffiliateModel.php:183
+msgid "PayPal"
+msgstr "PayPal"
+
+#: html/admin/settings/settings_registration.php:450
+msgid "Add Custom Field"
+msgstr "Pridat vlastnú položku"
+
+#: html/admin/settings/settings_registration.php:447
+msgid "Affiliate Register Fields"
+msgstr "Položky na registráciu partnerov"
+
+#: html/admin/settings/settings_registration.php:413
+msgid "Available Payout Methods"
+msgstr "Dostupné možnosti výplaty"
+
+#: html/admin/settings/settings_registration.php:400
+#: html/admin/settings/settings_registration.php:460
+msgid "Max Length"
+msgstr "Maximálna dĺžka"
+
+#: html/admin/settings/settings_registration.php:393
+msgid "Social Security Number (US)"
+msgstr "Social Security Number (USA)"
+
+#: html/admin/settings/settings_registration.php:390
+msgid "State Code (US)"
+msgstr "Kód štátu (USA)"
+
+#: html/admin/settings/settings_registration.php:391
+msgid "Zip Code (US)"
+msgstr "Zip Code (USA)"
+
+#: html/admin/settings/settings_registration.php:389
+msgid "Phone Number"
+msgstr "Telefonné číslo"
+
+#: html/admin/settings/settings_registration.php:387
+msgid "Number"
+msgstr "Číslo"
+
+#: html/admin/settings/settings_registration.php:388
+msgid "E-Mail Address"
+msgstr "E-mailová adresa"
+
+#: html/admin/settings/settings_registration.php:375
+#: html/admin/settings/settings_registration.php:459
+msgid "Field Name"
+msgstr "Názov položky"
+
+#: html/admin/settings/settings_registration.php:382
+msgid "Field Type"
+msgstr "Typ položky"
+
+#: html/admin/settings/settings_registration.php:385
+msgid "Text"
+msgstr "Text"
+
+#: html/admin/settings/settings_payment.php:32
+msgid "API Username"
+msgstr "Uživatelľké meno API"
+
+#: html/admin/settings/settings_payment.php:36
+msgid "API Password"
+msgstr "Heslo API"
+
+#: html/admin/settings/settings_messaging.php:119
+msgid "%s(More)"
+msgstr "%s(viac)"
+
+#: html/admin/settings/settings_messaging.php:127
+msgid ""
+"* Some messages have been modified. These will <strong>NOT</strong> be saved "
+"to the database until you click 'Save Settings' button below."
+msgstr ""
+"* Niektoré správy boli modifikované. Tieto správy <strong>nebudú</strong> "
+"uložené, kým nekliknete na tlačidlo nižšie 'Uložiť nastavenia'."
+
+#: html/admin/settings/settings_payment.php:44
+msgid "API End Point"
+msgstr "API End Point"
+
+#: html/admin/settings/settings_registration.php:361
+msgid "Custom Field"
+msgstr "Vlastná položka"
+
+#: html/admin/settings/settings_registration.php:368
+#: html/admin/settings/settings_registration.php:458
+msgid "Display Name"
+msgstr "Zobraziť názov"
+
+#: html/admin/settings/settings_registration.php:218
+msgid "Display name is required."
+msgstr "Je nutné zadať názov zobrazenia."
+
+#: html/admin/settings/settings_payment.php:26
+msgid ""
+"Enable PayPal Mass Pay &#0153;<br /><small>NOTE: Requires a PayPal Premier "
+"or PayPal Business account</small>"
+msgstr ""
+"Povoliť hromadnú platbu PayPal &#0153;<br /><small>POZNÁMKA: Potrebujete "
+"účet PayPal Premier alebo účet PayPal Business</small>"
+
+#: html/admin/settings/settings_registration.php:247
+msgid "Field length must be an non-0 positive number."
+msgstr "Dĺžka položky musí byť kladné číslo bez 0."
+
+#: html/admin/settings/settings_registration.php:225
+msgid "Field name is required."
+msgstr "Je nutné zadať názov položky."
+
+#: html/admin/settings/settings_registration.php:228
+msgid ""
+"Field name may only contains letters, numbers, underscores and hyphens, and "
+"must begin with a letter."
+msgstr ""
+"Názov položky musí obsahovať iba písmená, čísla, podčiarknutia či pomlčky a "
+"musí začínať písmenom."
+
+#: html/admin/settings/settings_payment.php:47
+msgid "Live (%s)"
+msgstr "Live (%s)"
+
+#: html/admin/settings/settings_payment.php:16
+msgid ""
+"Looking for help? Check out the bundled step-by-step guide for setting up "
+"PayPal Mass Pay:"
+msgstr ""
+"Potrebujete pomoc? Pozrite sa na sprievodcu nastavenia hromadných platieb "
+"PayPal:"
+
+#: html/admin/settings/settings_payment.php:29
+msgid "PayPal API Configuration"
+msgstr "Konfigurácia API PayPal"
+
+#: html/admin/settings/settings_payment.php:48
+msgid "Sandbox - TESTING (%s)"
+msgstr "Sandbox - TESTOVANIE (%s)"
+
+#: html/admin/settings/settings_payment.php:40
+msgid "Signature"
+msgstr "Podpis"
+
+#: html/admin/settings/settings_registration.php:235
+msgid "This field name is already in use."
+msgstr "Tento názov položky je už používaný."
+
+#: html/admin/settings/settings_payment.php:44
+msgid "WARNING: Set to LIVE if you don't know what this is for!"
+msgstr ""
+"UPOZORNENIE: Pokiaľ si nie ste istí k čomu toto je, nastavte to na LIVE!"
+
+#: html/admin/settings/settings_messaging.php:89
+msgid "Content"
+msgstr "Obsah"
+
+#: html/admin/settings/settings_messaging.php:75
+msgid "Content:"
+msgstr "Obsah:"
+
+#: html/admin/settings/settings_general.php:210
+msgid "Enable Impressions"
+msgstr "Povoliť imprese"
+
+#: html/admin/settings/settings_general.php:144
+msgid "Automatically approve a new affiliate"
+msgstr "Automaticky schváliť nových partnerov"
+
+#: html/admin/settings/settings_general.php:187
+msgid "Currency Code"
+msgstr "Kód meny"
+
+#: html/admin/settings/settings_general.php:178
+msgid "Currency Symbol"
+msgstr "Symbol meny"
+
+#: html/admin/settings/settings_general.php:197
+msgid "Do Not Record Zero Amount Commission"
+msgstr "Nezaznamenávať nulové provízie"
+
+#: html/admin/settings/settings_general.php:219
+msgid "Enable Debug"
+msgstr "Povoliť ladenie"
+
+#: html/admin/settings/settings_general.php:222
+msgid ""
+"If checked, debug output will be written to log files. This is useful for "
+"troubleshooting post payment failures."
+msgstr ""
+"Ak začiarknuté, výsledok ladenia bude zapísaný v súboroch logov. Toto je "
+"užitočné na riešenie možných budúcich problémov s realizáciou platieb."
+
+#: html/admin/settings/settings_general.php:234
+msgid "Reset Debug Log file"
+msgstr "Resetovať ladiaci súbor logu"
+
+#: html/admin/settings/settings_messaging.php:88
+msgid "Use"
+msgstr "Použiť"
+
+#: html/admin/settings/settings_general.php:235
+msgid "Use it to reset the affiliate manager plugin's log file."
+msgstr "Na resetovanie súboru logu pluginu Affiliate Manager použite toto."
+
+#: html/admin/settings/settings_messaging.php:71
+msgid "Use:"
+msgstr "Použitie:"
+
+#: html/admin/settings/settings_general.php:228
+msgid ""
+"You can check the debug log file by clicking on the link below (The log file "
+"can be viewed using any text editor):"
+msgstr ""
+"Môžete skontrolovať ladiaci súbor logu kliknutím na odkaz nižšie (tento "
+"súbor je možné otvoriť v ľubovoľnom textovom editore):"
+
+#: html/admin/settings/settings_messaging.php:66
+msgid ""
+"These settings allow you to control text that is displayed to affiliates at "
+"various points in the affiliate plug-in, as well as e-mails that are sent."
+msgstr ""
+"Tieto nastavenia vám umožnia určiť, aký text sa bude partnerom zobrazovať v "
+"partnerskom plugine av e-mailových správach, ktoré im budú zasielané."
+
+#: html/admin/settings/settings_general.php:127
+#: html/admin/settings/settings_general.php:137
+msgid "(Leave blank to use WordPress default)"
+msgstr ""
+"(Pokiaľ chcete používať predvolené nastavenie WordPressu, nič tu nevyplňujte)"
+
+#: html/admin/settings/settings_general.php:112
+msgid "Cookie Duration (days)"
+msgstr "Trvanie cookies (dni)"
+
+#: html/admin/settings/settings_general.php:103
+msgid "Minimum Payout Amount"
+msgstr "Minimálna čiastka platby"
+
+#: html/admin/settings/settings_general.php:132
+msgid "Email address"
+msgstr "E-mailová adresa"
+
+#: html/admin/settings/settings_general.php:122
+msgid "Email name"
+msgstr "Názov e-mailu"
+
+#: html/admin/settings/settings.php:129
+msgid "Save Settings"
+msgstr "Uložiť nastavenia"
+
+#: html/admin/settings/settings.php:47
+msgid "Affiliate Registration"
+msgstr "Registrácia partnera"
+
+#: html/admin/settings/settings.php:48
+msgid "Messaging"
+msgstr "Zasielanie správ"
+
+#: html/admin/settings/settings.php:50
+msgid "Pages/Forms"
+msgstr "Stránky/formuláre"
+
+#: html/admin/paypalpayments/view_payment_detail.php:41
+msgid "Message:"
+msgstr "Správa:"
+
+#: html/admin/paypalpayments/view_payment_detail.php:59
+msgid "Affiliate"
+msgstr "Partner"
+
+#: html/admin/paypalpayments/view_payment_detail.php:52
+msgid "Associated Transactions"
+msgstr "Pridružené transakcie"
+
+#: html/admin/paypalpayments/view_payment_detail.php:40
+msgid "Code:"
+msgstr "Kód:"
+
+#: html/admin/paypalpayments/view_payment_detail.php:62
+#: html/transaction_table.php:49 html/transaction_table.php:64
+msgid "Description"
+msgstr "Popis"
+
+#: html/admin/paypalpayments/view_payment_detail.php:42
+msgid "Severity:"
+msgstr "Závažnosť:"
+
+#: html/admin/paypalpayments/select_affiliates.php:188
+msgid "Continue with these payments"
+msgstr "Pokračovať s týmito platbami"
+
+#: html/admin/paypalpayments/view_payment_detail.php:16
+msgid "Database ID"
+msgstr "ID databázy"
+
+#: html/admin/paypalpayments/view_payment_detail.php:17
+#: html/admin/paypalpayments/view_payment_detail.php:58
+#: html/impressions_table.php:7 html/transaction_table.php:47
+#: html/transaction_table.php:62
+msgid "Date Occurred"
+msgstr "Dátum vzniku"
+
+#: html/admin/paypalpayments/view_payment_detail.php:37
+msgid "Errors"
+msgstr "Chyby"
+
+#: html/admin/paypalpayments/view_payment_detail.php:29
+msgid "Manually reconcile payments ... "
+msgstr "Zlúčiť platby ručne... "
+
+#: html/admin/paypalpayments/view_payment_detail.php:19
+msgid "PayPal Correlation ID"
+msgstr "PayPal Correlation ID"
+
+#: html/admin/paypalpayments/view_payment_detail.php:18
+msgid "PayPal Timestamp"
+msgstr "Časové razítko PayPal"
+
+#: html/admin/paypalpayments/select_affiliates.php:133
+msgid "Payment Amount"
+msgstr "Vyplácaná čiastka"
+
+#: html/admin/paypalpayments/view_payment_detail.php:8
+msgid "Payment Detail"
+msgstr "Podrobnosti platby"
+
+#: html/admin/paypalpayments/view_payment_detail.php:26
+msgid "Reconciliation"
+msgstr "Zlučovanie"
+
+#: html/admin/paypalpayments/view_payment_detail.php:22
+msgid "Total Amount"
+msgstr "Celková čiastka"
+
+#: html/admin/paypalpayments/select_affiliates.php:118
+#: html/transaction_table.php:37
+msgid "Clear"
+msgstr "Vyčistiť"
+
+#: html/admin/paypalpayments/review_affiliates.php:61
+#: html/admin/settings/settings.php:49
+msgid "Payment"
+msgstr "Platba"
+
+#: html/admin/paypalpayments/pending_payments.php:36
+msgid "(No Mass Payments on Record)"
+msgstr "(Záznam neobsahuje žiadne hromadné platby)"
+
+#: html/admin/paypalpayments/review_affiliates.php:54
+#: html/admin/paypalpayments/select_affiliates.php:127
+msgid "AID"
+msgstr "AID"
+
+#: html/admin/paypalpayments/review_affiliates.php:40
+msgid "Are you sure you wish to submit a mass payment to PayPal?"
+msgstr "Určite chcete zaslať hromadnú platbu na PayPal?"
+
+#: html/admin/paypalpayments/select_affiliates.php:112
+#: html/transaction_table.php:28
+msgid "Date Range:"
+msgstr "Časové obdobie:"
+
+#: html/admin/paypalpayments/review_affiliates.php:103
+#: html/admin/paypalpayments/select_affiliates.php:183
+msgid "Estimated Total"
+msgstr "Celkový odhad"
+
+#: html/admin/paypalpayments/review_affiliates.php:63
+msgid "New Balance"
+msgstr "Nový zostatok"
+
+#: html/admin/paypalpayments/review_affiliates.php:17
+msgid "No, Cancel"
+msgstr "Nie, zrušiť"
+
+#: html/admin/paypalpayments/select_affiliates.php:107
+msgid "Not showing %s affiliates that do not have a PayPal account on file."
+msgstr "Nezobrazujú sa %s. Títo partneri nemajú podľa záznamov účet PayPal."
+
+#: html/admin/paypalpayments/review_affiliates.php:98
+#: html/admin/paypalpayments/select_affiliates.php:178
+msgid "PayPal Fee<br /><small>2%% per payment, max %s1 per payment</small>"
+msgstr "Poplatok PayPal<br /><small>2%% z platby, max %s1 z platby</small>"
+
+#: html/admin/paypalpayments/reconcile_with_file.php:55
+msgid "Reconcile with this file"
+msgstr "Zlúčiť s týmto súborom"
+
+#: html/admin/paypalpayments/review_affiliates.php:46
+msgid "Review Your Mass Payment"
+msgstr "Skontrolujte si hromadnú platbu"
+
+#: html/admin/paypalpayments/select_affiliates.php:104
+msgid "Select Affiliates to Pay"
+msgstr "Vyberte partnerov, ktorým chcete zaplatiť"
+
+#: html/admin/paypalpayments/review_affiliates.php:94
+msgid "Sub-Total"
+msgstr "Medzisúčet"
+
+#: html/admin/paypalpayments/review_affiliates.php:107
+msgid "Submit Mass Payment to PayPal"
+msgstr "Pošlite hromadnú platbu na PayPal"
+
+#: html/admin/paypalpayments/review_affiliates.php:39
+msgid "Submit to PayPal?"
+msgstr "Zaslať na PayPal?"
+
+#: html/admin/paypalpayments/review_affiliates.php:10
+msgid "Yes, Submit to PayPal"
+msgstr "Áno, zaslať na PayPal"
+
+#: html/admin/paypalpayments/review_affiliates.php:41
+msgid "Your PayPal account will be charged %s!"
+msgstr "Z Vášho PayPal účtu bude strhnuté %s!"
+
+#: html/admin/paypalpayments/review_affiliates.php:58
+#: html/admin/paypalpayments/select_affiliates.php:131
+#: html/admin/paypalpayments/view_payment_detail.php:60
+msgid "PayPal E-Mail"
+msgstr "PayPal e-mail"
+
+#: html/admin/paypalpayments/not_configured.php:3
+msgid "Not configured"
+msgstr "Nie je nakonfigurované"
+
+#: html/admin/paypalpayments/pending_payments.php:14
+#: html/admin/paypalpayments/view_payment_detail.php:21
+msgid "Fee"
+msgstr "Poplatok"
+
+#: html/admin/paypalpayments/pending_payments.php:11
+msgid "Date Posted"
+msgstr "Dátum vloženia"
+
+#: html/admin/paypalpayments/home.php:17
+msgid "New Mass Payment"
+msgstr "Nová hromadná platba"
+
+#: html/admin/paypalpayments/pending_payments.php:12
+msgid "PayPal ID"
+msgstr "PayPal ID"
+
+#: html/admin/paypalpayments/not_configured.php:2
+#: html/admin/paypalpayments/pending_payments.php:3
+#: html/admin/paypalpayments/review_affiliates.php:45
+#: html/admin/paypalpayments/select_affiliates.php:103
+#: html/admin/paypalpayments/view_payment_detail.php:7 source/Plugin.php:85
+msgid "PayPal Mass Pay"
+msgstr "Hromadná platba PayPal"
+
+#: html/admin/paypalpayments/pending_payments.php:15
+msgid "Total"
+msgstr "Celkom"
+
+#: html/admin/paypalpayments/pending_payments.php:4
+msgid "View Existing Payments"
+msgstr "Zobraziť existujúce platby"
+
+#: html/admin/paypalpayments/home.php:20
+msgid "View Previous Mass Payments"
+msgstr "Zobraziť predchádzajúce hromadné platby"
+
+#: html/admin/paypalpayments/not_configured.php:5
+msgid ""
+"You have not configured the Affiliate Manager with your PayPal account "
+"information. You can do so in the <a href=\"%s\">Payment Settings page</a>."
+msgstr ""
+"Ešte ste nevykonali konfiguráciu Affiliate Managera s údajmi vášho účtu "
+"PayPal. Môžete tak urobiť na stránke <a href=\"%s\">nastavenie platieb</a>."
+
+#: classes/ListAffiliatesTable.php:90 classes/ListClicksTable.php:76
+#: classes/ListCommissionTable.php:87 html/admin/manage_creatives.php:178
+msgid "Delete"
+msgstr "Odstrániť"
+
+#: html/admin/manage_creatives.php:167
+msgid "Created"
+msgstr "Vytvorené"
+
+#: html/admin/manage_creatives.php:156
+msgid "Create New"
+msgstr "Vytvoriť nový"
+
+#: html/admin/manage_creatives.php:138
+msgid "Status:"
+msgstr "Stav:"
+
+#: html/admin/manage_creatives.php:133
+msgid "Filter"
+msgstr "Filter"
+
+#: html/admin/manage_creatives.php:121
+msgid "Delete Creative?"
+msgstr "Odstrániť propagáciu?"
+
+#: html/admin/creatives_detail.php:295 html/affiliate_creative_detail.php:77
+msgid "Image Properties"
+msgstr "Vlastnosti obrázku"
+
+#: html/admin/manage_creatives.php:127 source/Plugin.php:82
+msgid "My Creatives"
+msgstr "Moje propagácie"
+
+#: html/admin/creatives_detail.php:274 html/affiliate_creative_detail.php:56
+msgid "Text Link Properties"
+msgstr "Vlastnosti textového odkazu"
+
+#: html/admin/manage_creatives.php:122
+msgid "This creative will be deleted. Are you sure?"
+msgstr "Táto propagácia bude odstránená. Ste si istí?"
+
+#: html/admin/manage_creatives.php:114
+msgid "Updating, please wait ..."
+msgstr "Prebieha aktualizácia, prosím čakajte..."
+
+#: html/admin/manage_creatives.php:63
+msgid "Yes, delete this creative"
+msgstr "Áno, odstrániť túto propagáciu"
+
+#: html/admin/creatives_detail.php:237 html/admin/manage_creatives.php:165
+#: html/admin/paypalpayments/pending_payments.php:10
+#: html/admin/paypalpayments/view_payment_detail.php:57
+#: html/impressions_table.php:6 html/transaction_table.php:45
+#: html/transaction_table.php:60
+msgid "ID"
+msgstr "ID"
+
+#: html/admin/creatives_detail.php:213
+msgid "Deactivate"
+msgstr "Deaktivovať"
+
+#: html/admin/creatives_detail.php:209 html/admin/manage_creatives.php:164
+msgid "Actions"
+msgstr "Akcie"
+
+#: html/admin/creatives_detail.php:197 html/affiliate_creative_detail.php:40
+msgid "Creative:"
+msgstr "Propagácia:"
+
+#: html/admin/creatives_detail.php:145
+msgid "ACTIVATE"
+msgstr "AKTIVOVAŤ"
+
+#: html/admin/creatives_detail.php:169
+msgid "Are you sure you wish to"
+msgstr "Naozaj chcete"
+
+#: html/admin/creatives_detail.php:150
+msgid "DEACTIVATE"
+msgstr "DEAKTIVOVAŤ"
+
+#: html/admin/creatives_detail.php:176 html/admin/creatives_detail.php:218
+#: html/affiliate_creative_detail.php:29 html/affiliate_creative_detail.php:42
+msgid "Preview"
+msgstr "Náhľad"
+
+#: html/admin/creatives_detail.php:9
+msgid "Text Link"
+msgstr "Textový odkaz"
+
+#: html/admin/creatives_detail.php:10
+msgid "Unknown creative type."
+msgstr "Neznámy typ propagácie."
+
+#: html/admin/creatives_detail.php:169
+msgid "this creative?"
+msgstr "túto propagáciu?"
+
+#: html/admin/creatives_detail.php:279 html/admin/creative_update_form.php:199
+#: html/affiliate_creative_detail.php:61
+msgid "Link Text"
+msgstr "Text odkazu"
+
+#: html/admin/creative_update_success.php:9
+msgid "Creative updated."
+msgstr "Propagácia bola aktualizovaná."
+
+#: html/admin/creatives_detail.php:8 html/admin/creatives_detail.php:300
+#: html/affiliate_creative_detail.php:82
+msgid "Image"
+msgstr "Obrázok"
+
+#: html/admin/creative_update_success.php:11
+msgid "New creative created.  This creative is not yet active."
+msgstr "Bola vytvorená nová propagácia. Táto propagácia ešte nie je aktívna."
+
+#: html/admin/creative_update_success.php:16
+msgid "Return to Creatives"
+msgstr "Návrat na propagáciu"
+
+#: html/admin/creative_update_form.php:223
+msgid "Save Creative"
+msgstr "Uložiť propagáciu"
+
+#: html/admin/creative_update_form.php:191
+msgid "Text Link Parameters"
+msgstr "Parametre textového odkazu"
+
+#: html/admin/creatives_detail.php:283 html/admin/creatives_detail.php:313
+#: html/admin/creative_update_form.php:175
+#: html/admin/creative_update_form.php:210
+#: html/affiliate_creative_detail.php:65 html/affiliate_creative_detail.php:95
+msgid "Alt Text"
+msgstr "Alternatívny text"
+
+#: html/admin/creative_update_form.php:152
+msgid "Image Parameters"
+msgstr "Parametre obrázku"
+
+#: html/admin/creatives_detail.php:262 html/admin/creative_update_form.php:125
+msgid "Landing Page"
+msgstr "Cieľová stránka"
+
+#: html/admin/creative_update_form.php:85
+#: html/admin/creative_update_success.php:4
+msgid "New"
+msgstr "Nová"
+
+#: html/admin/creatives_detail.php:246 html/admin/creative_update_form.php:115
+#: html/admin/manage_creatives.php:169
+#: html/admin/settings/settings_messaging.php:86
+#: html/affiliate_creative_list.php:101
+#: source/Admin-menu/wpam-manage-payouts-menu.php:134
+#: source/Admin-menu/wpam-manage-payouts-menu.php:353
+msgid "Name"
+msgstr "Meno"
+
+#: html/admin/affiliates_list.php:70 source/display_functions.php:168
+#: source/Pages/Admin/MyCreativesPage.php:62
+msgid "Inactive"
+msgstr "Neaktívný"
+
+#: html/admin/affiliates_list.php:69 source/display_functions.php:172
+msgid "Blocked"
+msgstr "Zablokovaný"
+
+#: html/admin/affiliates_list.php:67
+#: html/affiliate_cp_payment_details_confirmed.php:2
+#: source/display_functions.php:170
+msgid "Confirmed"
+msgstr "Potvrdené"
+
+#: html/admin/affiliates_list.php:68 source/display_functions.php:162
+msgid "Declined"
+msgstr "Odmietnuté"
+
+#: html/admin/creatives_detail.php:219 html/admin/creative_update_form.php:85
+#: html/admin/creative_update_success.php:4
+msgid "Edit"
+msgstr "Upraviť"
+
+#: html/admin/creative_update_form.php:80
+msgid ""
+"This list contains images from the media library. If you upload a new image "
+"it is added to the media library and you can reuse images on multiple "
+"creatives by selecting it from this list. If a new image file is added, it "
+"will be uploaded and will override the currently selected media library "
+"image for this creative link. However, the old image will still remain in "
+"the media library for future use."
+msgstr ""
+"Tento zoznam obsahuje obrázky z knižnice médií. Keď nahráte nový obrazový "
+"súbor, bude pridaný do knižnice médií a môžete potom používať obrázky na "
+"viacerých propagáciách tým, že si ich vyberiete z tohto zoznamu. Keď je "
+"nahraný nový obrazový súbor, nahradí v odkaze propagácie predchádzajúci "
+"súbor z knižnice médií. Avšak, pôvodný obrázok zostane v knižnici médií pre "
+"vaše možné použitie v budúcnosti."
+
+#: html/admin/affiliates_list.php:65 source/display_functions.php:160
+msgid "Applied"
+msgstr "Žiadajúci"
+
+#: html/admin/affiliates_list.php:66 source/display_functions.php:164
+msgid "Approved"
+msgstr "Schválený"
+
+#: html/admin/affiliates_list.php:64 source/display_functions.php:166
+#: source/Pages/Admin/MyCreativesPage.php:61
+msgid "Active"
+msgstr "Aktívny"
+
+#: html/admin/affiliate_management_home.php:2
+msgid "Affiliate Management Control Panel"
+msgstr "Kontrolný panel partnera"
+
+#: html/admin/affiliates_list.php:63
+msgid "All (Including Closed)"
+msgstr "Všetci (vrátane zrušených)"
+
+#: html/admin/affiliates_list.php:62
+msgid "All Active"
+msgstr "Všetci aktívni"
+
+#: html/admin/affiliates_list.php:8 source/Plugin.php:76
+msgid "My Affiliates"
+msgstr "Moji partneri"
+
+#: html/admin/affiliate_new.php:3 html/admin/affiliate_new_success.php:2
+#: source/Plugin.php:79
+msgid "New Affiliate"
+msgstr "Nový partner"
+
+#: html/admin/affiliate_new_success.php:3
+msgid "New Affiliate has been created"
+msgstr "Bol vytvorený nový partner"
+
+#: html/admin/affiliate_new.php:6
+msgid ""
+"As an Affiliate Manager, if you want to create an affiliate account rather "
+"than directing someone to the normal registration form, you can do that "
+"here. Once you fill out the required contact information, your new affiliate "
+"will receive an email with their username and password.  They will "
+"automatically be approved, but will still have to log in to agree to the "
+"terms &amp; conditions and set their preferred payment method."
+msgstr ""
+"Ak chcete ako správca sám vytvoriť účet partnera namiesto aby ste niekoho "
+"odkazovali na vyplnenie bežného registračného formulára môžete tak urobiť "
+"tu. Potom čo vyplníte požadované kontaktné údaje partnera, Váš nový partner "
+"dostane e-mail so svojim užívateľským menom a heslom. Bude automaticky "
+"schválený, ale bude sa musieť prihlásiť do svojho nového účtu, a potom "
+"súhlasiť so zmluvnými podmienkami a zadať preferovanú platobnú metódu."
+
+#: html/admin/affiliate_detail.php:645
+msgid "Link"
+msgstr "Odkaz"
+
+#: html/admin/affiliate_detail.php:644 html/admin/creatives_detail.php:250
+#: html/admin/creative_update_form.php:132 html/admin/manage_creatives.php:168
+#: html/admin/settings/settings_messaging.php:87
+#: html/admin/settings/settings_registration.php:456
+#: html/affiliate_creative_list.php:100 html/transaction_table.php:46
+#: html/transaction_table.php:61
+msgid "Type"
+msgstr "Typ"
+
+#: html/admin/affiliate_detail.php:610
+msgid "Purchases"
+msgstr "Nákupy"
+
+#: html/admin/affiliate_detail.php:624
+msgid "Earnings:"
+msgstr "Príjmy:"
+
+#: html/admin/affiliate_detail.php:555
+msgid "Account Standing"
+msgstr "Stav účtu"
+
+#: html/admin/affiliate_detail.php:626
+msgid "Adjustments:"
+msgstr "Úpravy:"
+
+#: html/admin/affiliate_detail.php:552
+msgid "Affiliate Status"
+msgstr "Stav partnera"
+
+#: html/admin/affiliate_detail.php:631
+msgid "Apply Manual Adjustment"
+msgstr "Potvrdiť ručnú úpravu"
+
+#: html/admin/affiliate_detail.php:630
+msgid "Apply Payout"
+msgstr "Vyplatiť"
+
+#: html/admin/affiliate_detail.php:621
+msgid "Balance:"
+msgstr "Zostatok:"
+
+#: html/admin/affiliate_detail.php:584
+msgid "Bounty Amount"
+msgstr "Čiastka provízie"
+
+#: html/admin/affiliate_detail.php:643 html/admin/creative_update_form.php:85
+#: html/admin/creative_update_success.php:4 html/impressions_table.php:8
+msgid "Creative"
+msgstr "Propagácia"
+
+#: html/admin/affiliate_detail.php:551
+msgid "Date Applied"
+msgstr "Dátum schválenia"
+
+#: html/admin/affiliate_detail.php:590
+msgid "Make Check Out To"
+msgstr "Vypísať šek na"
+
+#: html/admin/affiliate_detail.php:579
+#: html/affiliate_cp_payment_details_form.php:78
+#: html/affiliate_cp_payment_details_simple.php:12 html/contact_info.php:136
+msgid "Payment Details"
+msgstr "Platobné údaje"
+
+#: html/admin/affiliate_detail.php:586
+msgid "Payment Method"
+msgstr "Platobná metóda"
+
+#: html/admin/affiliate_detail.php:625
+msgid "Payments:"
+msgstr "Platby:"
+
+#: html/admin/affiliate_detail.php:602
+msgid "Statistics"
+msgstr "Štatistiky"
+
+#: html/admin/affiliate_detail.php:609
+msgid "Visits"
+msgstr "Návštevy"
+
+#: html/admin/affiliate_detail.php:588
+msgid "Paypal E-Mail"
+msgstr "PayPal e-mail"
+
+#: html/admin/affiliate_detail.php:537
+msgid "Dectivate"
+msgstr "Deaktivovať"
+
+#: html/admin/affiliate_detail.php:547 html/admin/creatives_detail.php:230
+#: html/admin/creative_update_form.php:108 html/admin/settings/settings.php:46
+msgid "General"
+msgstr "Všeobecné"
+
+#: html/admin/affiliate_detail.php:539
+msgid "Unblock"
+msgstr "Odblokovať"
+
+#: html/admin/affiliate_detail.php:541
+msgid "Block"
+msgstr "Zablkokovať"
+
+#: html/admin/affiliate_detail.php:533
+msgid "Decline"
+msgstr "Odmietnúť"
+
+#: html/admin/affiliate_detail.php:535 html/admin/creatives_detail.php:215
+msgid "Activate"
+msgstr "Aktivovať"
+
+#: html/admin/affiliate_detail.php:520
+msgid "Information"
+msgstr "Informácie"
+
+#: html/admin/affiliate_detail.php:519
+msgid "Account Finances"
+msgstr "Finančné podrobnosti účtu"
+
+#: html/admin/affiliate_detail.php:521
+msgid "Affiliate Links"
+msgstr "Odkazy afiliáta"
+
+#: html/admin/affiliate_detail.php:532
+msgid "Approve"
+msgstr "Schváliť"
+
+#: html/admin/affiliate_detail.php:523 html/admin/affiliate_detail.php:607
+#: html/affiliate_cp_home.php:39 html/affiliate_cp_home.php:73
+#: source/Pages/AffiliatesHome.php:45
+msgid "Impressions"
+msgstr "Impresie"
+
+#: html/admin/affiliate_detail.php:512
+msgid "Affiliate:"
+msgstr "Partner:"
+
+#: html/admin/affiliate_detail.php:493
+msgid "Apply Payout "
+msgstr "Vyplatiť "
+
+#: html/admin/affiliate_detail.php:500
+msgid "Current balance"
+msgstr "Súčasný zostatok"
+
+#: html/admin/affiliate_detail.php:503
+msgid "Other amount"
+msgstr "Ďalšia čiastka"
+
+#: html/admin/affiliate_detail.php:518 source/Pages/AffiliatesHome.php:38
+msgid "Overview"
+msgstr "Prehľad"
+
+#: html/admin/affiliate_detail.php:497
+msgid "Payout Amount "
+msgstr "Vyplácaná čiastka "
+
+#: html/admin/affiliate_detail.php:471 html/admin/creatives_detail.php:172
+#: html/admin/manage_creatives.php:110
+msgid "ERROR:"
+msgstr "CHYBA:"
+
+#: html/admin/affiliate_detail.php:478
+msgid "Amount "
+msgstr "Čiastka "
+
+#: html/admin/affiliate_detail.php:474
+msgid "Apply Adjustment "
+msgstr "Použiť zmenu "
+
+#: html/admin/affiliate_detail.php:484
+msgid "Description "
+msgstr "Popis "
+
+#: html/admin/affiliate_detail.php:467 html/admin/creatives_detail.php:168
+msgid "Are you sure?"
+msgstr "Ste si istí?"
+
+#: html/admin/affiliate_detail.php:304 html/admin/affiliate_detail.php:346
+msgid " to this account? The new balance will be "
+msgstr " tohoto účtu? Nový zostatok bude "
+
+#: html/admin/affiliate_detail.php:433
+msgid "Approve Application"
+msgstr "Schváliť žiadosť"
+
+#: html/admin/affiliate_detail.php:410
+msgid "Are you sure you wish to activate this affiliate?"
+msgstr "Naozaj chcete aktivovať tohto partnera?"
+
+#: html/admin/affiliate_detail.php:346
+msgid "Are you sure you wish to apply a payout of "
+msgstr "Naozaj chcete vyplatiť "
+
+#: html/admin/affiliate_detail.php:304
+msgid "Are you sure you wish to apply an adjustment of "
+msgstr "Naozaj chcete použiť úpravu "
+
+#: html/admin/affiliate_detail.php:261
+msgid "Are you sure you wish to approve this affiliate?"
+msgstr "Naozaj chcete schváliť tohto partnera?"
+
+#: html/admin/affiliate_detail.php:385
+msgid "Are you sure you wish to block this affiliate?"
+msgstr "Naozaj chcete zablokovať tohto partnera?"
+
+#: html/admin/affiliate_detail.php:414
+msgid "Are you sure you wish to deactivate this affiliate?"
+msgstr "Naozaj chcete deaktivovať tohto partnera?"
+
+#: html/admin/affiliate_detail.php:381
+msgid "Are you sure you wish to decline this affiliate?"
+msgstr "Naozaj chcete odmietnuť tohto partnera?"
+
+#: html/admin/affiliate_detail.php:397
+msgid ""
+"Are you sure you wish to unblock this affiliate?<br>User will become "
+"DECLINED."
+msgstr "Naozaj chcete odblokovať tohto partnera? <br> Užívateľ bude ODMIETNUŤ."
+
+#: html/admin/affiliate_detail.php:439 html/admin/affiliate_detail.php:583
+#: html/admin/settings/settings_general.php:157
+msgid "Bounty Type"
+msgstr "Typ provízie"
+
+#: html/admin/affiliate_detail.php:470 html/admin/creatives_detail.php:171
+msgid "Error"
+msgstr "Chyba"
+
+#: html/admin/affiliate_detail.php:444
+#: html/admin/settings/settings_general.php:162 html/contact_info.php:216
+msgid "Fixed Amount per Sale"
+msgstr "Pevne stanovená čiastka z jednotlivých predajov"
+
+#: html/admin/affiliate_detail.php:443
+#: html/admin/settings/settings_general.php:161 html/contact_info.php:215
+msgid "Percentage of Sales"
+msgstr "Percento z predaja"
+
+#: html/admin/affiliate_detail.php:462 html/admin/creatives_detail.php:163
+msgid "Updating, please wait ... "
+msgstr "Prebieha aktualizácia, prosím čakajte... "
+
+#: html/admin/affiliate_detail.php:410 html/admin/creatives_detail.php:88
+msgid "Yes, ACTIVATE."
+msgstr "Áno, AKTIVOVAŤ."
+
+#: html/admin/affiliate_detail.php:385
+msgid "Yes, BLOCK."
+msgstr "Áno, ZABLOKOVAŤ."
+
+#: html/admin/affiliate_detail.php:414 html/admin/creatives_detail.php:97
+msgid "Yes, DEACTIVATE."
+msgstr "Áno, ZABLOKOVAŤ.Áno, ZABLOKOVAŤ."
+
+#: html/admin/affiliate_detail.php:381
+msgid "Yes, DECLINE."
+msgstr "Áno, ODMIETNUŤ."
+
+#: html/admin/affiliate_detail.php:397
+msgid "Yes, UNBLOCK."
+msgstr "Áno, ODBLOKOVAŤ."
+
+#: html/admin/affiliate_detail.php:305 html/admin/affiliate_detail.php:347
+msgid "Yes, apply it."
+msgstr "Áno, použiť."
+
+#: html/admin/affiliate_detail.php:262
+msgid "Yes, approve."
+msgstr "Áno, schvaľujem."
+
+#: html/admin/affiliate_detail.php:468
+msgid "approve"
+msgstr "schváliť"
+
+#: html/admin/affiliate_detail.php:450
+#: source/Pages/Admin/MyAffiliatesPage.php:172
+#: source/Pages/Admin/NewAffiliatePage.php:94
+#: source/Pages/AffiliatesHome.php:589
+msgid "Bounty Rate (% of Sale)"
+msgstr "Miera provízie (% z predaja)"
+
+#: html/admin/affiliate_detail.php:115 html/admin/affiliate_detail.php:248
+#: html/admin/affiliate_detail.php:291 html/admin/affiliate_detail.php:322
+#: html/admin/creatives_detail.php:85 html/admin/creatives_detail.php:94
+#: html/admin/manage_creatives.php:91
+msgid "Cancel"
+msgstr "Storno"
+
+#: classes/ListTable.php:304
+msgid "Go to the next page"
+msgstr "Prejsť na poslednú stránku"
+
+#: classes/ListTable.php:307
+msgid "Go to the last page"
+msgstr "Prejsť na poslednú stránku"
+
+#: html/admin/affiliate_detail.php:154
+msgid "NO, They may re-apply"
+msgstr "NIE, nemôžu znovu žiadať"
+
+#: html/admin/affiliate_detail.php:231 html/admin/affiliate_detail.php:248
+#: html/admin/creatives_detail.php:116 html/admin/creatives_detail.php:139
+#: html/admin/creative_update_form.php:35 html/admin/manage_creatives.php:38
+#: html/affiliate_creative_detail.php:16
+#: source/Pages/Admin/MyAffiliatesPage.php:173
+#: source/Pages/Admin/NewAffiliatePage.php:95
+#: source/Pages/AffiliatesHome.php:590
+msgid "OK"
+msgstr "OK"
+
+#: html/admin/affiliate_detail.php:198
+#: source/Admin-menu/wpam-manage-payouts-menu.php:302
+msgid "Payout"
+msgstr "Výplata"
+
+#: html/admin/affiliate_detail.php:143
+msgid "YES, Block all applications from %s"
+msgstr "ÁNO, zablokujte všetky žiadosti od %s"
+
+#: html/admin/affiliate_detail.php:165
+msgid ""
+"Do you want to block all future applications from this email address, or "
+"allow them to sign up at a later date?"
+msgstr ""
+"Chcete zablokovať všetky budúce žiadosti z tejto e-mailovej adresy alebo "
+"povoliť ich neskoršiu registráciu?"
+
+#: classes/ListTable.php:298
+msgid "Current page"
+msgstr "Súčasná stránka"
+
+#: classes/ListTable.php:302
+msgctxt "paging"
+msgid "%1$s of %2$s"
+msgstr "%1$s z %2$s"
+
+#: classes/ListTable.php:273 classes/ListTable.php:544
+msgid "1 item"
+msgid_plural "%s items"
+msgstr[0] "1 položka"
+msgstr[1] "%s položky"
+msgstr[2] "%s položiek"
+
+#: classes/ListTable.php:289
+msgid "Go to the first page"
+msgstr "Prejsť na prvú stránku"
+
+#: classes/ListTable.php:292
+msgid "Go to the previous page"
+msgstr "Prejsť na predchádzajúcu stránku"
+
+#: classes/ListTable.php:239
+msgid "%s pending"
+msgstr "%s sa spracováva"
+
+#: classes/ListTable.php:223
+msgid "Excerpt View"
+msgstr "Vyňať z náhľadu"
+
+#: classes/ListTable.php:222
+msgid "List View"
+msgstr "Náhľad zoznamu"
+
+#: classes/ListTable.php:203
+msgid "Show all dates"
+msgstr "Ukázať všetky údaje"
+
+#: classes/ListTable.php:153 html/admin/affiliate_detail.php:295
+#: html/admin/affiliate_detail.php:326
+#: html/admin/paypalpayments/select_affiliates.php:117
+#: html/transaction_table.php:36
+msgid "Apply"
+msgstr "Použiť"
+
+#: classes/ListTable.php:79
+msgid "No items found."
+msgstr "Neboli nájdené žiadne položky."
+
+#: classes/ListCommissionTable.php:71
+#: source/Admin-menu/wpam-commission-menu.php:194
+#: source/Admin-menu/wpam-commission-menu.php:351
+msgid "Transaction ID"
+msgstr "ID transakcie"
+
+#: classes/ListTable.php:143
+msgid "Bulk Actions"
+msgstr "Hromadné úpravy"
+
+#: classes/ListCommissionTable.php:70
+#: html/admin/paypalpayments/pending_payments.php:13
+#: html/admin/paypalpayments/view_payment_detail.php:20
+#: html/admin/paypalpayments/view_payment_detail.php:63
+#: html/transaction_table.php:51 html/transaction_table.php:66
+msgid "Amount"
+msgstr "Množstvo"
+
+#: classes/ListClicksTable.php:60
+msgid "Referring URL"
+msgstr "Referenčná URL"
+
+#: classes/ListClicksTable.php:59
+msgid "Tracking Key"
+msgstr "Sledovací kľúč"
+
+#: classes/ListClicksTable.php:57 classes/ListCommissionTable.php:68
+#: source/Admin-menu/wpam-commission-menu.php:206
+#: source/Admin-menu/wpam-commission-menu.php:363
+msgid "Date"
+msgstr "Dátum"
+
+#: classes/ListAffiliatesTable.php:111
+msgid "Error! You need to select multiple records to perform a bulk action!"
+msgstr "Chyba! Na hromadnú akciu je potrebné vybrať viac záznamov!"
+
+#: classes/ListClicksTable.php:56 classes/ListCommissionTable.php:67
+msgid "Row ID"
+msgstr "Poradové ID"
+
+#: classes/ListAffiliatesTable.php:159 classes/ListCommissionTable.php:137
+msgid "Selected record deleted successfully!"
+msgstr "Vybrané záznamy boli úspešne odstránené!"
+
+#: classes/ListAffiliatesTable.php:129 classes/ListClicksTable.php:106
+#: classes/ListCommissionTable.php:117
+msgid "Selected records deleted successfully!"
+msgstr "Vybrané záznamy boli úspešne odstránené!"
+
+#: classes/ListAffiliatesTable.php:72
+#: html/admin/paypalpayments/review_affiliates.php:57
+#: html/admin/paypalpayments/select_affiliates.php:130
+msgid "Company"
+msgstr "Spoločnosť"
+
+#: classes/ListAffiliatesTable.php:73
+msgid "Date Joined"
+msgstr "Dátum vstupu do partnerského programu"
+
+#: classes/ListAffiliatesTable.php:74
+msgid "Website"
+msgstr "Webová stránka"
+
+#: classes/ListAffiliatesTable.php:71 source/Plugin.php:313
+msgid "Email"
+msgstr "E-mail"
+
+#: classes/ListAffiliatesTable.php:70
+#: html/admin/paypalpayments/review_affiliates.php:56
+#: html/admin/paypalpayments/select_affiliates.php:129
+msgid "Last Name"
+msgstr "Priezvisko"
+
+#: classes/ListAffiliatesTable.php:68
+msgid "Earnings"
+msgstr "Príjmy"
+
+#: classes/ListAffiliatesTable.php:67
+#: html/admin/paypalpayments/review_affiliates.php:59
+#: html/admin/paypalpayments/select_affiliates.php:132
+#: html/affiliate_cp_home.php:16 html/transaction_table.php:53
+#: html/transaction_table.php:68
+msgid "Balance"
+msgstr "Zostatok"
+
+#: classes/ListAffiliatesTable.php:69
+#: html/admin/paypalpayments/review_affiliates.php:55
+#: html/admin/paypalpayments/select_affiliates.php:128
+msgid "First Name"
+msgstr "Meno"
+
+#: classes/ListAffiliatesTable.php:65 classes/ListClicksTable.php:58
+#: classes/ListCommissionTable.php:69
+#: source/Admin-menu/wpam-commission-menu.php:176
+#: source/Admin-menu/wpam-commission-menu.php:339
+#: source/Admin-menu/wpam-manage-payouts-menu.php:133
+#: source/Admin-menu/wpam-manage-payouts-menu.php:352
+msgid "Affiliate ID"
+msgstr "Partnerské ID"
+
+#: classes/ListAffiliatesTable.php:66 html/admin/creatives_detail.php:242
+#: html/admin/manage_creatives.php:166
+#: html/admin/paypalpayments/pending_payments.php:16
+#: html/admin/paypalpayments/view_payment_detail.php:61
+#: html/transaction_table.php:48 html/transaction_table.php:63
+msgid "Status"
+msgstr "Stav"
+
+#: classes/ListAffiliatesTable.php:44 html/admin/manage_creatives.php:177
+#: html/admin/paypalpayments/pending_payments.php:23
+msgid "View"
+msgstr "Náhľad"
+
+#: boot-strap.php:39
+msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
+msgstr "WordPress Affiliate Manager vyžaduje PHP 5.1 alebo novší."
+
+#: boot-strap.php:43
+msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
+msgstr "WordPress Affiliate Manager vyžaduje WordPress 3.5 alebo novší."

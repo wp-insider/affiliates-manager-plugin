@@ -51,6 +51,8 @@ class WPAM_PluginConfig
         public static $UseIPReferralTrack = 'wpam_use_ip_referral_track';
         public static $AutoAffAccountSWPM = 'wpam_auto_aff_account_swpm';
         public static $EnableRegNonceChk = 'wpam_enable_reg_nonce_chk';
+        public static $AnonymizeIPClickTrack = 'wpam_anonymize_ip_click_track';
+        public static $DisableAffGravatar = 'wpam_disable_aff_gravatar';
 	// paypal
 	public static $PaypalMassPayEnabledOption = 'wpam_paypal_mass_pay_enabled';
 	public static $PaypalAPIUserOption = 'wpam_paypal_api_user';

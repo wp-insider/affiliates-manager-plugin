@@ -284,6 +284,16 @@ class WPAM_Pages_Admin_SettingsPage {
                 } else {
                     update_option(WPAM_PluginConfig::$EnableRegNonceChk, 0);
                 }
+                if (isset($request['anonymizeIPClickTrack'])) {
+                    update_option(WPAM_PluginConfig::$AnonymizeIPClickTrack, 1);
+                } else {
+                    update_option(WPAM_PluginConfig::$AnonymizeIPClickTrack, 0);
+                }
+                if (isset($request['disableAffGravatar'])) {
+                    update_option(WPAM_PluginConfig::$DisableAffGravatar, 1);
+                } else {
+                    update_option(WPAM_PluginConfig::$DisableAffGravatar, 0);
+                }
             }
 
             return $this->getSettingsForm(NULL, "Settings updated.");
@@ -346,6 +356,8 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['useIPReferralTrack'] = isset($request['useIPReferralTrack']) ? 1 : 0;
             $response->viewData['request']['autoAffAccountSWPM'] = isset($request['autoAffAccountSWPM']) ? 1 : 0;
             $response->viewData['request']['enableRegNonceChk'] = isset($request['enableRegNonceChk']) ? 1 : 0;
+            $response->viewData['request']['anonymizeIPClickTrack'] = isset($request['anonymizeIPClickTrack']) ? 1 : 0;
+            $response->viewData['request']['disableAffGravatar'] = isset($request['disableAffGravatar']) ? 1 : 0;
             $response->viewData['validationResult'] = $vr;
         } else {
             $response->viewData['request']['affhomemsg'] = get_option(WPAM_PluginConfig::$AffHomeMsg);
@@ -391,6 +403,8 @@ class WPAM_Pages_Admin_SettingsPage {
             $response->viewData['request']['useIPReferralTrack'] = get_option(WPAM_PluginConfig::$UseIPReferralTrack);
             $response->viewData['request']['autoAffAccountSWPM'] = get_option(WPAM_PluginConfig::$AutoAffAccountSWPM);
             $response->viewData['request']['enableRegNonceChk'] = get_option(WPAM_PluginConfig::$EnableRegNonceChk);
+            $response->viewData['request']['anonymizeIPClickTrack'] = get_option(WPAM_PluginConfig::$AnonymizeIPClickTrack);
+            $response->viewData['request']['disableAffGravatar'] = get_option(WPAM_PluginConfig::$DisableAffGravatar);
         }
 
         if ($message !== NULL)
