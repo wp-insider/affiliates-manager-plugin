@@ -380,6 +380,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 				$affiliateHelper->setModelFromForm( $affiliate, $affiliateFields, $request );
 				$affiliateHelper->setPaymentFromForm( $affiliate, $request );				
 				$db->getAffiliateRepository()->update( $affiliate );
+                                do_action('wpam_front_end_affiliate_profile_updated', $affiliate, $request);
 			} else {
 				$response->viewData['validationResult'] = $vr;
 			}
