@@ -449,28 +449,22 @@ class WPAM_Plugin {
         $wpam_refkey = "";
         if (isset($_COOKIE['wpam_id'])) {
             $wpam_refkey = $_COOKIE['wpam_id'];
-        } else if (isset($_COOKIE[WPAM_PluginConfig::$RefKey])) {   //remove this block when we don't expect wpam_refkey cookie anymore
-            $wpam_refkey = $_COOKIE[WPAM_PluginConfig::$RefKey];
         }
 
-        if (!empty($wpam_refkey)) {//Save the wpam_refkey in the order meta
-            if (is_numeric($wpam_refkey)) {  //wpam_id cookie is found and contains affiliate ID.
-                $order = wc_get_order($order_id);
-                $order->update_meta_data('_wpam_id', $wpam_refkey);
-                $order->save();
-                $wpam_refkey = $order->get_meta('_wpam_id');
-                WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_id (" . $wpam_refkey . ") with order. Order ID: " . $order_id);
-            } else { //remove this block when we don't expect wpam_refkey cookie anymore 
-                $order = wc_get_order($order_id);
-                $order->update_meta_data('_wpam_refkey', $wpam_refkey);
-                $order->save();
-                $wpam_refkey = $order->get_meta('_wpam_refkey');
-                WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_refkey (" . $wpam_refkey . ") with order. Order ID: " . $order_id);
-            }
+        if (!empty($wpam_refkey)) { //wpam_id cookie is found and contains affiliate ID.
+            WPAM_Logger::log_debug("WooCommerce Integration - The user was referred by an affiliate");
+            $order = wc_get_order($order_id);
+            $order->update_meta_data('_wpam_id', $wpam_refkey);
+            $order->save();
+            $wpam_refkey = $order->get_meta('_wpam_id');
+            WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_id (" . $wpam_refkey . ") with order. Order ID: " . $order_id);
         }
         else{
+            WPAM_Logger::log_debug("WooCommerce Integration - No affilie cookie found");
+            WPAM_Logger::log_debug("WooCommerce Integration - Attempting to track using a fallback method");
             if(get_option(WPAM_PluginConfig::$UseIPReferralTrack) == 1){
                 if(get_option(WPAM_PluginConfig::$AnonymizeIPClickTrack) == 1){
+                    WPAM_Logger::log_debug("WooCommerce Integration - The option to anonymize IP addresses is enabled. The fallback method cannot be used.");
                     return;
                 }
                 $user_ip = WPAM_Click_Tracking::get_user_ip();
@@ -480,9 +474,17 @@ class WPAM_Plugin {
                     $order->update_meta_data('_wpam_id', $aff_id);
                     $order->save();
                     $wpam_refkey = $order->get_meta('_wpam_id');
-                    WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_id (" . $wpam_refkey . ") with order using a fallback method. Order ID: " . $order_id);
+                    WPAM_Logger::log_debug("WooCommerce Integration - Saving wpam_id (" . $wpam_refkey . ") with order using the fallback method. Order ID: " . $order_id);
+                    return;
+                }
+                else{
+                    WPAM_Logger::log_debug("WooCommerce Integration - Could not track using the fallback method");
                 }
             }
+            else{
+                WPAM_Logger::log_debug("WooCommerce Integration - The fallback method is not enabled");
+            }
+            WPAM_Logger::log_debug("WooCommerce Integration - The user was not referred by an affiliate. No need to do anything.");
         }
     }
 

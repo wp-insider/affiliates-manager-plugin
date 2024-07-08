@@ -4,7 +4,7 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliate marketing, affiliates, affiliate program, woocommerce
 Requires at least: 3.5
 Tested up to: 6.5
-Stable tag: 2.9.37
+Stable tag: 2.9.38
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -193,6 +193,9 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 2.9.38 =
+- WooCommerce integration updated.
 
 = 2.9.37 =
 - Added an action hook after an affiliate's profile is updated.
