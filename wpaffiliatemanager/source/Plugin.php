@@ -263,6 +263,7 @@ class WPAM_Plugin {
     }
     
     public function do_init_task(){
+        load_plugin_textdomain( 'affiliates-manager', false, dirname( WPAM_PLUGIN_BASENAME ) . '/languages/' );
         if(is_admin()){
             if (isset($_GET['page'])) {
                 if ($_GET['page'] == 'wpam-creatives') { //affiliates manager creatives page

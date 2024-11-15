@@ -3,7 +3,7 @@
 Plugin Name: WP Affiliate Manager
 Plugin URI: https://wpaffiliatemanager.com
 Description: Plugin to recruit, manage, track and pay your affiliates.
-Version: 2.9.38
+Version: 2.9.39
 Author: wp.insider, wpaffiliatemgr
 Author URI: https://wpaffiliatemanager.com
 Text Domain: affiliates-manager
@@ -17,7 +17,7 @@ if (!defined('ABSPATH')){
 global $wp_version;
 $uploadDirInfo = wp_upload_dir();
 
-define( 'WPAM_VERSION', '2.9.37' );
+define( 'WPAM_VERSION', '2.9.39' );
 define( 'WPAM_DB_VERSION', '1.6.6' );
 define( 'WPAM_OPTIONS_VERSION', '1.0.7' );
 define( 'WPAM_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
@@ -28,8 +28,6 @@ define( 'WPAM_PATH', untrailingslashit(plugin_dir_path(__FILE__)));
 define( 'WPAM_RESOURCES_DIR', WPAM_BASE_DIRECTORY . "/resources/" );
 define( 'WPAM_DEBUG', false );
 define( 'WPAM_LOCALE_OVERRIDE', false );
-
-load_plugin_textdomain( 'affiliates-manager', false, dirname( WPAM_PLUGIN_BASENAME ) . '/languages/' );
 
 if ( version_compare( PHP_VERSION, '5.3.0' ) >= 0 ) {
 	define( 'WPAM_PHP53', true );
