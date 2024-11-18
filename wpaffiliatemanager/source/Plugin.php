@@ -155,7 +155,8 @@ class WPAM_Plugin {
         add_action('wpsc_transaction_result_cart_item', array($this, 'onWpscCheckout'));
 
         //Woocommerce
-        add_action('woocommerce_checkout_update_order_meta', array($this, 'WooCheckoutUpdateOrderMeta'), 10, 2);
+        add_action('woocommerce_new_order', array($this, 'WooCheckoutUpdateOrderMeta'), 10, 2);
+        //add_action('woocommerce_checkout_update_order_meta', array($this, 'WooCheckoutUpdateOrderMeta'), 10, 2);  //does not trigger when the checkout block is used on the checkout page instead of the shortcode
         add_action('woocommerce_order_status_completed', array($this, 'WooCommerceProcessTransaction')); //Executes when a status changes to completed
         add_action('woocommerce_order_status_processing', array($this, 'WooCommerceProcessTransaction')); //Executes when a status changes to processing
         add_action('woocommerce_checkout_order_processed', array($this, 'WooCommerceProcessTransaction'));
