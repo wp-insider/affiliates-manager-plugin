@@ -19,8 +19,19 @@ class WPAM_Pages_TemplateResponse
 
 	public function render()
 	{
+		$templates_path_default = WPAM_BASE_DIRECTORY . "/html/";
+		$templates_path = apply_filters('wpam_templates_path', $templates_path_default);
+
+		// Normalize the path to ensure it ends with a trailing slash.
+		$templates_path = trailingslashit($templates_path);
+		
 		ob_start();
-		include WPAM_BASE_DIRECTORY . "/html/{$this->templateName}.php";
+		
+		if ( file_exists($templates_path . "{$this->templateName}.php") ) {
+			include $templates_path . "{$this->templateName}.php";
+		} else {
+			include $templates_path_default . "{$this->templateName}.php";
+		}
 		$buffer = ob_get_contents();
 		ob_end_clean();
 		return $buffer;
