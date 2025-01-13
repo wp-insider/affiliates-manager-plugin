@@ -39,8 +39,9 @@ function wpam_html_state_code_options( $fieldValue ) {
 
 function wpam_html_country_code_options( $fieldValue ) {
 	echo '<option value="">'.__('Select an option', 'affiliates-manager').'</option>';
-
-	foreach ( WPAM_Validation_CountryCodes::get_countries() as $code => $name ) {
+        $countries = WPAM_Validation_CountryCodes::get_countries();
+        $countries = apply_filters('wpam_aff_countries', $countries);
+	foreach ( $countries as $code => $name ) {
 		echo '<option value="'.esc_attr($code).'"';
 		if ( $fieldValue == $code )
 			echo ' selected="selected"';
