@@ -129,7 +129,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 
 		if ($affiliate->isApproved())
 		{
-			if (isset($request['action']) && $request['action'] == 'confirm')
+			if (isset($request['wpam_aff_cp_action']) && $request['wpam_aff_cp_action'] == 'confirm')
 			{
 				return $this->doConfirm($request, $affiliate);
 			}
@@ -439,15 +439,16 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 	protected function doApproved($request)
 	{
 		$confirmUrl = $this->getLink(array(
-			'action' => 'confirm',
-			'step' => 'show_terms'
+                        'wpam_aff_cp_step' => 'show_terms',
+			'wpam_aff_cp_action' => 'confirm'
+			
 		));
 		return new WPAM_Pages_TemplateResponse('affiliate_cp_approved', array('confirmUrl' => $confirmUrl));
 	}
 
 	protected function doConfirm($request, $affiliate)
 	{
-		if ($request['step'] === 'show_terms')
+		if ($request['wpam_aff_cp_step'] === 'show_terms')
 		{
 			$response = new WPAM_Pages_TemplateResponse('affiliate_cp_agree_terms');
 			$response->viewData['affiliate'] = $affiliate;
@@ -460,17 +461,17 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 			$response->viewData['tnc'] = $termsCompiler->build();
 			$response->viewData['nextStepUrl'] = $this->getLink(
 				array(
-					'step' => 'accept_terms',
-					'action' => 'confirm'
+					'wpam_aff_cp_step' => 'accept_terms',
+					'wpam_aff_cp_action' => 'confirm'
 				)
 			);
 			return $response;
 		}
-		else if ($request['step'] === 'accept_terms')
+		else if ($request['wpam_aff_cp_step'] === 'accept_terms')
 		{
 			return $this->getPaymentMethodFormResponse($affiliate);
 		}
-		else if ($request['step'] === 'submit_payment_details')
+		else if ($request['wpam_aff_cp_step'] === 'submit_payment_details')
 		{
                         if(get_option(WPAM_PluginConfig::$EnableRegNonceChk) == 1){
                             if(!isset($request['_wpnonce']) || !wp_verify_nonce($request['_wpnonce'], 'affiliate_cp_submit_payment_details')){
@@ -541,8 +542,8 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 
 		$response->viewData['validationResult'] = $validationResult;
 		$response->viewData['nextStepUrl'] = $this->getLink(array(
-			'step' => 'submit_payment_details',
-			'action' => 'confirm'
+			'wpam_aff_cp_step' => 'submit_payment_details',
+			'wpam_aff_cp_action' => 'confirm'
 		));
 
 		//save for form validation in the footer
