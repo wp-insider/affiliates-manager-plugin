@@ -20,7 +20,8 @@ class WPAM_Pages_TemplateResponse
 	public function render()
 	{
 		ob_start();
-		include WPAM_BASE_DIRECTORY . "/html/{$this->templateName}.php";
+		$template = get_stylesheet_directory() . "/html/{$this->templateName}.php";
+    		include $template;
 		$buffer = ob_get_contents();
 		ob_end_clean();
 		return $buffer;
