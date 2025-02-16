@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Affiliate Manager\n"
-"POT-Creation-Date: 2023-11-06 13:16+0600\n"
-"PO-Revision-Date: 2023-11-06 13:20+0600\n"
+"POT-Creation-Date: 2025-02-16 11:01+1100\n"
+"PO-Revision-Date: 2025-02-16 11:04+1100\n"
 "Last-Translator: Justin Foell <justin@9seeds.com>\n"
 "Language-Team: 9seeds <justin@9seeds.com>\n"
 "Language: en_GB\n"
@@ -14,11 +14,11 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: boot-strap.php:39
+#: boot-strap.php:37
 msgid "WordPress Affiliate Manager requires PHP 5.1 or higher."
 msgstr ""
 
-#: boot-strap.php:43
+#: boot-strap.php:41
 msgid "WordPress Affiliate Manager requires WordPress 3.5 or higher."
 msgstr ""
 
@@ -86,7 +86,7 @@ msgstr ""
 msgid "Last Name"
 msgstr ""
 
-#: classes/ListAffiliatesTable.php:71 source/Plugin.php:313
+#: classes/ListAffiliatesTable.php:71 source/Plugin.php:320
 msgid "Email"
 msgstr ""
 
@@ -109,22 +109,34 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: classes/ListAffiliatesTable.php:101
+#: classes/ListAffiliatesTable.php:103
+msgid ""
+"Error! Nonce is not present! Go to the My Affiliates page to delete the "
+"affiliate."
+msgstr ""
+
+#: classes/ListAffiliatesTable.php:106
+msgid ""
+"Error! Nonce Security Check Failed! Go to the My Affiliates page to delete "
+"the affiliate."
+msgstr ""
+
+#: classes/ListAffiliatesTable.php:111
 msgid "Error! You need to select multiple records to perform a bulk action!"
 msgstr ""
 
-#: classes/ListAffiliatesTable.php:119 classes/ListClicksTable.php:106
+#: classes/ListAffiliatesTable.php:129 classes/ListClicksTable.php:106
 #: classes/ListCommissionTable.php:117
 msgid "Selected records deleted successfully!"
 msgstr ""
 
-#: classes/ListAffiliatesTable.php:129
+#: classes/ListAffiliatesTable.php:139
 msgid ""
 "Error! Nonce Security Check Failed! Go to the My Affiliates page to delete "
 "the affiliate account."
 msgstr ""
 
-#: classes/ListAffiliatesTable.php:149 classes/ListCommissionTable.php:137
+#: classes/ListAffiliatesTable.php:159 classes/ListCommissionTable.php:137
 msgid "Selected record deleted successfully!"
 msgstr ""
 
@@ -271,7 +283,7 @@ msgstr ""
 #: html/affiliate_creative_detail.php:16
 #: source/Pages/Admin/MyAffiliatesPage.php:173
 #: source/Pages/Admin/NewAffiliatePage.php:95
-#: source/Pages/AffiliatesHome.php:590
+#: source/Pages/AffiliatesHome.php:592
 msgid "OK"
 msgstr ""
 
@@ -363,7 +375,7 @@ msgstr ""
 #: html/admin/affiliate_detail.php:450
 #: source/Pages/Admin/MyAffiliatesPage.php:172
 #: source/Pages/Admin/NewAffiliatePage.php:94
-#: source/Pages/AffiliatesHome.php:589
+#: source/Pages/AffiliatesHome.php:591
 #, no-php-format
 msgid "Bounty Rate (% of Sale)"
 msgstr ""
@@ -622,34 +634,34 @@ msgid "All (Including Closed)"
 msgstr ""
 
 #: html/admin/affiliates_list.php:64 source/Pages/Admin/MyCreativesPage.php:61
-#: source/display_functions.php:166
+#: source/display_functions.php:167
 msgid "Active"
 msgstr ""
 
-#: html/admin/affiliates_list.php:65 source/display_functions.php:160
+#: html/admin/affiliates_list.php:65 source/display_functions.php:161
 msgid "Applied"
 msgstr ""
 
-#: html/admin/affiliates_list.php:66 source/display_functions.php:164
+#: html/admin/affiliates_list.php:66 source/display_functions.php:165
 msgid "Approved"
 msgstr ""
 
 #: html/admin/affiliates_list.php:67
 #: html/affiliate_cp_payment_details_confirmed.php:2
-#: source/display_functions.php:170
+#: source/display_functions.php:171
 msgid "Confirmed"
 msgstr ""
 
-#: html/admin/affiliates_list.php:68 source/display_functions.php:162
+#: html/admin/affiliates_list.php:68 source/display_functions.php:163
 msgid "Declined"
 msgstr ""
 
-#: html/admin/affiliates_list.php:69 source/display_functions.php:172
+#: html/admin/affiliates_list.php:69 source/display_functions.php:173
 msgid "Blocked"
 msgstr ""
 
 #: html/admin/affiliates_list.php:70 source/Pages/Admin/MyCreativesPage.php:62
-#: source/display_functions.php:168
+#: source/display_functions.php:169
 msgid "Inactive"
 msgstr ""
 
@@ -1079,7 +1091,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: html/admin/settings/settings.php:22 source/Plugin.php:758
+#: html/admin/settings/settings.php:22 source/Plugin.php:779
 msgid "Settings"
 msgstr ""
 
@@ -1193,6 +1205,28 @@ msgstr ""
 msgid ""
 "If checked, WordPress nonces will be validated during affiliate registration "
 "to protect the form from misuse."
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:123
+msgid "Anonymize IP Address for Click Tracking"
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:130
+msgid ""
+"If checked, the ip address of the user will be anonymized when tracking "
+"clicks. This can be useful for GDPR compliance. Please note that when this "
+"feature is enabled, the fallback method of referral tracking with ip "
+"addresses will not work."
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:136
+msgid "Disable Affiliate Gravatar"
+msgstr ""
+
+#: html/admin/settings/settings_advanced.php:143
+msgid ""
+"If checked, no gravatar will be shown on the affiliate login page when "
+"logged in."
 msgstr ""
 
 #: html/admin/settings/settings_aff_pages.php:5
@@ -1934,11 +1968,11 @@ msgstr ""
 msgid "Reference ID"
 msgstr ""
 
-#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:778
+#: source/Admin-menu/wpam-addons-menu.php:6 source/Plugin.php:799
 msgid "Affiliates Manager Add-ons"
 msgstr ""
 
-#: source/Admin-menu/wpam-admin-functions-menu.php:8 source/Plugin.php:762
+#: source/Admin-menu/wpam-admin-functions-menu.php:8 source/Plugin.php:783
 msgid "Admin Functions"
 msgstr ""
 
@@ -1999,7 +2033,7 @@ msgstr ""
 msgid "Delete Clicks Data"
 msgstr ""
 
-#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:770
+#: source/Admin-menu/wpam-clicks-menu.php:8 source/Plugin.php:791
 msgid "Click Tracking"
 msgstr ""
 
@@ -2138,7 +2172,7 @@ msgstr ""
 msgid "The date in Y-m-d H:i:s format. Example: "
 msgstr ""
 
-#: source/Admin-menu/wpam-manage-payouts-menu.php:8 source/Plugin.php:766
+#: source/Admin-menu/wpam-manage-payouts-menu.php:8 source/Plugin.php:787
 msgid "Manage Payouts"
 msgstr ""
 
@@ -2468,7 +2502,7 @@ msgstr ""
 
 #: source/Pages/Admin/MyAffiliatesPage.php:171
 #: source/Pages/Admin/NewAffiliatePage.php:93
-#: source/Pages/AffiliatesHome.php:588
+#: source/Pages/AffiliatesHome.php:590
 #, php-format
 msgid "Bounty Rate (%s per Sale)"
 msgstr ""
@@ -2647,7 +2681,7 @@ msgstr "Affiliate Links"
 msgid "Edit Profile"
 msgstr ""
 
-#: source/Pages/AffiliatesHome.php:47 source/Plugin.php:314
+#: source/Pages/AffiliatesHome.php:47 source/Plugin.php:321
 msgid "Log out"
 msgstr ""
 
@@ -2670,12 +2704,12 @@ msgstr ""
 msgid ": Please enter the same password in both password fields."
 msgstr ""
 
-#: source/Pages/AffiliatesHome.php:432
+#: source/Pages/AffiliatesHome.php:433
 #, php-format
 msgid "%s per sale."
 msgstr ""
 
-#: source/Pages/AffiliatesHome.php:434
+#: source/Pages/AffiliatesHome.php:435
 #, php-format
 msgid "%s%% of each completed sale, pre-tax"
 msgstr ""
@@ -2761,12 +2795,12 @@ msgstr ""
 msgid "Unknown response: %s"
 msgstr ""
 
-#: source/Plugin.php:74 source/Plugin.php:733
+#: source/Plugin.php:74 source/Plugin.php:754
 msgid "Affiliate Management"
 msgstr ""
 
-#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:714
-#: source/Plugin.php:728 source/Plugin.php:733
+#: source/Plugin.php:74 source/Plugin.php:76 source/Plugin.php:735
+#: source/Plugin.php:749 source/Plugin.php:754
 msgid "Affiliates"
 msgstr ""
 
@@ -2782,77 +2816,77 @@ msgstr ""
 msgid "Affiliate Login"
 msgstr ""
 
-#: source/Plugin.php:310
+#: source/Plugin.php:317
 msgid "You are currently logged in"
 msgstr ""
 
-#: source/Plugin.php:312
+#: source/Plugin.php:319
 msgid "Username"
 msgstr ""
 
-#: source/Plugin.php:322
+#: source/Plugin.php:329
 msgid "Email Address"
 msgstr ""
 
-#: source/Plugin.php:324
+#: source/Plugin.php:331
 msgid "Password Lost and Found"
 msgstr ""
 
-#: source/Plugin.php:324
+#: source/Plugin.php:331
 msgid "Lost your password?"
 msgstr ""
 
-#: source/Plugin.php:369
+#: source/Plugin.php:376
 msgid "Become an affiliate"
 msgstr ""
 
-#: source/Plugin.php:370
+#: source/Plugin.php:377
 msgid "Are you interested in earning money by directing visitors to our site?"
 msgstr ""
 
-#: source/Plugin.php:372
+#: source/Plugin.php:379
 msgid "Sign up"
 msgstr ""
 
-#: source/Plugin.php:372
+#: source/Plugin.php:379
 msgid " to become an affiliate today!"
 msgstr ""
 
-#: source/Plugin.php:728
+#: source/Plugin.php:749
 msgid "Be An Affiliate"
 msgstr ""
 
-#: source/Plugin.php:762
+#: source/Plugin.php:783
 msgid "Affiliates Manager Admin Functions"
 msgstr ""
 
-#: source/Plugin.php:766
+#: source/Plugin.php:787
 msgid "Affiliates Manager Manage Payouts"
 msgstr ""
 
-#: source/Plugin.php:770
+#: source/Plugin.php:791
 msgid "Affiliates Manager Click Tracking"
 msgstr ""
 
-#: source/Plugin.php:774
+#: source/Plugin.php:795
 msgid "Affiliates Manager Commission Data"
 msgstr ""
 
-#: source/Plugin.php:774
+#: source/Plugin.php:795
 msgid "Commissions"
 msgstr ""
 
-#: source/Plugin.php:778
+#: source/Plugin.php:799
 msgid "Add-ons"
 msgstr ""
 
-#: source/Plugin.php:891 source/Plugin.php:908 source/Plugin.php:925
-#: source/Plugin.php:942 source/Plugin.php:959 source/Plugin.php:976
-#: source/Plugin.php:993 source/Plugin.php:1010
+#: source/Plugin.php:912 source/Plugin.php:929 source/Plugin.php:946
+#: source/Plugin.php:963 source/Plugin.php:980 source/Plugin.php:997
+#: source/Plugin.php:1014 source/Plugin.php:1031
 msgid "Invalid JSON handler."
 msgstr ""
 
-#: source/Plugin.php:1054
+#: source/Plugin.php:1075
 msgid "Nonce check failed for export My Affiliates to CSV!"
 msgstr ""
 
