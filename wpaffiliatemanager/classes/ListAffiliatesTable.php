@@ -149,7 +149,16 @@ class WPAM_List_Affiliates_Table extends WP_List_Table {
                     $aff_email = $selectdb->email;
                     $user = get_user_by('email', $aff_email);
                     if ($user) {
-                        if (!in_array('administrator', $user->roles)) {
+                        $delete_wp_user = false;
+                        if (in_array('affiliate', $user->roles) && count($user->roles) === 1) {
+                            $delete_wp_user = true;
+                        }
+                        //additional non-required check for security
+                        if (in_array('administrator', $user->roles)) {
+                            $delete_wp_user = false;
+                        }
+                        //
+                        if($delete_wp_user){
                             wp_delete_user($user->ID);
                         }
                     }
