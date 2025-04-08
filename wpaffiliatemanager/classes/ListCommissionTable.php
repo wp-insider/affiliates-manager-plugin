@@ -177,11 +177,18 @@ class WPAM_List_Commission_Table extends WP_List_Table {
         //pagination requirement
         $current_page = $this->get_pagenum();
         
+        $where = "WHERE type = 'credit'";
+        //affiliate search
+        if (isset($_REQUEST['wpam_affiliate_commission_search']) && !empty($_REQUEST['wpam_affiliate_commission_search'])) {
+            $search_term = esc_sql($_REQUEST['wpam_affiliate_commission_search']);
+            $where = "WHERE type = 'credit' AND affiliateId like '%" . $search_term . "%'";
+        }
+        
         //count the total number of items
-        $query = "SELECT COUNT(*) FROM $records_table_name WHERE type = 'credit'";
+        $query = "SELECT COUNT(*) FROM $records_table_name ".$where;
         $total_items = $wpdb->get_var($query);
         
-        $query = "SELECT * FROM $records_table_name WHERE type = 'credit' ORDER BY $orderby_column $sort_order";
+        $query = "SELECT * FROM $records_table_name $where ORDER BY $orderby_column $sort_order";
 
         $offset = ($current_page - 1) * $per_page;
         $query.=' LIMIT ' . (int) $offset . ',' . (int) $per_page;

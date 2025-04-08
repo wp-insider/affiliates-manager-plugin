@@ -3,8 +3,8 @@ Contributors: wp.insider, affmngr, ElementGreen
 Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliate marketing, affiliates, affiliate program, woocommerce
 Requires at least: 3.5
-Tested up to: 6.7
-Stable tag: 2.9.45
+Tested up to: 6.8
+Stable tag: 2.9.46
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -193,6 +193,9 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 2.9.46 =
+- Added an option to search/export commissions record.
 
 = 2.9.45 =
 - Improved the auto affiliate deletion functionality by creating an exception for users with custom roles.

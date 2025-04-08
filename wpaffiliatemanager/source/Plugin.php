@@ -1094,6 +1094,25 @@ class WPAM_Plugin {
             $this->output_csv($affiliates->items, $export_keys, 'MyAffiliates.csv');
             die();
         }
+        if (isset($_POST['wpam-export-aff-commissions-to-csv'])) {
+            $nonce = $_REQUEST['_wpnonce'];
+            if (!wp_verify_nonce($nonce, 'wpam-export-aff-commissions-to-csv-nonce')) {
+                die(_e('Nonce check failed for export Affiliate Commissions to CSV!', 'affiliates-manager'));
+            }
+            include_once(WPAM_BASE_DIRECTORY . '/classes/ListCommissionTable.php');
+            $aff_commissions = new WPAM_List_Commission_Table();
+            $aff_commissions->prepare_items(true);
+            $export_keys = array(
+                'dateCreated' => 'Date',
+                'affiliateId' => 'Affiliate ID',
+                'amount' => 'Amount',
+                'referenceId' => 'Transaction ID',
+                'email' => 'Buyer Email',
+            );
+            $export_keys = apply_filters('wpam_export_aff_commission_columns', $export_keys);
+            $this->output_csv($aff_commissions->items, $export_keys, 'AffiliateCommissions.csv');
+            die();
+        }
     }
 
 }

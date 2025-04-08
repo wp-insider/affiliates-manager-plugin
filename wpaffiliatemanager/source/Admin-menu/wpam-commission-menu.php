@@ -47,9 +47,35 @@ function wpam_display_commission_menu()
 
 function wpam_display_overall_commission_tab()
 {
+    $wpam_affiliate_commission_search = '';
+    if(isset($_REQUEST['wpam_affiliate_commission_search']) && !empty($_REQUEST['wpam_affiliate_commission_search'])){
+        $wpam_affiliate_commission_search = sanitize_text_field($_REQUEST['wpam_affiliate_commission_search']);
+    }
     ?>   
     <p><?php _e('This tab shows all affiliate commission data', 'affiliates-manager');?></p>
     <div id="poststuff"><div id="post-body">
+    <div class="postbox">
+    <h3 class="hndle"><label for="title"><?php _e('Affiliate Commission Search', 'affiliates-manager')?></label></h3>
+    <div class="inside">
+        <p><?php _e('Search for a commission by entering the affiliate ID', 'affiliates-manager')?></p>
+
+        <form method="post" action="">
+            <input name="wpam_affiliate_commission_search" type="text" size="35" value=""/>
+            <input type="submit" name="submit" class="button" value="<?php _e('Search', 'affiliates-manager')?>" />
+        </form> 
+    </div></div>
+    <div class="postbox">
+    <h3 class="hndle"><label for="title"><?php _e('Export Affiliate Commissions Record', 'affiliates-manager'); ?></label></h3>
+        <div class="inside">
+        <form method="POST">
+            <?php wp_nonce_field('wpam-export-aff-commissions-to-csv-nonce'); ?>
+            <p>
+                <input type="hidden" name="wpam_affiliate_commission_search" value="<?php echo esc_attr($wpam_affiliate_commission_search) ?>" />
+                <input type="submit" name="wpam-export-aff-commissions-to-csv" value="<?php _e('Export to CSV', 'affiliates-manager') ?>" class="button-primary"/>
+            </p>
+        </form>
+        </div>
+    </div>
     <?php        
     
     include_once(WPAM_BASE_DIRECTORY . '/classes/ListCommissionTable.php');
