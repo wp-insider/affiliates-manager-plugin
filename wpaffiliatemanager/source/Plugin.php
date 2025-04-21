@@ -537,6 +537,21 @@ class WPAM_Plugin {
         $purchaseAmount = $total - $shipping - $tax - $fees;
         $buyer_email = $order->get_billing_email();
         $currency = $order->get_currency();
+        //
+        $order_currency = $currency;
+        $order_default_currency = $order->get_meta('_wcpay_multi_currency_order_default_currency');
+        $order_exchange_rate = $order->get_meta('_wcpay_multi_currency_order_exchange_rate');
+        if(isset($order_default_currency) && !empty($order_default_currency) && $order_default_currency != $order_currency){
+            WPAM_Logger::log_debug('WooCommerce Integration - The order is in a different currency. Default currency: '.$order_default_currency.', order currency: '.$order_currency);
+            if(isset($order_exchange_rate) && is_numeric($order_exchange_rate) && $order_exchange_rate > 0){
+                $currency = $order_default_currency;
+                WPAM_Logger::log_debug('WooCommerce Integration - Exchange rate: '.$order_exchange_rate);
+                $purchaseAmount = $purchaseAmount / $order_exchange_rate;
+                $purchaseAmount = round($purchaseAmount, 2);
+                WPAM_Logger::log_debug('WooCommerce Integration - Total amount in default currency: ' . $purchaseAmount);
+            }
+        }
+        //
         $wpam_refkey = $order->get_meta('_wpam_refkey');
         $wpam_id = $order->get_meta('_wpam_id');
         if (!empty($wpam_id)) {
