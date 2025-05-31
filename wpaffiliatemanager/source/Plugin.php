@@ -69,28 +69,10 @@ class WPAM_Plugin {
         $this->define_constants();
 
         self::$ICON_URL = WPAM_URL . '/images/icon_cash.png';
-        $this->adminPages = array(
-            new WPAM_Pages_Admin_MyAffiliatesPage(
-                    'wpam-affiliates', __('Affiliate Management', 'affiliates-manager'), __('Affiliates', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap, array(
-                new WPAM_Pages_Admin_MyAffiliatesPage(
-                        "wpam-affiliates", __('Affiliates', 'affiliates-manager'), __('My Affiliates', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap
-                ),
-                new WPAM_Pages_Admin_NewAffiliatePage(
-                        "wpam-newaffiliate", __('New Affiliate', 'affiliates-manager'), __('New Affiliate', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap
-                ),
-                new WPAM_Pages_Admin_MyCreativesPage(
-                        "wpam-creatives", __('Creatives', 'affiliates-manager'), __('My Creatives', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap
-                ),
-                new WPAM_Pages_Admin_PaypalPaymentsPage(
-                        "wpam-payments", __('PayPal Mass Pay', 'affiliates-manager'), __('PayPal Mass Pay', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap
-                )
-                    )
-            )
-        );
-
-        $this->affiliateHomePage = new WPAM_Pages_AffiliatesHome(self::PAGE_NAME_HOME, __('Store Affiliates', 'affiliates-manager'));
-        $this->affiliateRegisterPage = new WPAM_Pages_AffiliatesRegister(self::PAGE_NAME_REGISTER, __('Register', 'affiliates-manager'), $this->affiliateHomePage);
-        $this->affiliateLoginPage = new WPAM_Pages_AffiliatesLogin(self::PAGE_NAME_LOGIN, __('Affiliate Login', 'affiliates-manager'), $this->affiliateHomePage);
+        
+        $this->affiliateHomePage = new WPAM_Pages_AffiliatesHome(self::PAGE_NAME_HOME, 'Store Affiliates');
+        $this->affiliateRegisterPage = new WPAM_Pages_AffiliatesRegister(self::PAGE_NAME_REGISTER, 'Register', $this->affiliateHomePage);
+        $this->affiliateLoginPage = new WPAM_Pages_AffiliatesLogin(self::PAGE_NAME_LOGIN, 'Affiliate Login', $this->affiliateHomePage);
         $this->publicPages = array(
             self::PAGE_NAME_HOME => $this->affiliateHomePage,
             self::PAGE_NAME_REGISTER => $this->affiliateRegisterPage,
@@ -764,6 +746,26 @@ class WPAM_Plugin {
                     __('Affiliates', 'affiliates-manager'), __('Be An Affiliate', 'affiliates-manager'), 'read', 'newaffiliate', array($this, 'becomeAffiliate'), 'dashicons-groups'
             );
         }
+        
+        //
+        $this->adminPages = array(
+            new WPAM_Pages_Admin_MyAffiliatesPage(
+                    'wpam-affiliates', __('Affiliate Management', 'affiliates-manager'), __('Affiliates', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap, array(
+                new WPAM_Pages_Admin_MyAffiliatesPage(
+                        "wpam-affiliates", __('Affiliates', 'affiliates-manager'), __('My Affiliates', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap
+                ),
+                new WPAM_Pages_Admin_NewAffiliatePage(
+                        "wpam-newaffiliate", __('New Affiliate', 'affiliates-manager'), __('New Affiliate', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap
+                ),
+                new WPAM_Pages_Admin_MyCreativesPage(
+                        "wpam-creatives", __('Creatives', 'affiliates-manager'), __('My Creatives', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap
+                ),
+                new WPAM_Pages_Admin_PaypalPaymentsPage(
+                        "wpam-payments", __('PayPal Mass Pay', 'affiliates-manager'), __('PayPal Mass Pay', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap
+                )
+                    )
+            )
+        );
 
         //Add main affiliates menu object                                
         add_menu_page(__('Affiliate Management', 'affiliates-manager'), __('Affiliates', 'affiliates-manager'), WPAM_PluginConfig::$AdminCap, 'wpam-affiliates', array(), 'dashicons-groups', '25.3');
