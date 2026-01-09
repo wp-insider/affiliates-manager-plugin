@@ -59,7 +59,7 @@ class WPAM_Pages_Admin_NewAffiliatePage extends WPAM_Pages_Admin_AdminPage {
 		return $this->getForm( $affiliateFields, $request );
 	}
 
-	protected function getForm( $affiliateFields, $request = NULL, WPAM_Validation_ValidatorResult $validationResult = NULL ) {
+	protected function getForm( $affiliateFields, $request = NULL, ?WPAM_Validation_ValidatorResult $validationResult = NULL ) {
 		//add widget_form_error js to affiliate_new page
 		add_action('admin_footer', array( $this, 'onFooter' ) );
 

@@ -110,7 +110,7 @@ class WPAM_Pages_AffiliatesRegister extends WPAM_Pages_PublicPage
 		return $this->getForm($affiliateFields);
 	}
 
-	protected function getForm($affiliateFields, $request = null, WPAM_Validation_ValidatorResult $validationResult = null)
+	protected function getForm($affiliateFields, $request = null, ?WPAM_Validation_ValidatorResult $validationResult = null)
 	{
 		add_action('wp_footer', array( $this, 'onFooter' ) );
 		//

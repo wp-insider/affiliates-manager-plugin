@@ -16,7 +16,7 @@ abstract class WPAM_Pages_PublicPage
 	public function getTitle() { return $this->title; }
 	public function getParentPage() { return $this->parentPage; }
 
-	public function __construct($name, $title, WPAM_Pages_PublicPage $parentPage = NULL)
+	public function __construct($name, $title, ?WPAM_Pages_PublicPage $parentPage = NULL)
 	{
 		$this->name = $name;
 		$this->title = $title;

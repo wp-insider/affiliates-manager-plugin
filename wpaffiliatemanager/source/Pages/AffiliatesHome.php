@@ -10,7 +10,7 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 {
 	private $response;
 	
-	public function __construct( $name, $title, WPAM_Pages_PublicPage $parentPage = NULL ) {
+	public function __construct( $name, $title, ?WPAM_Pages_PublicPage $parentPage = NULL ) {
 		parent::__construct($name, $title, $parentPage);
 	}
 	
