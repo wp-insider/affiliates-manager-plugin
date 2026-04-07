@@ -53,6 +53,22 @@ class WPAM_Util_AffiliateFormHelper {
 			$model->bountyAmount = $request['txtBountyAmount'];
 		}		
 	}
+        
+        public function setPaymentFromAffProfile( WPAM_Data_Models_AffiliateModel &$model, $request ) {
+		//assume all of these have been validated already
+		
+		if( isset( $request['ddPaymentMethod'] ) ) {
+			$model->paymentMethod = $request['ddPaymentMethod'];
+		}
+
+		if( isset( $request['txtPaypalEmail'] ) ) {
+			$model->paypalEmail = $request['txtPaypalEmail'];
+		}
+                
+                if( isset( $request['txtBankDetails'] ) ) {
+			$model->bankDetails = $request['txtBankDetails'];
+		}		
+	}
 
 	public function isEmailBlocked($value)
 	{
