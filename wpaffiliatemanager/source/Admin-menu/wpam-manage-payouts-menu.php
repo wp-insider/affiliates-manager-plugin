@@ -217,8 +217,8 @@ function wpam_create_mass_pay_file() {
             $output .= "\n";
         }
     }
-    $paypal_payout_file_path = WPAM_PATH . '/paypal_payout.csv';
-    $Handle = fopen($paypal_payout_file_path, 'w') or die(__("can't open file named 'paypal_payout.csv'", 'affiliates-manager'));
+    $paypal_payout_file_path = WPAM_PATH . '/logs/paypal_payout_'.WPAM_Logger::get_log_file_suffix().'.csv';
+    $Handle = fopen($paypal_payout_file_path, 'w') or die(__("can't open file named 'paypal_payout_....csv'", 'affiliates-manager'));
     fwrite($Handle, $output);
     fclose($Handle);
 
@@ -246,24 +246,37 @@ function wpam_create_mass_pay_file() {
 
         $csv_output.= wpam_escape_csv_value($payouts[$i]) . $separator;
         $csv_output.= wpam_escape_csv_value($currency_code) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->affiliateId)) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->firstName)) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->lastName)) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->email)) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->addressLine1)) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->addressCity)) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->addressState)) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->addressZipCode)) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->addressCountry)) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->phoneNumber)) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->paypalEmail)) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->bankDetails)) . $separator;
-        $csv_output.= wpam_escape_csv_value(stripslashes($row->paymentMethod)) . $separator;
+        $affiliateId = isset($row->affiliateId) ? $row->affiliateId : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($affiliateId)) . $separator;
+        $firstName = isset($row->firstName) ? $row->firstName : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($firstName)) . $separator;
+        $lastName = isset($row->lastName) ? $row->lastName : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($lastName)) . $separator;
+        $email = isset($row->email) ? $row->email : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($email)) . $separator;
+        $addressLine1 = isset($row->addressLine1) ? $row->addressLine1 : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($addressLine1)) . $separator;
+        $addressCity = isset($row->addressCity) ? $row->addressCity : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($addressCity)) . $separator;
+        $addressState = isset($row->addressState) ? $row->addressState : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($addressState)) . $separator;
+        $addressZipCode = isset($row->addressZipCode) ? $row->addressZipCode : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($addressZipCode)) . $separator;
+        $addressCountry = isset($row->addressCountry) ? $row->addressCountry : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($addressCountry)) . $separator;
+        $phoneNumber = isset($row->phoneNumber) ? $row->phoneNumber : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($phoneNumber)) . $separator;
+        $paypalEmail = isset($row->paypalEmail) ? $row->paypalEmail : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($paypalEmail)) . $separator;
+        $bankDetails = isset($row->bankDetails) ? $row->bankDetails : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($bankDetails)) . $separator;
+        $paymentMethod = isset($row->paymentMethod) ? $row->paymentMethod : '';
+        $csv_output.= wpam_escape_csv_value(stripslashes($paymentMethod)) . $separator;
         $csv_output.= "\n";
     }
 
-    $aff_payout_report_abs_path = WPAM_PATH . '/affiliate_payout_report.csv';
-    $Handle = fopen($aff_payout_report_abs_path, 'w') or die(__("can't open file named 'affiliate_payout_report.csv'", 'affiliates-manager'));
+    $aff_payout_report_abs_path = WPAM_PATH . '/logs/affiliate_payout_report_'.WPAM_Logger::get_log_file_suffix().'.csv';
+    $Handle = fopen($aff_payout_report_abs_path, 'w') or die(__("can't open file named 'affiliate_payout_report_....csv'", 'affiliates-manager'));
     fwrite($Handle, $csv_output);
     fclose($Handle);
 
@@ -271,11 +284,11 @@ function wpam_create_mass_pay_file() {
     if (empty($output)) {
         $output .= '<div id="message" class="error"><p>'.__('Note: Please make sure that the PayPal email address field of the affiliates that are about to get paid via PayPal are not empty. PayPal payouts do not work without PayPal email address. You can ignore this warning if you are going to pay your affiliates via other means.', 'affiliates-manager').'</p></div>';
     } else {
-        $paypal_payout_file = WPAM_URL.'/paypal_payout.csv';
+        $paypal_payout_file = WPAM_URL.'/logs/paypal_payout_'.WPAM_Logger::get_log_file_suffix().'.csv';
         $output .= '<div id="message" class="updated fade"><p>'.sprintf(__('PayPal payout file created. Download the <a href="%s">PayPal Payout File</a> (Right click and choose "Save Link As"). You can use this file to make a PayPal mass payment and pay the commissions in one go.', 'affiliates-manager'), $paypal_payout_file).'</p></div>';
     }
     
-    $affiliate_payout_report_file = WPAM_URL.'/affiliate_payout_report.csv';
+    $affiliate_payout_report_file = WPAM_URL.'/logs/affiliate_payout_report_'.WPAM_Logger::get_log_file_suffix().'.csv';
     //Show link for the affiliate payouts report file
     $output .= '<div id="message" class="updated fade"><p>'.sprintf(__('CSV file with outstanding affiliate commission details created. Download the <a href="%s">Affiliate Payout Report File</a> (Right click and choose "Save Link As"). You can use this file to manually send money to your affiliates.', 'affiliates-manager'), $affiliate_payout_report_file).'</p></div>';
 
