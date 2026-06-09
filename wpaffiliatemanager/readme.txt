@@ -5,7 +5,7 @@ Tags: affiliate, affiliate marketing, affiliates, affiliate program, woocommerce
 Requires at least: 3.5
 Requires PHP: 7.4
 Tested up to: 7.0
-Stable tag: 2.9.51
+Stable tag: 2.9.52
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -194,6 +194,9 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 2.9.52 =
+- Fixed a notice when the company name is not present.
 
 = 2.9.51 =
 - Fixed an issue related to payout file generation.
