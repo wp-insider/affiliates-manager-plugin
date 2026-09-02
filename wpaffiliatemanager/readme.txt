@@ -4,8 +4,8 @@ Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliate marketing, affiliates, affiliate program, woocommerce
 Requires at least: 6.5
 Requires PHP: 7.4
-Tested up to: 7.0
-Stable tag: 2.9.54
+Tested up to: 7.1
+Stable tag: 2.9.55
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -194,8 +194,9 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
-= WIP =
-- Country list options sorting issue fixed when localized.
+
+= 2.9.55 =
+- Fixed an issue with the sorting of localized country list options.
 
 = 2.9.54 =
 - Fixed a PHP 8.5 deprecated warning notice in the plugin.
