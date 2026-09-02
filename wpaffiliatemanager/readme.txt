@@ -194,6 +194,8 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+= WIP =
+- Country list options sorting issue fixed when localized.
 
 = 2.9.54 =
 - Fixed a PHP 8.5 deprecated warning notice in the plugin.
