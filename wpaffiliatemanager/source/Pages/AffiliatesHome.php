@@ -57,7 +57,22 @@ class WPAM_Pages_AffiliatesHome extends WPAM_Pages_PublicPage
 			}
 			else
 			{
-				$response = $this->doAffiliateNotRegistered($request);
+				// The user ID is only stored on the affiliate record at approval. Until then, find a pending or
+				// declined application by the user's e-mail address, so the applicant sees its status instead of
+				// the "not registered" message (and does not apply again).
+				$application = empty($currentUser->user_email) ? null : $db->getAffiliateRepository()->loadBy(array('email' => $currentUser->user_email));
+				if ($application !== null && $application->isDeclined())
+				{
+					$response = $this->doDeclinedRequest($request);
+				}
+				else if ($application !== null && !$application->isApproved() && !$application->isActive())
+				{
+					$response = $this->doPendingApp();
+				}
+				else
+				{
+					$response = $this->doAffiliateNotRegistered($request);
+				}
 			}
 		}
 		else
