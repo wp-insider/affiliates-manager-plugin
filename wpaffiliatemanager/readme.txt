@@ -3,9 +3,9 @@ Contributors: wp.insider, affmngr, ElementGreen
 Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliate marketing, affiliates, affiliate program, woocommerce
 Requires at least: 6.5
-Requires PHP: 7.4
+Requires PHP: 7.6
 Tested up to: 7.1
-Stable tag: 2.9.55
+Stable tag: 2.9.56
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -194,6 +194,9 @@ View screenshots in the following page:
 https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
+
+= 2.9.56 =
+- Logged-in applicants now see the "pending" or "declined" status of their application on the affiliate home page (instead of the "not registered" message) before approval. Thanks to Th0masL.
 
 = 2.9.55 =
 - Fixed an issue with the sorting of localized country list options.
