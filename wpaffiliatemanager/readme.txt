@@ -3,7 +3,7 @@ Contributors: wp.insider, affmngr, ElementGreen
 Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliate marketing, affiliates, affiliate program, woocommerce
 Requires at least: 6.5
-Requires PHP: 7.6
+Requires PHP: 7.4
 Tested up to: 7.1
 Stable tag: 2.9.56
 License: GPLv2 or later
