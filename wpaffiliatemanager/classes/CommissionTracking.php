@@ -51,28 +51,19 @@ class WPAM_Commission_Tracking {
                     return;
                 }
             }
-            //An affiliate without a commission type (e.g. added directly in the database) uses the default commission
-            //settings (type and amount together), as when an affiliate is approved (WPAM_Util_UserHandler)
-            if (!empty($affiliate->bountyType)) {
-                $bountyType = $affiliate->bountyType;
-                $bountyAmount = $affiliate->bountyAmount;
-            } else {
-                $bountyType = get_option(WPAM_PluginConfig::$AffBountyType);
-                $bountyAmount = get_option(WPAM_PluginConfig::$AffBountyAmount);
-                WPAM_Logger::log_debug('Affiliate ID: '.$affiliate->affiliateId.' has no commission type. Using the default commission settings.', 2);
-            }
             $creditAmount = 0;
-            if ($bountyType == 'percent')
+            if ($affiliate->bountyType == 'percent')
             {
-                $creditAmount = (float) $amount * ((float) $bountyAmount / 100.0);
+                $creditAmount = $amount * ($affiliate->bountyAmount / 100.0);
             }
-            else if ($bountyType == 'fixed')
+            else if ($affiliate->bountyType == 'fixed')
             {
-                $creditAmount = (float) $bountyAmount;
+                $creditAmount = (float) $affiliate->bountyAmount;
             }
             else
             {
-                WPAM_Logger::log_debug('Unknown commission type ('.$bountyType.') for affiliate ID: '.$affiliate->affiliateId.'. The commission amount is set to 0.', 2);
+                //No commission type for this affiliate (e.g. added directly in the database): no commission is calculated
+                WPAM_Logger::log_debug('Affiliate ID: '.$affiliate->affiliateId.' has no commission type set, so the commission amount is 0. Set a commission type for this affiliate.', 3);
             }
             $creditAmount = round($creditAmount, 2);
             //checking to see if "Disable Own Referrals" option is enabled
