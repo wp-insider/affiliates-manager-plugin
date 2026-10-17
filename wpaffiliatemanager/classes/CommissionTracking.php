@@ -51,14 +51,19 @@ class WPAM_Commission_Tracking {
                     return;
                 }
             }
-            $creditAmount = '';
+            $creditAmount = 0;
             if ($affiliate->bountyType == 'percent')
             {
                 $creditAmount = $amount * ($affiliate->bountyAmount / 100.0);
             }
             else if ($affiliate->bountyType == 'fixed')
             {
-                $creditAmount = $affiliate->bountyAmount;
+                $creditAmount = (float) $affiliate->bountyAmount;
+            }
+            else
+            {
+                //No commission type for this affiliate (e.g. added directly in the database): no commission is calculated
+                WPAM_Logger::log_debug('Affiliate ID: '.$affiliate->affiliateId.' has no commission type set, so the commission amount is 0. Set a commission type for this affiliate.', 3);
             }
             $creditAmount = round($creditAmount, 2);
             //checking to see if "Disable Own Referrals" option is enabled
