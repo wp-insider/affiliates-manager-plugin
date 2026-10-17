@@ -195,6 +195,9 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
+= WIP =
+- Fixed a PHP 8 fatal error when awarding a commission to an affiliate with no commission type set. The commission is now 0 and a warning is written to the debug log. Thanks to Th0masL.
+
 = 2.9.56 =
 - Logged-in applicants now see the "pending" or "declined" status of their application on the affiliate home page (instead of the "not registered" message) before approval. Thanks to Th0masL.
 
