@@ -159,6 +159,8 @@ class WPAM_Plugin {
         add_action('jigoshop_new_order', array($this, 'jigoshopNewOrder'));
         //Simple Membership registration integration
         add_action('swpm_front_end_registration_complete_user_data', array($this, 'wpam_swpm_after_registration_callback'));
+        //Simple Membership refund integration (the commission is cancelled in proportion to the amount refunded)
+        add_action('swpm_payment_refunded', array($this, 'SimpleMembershipRefundTransaction'));
         /*         * * End integration hooks ** */
     }
 
@@ -566,6 +568,22 @@ class WPAM_Plugin {
         //$order = new WC_Order($order_id);
         $txn_id = $order_id;
         WPAM_Commission_Tracking::refund_commission($txn_id);
+    }
+
+    public function SimpleMembershipRefundTransaction($refund_data) {
+        //The array of Simple Membership's swpm_payment_refunded action (Stripe, PayPal webhooks and PayPal Standard).
+        if(!is_array($refund_data) || empty($refund_data['txn_id'])){
+            return;
+        }
+        WPAM_Logger::log_debug('Simple Membership integration - payment refunded. Transaction ID: ' . $refund_data['txn_id']);
+        $total_refunded = null;
+        $payment_amount = null;
+        if(empty($refund_data['is_full_refund'])){
+            //Partial refund: only that part of the commission is cancelled.
+            $total_refunded = isset($refund_data['total_refunded']) ? $refund_data['total_refunded'] : null;
+            $payment_amount = isset($refund_data['payment_amount']) ? $refund_data['payment_amount'] : null;
+        }
+        WPAM_Commission_Tracking::refund_commission($refund_data['txn_id'], $total_refunded, $payment_amount);
     }
 
     public function jigoshopNewOrder($order_id) {
