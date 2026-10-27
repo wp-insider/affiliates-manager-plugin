@@ -187,52 +187,64 @@ class WPAM_Commission_Tracking {
         }
     }
     
-    public static function refund_commission($txn_id){
+    /*
+     * Cancels the commission of a sale that was refunded, by adding a "refund" line of minus the commission.
+     * For a partial refund, pass the total refunded so far and the amount paid: only that part of the commission is
+     * cancelled (e.g. $50 refunded on a $250 sale cancels 20% of the commission). Refund lines already added for this
+     * sale are taken into account, so a later refund only adds the rest, and the same refund sent again adds nothing.
+     */
+    public static function refund_commission($txn_id, $total_refunded = null, $payment_amount = null){
         WPAM_Logger::log_debug('Commission refund handler function has been invoked for PURCHASE LOG ID: '.$txn_id);
         global $wpdb;
         $table = WPAM_TRANSACTIONS_TBL;
+        //find the commission record
         $query = "
         SELECT *
+        FROM ".WPAM_TRANSACTIONS_TBL."
+        WHERE referenceId = %s
+        AND type = 'credit'
+        ";
+        $txn_record = $wpdb->get_row($wpdb->prepare($query, $txn_id));
+        if($txn_record == null) {
+            WPAM_Logger::log_debug('No commission record found for PURCHASE LOG ID: '.$txn_id.'. Commission cannot be refunded!');
+            return;
+        }
+        //The part of the commission to cancel: all of it, unless a partial refund is given
+        $part = 1;
+        if(is_numeric($total_refunded) && is_numeric($payment_amount) && $payment_amount > 0 && $total_refunded < $payment_amount){
+            $part = $total_refunded / $payment_amount;
+        }
+        $to_cancel = round($txn_record->amount * $part, 2);
+        //The commission already cancelled for this sale
+        $query = "
+        SELECT SUM(amount)
         FROM ".WPAM_TRANSACTIONS_TBL."
         WHERE referenceId = %s
         AND amount < 0
         AND type = 'refund'
         ";
-        $txn_record = $wpdb->get_row($wpdb->prepare($query, $txn_id));
-        if($txn_record != null) {  //found a refunded commission record                       
-            WPAM_Logger::log_debug('Commission for this sale has already been refunded. PURCHASE LOG ID: '.$txn_id); 
+        $already_cancelled = round(-1 * (float) $wpdb->get_var($wpdb->prepare($query, $txn_id)), 2);
+        $amount = round($to_cancel - $already_cancelled, 2);
+        if($amount <= 0) {
+            WPAM_Logger::log_debug('Commission for this sale has already been refunded. PURCHASE LOG ID: '.$txn_id);
             return;
-        } 
-        else { //find the commission record           
-            $query = "
-            SELECT *
-            FROM ".WPAM_TRANSACTIONS_TBL."
-            WHERE referenceId = %s
-            AND type = 'credit'
-            ";
-            $txn_record = $wpdb->get_row($wpdb->prepare($query, $txn_id));
-            if($txn_record != null) {  //found the original commission record 
-                //$description = $txn_record->description;
-                //$description = str_replace("Credit", "Refund", $txn_record->description);
-                $currency = WPAM_MoneyHelper::getCurrencyCode();
-                $description = sprintf(__('Refund of %s %s (PURCHASE LOG ID = %s)', 'affiliates-manager'), $txn_record->amount, $currency, $txn_id);
-                $data = array();
-                $data['dateModified'] = date("Y-m-d H:i:s", time());
-                $data['dateCreated'] = date("Y-m-d H:i:s", time());
-                $data['referenceId'] = $txn_id;
-                $data['affiliateId'] = $txn_record->affiliateId;
-                $data['type'] = 'refund';
-                $data['description'] = $description;
-                $data['amount'] = '-'.$txn_record->amount;
-                $wpdb->insert( $table, $data);
-                WPAM_Logger::log_debug('Commission refunded ('.$txn_record->amount.') for PURCHASE LOG ID: '.$txn_id.', Affiliate ID: '.$txn_record->affiliateId); 
-                return;
-            }           
-            else{
-                WPAM_Logger::log_debug('No commission record found for PURCHASE LOG ID: '.$txn_id.'. Commission cannot be refunded!');
-                return;
-            }
         }
+        $amount = number_format($amount, 2, '.', ''); //e.g. "62.50", as the commission is shown
+        $currency = WPAM_MoneyHelper::getCurrencyCode();
+        $description = sprintf(__('Refund of %s %s (PURCHASE LOG ID = %s)', 'affiliates-manager'), $amount, $currency, $txn_id);
+        $data = array();
+        $data['dateModified'] = date("Y-m-d H:i:s", time());
+        $data['dateCreated'] = date("Y-m-d H:i:s", time());
+        $data['referenceId'] = $txn_id;
+        $data['affiliateId'] = $txn_record->affiliateId;
+        $data['type'] = 'refund';
+        $data['description'] = $description;
+        $data['amount'] = '-'.$amount;
+        if($wpdb->insert( $table, $data) === false) {
+            WPAM_Logger::log_debug('Error! The commission refund ('.$amount.') could not be saved for PURCHASE LOG ID: '.$txn_id.'. Database error: '.$wpdb->last_error, 4);
+            return;
+        }
+        WPAM_Logger::log_debug('Commission refunded ('.$amount.') for PURCHASE LOG ID: '.$txn_id.', Affiliate ID: '.$txn_record->affiliateId);
     }
     
     /*
