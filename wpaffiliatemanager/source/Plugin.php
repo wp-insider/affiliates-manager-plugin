@@ -582,6 +582,12 @@ class WPAM_Plugin {
             //Partial refund: only that part of the commission is cancelled.
             $total_refunded = isset($refund_data['total_refunded']) ? $refund_data['total_refunded'] : null;
             $payment_amount = isset($refund_data['payment_amount']) ? $refund_data['payment_amount'] : null;
+            if(!is_numeric($total_refunded) || !is_numeric($payment_amount) || $payment_amount <= 0){
+                //The amount paid is not known (e.g. no Simple Membership transaction record), so the part to cancel cannot be calculated.
+                //Leave the commission unchanged rather than cancelling all of it for a partial refund.
+                WPAM_Logger::log_debug('Simple Membership integration - partial refund but the payment amount is not known. The commission was not changed. Transaction ID: ' . $refund_data['txn_id'], 3);
+                return;
+            }
         }
         WPAM_Commission_Tracking::refund_commission($refund_data['txn_id'], $total_refunded, $payment_amount);
     }
