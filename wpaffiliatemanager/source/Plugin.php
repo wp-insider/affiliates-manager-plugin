@@ -589,7 +589,27 @@ class WPAM_Plugin {
                 return;
             }
         }
-        WPAM_Commission_Tracking::refund_commission($refund_data['txn_id'], $total_refunded, $payment_amount);
+        //Find the commission by the transaction ID of the refunded payment first.
+        //checkout_txn_id is only set by Simple Membership for the first payment of a Stripe subscription. The commission of
+        //that payment was saved with the checkout's transaction ID (the customer ID), not the charge ID of the refund.
+        global $wpdb;
+        $query = "
+        SELECT COUNT(*)
+        FROM ".WPAM_TRANSACTIONS_TBL."
+        WHERE referenceId = %s
+        AND type = 'credit'
+        ";
+        $txn_id = $refund_data['txn_id'];
+        if(!$wpdb->get_var($wpdb->prepare($query, $txn_id)) && !empty($refund_data['checkout_txn_id'])){
+            $count = (int) $wpdb->get_var($wpdb->prepare($query, $refund_data['checkout_txn_id']));
+            if($count != 1){
+                WPAM_Logger::log_debug('Simple Membership integration - ' . $count . ' commission records found for the checkout transaction ID: ' . $refund_data['checkout_txn_id'] . ' (expected 1). The commission was not changed. Transaction ID: ' . $txn_id, 2);
+                return;
+            }
+            WPAM_Logger::log_debug('Simple Membership integration - using the checkout transaction ID: ' . $refund_data['checkout_txn_id'] . ' to find the commission. Transaction ID: ' . $txn_id);
+            $txn_id = $refund_data['checkout_txn_id'];
+        }
+        WPAM_Commission_Tracking::refund_commission($txn_id, $total_refunded, $payment_amount);
     }
 
     public function jigoshopNewOrder($order_id) {

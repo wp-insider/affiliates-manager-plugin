@@ -199,6 +199,7 @@ https://wpaffiliatemanager.com/screen-shots/
 - Fixed a PHP 8 fatal error when awarding a commission to an affiliate with no commission type set. The commission is now 0 and a warning is written to the debug log. Thanks to Th0masL.
 - Simple Membership integration: the affiliate commission is now cancelled when a Simple Membership payment is refunded (Stripe, PayPal PPCP and PayPal Standard). For a partial refund, only that part of the commission is cancelled. Requires a Simple Membership version with the swpm_payment_refunded action hook. Thanks to Th0masL.
 - If the amount paid is not known for a partial refund (no Simple Membership transaction record), the commission is left unchanged and a warning is written to the debug log.
+- Simple Membership integration: a refund of the first payment of a Stripe subscription now also cancels its commission (the commission is found with the checkout's transaction ID that Simple Membership passes as checkout_txn_id).
 
 = 2.9.56 =
 - Logged-in applicants now see the "pending" or "declined" status of their application on the affiliate home page (instead of the "not registered" message) before approval. Thanks to Th0masL.
