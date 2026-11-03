@@ -5,7 +5,7 @@ Tags: affiliate, affiliate marketing, affiliates, affiliate program, woocommerce
 Requires at least: 6.5
 Requires PHP: 7.4
 Tested up to: 7.1
-Stable tag: 2.9.56
+Stable tag: 2.9.57
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -195,7 +195,7 @@ https://wpaffiliatemanager.com/screen-shots/
 
 == Changelog ==
 
-= WIP =
+= 2.9.57 =
 - Fixed a PHP 8 fatal error when awarding a commission to an affiliate with no commission type set. The commission is now 0 and a warning is written to the debug log. Thanks to Th0masL.
 - Simple Membership integration: the affiliate commission is now cancelled when a Simple Membership payment is refunded (Stripe, PayPal PPCP and PayPal Standard). For a partial refund, only that part of the commission is cancelled. Requires a Simple Membership version with the swpm_payment_refunded action hook. Thanks to Th0masL.
 - If the amount paid is not known for a partial refund (no Simple Membership transaction record), the commission is left unchanged and a warning is written to the debug log.
